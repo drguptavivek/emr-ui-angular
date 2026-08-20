@@ -1,0 +1,39 @@
+.emr-story-grid {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.emr-story-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.emr-button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.emr-stack--compact {
+  gap: 6px;
+  margin-block: 16px;
+}
+
+.emr-story-nav-frame {
+  min-height: 680px;
+  overflow: hidden;
+  border: 1px solid var(--emr-border);
+  border-radius: 10px;
+  background: var(--emr-background);
+}
+
+.emr-story-flyout-host {
+  min-height: 720px;
+}
+
+@media (max-width: 767px) {
+  .emr-story-grid--two {
+    grid-template-columns: 1fr;
+  }
+}

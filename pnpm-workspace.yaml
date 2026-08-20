@@ -1,0 +1,18 @@
+packages:
+  - "packages/*"
+
+overrides:
+  listr2: 10.2.1
+
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  lmdb: true
+  msgpackr-extract: true
+
+minimumReleaseAgeExclude:
+  - '@openng/optimus-ui-motion@2.0.0'
+  - '@openng/optimus-ui-styled@2.0.0'
+  - '@openng/optimus-ui-styles@2.0.0'
+  - '@openng/optimus-ui-utils@2.0.0'
+  - '@openng/optimus-ui@2.0.0'

@@ -1,0 +1,64 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "packages",
+  "projects": {
+    "emr-ui": {
+      "projectType": "library",
+      "root": "packages/emr-ui",
+      "sourceRoot": "packages/emr-ui/src",
+      "prefix": "emr",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "options": {
+            "project": "packages/emr-ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "packages/emr-ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "packages/emr-ui/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "packages/emr-ui/.storybook",
+            "browserTarget": "emr-ui:build",
+            "tsConfig": "packages/emr-ui/tsconfig.storybook.json",
+            "compodoc": false,
+            "styles": [
+              "packages/emr-ui/node_modules/@fontsource-variable/inter/index.css",
+              "packages/emr-ui/src/lib/styles/emr.css",
+              "packages/emr-ui/.storybook/storybook.css"
+            ],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "packages/emr-ui/.storybook",
+            "browserTarget": "emr-ui:build",
+            "tsConfig": "packages/emr-ui/tsconfig.storybook.json",
+            "compodoc": false,
+            "styles": [
+              "packages/emr-ui/node_modules/@fontsource-variable/inter/index.css",
+              "packages/emr-ui/src/lib/styles/emr.css",
+              "packages/emr-ui/.storybook/storybook.css"
+            ],
+            "outputDir": "storybook-static"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false,
+    "packageManager": "pnpm"
+  }
+}
