@@ -278,7 +278,14 @@ test.describe('Storybook EMR catalogue smoke tests', () => {
       'foundations-layout-primitives--single-card',
       'foundations-layout-primitives--two-column',
       'foundations-layout-primitives--three-column-weighted',
-      'foundations-layout-primitives--field-value-remarks-notes'
+      'foundations-layout-primitives--field-value-remarks-notes',
+      'foundations-likert-scale--pain-score',
+      'foundations-likert-scale--unselected',
+      'foundations-likert-scale--all-zones',
+      'foundations-likert-scale--custom-range',
+      'foundations-likert-scale--with-error',
+      'foundations-likert-scale--read-only',
+      'foundations-likert-scale--disabled'
     ];
 
     for (const colorScheme of ['light', 'dark'] as const) {
