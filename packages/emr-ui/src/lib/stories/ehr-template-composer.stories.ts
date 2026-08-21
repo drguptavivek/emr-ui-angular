@@ -1,8 +1,8 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import type { EhrTemplateDefinition, EhrTemplateViewModel, EmrGeneratedFieldDefinition, TemplateArtifactResult } from '@drguptavivek/emr-controller';
 import { derivePreview } from '@drguptavivek/emr-controller';
-import { EmrTemplateComposerComponent } from '../templates/emr-template-composer.component';
-import { EmrTemplatePreviewComponent } from '../templates/emr-template-preview.component';
+import { EmrTemplateComposerComponent } from '../authoring/emr-template-composer.component';
+import { EmrTemplatePreviewComponent } from '../authoring/emr-template-preview.component';
 
 const field = (id: string, label: string, type: EmrGeneratedFieldDefinition['type'], overrides: Partial<EmrGeneratedFieldDefinition> = {}): EmrGeneratedFieldDefinition => ({ schemaVersion: '1.0', id, revision: 1, label, type, required: false, repeats: false, validationRules: [], terminologyBindings: [], span: 6, ...overrides });
 const weight = field('weight', 'Weight', 'quantity', { unit: 'kg', unitSystem: 'UCUM', unitCode: 'kg', required: true });
@@ -28,6 +28,6 @@ const artifact: TemplateArtifactResult = { format: 'fhir-r4-questionnaire', fhir
 export const ExportLoading: Story = { render: () => ({ template: `<emr-template-preview [model]="model" />`, props: { model: makeModel(general, { loading: true }) } }) };
 export const ExportError: Story = { render: () => ({ template: `<emr-template-preview [model]="model" />`, props: { model: makeModel(general, { error: 'The configured FHIR export service is unavailable.' }) } }) };
 export const ExportedArtifact: Story = { render: () => ({ template: `<emr-template-preview [model]="model" />`, props: { model: makeModel(general, { artifact }) } }) };
-export const ReadonlyPublished: Story = { render: () => ({ template: `<emr-template-composer [model]="model" [readOnly]="true" />`, props: { model: makeModel(general, { readOnly: true, template: { ...general, status: 'active' } }) } }) };
+export const ReadonlyPublished: Story = { render: () => ({ template: `<emr-template-composer [model]="model" />`, props: { model: makeModel(general, { readOnly: true, template: { ...general, status: 'active' } }) } }) };
 export const Mobile: Story = { render: () => ({ template: `<div style="max-width: 430px"><emr-template-composer [model]="model" /></div>`, props: { model: makeModel(general, { selectedSectionId: 'history' }) } }) };
 export const TwoInstances: Story = { render: () => ({ template: `<emr-template-composer headingId="template-composer-one" [model]="first" /><emr-template-composer headingId="template-composer-two" [model]="second" />`, props: { first: makeModel(general, { selectedSectionId: 'history' }), second: makeModel({ ...general, id: 'second-template', title: 'Second reusable template' }, { selectedSectionId: 'examination' }) } }) };

@@ -1,7 +1,7 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
-import { EmrClinicalMatrixComponent } from '../clinical/emr-clinical-matrix.component';
-import { EmrSpectaclePrescriptionComponent } from '../clinical/emr-spectacle-prescription.component';
-import { EmrDiagnosticResultSummaryComponent } from '../clinical/emr-diagnostic-result-summary.component';
+import { EmrClinicalMatrixComponent } from '../structures/emr-clinical-matrix.component';
+import { EmrSpectaclePrescriptionComponent } from '../domain/emr-spectacle-prescription.component';
+import { EmrDiagnosticResultSummaryComponent } from '../domain/emr-diagnostic-result-summary.component';
 import {
   anteriorSegmentSchema,
   anteriorSegmentValues,
@@ -36,7 +36,7 @@ export default meta;
 type Story = StoryObj;
 
 const matrixStory = (schema: unknown, values: unknown): Story => ({
-  render: () => ({ template: '<emr-clinical-matrix [schema]="schema" [values]="values" />', props: { schema, values } })
+  render: () => ({ template: '<emr-clinical-matrix [definition]="schema" [model]="values" />', props: { schema, values } })
 });
 
 export const ExternalEye: Story = matrixStory(externalEyeSchema, externalEyeValues);
@@ -56,15 +56,15 @@ export const SpectaclePrescriptionErrors: Story = {
 };
 
 export const PerimetryResult: Story = {
-  render: () => ({ template: '<emr-diagnostic-result-summary [result]="result" />', props: { result: perimetryResult } })
+  render: () => ({ template: '<emr-diagnostic-result-summary [model]="result" />', props: { result: perimetryResult } })
 };
 
 export const PerimetryLoading: Story = {
-  render: () => ({ template: '<emr-diagnostic-result-summary [result]="result" />', props: { result: { ...perimetryResult, loading: true } } })
+  render: () => ({ template: '<emr-diagnostic-result-summary [model]="result" />', props: { result: { ...perimetryResult, loading: true } } })
 };
 
 export const PerimetryError: Story = {
-  render: () => ({ template: '<emr-diagnostic-result-summary [result]="result" />', props: { result: { ...perimetryResult, error: 'The device report is temporarily unavailable.' } } })
+  render: () => ({ template: '<emr-diagnostic-result-summary [model]="result" />', props: { result: { ...perimetryResult, error: 'The device report is temporarily unavailable.' } } })
 };
 
 export const PMTWorkflowNote: Story = {

@@ -1,0 +1,330 @@
+/* ===========================================================================
+   EMR print layer
+   ---------------------------------------------------------------------------
+   Print is a PRESENTATION CONTEXT, not component state — exactly like
+   `emr-theme-light` / `emr-theme-dark`. No component takes a `print` input and
+   no component has a print-only twin. That keeps the catalogue from doubling
+   and keeps the controlled-component boundary intact.
+
+   Two entry points:
+     @media print   Ctrl+P works with no application code at all
+     .emr-print     opt-in class for on-screen preview and for a controller
+                    rendering a deliberate print-only view
+
+   Variants:
+     .emr-print--letter  US Letter page size instead of A4
+     .emr-print--form    ruled lines for handwritten completion instead of
+                         printing captured values
+
+   The structural rules below are authored TWICE — once scoped to `.emr-print`
+   and once unscoped inside `@media print`. `emr-print.spec.ts` asserts the two
+   are identical modulo the scope prefix, so the on-screen preview is always a
+   faithful representation of paper output.
+
+   Two things this layer must NEVER do, because both silently omit clinical
+   data from a medico-legal document:
+     - leave a collapsed section collapsed
+     - leave scrollable overflow scrolled
+   =========================================================================== */
+
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+/* Browsers do not honour a class-scoped @page rule, so a US deployment sets
+   `@page { size: letter }` in the host application. This class only adjusts
+   the content width assumption. */
+.emr-print--letter {
+  --emr-print-page-width: 216mm;
+}
+
+@media print {
+  html,
+  body {
+    background: #fff !important;
+    /* Keep deliberate greyscale tints; most browsers drop them otherwise. */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Print always uses the light palette. A dark-theme page would consume a
+     cartridge and read poorly on paper. */
+  :root,
+  .emr-theme-light,
+  .emr-theme-dark {
+  color-scheme: light;
+  --emr-background: #fff;
+  --emr-surface: #fff;
+  --emr-surface-raised: #fff;
+  --emr-surface-accent: #fff;
+  --emr-surface-blue: #fff;
+  --emr-surface-soft: #fff;
+  --emr-surface-slate: #fff;
+  --emr-text: #000;
+  --emr-text-muted: #333;
+  --emr-border: #999;
+  --emr-shadow: none;
+
+  /* The single biggest saving: touch targets are meaningless on paper.
+     44px per control across a long form is most of a wasted page. */
+  --emr-control-height: auto;
+  --emr-compact-height: auto;
+
+  /* Shift the whole type scale from one place — only possible because
+     components reference tokens rather than literal sizes. */
+  --emr-text-2xs: 0.60rem;
+  --emr-text-xs: 0.65rem;
+  --emr-text-sm: 0.70rem;
+  --emr-text-md: 0.75rem;
+  --emr-text-lg: 0.85rem;
+  --emr-text-xl: 1.00rem;
+  --emr-text-2xl: 1.15rem;
+  --emr-leading-normal: 1.3;
+  --emr-leading-tight: 1.15;
+  }
+}
+
+.emr-print {
+  color-scheme: light;
+  --emr-background: #fff;
+  --emr-surface: #fff;
+  --emr-surface-raised: #fff;
+  --emr-surface-accent: #fff;
+  --emr-surface-blue: #fff;
+  --emr-surface-soft: #fff;
+  --emr-surface-slate: #fff;
+  --emr-text: #000;
+  --emr-text-muted: #333;
+  --emr-border: #999;
+  --emr-shadow: none;
+
+  /* The single biggest saving: touch targets are meaningless on paper.
+     44px per control across a long form is most of a wasted page. */
+  --emr-control-height: auto;
+  --emr-compact-height: auto;
+
+  /* Shift the whole type scale from one place — only possible because
+     components reference tokens rather than literal sizes. */
+  --emr-text-2xs: 0.60rem;
+  --emr-text-xs: 0.65rem;
+  --emr-text-sm: 0.70rem;
+  --emr-text-md: 0.75rem;
+  --emr-text-lg: 0.85rem;
+  --emr-text-xl: 1.00rem;
+  --emr-text-2xl: 1.15rem;
+  --emr-leading-normal: 1.3;
+  --emr-leading-tight: 1.15;
+}
+
+/* --- Structural rules, scoped for on-screen preview ---------------------- */
+/* @emr-print:scoped:begin */
+  /* Interactive-only chrome carries no information on paper. */
+  .emr-print .emr-button,
+  .emr-print .emr-tab,
+  .emr-print .emr-left-nav,
+  .emr-print .emr-flyout,
+  .emr-print [data-emr-print='hide'] {
+    display: none !important;
+  }
+
+  /* Nothing may stay hidden: a collapsed section on paper is missing data. */
+  .emr-print [hidden],
+  .emr-print .emr-section-card__body[aria-hidden='true'] {
+    display: revert !important;
+  }
+  .emr-print details,
+  .emr-print details:not([open]) > * {
+    display: block !important;
+  }
+  .emr-print details > summary { list-style: none; }
+
+  /* Un-scroll every overflow region so its full content prints. */
+  .emr-print .emr-table-scroll,
+  .emr-print .emr-matrix__scroll,
+  .emr-print [data-emr-print='expand'] {
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+
+  /* Controls print as their captured values, not as empty boxes. */
+  .emr-print .emr-control,
+  .emr-print input,
+  .emr-print select,
+  .emr-print textarea {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: #000 !important;
+    font: inherit !important;
+    appearance: none !important;
+    resize: none !important;
+  }
+  .emr-print textarea { overflow: visible !important; }
+
+  /* Badges keep meaning without ink-heavy fills. This works only because the
+     "never colour alone" rule guarantees each badge carries a text label. */
+  .emr-print .emr-badge,
+  .emr-print .emr-chip {
+    height: auto !important;
+    padding: 0 4px !important;
+    border: 1px solid #666 !important;
+    background: transparent !important;
+    color: #000 !important;
+    font-size: var(--emr-text-2xs) !important;
+  }
+
+  /* Never split a clinical record across a page boundary mid-thought. */
+  .emr-print .emr-card,
+  .emr-print .emr-section-card,
+  .emr-print .emr-panel,
+  .emr-print .emr-field-value-row,
+  .emr-print tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .emr-print h1,
+  .emr-print h2,
+  .emr-print h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Repeat table headers on every page of a long flowsheet or matrix. */
+  .emr-print thead { display: table-header-group; }
+  .emr-print tfoot { display: table-footer-group; }
+
+  /* Focus rings and hover affordances are screen-only. */
+  .emr-print *:focus,
+  .emr-print *:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Blank-form variant: ruled lines for handwritten completion. */
+  .emr-print--form .emr-control:empty,
+  .emr-print--form textarea:empty {
+    display: block !important;
+    border-bottom: 1px solid #000 !important;
+    min-height: 1.6em !important;
+    min-width: 12ch;
+  }
+  .emr-print--form textarea:empty { min-height: 4em !important; }
+  .emr-print--form input[type='checkbox'],
+  .emr-print--form input[type='radio'] {
+    appearance: auto !important;
+    display: inline-block !important;
+    width: 11px;
+    height: 11px;
+  }
+/* @emr-print:scoped:end */
+
+/* --- The same rules, for real printing ----------------------------------- */
+@media print {
+/* @emr-print:media:begin */
+  /* Interactive-only chrome carries no information on paper. */
+  .emr-button,
+  .emr-tab,
+  .emr-left-nav,
+  .emr-flyout,
+  [data-emr-print='hide'] {
+    display: none !important;
+  }
+
+  /* Nothing may stay hidden: a collapsed section on paper is missing data. */
+  [hidden],
+  .emr-section-card__body[aria-hidden='true'] {
+    display: revert !important;
+  }
+  details,
+  details:not([open]) > * {
+    display: block !important;
+  }
+  details > summary { list-style: none; }
+
+  /* Un-scroll every overflow region so its full content prints. */
+  .emr-table-scroll,
+  .emr-matrix__scroll,
+  [data-emr-print='expand'] {
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+
+  /* Controls print as their captured values, not as empty boxes. */
+  .emr-control,
+  input,
+  select,
+  textarea {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: #000 !important;
+    font: inherit !important;
+    appearance: none !important;
+    resize: none !important;
+  }
+  textarea { overflow: visible !important; }
+
+  /* Badges keep meaning without ink-heavy fills. This works only because the
+     "never colour alone" rule guarantees each badge carries a text label. */
+  .emr-badge,
+  .emr-chip {
+    height: auto !important;
+    padding: 0 4px !important;
+    border: 1px solid #666 !important;
+    background: transparent !important;
+    color: #000 !important;
+    font-size: var(--emr-text-2xs) !important;
+  }
+
+  /* Never split a clinical record across a page boundary mid-thought. */
+  .emr-card,
+  .emr-section-card,
+  .emr-panel,
+  .emr-field-value-row,
+  tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Repeat table headers on every page of a long flowsheet or matrix. */
+  thead { display: table-header-group; }
+  tfoot { display: table-footer-group; }
+
+  /* Focus rings and hover affordances are screen-only. */
+  *:focus,
+  *:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Blank-form variant: ruled lines for handwritten completion. */
+  .emr-print--form .emr-control:empty,
+  .emr-print--form textarea:empty {
+    display: block !important;
+    border-bottom: 1px solid #000 !important;
+    min-height: 1.6em !important;
+    min-width: 12ch;
+  }
+  .emr-print--form textarea:empty { min-height: 4em !important; }
+  .emr-print--form input[type='checkbox'],
+  .emr-print--form input[type='radio'] {
+    appearance: auto !important;
+    display: inline-block !important;
+    width: 11px;
+    height: 11px;
+  }
+/* @emr-print:media:end */
+}

@@ -3,7 +3,7 @@ import { EmrOption } from '@drguptavivek/emr-controller';
 
 @Directive()
 abstract class EmrFieldBase {
-  @Input() inputId = 'emr-field';
+  @Input() controlId = 'emr-field';
   @Input() label = '';
   @Input() hint = '';
   @Input() error = '';
@@ -14,8 +14,8 @@ abstract class EmrFieldBase {
 
   describedBy(): string | null {
     const ids: string[] = [];
-    if (this.hint) ids.push(`${this.inputId}-hint`);
-    if (this.error) ids.push(`${this.inputId}-error`);
+    if (this.hint) ids.push(`${this.controlId}-hint`);
+    if (this.error) ids.push(`${this.controlId}-error`);
     return ids.length ? ids.join(' ') : null;
   }
 }
@@ -24,13 +24,13 @@ abstract class EmrFieldBase {
   selector: 'emr-text-input',
   standalone: true,
   template: `
-    <label class="emr-field" [for]="inputId">
+    <label class="emr-field" [for]="controlId">
       <span class="emr-field__label">{{ label }} @if (required) { <span class="emr-field__required" aria-hidden="true">*</span> }</span>
-      <input class="emr-control" [id]="inputId" [value]="value" [placeholder]="placeholder" [required]="required"
+      <input class="emr-control" [id]="controlId" [value]="value" [placeholder]="placeholder" [required]="required"
         [disabled]="disabled" [readOnly]="readOnly" [attr.aria-invalid]="!!error" [attr.aria-describedby]="describedBy()"
         (input)="valueChange.emit(inputValue($event))" (blur)="blurred.emit()" />
-      @if (hint) { <span class="emr-field__hint" [id]="inputId + '-hint'">{{ hint }}</span> }
-      @if (error) { <span class="emr-field__error" [id]="inputId + '-error'">{{ error }}</span> }
+      @if (hint) { <span class="emr-field__hint" [id]="controlId + '-hint'">{{ hint }}</span> }
+      @if (error) { <span class="emr-field__error" [id]="controlId + '-error'">{{ error }}</span> }
     </label>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -47,14 +47,14 @@ export class EmrTextInputComponent extends EmrFieldBase {
   selector: 'emr-number-input',
   standalone: true,
   template: `
-    <label class="emr-field" [for]="inputId">
+    <label class="emr-field" [for]="controlId">
       <span class="emr-field__label">{{ label }} @if (required) { <span class="emr-field__required" aria-hidden="true">*</span> }</span>
-      <input class="emr-control" [id]="inputId" type="number" [attr.inputmode]="mode === 'integer' ? 'numeric' : 'decimal'"
+      <input class="emr-control" [id]="controlId" type="number" [attr.inputmode]="mode === 'integer' ? 'numeric' : 'decimal'"
         [attr.step]="mode === 'integer' ? 1 : step" [attr.min]="min" [attr.max]="max" [value]="value ?? ''" [placeholder]="placeholder"
         [required]="required" [disabled]="disabled" [readOnly]="readOnly" [attr.aria-invalid]="!!error"
         [attr.aria-describedby]="describedBy()" (input)="emitValue($event)" (blur)="blurred.emit()" />
-      @if (hint) { <span class="emr-field__hint" [id]="inputId + '-hint'">{{ hint }}</span> }
-      @if (error) { <span class="emr-field__error" [id]="inputId + '-error'">{{ error }}</span> }
+      @if (hint) { <span class="emr-field__hint" [id]="controlId + '-hint'">{{ hint }}</span> }
+      @if (error) { <span class="emr-field__error" [id]="controlId + '-error'">{{ error }}</span> }
     </label>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -78,13 +78,13 @@ export class EmrNumberInputComponent extends EmrFieldBase {
   selector: 'emr-date-input',
   standalone: true,
   template: `
-    <label class="emr-field" [for]="inputId">
+    <label class="emr-field" [for]="controlId">
       <span class="emr-field__label">{{ label }} @if (required) { <span class="emr-field__required" aria-hidden="true">*</span> }</span>
-      <input class="emr-control" [id]="inputId" type="date" [value]="value" [attr.min]="min" [attr.max]="max"
+      <input class="emr-control" [id]="controlId" type="date" [value]="value" [attr.min]="min" [attr.max]="max"
         [required]="required" [disabled]="disabled" [readOnly]="readOnly" [attr.aria-invalid]="!!error"
         [attr.aria-describedby]="describedBy()" (input)="valueChange.emit(inputValue($event))" />
-      @if (hint) { <span class="emr-field__hint" [id]="inputId + '-hint'">{{ hint }}</span> }
-      @if (error) { <span class="emr-field__error" [id]="inputId + '-error'">{{ error }}</span> }
+      @if (hint) { <span class="emr-field__hint" [id]="controlId + '-hint'">{{ hint }}</span> }
+      @if (error) { <span class="emr-field__error" [id]="controlId + '-error'">{{ error }}</span> }
     </label>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -102,17 +102,17 @@ export class EmrDateInputComponent extends EmrFieldBase {
   selector: 'emr-select',
   standalone: true,
   template: `
-    <label class="emr-field" [for]="inputId">
+    <label class="emr-field" [for]="controlId">
       <span class="emr-field__label">{{ label }} @if (required) { <span class="emr-field__required" aria-hidden="true">*</span> }</span>
-      <select class="emr-select" [id]="inputId" [value]="value ?? ''" [disabled]="disabled || readOnly" [required]="required"
+      <select class="emr-select" [id]="controlId" [value]="value ?? ''" [disabled]="disabled || readOnly" [required]="required"
         [attr.aria-invalid]="!!error" [attr.aria-describedby]="describedBy()" (change)="valueChange.emit(selectValue($event))">
         @if (placeholder) { <option value="">{{ placeholder }}</option> }
         @for (option of options; track option.value) {
           <option [value]="option.value" [disabled]="option.disabled">{{ option.label }}</option>
         }
       </select>
-      @if (hint) { <span class="emr-field__hint" [id]="inputId + '-hint'">{{ hint }}</span> }
-      @if (error) { <span class="emr-field__error" [id]="inputId + '-error'">{{ error }}</span> }
+      @if (hint) { <span class="emr-field__hint" [id]="controlId + '-hint'">{{ hint }}</span> }
+      @if (error) { <span class="emr-field__error" [id]="controlId + '-error'">{{ error }}</span> }
     </label>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -133,18 +133,18 @@ export class EmrSelectComponent extends EmrFieldBase {
   standalone: true,
   template: `
     <div class="emr-field">
-      <label class="emr-field__label" [for]="inputId + '-value'">{{ label }} @if (required) { <span class="emr-field__required" aria-hidden="true">*</span> }</label>
+      <label class="emr-field__label" [for]="controlId + '-value'">{{ label }} @if (required) { <span class="emr-field__required" aria-hidden="true">*</span> }</label>
       <div class="emr-quantity">
-        <input class="emr-control" [id]="inputId + '-value'" type="number" inputmode="decimal" [value]="value ?? ''"
+        <input class="emr-control" [id]="controlId + '-value'" type="number" inputmode="decimal" [value]="value ?? ''"
           [required]="required" [disabled]="disabled" [readOnly]="readOnly" [attr.aria-label]="label + ' value'"
           [attr.aria-invalid]="!!error" [attr.aria-describedby]="describedBy()" (input)="emitQuantityValue($event)" />
-        <select class="emr-select" [id]="inputId + '-unit'" [value]="unit ?? ''" [disabled]="disabled || readOnly"
+        <select class="emr-select" [id]="controlId + '-unit'" [value]="unit ?? ''" [disabled]="disabled || readOnly"
           [attr.aria-label]="label + ' unit'" [attr.aria-describedby]="describedBy()" (change)="emitUnit($event)">
           @for (option of units; track option.value) { <option [value]="option.value" [disabled]="option.disabled">{{ option.label }}</option> }
         </select>
       </div>
-      @if (hint) { <span class="emr-field__hint" [id]="inputId + '-hint'">{{ hint }}</span> }
-      @if (error) { <span class="emr-field__error" [id]="inputId + '-error'">{{ error }}</span> }
+      @if (hint) { <span class="emr-field__hint" [id]="controlId + '-hint'">{{ hint }}</span> }
+      @if (error) { <span class="emr-field__error" [id]="controlId + '-error'">{{ error }}</span> }
     </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -165,14 +165,14 @@ export class EmrQuantityInputComponent extends EmrFieldBase {
   standalone: true,
   template: `
     <div class="emr-field">
-      <label class="emr-field__label" [for]="inputId + '-first'">{{ label }}</label>
+      <label class="emr-field__label" [for]="controlId + '-first'">{{ label }}</label>
       <div class="emr-paired-control">
         <span class="emr-paired-control__prefix" aria-hidden="true">{{ firstLabel }}</span>
-        <input class="emr-control" [id]="inputId + '-first'" [value]="firstValue" [disabled]="disabled" [readOnly]="readOnly"
+        <input class="emr-control" [id]="controlId + '-first'" [value]="firstValue" [disabled]="disabled" [readOnly]="readOnly"
           [attr.aria-label]="label + ', ' + firstLabel" (input)="firstValueChange.emit(inputValue($event))" />
         <span class="emr-field-row__separator" aria-hidden="true">{{ separator }}</span>
         <span class="emr-paired-control__prefix" aria-hidden="true">{{ secondLabel }}</span>
-        <input class="emr-control" [id]="inputId + '-second'" [value]="secondValue" [disabled]="disabled" [readOnly]="readOnly"
+        <input class="emr-control" [id]="controlId + '-second'" [value]="secondValue" [disabled]="disabled" [readOnly]="readOnly"
           [attr.aria-label]="label + ', ' + secondLabel" (input)="secondValueChange.emit(inputValue($event))" />
       </div>
       @if (hint) { <span class="emr-field__hint">{{ hint }}</span> }

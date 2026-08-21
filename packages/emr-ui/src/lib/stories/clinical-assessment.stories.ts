@@ -1,6 +1,6 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
-import { EmrClinicalMatrixComponent } from '../clinical/emr-clinical-matrix.component';
-import { EmrTimelineComponent } from '../timeline/emr-timeline.component';
+import { EmrClinicalMatrixComponent } from '../structures/emr-clinical-matrix.component';
+import { EmrTimelineComponent } from '../domain/emr-timeline.component';
 import { neurologySchema, neurologyValues, ophthalmologySchema, ophthalmologyValues, timelineEvents, timelineKinds } from './fixtures';
 
 const meta: Meta = {
@@ -11,10 +11,10 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-export const OphthalmologyODOS: Story = { render: () => ({ template: `<emr-clinical-matrix [schema]="schema" [values]="values" />`, props: { schema: ophthalmologySchema, values: ophthalmologyValues } }) };
-export const OphthalmologyEmpty: Story = { render: () => ({ template: `<emr-clinical-matrix [schema]="schema" />`, props: { schema: ophthalmologySchema } }) };
-export const OphthalmologyReadOnly: Story = { render: () => ({ template: `<emr-clinical-matrix [schema]="schema" [values]="values" [readOnly]="true" />`, props: { schema: ophthalmologySchema, values: ophthalmologyValues } }) };
-export const NeurologyFourLimb: Story = { render: () => ({ template: `<emr-clinical-matrix [schema]="schema" [values]="values" />`, props: { schema: neurologySchema, values: neurologyValues } }) };
+export const OphthalmologyODOS: Story = { render: () => ({ template: `<emr-clinical-matrix [definition]="schema" [model]="values" />`, props: { schema: ophthalmologySchema, values: ophthalmologyValues } }) };
+export const OphthalmologyEmpty: Story = { render: () => ({ template: `<emr-clinical-matrix [definition]="schema" />`, props: { schema: ophthalmologySchema } }) };
+export const OphthalmologyReadOnly: Story = { render: () => ({ template: `<emr-clinical-matrix [definition]="schema" [model]="values" [readOnly]="true" />`, props: { schema: ophthalmologySchema, values: ophthalmologyValues } }) };
+export const NeurologyFourLimb: Story = { render: () => ({ template: `<emr-clinical-matrix [definition]="schema" [model]="values" />`, props: { schema: neurologySchema, values: neurologyValues } }) };
 
 export const EncounterTimelineVertical: Story = { render: () => ({ template: `<emr-timeline orientation="vertical" [events]="events" [kinds]="kinds" selectedId="t1" />`, props: { events: timelineEvents, kinds: timelineKinds } }) };
 export const EncounterTimelineHorizontal: Story = { render: () => ({ template: `<emr-timeline orientation="horizontal" [events]="events" [kinds]="kinds" selectedId="t2" />`, props: { events: timelineEvents, kinds: timelineKinds } }) };

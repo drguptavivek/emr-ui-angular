@@ -32,11 +32,11 @@ Component({
   template: `
     <emr-right-flyout [open]="true" title="Review orders"><p>Controller-supplied panel content</p></emr-right-flyout>
     <emr-timeline orientation="horizontal" [events]="events" [kinds]="kinds" selectedId="enc-1" />
-    <emr-clinical-matrix [schema]="schema" [values]="values" />
+    <emr-clinical-matrix [definition]="schema" [model]="values" />
     <emr-field-generator [model]="fieldGenerator" />
     <emr-template-composer [model]="templateComposer" />
-    <emr-pac-checklist [view]="pac" />
-    <emr-document-viewer [view]="documentViewer" />
-    <emr-document-viewer [view]="closedDocumentViewer" />
+    <emr-pac-checklist [model]="pac" />
+    <emr-document-viewer [model]="documentViewer" />
+    <emr-document-viewer [model]="closedDocumentViewer" />
   `
 })(EmrSsrHostComponent);

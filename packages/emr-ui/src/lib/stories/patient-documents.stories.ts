@@ -2,9 +2,9 @@ import { ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { DocumentViewerController, PatientDocumentsController } from '@drguptavivek/emr-controller';
 import type { DocumentPreviewManifest, DocumentPreviewPage, DocumentPreviewRepository, DocumentUploadQueueViewModel, DocumentViewerIntent, DocumentViewerViewModel, PatientDocumentsIntent, PatientDocumentsViewModel } from '@drguptavivek/emr-controller';
-import { EmrDocumentUploadQueueComponent } from '../documents/emr-document-upload-queue.component';
-import { EmrPatientDocumentsComponent } from '../documents/emr-patient-documents.component';
-import { EmrDocumentViewerComponent } from '../documents/emr-document-viewer.component';
+import { EmrDocumentUploadQueueComponent } from '../domain/emr-document-upload-queue.component';
+import { EmrPatientDocumentsComponent } from '../domain/emr-patient-documents.component';
+import { EmrDocumentViewerComponent } from '../domain/emr-document-viewer.component';
 
 const uploadFixture: DocumentUploadQueueViewModel = { label: 'Add patient documents', acceptDescription: 'PDF, JPEG and PNG files are accepted by the host workflow.', multiple: true, candidates: [
   { id: 'doc-candidate-1', fileName: 'discharge-summary.pdf', sizeLabel: '224 KB', mediaTypeLabel: 'PDF', sourceToken: 'synthetic-source-1', status: 'complete', statusLabel: 'Ready for review', progress: 100 },
@@ -29,7 +29,7 @@ class StoryPreviewPort implements DocumentPreviewRepository {
 
 const viewerInitial: DocumentViewerViewModel = { instanceId: 'story-document-viewer', open: false, documentIndex: 0, documentCount: 0, pageIndex: 0, loading: false, canPreviousDocument: false, canNextDocument: false, canPreviousPage: false, canNextPage: false };
 
-@Component({ selector: 'emr-document-journey-story', standalone: true, imports: [EmrPatientDocumentsComponent, EmrDocumentViewerComponent], changeDetection: ChangeDetectionStrategy.Default, template: `<div class="emr-story-surface emr-document-journey"><emr-patient-documents [state]="documentsState" (intent)="documentIntent($event)" (previewTrigger)="previewTrigger = $event" /><emr-document-viewer [view]="viewerState" [returnFocusTo]="previewTrigger" (intent)="viewerIntent($event)" /></div>` })
+@Component({ selector: 'emr-document-journey-story', standalone: true, imports: [EmrPatientDocumentsComponent, EmrDocumentViewerComponent], changeDetection: ChangeDetectionStrategy.Default, template: `<div class="emr-story-surface emr-document-journey"><emr-patient-documents [model]="documentsState" (intent)="documentIntent($event)" (previewTrigger)="previewTrigger = $event" /><emr-document-viewer [model]="viewerState" [returnFocusTo]="previewTrigger" (intent)="viewerIntent($event)" /></div>` })
 class EmrDocumentJourneyStoryComponent implements OnDestroy {
   readonly viewerController = new DocumentViewerController(viewerInitial, new StoryPreviewPort());
   readonly documentsController: PatientDocumentsController;
@@ -50,16 +50,16 @@ const meta: Meta = { title: 'EMR / Documents', decorators: [moduleMetadata({ imp
 export default meta;
 type Story = StoryObj;
 
-export const UploadQueue: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-document-upload-queue [state]="state" /></div>`, props: { state: uploadFixture } }) };
-export const PatientDocuments: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-patient-documents [state]="state" /></div>`, props: { state: documentsFixture } }) };
+export const UploadQueue: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-document-upload-queue [model]="state" /></div>`, props: { state: uploadFixture } }) };
+export const PatientDocuments: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-patient-documents [model]="state" /></div>`, props: { state: documentsFixture } }) };
 export const IntegratedClickToOpenJourney: Story = { render: () => ({ template: `<emr-document-journey-story />` }) };
-export const ImageViewer: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-document-viewer [view]="view" /></div>`, props: { view: { ...viewerInitial, open: true, currentDocument: previewManifest('pd-3', 'image'), documentIndex: 0, documentCount: 1, page: previewPage('pd-3', 0, 'image') } } }) };
-export const PdfRasterCarousel: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-document-viewer [view]="view" /></div>`, props: { view: { ...viewerInitial, open: true, currentDocument: previewManifest('pd-1', 'pdf', 3), documentIndex: 0, documentCount: 2, pageIndex: 1, page: previewPage('pd-1', 1, 'pdf'), canNextDocument: true, canPreviousPage: true, canNextPage: true } } }) };
-export const Loading: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-document-viewer [view]="view" /></div>`, props: { view: { ...viewerInitial, open: true, currentDocument: previewManifest('pd-1', 'pdf', 3), documentCount: 2, loading: true, canNextDocument: true, canNextPage: true } } }) };
-export const ErrorState: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-document-viewer [view]="view" /></div>`, props: { view: { ...viewerInitial, open: true, currentDocument: previewManifest('pd-1', 'pdf', 3), documentCount: 2, error: 'Unable to load this document page.', canNextDocument: true, canNextPage: true } } }) };
-export const UnauthorizedPreview: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-document-viewer [view]="view" /></div>`, props: { view: { ...viewerInitial, open: true, documentCount: 1, error: 'Unable to authorize or load this document preview.' } } }) };
-export const NonPreviewableDocument: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-patient-documents [state]="state" /></div>`, props: { state: { ...documentsFixture, documents: [documentsFixture.documents[3]], total: 1 } } }) };
-export const Empty: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-patient-documents [state]="state" /></div>`, props: { state: { ...documentsFixture, documents: [], total: 0 } } }) };
-export const DocumentsLoading: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-patient-documents [state]="state" /></div>`, props: { state: { ...documentsFixture, documents: [], loading: true } } }) };
-export const DocumentsError: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-patient-documents [state]="state" /></div>`, props: { state: { ...documentsFixture, documents: [], error: 'The document service is unavailable.' } } }) };
+export const ImageViewer: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-document-viewer [model]="view" /></div>`, props: { view: { ...viewerInitial, open: true, currentDocument: previewManifest('pd-3', 'image'), documentIndex: 0, documentCount: 1, page: previewPage('pd-3', 0, 'image') } } }) };
+export const PdfRasterCarousel: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-document-viewer [model]="view" /></div>`, props: { view: { ...viewerInitial, open: true, currentDocument: previewManifest('pd-1', 'pdf', 3), documentIndex: 0, documentCount: 2, pageIndex: 1, page: previewPage('pd-1', 1, 'pdf'), canNextDocument: true, canPreviousPage: true, canNextPage: true } } }) };
+export const Loading: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-document-viewer [model]="view" /></div>`, props: { view: { ...viewerInitial, open: true, currentDocument: previewManifest('pd-1', 'pdf', 3), documentCount: 2, loading: true, canNextDocument: true, canNextPage: true } } }) };
+export const ErrorState: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-document-viewer [model]="view" /></div>`, props: { view: { ...viewerInitial, open: true, currentDocument: previewManifest('pd-1', 'pdf', 3), documentCount: 2, error: 'Unable to load this document page.', canNextDocument: true, canNextPage: true } } }) };
+export const UnauthorizedPreview: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-document-viewer [model]="view" /></div>`, props: { view: { ...viewerInitial, open: true, documentCount: 1, error: 'Unable to authorize or load this document preview.' } } }) };
+export const NonPreviewableDocument: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-patient-documents [model]="state" /></div>`, props: { state: { ...documentsFixture, documents: [documentsFixture.documents[3]], total: 1 } } }) };
+export const Empty: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-patient-documents [model]="state" /></div>`, props: { state: { ...documentsFixture, documents: [], total: 0 } } }) };
+export const DocumentsLoading: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-patient-documents [model]="state" /></div>`, props: { state: { ...documentsFixture, documents: [], loading: true } } }) };
+export const DocumentsError: Story = { render: () => ({ template: `<div class="emr-story-surface"><emr-patient-documents [model]="state" /></div>`, props: { state: { ...documentsFixture, documents: [], error: 'The document service is unavailable.' } } }) };
 export const MobileDocumentsAndViewer: Story = { parameters: { viewport: { defaultViewport: 'mobile1' } }, render: () => ({ template: `<emr-document-journey-story />` }) };

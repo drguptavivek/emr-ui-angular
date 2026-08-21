@@ -49,9 +49,21 @@ const groups: readonly TokenGroup[] = [
       { name: '--emr-warning', value: '#8A651F', description: 'Review or caution text' },
       { name: '--emr-warning-soft', value: '#FBF4DE', description: 'Review or caution surface' },
       { name: '--emr-danger', value: '#A44949', description: 'Critical or destructive text' },
-      { name: '--emr-danger-soft', value: '#FCECEC', description: 'Critical or destructive surface' }
+      { name: '--emr-danger-soft', value: '#FCECEC', description: 'Critical or destructive surface' },
+      { name: '--emr-danger-hover', value: '#8f3434', description: 'Destructive action hover fill' },
+      { name: '--emr-danger-hover-text', value: '#ffffff', description: 'Text on destructive hover fill' }
     ]
   }
+];
+
+/** Tokens that are not colours, so they are listed rather than swatched. */
+interface ConstantToken { name: string; light: string; dark: string; description: string }
+
+const constants: readonly ConstantToken[] = [
+  { name: '--emr-shadow', light: '0 8px 24px rgb(15 23 42 / 0.09)', dark: '0 10px 28px rgb(0 0 0 / 0.35)', description: 'Raised surface elevation' },
+  { name: '--emr-control-height', light: '44px', dark: '44px', description: 'Minimum interactive target (WCAG 2.2 AA)' },
+  { name: '--emr-compact-height', light: '32px', dark: '32px', description: 'Dense control height inside tables and matrices' },
+  { name: '--emr-paired-control-width', light: '132px', dark: '132px', description: 'Each half of a paired input' }
 ];
 
 const darkValues: Readonly<Record<string, string>> = {
@@ -63,7 +75,7 @@ const darkValues: Readonly<Record<string, string>> = {
   '--emr-border': '#475569', '--emr-neutral-soft': '#334155', '--emr-info': '#7DD3FC',
   '--emr-info-soft': '#0C4A6E', '--emr-success': '#86EFAC', '--emr-success-soft': '#14532D',
   '--emr-warning': '#FDE68A', '--emr-warning-soft': '#713F12', '--emr-danger': '#FCA5A5',
-  '--emr-danger-soft': '#7F1D1D'
+  '--emr-danger-soft': '#7F1D1D', '--emr-danger-hover': '#991b1b', '--emr-danger-hover-text': '#ffffff'
 };
 
 @Component({
@@ -83,6 +95,7 @@ const darkValues: Readonly<Record<string, string>> = {
           }
         </div></section>
       }
+      <section><h2>Elevation and layout constants</h2><table class="emr-token-table"><caption class="emr-sr-only">Non-colour design tokens</caption><thead><tr><th scope="col">Token</th><th scope="col">Value</th><th scope="col">Purpose</th></tr></thead><tbody>@for (token of constantTokens; track token.name) { <tr><td><code>{{ token.name }}</code></td><td>{{ dark ? token.dark : token.light }}</td><td>{{ token.description }}</td></tr> }</tbody></table></section>
       <section><h2>Action hierarchy</h2><div class="emr-color-actions"><button class="emr-button" type="button">Save assessment</button><button class="emr-button emr-button--secondary" type="button">Secondary</button><button class="emr-button emr-button--outline" type="button">Outline</button><button class="emr-button emr-button--ghost" type="button">Ghost</button><button class="emr-button emr-button--danger" type="button">Delete</button></div></section>
     </main>
   `,
@@ -93,6 +106,10 @@ const darkValues: Readonly<Record<string, string>> = {
     section+section{margin-top:28px}h2{margin:0 0 12px;font-size:1rem}.emr-color-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
     .emr-color-card{display:grid;grid-template-columns:68px minmax(0,1fr);gap:12px;min-height:96px;padding:12px;border:1px solid var(--emr-border);border-radius:10px;background:var(--emr-surface)}
     .emr-color-card__swatch{min-height:68px;border:1px solid color-mix(in srgb,var(--emr-text) 12%,transparent);border-radius:8px}.emr-color-card code,.emr-color-card strong,.emr-color-card p{display:block}.emr-color-card code{overflow-wrap:anywhere;color:var(--emr-primary);font-size:.76rem}.emr-color-card strong{margin-top:3px;font-size:.82rem}.emr-color-card p{margin:4px 0 0;color:var(--emr-text-muted);font-size:.78rem}
+    .emr-token-table{width:100%;border-collapse:collapse;border:1px solid var(--emr-border);border-radius:10px;background:var(--emr-surface);overflow:hidden}
+    .emr-token-table th,.emr-token-table td{padding:10px 12px;text-align:left;font-size:.82rem;border-bottom:1px solid var(--emr-border)}
+    .emr-token-table tbody tr:last-child td{border-bottom:none}.emr-token-table th{color:var(--emr-text-muted);font-size:.76rem;text-transform:uppercase;letter-spacing:.06em}
+    .emr-token-table code{color:var(--emr-primary);overflow-wrap:anywhere}
     .emr-color-actions{display:flex;flex-wrap:wrap;gap:10px;padding:16px;border:1px solid var(--emr-border);border-radius:10px;background:var(--emr-surface)}
     @media(max-width:560px){.emr-color-catalogue{padding:14px}.emr-color-grid{grid-template-columns:1fr}}
   `]
@@ -100,6 +117,7 @@ const darkValues: Readonly<Record<string, string>> = {
 class EmrColorTokenCatalogueComponent {
   @Input() dark = false;
   readonly tokenGroups = groups;
+  readonly constantTokens = constants;
   displayValue(token: TokenGroup['tokens'][number]): string { return this.dark ? darkValues[token.name] ?? token.value : token.value; }
 }
 

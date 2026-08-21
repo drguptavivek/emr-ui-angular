@@ -1,6 +1,6 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import type { ClinicalFieldDefinition, ClinicalFormViewModel } from '@drguptavivek/emr-controller';
-import { EmrClinicalFormComponent } from '../clinical/emr-clinical-form.component';
+import { EmrClinicalFormComponent } from '../structures/emr-clinical-form.component';
 
 const examinations: ClinicalFormViewModel = {
   schema: { id: 'system-exams', label: 'General physical examination', description: 'A reusable system examination recipe. Interpretation, validation and persistence stay in the controller.', sections: [

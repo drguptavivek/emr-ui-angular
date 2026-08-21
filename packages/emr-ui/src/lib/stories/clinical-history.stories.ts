@@ -1,6 +1,6 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import type { ClinicalFormViewModel } from '@drguptavivek/emr-controller';
-import { EmrClinicalFormComponent } from '../clinical/emr-clinical-form.component';
+import { EmrClinicalFormComponent } from '../structures/emr-clinical-form.component';
 
 const history: ClinicalFormViewModel = {
   schema: { id: 'history', label: 'Clinical history', description: 'Structured narrative fields remain controlled by the encounter controller.', sections: [{ id: 'presenting', label: 'Presenting concern', blocks: [

@@ -4,7 +4,7 @@ import {
   EmrCardComponent,
   EmrColumnsComponent,
   EmrFieldValueRowComponent
-} from '../layout/emr-card-layout.component';
+} from '../primitives/emr-card-layout.component';
 
 const meta: Meta = {
   title: 'Foundations / Layout primitives',

@@ -41,9 +41,22 @@ export interface NavItem {
   children?: readonly NavItem[];
 }
 
+/**
+ * What role an identifier plays in the patient identity block.
+ *
+ * `national-health-id` is deliberately generic: it is ABHA in India, the NHS number in
+ * England, and so on. The jurisdiction-specific name belongs in `label`, supplied by the
+ * controller — the component must never hardcode a national scheme.
+ */
+export type PatientIdentifierKind = 'mrn' | 'national-health-id' | 'other';
+
 export interface PatientIdentifier {
   label: string;
   value: string;
+  /** Defaults to `'other'` when absent, so existing identifier lists keep working. */
+  kind?: PatientIdentifierKind;
+  /** Issuing authority URI, mirroring FHIR `Identifier.system`. Never displayed. */
+  system?: string;
 }
 
 export interface PatientAlert {
@@ -81,7 +94,14 @@ export interface PatientListRow {
   patientId: string;
   displayName: string;
   primaryIdentifier: string;
+  /**
+   * @deprecated Hardcodes India's ABHA scheme. Use `nationalHealthIds`, which carries the
+   * scheme name in `label` so other jurisdictions bind their own national identifier.
+   * Retained so existing controllers keep compiling; removed once the UI has migrated.
+   */
   abha?: { value: string; label?: string };
+  /** National health identifiers — ABHA in India, NHS number in England, and so on. */
+  nationalHealthIds?: readonly PatientIdentifier[];
   ageLabel: string;
   sexLabel: string;
   careSettingLabel: string;
@@ -344,3 +364,40 @@ export type FavouritesIntent =
   | { type: 'applyRequested'; id: string }
   | { type: 'backRequested' }
   | { type: 'retryRequested' };
+
+// ---------------------------------------------------------------------------
+// Intent unions for components that previously emitted ad-hoc named outputs.
+// Every controlled component above the primitive layer emits exactly one
+// `intent`; adding an interaction adds a union member, not a new @Output.
+// See docs/api-conventions.md section 2.1.
+// ---------------------------------------------------------------------------
+
+/** Replaces the UI-declared `ClinicalListAction`. */
+export type ClinicalListIntent =
+  | { type: 'addRequested' }
+  | { type: 'selected'; id: string }
+  | { type: 'editRequested'; id: string }
+  | { type: 'removeRequested'; id: string };
+
+/** Replaces the UI-declared `OrderDetailChange` plus a separate remove output. */
+export type OrderDetailsIntent =
+  | { type: 'detailChangeRequested'; orderId: string; field: string; value: string | boolean | null }
+  | { type: 'removeRequested'; orderId: string };
+
+export type TimelineIntent =
+  | { type: 'eventSelected'; eventId: string };
+
+export type PatientBannerIntent =
+  | { type: 'expandedChangeRequested'; expanded: boolean };
+
+export type LeftNavIntent =
+  | { type: 'collapseToggleRequested'; collapsed: boolean }
+  | { type: 'itemSelected'; itemId: string }
+  | { type: 'itemExpansionRequested'; itemId: string; expanded: boolean };
+
+export type RightFlyoutIntent =
+  | { type: 'closeRequested' }
+  | { type: 'backRequested' };
+
+export type SectionCardIntent =
+  | { type: 'toggleRequested'; sectionId: string };

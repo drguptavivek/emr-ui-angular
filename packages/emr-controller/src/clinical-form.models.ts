@@ -1,4 +1,5 @@
 import type { ClinicalAssessmentStatus, ClinicalOption, ClinicalQuantityValue, EmrBadge } from './models.js';
+import type { EmrCodedValue, EmrPartialDate } from './field-contract.models.js';
 
 export type ClinicalFieldType =
   | 'text'
@@ -18,6 +19,8 @@ export type ClinicalFieldValue =
   | boolean
   | readonly string[]
   | ClinicalQuantityValue
+  | EmrPartialDate
+  | EmrCodedValue
   | null;
 
 export interface ClinicalFieldDefinition {

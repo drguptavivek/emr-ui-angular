@@ -23,13 +23,13 @@ type Story = StoryObj;
 export const Controls: Story = {
   render: () => ({ template: `
     <div class="emr-story-grid emr-story-grid--two">
-      <emr-text-input inputId="demo-name" label="Patient name" value="Ananya Rao" hint="Controlled text value" required />
-      <emr-number-input inputId="demo-iop" label="Intraocular pressure" [value]="18" mode="decimal" [step]="0.1" hint="mmHg" />
-      <emr-number-input inputId="demo-power" label="Power (MRC)" [value]="4" mode="integer" [min]="0" [max]="5" />
-      <emr-date-input inputId="demo-date" label="Encounter date" value="2026-08-19" />
-      <emr-select inputId="demo-status" label="Encounter status" value="review" [options]="statusOptions" />
-      <emr-quantity-input inputId="demo-weight" label="Weight" [value]="68.5" unit="kg" [units]="unitOptions" />
-      <emr-paired-input inputId="demo-pair" label="Visual acuity" firstLabel="OD" secondLabel="OS" firstValue="6/12" secondValue="6/9" separator="/" />
+      <emr-text-input controlId="demo-name" label="Patient name" value="Ananya Rao" hint="Controlled text value" required />
+      <emr-number-input controlId="demo-iop" label="Intraocular pressure" [value]="18" mode="decimal" [step]="0.1" hint="mmHg" />
+      <emr-number-input controlId="demo-power" label="Power (MRC)" [value]="4" mode="integer" [min]="0" [max]="5" />
+      <emr-date-input controlId="demo-date" label="Encounter date" value="2026-08-19" />
+      <emr-select controlId="demo-status" label="Encounter status" value="review" [options]="statusOptions" />
+      <emr-quantity-input controlId="demo-weight" label="Weight" [value]="68.5" unit="kg" [units]="unitOptions" />
+      <emr-paired-input controlId="demo-pair" label="Visual acuity" firstLabel="OD" secondLabel="OS" firstValue="6/12" secondValue="6/9" separator="/" />
     </div>
     <div class="emr-stack emr-stack--compact">
       <emr-checkbox label="Fasting required" [checked]="true" />
@@ -48,11 +48,11 @@ export const Controls: Story = {
 };
 
 export const SearchSingle: Story = {
-  render: () => ({ template: `<emr-search-select inputId="med-search" label="Medication" placeholder="Search medicines" [options]="options" [selected]="selected" [open]="true" />`, props: { options: [{ value: 'metformin', label: 'Metformin 500 mg', description: 'Tablet · oral · twice daily' }, { value: 'latanoprost', label: 'Latanoprost 0.005%', description: 'Eye drop · nightly' }], selected: [] } })
+  render: () => ({ template: `<emr-search-select controlId="med-search" label="Medication" placeholder="Search medicines" [options]="options" [selected]="selected" [open]="true" />`, props: { options: [{ value: 'metformin', label: 'Metformin 500 mg', description: 'Tablet · oral · twice daily' }, { value: 'latanoprost', label: 'Latanoprost 0.005%', description: 'Eye drop · nightly' }], selected: [] } })
 };
 
 export const SearchMultiSelect: Story = {
-  render: () => ({ template: `<emr-search-select inputId="test-search" label="Laboratory tests" multiple [options]="options" [selected]="selected" [open]="true" />`, props: { options: [{ value: 'cbc', label: 'Complete blood count' }, { value: 'hba1c', label: 'Glycated haemoglobin' }, { value: 'creat', label: 'Serum creatinine' }], selected: [{ value: 'hba1c', label: 'Glycated haemoglobin' }] } })
+  render: () => ({ template: `<emr-search-select controlId="test-search" label="Laboratory tests" multiple [options]="options" [selected]="selected" [open]="true" />`, props: { options: [{ value: 'cbc', label: 'Complete blood count' }, { value: 'hba1c', label: 'Glycated haemoglobin' }, { value: 'creat', label: 'Serum creatinine' }], selected: [{ value: 'hba1c', label: 'Glycated haemoglobin' }] } })
 };
 
 export const FeedbackStates: Story = {

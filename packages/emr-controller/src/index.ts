@@ -22,3 +22,11 @@ export * from './ehr-template.controller.js';
 export * from './spectacle-prescription.models.js';
 export * from './pac.models.js';
 export * from './annotation.models.js';
+
+// Capture contract — see docs/field-contract.md
+export * from './node-path.js';
+export * from './validation.models.js';
+export * from './field-contract.models.js';
+export * from './field-contract.adapters.js';
+export * from './capture.models.js';
+export * from './scoring.models.js';

@@ -1,14 +1,21 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/emr-ui",
-  "allowedNonPeerDependencies": ["@fontsource-variable/inter"],
+  "allowedNonPeerDependencies": [
+    "@fontsource-variable/inter"
+  ],
   "lib": {
     "entryFile": "src/public-api.ts"
   },
   "assets": [
     {
-      "input": "src/lib/styles",
+      "input": "src/lib/foundations",
       "glob": "emr.css",
+      "output": "styles"
+    },
+    {
+      "input": "src/lib/foundations",
+      "glob": "emr-print.css",
       "output": "styles"
     }
   ]

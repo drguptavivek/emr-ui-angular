@@ -7,3 +7,5 @@ playwright-report/
 .angular/
 .DS_Store
 *.tsbuildinfo
+.serena
+.codex-artifacts

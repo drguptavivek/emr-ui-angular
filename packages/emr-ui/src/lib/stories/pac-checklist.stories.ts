@@ -1,6 +1,6 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import type { ClinicalFormViewModel, PacChecklistViewModel } from '@drguptavivek/emr-controller';
-import { EmrPacChecklistComponent } from '../safety/emr-pac-checklist.component';
+import { EmrPacChecklistComponent } from '../domain/emr-pac-checklist.component';
 
 const form: ClinicalFormViewModel = {
   schema: { id: 'pac-form', label: 'Pre-operative assessment', description: 'Capture the supplied assessment information for review.', sections: [
@@ -21,8 +21,8 @@ const readonly: PacChecklistViewModel = { ...base, instanceId: 'pac-readonly-1',
 const meta: Meta = { title: 'EMR / Safety / PAC checklist', decorators: [moduleMetadata({ imports: [EmrPacChecklistComponent] })], parameters: { docs: { description: { component: 'Controlled PAC checklist wrapper. The controller supplies context, form state, errors and actions; the UI does not infer fitness, clearance, ASA class or clinical validation.' } } } };
 export default meta;
 type Story = StoryObj;
-export const Default: Story = { render: () => ({ template: '<emr-pac-checklist [view]="view" />', props: { view: base } }) };
-export const DocumentationCompleted: Story = { render: () => ({ template: '<emr-pac-checklist [view]="view" />', props: { view: completed } }) };
-export const Errors: Story = { render: () => ({ template: '<emr-pac-checklist [view]="view" />', props: { view: errors } }) };
-export const ReadOnly: Story = { render: () => ({ template: '<emr-pac-checklist [view]="view" />', props: { view: readonly } }) };
-export const Mobile: Story = { render: () => ({ template: '<div style="max-width: 430px"><emr-pac-checklist [view]="view" /></div>', props: { view: base } }) };
+export const Default: Story = { render: () => ({ template: '<emr-pac-checklist [model]="view" />', props: { view: base } }) };
+export const DocumentationCompleted: Story = { render: () => ({ template: '<emr-pac-checklist [model]="view" />', props: { view: completed } }) };
+export const Errors: Story = { render: () => ({ template: '<emr-pac-checklist [model]="view" />', props: { view: errors } }) };
+export const ReadOnly: Story = { render: () => ({ template: '<emr-pac-checklist [model]="view" />', props: { view: readonly } }) };
+export const Mobile: Story = { render: () => ({ template: '<div style="max-width: 430px"><emr-pac-checklist [model]="view" /></div>', props: { view: base } }) };

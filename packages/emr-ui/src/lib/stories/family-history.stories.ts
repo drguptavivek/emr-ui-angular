@@ -1,5 +1,5 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
-import { EmrFamilyPedigreeComponent } from '../history/emr-family-pedigree.component';
+import { EmrFamilyPedigreeComponent } from '../domain/emr-family-pedigree.component';
 import type { FamilyPedigreeViewModel } from '@drguptavivek/emr-controller';
 
 const familyHistoryStoryFixture: FamilyPedigreeViewModel = {

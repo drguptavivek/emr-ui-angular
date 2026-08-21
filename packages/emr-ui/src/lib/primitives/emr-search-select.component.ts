@@ -6,7 +6,7 @@ import { EmrOption } from '@drguptavivek/emr-controller';
   standalone: true,
   template: `
     <div class="emr-field emr-search-select">
-      <label class="emr-field__label" [for]="inputId">{{ label }}</label>
+      <label class="emr-field__label" [for]="controlId">{{ label }}</label>
       @if (multiple && selected.length) {
         <div class="emr-chip-row" aria-label="Selected options">
           @for (item of selected; track item.value) {
@@ -19,9 +19,9 @@ import { EmrOption } from '@drguptavivek/emr-controller';
         </div>
       }
       <div class="emr-search-select__bar">
-        <input #queryInput class="emr-search-input" type="search" autocomplete="off" role="combobox" [id]="inputId"
+        <input #queryInput class="emr-search-input" type="search" autocomplete="off" role="combobox" [id]="controlId"
           [value]="query" [placeholder]="placeholder" [disabled]="disabled" [attr.aria-expanded]="open"
-          [attr.aria-controls]="inputId + '-listbox'" [attr.aria-autocomplete]="'list'"
+          [attr.aria-controls]="controlId + '-listbox'" [attr.aria-autocomplete]="'list'"
           (focus)="openRequested.emit()" (input)="queryChanged.emit(inputValue($event))" (keydown.enter)="searchRequested.emit()"
           (keydown.arrowdown)="focusOption($event, 0)" (keydown.escape)="closeRequested.emit()" />
         <button class="emr-button emr-button--secondary" type="button" [disabled]="disabled || loading" (click)="searchRequested.emit()">
@@ -30,7 +30,7 @@ import { EmrOption } from '@drguptavivek/emr-controller';
       </div>
       @if (error) { <span class="emr-field__error" role="alert">{{ error }}</span> }
       @if (open) {
-        <div class="emr-search-select__panel" [id]="inputId + '-listbox'" role="listbox" [attr.aria-multiselectable]="multiple">
+        <div class="emr-search-select__panel" [id]="controlId + '-listbox'" role="listbox" [attr.aria-multiselectable]="multiple">
           @if (!loading && options.length === 0) {
             <div class="emr-empty">{{ emptyMessage }}</div>
           }
@@ -52,7 +52,7 @@ import { EmrOption } from '@drguptavivek/emr-controller';
   encapsulation: ViewEncapsulation.None
 })
 export class EmrSearchSelectComponent {
-  @Input() inputId = 'emr-search';
+  @Input() controlId = 'emr-search';
   @Input() label = 'Search';
   @Input() placeholder = 'Type to search';
   @Input() query = '';

@@ -29,8 +29,8 @@ describe('controlled UI component contracts', () => {
   });
 
   it('patient list and navigation emit typed intents without mutating supplied view state', () => {
-    const patientList = component('patient/emr-patient-list.component.ts');
-    const navigation = component('layout/emr-left-nav.component.ts');
+    const patientList = component('domain/emr-patient-list.component.ts');
+    const navigation = component('domain/emr-left-nav.component.ts');
 
     expect(patientList).toMatch(/@Output\(\)\s+readonly\s+intent\s*=\s*new EventEmitter<PatientListIntent>/);
     expect(patientList).toMatch(/patientSelected/);
@@ -40,17 +40,17 @@ describe('controlled UI component contracts', () => {
   });
 
   it('patient banner is a pure projection with a controlled expansion intent', () => {
-    const source = component('patient/emr-patient-banner.component.ts');
+    const source = component('domain/emr-patient-banner.component.ts');
 
-    expect(source).toMatch(/@Input\(\{\s*required:\s*true\s*\}\)\s+patient/);
+    expect(source).toMatch(/@Input\(\{\s*required:\s*true\s*\}\)\s+model/);
     expect(source).toMatch(/@Output\(\)\s+readonly\s+expandedChangeRequested/);
     expect(source).toMatch(/primaryIdentifier\(\)/);
     expect(source).toMatch(/combinedAlerts\(\)/);
-    expect(source).not.toMatch(/patient\.(allergies|alerts|chronicDiseases)\.(?:push|splice|sort|reverse)\s*\(/);
+    expect(source).not.toMatch(/model\.(allergies|alerts|chronicDiseases)\.(?:push|splice|sort|reverse)\s*\(/);
   });
 
   it('clinical matrix supports specialty schemas while emitting cell and remark edits', () => {
-    const source = component('clinical/emr-clinical-matrix.component.ts');
+    const source = component('structures/emr-clinical-matrix.component.ts');
 
     expect(source).toMatch(/ClinicalMatrixSchema/);
     expect(source).toMatch(/ClinicalMatrixValues/);
@@ -62,7 +62,7 @@ describe('controlled UI component contracts', () => {
   });
 
   it('spectacle prescription is a controlled eye-by-field table with raw string edits', () => {
-    const source = component('clinical/emr-spectacle-prescription.component.ts');
+    const source = component('domain/emr-spectacle-prescription.component.ts');
 
     expect(source).toMatch(/SpectaclePrescriptionViewModel/);
     expect(source).toMatch(/cellFocused/);
@@ -76,10 +76,10 @@ describe('controlled UI component contracts', () => {
 
   it('workflow components contain no direct network, persistence, or routing calls', () => {
     const files = [
-      'patient/emr-patient-list.component.ts',
-      'timeline/emr-timeline.component.ts',
-      'orders/emr-hierarchy-order-picker.component.ts',
-      'favourites/emr-favourites-panel.component.ts',
+      'domain/emr-patient-list.component.ts',
+      'domain/emr-timeline.component.ts',
+      'domain/emr-hierarchy-order-picker.component.ts',
+      'domain/emr-favourites-panel.component.ts',
     ];
     for (const path of files) {
       const source = component(path);
@@ -88,19 +88,19 @@ describe('controlled UI component contracts', () => {
   });
 
   it('PAC checklist wraps a controlled clinical form and namespaces its instance actions', () => {
-    const source = component('safety/emr-pac-checklist.component.ts');
+    const source = component('domain/emr-pac-checklist.component.ts');
 
     expect(source).toMatch(/PacChecklistViewModel/);
     expect(source).toMatch(/type: 'formIntent'/);
     expect(source).toMatch(/type: 'actionRequested'/);
-    expect(source).toMatch(/view\.instanceId/);
-    expect(source).toMatch(/readOnly: this\.readOnly \|\| !!this\.view\.readOnly/);
+    expect(source).toMatch(/model\.instanceId/);
+    expect(source).toMatch(/readOnly: !!this\.model\.readOnly/);
     expect(source).not.toMatch(/fetch\(|HttpClient|Router|localStorage|sessionStorage|fitness|clearance|ASA/);
   });
 
   it('document library and viewer are controlled, permission-aware presentation surfaces', () => {
-    const library = component('documents/emr-patient-documents.component.ts');
-    const viewer = component('documents/emr-document-viewer.component.ts');
+    const library = component('domain/emr-patient-documents.component.ts');
+    const viewer = component('domain/emr-document-viewer.component.ts');
 
     expect(library).toMatch(/folderChanged/);
     expect(library).toMatch(/documentClicked/);

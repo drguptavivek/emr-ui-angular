@@ -14,6 +14,20 @@ const preview: Preview = {
         ],
         dynamicTitle: true
       }
+    },
+    print: {
+      description: 'Preview the paper layout on screen',
+      defaultValue: 'screen',
+      toolbar: {
+        title: 'Print',
+        icon: 'print',
+        items: [
+          { value: 'screen', title: 'Screen', icon: 'browser' },
+          { value: 'record', title: 'Print — record', icon: 'document' },
+          { value: 'form', title: 'Print — blank form', icon: 'edit' }
+        ],
+        dynamicTitle: true
+      }
     }
   },
   parameters: {
@@ -26,9 +40,15 @@ const preview: Preview = {
     (story, context) => {
       const rendered = story();
       const themeClass = context.globals['theme'] === 'dark' ? 'emr-theme-dark' : 'emr-theme-light';
+      const printMode = context.globals['print'] ?? 'screen';
+      // Print always renders on the light palette; a dark-theme print would
+      // consume a cartridge and read poorly on paper.
+      const surfaceClass = printMode === 'screen' ? themeClass : 'emr-theme-light';
+      const printClass =
+        printMode === 'form' ? ' emr-print emr-print--form' : printMode === 'record' ? ' emr-print' : '';
       return {
         ...rendered,
-        template: `<div class="${themeClass} emr-story-surface">${rendered.template ?? ''}</div>`
+        template: `<div class="${surfaceClass}${printClass} emr-story-surface">${rendered.template ?? ''}</div>`
       };
     }
   ],

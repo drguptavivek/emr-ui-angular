@@ -1,5 +1,5 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
-import { EmrStagedChecklistComponent } from '../safety/emr-staged-checklist.component';
+import { EmrStagedChecklistComponent } from '../domain/emr-staged-checklist.component';
 import type { StagedChecklistViewModel } from '@drguptavivek/emr-controller';
 
 const syntheticChecklist: StagedChecklistViewModel = {
@@ -43,8 +43,8 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-export const Incomplete: Story = { render: () => ({ template: `<emr-staged-checklist [view]="view" />`, props: { view: syntheticChecklist } }) };
-export const Complete: Story = { render: () => ({ template: `<emr-staged-checklist [view]="view" />`, props: { view: { ...syntheticChecklist, phaseStatuses: { 'sign-in': { label: 'Complete', tone: 'success' }, 'time-out': { label: 'Complete', tone: 'success' }, 'sign-out': { label: 'Complete', tone: 'success' } }, activePhaseId: 'time-out' } } }) };
-export const Blocked: Story = { render: () => ({ template: `<emr-staged-checklist [view]="view" />`, props: { view: { ...syntheticChecklist, error: 'Required items need review before this phase can be completed.', phaseStatuses: { 'sign-in': { label: 'Blocked', tone: 'danger', assistiveText: 'Required items are incomplete.' } } } } }) };
-export const ReadOnly: Story = { render: () => ({ template: `<emr-staged-checklist [view]="view" />`, props: { view: { ...syntheticChecklist, readOnly: true, phaseStatuses: { 'sign-in': { label: 'Signed off', tone: 'success' } }, signoffs: { 'sign-in': { displayName: 'Synthetic reviewer', roleLabel: 'Reviewer', signedAtLabel: '19 Aug 2026, 09:30' } } } } }) };
-export const TwoInstances: Story = { render: () => ({ template: `<div class="emr-story-grid emr-story-grid--two"><emr-staged-checklist [view]="first" /><emr-staged-checklist [view]="second" /></div>`, props: { first: { ...syntheticChecklist, instanceId: 'checklist-a' }, second: { ...syntheticChecklist, instanceId: 'checklist-b' } } }) };
+export const Incomplete: Story = { render: () => ({ template: `<emr-staged-checklist [model]="view" />`, props: { view: syntheticChecklist } }) };
+export const Complete: Story = { render: () => ({ template: `<emr-staged-checklist [model]="view" />`, props: { view: { ...syntheticChecklist, phaseStatuses: { 'sign-in': { label: 'Complete', tone: 'success' }, 'time-out': { label: 'Complete', tone: 'success' }, 'sign-out': { label: 'Complete', tone: 'success' } }, activePhaseId: 'time-out' } } }) };
+export const Blocked: Story = { render: () => ({ template: `<emr-staged-checklist [model]="view" />`, props: { view: { ...syntheticChecklist, error: 'Required items need review before this phase can be completed.', phaseStatuses: { 'sign-in': { label: 'Blocked', tone: 'danger', assistiveText: 'Required items are incomplete.' } } } } }) };
+export const ReadOnly: Story = { render: () => ({ template: `<emr-staged-checklist [model]="view" />`, props: { view: { ...syntheticChecklist, readOnly: true, phaseStatuses: { 'sign-in': { label: 'Signed off', tone: 'success' } }, signoffs: { 'sign-in': { displayName: 'Synthetic reviewer', roleLabel: 'Reviewer', signedAtLabel: '19 Aug 2026, 09:30' } } } } }) };
+export const TwoInstances: Story = { render: () => ({ template: `<div class="emr-story-grid emr-story-grid--two"><emr-staged-checklist [model]="first" /><emr-staged-checklist [model]="second" /></div>`, props: { first: { ...syntheticChecklist, instanceId: 'checklist-a' }, second: { ...syntheticChecklist, instanceId: 'checklist-b' } } }) };

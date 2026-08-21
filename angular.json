@@ -33,7 +33,8 @@
             "compodoc": false,
             "styles": [
               "packages/emr-ui/node_modules/@fontsource-variable/inter/index.css",
-              "packages/emr-ui/src/lib/styles/emr.css",
+              "packages/emr-ui/src/lib/foundations/emr.css",
+              "packages/emr-ui/src/lib/foundations/emr-print.css",
               "packages/emr-ui/.storybook/storybook.css"
             ],
             "port": 6006
@@ -48,7 +49,8 @@
             "compodoc": false,
             "styles": [
               "packages/emr-ui/node_modules/@fontsource-variable/inter/index.css",
-              "packages/emr-ui/src/lib/styles/emr.css",
+              "packages/emr-ui/src/lib/foundations/emr.css",
+              "packages/emr-ui/src/lib/foundations/emr-print.css",
               "packages/emr-ui/.storybook/storybook.css"
             ],
             "outputDir": "storybook-static"

@@ -3,7 +3,7 @@ import {
   EmrAnnotationLabel,
   EmrClinicalAnnotationCanvasState,
   EmrClinicalAnnotationCanvasComponent,
-} from '../clinical/emr-clinical-annotation-canvas.component';
+} from '../domain/emr-clinical-annotation-canvas.component';
 
 const svgFromText = (label: string, subtitle: string, accent: string): string => `data:image/svg+xml,${encodeURIComponent(`
   <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
