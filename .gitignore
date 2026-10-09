@@ -9,3 +9,4 @@ playwright-report/
 *.tsbuildinfo
 .serena
 .codex-artifacts
+.trace-mcp/
