@@ -47,7 +47,10 @@ export class AsyncSearchController<Item> extends StateController<
   dispatch(intent: AsyncSearchIntent<Item>): void {
     switch (intent.type) {
       case 'queryChanged':
-        this.setState(state => ({ ...state, query: intent.query, page: 1 }));
+        // A response for the previous query must never populate under the new one.
+        this.request?.abort();
+        this.requestSequence += 1;
+        this.setState(state => ({ ...state, query: intent.query, page: 1, loading: false }));
         return;
       case 'pageChanged':
         this.setState(state => ({ ...state, page: intent.page }));

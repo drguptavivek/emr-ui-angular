@@ -70,3 +70,60 @@ describe('print layer', () => {
     expect(css).toMatch(/@page \{[\s\S]*?size: A4;[\s\S]*?margin: 12mm;[\s\S]*?\}/);
   });
 });
+
+/**
+ * A print rule that targets a class no template emits is dead code — and dead print
+ * rules fail silently, by omitting clinical data from paper. Every `.emr-*` class the
+ * print layer selects must be a class a component actually renders (or a root class
+ * the consumer applies, listed below).
+ */
+describe('print selectors target real DOM', () => {
+  const { readdirSync, statSync } = require('node:fs') as typeof import('node:fs');
+  const lib = join(new URL('.', import.meta.url).pathname, '..');
+
+  function walk(dir: string): string[] {
+    return readdirSync(dir).flatMap(name => {
+      const full = join(dir, name);
+      if (statSync(full).isDirectory()) return walk(full);
+      return name.endsWith('.component.ts') ? [full] : [];
+    });
+  }
+  const templates = walk(lib).map(file => readFileSync(file, 'utf8')).join('\n');
+  const emittedClasses = new Set<string>();
+  // class="a b", host: { class: 'a b' }, [class.a]="..."
+  for (const [, list] of templates.matchAll(/class(?:=|:\s*)["'`]([^"'`]+)["'`]/g)) {
+    for (const cls of list.split(/\s+/)) if (cls.startsWith('emr-')) emittedClasses.add(cls);
+  }
+  for (const [, cls] of templates.matchAll(/\[class\.(emr-[a-zA-Z0-9_-]+)\]/g)) emittedClasses.add(cls);
+  for (const [, cls] of templates.matchAll(/['"`](emr-[a-zA-Z0-9_-]+)['"`]/g)) emittedClasses.add(cls);
+
+  // Applied by the consumer on a root element, not emitted by a component.
+  const consumerRootClasses = new Set(['emr-print', 'emr-print--form', 'emr-print--letter', 'emr-theme-dark', 'emr-theme-light']);
+
+  const selectorLists = [...css.matchAll(/(^|[}{;]|\*\/)\s*([^{}/@][^{};]*?)\s*\{/gm)].map(m => m[2]);
+  const selected = new Set<string>();
+  for (const list of selectorLists) {
+    for (const [, cls] of list.matchAll(/\.(emr-[a-zA-Z0-9_-]+)/g)) selected.add(cls);
+  }
+
+  it('finds the classes the print layer depends on', () => {
+    expect(selected.has('emr-section-card__content')).toBe(true);
+    expect(selected.has('emr-table-wrap')).toBe(true);
+    expect(selected.has('emr-matrix')).toBe(true);
+  });
+
+  it('only selects classes a component template emits', () => {
+    const ghosts = [...selected].filter(cls => !emittedClasses.has(cls) && !consumerRootClasses.has(cls));
+    expect(ghosts, `print rules target classes nothing renders: ${ghosts.join(', ')}`).toEqual([]);
+  });
+
+  it('restores collapsed section content and un-hides responsive tables', () => {
+    expect(media).toMatch(/\.emr-section-card__content\[hidden\]/);
+    expect(media).toMatch(/\.emr-table-wrap,\s*\.emr-matrix table\s*\{\s*display: revert !important/);
+  });
+
+  it('keeps checkbox and radio glyphs in the default print context', () => {
+    const beforeForm = media.slice(0, media.indexOf('.emr-print--form'));
+    expect(beforeForm).toMatch(/input\[type='checkbox'\],\s*input\[type='radio'\]\s*\{\s*appearance: auto !important/);
+  });
+});

@@ -6,12 +6,12 @@ const familyHistoryStoryFixture: FamilyPedigreeViewModel = {
   label: 'Family history and relationships',
   selectedPersonId: 'patient',
   people: [
-    { id: 'maternal-grandparent', displayName: 'Unknown relative', relationshipLabel: 'Maternal grandparent', generation: -2, order: 0, age: '68', sex: 'male', lifeStatusLabel: 'Deceased', deceased: true, phenotype: 'unaffected', summary: 'Details not available' },
-    { id: 'father', displayName: 'Ravi Rao', relationshipLabel: 'Parent · adoptive', generation: -1, order: 0, age: 64, sex: 'male', lifeStatusLabel: 'Living', phenotype: 'affected', conditions: [{ label: 'Hypertension', tone: 'info' }] },
-    { id: 'mother', displayName: 'Meena Rao', relationshipLabel: 'Parent', generation: -1, order: 1, age: 60, sex: 'female', lifeStatusLabel: 'Living', phenotype: 'unaffected' },
-    { id: 'patient', displayName: 'Ananya Rao', relationshipLabel: 'Patient', generation: 0, order: 0, age: 58, sex: 'female', lifeStatusLabel: 'Living', proband: true, summary: 'Relationship details are supplied by the clinical record.', phenotype: 'affected' },
-    { id: 'sibling', displayName: 'Kiran Rao', relationshipLabel: 'Sibling', generation: 0, order: 1, age: 32, sex: 'male', lifeStatusLabel: 'Living', phenotype: 'unaffected' },
-    { id: 'child', displayName: 'Child · name not recorded', relationshipLabel: 'Child', generation: 1, order: 0, age: 'Newborn', sexLabel: 'Not recorded', sex: 'unknown', lifeStatusLabel: 'Not recorded', phenotype: 'unknown' }
+    { id: 'maternal-grandparent', displayName: 'Unknown relative', relationshipLabel: 'Maternal grandparent', generation: -2, order: 0, age: '68', sex: 'male', lifeStatusLabel: 'Deceased', lifeStatus: 'deceased', phenotype: 'unaffected', summary: 'Details not available' },
+    { id: 'father', displayName: 'Ravi Rao', relationshipLabel: 'Parent · adoptive', generation: -1, order: 0, age: 64, sex: 'male', lifeStatusLabel: 'Living', lifeStatus: 'alive', phenotype: 'affected', conditions: [{ label: 'Hypertension', tone: 'info' }] },
+    { id: 'mother', displayName: 'Meena Rao', relationshipLabel: 'Parent', generation: -1, order: 1, age: 60, sex: 'female', lifeStatusLabel: 'Living', lifeStatus: 'alive', phenotype: 'unaffected' },
+    { id: 'patient', displayName: 'Ananya Rao', relationshipLabel: 'Patient', generation: 0, order: 0, age: 58, sex: 'female', lifeStatusLabel: 'Living', lifeStatus: 'alive', proband: true, summary: 'Relationship details are supplied by the clinical record.', phenotype: 'affected' },
+    { id: 'sibling', displayName: 'Kiran Rao', relationshipLabel: 'Sibling', generation: 0, order: 1, age: 32, sex: 'male', lifeStatusLabel: 'Living', lifeStatus: 'alive', phenotype: 'unaffected' },
+    { id: 'child', displayName: 'Child · name not recorded', relationshipLabel: 'Child', generation: 1, order: 0, age: 'Newborn', sexLabel: 'Not recorded', sex: 'unknown', lifeStatusLabel: 'Not recorded', lifeStatus: 'unknown', phenotype: 'unknown' }
   ],
   relationships: [
     { id: 'r1', fromPersonId: 'father', toPersonId: 'mother', relationshipLabel: 'Partner relationship', kind: 'partner' },

@@ -24,3 +24,7 @@ export const History: Story = { render: () => ({ template: `<emr-clinical-form [
 export const EmptyHistory: Story = { render: () => ({ template: `<emr-clinical-form [model]="model" />`, props: { model: { ...history, fields: { 'chief-complaints': { value: null }, hpi: { value: null } }, repeatableGroups: { conditions: [] } } } }) };
 export const ReadOnlyHistory: Story = { render: () => ({ template: `<emr-clinical-form [model]="model" />`, props: { model: { ...history, readOnly: true } } }) };
 export const ExplicitAssessmentStatus: Story = { render: () => ({ template: `<emr-clinical-form [model]="model" />`, props: { model: { ...history, fields: { ...history.fields, hpi: { value: null, assessmentStatus: 'declined' } } } } }) };
+
+/** A collapsed section is hidden on screen but must still print — collapsed data on paper is missing data. */
+export const CollapsedSection: Story = { render: () => ({ template: `<emr-clinical-form [model]="model" />`, props: { model: { ...history, collapsedSectionIds: ['past'] } } }) };
+export const CollapsedSectionPrintPreview: Story = { render: () => ({ template: `<div class="emr-print"><emr-clinical-form [model]="model" /></div>`, props: { model: { ...history, collapsedSectionIds: ['past'] } } }) };

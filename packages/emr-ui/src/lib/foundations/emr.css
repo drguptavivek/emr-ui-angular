@@ -504,14 +504,18 @@
 }
 
 /* Likert / numeric rating scale */
-.emr-likert { border: 0; padding: 0; margin: 0; min-width: 0; display: block; }
-.emr-likert__legend { float: left; width: 100%; padding: 0; margin-bottom: 6px; color: var(--emr-text); font-size:var(--emr-text-md); font-weight: 650; line-height: 1.4; }
+/* Grid column sized to the pip track so the anchor row spans the scale, not the page. */
+.emr-likert { border: 0; padding: 0; margin: 0; min-width: 0; display: grid; grid-template-columns: minmax(0, max-content); justify-content: start; }
+/* Not floated: a float here squeezes the flex track (which refuses to overlap floats)
+   into a narrow column and stacks the pips vertically. */
+.emr-likert__legend { display: block; float: none; width: 100%; padding: 0; margin-bottom: 6px; color: var(--emr-text); font-size:var(--emr-text-md); font-weight: 650; line-height: 1.4; }
 .emr-likert__required { color: var(--emr-danger); margin-left: 2px; }
 .emr-likert__messages { min-height: 20px; padding-top: 4px; clear: both; }
 
 .emr-likert__track {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 6px;
 }
 
@@ -544,16 +548,17 @@
 /* Selected state — pip adopts the colour zone of its position */
 .emr-likert__option--selected .emr-likert__pip { border-color: currentColor; }
 
-/* Pain severity zones (0-2 none, 3-4 mild, 5-6 moderate, 7-8 severe, 9-10 worst) */
-.emr-likert__option[data-zone="none"].emr-likert__option--selected .emr-likert__pip    { background: var(--emr-success-soft); color: var(--emr-success); }
-.emr-likert__option[data-zone="mild"].emr-likert__option--selected .emr-likert__pip    { background: var(--emr-info-soft); color: var(--emr-info); }
-.emr-likert__option[data-zone="moderate"].emr-likert__option--selected .emr-likert__pip { background: var(--emr-warning-soft); color: var(--emr-warning); }
-.emr-likert__option[data-zone="severe"].emr-likert__option--selected .emr-likert__pip  { background: var(--emr-danger-soft); color: var(--emr-danger); }
-.emr-likert__option[data-zone="worst"].emr-likert__option--selected .emr-likert__pip   { background: var(--emr-danger-soft); color: var(--emr-danger); border-width: 2px; }
+/* Selected-pip tone is controller-supplied (data-tone); the primitive derives no severity. */
+.emr-likert__option[data-tone="neutral"].emr-likert__option--selected .emr-likert__pip { background: var(--emr-surface-raised); color: var(--emr-text); }
+.emr-likert__option[data-tone="success"].emr-likert__option--selected .emr-likert__pip { background: var(--emr-success-soft); color: var(--emr-success); }
+.emr-likert__option[data-tone="info"].emr-likert__option--selected .emr-likert__pip    { background: var(--emr-info-soft); color: var(--emr-info); }
+.emr-likert__option[data-tone="warning"].emr-likert__option--selected .emr-likert__pip { background: var(--emr-warning-soft); color: var(--emr-warning); }
+.emr-likert__option[data-tone="danger"].emr-likert__option--selected .emr-likert__pip  { background: var(--emr-danger-soft); color: var(--emr-danger); border-width: 2px; }
 
 /* Disabled / read-only */
 .emr-likert:disabled .emr-likert__option,
 .emr-likert[disabled] .emr-likert__option { cursor: not-allowed; }
+.emr-likert[aria-readonly="true"] .emr-likert__option { cursor: default; }
 .emr-likert:disabled .emr-likert__pip,
 .emr-likert[disabled] .emr-likert__pip { opacity: 0.5; }
 
@@ -561,4 +566,107 @@
 .emr-likert__anchors { display: flex; justify-content: space-between; margin-top: 6px; }
 .emr-likert__anchor { font-size:var(--emr-text-xs); color: var(--emr-text-muted); font-weight: 600; }
 
+/* Visual analogue scale (VAS) — a ruler the respondent marks anywhere along.
+   Tick positions come from the --emr-vas-pos custom property (a percentage the
+   component computes arithmetically, so the markup is identical under SSR). */
+.emr-vas { display: block; }
+.emr-vas__label { display: block; margin-bottom: 6px; color: var(--emr-text); font-size:var(--emr-text-md); font-weight: 650; line-height: 1.4; }
+.emr-vas__required { color: var(--emr-danger); margin-left: 2px; }
+.emr-vas__messages { min-height: 20px; padding-top: 4px; }
+.emr-vas__frame { display: flex; gap: 10px; }
 
+.emr-vas__track {
+  position: relative;
+  flex: 1 1 auto;
+  height: 56px;
+  min-height: 44px;
+  padding: 0 2px;
+  cursor: pointer;
+  touch-action: none;            /* the finger draws on the scale, it does not scroll it */
+  background: transparent;
+}
+.emr-vas__track:focus-visible { outline: 3px solid var(--emr-focus); outline-offset: 3px; border-radius: 6px; }
+
+/* The rule itself. */
+.emr-vas__rule {
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  height: 2px;
+  transform: translateY(-50%);
+  background: var(--emr-border);
+}
+
+.emr-vas__tick {
+  position: absolute;
+  left: var(--emr-vas-pos);
+  top: 50%;
+  width: 1px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  background: var(--emr-border);
+}
+.emr-vas__tick--major { width: 2px; height: 22px; background: var(--emr-text-muted); }
+
+.emr-vas__tick-label {
+  position: absolute;
+  left: var(--emr-vas-pos);
+  top: calc(50% + 16px);
+  transform: translateX(-50%);
+  font-size:var(--emr-text-2xs);
+  color: var(--emr-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* The recorded mark: a full-height line plus a grabbable thumb, never colour alone. */
+.emr-vas__mark {
+  position: absolute;
+  left: var(--emr-vas-pos);
+  top: 50%;
+  width: 2px;
+  height: 34px;
+  transform: translate(-50%, -50%);
+  background: var(--emr-text);
+}
+.emr-vas__thumb {
+  position: absolute;
+  left: var(--emr-vas-pos);
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid var(--emr-text);
+  background: var(--emr-surface);
+}
+.emr-vas[data-tone="neutral"] .emr-vas__mark { background: var(--emr-text); }
+.emr-vas[data-tone="info"] .emr-vas__mark    { background: var(--emr-info); }
+.emr-vas[data-tone="success"] .emr-vas__mark { background: var(--emr-success); }
+.emr-vas[data-tone="warning"] .emr-vas__mark { background: var(--emr-warning); }
+.emr-vas[data-tone="danger"] .emr-vas__mark  { background: var(--emr-danger); }
+.emr-vas[data-tone="info"] .emr-vas__thumb    { border-color: var(--emr-info); background: var(--emr-info-soft); }
+.emr-vas[data-tone="success"] .emr-vas__thumb { border-color: var(--emr-success); background: var(--emr-success-soft); }
+.emr-vas[data-tone="warning"] .emr-vas__thumb { border-color: var(--emr-warning); background: var(--emr-warning-soft); }
+.emr-vas[data-tone="danger"] .emr-vas__thumb  { border-color: var(--emr-danger); background: var(--emr-danger-soft); }
+
+.emr-vas__anchors { display: flex; flex-direction: column; justify-content: space-between; }
+.emr-vas__anchor { font-size:var(--emr-text-xs); color: var(--emr-text-muted); font-weight: 600; }
+
+/* Horizontal: anchors sit under each end of the rule. */
+.emr-vas:not(.emr-vas--vertical) .emr-vas__frame { flex-direction: column; gap: 4px; }
+.emr-vas:not(.emr-vas--vertical) .emr-vas__track { padding-bottom: 20px; height: 76px; }
+.emr-vas:not(.emr-vas--vertical) .emr-vas__anchors { flex-direction: row-reverse; justify-content: space-between; }
+
+/* Vertical (EQ-5D-5L style thermometer): min at the bottom, max at the top. */
+.emr-vas--vertical .emr-vas__frame { flex-direction: row; align-items: stretch; }
+.emr-vas--vertical .emr-vas__track { flex: 0 0 auto; width: 72px; height: 320px; padding: 12px 0; }
+.emr-vas--vertical .emr-vas__rule { left: 50%; right: auto; top: 0; bottom: 0; width: 2px; height: auto; transform: translateX(-50%); }
+.emr-vas--vertical .emr-vas__tick { left: 50%; top: auto; bottom: var(--emr-vas-pos); width: 10px; height: 1px; transform: translate(-50%, 50%); }
+.emr-vas--vertical .emr-vas__tick--major { width: 22px; height: 2px; }
+.emr-vas--vertical .emr-vas__tick-label { left: calc(50% + 18px); top: auto; bottom: var(--emr-vas-pos); transform: translateY(50%); }
+.emr-vas--vertical .emr-vas__mark { left: 50%; top: auto; bottom: var(--emr-vas-pos); width: 34px; height: 2px; transform: translate(-50%, 50%); }
+.emr-vas--vertical .emr-vas__thumb { left: 50%; top: auto; bottom: var(--emr-vas-pos); transform: translate(-50%, 50%); }
+.emr-vas--vertical .emr-vas__anchors { padding: 12px 0; }
+
+/* Read-only / disabled */
+.emr-vas__track[aria-readonly="true"] { cursor: default; }
+.emr-vas__track[aria-disabled="true"] { cursor: not-allowed; opacity: 0.5; }

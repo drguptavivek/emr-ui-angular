@@ -102,6 +102,14 @@ export function parsePath(key: string): EmrNodePath {
       if (i < len) {
         if (key[i] === '.') {
           i += 1;
+          if (i >= len) {
+            throw new EmrNodePathError(`Trailing '.' in path key "${key}".`);
+          }
+          if (key[i] === '[') {
+            throw new EmrNodePathError(
+              `Unexpected '[' after '.' at index ${i} in path key "${key}" (index segments follow directly, without '.').`
+            );
+          }
         } else if (key[i] !== '[') {
           throw new EmrNodePathError(
             `Expected '.' or '[' after ']' at index ${i} in path key "${key}".`
@@ -141,6 +149,11 @@ export function parsePath(key: string): EmrNodePath {
       i += 1;
       if (i >= len) {
         throw new EmrNodePathError(`Trailing '.' in path key "${key}".`);
+      }
+      if (key[i] === '[') {
+        throw new EmrNodePathError(
+          `Unexpected '[' after '.' at index ${i} in path key "${key}" (index segments follow directly, without '.').`
+        );
       }
     }
   }

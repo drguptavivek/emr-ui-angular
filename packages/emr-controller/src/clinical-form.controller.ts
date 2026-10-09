@@ -88,7 +88,11 @@ export class ClinicalFormController extends StateController<ClinicalFormViewMode
     if (!definition) return;
     this.setState(state => {
       if (state.readOnly) return state;
-      const id = `${groupId}-${++this.sequence}`;
+      // Rehydrated models may already hold ids from a prior session; never reuse one —
+      // a duplicate id makes editItem/removeItem hit every matching row.
+      const taken = new Set((state.repeatableGroups[groupId] ?? []).map(item => item.id));
+      let id = `${groupId}-${++this.sequence}`;
+      while (taken.has(id)) id = `${groupId}-${++this.sequence}`;
       const fields: Readonly<Record<string, ClinicalFieldState>> = Object.fromEntries(
         definition.fields.map(field => [field.id, { value: null }])
       );

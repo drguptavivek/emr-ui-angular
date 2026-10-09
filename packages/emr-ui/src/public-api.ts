@@ -9,6 +9,7 @@ export * from './lib/primitives/emr-feedback.component';
 export * from './lib/primitives/emr-tabs.component';
 export * from './lib/primitives/emr-separator.component';
 export * from './lib/primitives/emr-likert.component';
+export * from './lib/primitives/emr-vas.component';
 export * from './lib/primitives/emr-card-layout.component';
 
 // ---------------------------------------------------------------------

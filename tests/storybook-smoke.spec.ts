@@ -285,7 +285,13 @@ test.describe('Storybook EMR catalogue smoke tests', () => {
       'foundations-likert-scale--custom-range',
       'foundations-likert-scale--with-error',
       'foundations-likert-scale--read-only',
-      'foundations-likert-scale--disabled'
+      'foundations-likert-scale--disabled',
+      'foundations-vas-scale--pain-vas',
+      'foundations-vas-scale--health-thermometer',
+      'foundations-vas-scale--unmarked',
+      'foundations-vas-scale--read-only-vas',
+      'foundations-vas-scale--with-error',
+      'foundations-vas-scale--disabled-vas'
     ];
 
     for (const colorScheme of ['light', 'dark'] as const) {

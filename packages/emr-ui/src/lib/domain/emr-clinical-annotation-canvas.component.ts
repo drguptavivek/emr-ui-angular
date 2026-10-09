@@ -711,7 +711,7 @@ export class EmrClinicalAnnotationCanvasComponent implements OnChanges {
     const brushColor = this.state.brushColor ?? '#0f766e';
     const brushWidth = this.state.brushWidth ?? 2;
     const layer: EmrAnnotationPolygonLayer = {
-      id: `annot-${this.nextLayerId += 1}`,
+      id: this.newLayerId(),
       tool: 'polygon',
       label: `Polygon ${this.nextLayerId}`,
       color: brushColor,
@@ -739,7 +739,7 @@ export class EmrClinicalAnnotationCanvasComponent implements OnChanges {
     const brushColor = this.state.brushColor ?? '#0f766e';
     const brushWidth = this.state.brushWidth ?? 2;
     const layer: EmrAnnotationTextLayer = {
-      id: `annot-${this.nextLayerId += 1}`,
+      id: this.newLayerId(),
       tool: 'text',
       label: `Text ${this.nextLayerId}`,
       color: brushColor,
@@ -839,7 +839,7 @@ export class EmrClinicalAnnotationCanvasComponent implements OnChanges {
         return;
       }
       const line: EmrAnnotationLineLayer = {
-        id: `annot-${this.nextLayerId += 1}`,
+        id: this.newLayerId(),
         tool: 'line' as const,
         label: `Line ${this.nextLayerId}`,
         color: brushColor,
@@ -856,7 +856,7 @@ export class EmrClinicalAnnotationCanvasComponent implements OnChanges {
     if (draft.tool === 'curve') {
       const smoothed = this.resampleCurve(draft.points, point);
       const curve = {
-        id: `annot-${this.nextLayerId += 1}`,
+        id: this.newLayerId(),
         tool: 'curve' as const,
         label: `Curve ${this.nextLayerId}`,
         color: brushColor,
@@ -874,7 +874,7 @@ export class EmrClinicalAnnotationCanvasComponent implements OnChanges {
       const points = this.closeLine(draft.points);
       if (points.length >= 2) {
         const freeform = {
-          id: `annot-${this.nextLayerId += 1}`,
+          id: this.newLayerId(),
           tool: 'freeform' as const,
           label: `Freeform ${this.nextLayerId}`,
           color: brushColor,
@@ -895,7 +895,7 @@ export class EmrClinicalAnnotationCanvasComponent implements OnChanges {
       const radiusY = Math.abs(center.y - point.y);
       if (radiusX > 0.005 || radiusY > 0.005) {
         const circle = {
-          id: `annot-${this.nextLayerId += 1}`,
+          id: this.newLayerId(),
           tool: 'circle' as const,
           label: `Circle ${this.nextLayerId}`,
           color: brushColor,
@@ -1016,7 +1016,7 @@ export class EmrClinicalAnnotationCanvasComponent implements OnChanges {
     const selectedLabelId = raw.selectedLabelId && availableLabels.some(label => label.id === raw.selectedLabelId) ? raw.selectedLabelId : availableLabels[0]?.id;
     const normalizedSelectedTool = raw.selectedTool ?? 'line';
     const brushColor = raw.brushColor ?? '#0f766e';
-    const brushWidth = Number.isFinite(raw.brushWidth ?? 2) ? this.clamp(raw.brushWidth ?? 2) : 2;
+    const brushWidth = this.clampBrushWidth(raw.brushWidth);
     const next: EmrClinicalAnnotationCanvasState = {
       instanceId: raw.instanceId,
       title: raw.title ?? 'Clinical annotation card',
@@ -1100,8 +1100,26 @@ export class EmrClinicalAnnotationCanvasComponent implements OnChanges {
     return fileName.replace(/[^a-zA-Z0-9._-]+/g, '-').replace(/^-+|-+$/g, '');
   }
 
+  /** Coordinate clamp (0–1 normalised space). Not for brush width — see `clampBrushWidth`. */
   private clamp(value: number): number {
     if (!Number.isFinite(value)) return 0;
     return Math.max(0, Math.min(1, value));
+  }
+
+  private clampBrushWidth(value: number | undefined): number {
+    if (value === undefined || !Number.isFinite(value)) return 2;
+    return Math.max(1, Math.min(12, Math.round(value)));
+  }
+
+  /**
+   * Layer ids must be unique against layers already in the model — a rehydrated model
+   * can carry `annot-1…n` from a prior session, and a duplicate id breaks `track`,
+   * selection, visibility and removal (which would hit every matching layer).
+   */
+  private newLayerId(): string {
+    const taken = new Set(this.state.layers.map(layer => layer.id));
+    let id = `annot-${this.nextLayerId += 1}`;
+    while (taken.has(id)) id = `annot-${this.nextLayerId += 1}`;
+    return id;
   }
 }

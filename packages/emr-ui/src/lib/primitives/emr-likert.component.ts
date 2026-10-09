@@ -7,6 +7,7 @@ import {
   Output,
   ViewEncapsulation
 } from '@angular/core';
+import type { EmrTone } from '@drguptavivek/emr-controller';
 
 /**
  * Controlled Likert / numeric rating scale.
@@ -17,6 +18,11 @@ import {
  *
  * Anchor labels are suppressed when disabled — they are meaningless
  * if no assessment has started.
+ *
+ * This is an L1 primitive: it carries no clinical meaning. The colour of the
+ * selected pip comes from the controller-supplied `tone` (e.g. a pain-score
+ * controller maps 8/10 → 'danger'; a muscle-strength controller maps 5/5 →
+ * 'success'). The component never derives severity from the number.
  */
 
 export interface EmrLikertAnchor {
@@ -33,7 +39,7 @@ export interface EmrLikertAnchor {
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
   template: `
-    <fieldset class="emr-likert" [disabled]="disabled || readOnly">
+    <fieldset class="emr-likert" [disabled]="disabled" [attr.aria-readonly]="readOnly || null">
       <legend class="emr-likert__legend">
         {{ label }}
         @if (required) { <span class="emr-likert__required" aria-hidden="true">*</span> }
@@ -49,16 +55,18 @@ export interface EmrLikertAnchor {
           <label
             class="emr-likert__option"
             [class.emr-likert__option--selected]="value === point"
-            [attr.data-zone]="zoneFor(point)"
+            [attr.data-tone]="value === point ? (tone ?? null) : null"
           >
             <input
               type="radio"
               class="emr-sr-only"
-              [name]="name"
+              [name]="name || groupId"
               [value]="point"
               [checked]="value === point"
-              [disabled]="disabled || readOnly"
+              [disabled]="disabled"
+              [attr.aria-readonly]="readOnly || null"
               [attr.aria-label]="ariaLabelFor(point)"
+              (click)="onClick($event)"
               (change)="onSelect(point)"
             />
             <span class="emr-likert__pip" aria-hidden="true">{{ point }}</span>
@@ -86,7 +94,8 @@ export interface EmrLikertAnchor {
 export class EmrLikertComponent implements OnChanges {
   static _idSeq = 0;
 
-  @Input() name = 'emr-likert';
+  /** Radio-group name. Defaults to a per-instance id so two likerts never share a native group. */
+  @Input() name = '';
   @Input() label = '';
   @Input() hint: string | undefined;
   @Input() error: string | undefined;
@@ -97,6 +106,8 @@ export class EmrLikertComponent implements OnChanges {
   @Input() disabled = false;
   @Input() readOnly = false;
   @Input() required = false;
+  /** Controller-supplied tone for the selected pip. Absent → neutral selection styling. */
+  @Input() tone: EmrTone | undefined;
 
   @Output() readonly valueChange = new EventEmitter<number>();
 
@@ -120,24 +131,14 @@ export class EmrLikertComponent implements OnChanges {
     return `${point} – ${base}`;
   }
 
+  /** Read-only keeps the control focusable and announceable, but blocks the native toggle. */
+  protected onClick(event: Event): void {
+    if (this.readOnly) event.preventDefault();
+  }
+
   protected onSelect(point: number): void {
     if (!this.disabled && !this.readOnly) {
       this.valueChange.emit(point);
     }
-  }
-
-  /**
-   * Maps a point to a pain-severity zone for CSS colour coding.
-   * Boundaries are proportional to the configured range so 1–5 and 0–10
-   * both colour sensibly.
-   */
-  protected zoneFor(point: number): string {
-    const range = this.max - this.min;
-    const ratio = range > 0 ? (point - this.min) / range : 0;
-    if (ratio <= 0.2) return 'none';
-    if (ratio <= 0.4) return 'mild';
-    if (ratio <= 0.6) return 'moderate';
-    if (ratio <= 0.8) return 'severe';
-    return 'worst';
   }
 }

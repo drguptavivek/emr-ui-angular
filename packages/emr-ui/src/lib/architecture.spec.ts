@@ -22,10 +22,10 @@ describe('EMR UI architecture boundary', () => {
       /\bHttpClient(?:Module)?\b/,
       /\bRouter(?:Link|Outlet|Module)?\b/,
       /\b(?:localStorage|sessionStorage)\b/,
-      /\b(?:fetch|XMLHttpRequest)\s*\(/,
+      /(?:\b|\.)(?:fetch|XMLHttpRequest)\s*\(/,
       /\bprovideHttpClient\b/,
-      /\b(?:window|navigator)\s*\./,
-      /\bdocument\s*\.\s*(?:body|querySelector|getElementById|activeElement|createElement|addEventListener)\b/,
+      /\b(?:window|globalThis|self|navigator)\s*\./,
+      /\bdocument\s*\.\s*(?:body|querySelector|querySelectorAll|getElementById|getElementsBy\w+|activeElement|createElement|addEventListener|cookie|write)\b/,
       /\b(?:showOpenFilePicker|webkitdirectory|createObjectURL)\b/,
     ];
 

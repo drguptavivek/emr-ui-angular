@@ -107,6 +107,20 @@ describe('AsyncSearchController', () => {
     expect(controller.getSnapshot().options).toEqual(['current']);
   });
 
+  it('never applies a response that completes after the query changed', async () => {
+    const pending = deferred<{ items: readonly string[]; total: number }>();
+    const repository = { search: () => pending.promise };
+    const controller = new AsyncSearchController(repository);
+    controller.dispatch({ type: 'queryChanged', query: 'amox' });
+    controller.dispatch({ type: 'searchRequested' });
+    controller.dispatch({ type: 'queryChanged', query: 'metformin' });
+    pending.resolve({ items: ['amoxicillin'], total: 1 });
+    await tick();
+    expect(controller.getSnapshot().query).toBe('metformin');
+    expect(controller.getSnapshot().options).toEqual([]);
+    expect(controller.getSnapshot().loading).toBe(false);
+  });
+
   it('exposes repository errors and clears them on retry', async () => {
     let attempt = 0;
     const repository = {

@@ -22,6 +22,22 @@ describe('ClinicalFormController', () => {
     expect(controller.getSnapshot().repeatableGroups.conditions[0].fields.name.value).toBe('Diabetes');
   });
 
+  it('never reuses a repeat-item id already present in a rehydrated model', () => {
+    const rehydrated: ClinicalFormViewModel = {
+      ...model,
+      repeatableGroups: { conditions: [{ id: 'conditions-1', fields: { name: { value: 'Asthma' } } }, { id: 'conditions-2', fields: { name: { value: 'Gout' } } }] },
+    };
+    const controller = new ClinicalFormController(rehydrated);
+    controller.dispatch({ type: 'repeatItemAddRequested', groupId: 'conditions' });
+    const ids = controller.getSnapshot().repeatableGroups.conditions.map(item => item.id);
+    expect(new Set(ids).size).toBe(3);
+    const added = ids[2];
+    controller.dispatch({ type: 'repeatItemEditRequested', groupId: 'conditions', itemId: added, fieldId: 'name', value: 'New' });
+    expect(controller.getSnapshot().repeatableGroups.conditions[0].fields.name.value).toBe('Asthma');
+    controller.dispatch({ type: 'repeatItemRemoveRequested', groupId: 'conditions', itemId: added });
+    expect(controller.getSnapshot().repeatableGroups.conditions.map(item => item.id)).toEqual(['conditions-1', 'conditions-2']);
+  });
+
   it('toggles only collapsible sections and removes items immutably', () => {
     const controller = new ClinicalFormController(model);
     controller.dispatch({ type: 'sectionToggleRequested', sectionId: 'main' });

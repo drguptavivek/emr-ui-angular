@@ -104,8 +104,8 @@ export class EmrDateInputComponent extends EmrFieldBase {
   template: `
     <label class="emr-field" [for]="controlId">
       <span class="emr-field__label">{{ label }} @if (required) { <span class="emr-field__required" aria-hidden="true">*</span> }</span>
-      <select class="emr-select" [id]="controlId" [value]="value ?? ''" [disabled]="disabled || readOnly" [required]="required"
-        [attr.aria-invalid]="!!error" [attr.aria-describedby]="describedBy()" (change)="valueChange.emit(selectValue($event))">
+      <select class="emr-select" [id]="controlId" [value]="value ?? ''" [disabled]="disabled" [required]="required" [attr.aria-readonly]="readOnly || null"
+        [attr.aria-invalid]="!!error" [attr.aria-describedby]="describedBy()" (change)="onSelectChange($event)">
         @if (placeholder) { <option value="">{{ placeholder }}</option> }
         @for (option of options; track option.value) {
           <option [value]="option.value" [disabled]="option.disabled">{{ option.label }}</option>
@@ -126,6 +126,11 @@ export class EmrSelectComponent extends EmrFieldBase {
     const value = (event.target as HTMLSelectElement).value;
     return value || null;
   }
+  /** `<select>` has no native readonly: keep it focusable/announceable, but revert any change. */
+  onSelectChange(event: Event): void {
+    if (this.readOnly) { (event.target as HTMLSelectElement).value = this.value ?? ''; return; }
+    this.valueChange.emit(this.selectValue(event));
+  }
 }
 
 @Component({
@@ -138,7 +143,7 @@ export class EmrSelectComponent extends EmrFieldBase {
         <input class="emr-control" [id]="controlId + '-value'" type="number" inputmode="decimal" [value]="value ?? ''"
           [required]="required" [disabled]="disabled" [readOnly]="readOnly" [attr.aria-label]="label + ' value'"
           [attr.aria-invalid]="!!error" [attr.aria-describedby]="describedBy()" (input)="emitQuantityValue($event)" />
-        <select class="emr-select" [id]="controlId + '-unit'" [value]="unit ?? ''" [disabled]="disabled || readOnly"
+        <select class="emr-select" [id]="controlId + '-unit'" [value]="unit ?? ''" [disabled]="disabled" [attr.aria-readonly]="readOnly || null"
           [attr.aria-label]="label + ' unit'" [attr.aria-describedby]="describedBy()" (change)="emitUnit($event)">
           @for (option of units; track option.value) { <option [value]="option.value" [disabled]="option.disabled">{{ option.label }}</option> }
         </select>
@@ -157,7 +162,11 @@ export class EmrQuantityInputComponent extends EmrFieldBase {
   @Output() readonly valueChange = new EventEmitter<number | null>();
   @Output() readonly unitChange = new EventEmitter<string | null>();
   emitQuantityValue(event: Event): void { const raw = (event.target as HTMLInputElement).value; this.valueChange.emit(raw === '' ? null : Number(raw)); }
-  emitUnit(event: Event): void { const value = (event.target as HTMLSelectElement).value; this.unitChange.emit(value || null); }
+  emitUnit(event: Event): void {
+    const target = event.target as HTMLSelectElement;
+    if (this.readOnly) { target.value = this.unit ?? ''; return; }
+    this.unitChange.emit(target.value || null);
+  }
 }
 
 @Component({

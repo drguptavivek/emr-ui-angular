@@ -43,6 +43,9 @@ describe('serializePath / parsePath round-trip', () => {
 describe('parsePath malformed input', () => {
   it('throws EmrNodePathError on unclosed bracket', () => {
     expect(() => parsePath('medications[2')).toThrow(EmrNodePathError);
+    // Non-canonical forms after a bracket must not silently alias a canonical path.
+    expect(() => parsePath('a[2].')).toThrow(EmrNodePathError);
+    expect(() => parsePath('a.[2]')).toThrow(EmrNodePathError);
   });
 
   it('throws EmrNodePathError on non-numeric bracket contents', () => {

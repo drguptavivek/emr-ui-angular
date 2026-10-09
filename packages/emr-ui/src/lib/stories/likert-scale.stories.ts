@@ -34,6 +34,7 @@ export const PainScore: Story = {
           [min]="0"
           [max]="10"
           [value]="7"
+          tone="danger"
           [anchors]="anchors"
         />
       </div>
@@ -61,16 +62,19 @@ export const Unselected: Story = {
 };
 
 export const AllZones: Story = {
-  name: 'All severity zones',
+  name: 'Controller-supplied tones',
   render: () => ({
+    // The tone is decided by the controller that knows what the number means —
+    // the primitive never maps a value to a severity on its own.
     template: `
       <div class="emr-stack">
-        <emr-likert name="z0"  label="No pain (0)"      [min]="0" [max]="10" [value]="0"  [anchors]="anchors" />
-        <emr-likert name="z2"  label="None (2)"          [min]="0" [max]="10" [value]="2"  [anchors]="anchors" />
-        <emr-likert name="z4"  label="Mild (4)"          [min]="0" [max]="10" [value]="4"  [anchors]="anchors" />
-        <emr-likert name="z5"  label="Moderate (5)"      [min]="0" [max]="10" [value]="5"  [anchors]="anchors" />
-        <emr-likert name="z7"  label="Severe (7)"        [min]="0" [max]="10" [value]="7"  [anchors]="anchors" />
-        <emr-likert name="z10" label="Worst pain (10)"   [min]="0" [max]="10" [value]="10" [anchors]="anchors" />
+        <emr-likert name="z0"  label="No pain (0)"      [min]="0" [max]="10" [value]="0"  tone="success" [anchors]="anchors" />
+        <emr-likert name="z2"  label="None (2)"          [min]="0" [max]="10" [value]="2"  tone="success" [anchors]="anchors" />
+        <emr-likert name="z4"  label="Mild (4)"          [min]="0" [max]="10" [value]="4"  tone="info"    [anchors]="anchors" />
+        <emr-likert name="z5"  label="Moderate (5)"      [min]="0" [max]="10" [value]="5"  tone="warning" [anchors]="anchors" />
+        <emr-likert name="z7"  label="Severe (7)"        [min]="0" [max]="10" [value]="7"  tone="danger"  [anchors]="anchors" />
+        <emr-likert name="z10" label="Worst pain (10)"   [min]="0" [max]="10" [value]="10" tone="danger"  [anchors]="anchors" />
+        <emr-likert name="mrc" label="Muscle strength (5/5 — full)" [min]="0" [max]="5" [value]="5" tone="success" />
       </div>
     `,
     props: { anchors: painAnchors }

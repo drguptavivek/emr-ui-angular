@@ -30,9 +30,9 @@ import { heroSquaresPlus } from '@ng-icons/heroicons/outline';
           >{{ collapsed() ? 'Show' : 'Hide' }}</button>
         }
       </header>
-      @if (!collapsed()) {
-        <div class="emr-section-card__content" [id]="contentId()"><ng-content /></div>
-      }
+      <!-- Collapsed content stays in the DOM (hidden, not removed) so the print
+           layer can restore it: a collapsed section on paper is omitted clinical data. -->
+      <div class="emr-section-card__content" [id]="contentId()" [hidden]="collapsed()"><ng-content /></div>
     </section>
   `,
 })

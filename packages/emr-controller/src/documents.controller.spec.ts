@@ -17,6 +17,15 @@ describe('Document controllers', () => {
     expect(controller.getSnapshot().candidates).toHaveLength(0);
   });
 
+  it('never reuses a candidate id already present in the queue', () => {
+    const controller = new DocumentUploadQueueController({ ...queue, candidates: [{ id: 'candidate-1', fileName: 'old.pdf', sizeLabel: '1 KB', mediaTypeLabel: 'PDF', sourceToken: 'source-0', status: 'ready', statusLabel: 'Ready' }] });
+    controller.dispatch({ type: 'filesSelected', files: [{ fileName: 'scan.pdf', size: 2048, mediaType: 'application/pdf', sourceToken: 'source-1' }] });
+    const ids = controller.getSnapshot().candidates.map(candidate => candidate.id);
+    expect(new Set(ids).size).toBe(2);
+    controller.dispatch({ type: 'candidateRemoveRequested', candidateId: ids[1] });
+    expect(controller.getSnapshot().candidates.map(candidate => candidate.id)).toEqual(['candidate-1']);
+  });
+
   it('filters, sorts and selects supplied patient documents', () => {
     const controller = new PatientDocumentsController(documents);
     controller.dispatch({ type: 'queryChanged', query: 'consent' });

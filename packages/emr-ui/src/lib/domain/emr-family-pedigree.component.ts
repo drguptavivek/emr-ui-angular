@@ -248,14 +248,9 @@ export class EmrFamilyPedigreeComponent {
     return normalized;
   }
 
+  /** Symbol kind comes only from the structured `sex` field — never inferred from display text. */
   sexKind(person: FamilyPersonNode): 'male' | 'female' | 'other' | 'unknown' {
-    if (person.sex) return person.sex;
-    const sexLabel = (person.sexLabel ?? '').toLowerCase();
-    if (!sexLabel) return 'unknown';
-    if (/\b(m|male|man|boy|male|mr|sir)\b/.test(sexLabel)) return 'male';
-    if (/\b(f|female|woman|girl|mrs|ms|miss)\b/.test(sexLabel)) return 'female';
-    if (/\b(unknown|not recorded|other|undetermined)\b/.test(sexLabel)) return 'unknown';
-    return 'other';
+    return person.sex ?? 'unknown';
   }
 
   phenotype(person: FamilyPersonNode): 'affected' | 'unaffected' | 'unknown' {
@@ -300,25 +295,35 @@ export class EmrFamilyPedigreeComponent {
     }
   }
 
+  /**
+   * Vital status comes only from structured fields. A person with nothing recorded is
+   * `unknown` — never silently promoted to alive.
+   */
   lifeState(person: FamilyPersonNode): 'alive' | 'deceased' | 'unknown' {
-    if (person.deceased || this.lifeStatusLooksDeceased(person.lifeStatusLabel)) return 'deceased';
-    return 'alive';
+    if (person.lifeStatus) return person.lifeStatus;
+    if (person.deceased === true) return 'deceased';
+    if (person.deceased === false) return 'alive';
+    return 'unknown';
   }
 
   lifeLabel(person: FamilyPersonNode): string {
-    if (this.lifeState(person) === 'deceased') return person.lifeStatusLabel || 'Deceased';
     if (person.lifeStatusLabel) return person.lifeStatusLabel;
-    return 'Alive';
+    switch (this.lifeState(person)) {
+      case 'deceased': return 'Deceased';
+      case 'alive': return 'Alive';
+      default: return 'Not recorded';
+    }
   }
 
-  lifeIcon(person: FamilyPersonNode): string { return this.lifeState(person) === 'deceased' ? '✝' : '●'; }
+  lifeIcon(person: FamilyPersonNode): string {
+    switch (this.lifeState(person)) {
+      case 'deceased': return '✝';
+      case 'alive': return '●';
+      default: return '○';
+    }
+  }
 
   isDeceased(person: FamilyPersonNode): boolean { return this.lifeState(person) === 'deceased'; }
-
-  private lifeStatusLooksDeceased(lifeStatusLabel?: string): boolean {
-    if (!lifeStatusLabel) return false;
-    return /\b(deceased|died|dead|expired)\b/i.test(lifeStatusLabel);
-  }
 
   statusClass(category: 'life' | 'phenotype', value: 'alive' | 'deceased' | 'unknown' | 'affected' | 'unaffected'): string {
     if (category === 'life') {

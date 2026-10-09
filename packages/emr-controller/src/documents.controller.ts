@@ -34,8 +34,15 @@ export class DocumentUploadQueueController extends StateController<DocumentUploa
   dispatch(intent: DocumentUploadIntent): void {
     if (intent.type === 'filesSelected') {
       if (this.getSnapshot().disabled) return;
+      const taken = new Set(this.getSnapshot().candidates.map(candidate => candidate.id));
+      const nextId = (): string => {
+        let id = `candidate-${++this.sequence}`;
+        while (taken.has(id)) id = `candidate-${++this.sequence}`;
+        taken.add(id);
+        return id;
+      };
       const additions: DocumentCandidate[] = intent.files.map(file => ({
-        id: `candidate-${++this.sequence}`,
+        id: nextId(),
         fileName: file.fileName,
         sizeLabel: `${Math.max(0, Math.round(file.size / 1024))} KB`,
         mediaTypeLabel: file.mediaType || 'Unknown type', sourceToken: file.sourceToken,

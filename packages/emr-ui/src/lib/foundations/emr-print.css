@@ -130,7 +130,7 @@
 
   /* Nothing may stay hidden: a collapsed section on paper is missing data. */
   .emr-print [hidden],
-  .emr-print .emr-section-card__body[aria-hidden='true'] {
+  .emr-print .emr-section-card__content[hidden] {
     display: revert !important;
   }
   .emr-print details,
@@ -140,12 +140,22 @@
   .emr-print details > summary { list-style: none; }
 
   /* Un-scroll every overflow region so its full content prints. */
-  .emr-print .emr-table-scroll,
-  .emr-print .emr-matrix__scroll,
+  .emr-print .emr-table-wrap,
+  .emr-print .emr-matrix,
   .emr-print [data-emr-print='expand'] {
     overflow: visible !important;
     max-height: none !important;
     height: auto !important;
+  }
+  /* Responsive layouts hide the full table below 640px; paper is never narrow. */
+  .emr-print .emr-table-wrap,
+  .emr-print .emr-matrix table {
+    display: revert !important;
+  }
+  .emr-print .emr-matrix table { min-width: 0 !important; }
+  .emr-print .emr-patient-cards,
+  .emr-print .emr-matrix-cards {
+    display: none !important;
   }
 
   /* Controls print as their captured values, not as empty boxes. */
@@ -164,6 +174,14 @@
     resize: none !important;
   }
   .emr-print textarea { overflow: visible !important; }
+  /* Checkbox/radio state is clinical data: keep the native glyph in every print context. */
+  .emr-print input[type='checkbox'],
+  .emr-print input[type='radio'] {
+    appearance: auto !important;
+    display: inline-block !important;
+    width: 11px;
+    height: 11px;
+  }
 
   /* Badges keep meaning without ink-heavy fills. This works only because the
      "never colour alone" rule guarantees each badge carries a text label. */
@@ -236,7 +254,7 @@
 
   /* Nothing may stay hidden: a collapsed section on paper is missing data. */
   [hidden],
-  .emr-section-card__body[aria-hidden='true'] {
+  .emr-section-card__content[hidden] {
     display: revert !important;
   }
   details,
@@ -246,12 +264,22 @@
   details > summary { list-style: none; }
 
   /* Un-scroll every overflow region so its full content prints. */
-  .emr-table-scroll,
-  .emr-matrix__scroll,
+  .emr-table-wrap,
+  .emr-matrix,
   [data-emr-print='expand'] {
     overflow: visible !important;
     max-height: none !important;
     height: auto !important;
+  }
+  /* Responsive layouts hide the full table below 640px; paper is never narrow. */
+  .emr-table-wrap,
+  .emr-matrix table {
+    display: revert !important;
+  }
+  .emr-matrix table { min-width: 0 !important; }
+  .emr-patient-cards,
+  .emr-matrix-cards {
+    display: none !important;
   }
 
   /* Controls print as their captured values, not as empty boxes. */
@@ -270,6 +298,14 @@
     resize: none !important;
   }
   textarea { overflow: visible !important; }
+  /* Checkbox/radio state is clinical data: keep the native glyph in every print context. */
+  input[type='checkbox'],
+  input[type='radio'] {
+    appearance: auto !important;
+    display: inline-block !important;
+    width: 11px;
+    height: 11px;
+  }
 
   /* Badges keep meaning without ink-heavy fills. This works only because the
      "never colour alone" rule guarantees each badge carries a text label. */

@@ -693,7 +693,7 @@ interface EmrSeparatorProps {
 
 **Need** — Numeric rating scales (pain score 0–10, satisfaction 1–5) are a recurring clinical-assessment input shape that needs correct radiogroup semantics, per-point ARIA labelling, and an optional anchor-label row, without hardcoding the pain-severity meaning into every consumer.
 
-**Purpose** — Renders a `<fieldset>`/`<legend>` numeric rating scale as a row of radio "pips" between `min` and `max`, with optional min/max anchor labels. It does color-code pips by a proportional zone (`none`/`mild`/`moderate`/`severe`/`worst`) purely as a visual affordance for reading a numeric scale at a glance — it does not interpret the value as an actual clinical severity judgement or persist/validate it.
+**Purpose** — Renders a `<fieldset>`/`<legend>` numeric rating scale as a row of radio "pips" between `min` and `max`, with optional min/max anchor labels. The selected pip is coloured only by the controller-supplied `tone` input (`EmrTone`); the primitive never derives a severity from the number, so a 5/5 muscle-strength score and a 10/10 pain score are toned by the controllers that know what they mean.
 
 **API**
 ```ts
@@ -705,7 +705,7 @@ export interface EmrLikertAnchor {
 
 // Decorator-based (@Input/@Output)
 interface EmrLikertProps {
-  name: string;   // default 'emr-likert'
+  name: string;   // default '' → per-instance generated group id
   label: string;  // default ''
   hint?: string;
   error?: string;
@@ -716,6 +716,7 @@ interface EmrLikertProps {
   disabled: boolean;  // default false
   readOnly: boolean;  // default false
   required: boolean;  // default false
+  tone?: EmrTone;     // controller-supplied colour for the selected pip
 }
 // @Output() valueChange: EventEmitter<number>
 ```
@@ -724,13 +725,14 @@ interface EmrLikertProps {
 
 | name | type | default | notes |
 |---|---|---|---|
-| name | `string` | `'emr-likert'` | native radio grouping name |
+| name | `string` | `''` | native radio grouping name; empty → unique per-instance id, so two likerts never share a group |
 | label | `string` | `''` | rendered as `<legend>` |
 | min / max | `number` | `0` / `10` | defines the generated point range (inclusive) |
 | value | `number \| null` | `null` | |
 | anchors | `readonly EmrLikertAnchor[]` | `[]` | only anchors matching exactly `min` or `max` are rendered |
 | disabled | `boolean` | `false` | suppresses anchor row entirely when true |
-| readOnly | `boolean` | `false` | disables input interaction but (unlike `disabled`) still shows anchors/hint |
+| readOnly | `boolean` | `false` | blocks selection via `aria-readonly` + click prevention; inputs stay focusable and announceable (not `disabled`) |
+| tone | `EmrTone \| undefined` | `undefined` | colours the selected pip (`data-tone`); undefined → neutral outline only |
 | required | `boolean` | `false` | shows `*` plus an `.emr-sr-only` "Required" announcement |
 | valueChange (output) | `EventEmitter<number>` | — | only emitted when neither `disabled` nor `readOnly` |
 
@@ -741,6 +743,82 @@ Implements `OnChanges` to regenerate the point array and resolved min/max anchor
 <emr-likert name="pain" label="Pain score (0–10)" [min]="0" [max]="10" [value]="painScore"
   [anchors]="[{ value: 0, label: 'No pain' }, { value: 10, label: 'Worst pain' }]"
   (valueChange)="painScore = $event" />
+```
+
+**Depends on** — L0 tokens only
+**Used by** — not consumed internally
+
+---
+
+### EmrVas
+**Layer** L1 · **Selector** `emr-vas` · **Status** stable · **Story** `foundations-vas-scale--pain-vas` (also `--health-thermometer`, `--unmarked`, `--read-only-vas`, `--interactive`, `--with-error`, `--disabled-vas`)
+
+**Need** — A visual analogue scale is a different instrument from a Likert scale: the respondent marks a point anywhere along a continuous line rather than choosing one of N discrete pips. Both the horizontal 0–10 form and the vertical 0–100 EQ-5D-5L health thermometer are recurring instruments, and both need a ruler — major markers every *X*, minor markers every *Y* — that a finger can land on anywhere.
+
+**Purpose** — Renders a continuous track with arithmetic tick positions, a recorded mark and thumb, and optional end anchors. Pointer input is captured (`setPointerCapture`), so a stroke that leaves the track keeps tracking and cannot resume on re-entry; keyboard input follows the ARIA slider pattern. `orientation="vertical"` reads bottom-up: `min` at the bottom, `max` at the top. The component derives no clinical meaning — it does not know whether a high number is good or bad, does not compute severity, and never labels an unset scale; `anchors`, `tone` and `valueText` are controller-supplied, and an unmarked scale simply omits `aria-valuenow`.
+
+**API**
+```ts
+export interface EmrVasAnchor {
+  value: number;          // typically min or max
+  label: string;
+  assistiveLabel?: string;
+}
+
+// Signal inputs/outputs (input()/output())
+interface EmrVasProps {
+  controlId: string;      // default 'emr-vas'
+  label: string;          // default ''
+  hint?: string;
+  error?: string;
+  min: number;            // default 0
+  max: number;            // default 100
+  value: number | null;   // default null
+  step: number;           // default 1; 0 records the raw continuous position
+  majorInterval: number;  // default 10 — labelled markers
+  minorInterval: number;  // default 2  — unlabelled markers
+  orientation: 'horizontal' | 'vertical';  // default 'horizontal'
+  anchors: readonly EmrVasAnchor[];        // default []
+  readOnly: boolean;      // default false
+  disabled: boolean;      // default false
+  required: boolean;      // default false
+  tone?: EmrTone;         // controller-supplied colour for the recorded mark
+  valueText?: string;     // controller-supplied aria-valuetext
+}
+// valueChange: OutputEmitterRef<number | null>
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| controlId | `string` | `'emr-vas'` | ids the slider and derives the label/hint/error ids |
+| min / max | `number` | `0` / `100` | scale bounds; vertical renders `min` at the bottom |
+| value | `number \| null` | `null` | `null` omits `aria-valuenow` rather than inventing a value |
+| step | `number` | `1` | snap granularity; `0` keeps the raw position (4 dp) |
+| majorInterval | `number` | `10` | labelled tick spacing; also the PageUp/PageDown increment |
+| minorInterval | `number` | `2` | unlabelled tick spacing; tick count is capped at 400 |
+| orientation | `'horizontal' \| 'vertical'` | `'horizontal'` | sets `aria-orientation` and the axis geometry |
+| tone | `EmrTone \| undefined` | `undefined` | colours the recorded mark; the primitive derives no severity |
+| valueText | `string \| undefined` | `undefined` | `aria-valuetext`, e.g. `'72 out of 100'` |
+| readOnly | `boolean` | `false` | stays focusable and announceable; input is ignored |
+| disabled | `boolean` | `false` | removes it from the tab order |
+| valueChange (output) | `number \| null` | — | only emitted when neither `disabled` nor `readOnly`, and only on an actual change |
+
+**Keyboard** — `ArrowRight`/`ArrowUp` +`step`, `ArrowLeft`/`ArrowDown` −`step`, `PageUp`/`PageDown` ±`majorInterval`, `Home` → `min`, `End` → `max`.
+
+**Example**
+```html
+<emr-vas
+  controlId="vas-health"
+  label="Your health today"
+  orientation="vertical"
+  [min]="0" [max]="100" [step]="1"
+  [majorInterval]="10" [minorInterval]="5"
+  [value]="healthToday"
+  valueText="72 out of 100"
+  [anchors]="healthAnchors"
+  (valueChange)="healthToday = $event" />
 ```
 
 **Depends on** — L0 tokens only
