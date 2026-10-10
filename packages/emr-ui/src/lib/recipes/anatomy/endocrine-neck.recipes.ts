@@ -7,7 +7,7 @@ export const ENDOCRINE_NECK_RECIPES: readonly AnatomyTemplateRecipe[] = [
   {
     id: 'thyroid-anterior', version: 1, group: 'endocrine-neck', label: 'Thyroid — anterior neck', region: 'neck', view: 'anterior',
     laterality: 'bilateral', asset: 'endocrine-neck/thyroid-anterior.svg', width: 1600, height: 1200, provenance,
-    description: 'Anterior neck with the thyroid gland (right and left lobes, isthmus, dashed pyramidal lobe variant), hyoid, thyroid and cricoid cartilages, trachea, carotid arteries, internal jugular veins and the superior and inferior thyroid vessels. Patient right on the viewer left.',
+    description: 'Anterior neck with the thyroid gland (right and left lobes joined by a thin isthmus, dashed pyramidal lobe variant), hyoid bone, thyroid and cricoid cartilages, trachea with rings, clavicles and sternal notch. Patient right on the viewer left.',
   },
   {
     id: 'thyroid-parathyroid-posterior', version: 1, group: 'endocrine-neck', label: 'Thyroid and parathyroids — posterior', region: 'neck', view: 'posterior',

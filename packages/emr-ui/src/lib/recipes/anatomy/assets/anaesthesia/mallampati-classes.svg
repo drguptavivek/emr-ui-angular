@@ -1,77 +1,147 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img">
-  <title>Mallampati classes I to IV, open-mouth views</title>
-  <rect width="1600" height="800" fill="#ffffff"/>
-  <g transform="translate(230 360)">
-  <ellipse cx="0" cy="0" rx="166" ry="206" fill="none" stroke="#94a3b8" stroke-width="3"/>
-  <ellipse cx="0" cy="0" rx="140" ry="180" fill="none" stroke="#475569" stroke-width="6"/>
-  <rect x="-101" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="-67" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="-33" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="1" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="35" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="69" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <path d="M -104 -78 C -70 -104 70 -104 104 -78" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M -108 -70 C -100 -38 -60 -44 -26 -44 C -10 -44 -6 -48 0 -48 C 6 -48 10 -44 26 -44 C 60 -44 100 -38 108 -70" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M -15 -48 C -17 -6 -14 22 0 22 C 14 22 17 -6 15 -48" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M -108 -70 C -118 -20 -122 20 -112 70" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 108 -70 C 118 -20 122 20 112 70" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M -66 -44 C -78 -10 -82 20 -76 66" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 66 -44 C 78 -10 82 20 76 66" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M -114.3 104 C -110.3 82 -60 74 0 74 C 60 74 110.3 82 114.3 104 A 140 180 0 0 1 -114.3 104 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 0 80 L 0 144" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-  <text x="230" y="650" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Class I</text>
-  <text x="230" y="696" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Soft palate, fauces, uvula, pillars</text>
-  <g transform="translate(610 360)">
-  <ellipse cx="0" cy="0" rx="166" ry="206" fill="none" stroke="#94a3b8" stroke-width="3"/>
-  <ellipse cx="0" cy="0" rx="140" ry="180" fill="none" stroke="#475569" stroke-width="6"/>
-  <rect x="-101" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="-67" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="-33" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="1" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="35" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="69" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <path d="M -104 -78 C -70 -104 70 -104 104 -78" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M -108 -70 C -100 -38 -60 -44 -26 -44 C -10 -44 -6 -48 0 -48 C 6 -48 10 -44 26 -44 C 60 -44 100 -38 108 -70" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M -15 -48 C -17 -15 -14 7 0 7 C 14 7 17 -15 15 -48" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M -137.2 36 C -133.2 14 -60 6 0 6 C 60 6 133.2 14 137.2 36 A 140 180 0 0 1 -137.2 36 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 0 12 L 0 76" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-  <text x="610" y="650" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Class II</text>
-  <text x="610" y="696" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Soft palate, fauces, uvula</text>
-  <g transform="translate(990 360)">
-  <ellipse cx="0" cy="0" rx="166" ry="206" fill="none" stroke="#94a3b8" stroke-width="3"/>
-  <ellipse cx="0" cy="0" rx="140" ry="180" fill="none" stroke="#475569" stroke-width="6"/>
-  <rect x="-101" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="-67" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="-33" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="1" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="35" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="69" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <path d="M -104 -78 C -70 -104 70 -104 104 -78" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M -108 -70 C -100 -52 -60 -58 -26 -58 C -10 -58 -6 -62 0 -62 C 6 -62 10 -58 26 -58 C 60 -58 100 -52 108 -70" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M -15 -62 C -17 -48.8 -14 -40 0 -40 C 14 -40 17 -48.8 15 -62" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M -139.9 -6 C -135.9 -28 -60 -36 0 -36 C 60 -36 135.9 -28 139.9 -6 A 140 180 0 1 1 -139.9 -6 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 0 -30 L 0 34" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-  <text x="990" y="650" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Class III</text>
-  <text x="990" y="696" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Soft palate, base of uvula</text>
-  <g transform="translate(1370 360)">
-  <ellipse cx="0" cy="0" rx="166" ry="206" fill="none" stroke="#94a3b8" stroke-width="3"/>
-  <ellipse cx="0" cy="0" rx="140" ry="180" fill="none" stroke="#475569" stroke-width="6"/>
-  <rect x="-101" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="-67" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="-33" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="1" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="35" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <rect x="69" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
-  <path d="M -104 -78 C -70 -104 70 -104 104 -78" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M -133.1 -56 C -129.1 -78 -60 -86 0 -86 C 60 -86 129.1 -78 133.1 -56 A 140 180 0 1 1 -133.1 -56 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 0 -80 L 0 -16" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-  <text x="1370" y="650" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Class IV</text>
-  <text x="1370" y="696" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Hard palate only</text>
-  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="start">R</text>
-  <text x="1540" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="end">L</text>
-  <text x="800" y="70" font-family="system-ui, sans-serif" font-size="28" fill="#475569" text-anchor="middle">Open mouth, tongue protruded</text>
+<title>Mallampati classes I to IV, open-mouth views</title>
+<rect width="1600" height="800" fill="#ffffff"/>
+<g transform="translate(230 360)">
+<path d="M -178 0 C -178 -96 -100 -206 0 -206 C 100 -206 178 -96 178 0 C 178 96 100 206 0 206 C -100 206 -178 96 -178 0 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="0" cy="0" rx="140" ry="180" fill="none" stroke="#475569" stroke-width="6"/>
+<rect x="-10.5" y="-13" width="21" height="26" rx="9" transform="translate(13.1 -164.1) rotate(7.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-10.5" y="-13" width="21" height="26" rx="9" transform="translate(-13.1 -164.1) rotate(-7.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(38.6 -156.9) rotate(23.2)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(-38.6 -156.9) rotate(-23.2)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(64.4 -141.4) rotate(38.4)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(-64.4 -141.4) rotate(-38.4)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(86.8 -118.7) rotate(51.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(-86.8 -118.7) rotate(-51.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(104.8 -89.9) rotate(63.8)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(-104.8 -89.9) rotate(-63.8)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-11.0" y="-13" width="22" height="26" rx="9" transform="translate(117.5 -56.4) rotate(74.6)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-11.0" y="-13" width="22" height="26" rx="9" transform="translate(-117.5 -56.4) rotate(-74.6)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<path d="M -105.2 -52 A 112 152 0 0 1 105.2 -52" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 0 -142 L 0 -98" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -8 -134 C -24 -140 -40 -138 -52 -130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -8 -118 C -26 -124 -46 -122 -64 -112" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -8 -102 C -28 -108 -52 -106 -76 -96" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 8 -134 C 24 -140 40 -138 52 -130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 8 -118 C 26 -124 46 -122 64 -112" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 8 -102 C 28 -108 52 -106 76 -96" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -106 -50 C -70 -88 70 -88 106 -50" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+<path d="M -106 -50 C -100 -68 -70 -68 -52 -54 C -38 -44 -26 -40 -11 -36 C -13 -16 -22 0 -18 10 C -14 22 14 22 18 10 C 22 0 13 -16 11 -36 C 26 -40 38 -44 52 -54 C 70 -68 100 -68 106 -50" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -106 -50 C -118 -14 -124 34 -129 72" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -62 -55 C -78 -30 -84 10 -82 52" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -104 -30 C -114 -8 -112 22 -98 40 C -92 24 -90 -12 -104 -30 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 106 -50 C 118 -14 124 34 129 72" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 62 -55 C 78 -30 84 10 82 52" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 104 -30 C 114 -8 112 22 98 40 C 92 24 90 -12 104 -30 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -86 142 C -94 126 -98 114 -98 100 C -98 81 -58 78 0 78 C 58 78 98 81 98 100 C 98 114 94 126 86 142 A 140 180 0 0 1 -86 142 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M 0 86 C 2 104 -2 122 0 142" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="230" y="650" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Class I</text>
+<text x="230" y="696" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Soft palate, fauces, uvula, pillars</text>
+<g transform="translate(610 360)">
+<path d="M -178 0 C -178 -96 -100 -206 0 -206 C 100 -206 178 -96 178 0 C 178 96 100 206 0 206 C -100 206 -178 96 -178 0 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="0" cy="0" rx="140" ry="180" fill="none" stroke="#475569" stroke-width="6"/>
+<rect x="-10.5" y="-13" width="21" height="26" rx="9" transform="translate(13.1 -164.1) rotate(7.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-10.5" y="-13" width="21" height="26" rx="9" transform="translate(-13.1 -164.1) rotate(-7.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(38.6 -156.9) rotate(23.2)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(-38.6 -156.9) rotate(-23.2)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(64.4 -141.4) rotate(38.4)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(-64.4 -141.4) rotate(-38.4)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(86.8 -118.7) rotate(51.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(-86.8 -118.7) rotate(-51.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(104.8 -89.9) rotate(63.8)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(-104.8 -89.9) rotate(-63.8)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-11.0" y="-13" width="22" height="26" rx="9" transform="translate(117.5 -56.4) rotate(74.6)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-11.0" y="-13" width="22" height="26" rx="9" transform="translate(-117.5 -56.4) rotate(-74.6)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<path d="M -105.2 -52 A 112 152 0 0 1 105.2 -52" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 0 -142 L 0 -98" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -8 -134 C -24 -140 -40 -138 -52 -130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -8 -118 C -26 -124 -46 -122 -64 -112" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -8 -102 C -28 -108 -52 -106 -76 -96" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 8 -134 C 24 -140 40 -138 52 -130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 8 -118 C 26 -124 46 -122 64 -112" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 8 -102 C 28 -108 52 -106 76 -96" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -106 -50 C -70 -88 70 -88 106 -50" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+<path d="M -106 -50 C -100 -68 -70 -68 -52 -54 C -38 -44 -26 -40 -11 -36 C -13 -16 -22 0 -18 10 C -14 22 14 22 18 10 C 22 0 13 -16 11 -36 C 26 -40 38 -44 52 -54 C 70 -68 100 -68 106 -50" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -106 -50 C -118 -14 -124 34 -129 72" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -62 -55 C -78 -30 -84 10 -82 52" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -104 -30 C -114 -8 -112 22 -98 40 C -92 24 -90 -12 -104 -30 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 106 -50 C 118 -14 124 34 129 72" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 62 -55 C 78 -30 84 10 82 52" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 104 -30 C 114 -8 112 22 98 40 C 92 24 90 -12 104 -30 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -86 142 C -94 126 -98 112 -98 98 C -98 36 -58 28 0 28 C 58 28 98 36 98 98 C 98 112 94 126 86 142 A 140 180 0 0 1 -86 142 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M 0 36 C 2 54 -2 72 0 92" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="610" y="650" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Class II</text>
+<text x="610" y="696" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Soft palate, fauces, uvula</text>
+<g transform="translate(990 360)">
+<path d="M -178 0 C -178 -96 -100 -206 0 -206 C 100 -206 178 -96 178 0 C 178 96 100 206 0 206 C -100 206 -178 96 -178 0 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="0" cy="0" rx="140" ry="180" fill="none" stroke="#475569" stroke-width="6"/>
+<rect x="-10.5" y="-13" width="21" height="26" rx="9" transform="translate(13.1 -164.1) rotate(7.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-10.5" y="-13" width="21" height="26" rx="9" transform="translate(-13.1 -164.1) rotate(-7.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(38.6 -156.9) rotate(23.2)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(-38.6 -156.9) rotate(-23.2)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(64.4 -141.4) rotate(38.4)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(-64.4 -141.4) rotate(-38.4)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(86.8 -118.7) rotate(51.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(-86.8 -118.7) rotate(-51.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(104.8 -89.9) rotate(63.8)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(-104.8 -89.9) rotate(-63.8)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-11.0" y="-13" width="22" height="26" rx="9" transform="translate(117.5 -56.4) rotate(74.6)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-11.0" y="-13" width="22" height="26" rx="9" transform="translate(-117.5 -56.4) rotate(-74.6)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<path d="M -105.2 -52 A 112 152 0 0 1 105.2 -52" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 0 -142 L 0 -98" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -8 -134 C -24 -140 -40 -138 -52 -130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -8 -118 C -26 -124 -46 -122 -64 -112" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -8 -102 C -28 -108 -52 -106 -76 -96" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 8 -134 C 24 -140 40 -138 52 -130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 8 -118 C 26 -124 46 -122 64 -112" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 8 -102 C 28 -108 52 -106 76 -96" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -106 -50 C -70 -88 70 -88 106 -50" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+<path d="M -106 -50 C -100 -68 -70 -68 -52 -54 C -38 -44 -26 -40 -11 -36 C -13 -16 -22 0 -18 10 C -14 22 14 22 18 10 C 22 0 13 -16 11 -36 C 26 -40 38 -44 52 -54 C 70 -68 100 -68 106 -50" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -106 -50 C -118 -14 -124 34 -129 72" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -62 -55 C -78 -30 -84 10 -82 52" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -104 -30 C -114 -8 -112 22 -98 40 C -92 24 -90 -12 -104 -30 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 106 -50 C 118 -14 124 34 129 72" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 62 -55 C 78 -30 84 10 82 52" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 104 -30 C 114 -8 112 22 98 40 C 92 24 90 -12 104 -30 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -86 142 C -94 126 -98 64 -98 50 C -98 -12 -58 -20 0 -20 C 58 -20 98 -12 98 50 C 98 64 94 126 86 142 A 140 180 0 0 1 -86 142 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M 0 -12 C 2 6 -2 24 0 44" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="990" y="650" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Class III</text>
+<text x="990" y="696" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Soft palate, base of uvula</text>
+<g transform="translate(1370 360)">
+<path d="M -178 0 C -178 -96 -100 -206 0 -206 C 100 -206 178 -96 178 0 C 178 96 100 206 0 206 C -100 206 -178 96 -178 0 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="0" cy="0" rx="140" ry="180" fill="none" stroke="#475569" stroke-width="6"/>
+<rect x="-10.5" y="-13" width="21" height="26" rx="9" transform="translate(13.1 -164.1) rotate(7.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-10.5" y="-13" width="21" height="26" rx="9" transform="translate(-13.1 -164.1) rotate(-7.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(38.6 -156.9) rotate(23.2)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(-38.6 -156.9) rotate(-23.2)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(64.4 -141.4) rotate(38.4)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(-64.4 -141.4) rotate(-38.4)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(86.8 -118.7) rotate(51.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.0" y="-13" width="18" height="26" rx="9" transform="translate(-86.8 -118.7) rotate(-51.9)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(104.8 -89.9) rotate(63.8)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-9.5" y="-13" width="19" height="26" rx="9" transform="translate(-104.8 -89.9) rotate(-63.8)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-11.0" y="-13" width="22" height="26" rx="9" transform="translate(117.5 -56.4) rotate(74.6)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<rect x="-11.0" y="-13" width="22" height="26" rx="9" transform="translate(-117.5 -56.4) rotate(-74.6)" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+<path d="M -105.2 -52 A 112 152 0 0 1 105.2 -52" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 0 -142 L 0 -98" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -8 -134 C -24 -140 -40 -138 -52 -130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -8 -118 C -26 -124 -46 -122 -64 -112" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -8 -102 C -28 -108 -52 -106 -76 -96" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 8 -134 C 24 -140 40 -138 52 -130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 8 -118 C 26 -124 46 -122 64 -112" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 8 -102 C 28 -108 52 -106 76 -96" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -106 -50 C -70 -88 70 -88 106 -50" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+<path d="M -106 -50 C -100 -68 -70 -68 -52 -54 C -38 -44 -26 -40 -11 -36 C -13 -16 -22 0 -18 10 C -14 22 14 22 18 10 C 22 0 13 -16 11 -36 C 26 -40 38 -44 52 -54 C 70 -68 100 -68 106 -50" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -106 -50 C -118 -14 -124 34 -129 72" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -62 -55 C -78 -30 -84 10 -82 52" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -104 -30 C -114 -8 -112 22 -98 40 C -92 24 -90 -12 -104 -30 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 106 -50 C 118 -14 124 34 129 72" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 62 -55 C 78 -30 84 10 82 52" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 104 -30 C 114 -8 112 22 98 40 C 92 24 90 -12 104 -30 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M -86 142 C -94 126 -98 6 -98 -8 C -98 -70 -58 -78 0 -78 C 58 -78 98 -70 98 -8 C 98 6 94 126 86 142 A 140 180 0 0 1 -86 142 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M 0 -70 C 2 -52 -2 -34 0 -14" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="1370" y="650" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Class IV</text>
+<text x="1370" y="696" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Hard palate only</text>
+<text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="start">R</text>
+<text x="1540" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="end">L</text>
+<text x="800" y="70" font-family="system-ui, sans-serif" font-size="28" fill="#475569" text-anchor="middle">Open mouth, tongue protruded</text>
 </svg>

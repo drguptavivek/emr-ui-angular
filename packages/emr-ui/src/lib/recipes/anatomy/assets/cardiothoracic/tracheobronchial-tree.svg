@@ -1,140 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1400" viewBox="0 0 1400 1400" role="img">
-  <title>Tracheobronchial tree, anterior view</title>
-  <rect width="1400" height="1400" fill="#ffffff"/>
-  <path d="M700 90 L700 345" fill="none" stroke="#475569" stroke-width="54" stroke-linecap="butt" stroke-linejoin="round"/>
-  <path d="M700 345 C672 380 640 410 610 430" fill="none" stroke="#475569" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M700 345 C745 380 800 420 850 450" fill="none" stroke="#475569" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M610 430 C570 425 535 410 500 390" fill="none" stroke="#475569" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M610 430 C600 470 592 520 590 560" fill="none" stroke="#475569" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M590 560 C555 570 515 600 480 640" fill="none" stroke="#475569" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M590 560 C580 620 568 680 560 740" fill="none" stroke="#475569" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M850 450 C870 435 890 415 905 400" fill="none" stroke="#475569" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M850 450 C890 480 925 515 960 560" fill="none" stroke="#475569" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M850 450 C852 540 848 640 840 770" fill="none" stroke="#475569" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M700 90 L700 345" fill="none" stroke="#ffffff" stroke-width="44" stroke-linecap="square" stroke-linejoin="round"/>
-  <path d="M700 345 C672 380 640 410 610 430" fill="none" stroke="#ffffff" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M700 345 C745 380 800 420 850 450" fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M610 430 C570 425 535 410 500 390" fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M610 430 C600 470 592 520 590 560" fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M590 560 C555 570 515 600 480 640" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M590 560 C580 620 568 680 560 740" fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M850 450 C870 435 890 415 905 400" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M850 450 C890 480 925 515 960 560" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M850 450 C852 540 848 640 840 770" fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M682 120 L718 120" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M682 146 L718 146" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M682 172 L718 172" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M682 198 L718 198" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M682 224 L718 224" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M682 250 L718 250" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M682 276 L718 276" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M682 302 L718 302" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M682 328 L718 328" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M500 390 C495 350 485 310 478 262" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M478 262 L493 231 M478 262 L455 237" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M500 390 C450 380 390 350 325 325" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M325 325 L306 297 M325 325 L292 333" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M500 390 C440 420 370 450 300 480" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M300 480 L267 473 M300 480 L282 509" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M480 640 C430 630 370 640 305 665" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M305 665 L272 657 M305 665 L286 693" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M480 640 C470 690 450 740 430 790" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M430 790 L402 809 M430 790 L437 823" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M578 650 C600 665 625 680 655 705" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M655 705 L664 738 M655 705 L689 708" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M560 740 C590 790 630 850 665 960" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M665 960 L655 993 M665 960 L692 981" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M560 740 C540 830 490 930 430 1060" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M430 1060 L401 1077 M430 1060 L436 1094" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M560 740 C500 780 400 850 330 960" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M330 960 L299 973 M330 960 L331 994" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M560 740 C565 860 570 1000 570 1150" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M570 1150 L551 1178 M570 1150 L589 1178" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M905 400 C915 360 925 320 935 265" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M935 265 L959 241 M935 265 L921 234" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M905 400 C960 395 1030 400 1095 425" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M1095 425 L1114 453 M1095 425 L1128 417" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M960 560 C1000 570 1050 580 1105 600" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M1105 600 L1125 628 M1105 600 L1138 592" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M960 560 C985 610 1010 670 1030 740" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M1030 740 L1019 772 M1030 740 L1056 762" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M850 660 C880 670 915 685 950 705" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M950 705 L965 736 M950 705 L984 702" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M840 770 C810 830 780 900 755 1000" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M755 1000 L730 1023 M755 1000 L767 1032" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M840 770 C900 810 960 870 1010 970" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M1010 970 L1005 1004 M1010 970 L1040 987" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M840 770 C845 880 855 1010 865 1150" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M865 1150 L848 1179 M865 1150 L886 1177" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="60" y="70" font-family="system-ui, sans-serif" font-size="40" text-anchor="start" font-weight="700" fill="#475569">R</text>
-  <text x="1340" y="70" font-family="system-ui, sans-serif" font-size="40" text-anchor="end" font-weight="700" fill="#475569">L</text>
-  <text x="478" y="215" font-family="system-ui, sans-serif" font-size="30" text-anchor="middle" font-weight="700" fill="#94a3b8">RB1</text>
-  <path d="M478 227 L478 255" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="478" cy="255" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="245" y="335" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">RB2</text>
-  <path d="M255 325.4 L322 328" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="322" cy="328" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="225" y="490" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">RB3</text>
-  <path d="M235 480.4 L297 482" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="297" cy="482" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="235" y="676" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">RB4</text>
-  <path d="M245 666.4 L302 668" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="302" cy="668" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="372" y="803" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">RB5</text>
-  <path d="M382 793.4 L428 792" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="428" cy="792" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="705" y="715" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">RB6</text>
-  <path d="M695 705.4 L660 708" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="660" cy="708" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="270" y="975" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">RB9</text>
-  <path d="M280 965.4 L328 962" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="328" cy="962" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="430" y="1118" font-family="system-ui, sans-serif" font-size="30" text-anchor="middle" font-weight="700" fill="#94a3b8">RB8</text>
-  <path d="M430 1086 L430 1062" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="430" cy="1062" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="570" y="1205" font-family="system-ui, sans-serif" font-size="30" text-anchor="middle" font-weight="700" fill="#94a3b8">RB10</text>
-  <path d="M570 1173 L570 1155" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="570" cy="1155" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="665" y="1025" font-family="system-ui, sans-serif" font-size="30" text-anchor="middle" font-weight="700" fill="#94a3b8">RB7</text>
-  <path d="M665 993 L665 965" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="665" cy="965" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="935" y="218" font-family="system-ui, sans-serif" font-size="30" text-anchor="middle" font-weight="700" fill="#94a3b8">LB1+2</text>
-  <path d="M935 230 L935 258" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="935" cy="258" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="1150" y="435" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">LB3</text>
-  <path d="M1140 425.4 L1100 427" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="1100" cy="427" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="1160" y="610" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">LB4</text>
-  <path d="M1150 600.4 L1110 602" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="1110" cy="602" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="1030" y="800" font-family="system-ui, sans-serif" font-size="30" text-anchor="middle" font-weight="700" fill="#94a3b8">LB5</text>
-  <path d="M1030 768 L1030 745" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="1030" cy="745" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="955" y="765" font-family="system-ui, sans-serif" font-size="30" text-anchor="middle" font-weight="700" fill="#94a3b8">LB6</text>
-  <path d="M955 733 L950 710" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="950" cy="710" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="755" y="1062" font-family="system-ui, sans-serif" font-size="30" text-anchor="middle" font-weight="700" fill="#94a3b8">LB7+8</text>
-  <path d="M755 1030 L755 1005" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="755" cy="1005" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="1065" y="980" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">LB9</text>
-  <path d="M1055 970.4 L1015 972" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="1015" cy="972" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="865" y="1208" font-family="system-ui, sans-serif" font-size="30" text-anchor="middle" font-weight="700" fill="#94a3b8">LB10</text>
-  <path d="M865 1176 L865 1155" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="865" cy="1155" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="760" y="200" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Trachea</text>
-  <path d="M750 190.4 L724 200" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="724" cy="200" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="640" y="330" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Carina</text>
-  <path d="M650 320.4 L698 343" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="698" cy="343" r="5" fill="#94a3b8" stroke="none"/>
-  <text x="730" y="505" font-family="system-ui, sans-serif" font-size="28" text-anchor="middle" font-weight="700" fill="#94a3b8">Main bronchi</text>
-  <path d="M690 478 L660 398" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M770 478 L785 400" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="565" y="358" font-family="system-ui, sans-serif" font-size="26" text-anchor="middle" font-weight="700" fill="#94a3b8">RUL</text>
-  <text x="548" y="550" font-family="system-ui, sans-serif" font-size="26" text-anchor="middle" font-weight="700" fill="#94a3b8">RML</text>
-  <text x="640" y="610" font-family="system-ui, sans-serif" font-size="26" text-anchor="start" font-weight="700" fill="#94a3b8">RLL</text>
-  <text x="840" y="392" font-family="system-ui, sans-serif" font-size="26" text-anchor="middle" font-weight="700" fill="#94a3b8">LUL</text>
-  <text x="935" y="520" font-family="system-ui, sans-serif" font-size="26" text-anchor="start" font-weight="700" fill="#94a3b8">Lingula</text>
-  <text x="790" y="640" font-family="system-ui, sans-serif" font-size="26" text-anchor="end" font-weight="700" fill="#94a3b8">LLL</text>
+<title>Tracheobronchial tree, anterior view</title>
+<rect width="1400" height="1400" fill="#ffffff"/>
+<path d="M625.4 100Q623 250.1 621 305Q619 359.9 616.5 401.8Q614.1 443.6 604.9 479.4Q595.6 515.1 593.4 517.3Q591.2 519.5 588.5 519.6Q585.7 519.7 571.5 512.1Q557.3 504.5 555.8 502.6Q554.3 500.8 537.8 411.1Q521.3 321.3 520.1 317.9Q518.9 314.5 516.2 312.9Q513.6 311.3 510 312.3Q506.3 313.3 504.8 316.7Q503.2 320.1 509 402.4Q514.9 484.6 514.5 486.5Q514.2 488.4 512.7 490.1Q511.2 491.9 509 492.5Q506.8 493.1 486.6 491Q466.3 488.9 457 488.7Q447.6 488.5 445.6 489.1Q443.7 489.8 442 493Q440.4 496.1 442.1 499.2Q443.9 502.4 470.6 510.1Q497.4 517.8 502.4 520.5Q507.4 523.3 508.2 525Q509.1 526.7 509.1 528.7Q509.1 530.6 503.8 537.8Q498.4 545 491.5 551.4Q484.7 557.8 446.6 583Q408.6 608.1 407.3 611.2Q406 614.4 407.6 617.4Q409.2 620.4 411.1 621.1Q413.1 621.9 415.1 621.6Q417.2 621.3 444.8 607.8Q472.4 594.3 489.4 584.8Q506.5 575.3 519.2 566Q531.9 556.7 534.6 557Q537.3 557.3 547.8 564.3Q558.4 571.3 565.1 576.3Q571.8 581.4 573 583.8Q574.2 586.3 574.4 593.6Q574.6 601 570.5 645.3Q566.5 689.6 565.8 691.8Q565 693.9 545.7 710.2Q526.4 726.6 524.1 727.5Q521.9 728.4 483.9 718Q445.9 707.6 438.2 706Q430.6 704.5 428 705.3Q425.3 706.1 423.9 709.2Q422.5 712.4 424.1 715.3Q425.7 718.2 458.6 732.7Q491.5 747.1 495.4 749.5Q499.4 751.9 500.4 755.2Q501.5 758.6 500.7 760.5Q499.9 762.3 496.5 765.8Q493.1 769.4 484.6 776.2Q476.2 783.1 465.3 788.9Q454.4 794.6 432.4 804.4Q410.5 814.2 408.4 815.7Q406.2 817.1 405.4 819.2Q404.5 821.4 405.6 824.4Q406.7 827.4 409.6 828.5Q412.6 829.5 433.2 823.6Q453.8 817.7 474.3 809.8Q494.8 801.9 503.4 796.4Q512 790.9 521.2 783.5Q530.4 776.2 536.2 774.5Q542.1 772.7 549.3 768.2Q556.5 763.7 559.6 763.8Q562.7 763.8 565 766.3Q567.2 768.9 566.7 798.2Q566.2 827.5 539.5 856.5Q512.9 885.6 510.6 888.5Q508.3 891.4 507.6 893.5Q507 895.5 507.4 897.7Q507.9 899.9 509.2 901.5Q510.6 903.2 512.5 904Q514.4 904.8 516.6 904.7Q518.8 904.6 537 891.3Q555.1 878 557 877.4Q558.8 876.8 560.8 877.2Q562.7 877.6 564.8 879.9Q566.9 882.2 568.1 888.1Q569.3 894 564.3 908.1Q559.4 922.3 545 950.2Q530.7 978.2 514 993.8Q497.2 1009.3 467.1 1032Q437 1054.8 435.4 1056.2Q433.8 1057.7 433.2 1059.5Q432.6 1061.2 432.9 1063.1Q433.1 1065 434.3 1066.5Q435.5 1068 437.4 1068.7Q439.2 1069.4 440.9 1069.2Q442.7 1069 467.2 1054.5Q491.7 1039.9 507.9 1029.2Q524.1 1018.4 527.2 1018.2Q530.2 1018.1 532.3 1019.9Q534.4 1021.6 535.1 1036.5Q535.9 1051.5 535.1 1067.8Q534.3 1084.1 531.4 1103.1Q528.5 1122.1 521.8 1156.9Q515.1 1191.8 514.8 1194.2Q514.5 1196.6 515.1 1198.4Q515.8 1200.3 517.3 1201.5Q518.8 1202.8 520.8 1203.1Q522.8 1203.4 524.8 1202.7Q526.7 1201.9 527.9 1200.3Q529 1198.7 540 1155.7Q551.1 1112.6 555.2 1088.3Q559.3 1064 561 1029Q562.6 993.9 579.5 965.5Q596.3 937.1 598.5 935.5Q600.6 933.9 603.3 934Q606 934.1 607.8 935.6Q609.6 937.1 623.5 965.4Q637.4 993.6 623.8 1075.8Q610.2 1158.1 609.4 1163.8Q608.5 1169.6 608.9 1171.5Q609.3 1173.4 610.7 1174.9Q612.1 1176.4 614.2 1177Q616.4 1177.5 618.5 1176.8Q620.5 1176 621.8 1174.2Q623.1 1172.5 637.7 1110.9Q652.2 1049.3 654.4 1046.7Q656.5 1044 660 1044Q663.4 1044 665.5 1046.2Q667.5 1048.5 679.5 1091Q691.4 1133.6 693 1135.2Q694.6 1136.7 696.7 1137.1Q698.8 1137.4 700.8 1136.6Q702.8 1135.7 704 1133.9Q705.2 1132.1 703.2 1116.7Q701.2 1101.2 696.5 1076.4Q691.9 1051.6 688.6 1039.5Q685.4 1027.5 678.9 1008Q672.4 988.4 671.8 983.8Q671.1 979.3 649.9 932.6Q628.6 885.9 635 802.5Q641.5 719.1 643.8 711.7Q646 704.3 656 651.8Q666.1 599.4 677.7 564.4Q689.2 529.4 697.9 498.2Q706.5 467.1 707.9 465.2Q709.3 463.4 711.8 462.6Q714.3 461.9 717.3 463.4Q720.3 464.9 753.5 507.2Q786.8 549.6 823 593.2Q859.1 636.9 860 639.3Q860.9 641.8 854.2 737.9Q847.6 834 844.5 867Q841.4 899.9 830.1 920Q818.8 940.2 808.8 967.7Q798.7 995.2 798.8 1002Q798.8 1008.9 784.2 1071.3Q769.7 1133.7 768.3 1143Q766.9 1152.3 768.1 1154.1Q769.3 1155.9 771.3 1156.7Q773.4 1157.5 775.5 1157Q777.6 1156.6 779.2 1155Q780.7 1153.4 795.2 1109Q809.7 1064.5 811 1062.6Q812.3 1060.7 814.5 1059.9Q816.7 1059.1 819.9 1060.3Q823 1061.5 824.6 1065.4Q826.2 1069.3 832.7 1106.2Q839.1 1143 840.5 1144.7Q841.9 1146.3 843.9 1146.9Q845.9 1147.5 848 1146.9Q850.1 1146.3 851.5 1144.8Q852.8 1143.2 852.8 1128Q852.8 1112.8 851.2 1092.5Q849.6 1072.2 842.2 1037.5Q834.8 1002.9 840.6 988Q846.4 973.1 851.3 962.6Q856.3 952.1 859.5 947.3Q862.7 942.5 864.5 941.6Q866.3 940.7 868.2 940.8Q870.2 940.9 872.2 942.2Q874.1 943.6 877.6 949.2Q881.1 954.8 894.5 981.3Q907.8 1007.9 910.8 1012.2Q913.7 1016.6 919.4 1038.7Q925.1 1060.8 928.3 1078.7Q931.5 1096.5 934 1147.9Q936.6 1199.3 938.8 1202.1Q941 1204.9 942.9 1205.2Q944.8 1205.4 946.5 1204.8Q948.3 1204.2 949.9 1201.4Q951.5 1198.6 952.7 1164.8Q953.9 1130.9 953.5 1110.1Q953.2 1089.2 950.9 1069.7Q948.5 1050.1 949.2 1047.5Q949.9 1044.9 952.1 1043.3Q954.4 1041.8 957.5 1042.2Q960.5 1042.6 991.6 1067.2Q1022.8 1091.8 1024.6 1092.2Q1026.4 1092.5 1028.2 1091.9Q1030.1 1091.3 1031.4 1089.8Q1032.7 1088.4 1033.1 1086.5Q1033.5 1084.6 1032 1081.7Q1030.4 1078.7 1012.4 1060.3Q994.4 1042 968.2 1018.9Q942 995.7 929.5 967.4Q916.9 939.1 905.3 919.2Q893.8 899.3 898.4 865.4Q903 831.5 904.8 828.6Q906.6 825.8 909.2 825.1Q911.7 824.5 914.1 825.6Q916.5 826.8 932 846Q947.6 865.3 949.8 865.9Q951.9 866.5 953.9 866Q955.9 865.6 957.5 864.2Q959 862.9 959.8 861Q960.5 859 958.3 852.9Q956.1 846.7 946.4 829Q936.6 811.3 931.9 804.3Q927.2 797.3 918.7 787.1Q910.1 777 914 741Q918 705.1 920.4 703.2Q922.8 701.2 925.8 701.5Q928.9 701.9 945 714.1Q961.2 726.4 995.1 748.8Q1029.1 771.1 1036.8 789.5Q1044.4 808 1047.6 819.9Q1050.8 831.8 1051 843.8Q1051.2 855.8 1048.2 882.8Q1045.3 909.9 1045.9 911.8Q1046.5 913.8 1048.1 915Q1049.7 916.3 1052.4 916.1Q1055.1 916 1056.8 914Q1058.4 912 1062.9 894.3Q1067.4 876.6 1069.9 862.5Q1072.4 848.5 1072.8 836.8Q1073.1 825.1 1071.6 815.6Q1070.1 806.1 1066.9 794.1Q1063.8 782.1 1064.7 778.8Q1065.5 775.5 1068.6 774Q1071.7 772.6 1077.3 773.8Q1083 775 1114.9 785.8Q1146.8 796.6 1149.5 795.9Q1152.2 795.2 1153.5 792.9Q1154.7 790.6 1154.4 788.9Q1154.1 787.1 1152.8 785.7Q1151.6 784.3 1136 776.1Q1120.5 767.9 1104 760.1Q1087.6 752.3 1071.3 746.5Q1055 740.7 1015.4 711.8Q975.8 682.9 961.3 669.8Q946.8 656.7 938.2 647.5Q929.6 638.3 929.8 631.6Q930 624.9 931 622.8Q932.1 620.8 956.2 600.1Q980.4 579.5 989.8 576Q999.3 572.5 1007 570.5Q1014.6 568.5 1057.8 564Q1101 559.5 1103 558.6Q1104.9 557.8 1106.1 556Q1107.2 554.3 1106.8 551.1Q1106.4 547.9 1103.7 546.2Q1100.9 544.5 1067.3 543.6Q1033.7 542.7 1014.3 543.7Q994.9 544.7 992.8 544Q990.6 543.2 989.2 541.4Q987.9 539.6 987.7 537.3Q987.5 535 995 509.9Q1002.4 484.7 1006.2 466.4Q1010 448.1 1016.2 405.5Q1022.5 362.9 1023.2 356.5Q1024 350.1 1023.3 347.8Q1022.6 345.5 1020.9 344.1Q1019.2 342.7 1017.2 342.4Q1015.1 342.1 1013 343Q1011 343.8 1009.8 345.5Q1008.6 347.1 994.7 403.9Q980.8 460.7 974.1 479.2Q967.5 497.8 958 519.6Q948.5 541.4 926.4 556.9Q904.3 572.4 902.5 573Q900.6 573.6 898.4 573.1Q896.2 572.6 869.7 539.5Q843.2 506.4 814.2 467.5Q785.3 428.6 783.1 394.2Q781 359.9 779 305Q777 250.1 775.8 175.1L774.6 100" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M630 125Q700 138 770 125M630 159Q700 172 770 159M630 191Q700 204 770 191M630 221Q700 234 770 221M630 249Q700 262 770 249M628.9 275Q700 288 771.1 275M627.8 299Q700 312 772.2 299M626.8 321Q700 334 773.2 321M625.8 343Q700 356 774.2 343M624 365Q700 378 776 365" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M607 494Q643 517 686 516M601 515Q637 539 679 540M593 543Q627 567 670 568M586 564Q621 588 663 589M787 541Q818 532 834 504M809 568Q839 559 855 531M838 602Q868 593 882 566M859 628Q888 619 903 592" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M700 434L700 448" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M509 302L506 278" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="505" y="264" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" fill="#475569">RB1</text>
+<path d="M430 493L406 489" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="394" y="497" text-anchor="end" font-family="system-ui, sans-serif" font-size="26" fill="#475569">RB2</text>
+<path d="M398 622L377 634" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="366" y="649" text-anchor="end" font-family="system-ui, sans-serif" font-size="26" fill="#475569">RB3</text>
+<path d="M412 706L390 699" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="378" y="704" text-anchor="end" font-family="system-ui, sans-serif" font-size="26" fill="#475569">RB4</text>
+<path d="M395 828L372 836" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="361" y="849" text-anchor="end" font-family="system-ui, sans-serif" font-size="26" fill="#475569">RB5</text>
+<path d="M502 908L484 924" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="476" y="956" text-anchor="end" font-family="system-ui, sans-serif" font-size="26" fill="#475569">RB6</text>
+<path d="M701 1147L706 1171" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="709" y="1206" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" fill="#475569">RB7</text>
+<path d="M612 1187L607 1211" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="605" y="1246" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" fill="#475569">RB8</text>
+<path d="M424 1071L404 1085" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="394" y="1100" text-anchor="end" font-family="system-ui, sans-serif" font-size="26" fill="#475569">RB9</text>
+<path d="M517 1213L512 1236" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="509" y="1272" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" fill="#475569">RB10</text>
+<path d="M1019 332L1023 308" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1025" y="294" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" fill="#475569">LB1+2</text>
+<path d="M1117 551L1141 550" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1153" y="559" text-anchor="start" font-family="system-ui, sans-serif" font-size="26" fill="#475569">LB3</text>
+<path d="M1164 797L1186 806" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1197" y="820" text-anchor="start" font-family="system-ui, sans-serif" font-size="26" fill="#475569">LB4</text>
+<path d="M1048 927L1044 951" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1042" y="987" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" fill="#475569">LB5</text>
+<path d="M961 873L974 893" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="981" y="927" text-anchor="start" font-family="system-ui, sans-serif" font-size="26" fill="#475569">LB6</text>
+<path d="M769 1167L762 1190" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="759" y="1226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" fill="#475569">LB7</text>
+<path d="M847 1157L849 1181" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="850" y="1217" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" fill="#475569">LB8</text>
+<path d="M1039 1097L1056 1113" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1065" y="1145" text-anchor="start" font-family="system-ui, sans-serif" font-size="26" fill="#475569">LB9</text>
+<path d="M943 1215L943 1239" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="943" y="1275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" fill="#475569">LB10</text>
+<text x="700" y="60" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" fill="#475569">Anterior</text>
+<text x="560" y="200" text-anchor="end" font-family="system-ui, sans-serif" font-size="26" fill="#475569">R</text>
+<text x="840" y="200" text-anchor="start" font-family="system-ui, sans-serif" font-size="26" fill="#475569">L</text>
+<text x="850" y="265" text-anchor="start" font-family="system-ui, sans-serif" font-size="26" fill="#475569">Trachea</text>
+<path d="M838 258L796 258" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="700" y="408" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" fill="#475569">Carina</text>
 </svg>

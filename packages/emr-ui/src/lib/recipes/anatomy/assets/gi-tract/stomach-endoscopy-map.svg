@@ -1,39 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img">
   <title>Stomach endoscopy map with regions, curvatures and walls</title>
   <rect width="1200" height="1200" fill="#ffffff"/>
-  <path d="M470 235 C520 170 700 120 790 190 C880 250 905 420 885 560 C865 740 780 880 640 930 C540 965 430 960 380 925 C340 905 310 905 290 905" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M290 800 C340 805 380 790 405 765 C428 720 452 620 454 520 C455 420 462 340 470 268" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M440 70 L440 200 C440 230 465 245 470 262" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M520 70 L520 195 C520 215 505 228 495 236" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M290 800 C250 795 190 805 165 840 C150 870 165 910 200 925 C230 937 265 910 290 905" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M290 800 L290 905" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M466 300 L893 300" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
-  <path d="M456 430 L891 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
-  <path d="M452 565 L887 565" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
-  <path d="M418 722 C500 790 560 870 610 940" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
-  <path d="M470 235 C450 215 420 205 400 205" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
-  <path d="M420 745 L444 722" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M460 180 L340 150" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="330" y="159" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Oesophagus</text>
-  <path d="M470 250 L340 245" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="330" y="254" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Cardia</text>
-  <path d="M680 200 L950 130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="960" y="139" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Fundus</text>
-  <text x="700" y="365" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Upper body</text>
-  <text x="700" y="500" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Mid body</text>
-  <text x="660" y="640" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Lower body</text>
-  <path d="M412 745 L260 700" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="250" y="709" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Incisura angularis</text>
-  <path d="M520 860 L520 1040" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="520" y="1049" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Antrum</text>
-  <path d="M290 850 L160 770" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="150" y="779" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Pylorus</text>
-  <path d="M180 880 L100 980" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="100" y="989" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Duodenal bulb</text>
-  <path d="M454 500 L340 480" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="330" y="489" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Lesser curvature</text>
-  <path d="M884 480 L930 480" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="940" y="474" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Greater</text><text x="940" y="504" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">curvature</text>
-  <text x="640" y="790" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8">Anterior wall (facing viewer)</text>
-  <circle cx="1010" cy="1000" r="80" fill="none" stroke="#475569" stroke-width="4"/>
-  <circle cx="1010" cy="1000" r="30" fill="none" stroke="#94a3b8" stroke-width="3"/>
-  <path d="M1010 920 L1010 970 M1010 1030 L1010 1080 M930 1000 L980 1000 M1040 1000 L1090 1000" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="1010" y="908" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Anterior wall</text>
-  <text x="1010" y="1112" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Posterior wall</text>
-  <text x="918" y="1008" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="end">Lesser</text>
-  <text x="1102" y="1008" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8">Greater</text>
-  <text x="1010" y="1170" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Circumference of the lumen</text>
-  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text><text x="1150" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
-  <text x="600" y="60" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Anterior</text>
+<path d="M400 90 L400 240 C425 350 522 540 548 712 Q548 726 534 726 C480 722 395 714 335 719 C315 722 300 730 285 735 L255 735 C240 726 200 722 175 742 C150 765 148 880 148 1000" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M490 90 L490 192 Q490 212 506 198 C540 140 590 108 660 108 C790 108 890 170 925 290 C955 420 955 560 915 690 C875 820 780 935 640 962 C560 978 470 955 410 905 C372 870 346 835 333 806 C315 803 298 796 285 790 L255 790 C240 798 232 806 230 830 C228 900 228 960 228 1000" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M270 735 L270 790" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M412.441 250 L902.027 250" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+<path d="M475.372 430 L937.104 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+<path d="M535.751 610 L926.462 610" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+<path d="M560 740 L610 968" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+<path d="M148 1000 L228 1000" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+<path d="M350 150 L396 150" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="340" y="159" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Oesophagus</text>
+<path d="M350 262 L397 262" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="340" y="271" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Cardia</text>
+<path d="M408 520 L492 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="398" y="529" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Lesser curvature</text>
+<path d="M520 676 L546 712" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="510" y="672" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Incisura angularis</text>
+<path d="M276 625 L262 724" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="290" y="615" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Pylorus</text>
+<path d="M125 702 L170 735" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="60" y="665" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Duodenal</text>
+<text x="60" y="695" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">bulb</text>
+<path d="M952 500 L1016 500" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1026" y="509" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Greater</text>
+<text x="1026" y="539" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">curvature</text>
+<text x="680" y="185" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Fundus</text>
+<text x="640" y="350" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Upper body</text>
+<text x="640" y="525" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Mid body</text>
+<text x="660" y="720" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Lower body</text>
+<text x="470" y="845" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Antrum</text>
+<circle cx="990" cy="1040" r="70" fill="none" stroke="#475569" stroke-width="6"/>
+<circle cx="990" cy="1040" r="26" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M990 970 L990 1014 M990 1066 L990 1110 M920 1040 L964 1040 M1016 1040 L1060 1040" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="990" y="954" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Anterior wall</text>
+<text x="990" y="1152" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Posterior wall</text>
+<text x="908" y="1048" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="end">Lesser</text>
+<text x="1072" y="1048" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="start">Greater</text>
+<text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text>
+<text x="1150" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+<text x="600" y="60" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Anterior</text>
 </svg>

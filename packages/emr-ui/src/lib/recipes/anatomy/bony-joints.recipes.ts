@@ -10,7 +10,7 @@ export const BONY_JOINTS_RECIPES: readonly AnatomyTemplateRecipe[] = [
   {
     id: 'pelvis-hip-ap', version: 1, group: 'bony-joints', label: 'Pelvis and hips — AP', region: 'pelvis and hips', view: 'anteroposterior',
     laterality: 'bilateral', asset: 'bony-joints/pelvis-hip-ap.svg', width: 1400, height: 1300, provenance,
-    description: 'Anteroposterior pelvis with both hips: iliac wings, sacrum and coccyx, acetabula, femoral heads and necks, greater and lesser trochanters, pubic rami and obturator foramina. Patient\'s right is on the viewer\'s left (R and L marked).',
+    description: 'Anteroposterior pelvis with both hips: iliac wings with crest, ASIS and AIIS, L5 vertebra, sacrum and coccyx, sacroiliac joints, acetabula with rim and teardrop, femoral heads, necks and trochanters, Shenton\'s line, pubic symphysis, rami and obturator foramina. Patient\'s right is on the viewer\'s left (R and L marked).',
   },
   {
     id: 'knee-bony-ap-right', version: 1, group: 'bony-joints', label: 'Knee bones — right AP', region: 'right knee', view: 'anteroposterior',
@@ -45,12 +45,12 @@ export const BONY_JOINTS_RECIPES: readonly AnatomyTemplateRecipe[] = [
   {
     id: 'hand-bones-right-dorsal', version: 1, group: 'bony-joints', label: 'Hand bones — right dorsal', region: 'right hand', view: 'dorsal',
     laterality: 'right', asset: 'bony-joints/hand-bones-right-dorsal.svg', width: 1000, height: 1400, provenance,
-    description: 'Right hand bones, dorsal view, fingers up and thumb on the viewer\'s left: eight carpal bones, five metacarpals, phalanges with visible joint spaces, and the distal radius and ulna.',
+    description: 'Right hand bones, dorsal view, fingers up and thumb on the viewer\'s left: the carpal bones (pisiform partly tucked behind the triquetrum), five metacarpals, phalanges with visible joint spaces, and the distal radius and ulna.',
   },
   {
     id: 'hand-bones-left-dorsal', version: 1, group: 'bony-joints', label: 'Hand bones — left dorsal', region: 'left hand', view: 'dorsal',
     laterality: 'left', asset: 'bony-joints/hand-bones-left-dorsal.svg', width: 1000, height: 1400, provenance,
-    description: 'Left hand bones, dorsal view, fingers up and thumb on the viewer\'s right: eight carpal bones, five metacarpals, phalanges with visible joint spaces, and the distal radius and ulna.',
+    description: 'Left hand bones, dorsal view, fingers up and thumb on the viewer\'s right: the carpal bones (pisiform partly tucked behind the triquetrum), five metacarpals, phalanges with visible joint spaces, and the distal radius and ulna.',
   },
   {
     id: 'foot-bones-right-dorsal', version: 1, group: 'bony-joints', label: 'Foot bones — right dorsal', region: 'right foot', view: 'dorsal',

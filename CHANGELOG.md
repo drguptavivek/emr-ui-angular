@@ -2,6 +2,12 @@
 
 Current state and pending work live in `handoff.md`. Exact changes and authorship live in Git.
 
+## 10 October 2026 — anatomy outline redraws
+
+- **19 anatomy outlines redrawn** (neonate, Mallampati, knee AP and lateral pairs, stomach, brain pair, thyroid, tracheobronchial tree, shoulder pair, pelvis and hips, great vessels, colon, hand pair, ETT airway) in a Renaissance-anatomist style: stroke widths 6 and 3 only, honest proportions and contacts, short labels, open space to annotate. Recipe descriptions updated to match.
+- **Two new heart recipes** (`heart-anterior-cutaway`, `heart-anterior-cutaway-chordae`): a vector trace of a supplied AI-generated illustration, unlabelled, smoothed and recoloured to the outline palette. Provenance records that origin; confirm the generator's output terms before release.
+- **Retired** `heart-four-chamber-section` (replaced by the cutaway recipes).
+
 ## 10 October 2026 — inpatient banner and drug order composer
 
 - **Medication administration record recipe** (`EMR / Medications / Administration record`) composes `EmrTimeAxis`, `EmrStatusCell` and `EmrAttestation` with the story as controller (outcome badges, witness and co-sign policy, attestation model). Eight stories. No new component was needed.

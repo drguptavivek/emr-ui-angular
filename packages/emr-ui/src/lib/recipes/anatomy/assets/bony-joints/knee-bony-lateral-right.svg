@@ -1,20 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1400" viewBox="0 0 1000 1400" role="img">
   <title>Right knee, bony outline, lateral view</title>
   <rect width="1000" height="1400" fill="#ffffff"/>
-  <path d="M412 70C388 110 419 260 414 310C409 360 393 350 380 372C367 395 346 420 336 445C326 470 321 498 322 520C323 543 330 563 342 580C354 597 373 614 392 624C411 634 434 639 455 640C476 641 501 637 520 630C539 623 555 609 568 596C581 583 592 569 598 552C604 535 607 513 606 492C605 471 597 450 590 425C583 400 571 399 566 340C561 281 586 115 560 70C534 25 436 30 412 70Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M372 702C378 688 382 683 396 678C410 673 438 677 455 672C472 667 484 649 498 648C512 647 529 663 540 666C551 669 550 662 566 664C582 666 622 666 636 676C650 686 643 704 650 722C657 740 672 764 676 782C680 800 680 818 676 832C672 846 660 853 654 868C648 883 644 898 640 920C636 942 632 938 628 1000C624 1062 652 1242 618 1290C584 1338 457 1338 424 1290C391 1242 422 1060 420 1000C418 940 418 957 412 930C406 903 390 868 382 840C374 812 364 787 362 764C360 741 366 716 372 702Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M330 752C338 744 347 738 360 738C373 738 397 743 408 752C419 761 424 780 424 792C424 804 411 815 406 826C401 837 393 843 392 860C391 877 398 858 400 930C402 1002 414 1230 406 1290C398 1350 360 1350 350 1290C340 1230 349 998 348 930C347 862 347 897 342 880C337 863 325 846 320 830C315 814 310 798 312 785C314 772 322 760 330 752Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M646 418C654 404 677 402 690 404C703 406 716 413 722 428C728 443 729 474 726 496C723 518 715 553 704 562C693 571 672 560 662 548C652 536 645 512 642 490C639 468 638 432 646 418Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M356 520C366 566 404 600 450 612C500 618 548 598 580 560" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M540 574C500 540 450 500 420 470" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M372 504C380 556 418 592 466 602C516 606 556 586 586 548" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M596 450C600 480 598 520 588 546" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M664 556C668 620 668 700 664 770" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
-  <path d="M372 700C420 690 470 684 520 690C570 692 610 690 640 696" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="250" y="300" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Femur</text>
-  <text x="240" y="1000" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Fibula</text>
-  <text x="790" y="1000" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Tibia</text>
-  <text x="800" y="470" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Patella</text>
+  <path d="M344 718C380 712 410 708 436 702C452 698 458 686 470 686C480 686 484 697 492 698C500 698 504 686 516 686C528 686 532 694 546 692C560 690 574 682 588 678C598 676 604 684 602 696C600 716 606 730 616 744C628 760 636 782 624 800C612 818 592 836 582 862C572 890 566 920 566 960L566 1330L540 1312L515 1332L490 1314L465 1332L440 1316L440 1000C440 930 430 880 408 846C378 812 332 790 332 752C332 730 336 720 344 718Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M350 480C306 530 288 596 298 636C310 676 354 696 410 698L450 640Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M410 70L440 58L470 76L505 56L535 74L560 62L562 250C565 330 574 400 588 450C600 490 604 540 602 580C600 625 592 652 580 662C560 672 520 680 470 680C420 680 372 672 346 650C318 628 308 590 316 548C322 490 360 450 384 400C402 362 410 310 410 230Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M622 548C622 520 640 512 668 514C698 516 710 540 706 580C702 625 672 668 640 690C628 696 622 680 620 650C618 610 620 580 622 548Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M394 782C404 780 410 790 420 796C444 808 458 832 454 854C450 872 440 884 436 904C432 920 430 934 428 952L428 1280L408 1296L388 1280L388 952C388 928 380 912 370 898C354 876 352 846 362 822C370 800 382 786 394 782Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M430 646C480 604 530 556 574 502" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M410 250L310 250" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="302" y="258" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Femur</text>
+  <path d="M712 560L780 560" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="788" y="568" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Patella</text>
+  <path d="M632 775L700 775" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="708" y="783" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Tibial tuberosity</text>
+  <path d="M358 840L270 840" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="262" y="848" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Fibular head</text>
+  <path d="M386 1150L320 1150" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="312" y="1158" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Fibula</text>
+  <path d="M566 1150L650 1150" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="658" y="1158" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Tibia</text>
   <text x="940" y="1375" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="end">Anterior</text>
   <text x="60" y="1375" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="start">Posterior</text>
   <text x="60" y="100" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">R</text>

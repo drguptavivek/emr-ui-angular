@@ -12,7 +12,7 @@ export const GI_TRACT_RECIPES: readonly AnatomyTemplateRecipe[] = [
   {
     id: 'stomach-endoscopy-map', version: 1, group: 'gi-tract', label: 'Stomach — endoscopy map', region: 'stomach', view: 'anterior',
     laterality: 'midline', asset: 'gi-tract/stomach-endoscopy-map.svg', width: 1200, height: 1200, provenance,
-    description: 'Stomach outline from the oesophageal entry to the duodenal bulb with cardia, fundus, upper, mid and lower body, incisura angularis, antrum, pylorus and lesser and greater curvatures separated by dashed boundaries, plus a small circumferential wall key.',
+    description: 'Stomach outline from the oesophageal entry to the duodenal bulb with cardia, fundus, upper, mid and lower body, incisura angularis, antrum, pylorus (sphincter) and lesser and greater curvatures separated by dashed boundaries, plus a small circumferential wall key.',
   },
   {
     id: 'stomach-retroflexion', version: 1, group: 'gi-tract', label: 'Stomach — retroflexed cardia view', region: 'stomach', view: 'retroflexed',
@@ -27,7 +27,7 @@ export const GI_TRACT_RECIPES: readonly AnatomyTemplateRecipe[] = [
   {
     id: 'colon-colonoscopy-map', version: 1, group: 'gi-tract', label: 'Colon — colonoscopy map', region: 'colon', view: 'anterior',
     laterality: 'midline', asset: 'gi-tract/colon-colonoscopy-map.svg', width: 1400, height: 1200, provenance,
-    description: 'Whole colon framed in the abdomen, from caecum with appendix, ileocaecal valve and terminal ileum through the flexures and transverse colon to the sigmoid, rectum and anal canal, with distance-from-anal-verge ticks at 15, 30, 40 and 60 cm.',
+    description: 'Whole colon framed in the abdominal outline, from caecum with appendix, ileocaecal valve and terminal ileum through the hepatic flexure, transverse colon, splenic flexure and descending colon to the sigmoid loop, rectosigmoid junction, rectum and anal canal, with approximate distance-from-anal-verge ticks at 15, 30, 40 and 60 cm and the anal verge at 0 cm.',
   },
   {
     id: 'sigmoid-rectum', version: 1, group: 'gi-tract', label: 'Sigmoid and rectum', region: 'rectum', view: 'anterior',

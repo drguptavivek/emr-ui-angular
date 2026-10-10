@@ -1,6 +1,8 @@
 import type { AnatomyTemplateRecipe } from '@drguptavivek/emr-controller';
 
 const provenance = { author: 'EMR component library (original schematic)', licence: 'Project-internal', reviewStatus: 'unreviewed' } as const;
+/** Vector trace of an AI-generated illustration supplied by the project owner. Output terms depend on the generator used, so confirm them before any release. */
+const tracedHeartProvenance = { author: 'Vector trace of an AI-generated illustration (generator not recorded)', licence: 'Terms of the generating tool apply: confirm before release', reviewStatus: 'unreviewed' } as const;
 
 /** Airway, heart and echo schematics. Anterior views: patient's right on the viewer's left; posterior view: patient's right on the viewer's right; echo views follow the usual echo display (stated on each drawing); the valve plane is seen from above (patient's right on the viewer's right). */
 export const CARDIOTHORACIC_RECIPES: readonly AnatomyTemplateRecipe[] = [
@@ -22,7 +24,7 @@ export const CARDIOTHORACIC_RECIPES: readonly AnatomyTemplateRecipe[] = [
   {
     id: 'heart-great-vessels-anterior', version: 1, group: 'cardiothoracic', label: 'Heart and great vessels — anterior', region: 'chest', view: 'anterior',
     laterality: 'midline', asset: 'cardiothoracic/heart-great-vessels-anterior.svg', width: 1700, height: 1400, provenance,
-    description: 'Anterior heart with ascending aorta, arch and its three branches, descending aorta, SVC, IVC, pulmonary trunk dividing into the right and left pulmonary arteries, and the pulmonary veins at the left atrium. Patient right on the viewer left.',
+    description: 'Anterior heart with ascending aorta and arch giving brachiocephalic trunk (bifurcating into right subclavian and right common carotid), left common carotid and left subclavian, the descending aorta passing behind the left pulmonary artery, SVC, IVC, left atrial appendage, right ventricle with the right AV and anterior interventricular grooves, and the pulmonary trunk dividing into the right and left pulmonary arteries. Pulmonary veins are posterior and not shown. Patient right on the viewer left.',
   },
   {
     id: 'heart-great-vessels-posterior', version: 1, group: 'cardiothoracic', label: 'Heart and great vessels — posterior', region: 'chest', view: 'posterior',
@@ -30,9 +32,14 @@ export const CARDIOTHORACIC_RECIPES: readonly AnatomyTemplateRecipe[] = [
     description: 'Posterior heart with the left atrium and four pulmonary veins, IVC, SVC, coronary sinus and descending aorta. Patient right on the viewer right.',
   },
   {
-    id: 'heart-four-chamber-section', version: 1, group: 'cardiothoracic', label: 'Heart — four-chamber section', region: 'chest', view: 'coronal section',
-    laterality: 'midline', asset: 'cardiothoracic/heart-four-chamber-section.svg', width: 1800, height: 1300, provenance,
-    description: 'Coronal-like four-chamber section with RA, RV, LA and LV, interatrial and interventricular septa, tricuspid and mitral valves, papillary muscles, chordae and the aortic outflow with its valve. Patient right on the viewer left.',
+    id: 'heart-anterior-cutaway', version: 1, group: 'cardiothoracic', label: 'Heart — anterior cutaway', region: 'chest', view: 'anterior cutaway',
+    laterality: 'midline', asset: 'cardiothoracic/heart-anterior-cutaway.svg', width: 680, height: 880, provenance: tracedHeartProvenance,
+    description: 'Unlabelled textbook-style anterior cutaway of the heart: right atrium and right ventricle, left atrium and left ventricle, septa, tricuspid and mitral valves with the aortic and pulmonary valves, SVC, IVC, ascending aorta with arch and three branches, pulmonary trunk and arteries, pulmonary veins and the trabeculated ventricular lining. Patient right on the viewer left (R and L marked).',
+  },
+  {
+    id: 'heart-anterior-cutaway-chordae', version: 1, group: 'cardiothoracic', label: 'Heart — anterior cutaway with chordae', region: 'chest', view: 'anterior cutaway',
+    laterality: 'midline', asset: 'cardiothoracic/heart-anterior-cutaway-chordae.svg', width: 680, height: 880, provenance: tracedHeartProvenance,
+    description: 'The anterior heart cutaway with the chordae tendineae and papillary muscles drawn in both ventricles, otherwise unlabelled: chambers, septa, valves, SVC, IVC, aorta with arch branches, pulmonary trunk and arteries, pulmonary veins. Patient right on the viewer left (R and L marked).',
   },
   {
     id: 'echo-parasternal-long-axis', version: 1, group: 'cardiothoracic', label: 'Echo — parasternal long axis', region: 'heart', view: 'echo parasternal long axis',

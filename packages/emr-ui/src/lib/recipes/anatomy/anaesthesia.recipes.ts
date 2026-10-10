@@ -21,7 +21,7 @@ export const ANAESTHESIA_RECIPES: readonly AnatomyTemplateRecipe[] = [
   {
     id: 'airway-ett-sagittal', version: 1, group: 'anaesthesia', label: 'Airway — endotracheal tube', region: 'airway', view: 'sagittal',
     laterality: 'midline', asset: 'anaesthesia/airway-ett-sagittal.svg', width: 1400, height: 1200, provenance,
-    description: 'Midsagittal head and neck airway facing the viewer\'s left, with nasal cavity, tongue, epiglottis, larynx with vocal cords, trachea to the carina and oesophagus behind. An endotracheal tube passes through the mouth and cords with its cuff below the cords and tip mid-trachea, pilot balloon outside the mouth and a dashed depth mark at the lips. Anterior is on the left.',
+    description: 'Midsagittal head and neck airway facing the viewer\'s left, with nasal cavity and turbinates, tongue, hyoid, epiglottis rising behind the tongue base with the vallecula, larynx with vocal folds, trachea with C-rings to the carina, the oesophagus behind and the cervical spine. A cuffed endotracheal tube passes through the mouth, behind the epiglottis and through the cords, with its cuff just below the cords, a bevelled tip mid-trachea, an inflation line to a pilot balloon outside the mouth and a dashed depth mark at the lips. Anterior is on the left.',
   },
   {
     id: 'airway-lma-sagittal', version: 1, group: 'anaesthesia', label: 'Airway — laryngeal mask', region: 'airway', view: 'sagittal',
