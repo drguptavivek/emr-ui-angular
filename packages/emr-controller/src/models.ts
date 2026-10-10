@@ -88,6 +88,24 @@ export interface PatientBannerViewModel {
   chronicDiseaseStatus?: EmrBadge;
   alerts: readonly PatientAlert[];
   expanded: boolean;
+  // Inpatient context. Every field is optional and shown verbatim only when supplied; the
+  // component computes nothing (no length of stay, no code-status or isolation wording).
+  /** For example "Bed 12". */
+  bedLabel?: string;
+  /** For example "Ward 3 · General Medicine" or "MICU". */
+  wardLabel?: string;
+  /** For example "Dr S. Iyer (Medicine)". */
+  admittingClinicianLabel?: string;
+  /** For example "7 Oct 2026, 22:40". */
+  admittedOnLabel?: string;
+  /** For example "Day 4". */
+  lengthOfStayLabel?: string;
+  /** Resuscitation status, for example { label: 'DNACPR', tone: 'danger' }. */
+  codeStatus?: EmrBadge;
+  /** For example { label: 'Contact isolation', tone: 'warning' }. */
+  isolation?: EmrBadge;
+  /** Dosing weight with its date, for example "62 kg (8 Oct)". */
+  weightLabel?: string;
 }
 
 export interface PatientListRow {

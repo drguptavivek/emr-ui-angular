@@ -42,8 +42,10 @@ describe('controlled UI component contracts', () => {
   it('patient banner is a pure projection with a controlled expansion intent', () => {
     const source = component('domain/emr-patient-banner.component.ts');
 
-    expect(source).toMatch(/@Input\(\{\s*required:\s*true\s*\}\)\s+model/);
-    expect(source).toMatch(/@Output\(\)\s+readonly\s+expandedChangeRequested/);
+    expect(source).toMatch(/readonly\s+model\s*=\s*input\.required<PatientBannerViewModel>\(\)/);
+    expect(source).toMatch(/readonly\s+intent\s*=\s*output<PatientBannerIntent>\(\)/);
+    expect(source).toMatch(/type:\s*'expandedChangeRequested'/);
+    expect(source).not.toMatch(/@Input|@Output|EventEmitter/);
     expect(source).toMatch(/primaryIdentifier\(\)/);
     expect(source).toMatch(/combinedAlerts\(\)/);
     expect(source).not.toMatch(/model\.(allergies|alerts|chronicDiseases)\.(?:push|splice|sort|reverse)\s*\(/);

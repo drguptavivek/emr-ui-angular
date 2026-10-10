@@ -51,7 +51,8 @@ describe('EMR UI architecture boundary', () => {
       /(?:emr-button\.component|emr-choice\.component|emr-inputs\.component|emr-search-select\.component|emr-tabs\.component|emr-left-nav\.component|emr-right-flyout\.component|emr-patient-|emr-timeline\.component|emr-clinical-|emr-order-|emr-hierarchy-|emr-favourites-|emr-staged-|emr-family-|emr-document-|emr-field-generator|emr-terminology-search|emr-validation-rule-editor|emr-field-library-picker|emr-template-)/.test(file)
     );
     for (const { file, text } of interactive) {
-      expect(text, relative(process.cwd(), file)).toMatch(/@Output\(\)/);
+      // Decorator @Output() or signal output<T>() — signal outputs are the migration target.
+      expect(text, relative(process.cwd(), file)).toMatch(/@Output\(\)|=\s*output</);
     }
   });
 

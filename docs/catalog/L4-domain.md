@@ -11,11 +11,13 @@ Source directory: `packages/emr-ui/src/lib/domain/` (patient banner/list, timeli
 ## Patient context
 
 ### EmrPatientBanner
-**Layer** L4 · **Selector** `emr-patient-banner` · **Status** stable · **Story** `emr-patient-and-navigation--patient-card`
+**Layer** L4 · **Selector** `emr-patient-banner` · **Status** stable · **Story** `emr-patient-and-navigation--patient-card`, `--inpatient-ward`, `--inpatient-icu-isolation`
 
-**Need** — Every clinical screen needs a persistent, glanceable identity strip: who the patient is, their care context, and any criticality/VIP/allergy signal, without forcing every consuming screen to re-derive that layout.
+**Need** — Every clinical screen needs a persistent, glanceable identity strip: who the patient is, their care context, and any criticality/VIP/allergy signal. On a ward it must also show where the patient is (bed, ward), how long they have been in, their resuscitation status, isolation, and dosing weight, without every consuming screen re-deriving that layout.
 
-**Purpose** — Renders a two-level banner: a compact primary row (name, primary identifier, age/sex, criticality/VIP/care-setting badges, up to two allergy chips plus an overflow count) and a controller-toggled expandable second level (encounter details, full identifier list, chronic-disease chips, combined additional alerts). It does not decide whether to expand, does not compute badge tone/label, and does not interpret an empty `allergies`/`chronicDiseases` array as "none recorded" — `allergyStatus`/`chronicDiseaseStatus` carry that meaning explicitly, and the component falls back to the literal string "Additional alert status not supplied." only when the controller supplies zero combined alerts.
+**Purpose** — Renders a two-level banner: a compact primary row (name, primary identifier, age/sex, optional weight, criticality/VIP/care-setting badges, up to two allergy chips plus an overflow count) and a controller-toggled expandable second level (encounter details, full identifier list, chronic-disease chips, combined additional alerts). It does not decide whether to expand, does not compute badge tone/label, and does not interpret an empty `allergies`/`chronicDiseases` array as "none recorded" — `allergyStatus`/`chronicDiseaseStatus` carry that meaning explicitly, and the component falls back to the literal string "Additional alert status not supplied." only when the controller supplies zero combined alerts.
+
+**Inpatient context.** All optional; each renders only when supplied, so outpatient output is unchanged. `bedLabel`, `wardLabel` and `lengthOfStayLabel` form a line under the demographics; `weightLabel` joins the demographics line; `codeStatus` and `isolation` badges lead the safety row (their `assistiveText` is read to screen readers); `admittedOnLabel` and `admittingClinicianLabel` appear in the expanded "Current encounter" group. The component computes none of them: no length-of-stay arithmetic, no code-status wording, no isolation inference.
 
 **API**
 ```ts
@@ -38,19 +40,28 @@ export interface PatientBannerViewModel {
   criticality?: EmrBadge;
   vip?: EmrBadge;
   allergies: readonly PatientAlert[];
-  /** Explicitly supplied allergy status; an empty allergy list has no semantic meaning by itself. */
   allergyStatus?: EmrBadge;
   chronicDiseases: readonly PatientAlert[];
-  /** Explicitly supplied chronic-disease status; an empty list has no semantic meaning by itself. */
   chronicDiseaseStatus?: EmrBadge;
   alerts: readonly PatientAlert[];
   expanded: boolean;
+  // Inpatient context, all controller-supplied labels or badges
+  bedLabel?: string;
+  wardLabel?: string;
+  admittingClinicianLabel?: string;
+  admittedOnLabel?: string;
+  lengthOfStayLabel?: string;
+  codeStatus?: EmrBadge;
+  isolation?: EmrBadge;
+  weightLabel?: string;
 }
 
+export type PatientBannerIntent = { type: 'expandedChangeRequested'; expanded: boolean };
+
 export class EmrPatientBannerComponent {
-  @Input({ required: true }) patient!: PatientBannerViewModel;
-  @Input() detailsId = 'emr-patient-banner-details';
-  @Output() readonly expandedChangeRequested = new EventEmitter<boolean>();
+  readonly model = input.required<PatientBannerViewModel>();
+  readonly idPrefix = input('emr-patient-banner');
+  readonly intent = output<PatientBannerIntent>();
 }
 ```
 
@@ -58,13 +69,13 @@ export class EmrPatientBannerComponent {
 
 | name | type | default | notes |
 |---|---|---|---|
-| `patient` | `PatientBannerViewModel` (required) | — | full immutable snapshot |
-| `detailsId` | `string` | `'emr-patient-banner-details'` | DOM id for the `aria-controls`/expandable region |
-| `expandedChangeRequested` (output) | `EventEmitter<boolean>` | — | requests the controller flip `patient.expanded`; the component never mutates it itself |
+| `model` | `PatientBannerViewModel` (required) | — | full immutable snapshot |
+| `idPrefix` | `string` | `'emr-patient-banner'` | the expandable region's id is `<idPrefix>-details`, used by `aria-controls` |
+| `intent` (output) | `PatientBannerIntent` | — | `expandedChangeRequested` asks the controller to flip `model.expanded`; the component never mutates it |
 
 **Example**
 ```html
-<emr-patient-banner [patient]="patientBanner" (expandedChangeRequested)="onExpandToggle($event)" />
+<emr-patient-banner [model]="patientBanner" (intent)="onBannerIntent($event)" />
 ```
 
 **Identity hierarchy — important divergence from `EmrPatientList`.** The design-QA record in `design-qa.md` ("Design QA — Patient identity hierarchy and foundations") documents a deliberate MRN-first, name-second, conditional-ABHA-third hierarchy for the *patient list* identity block. `EmrPatientBanner`'s own template does **not** implement that pattern: `patient.displayName` is rendered as the primary `<h2>` heading, and the primary identifier (`identifiers[0].value`) appears folded into the secondary demographics line (`{{ primaryIdentifier() }} · {{ patient.ageLabel }} · {{ patient.sexLabel }}`) rather than as a large, separate first line, and the banner renders no ABHA/identification-icon treatment at all. Only `EmrPatientList` (below) implements the MRN-dominant hierarchy that `design-qa.md` and `README.md` describe. Documented here as a verified source fact, not an assumption.
@@ -222,7 +233,7 @@ export class EmrAppShellComponent {
 ```html
 <emr-app-shell theme="dark">
   <emr-left-nav emrShellNavigation [items]="navItems" activeId="patients" [expandedIds]="['clinical']" />
-  <div class="emr-stack"><emr-patient-banner [patient]="patient" /></div>
+  <div class="emr-stack"><emr-patient-banner [model]="patient" /></div>
 </emr-app-shell>
 ```
 
@@ -898,7 +909,7 @@ export class EmrDoseScheduleComponent {
 
 **Depends on** — `EmrBadgeComponent`, `EmrButtonComponent`.
 
-**Used by** — none yet (intended for prescription sheets and medication lists).
+**Used by** — no component. The `EMR / Medications / Order composer` stories (`emr-medications-order-composer--*`) use it as the live preview of a drug order. That recipe composes `EmrCodedInput`, `EmrQuantityInput`, `EmrSelect`, `EmrScheduleSlotPicker`, `EmrTypedField` and `EmrAttestation`. Its story-side controller maps the picker's `DoseSlot[]` into a `DoseScheduleViewModel`, words the frequency, and validates on sign. There is deliberately no composer component.
 
 ---
 
