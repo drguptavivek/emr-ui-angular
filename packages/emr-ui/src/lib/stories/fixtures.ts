@@ -47,6 +47,8 @@ export const patientBanner: PatientBannerViewModel = {
     { id: 'a3', label: 'Ibuprofen', tone: 'danger' }
   ],
   allergyStatus: { label: 'Allergy status reviewed', tone: 'warning' },
+  allergyChipPrefix: 'Allergy:',
+  allergyOverflow: { label: '+1 allergies', tone: 'danger' },
   chronicDiseases: [
     { id: 'd1', label: 'Type 2 diabetes', tone: 'info' },
     { id: 'd2', label: 'Hypertension', tone: 'info' }

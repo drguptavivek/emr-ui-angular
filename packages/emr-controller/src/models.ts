@@ -83,6 +83,10 @@ export interface PatientBannerViewModel {
   allergies: readonly PatientAlert[];
   /** Explicitly supplied allergy status; an empty allergy list has no semantic meaning by itself. */
   allergyStatus?: EmrBadge;
+  /** Wording placed before each allergy chip, for example "Allergy:". Omitted means the bare label. */
+  allergyChipPrefix?: string;
+  /** Badge for allergies beyond the two chips shown, for example "+1 allergies" with a controller-chosen tone. */
+  allergyOverflow?: EmrBadge;
   chronicDiseases: readonly PatientAlert[];
   /** Explicitly supplied chronic-disease status; an empty list has no semantic meaning by itself. */
   chronicDiseaseStatus?: EmrBadge;

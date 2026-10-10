@@ -4,6 +4,10 @@ Current state and pending work live in `handoff.md`. Exact changes and authorshi
 
 ## 10 October 2026 — inpatient banner and drug order composer
 
+- **Medication administration record recipe** (`EMR / Medications / Administration record`) composes `EmrTimeAxis`, `EmrStatusCell` and `EmrAttestation` with the story as controller (outcome badges, witness and co-sign policy, attestation model). Eight stories. No new component was needed.
+
+- **Banner allergy wording is controller-supplied.** `PatientBannerViewModel` gains `allergyChipPrefix` and `allergyOverflow` (a badge). The UI no longer adds "Allergy:" or derives the "+N allergies" danger tone.
+
 - **`EmrPatientBanner`** now takes optional inpatient context: bed, ward, length of stay, admitted on, admitting clinician, weight, and code-status and isolation badges. Each value is a controller-supplied label or badge and renders only when present, so outpatient output is unchanged. New stories are `InpatientWard` and `InpatientIcuIsolation`.
 - The banner moved to signal `input()`/`output()` with one `intent` output. The `expandedChangeRequested` output is now an intent member. The architecture test now accepts signal outputs.
 - **Drug order composer recipe** (`EMR / Medications / Order composer`) composes existing components only, with the story acting as the controller. It has seven stories: Blank, TabletBd, EyeDropTaper, PrnAnalgesia, ReadOnly, WithValidationMessages and Mobile. No new component was needed.

@@ -46,9 +46,9 @@ import { heroChevronDown, heroChevronUp } from '@ng-icons/heroicons/outline';
           }
           @if (m.allergies.length) {
             @for (allergy of m.allergies.slice(0, 2); track allergy.id) {
-              <span class="emr-badge" [class]="'emr-badge emr-tone-' + allergy.tone">Allergy: {{ allergy.label }}</span>
+              <span class="emr-badge" [class]="'emr-badge emr-tone-' + allergy.tone">{{ m.allergyChipPrefix }}{{ m.allergyChipPrefix ? ' ' : '' }}{{ allergy.label }}</span>
             }
-            @if (m.allergies.length > 2) { <span class="emr-badge emr-tone-danger">+{{ m.allergies.length - 2 }} allergies</span> }
+            @if (m.allergies.length > 2 && m.allergyOverflow) { <span [class]="'emr-badge emr-tone-' + m.allergyOverflow.tone">{{ m.allergyOverflow.label }}</span> }
           }
         </div>
         <button class="emr-icon-button" type="button" [attr.aria-expanded]="m.expanded" [attr.aria-controls]="m.expanded ? detailsElementId() : null"

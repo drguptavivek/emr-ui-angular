@@ -66,7 +66,6 @@ Storybook responded at `http://localhost:6006` during this session; recheck proc
    - Four grandfathered components combine `ViewEncapsulation.None` with local styles (see architecture.spec).
 8. **Visual baselines.** No new component is in the Playwright axe or visual-baseline story sets yet. Add representative ids and regenerate the darwin baselines.
 9. **Remaining review findings (Fable architecture review, 10 October 2026):**
-   - `emr-patient-banner` derives a danger tone for "+N allergies" and prefixes "Allergy:" in the UI (`emr-patient-banner.component.ts:29-32`); both should be controller-supplied.
    - `spectacle-prescription.models.ts` uses string-keyed `errors`/`warnings` maps instead of `EmrValidationMessage[]`.
    - `emr-staged-checklist` evaluates `requiresNoteWhen` in the UI and hard-codes its Yes/No/Not applicable labels.
    - The select pre-selection fix in `emr-spectacle-prescription` has no story with a pre-selected value, so the regression test does not cover it.

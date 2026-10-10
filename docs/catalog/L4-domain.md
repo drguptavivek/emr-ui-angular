@@ -15,7 +15,7 @@ Source directory: `packages/emr-ui/src/lib/domain/` (patient banner/list, timeli
 
 **Need** — Every clinical screen needs a persistent, glanceable identity strip: who the patient is, their care context, and any criticality/VIP/allergy signal. On a ward it must also show where the patient is (bed, ward), how long they have been in, their resuscitation status, isolation, and dosing weight, without every consuming screen re-deriving that layout.
 
-**Purpose** — Renders a two-level banner: a compact primary row (name, primary identifier, age/sex, optional weight, criticality/VIP/care-setting badges, up to two allergy chips plus an overflow count) and a controller-toggled expandable second level (encounter details, full identifier list, chronic-disease chips, combined additional alerts). It does not decide whether to expand, does not compute badge tone/label, and does not interpret an empty `allergies`/`chronicDiseases` array as "none recorded" — `allergyStatus`/`chronicDiseaseStatus` carry that meaning explicitly, and the component falls back to the literal string "Additional alert status not supplied." only when the controller supplies zero combined alerts.
+**Purpose** — Renders a two-level banner: a compact primary row (name, primary identifier, age/sex, optional weight, criticality/VIP/care-setting badges, up to two allergy chips plus a controller-supplied overflow badge) and a controller-toggled expandable second level (encounter details, full identifier list, chronic-disease chips, combined additional alerts). It does not decide whether to expand, does not compute badge tone/label, and does not interpret an empty `allergies`/`chronicDiseases` array as "none recorded" — `allergyStatus`/`chronicDiseaseStatus` carry that meaning explicitly, and the component falls back to the literal string "Additional alert status not supplied." only when the controller supplies zero combined alerts.
 
 **Inpatient context.** All optional; each renders only when supplied, so outpatient output is unchanged. `bedLabel`, `wardLabel` and `lengthOfStayLabel` form a line under the demographics; `weightLabel` joins the demographics line; `codeStatus` and `isolation` badges lead the safety row (their `assistiveText` is read to screen readers); `admittedOnLabel` and `admittingClinicianLabel` appear in the expanded "Current encounter" group. The component computes none of them: no length-of-stay arithmetic, no code-status wording, no isolation inference.
 
@@ -41,6 +41,8 @@ export interface PatientBannerViewModel {
   vip?: EmrBadge;
   allergies: readonly PatientAlert[];
   allergyStatus?: EmrBadge;
+  allergyChipPrefix?: string;   // wording before each chip, e.g. "Allergy:"
+  allergyOverflow?: EmrBadge;   // "+N allergies" badge and its tone, controller-supplied
   chronicDiseases: readonly PatientAlert[];
   chronicDiseaseStatus?: EmrBadge;
   alerts: readonly PatientAlert[];
