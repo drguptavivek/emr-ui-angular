@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1400" viewBox="0 0 1000 1400" role="img">
+  <title>Left knee, anterior view</title>
+  <rect width="1000" height="1400" fill="#ffffff"/>
+  <path d="M830 70 C821 115 784 260 776 340 C768 420 779 490 782 550 C785 610 794 650 794 700 C794 750 783 790 782 850 C781 910 785 980 788 1060 C791 1140 798 1285 800 1330" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M272 70 C278 115 305 260 308 340 C311 420 296 490 290 550 C284 610 274 650 272 700 C270 750 280 790 278 850 C276 910 262 980 260 1060 C258 1140 265 1285 266 1330" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M572 700 C572 751.3 535.7 793 491 793 C446.3 793 410 751.3 410 700 C410 648.7 446.3 607 491 607 C535.7 607 572 648.7 572 700 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M458 607 C452 505 446 415 440 280" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M542 607 C548 505 554 415 560 280" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M464 796 C470 856 476 898 482 928" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M530 796 C524 856 518 898 512 928" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M458 946 C485 970 509 970 530 946" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M284 808 C410 844 590 844 782 808" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10"/>
+  <path d="M482 976 C479 1150 476 1240 473 1324" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="100" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">L</text>
+  <text x="940" y="100" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Anterior</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img">
+  <title>Single tooth, five surfaces, occlusal view</title>
+  <rect width="1000" height="1000" fill="#ffffff"/>
+  <rect x="200" y="200" width="600" height="600" rx="110" fill="none" stroke="#475569" stroke-width="6"/>
+  <rect x="360" y="360" width="280" height="280" rx="60" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M 232 232 L 378 378 M 768 232 L 622 378 M 232 768 L 378 622 M 768 768 L 622 622" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <text x="500" y="305" font-family="system-ui, sans-serif" font-size="40" fill="#94a3b8" text-anchor="middle">Buccal</text>
+  <text x="500" y="715" font-family="system-ui, sans-serif" font-size="40" fill="#94a3b8" text-anchor="middle">Lingual</text>
+  <text x="280" y="512" font-family="system-ui, sans-serif" font-size="36" fill="#94a3b8" text-anchor="middle">Mesial</text>
+  <text x="720" y="512" font-family="system-ui, sans-serif" font-size="36" fill="#94a3b8" text-anchor="middle">Distal</text>
+  <text x="500" y="512" font-family="system-ui, sans-serif" font-size="36" fill="#94a3b8" text-anchor="middle">Occlusal</text>
+</svg>

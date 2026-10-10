@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img">
+  <title>Perineum, lithotomy view</title>
+  <rect width="1000" height="1000" fill="#ffffff"/>
+  <path d="M500 70 C350 100 200 260 160 450 C130 600 200 780 320 870 C380 915 440 940 500 945 C560 940 620 915 680 870 C800 780 870 600 840 450 C800 260 650 100 500 70" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 170 L 290 520 L 500 830 L 710 520 Z M 290 520 L 710 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <circle cx="500" cy="170" r="10" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="290" cy="520" r="24" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <circle cx="710" cy="520" r="24" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <circle cx="500" cy="520" r="11" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="500" cy="690" r="28" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="500" cy="830" r="9" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <text x="500" y="135" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Pubic symphysis</text>
+  <text x="500" y="380" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Urogenital</text>
+  <text x="500" y="406" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">triangle</text>
+  <text x="500" y="556" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Perineal body</text>
+  <text x="500" y="620" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Anal triangle</text>
+  <text x="245" y="575" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Ischial</text>
+  <text x="245" y="601" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">tuberosity</text>
+  <text x="755" y="575" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Ischial</text>
+  <text x="755" y="601" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">tuberosity</text>
+  <text x="545" y="698" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8">Anus</text>
+  <text x="500" y="870" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Coccyx</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text>
+  <text x="950" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="500" y="45" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Anterior</text>
+  <text x="500" y="985" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Posterior</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Face, right profile</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M581.6 1014.4 C632 1030 686 1043.2 730.4 1040.8 C771.2 1038.4 792.8 1006 797.6 961.6 C797.6 940 802.4 922 812 910 C830 892 833.6 868 824 850 C812 838 809.6 832 814.4 826 C830 814 836 790 826.4 766 C821.6 748 821.6 718 821.6 700 C848 700 869.6 682 867.2 654.4 C860 616 830 556 809.6 496 C802.4 478 794 448 790.4 400 C790.4 364 794 328 782 280 C782 160 620 76 452 76 C260 76 152 196 134 340 C116 448 146 544 170 616 C185.6 676 195.2 712 200 748" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M416 550 C362 520 332 592 346.4 670 C360.8 748 392 796 428 802 C458 802 461.6 760 454.4 712 M404 592 C374 598 370.4 652 392 700" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M773.6 286 C746 234.4 680 214 620 241.6 C578 268 572 328 542 400 C518 460 446 472 404 496 C296 544 224 592 209.6 760" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M728 1036 C644 1018 572 976 512 904 C494 868 476 820 464 760" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M771.2 493.6 C785.6 481.6 802.4 484 809.6 496 C797.6 508 780.8 508 771.2 493.6 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M747.2 448 C768.8 431.2 792.8 433.6 812 448" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M826.4 676 C848 678.4 852.8 666.4 845.6 656.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M816.8 827.2 C800 829.6 792.8 822.4 788 820" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">P</text>
+  <text x="910" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">A</text>
+  <text x="60" y="140" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">R</text>
+</svg>

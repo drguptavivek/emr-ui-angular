@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>External nose, anterior view</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M 428 320 C 426 420 414 520 385 612 C 355 715 270 780 270 850 C 270 920 320 960 380 950 C 430 945 470 935 500 935 C 530 935 570 945 620 950 C 680 960 730 920 730 850 C 730 780 645 715 615 612 C 586 520 574 420 572 320" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 345 740 C 300 770 275 820 275 860 M 655 740 C 700 770 725 820 725 860" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 400 790 C 430 740 570 740 600 790" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 345 920 C 350 880 410 870 445 895 C 455 915 430 935 395 937 C 365 940 348 935 345 920 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 655 920 C 650 880 590 870 555 895 C 545 915 570 935 605 937 C 635 940 652 935 655 920 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 340 L 500 760" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <text x="60" y="100" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="940" y="100" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="500" y="90" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Superior</text>
+  <text x="120" y="420" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Bridge</text>
+  <path d="M 235 412 L 410 420" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="880" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Ala</text>
+  <path d="M 135 872 L 268 868" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="800" y="770" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Tip</text>
+  <path d="M 795 762 L 600 768" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="500" y="1040" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Columella</text>
+  <path d="M 500 1000 L 500 912" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

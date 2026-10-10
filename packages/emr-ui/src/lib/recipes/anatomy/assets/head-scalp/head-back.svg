@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Head, back view</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M500 130 C660 130 770 240 775 420 C778 540 750 650 708 730 C690 770 660 800 652 850" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 130 C340 130 230 240 225 420 C222 540 250 650 292 730 C310 770 340 800 348 850" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M652 850 C646 940 660 1010 690 1050 C760 1080 840 1110 900 1150" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M348 850 C354 940 340 1010 310 1050 C240 1080 160 1110 100 1150" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M776 430 C808 418 832 446 826 500 C822 548 802 585 778 596" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M224 430 C192 418 168 446 174 500 C178 548 198 585 222 596" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 830 C560 830 620 822 652 858" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 830 C440 830 380 822 348 858" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 160 L500 840" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round"/>
+  <ellipse cx="500" cy="722" rx="12" ry="8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">L</text>
+  <text x="910" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">R</text>
+</svg>

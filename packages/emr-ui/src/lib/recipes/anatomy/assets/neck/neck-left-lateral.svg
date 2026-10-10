@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img">
+  <title>Neck, left lateral view</title>
+  <rect width="1200" height="1000" fill="#ffffff"/>
+  <path d="M280 0 C265 70 275 110 265 150 C255 190 275 215 310 225 C360 232 400 245 440 270 C435 340 420 420 400 470 C360 540 320 600 310 700 C308 800 308 880 310 920" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M970 0 C985 80 955 150 880 200 C820 230 800 250 790 300 C780 370 800 420 840 460 C870 500 890 560 890 640 C890 760 885 860 880 920" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M610 190 C550 255 440 262 330 228" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M695 225 C600 300 490 400 410 475" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M730 262 C640 340 550 430 485 490" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M400 480 C480 490 580 500 660 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M730 530 C680 495 600 505 560 560 C540 600 540 680 550 740" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="660" cy="150" rx="28" ry="55" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">A</text>
+  <text x="1100" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">P</text>
+  <text x="1100" y="140" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">L</text>
+</svg>

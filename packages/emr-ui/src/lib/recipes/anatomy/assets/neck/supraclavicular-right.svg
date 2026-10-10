@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img">
+  <title>Right supraclavicular region, anterior view</title>
+  <rect width="1200" height="1000" fill="#ffffff"/>
+  <path d="M700 0 C700 110 705 200 715 250 C725 290 640 305 560 325 C440 355 330 390 250 420 C170 450 120 500 105 600 C100 690 102 800 106 900" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M940 480 C860 455 780 455 700 468 C560 490 380 480 190 442" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M790 10 C840 160 925 330 975 465" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M725 30 C750 170 810 330 865 462" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M955 480 C980 505 1020 505 1045 480" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1000 0 L1000 468" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round"/>
+  <path d="M803 300 L865 460 C750 462 600 470 500 472 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round"/>
+  <text x="690" y="438" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle" fill="#94a3b8">Supraclavicular fossa</text>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">R</text>
+  <text x="1000" y="545" font-family="system-ui, sans-serif" font-size="24" text-anchor="middle" fill="#94a3b8">Midline</text>
+</svg>

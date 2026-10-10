@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Cervical spine, posterior view</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M285 30 C275 100 295 190 350 250 C370 275 360 330 350 420 C345 520 345 560 340 575 C290 635 180 670 60 710" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M715 30 C725 100 705 190 650 250 C630 275 640 330 650 420 C655 520 655 560 660 575 C710 635 820 670 940 710" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 330 170 C 420 200 580 200 670 170" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="500" cy="192" r="9" fill="none" stroke="#475569" stroke-width="4"/>
+  <text x="500" y="110" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Occiput</text>
+  <path d="M 500 220 L 500 850" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <ellipse cx="500" cy="340" rx="14" ry="20" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="410" rx="14" ry="20" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="480" rx="14" ry="20" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="550" rx="14" ry="20" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="620" rx="14" ry="20" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="695" rx="20" ry="26" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="780" rx="16" ry="22" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <text x="535" y="348" font-family="system-ui, sans-serif" font-size="26" fill="#475569">C2</text>
+  <text x="535" y="418" font-family="system-ui, sans-serif" font-size="26" fill="#475569">C3</text>
+  <text x="535" y="488" font-family="system-ui, sans-serif" font-size="26" fill="#475569">C4</text>
+  <text x="535" y="558" font-family="system-ui, sans-serif" font-size="26" fill="#475569">C5</text>
+  <text x="535" y="628" font-family="system-ui, sans-serif" font-size="26" fill="#475569">C6</text>
+  <text x="540" y="705" font-family="system-ui, sans-serif" font-size="26" fill="#475569">C7</text>
+  <text x="535" y="788" font-family="system-ui, sans-serif" font-size="26" fill="#475569">T1</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">L</text>
+  <text x="950" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">R</text>
+  <text x="500" y="1150" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Posterior</text>
+</svg>

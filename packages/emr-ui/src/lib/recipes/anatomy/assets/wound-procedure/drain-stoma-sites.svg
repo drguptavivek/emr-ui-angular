@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img">
+  <title>Abdomen anterior view with typical stoma and drain sites (patient right on viewer left)</title>
+  <rect width="1200" height="1200" fill="#ffffff"/>
+  <path d="M400 80C380 260 350 420 340 560C332 700 350 860 400 1000C430 1080 480 1130 520 1160L680 1160C720 1130 770 1080 800 1000C850 860 868 700 860 560C850 420 820 260 800 80" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M600 200C560 270 470 360 372 440" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M600 200C640 270 730 360 828 440" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="600" cy="680" r="14" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="470" cy="800" r="20" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M447 800L340 800" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="330" y="800" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="end" dominant-baseline="central">Ileostomy</text>
+  <circle cx="730" cy="800" r="20" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M753 800L860 800" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="870" y="800" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="start" dominant-baseline="central">Colostomy</text>
+  <circle cx="685" cy="420" r="20" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M708 420L860 420" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="870" y="420" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="start" dominant-baseline="central">Gastrostomy</text>
+  <circle cx="690" cy="530" r="20" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M713 530L860 530" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="870" y="530" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="start" dominant-baseline="central">Jejunostomy</text>
+  <circle cx="445" cy="430" r="10" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M432 430L340 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="330" y="430" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="end" dominant-baseline="central">RUQ drain</text>
+  <circle cx="760" cy="330" r="10" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M773 330L860 330" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="870" y="330" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="start" dominant-baseline="central">LUQ drain</text>
+  <circle cx="500" cy="950" r="10" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M487 950L340 950" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="330" y="950" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="end" dominant-baseline="central">Pelvic drain</text>
+  <circle cx="600" cy="1030" r="10" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M613 1030L860 1030" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="870" y="1030" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="start" dominant-baseline="central">Suprapubic catheter</text>
+  <text x="70" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle" dominant-baseline="central">R</text>
+  <text x="1130" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle" dominant-baseline="central">L</text>
+</svg>

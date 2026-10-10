@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1400" viewBox="0 0 1000 1400" role="img">
+  <title>Whole back, posterior view</title>
+  <rect width="1000" height="1400" fill="#ffffff"/>
+  <path d="M435 60 C435 140 425 190 380 215 C320 235 250 245 205 262 C150 280 115 320 100 390 C85 460 78 540 75 620 L175 640 C185 590 195 540 205 500 C200 600 215 680 228 760 C236 830 222 900 205 960 C195 1030 205 1100 245 1160 C310 1235 410 1268 500 1275 C590 1268 690 1235 755 1160 C795 1100 805 1030 795 960 C778 900 764 830 772 760 C785 680 800 600 795 500 C805 540 815 590 825 640 L925 620 C922 540 915 460 900 390 C885 320 850 280 795 262 C750 245 680 235 620 215 C575 190 565 140 565 60" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M415 297.3 C419.4 339.1 425.1 410.1 425.1 451.9 C420.8 462.4 399.2 460.3 377.6 447.8 C327.2 410.1 291.2 368.3 275.4 334.9 C268.2 320.3 269.6 307.7 286.9 301.5 C327.2 293.9 377.6 293.9 415 297.3" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M422.2 326.5 C363.2 323.2 284 305.6 232.2 257.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M585 297.3 C580.6 339.1 574.9 410.1 574.9 451.9 C579.2 462.4 600.8 460.3 622.4 447.8 C672.8 410.1 708.8 368.3 724.6 334.9 C731.8 320.3 730.4 307.7 713.1 301.5 C672.8 293.9 622.4 293.9 585 297.3" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M577.8 326.5 C636.8 323.2 716 305.6 767.8 257.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M225 815 C270 765 360 775 430 900" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M775 815 C730 765 640 775 570 900" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="435" cy="905" r="9" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="565" cy="905" r="9" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M 500 930 L 500 1275" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 935 C400 955 305 1030 262 1130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 935 C600 955 695 1030 738 1130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 215 L 500 930" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <ellipse cx="500" cy="224" rx="11" ry="14" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="258" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="291" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="324" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="357" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="390" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="423" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="456" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="489" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="522" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="555" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="588" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="621" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="656" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="694" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="732" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="770" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="808" rx="9" ry="11" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <text x="525" y="232" font-family="system-ui, sans-serif" font-size="24" fill="#475569">C7</text>
+  <text x="525" y="630" font-family="system-ui, sans-serif" font-size="24" fill="#475569">T12</text>
+  <text x="525" y="818" font-family="system-ui, sans-serif" font-size="24" fill="#475569">L5</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">L</text>
+  <text x="950" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">R</text>
+  <text x="500" y="1340" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Posterior</text>
+</svg>

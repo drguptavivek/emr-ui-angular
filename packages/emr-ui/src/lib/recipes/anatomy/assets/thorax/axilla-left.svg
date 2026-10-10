@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1100" viewBox="0 0 1200 1100" role="img">
+  <title>Left axilla, anterior view, arm abducted</title>
+  <rect width="1200" height="1100" fill="#ffffff"/>
+  <path d="M535 70 C535 140 520 185 450 215 C380 235 300 235 250 250 C190 265 150 310 135 380 C120 450 110 520 108 590 L215 610 C225 560 235 520 252 490 C240 600 235 720 250 840 C260 930 270 980 280 1010 C400 1040 500 1050 600 1050 C700 1050 800 1040 920 1010 C930 980 940 930 950 840 C965 720 955 560 932 440 C1000 378 1070 358 1160 350 L1160 222 C1080 245 1000 262 950 250 C900 235 820 235 750 215 C680 185 665 140 665 70" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M590 258 C520 244 400 252 285 278" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M610 258 C680 244 800 252 915 278" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M590 690 C520 765 400 850 262 905" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M610 690 C680 765 800 850 938 905" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 600 258 L 600 1050" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M1035 372 C965 420 910 480 870 565" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="440" cy="570" r="12" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="440" cy="570" r="34" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <circle cx="760" cy="570" r="12" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="760" cy="570" r="34" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <text x="1050" y="520" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Axilla</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text>
+  <text x="1150" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+</svg>

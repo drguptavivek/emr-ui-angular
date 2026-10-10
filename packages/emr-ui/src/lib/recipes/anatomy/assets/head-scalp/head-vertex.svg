@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img">
+  <title>Head, vertex view</title>
+  <rect width="1000" height="1000" fill="#ffffff"/>
+  <path d="M500 130 C600 130 700 190 740 300 C785 420 780 560 740 680 C705 790 610 890 500 890" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 130 C400 130 300 190 260 300 C215 420 220 560 260 680 C295 790 390 890 500 890" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M450 140 C455 85 545 85 550 140" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M778 405 C812 395 832 450 820 500 C812 540 792 562 778 566" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M222 405 C188 395 168 450 180 500 C188 540 208 562 222 566" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 215 C570 215 660 250 705 330 C725 370 735 400 740 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 215 C430 215 340 250 295 330 C275 370 265 400 260 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 140 L500 880" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round"/>
+  <path d="M250 520 L750 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round"/>
+  <ellipse cx="500" cy="520" rx="10" ry="10" fill="none" stroke="#475569" stroke-width="4"/>
+  <text x="500" y="55" font-family="system-ui, sans-serif" font-size="28" text-anchor="middle" fill="#475569">Anterior</text>
+  <text x="500" y="950" font-family="system-ui, sans-serif" font-size="28" text-anchor="middle" fill="#475569">Posterior</text>
+  <text x="60" y="530" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">L</text>
+  <text x="910" y="530" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">R</text>
+</svg>

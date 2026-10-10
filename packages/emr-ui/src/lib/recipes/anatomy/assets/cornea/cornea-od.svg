@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img">
+  <title>Cornea, right eye (OD), examiner's view with clock hours</title>
+  <rect width="1200" height="1200" fill="#ffffff"/>
+  <circle cx="600" cy="600" r="375" fill="none" stroke="#cbd5e1" stroke-width="50"/>
+  <circle cx="600" cy="600" r="400" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="600" cy="600" r="350" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="600" cy="600" r="130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M600 250 L600 470 M600 730 L600 950 M250 600 L470 600 M730 600 L950 600" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M600 200 L600 138 M800 253.6 L819 220.7 M946.4 400 L979.3 381 M1000 600 L1062 600 M946.4 800 L979.3 819 M800 946.4 L819 979.3 M600 1000 L600 1062 M400 946.4 L381 979.3 M253.6 800 L220.7 819 M200 600 L138 600 M253.6 400 L220.7 381 M400 253.6 L381 220.7" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M703.5 213.6 L708.7 194.3 M882.8 317.2 L897 303 M986.4 496.5 L1005.7 491.3 M986.4 703.5 L1005.7 708.7 M882.8 882.8 L897 897 M703.5 986.4 L708.7 1005.7 M496.5 986.4 L491.3 1005.7 M317.2 882.8 L303 897 M213.6 703.5 L194.3 708.7 M213.6 496.5 L194.3 491.3 M317.2 317.2 L303 303 M496.5 213.6 L491.3 194.3" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="108" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">12</text>
+  <text x="600" y="1115" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">6</text>
+  <text x="1110" y="616" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">3</text>
+  <text x="90" y="616" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">9</text>
+  <text x="1110" y="690" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">N</text>
+  <text x="90" y="690" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">T</text>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">OD</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1600" viewBox="0 0 800 1600" role="img">
+  <title>Right lower limb, posterior view</title>
+  <rect width="800" height="1600" fill="#ffffff"/>
+  <path d="M292 190 C294.7 178 296.7 136.3 308 118 C319.3 99.7 338 88 360 80 C382 72 415 69 440 70 C465 71 492.3 74.3 510 86 C527.7 97.7 540 117.7 546 140 C552 162.3 547.3 193.3 546 220 C544.7 246.7 541.5 261.7 538 300 C534.5 338.3 529.7 410 525 450 C520.3 490 515.5 510 510 540 C504.5 570 494.7 603.3 492 630 C489.3 656.7 493 680 494 700 C495 720 498 733.3 498 750 C498 766.7 494.3 780 494 800 C493.7 820 495 843.3 496 870 C497 896.7 502.7 921.7 500 960 C497.3 998.3 486.7 1053.3 480 1100 C473.3 1146.7 464.3 1201.7 460 1240 C455.7 1278.3 454.7 1308.3 454 1330 C453.3 1351.7 455.7 1363.3 456 1370 C457 1377.5 459.7 1399.7 462 1415 C464.3 1430.3 469.3 1448.8 470 1462 C470.7 1475.2 472.7 1486.3 466 1494 C459.3 1501.7 446 1505.7 430 1508 C414 1510.3 386 1510.3 370 1508 C354 1505.7 340.7 1501.7 334 1494 C327.3 1486.3 329.3 1475.2 330 1462 C330.7 1448.8 335 1430.3 338 1415 C341 1399.7 346.3 1377.5 348 1370 C349.3 1363.3 355.3 1351.7 356 1330 C356.7 1308.3 355 1278.3 352 1240 C349 1201.7 343 1146.7 338 1100 C333 1053.3 325 998.3 322 960 C319 921.7 319.3 896.7 320 870 C320.7 843.3 325.3 820 326 800 C326.7 780 323.3 766.7 324 750 C324.7 733.3 328 720 330 700 C332 680 337 656.7 336 630 C335 603.3 327.5 570 324 540 C320.5 510 319 490 315 450 C311 410 303.8 343.3 300 300 C296.2 256.7 293.3 208.3 292 190 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M540 255 C460 300 360 315 300 285" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M324 750 C370 762 430 762 494 750" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M395 790 C386 880 350 940 328 960" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M405 790 C414 880 450 940 492 960" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M386 1100 C382 1240 384 1320 385 1470" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M414 1100 C418 1240 416 1320 415 1470" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M372 1352 C372 1359.7 367.5 1366 362 1366 C356.5 1366 352 1359.7 352 1352 C352 1344.3 356.5 1338 362 1338 C367.5 1338 372 1344.3 372 1352 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M450 1366 C450 1373.7 445.5 1380 440 1380 C434.5 1380 430 1373.7 430 1366 C430 1358.3 434.5 1352 440 1352 C445.5 1352 450 1358.3 450 1366 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M350 1440 C380 1462 420 1462 450 1440" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="50" y="90" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="750" y="90" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Posterior</text>
+</svg>

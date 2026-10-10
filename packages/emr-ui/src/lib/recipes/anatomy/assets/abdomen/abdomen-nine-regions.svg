@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Abdomen, anterior view, nine regions</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M300 80 C280 260 250 420 240 560 C232 700 250 860 300 1000 C330 1080 380 1130 420 1160 L580 1160 C620 1130 670 1080 700 1000 C750 860 768 700 760 560 C750 420 720 260 700 80" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M330 300 C390 360 450 380 500 380 C550 380 610 360 670 300" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M340 1000 C400 1060 450 1100 500 1130 M660 1000 C600 1060 550 1100 500 1130" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <circle cx="500" cy="680" r="14" fill="none" stroke="#475569" stroke-width="4"/>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">R</text>
+  <text x="910" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">L</text>
+  <path d="M400 300 L400 1100 M600 300 L600 1100 M244 520 L756 520 M246 860 L754 860" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10"/>
+  <g font-family="system-ui, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">
+    <text x="330" y="440">R hypochondrium</text><text x="500" y="440">Epigastric</text><text x="670" y="440">L hypochondrium</text>
+    <text x="330" y="700">R lumbar</text><text x="500" y="640">Umbilical</text><text x="670" y="700">L lumbar</text>
+    <text x="340" y="950">R iliac</text><text x="500" y="950">Hypogastric</text><text x="660" y="950">L iliac</text>
+  </g>
+</svg>

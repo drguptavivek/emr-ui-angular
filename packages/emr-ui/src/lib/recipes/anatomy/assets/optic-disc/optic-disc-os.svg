@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img">
+  <title>Optic disc, left eye (OS), with cup, rim and ISNT sectors</title>
+  <rect width="1200" height="1200" fill="#ffffff"/>
+  <ellipse cx="600" cy="600" rx="315" ry="360" fill="#cbd5e1" stroke="#475569" stroke-width="6"/>
+  <ellipse cx="615" cy="590" rx="135" ry="150" fill="#ffffff" stroke="#475569" stroke-width="4" stroke-dasharray="12 10"/>
+  <path d="M 495 575 C 450 480 410 350 385 220 C 370 160 350 100 330 35" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 375 180 C 310 150 240 130 170 130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 368 155 C 430 105 500 80 575 60" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 495 595 C 450 700 410 840 385 980 C 370 1040 350 1100 330 1165" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 375 1020 C 310 1050 240 1070 170 1070" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 368 1045 C 430 1095 500 1120 575 1140" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="210" font-family="system-ui, sans-serif" font-size="56" font-weight="700" fill="#475569" text-anchor="middle">S</text>
+  <text x="600" y="1030" font-family="system-ui, sans-serif" font-size="56" font-weight="700" fill="#475569" text-anchor="middle">I</text>
+  <text x="230" y="620" font-family="system-ui, sans-serif" font-size="56" font-weight="700" fill="#475569" text-anchor="middle">N</text>
+  <text x="970" y="620" font-family="system-ui, sans-serif" font-size="56" font-weight="700" fill="#475569" text-anchor="middle">T</text>
+  <text x="1140" y="80" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="end">OS</text>
+</svg>

@@ -17,6 +17,11 @@
       "input": "src/lib/foundations",
       "glob": "emr-print.css",
       "output": "styles"
+    },
+    {
+      "input": "src/lib/recipes/anatomy/assets",
+      "glob": "**/*.svg",
+      "output": "assets/anatomy"
     }
   ]
 }

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img">
+  <title>Oropharynx, open-mouth view</title>
+  <rect width="1200" height="1000" fill="#ffffff"/>
+  <g transform="translate(100 0)">
+  <ellipse cx="500" cy="500" rx="340" ry="380" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M 206 690 C 270 640 380 600 500 600 C 620 600 730 640 794 690" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 285 645 C 240 480 290 250 500 245 C 710 250 760 480 715 645" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 465 247 C 462 330 470 400 485 440 C 495 462 505 462 515 440 C 530 400 538 330 535 247" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 330 420 C 380 410 410 460 405 520 C 400 580 350 600 320 570 C 295 540 295 440 330 420 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 670 420 C 620 410 590 460 595 520 C 600 580 650 600 680 570 C 705 540 705 440 670 420 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 405 290 C 425 400 435 520 415 610" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 595 290 C 575 400 565 520 585 610" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 610 L 500 860" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <text x="500" y="190" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Palate</text>
+  <text x="500" y="780" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Tongue</text>
+  <text x="500" y="540" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Posterior</text>
+  <text x="500" y="572" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">wall</text>
+  <text x="130" y="330" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Anterior pillar</text>
+  <path d="M 140 322 L 268 370" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="130" y="470" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Tonsil</text>
+  <path d="M 140 462 L 335 480" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="130" y="610" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Posterior pillar</text>
+  <path d="M 140 602 L 418 560" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="870" y="340" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Uvula</text>
+  <path d="M 865 332 L 525 340" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="870" y="480" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Tonsil</text>
+  <path d="M 865 472 L 670 480" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="60" y="100" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="1140" y="100" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="600" y="70" font-family="system-ui, sans-serif" font-size="28" fill="#475569" text-anchor="middle">Superior</text>
+</svg>

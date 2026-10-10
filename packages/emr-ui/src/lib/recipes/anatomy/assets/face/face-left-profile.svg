@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Face, left profile</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M418.4 1014.4 C368 1030 314 1043.2 269.6 1040.8 C228.8 1038.4 207.2 1006 202.4 961.6 C202.4 940 197.6 922 188 910 C170 892 166.4 868 176 850 C188 838 190.4 832 185.6 826 C170 814 164 790 173.6 766 C178.4 748 178.4 718 178.4 700 C152 700 130.4 682 132.8 654.4 C140 616 170 556 190.4 496 C197.6 478 206 448 209.6 400 C209.6 364 206 328 218 280 C218 160 380 76 548 76 C740 76 848 196 866 340 C884 448 854 544 830 616 C814.4 676 804.8 712 800 748" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M584 550 C638 520 668 592 653.6 670 C639.2 748 608 796 572 802 C542 802 538.4 760 545.6 712 M596 592 C626 598 629.6 652 608 700" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M226.4 286 C254 234.4 320 214 380 241.6 C422 268 428 328 458 400 C482 460 554 472 596 496 C704 544 776 592 790.4 760" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M272 1036 C356 1018 428 976 488 904 C506 868 524 820 536 760" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M228.8 493.6 C214.4 481.6 197.6 484 190.4 496 C202.4 508 219.2 508 228.8 493.6 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M252.8 448 C231.2 431.2 207.2 433.6 188 448" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M173.6 676 C152 678.4 147.2 666.4 154.4 656.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M183.2 827.2 C200 829.6 207.2 822.4 212 820" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">A</text>
+  <text x="910" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">P</text>
+  <text x="910" y="140" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">L</text>
+</svg>

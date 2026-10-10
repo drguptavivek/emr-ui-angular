@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Tongue, dorsal surface</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M 290 255 C 250 420 195 620 240 850 C 285 1010 390 1080 500 1080 C 610 1080 715 1010 760 850 C 805 620 750 420 710 255 C 640 175 360 175 290 255 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 372 L 320 520 M 500 372 L 680 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="446" cy="416" r="15" fill="none" stroke="#475569" stroke-width="3"/>
+  <circle cx="554" cy="416" r="15" fill="none" stroke="#475569" stroke-width="3"/>
+  <circle cx="401" cy="453" r="15" fill="none" stroke="#475569" stroke-width="3"/>
+  <circle cx="599" cy="453" r="15" fill="none" stroke="#475569" stroke-width="3"/>
+  <circle cx="356" cy="490" r="15" fill="none" stroke="#475569" stroke-width="3"/>
+  <circle cx="644" cy="490" r="15" fill="none" stroke="#475569" stroke-width="3"/>
+  <circle cx="320" cy="520" r="15" fill="none" stroke="#475569" stroke-width="3"/>
+  <circle cx="680" cy="520" r="15" fill="none" stroke="#475569" stroke-width="3"/>
+  <circle cx="500" cy="372" r="9" fill="none" stroke="#475569" stroke-width="3"/>
+  <path d="M 500 390 L 500 960" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <text x="500" y="275" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Base</text>
+  <text x="410" y="760" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Body</text>
+  <text x="410" y="1020" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Tip</text>
+  <text x="580" y="330" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Foramen caecum</text>
+  <path d="M 575 322 L 512 366" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="560" y="640" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Circumvallate</text>
+  <text x="560" y="672" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">papillae</text>
+  <path d="M 620 625 L 668 535" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="70" y="110" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="930" y="110" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="500" y="90" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Posterior</text>
+  <text x="500" y="1160" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Anterior</text>
+</svg>

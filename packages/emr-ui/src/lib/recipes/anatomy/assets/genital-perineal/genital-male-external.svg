@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Male external genitalia, anterior view</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M200 90 C140 280 105 560 112 1130" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M800 90 C860 280 895 560 888 1130" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M385 480 C355 650 340 900 340 1130" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M615 480 C645 650 660 900 660 1130" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M215 300 C300 380 380 420 440 450" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M785 300 C700 380 620 420 560 450" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M448 440 C420 470 408 540 408 640 C408 790 430 880 462 920 C485 940 515 940 538 920 C570 880 592 790 592 640 C592 540 580 470 552 440" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 760 L 500 935" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="458" cy="830" rx="36" ry="58" fill="none" stroke="#94a3b8" stroke-width="3" transform="rotate(-8 458 830)"/>
+  <ellipse cx="542" cy="830" rx="36" ry="58" fill="none" stroke="#94a3b8" stroke-width="3" transform="rotate(8 542 830)"/>
+  <path d="M455 400 C450 480 448 560 448 650 C440 690 455 750 500 758 C545 750 560 690 552 650 C552 560 550 480 545 400" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 452 690 C 480 705 520 705 548 690" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="500" cy="742" r="4" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M 552 552 L 690 552" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>,<text x="700" y="560" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">Penis</text>
+  <path d="M 556 692 L 690 692" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>,<text x="700" y="700" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">Glans</text>
+  <path d="M 592 842 L 690 842" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>,<text x="700" y="850" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">Scrotum</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text>
+  <text x="950" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="500" y="1180" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Anterior</text>
+</svg>

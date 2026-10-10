@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Face, frontal view</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M500 136.8 C668 136.8 793.4 237.6 804.6 428 C811.4 562.4 793.4 696.8 763.2 808.8 C740.8 887.2 679.2 965.6 600.8 1004.8 C567.2 1019.4 533.6 1026.1 500 1026.1" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 136.8 C332 136.8 206.6 237.6 195.4 428 C188.6 562.4 206.6 696.8 236.8 808.8 C259.2 887.2 320.8 965.6 399.2 1004.8 C432.8 1019.4 466.4 1026.1 500 1026.1" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M802.4 439.2 C838.2 422.4 869.6 450.4 865.1 517.6 C860.6 584.8 838.2 640.8 806.9 654.2 M827 475 C845 508.6 838.2 562.4 813.6 607.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M197.6 439.2 C161.8 422.4 130.4 450.4 134.9 517.6 C139.4 584.8 161.8 640.8 193.1 654.2 M173 475 C155 508.6 161.8 562.4 186.4 607.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 265.6 C589.6 265.6 668 299.2 712.8 360.8 C735.2 392.2 750.9 419 766.6 461.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 265.6 C410.4 265.6 332 299.2 287.2 360.8 C264.8 392.2 249.1 419 233.4 461.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M562.7 515.4 C591.8 486.2 652.3 486.2 685.9 517.6 C652.3 537.8 596.3 538.9 562.7 515.4 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M437.3 515.4 C408.2 486.2 347.7 486.2 314.1 517.6 C347.7 537.8 403.7 538.9 437.3 515.4 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M544.8 454.9 C600.8 425.8 668 425.8 712.8 454.9" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M455.2 454.9 C399.2 425.8 332 425.8 287.2 454.9" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M542.6 524.3 C547 607.2 567.2 674.4 567.2 710.2 M446.2 766.2 C468.6 790.9 531.4 790.9 553.8 766.2 M553.8 766.2 C587.4 766.2 594.1 723.7 569.4 699" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M457.4 524.3 C453 607.2 432.8 674.4 432.8 710.2 M553.8 766.2 C531.4 790.9 468.6 790.9 446.2 766.2 M446.2 766.2 C412.6 766.2 405.9 723.7 430.6 699" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M404.8 876 C444 848 477.6 842.4 500 855.8 M404.8 876 C455.2 889.4 544.8 889.4 595.2 876 M435 889.4 C468.6 934.2 531.4 934.2 565 889.4" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M595.2 876 C556 848 522.4 842.4 500 855.8 M595.2 876 C544.8 889.4 455.2 889.4 404.8 876 M565 889.4 C531.4 934.2 468.6 934.2 435 889.4" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="624.3" cy="476" rx="17" ry="17" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="375.7" cy="476" rx="17" ry="17" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">R</text>
+  <text x="910" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">L</text>
+</svg>

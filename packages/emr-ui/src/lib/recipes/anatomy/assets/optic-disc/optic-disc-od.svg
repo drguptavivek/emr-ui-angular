@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img">
+  <title>Optic disc, right eye (OD), with cup, rim and ISNT sectors</title>
+  <rect width="1200" height="1200" fill="#ffffff"/>
+  <ellipse cx="600" cy="600" rx="315" ry="360" fill="#cbd5e1" stroke="#475569" stroke-width="6"/>
+  <ellipse cx="585" cy="590" rx="135" ry="150" fill="#ffffff" stroke="#475569" stroke-width="4" stroke-dasharray="12 10"/>
+  <path d="M 705 575 C 750 480 790 350 815 220 C 830 160 850 100 870 35" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 825 180 C 890 150 960 130 1030 130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 832 155 C 770 105 700 80 625 60" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 705 595 C 750 700 790 840 815 980 C 830 1040 850 1100 870 1165" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 825 1020 C 890 1050 960 1070 1030 1070" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 832 1045 C 770 1095 700 1120 625 1140" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="210" font-family="system-ui, sans-serif" font-size="56" font-weight="700" fill="#475569" text-anchor="middle">S</text>
+  <text x="600" y="1030" font-family="system-ui, sans-serif" font-size="56" font-weight="700" fill="#475569" text-anchor="middle">I</text>
+  <text x="970" y="620" font-family="system-ui, sans-serif" font-size="56" font-weight="700" fill="#475569" text-anchor="middle">N</text>
+  <text x="230" y="620" font-family="system-ui, sans-serif" font-size="56" font-weight="700" fill="#475569" text-anchor="middle">T</text>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">OD</text>
+</svg>

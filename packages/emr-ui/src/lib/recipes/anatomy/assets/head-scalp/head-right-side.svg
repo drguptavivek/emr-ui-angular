@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Head, right lateral view</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M575 1100 C570 1040 565 960 568 912 C610 925 655 936 692 934 C726 932 744 905 748 868 C748 850 752 835 760 825 C775 810 778 790 770 775 C760 765 758 760 762 755 C775 745 780 725 772 705 C768 690 768 665 768 650 C790 650 808 635 806 612 C800 580 775 530 758 480 C752 465 745 440 742 400 C742 370 745 340 735 300 C735 200 600 130 460 130 C300 130 210 230 195 350 C180 440 205 520 225 580 C240 640 255 700 258 780 C260 900 262 1000 262 1100" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M430 525 C385 500 360 560 372 625 C384 690 410 730 440 735 C465 735 468 700 462 660 M420 560 C395 565 392 610 410 650" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M728 305 C705 262 650 245 600 268 C565 290 560 340 535 400 C515 450 455 460 420 480 C330 520 270 560 258 700" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M690 930 C620 915 560 880 510 820 C495 790 480 750 470 700" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M726 478 C738 468 752 470 758 480 C748 490 734 490 726 478 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M706 440 C724 426 744 428 760 440" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">P</text>
+  <text x="910" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">A</text>
+  <text x="60" y="140" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">R</text>
+</svg>

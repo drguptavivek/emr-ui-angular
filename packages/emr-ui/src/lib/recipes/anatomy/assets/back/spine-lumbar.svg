@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Lumbar spine, posterior view</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M215 20 C205 150 215 300 225 430 C230 540 215 640 185 740 C160 830 140 910 130 1000 C128 1080 135 1150 150 1190" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M785 20 C795 150 785 300 775 430 C770 540 785 640 815 740 C840 830 860 910 870 1000 C872 1080 865 1150 850 1190" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M195 700 C215 610 290 570 360 600 C405 625 415 790 405 900" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M805 700 C785 610 710 570 640 600 C595 625 585 790 595 900" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M440 128 C380 140 310 175 250 240" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M560 128 C620 140 690 175 750 240" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 20 L 500 1140" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M 405 130 L 405 560 M 595 130 L 595 560" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <circle cx="405" cy="900" r="10" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="595" cy="900" r="10" fill="none" stroke="#475569" stroke-width="4"/>
+  <ellipse cx="500" cy="90" rx="16" ry="24" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="210" rx="16" ry="24" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="330" rx="16" ry="24" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="450" rx="16" ry="24" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="570" rx="16" ry="24" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="690" rx="16" ry="24" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="810" rx="16" ry="24" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <text x="535" y="98" font-family="system-ui, sans-serif" font-size="26" fill="#475569">T12</text>
+  <text x="535" y="218" font-family="system-ui, sans-serif" font-size="26" fill="#475569">L1</text>
+  <text x="535" y="338" font-family="system-ui, sans-serif" font-size="26" fill="#475569">L2</text>
+  <text x="535" y="458" font-family="system-ui, sans-serif" font-size="26" fill="#475569">L3</text>
+  <text x="535" y="578" font-family="system-ui, sans-serif" font-size="26" fill="#475569">L4</text>
+  <text x="535" y="698" font-family="system-ui, sans-serif" font-size="26" fill="#475569">L5</text>
+  <text x="535" y="818" font-family="system-ui, sans-serif" font-size="26" fill="#475569">S1</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">L</text>
+  <text x="950" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">R</text>
+  <text x="500" y="1190" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Posterior</text>
+</svg>

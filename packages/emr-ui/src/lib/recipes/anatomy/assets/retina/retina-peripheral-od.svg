@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img">
+  <title>Peripheral retina chart, right eye (OD), with clock hours, equator and ora serrata</title>
+  <rect width="1200" height="1200" fill="#ffffff"/>
+  <circle cx="600" cy="600" r="480" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="600" cy="600" r="320" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="600" cy="600" r="170" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M600 430 L600 120 M685 452.8 L840 184.3 M747.2 515 L1015.7 360 M770 600 L1080 600 M747.2 685 L1015.7 840 M685 747.2 L840 1015.7 M600 770 L600 1080 M515 747.2 L360 1015.7 M452.8 685 L184.3 840 M430 600 L120 600 M452.8 515 L184.3 360 M515 452.8 L360 184.3" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M600 120 L600 95 M840 184.3 L852.5 162.7 M1015.7 360 L1037.3 347.5 M1080 600 L1105 600 M1015.7 840 L1037.3 852.5 M840 1015.7 L852.5 1037.3 M600 1080 L600 1105 M360 1015.7 L347.5 1037.3 M184.3 840 L162.7 852.5 M120 600 L95 600 M184.3 360 L162.7 347.5 M360 184.3 L347.5 162.7" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="688" cy="594" rx="36" ry="42" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="560" cy="614" r="52" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <circle cx="560" cy="614" r="9" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="98" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">12</text>
+  <text x="600" y="1128" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">6</text>
+  <text x="1128" y="616" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">3</text>
+  <text x="72" y="616" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">9</text>
+  <text x="1128" y="680" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">N</text>
+  <text x="72" y="680" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">T</text>
+  <text x="608" y="272" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Equator</text>
+  <text x="612" y="160" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Ora serrata</text>
+  <text x="60" y="70" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">OD</text>
+</svg>

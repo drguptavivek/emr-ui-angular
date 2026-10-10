@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Hard and soft palate, inferior view</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M 250 330 C 215 600 240 900 360 1030 C 420 1090 460 1105 500 1105 C 540 1105 580 1090 640 1030 C 760 900 785 600 750 330" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 330 340 C 310 600 330 850 410 960 C 450 1005 480 1015 500 1015 C 520 1015 550 1005 590 960 C 670 850 690 600 670 340" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 250 330 C 250 200 360 130 500 130 C 640 130 750 200 750 330" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 330 340 C 430 372 570 372 670 340" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M 465 140 C 462 190 475 235 500 240 C 525 235 538 190 535 140" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 258 L 500 905" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <ellipse cx="500" cy="945" rx="30" ry="42" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M 488 880 C 430 880 370 865 340 825" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 512 880 C 570 880 630 865 660 825" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 488 800 C 430 800 390 785 360 745" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 512 800 C 570 800 610 785 640 745" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 488 720 C 430 720 410 705 380 665" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 512 720 C 570 720 590 705 620 665" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 488 640 C 430 640 425 625 395 585" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 512 640 C 570 640 575 625 605 585" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="405" y="520" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Hard palate</text>
+  <text x="405" y="300" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Soft palate</text>
+  <text x="560" y="200" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Uvula</text>
+  <text x="795" y="1010" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Incisive papilla</text>
+  <path d="M 790 1002 L 533 950" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="70" y="110" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="930" y="110" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="500" y="85" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Posterior</text>
+  <text x="500" y="1170" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Anterior</text>
+</svg>

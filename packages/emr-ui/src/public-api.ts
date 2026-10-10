@@ -50,6 +50,11 @@ export * from './lib/domain/emr-hierarchy-order-picker.component';
 export * from './lib/domain/emr-favourites-panel.component';
 
 // ---------------------------------------------------------------------
+// L5 recipes (data only)
+// ---------------------------------------------------------------------
+export * from './lib/recipes/anatomy/index';
+
+// ---------------------------------------------------------------------
 // L6 authoring
 // ---------------------------------------------------------------------
 export * from './lib/authoring/emr-field-generator.component';

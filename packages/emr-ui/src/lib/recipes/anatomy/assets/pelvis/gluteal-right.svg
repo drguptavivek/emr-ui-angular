@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Right gluteal region, posterior view</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M760 50 C740 140 770 230 840 330 C930 450 945 640 905 790 C875 900 850 1000 830 1150" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 470 C145 600 148 760 150 900 C170 1000 230 1090 290 1150" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M835 325 C700 270 480 300 335 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M175 925 C300 1040 620 1050 880 905" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M520 330 L520 940 M152 600 L900 600" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M150 40 L150 470" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <circle cx="335" cy="435" r="10" fill="none" stroke="#475569" stroke-width="4"/>
+  <text x="335" y="470" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">PSIS</text>
+  <circle cx="870" cy="790" r="32" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <circle cx="335" cy="880" r="26" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <text x="825" y="800" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="end">Greater trochanter</text>
+  <text x="375" y="888" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8">Ischial tuberosity</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">L</text>
+  <text x="950" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">R</text>
+  <text x="500" y="1185" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Posterior</text>
+</svg>

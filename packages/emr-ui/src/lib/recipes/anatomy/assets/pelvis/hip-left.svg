@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Left hip, anterior view</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M670 80 C710 200 730 320 750 440 C765 520 770 600 760 680 C740 800 720 950 700 1120" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 80 C95 250 100 400 110 520 C120 600 180 680 240 740 C280 800 305 900 300 1120" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M678 250 C550 340 350 470 175 560" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M678 250 C620 450 520 700 440 880" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M175 560 C270 660 360 780 440 880" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <circle cx="678" cy="250" r="11" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="175" cy="560" r="9" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="738" cy="610" r="34" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <text x="650" y="215" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="end">ASIS</text>
+  <text x="200" y="612" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8">Pubic tubercle</text>
+  <text x="440" y="700" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Femoral</text>
+  <text x="440" y="728" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">triangle</text>
+  <text x="985" y="618" font-family="system-ui, sans-serif" font-size="20" fill="#94a3b8" text-anchor="end">Greater trochanter</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text>
+  <text x="950" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+</svg>

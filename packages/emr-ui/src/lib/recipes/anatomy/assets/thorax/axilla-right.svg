@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1100" viewBox="0 0 1200 1100" role="img">
+  <title>Right axilla, anterior view, arm abducted</title>
+  <rect width="1200" height="1100" fill="#ffffff"/>
+  <path d="M535 70 C535 140 520 185 450 215 C380 235 300 235 250 250 C200 262 120 245 40 222 L40 350 C130 358 200 378 268 440 C245 560 235 720 250 840 C260 930 270 980 280 1010 C400 1040 500 1050 600 1050 C700 1050 800 1040 920 1010 C930 980 940 930 950 840 C965 720 960 600 948 490 C965 520 975 560 985 610 L1092 590 C1090 520 1080 450 1065 380 C1050 310 1010 265 950 250 C900 235 820 235 750 215 C680 185 665 140 665 70" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M590 258 C520 244 400 252 285 278" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M610 258 C680 244 800 252 915 278" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M590 690 C520 765 400 850 262 905" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M610 690 C680 765 800 850 938 905" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 600 258 L 600 1050" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M165 372 C235 420 290 480 330 565" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="440" cy="570" r="12" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="440" cy="570" r="34" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <circle cx="760" cy="570" r="12" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="760" cy="570" r="34" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <text x="150" y="520" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Axilla</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text>
+  <text x="1150" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+</svg>

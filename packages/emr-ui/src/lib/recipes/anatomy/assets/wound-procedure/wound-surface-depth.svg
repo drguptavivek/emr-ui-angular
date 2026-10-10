@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img">
+  <title>Wound surface with clock face and skin depth cross-section</title>
+  <rect width="1400" height="1000" fill="#ffffff"/>
+  <path d="M250 230C253.3 230.4 263.3 231.8 270 232.5C276.7 233.2 283.3 233.9 290 234.3C296.7 234.8 303.3 235 310 235C316.7 235 323.3 234.7 330 234.3C336.7 233.9 343.3 233.2 350 232.4C356.7 231.7 363.3 230.8 370 229.9C376.7 229.1 383.3 228.1 390 227.4C396.7 226.7 403.3 226 410 225.6C416.7 225.2 423.3 225 430 225C436.7 225 443.3 225.3 450 225.7C456.7 226.2 463.3 226.9 470 227.6C476.7 228.4 483.3 229.3 490 230.2C496.7 231 503.3 231.9 510 232.7C516.7 233.4 523.3 234 530 234.4C536.7 234.8 543.3 235 550 235C556.7 235 563.3 234.7 570 234.2C576.7 233.8 583.3 233 590 232.3C596.7 231.6 603.3 230.6 610 229.8C616.7 228.9 623.3 228 630 227.3C636.7 226.6 643.3 225.9 650 225.5C656.7 225.2 663.3 225 670 225C676.7 225.1 683.3 225.4 690 225.8C696.7 226.3 703.3 227 710 227.8C716.7 228.5 723.3 229.5 730 230.3C736.7 231.2 746.7 232.4 750 232.8L750 260.8L750 260.8L730 258.3L710 255.8L690 253.8L670 253L650 253.5L630 255.3L610 257.8L590 260.3L570 262.2L550 263L530 262.4L510 260.7L490 258.2L470 255.6L450 253.7L430 253L410 253.6L390 255.4L370 257.9L350 260.4L330 262.3L310 263L290 262.3L270 260.5L250 258Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M250 258L250 790L750 790L750 260.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M250 410L750 410" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M250 610L750 610L750 630L250 630Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="360" cy="470" rx="40" ry="28" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <ellipse cx="470" cy="450" rx="34" ry="24" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <ellipse cx="585" cy="480" rx="42" ry="30" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <ellipse cx="400" cy="545" rx="36" ry="24" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <ellipse cx="520" cy="548" rx="40" ry="26" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <ellipse cx="660" cy="535" rx="30" ry="22" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <ellipse cx="690" cy="450" rx="26" ry="20" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M270 668C260 654 440 682 730 668" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M270 708C260 694 440 722 730 708" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M270 748C260 734 440 762 730 748" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M330 262C324 300 336 330 330 372" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M440 262C434 300 446 330 440 372" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M560 262C554 300 566 330 560 372" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M670 262C664 300 676 330 670 372" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M250 230C253.3 230.4 263.3 231.8 270 232.5C276.7 233.2 283.3 233.9 290 234.3C296.7 234.8 303.3 235 310 235C316.7 235 323.3 234.7 330 234.3C336.7 233.9 343.3 233.2 350 232.4C356.7 231.7 363.3 230.8 370 229.9C376.7 229.1 383.3 228.1 390 227.4C396.7 226.7 403.3 226 410 225.6C416.7 225.2 423.3 225 430 225C436.7 225 443.3 225.3 450 225.7C456.7 226.2 463.3 226.9 470 227.6C476.7 228.4 483.3 229.3 490 230.2C496.7 231 503.3 231.9 510 232.7C516.7 233.4 523.3 234 530 234.4C536.7 234.8 543.3 235 550 235C556.7 235 563.3 234.7 570 234.2C576.7 233.8 583.3 233 590 232.3C596.7 231.6 603.3 230.6 610 229.8C616.7 228.9 623.3 228 630 227.3C636.7 226.6 643.3 225.9 650 225.5C656.7 225.2 663.3 225 670 225C676.7 225.1 683.3 225.4 690 225.8C696.7 226.3 703.3 227 710 227.8C716.7 228.5 723.3 229.5 730 230.3C736.7 231.2 746.7 232.4 750 232.8" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="234" y="244" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="end" dominant-baseline="central">Epidermis</text>
+  <text x="234" y="330" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="end" dominant-baseline="central">Dermis</text>
+  <text x="234" y="510" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="end" dominant-baseline="central">Subcutaneous</text>
+  <text x="234" y="620" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="end" dominant-baseline="central">Fascia</text>
+  <text x="234" y="705" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#94a3b8" text-anchor="end" dominant-baseline="central">Muscle</text>
+  <text x="500" y="130" font-family="system-ui, sans-serif" font-size="28" font-weight="600" fill="#94a3b8" text-anchor="middle" dominant-baseline="central">Depth (cross-section)</text>
+  <circle cx="1070" cy="570" r="230" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10"/>
+  <path d="M1070 340L1070 370" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1185 370.8L1177 384.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1269.2 455L1255.3 463" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1300 570L1270 570" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1269.2 685L1255.3 677" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1185 769.2L1177 755.3" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1070 800L1070 770" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M955 769.2L963 755.3" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M870.8 685L884.7 677" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M840 570L870 570" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M870.8 455L884.7 463" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M955 370.8L963 384.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1070" y="302" font-family="system-ui, sans-serif" font-size="34" font-weight="700" fill="#475569" text-anchor="middle" dominant-baseline="central">12</text>
+  <text x="1338" y="570" font-family="system-ui, sans-serif" font-size="34" font-weight="700" fill="#475569" text-anchor="middle" dominant-baseline="central">3</text>
+  <text x="1070" y="838" font-family="system-ui, sans-serif" font-size="34" font-weight="700" fill="#475569" text-anchor="middle" dominant-baseline="central">6</text>
+  <text x="802" y="570" font-family="system-ui, sans-serif" font-size="34" font-weight="700" fill="#475569" text-anchor="middle" dominant-baseline="central">9</text>
+  <path d="M1050 420C1120 395 1195 450 1205 530C1218 610 1175 695 1100 718C1025 740 945 688 930 605C918 530 972 442 1050 420Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1056 570L1084 570M1070 556L1070 584" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1070 262L1070 228M1060 242L1070 226L1080 242" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1070" y="205" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#94a3b8" text-anchor="middle" dominant-baseline="central">Head-ward</text>
+  <text x="1070" y="130" font-family="system-ui, sans-serif" font-size="28" font-weight="600" fill="#94a3b8" text-anchor="middle" dominant-baseline="central">Wound surface (en face)</text>
+</svg>

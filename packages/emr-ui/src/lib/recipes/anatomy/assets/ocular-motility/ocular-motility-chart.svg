@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1200" viewBox="0 0 1400 1200" role="img">
+  <title>Ocular motility chart, nine diagnostic gaze positions, patient’s right on the viewer’s left</title>
+  <rect width="1400" height="1200" fill="#ffffff"/>
+  <path d="M70 120 H1330 V1110 H70 Z M490 120 V1110 M910 120 V1110 M70 450 H1330 M70 780 H1330" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M80 274.6 C119.6 221.8 190 215.2 256 283.4 C207.6 324.5 124 328 80 274.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M158.3 233.6 A38 38 0 1 1 92 260.9" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="130" cy="259" r="15" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="240" cy="286.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="168" y="361" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">R</text>
+  <path d="M480 274.6 C440.4 221.8 370 215.2 304 283.4 C352.4 324.5 436 328 480 274.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M317.7 270.3 A38 38 0 1 0 383.8 235.5" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M340 253.6 A15 15 0 1 0 357 244.3" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="320" cy="286.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="392" y="361" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">L</text>
+  <text x="280" y="426" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Up right</text>
+  <path d="M500 274.6 C539.6 221.8 610 215.2 676 283.4 C627.6 324.5 544 328 500 274.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M623 244.3 A38 38 0 1 1 558 235.7" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="588" cy="259" r="15" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="660" cy="286.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="588" y="361" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">R</text>
+  <path d="M900 274.6 C860.4 221.8 790 215.2 724 283.4 C772.4 324.5 856 328 900 274.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M777 244.3 A38 38 0 1 0 842 235.7" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="812" cy="259" r="15" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="740" cy="286.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="812" y="361" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">L</text>
+  <text x="700" y="426" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Up</text>
+  <path d="M920 274.6 C959.6 221.8 1030 215.2 1096 283.4 C1047.6 324.5 964 328 920 274.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1082.3 270.3 A38 38 0 1 1 1016.2 235.5" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1060 253.6 A15 15 0 1 1 1043 244.3" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="1080" cy="286.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1008" y="361" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">R</text>
+  <path d="M1320 274.6 C1280.4 221.8 1210 215.2 1144 283.4 C1192.4 324.5 1276 328 1320 274.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1241.7 233.6 A38 38 0 1 0 1308 260.9" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1270" cy="259" r="15" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="1160" cy="286.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1232" y="361" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">L</text>
+  <text x="1120" y="426" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Up left</text>
+  <path d="M80 604.6 C119.6 551.8 190 545.2 256 613.4 C207.6 654.5 124 658 80 604.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M94.2 618.9 A38 38 0 0 1 98 585.5" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M129.3 568 A38 38 0 0 1 142.8 641.8" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="130" cy="606" r="15" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="240" cy="616.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="168" y="691" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">R</text>
+  <path d="M480 604.6 C440.4 551.8 370 545.2 304 613.4 C352.4 654.5 436 658 480 604.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M365.8 642.1 A38 38 0 0 0 366.8 570.2" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M316.3 601.6 A38 38 0 0 0 321.6 625.8" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="354" cy="606" r="15" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="320" cy="616.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="392" y="691" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">L</text>
+  <text x="280" y="756" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Right</text>
+  <path d="M500 604.6 C539.6 551.8 610 545.2 676 613.4 C627.6 654.5 544 658 500 604.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="588" cy="606" r="38" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="588" cy="606" r="15" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="660" cy="616.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="588" y="691" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">R</text>
+  <path d="M900 604.6 C860.4 551.8 790 545.2 724 613.4 C772.4 654.5 856 658 900 604.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="812" cy="606" r="38" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="812" cy="606" r="15" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="740" cy="616.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="812" y="691" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">L</text>
+  <text x="700" y="756" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Primary position</text>
+  <path d="M920 604.6 C959.6 551.8 1030 545.2 1096 613.4 C1047.6 654.5 964 658 920 604.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1034.2 642.1 A38 38 0 0 1 1033.2 570.2" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1083.7 601.6 A38 38 0 0 1 1078.4 625.8" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1046" cy="606" r="15" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="1080" cy="616.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1008" y="691" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">R</text>
+  <path d="M1320 604.6 C1280.4 551.8 1210 545.2 1144 613.4 C1192.4 654.5 1276 658 1320 604.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1305.8 618.9 A38 38 0 0 0 1302 585.5" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1270.7 568 A38 38 0 0 0 1257.2 641.8" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1270" cy="606" r="15" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="1160" cy="616.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1232" y="691" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">L</text>
+  <text x="1120" y="756" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Left</text>
+  <path d="M80 934.6 C119.6 881.8 190 875.2 256 943.4 C207.6 984.5 124 988 80 934.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M92.4 947.3 A38 38 0 1 1 161.5 974.3" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M121.1 965.1 A15 15 0 1 1 128.6 967.9" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="240" cy="946.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="168" y="1021" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">R</text>
+  <path d="M480 934.6 C440.4 881.8 370 875.2 304 943.4 C352.4 984.5 436 988 480 934.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M385.4 974.4 A38 38 0 1 0 316 952.4" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="354" cy="953" r="15" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="320" cy="946.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="392" y="1021" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">L</text>
+  <text x="280" y="1086" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Down right</text>
+  <path d="M500 934.6 C539.6 881.8 610 875.2 676 943.4 C627.6 984.5 544 988 500 934.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M553.8 969.6 A38 38 0 1 1 621.7 970.5" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="588" cy="953" r="15" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="660" cy="946.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="588" y="1021" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">R</text>
+  <path d="M900 934.6 C860.4 881.8 790 875.2 724 943.4 C772.4 984.5 856 988 900 934.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M846.2 969.6 A38 38 0 1 0 778.3 970.5" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="812" cy="953" r="15" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="740" cy="946.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="812" y="1021" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">L</text>
+  <text x="700" y="1086" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Down</text>
+  <path d="M920 934.6 C959.6 881.8 1030 875.2 1096 943.4 C1047.6 984.5 964 988 920 934.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1014.6 974.4 A38 38 0 1 1 1084 952.4" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1046" cy="953" r="15" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="1080" cy="946.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1008" y="1021" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">R</text>
+  <path d="M1320 934.6 C1280.4 881.8 1210 875.2 1144 943.4 C1192.4 984.5 1276 988 1320 934.6" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1307.6 947.3 A38 38 0 1 0 1238.5 974.3" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1278.9 965.1 A15 15 0 1 0 1271.4 967.9" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="1160" cy="946.4" rx="9" ry="11" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1232" y="1021" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">L</text>
+  <text x="1120" y="1086" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Down left</text>
+  <text x="70" y="80" font-family="system-ui, sans-serif" font-size="52" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="1330" y="80" font-family="system-ui, sans-serif" font-size="52" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="700" y="80" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Patient’s right on viewer’s left</text>
+</svg>

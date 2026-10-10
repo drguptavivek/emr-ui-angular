@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Right elbow, anterior view</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M255.2 60 C257.6 108 272 276 269.6 348 C267.2 420 248 432 240.8 492 C233.6 552 232.4 624 226.4 708 C220.4 792 207.8 924 204.8 996 C201.8 1068 207.8 1116 208.4 1140" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M723.2 60 C723.2 108 717.2 276 723.2 348 C729.2 420 753.2 432 759.2 492 C765.2 552 761.6 624 759.2 708 C756.8 792 747.8 924 744.8 996 C741.8 1068 741.8 1116 741.2 1140" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M716 506.4 C572 535.2 428 535.2 284 506.4" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M334.4 513.6 C363.2 600 392 672 420.8 744" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M665.6 513.6 C636.8 600 608 672 579.2 744" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M492.8 513.6 C489.2 420 489.2 312 492.8 204" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M305.6 477.6 C305.6 493.5 318.5 506.4 334.4 506.4 C350.3 506.4 363.2 493.5 363.2 477.6 C363.2 461.7 350.3 448.8 334.4 448.8 C318.5 448.8 305.6 461.7 305.6 477.6 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M636.8 477.6 C636.8 493.5 649.7 506.4 665.6 506.4 C681.5 506.4 694.4 493.5 694.4 477.6 C694.4 461.7 681.5 448.8 665.6 448.8 C649.7 448.8 636.8 461.7 636.8 477.6 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="100" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="940" y="100" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Anterior</text>
+</svg>

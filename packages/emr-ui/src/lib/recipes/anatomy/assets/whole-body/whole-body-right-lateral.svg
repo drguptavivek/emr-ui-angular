@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1600" viewBox="0 0 800 1600" role="img">
+  <title>Whole body, right lateral view</title>
+  <rect width="800" height="1600" fill="#ffffff"/>
+  <path d="M390 90 C440 90 478 125 480 168 C481 180 488 192 496 205 C498 214 492 220 484 222 C486 232 486 240 482 246 C484 256 482 264 476 272 C468 282 450 284 440 280
+ C436 300 436 320 440 335 C450 360 478 390 478 440 C480 500 470 540 466 580 C464 620 474 680 472 720 C470 760 466 790 456 820
+ C462 880 470 980 476 1100 C478 1130 476 1160 470 1200 C466 1300 462 1400 460 1450
+ C480 1470 520 1490 548 1500 C560 1506 560 1522 545 1522 L335 1522 C318 1520 312 1500 318 1480 C330 1460 340 1450 346 1440
+ C340 1420 326 1340 316 1260 C312 1230 322 1190 336 1150 C340 1120 338 1100 340 1080
+ C330 1000 305 920 300 860 C280 840 270 790 280 740 C285 700 296 660 296 620 C296 580 288 520 280 460
+ C270 410 280 370 310 345 C340 335 350 320 352 290 C345 270 335 250 330 230 C312 215 300 170 312 135 C325 105 355 90 390 90 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M392 366 C416 382 424 400 424 410 C428 480 430 560 436 625 C442 690 448 760 452 826 C454 845 455 860 453 878
+ C458 900 462 940 452 970 C440 985 420 980 416 960 C410 930 408 890 404 860 C400 840 398 830 398 826 C396 760 392 700 388 640
+ C380 620 376 600 372 575 C366 520 360 450 354 410 C352 400 350 392 348 386" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="400" cy="195" rx="14" ry="30" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M448 175 C456 170 466 172 470 178" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M476 1072 C462 1080 458 1118 476 1126" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">P</text>
+  <text x="700" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">A</text>
+  <text x="60" y="140" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">R</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img">
+  <title>Right shoulder, anterior view</title>
+  <rect width="1200" height="1200" fill="#ffffff"/>
+  <path d="M765 60 C761.2 75 757.8 124.2 742 150 C726.2 175.8 703.7 197.5 670 215 C636.3 232.5 586.7 245 540 255 C493.3 265 438.3 267.5 390 275 C341.7 282.5 286.7 290.8 250 300 C213.3 309.2 190.3 315 170 330 C149.7 345 138 365 128 390 C118 415 112.3 445 110 480 C107.7 515 110.3 556.7 114 600 C117.7 643.3 126.3 690 132 740 C137.7 790 144 846.7 148 900 C152 953.3 154 1021.7 156 1060 C158 1098.3 159.3 1118.3 160 1130" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M995 60 C998.8 75 1003.8 124.7 1018 150 C1032.2 175.3 1058.8 195.3 1080 212 C1101.2 228.7 1134.2 243.7 1145 250" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M370 1130 C370 1108.3 370.3 1041.7 370 1000 C369.7 958.3 368 915 368 880 C368 845 365.5 816.7 370 790 C374.5 763.3 380 743.3 395 720 C410 696.7 430.8 668 460 650 C489.2 632 530 620.3 570 612 C610 603.7 660 599 700 600 C740 601 780 607.2 810 618 C840 628.8 868.3 657.2 880 665" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M870 300 C853.3 300 803.3 298 770 300 C736.7 302 705 308.3 670 312 C635 315.7 596.7 321 560 322 C523.3 323 486.7 318 450 318 C413.3 318 376.7 318.3 340 322 C303.3 325.7 258.7 333.7 230 340 C201.3 346.3 178.3 356.7 168 360" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M400 335 C415 420 425 500 410 610" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M174 352 C174 357.5 178.5 362 184 362 C189.5 362 194 357.5 194 352 C194 346.5 189.5 342 184 342 C178.5 342 174 346.5 174 352 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M905 292 C892 316 868 316 855 292" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M880 330 L880 690" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10"/>
+  <text x="60" y="100" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="1140" y="100" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Anterior</text>
+  <text x="865" y="735" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Midline</text>
+</svg>

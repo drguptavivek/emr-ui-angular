@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Sacrum and coccyx, posterior view</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M200 40 C140 200 100 330 95 470 C90 620 130 780 190 900 C250 1010 350 1070 500 1105" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M800 40 C860 200 900 330 905 470 C910 620 870 780 810 900 C750 1010 650 1070 500 1105" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M130 190 C220 240 330 350 372 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M870 190 C780 240 670 350 628 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M365 255 C420 245 580 245 635 255 C620 400 560 580 500 740 C440 580 380 400 365 255 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 700 L 500 1105" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="370" cy="435" r="10" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="630" cy="435" r="10" fill="none" stroke="#475569" stroke-width="4"/>
+  <ellipse cx="500" cy="175" rx="16" ry="24" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <text x="530" y="183" font-family="system-ui, sans-serif" font-size="26" fill="#475569">L5</text>
+  <ellipse cx="500" cy="300" rx="10" ry="14" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="390" rx="10" ry="14" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="480" rx="10" ry="14" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="570" rx="10" ry="14" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="500" cy="650" rx="10" ry="14" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  <text x="638.5" y="308" font-family="system-ui, sans-serif" font-size="26" fill="#475569">S1</text>
+  <text x="613.4" y="398" font-family="system-ui, sans-serif" font-size="26" fill="#475569">S2</text>
+  <text x="588.4" y="488" font-family="system-ui, sans-serif" font-size="26" fill="#475569">S3</text>
+  <text x="563.3" y="578" font-family="system-ui, sans-serif" font-size="26" fill="#475569">S4</text>
+  <text x="541.1" y="658" font-family="system-ui, sans-serif" font-size="26" fill="#475569">S5</text>
+  <ellipse cx="500" cy="800" rx="14" ry="28" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <text x="530" y="810" font-family="system-ui, sans-serif" font-size="26" fill="#475569">Coccyx</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">L</text>
+  <text x="950" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">R</text>
+  <text x="500" y="1170" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Posterior</text>
+</svg>

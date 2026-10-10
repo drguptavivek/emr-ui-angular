@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Left external ear, lateral view</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M 350 530 C 310 360 380 180 530 180 C 670 180 745 320 745 480 C 745 620 690 740 630 830 C 595 885 570 975 490 980 C 410 985 370 930 380 870 C 385 835 365 800 332 768" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 332 768 C 312 700 318 600 350 530" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 372 540 C 345 400 410 228 530 226 C 645 224 697 340 697 480 C 697 600 655 700 605 780 C 575 830 550 860 520 872" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 410 770 C 505 765 615 690 628 575 C 634 500 615 430 560 385 C 525 360 475 330 415 330" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 560 385 C 520 405 465 428 420 440" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 372 540 C 390 515 420 495 465 490" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="465" cy="625" rx="30" ry="48" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M 328 580 C 368 572 404 604 398 645 C 392 685 355 695 326 668" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 790 C 470 765 420 752 382 758" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="190" cy="590" rx="100" ry="130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10"/>
+  <ellipse cx="840" cy="830" rx="100" ry="125" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10"/>
+  <text x="190" y="595" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Preauricular</text>
+  <text x="840" y="835" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Mastoid</text>
+  <text x="940" y="290" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Helix</text>
+  <path d="M 850 282 L 710 330" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="940" y="600" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Antihelix</text>
+  <path d="M 815 590 L 627 580" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="255" y="805" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Tragus</text>
+  <path d="M 310 668 L 260 790" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="330" y="985" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Lobule</text>
+  <path d="M 415 950 L 340 975" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="940" y="100" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="500" y="90" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Superior</text>
+  <text x="60" y="1150" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="start">Anterior</text>
+  <text x="940" y="1150" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="end">Posterior</text>
+</svg>

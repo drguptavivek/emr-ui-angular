@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img">
+  <title>Nasal septum, sagittal schematic</title>
+  <rect width="1200" height="1000" fill="#ffffff"/>
+  <g transform="translate(40 0)">
+  <path d="M 330 300 C 450 270 560 250 700 215 C 760 200 830 170 870 160 C 900 300 915 450 905 560 C 900 640 890 700 880 740 C 760 765 560 775 340 765 C 270 755 225 715 232 665 C 245 560 280 420 330 300 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 545 262 C 600 340 622 430 622 520 C 622 620 595 700 565 772" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 622 520 C 720 505 820 460 908 430" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="320" cy="610" rx="58" ry="62" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10"/>
+  <text x="430" y="450" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Quadrangular</text>
+  <text x="430" y="490" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">cartilage</text>
+  <text x="760" y="290" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Perpendicular</text>
+  <text x="760" y="330" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">plate of ethmoid</text>
+  <text x="760" y="630" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Vomer</text>
+  <text x="430" y="835" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Maxillary crest</text>
+  <path d="M 430 808 L 430 772" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="200" y="560" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Little's area</text>
+  <path d="M 210 568 L 262 598" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="330" y="240" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Nasal bone</text>
+  <path d="M 330 250 L 336 292" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="60" y="100" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="start">Superior</text>
+  <text x="60" y="940" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="start">Anterior</text>
+  <text x="1140" y="940" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="end">Posterior</text>
+</svg>

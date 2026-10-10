@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img">
+  <title>Perianal region, lithotomy view</title>
+  <rect width="1000" height="1000" fill="#ffffff"/>
+  <path d="M500 90 C380 95 240 185 175 370 C120 520 150 730 280 840 C360 905 440 935 500 940 C560 935 640 905 720 840 C850 730 880 520 825 370 C760 185 620 95 500 90" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 100 L 500 440" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 600 L 500 940" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle stroke-dasharray="12 10" cx="500" cy="520" r="290" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <circle stroke-dasharray="12 10" cx="500" cy="520" r="150" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <circle cx="500" cy="520" r="78" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M500.0 482.0 L500.0 444.0 M514.5 484.9 L529.1 449.8 M526.9 493.1 L553.7 466.3 M535.1 505.5 L570.2 490.9 M538.0 520.0 L576.0 520.0 M535.1 534.5 L570.2 549.1 M526.9 546.9 L553.7 573.7 M514.5 555.1 L529.1 590.2 M500.0 558.0 L500.0 596.0 M485.5 555.1 L470.9 590.2 M473.1 546.9 L446.3 573.7 M464.9 534.5 L429.8 549.1 M462.0 520.0 L424.0 520.0 M464.9 505.5 L429.8 490.9 M473.1 493.1 L446.3 466.3 M485.5 484.9 L470.9 449.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="500" cy="520" r="24" fill="none" stroke="#475569" stroke-width="4"/>
+  <text x="525" y="150" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">Perineum</text>
+  <text x="525" y="900" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">Natal cleft</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text>
+  <text x="950" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="500" y="55" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Anterior</text>
+  <text x="500" y="985" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Posterior</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img">
+  <title>Left tympanic membrane, otoscopic view</title>
+  <rect width="1000" height="1000" fill="#ffffff"/>
+  <ellipse cx="500" cy="500" rx="320" ry="360" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M 320 208 L 665 806" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M 786 355 L 227 677" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M 380 305 L 300 219 M 380 305 L 445 145" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 388 296 L 370 312 C 408 380 454 460 487 524 C 494 532 508 528 504 517 C 479 450 428 360 388 296 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="380" cy="302" r="10" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="497" cy="523" r="12" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M 488 538 L 324 745 L 376 775 Z" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#cbd5e1"/>
+  <text x="288" y="492" font-family="system-ui, sans-serif" font-size="32" fill="#94a3b8" text-anchor="middle">AS</text>
+  <text x="331" y="690" font-family="system-ui, sans-serif" font-size="32" fill="#94a3b8" text-anchor="middle">AI</text>
+  <text x="565" y="332" font-family="system-ui, sans-serif" font-size="32" fill="#94a3b8" text-anchor="middle">PS</text>
+  <text x="705" y="580" font-family="system-ui, sans-serif" font-size="32" fill="#94a3b8" text-anchor="middle">PI</text>
+  <text x="230" y="165" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Pars flaccida</text>
+  <path d="M 375 212 L 240 168" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="162" y="418" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Handle of</text>
+  <text x="162" y="450" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">malleus</text>
+  <path d="M 434 405 L 174 424" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="960" y="735" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Umbo</text>
+  <path d="M 875 728 L 512 534" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="310" y="935" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Light reflex</text>
+  <path d="M 350 765 L 300 915" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="940" y="100" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="500" y="70" font-family="system-ui, sans-serif" font-size="28" fill="#475569" text-anchor="middle">Superior</text>
+  <text x="500" y="960" font-family="system-ui, sans-serif" font-size="28" fill="#475569" text-anchor="middle">Inferior</text>
+  <text x="35" y="640" font-family="system-ui, sans-serif" font-size="28" fill="#475569" text-anchor="start">Anterior</text>
+  <text x="970" y="640" font-family="system-ui, sans-serif" font-size="28" fill="#475569" text-anchor="end">Posterior</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img">
+  <title>Anal canal clock face, lithotomy view</title>
+  <rect width="1000" height="1000" fill="#ffffff"/>
+  <circle cx="500" cy="520" r="380" fill="none" stroke="#475569" stroke-width="6"/>
+  <circle cx="500" cy="520" r="190" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="500" cy="520" r="36" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M690.0 190.9 L676.0 215.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="709" y="169" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#475569" text-anchor="middle">1</text>
+  <path d="M829.1 330.0 L804.8 344.0" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="862" y="322" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#475569" text-anchor="middle">2</text>
+  <path d="M880.0 520.0 L825.0 520.0" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="918" y="531" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#475569" text-anchor="middle">3</text>
+  <path d="M829.1 710.0 L804.8 696.0" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="862" y="740" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#475569" text-anchor="middle">4</text>
+  <path d="M690.0 849.1 L676.0 824.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="709" y="893" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#475569" text-anchor="middle">5</text>
+  <path d="M500.0 900.0 L500.0 845.0" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="500" y="949" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#475569" text-anchor="middle">6</text>
+  <path d="M310.0 849.1 L324.0 824.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="291" y="893" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#475569" text-anchor="middle">7</text>
+  <path d="M170.9 710.0 L195.2 696.0" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="138" y="740" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#475569" text-anchor="middle">8</text>
+  <path d="M120.0 520.0 L175.0 520.0" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="82" y="531" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#475569" text-anchor="middle">9</text>
+  <path d="M170.9 330.0 L195.2 344.0" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="138" y="322" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#475569" text-anchor="middle">10</text>
+  <path d="M310.0 190.9 L324.0 215.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="291" y="169" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#475569" text-anchor="middle">11</text>
+  <path d="M500.0 140.0 L500.0 195.0" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="500" y="113" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#475569" text-anchor="middle">12</text>
+  <path d="M 500 195 L 500 845 M 175 520 L 825 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <text x="715" y="305" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Perianal skin</text>
+  <text x="595" y="415" font-family="system-ui, sans-serif" font-size="20" fill="#94a3b8" text-anchor="middle">Anal canal</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text>
+  <text x="950" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="500" y="36" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Anterior</text>
+  <text x="500" y="990" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Posterior</text>
+</svg>

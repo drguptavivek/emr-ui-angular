@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Left wrist, palmar view</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M328.4 1112 C333.2 1073 346.6 956 357 878 C367.4 800 382.1 717.7 390.8 644 C399.5 570.3 406 470.7 409 436 C409 378.8 310.2 306 289.4 176 C281.6 144.8 276.4 113.6 273.8 85" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M713.2 1112 C709.3 1073 696.3 956 689.8 878 C683.3 800 677.7 717.7 674.2 644 C670.7 570.3 665.5 490.2 669 436 C672.5 381.8 685.5 362.3 695 319 C704.5 275.7 721 215 726.2 176 C731.4 137 726.2 100.2 726.2 85" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M273.8 85 L726.2 85" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10"/>
+  <path d="M658.6 420.4 C585.8 436 492.2 436 419.4 420.4" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M658.6 508.8 C585.8 524.4 492.2 524.4 419.4 508.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M377.8 108.4 C450.6 155.2 502.6 254 518.2 389.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M346.6 129.2 C435 144.8 539 150 643 176" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M533.8 826 L533.8 462" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M481.8 826 L481.8 462" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M622.2 394.4 C622.2 382.9 631.5 373.6 643 373.6 C654.5 373.6 663.8 382.9 663.8 394.4 C663.8 405.9 654.5 415.2 643 415.2 C631.5 415.2 622.2 405.9 622.2 394.4 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="100" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">L</text>
+  <text x="940" y="100" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Palmar</text>
+</svg>

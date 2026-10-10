@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1400" viewBox="0 0 1000 1400" role="img">
+  <title>Right ankle and foot, anterior view</title>
+  <rect width="1000" height="1400" fill="#ffffff"/>
+  <path d="M260 80 C270 150 307 385 320 500 C333 615 336 705 338 770 C340 835 333 870 332 890 C328 911 317 977 308 1016 C299 1055 286 1094 278 1124 C270 1154 263 1184 260 1196 L260 1182.8 C260 1196.7 278.8 1208 302 1208 C325.2 1208 344 1196.7 344 1182.8 L344 1209.8 C344 1223.7 362.8 1235 386 1235 C409.2 1235 428 1223.7 428 1209.8 L428 1231.4 C428 1248.3 450.8 1262 479 1262 C507.2 1262 530 1248.3 530 1231.4 L530 1254.8 C530 1273.7 555.5 1289 587 1289 C618.5 1289 644 1273.7 644 1254.8 L644 1255.4 C644 1282.2 680.3 1304 725 1304 C769.7 1304 806 1282.2 806 1255.4 L806 1202 C798 1189 776 1155 758 1124 C740 1093 715 1055 698 1016 C681 977 663 911 656 890 C652 870 634 835 632 770 C630 705 635 615 644 500 C653 385 679 150 686 80" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M656 746 C560 794 440 794 338 746" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M584 836 C584 859.2 597.4 878 614 878 C630.6 878 644 859.2 644 836 C644 812.8 630.6 794 614 794 C597.4 794 584 812.8 584 836 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M350 878 C350 901.2 363.4 920 380 920 C396.6 920 410 901.2 410 878 C410 854.8 396.6 836 380 836 C363.4 836 350 854.8 350 878 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M518 110 C524 530 512 800 518 1070" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M644 1196 L629.6 1100" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M530 1196 L527 1100" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M428 1196 L435.2 1100" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M344 1196 L359.6 1100" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="100" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="940" y="100" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Anterior</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img">
+  <title>External eye, right eye (OD), examiner's view</title>
+  <rect width="1400" height="1000" fill="#ffffff"/>
+  <path d="M230 491 C441.5 263 817.5 234.5 1170 529 C911.5 705 465 720 230 491" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M370 314.1 L384 304.9 L398 296.2 L412 288.2 L426 280.7 L440 273.7 L454 267.2 L468 261.3 L482 255.8 L496 250.8 L510 246.3 L524 242.2 L538 238.5 L552 235.3 L566 232.6 L580 230.2 L594 228.3 L608 226.7 L622 225.6 L636 224.9 L650 224.6 L664 224.7 L678 225.1 L692 226 L706 227.2 L720 228.9 L734 230.9 L748 233.2 L762 236 L776 239.1 L790 242.7 L804 246.5 L818 250.8 L832 255.4 L846 260.4 L860 265.8 L874 271.6 L888 277.7 L902 284.2 L916 291.1 L930 298.4 L944 306 L958 314 L972 322.4 L986 331.2 L1000 340.4 L1014 350 L1028 359.9 L1042 370.3 L1056 381.1 L1070 392.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 440 725 C 580 772 820 772 970 715" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M298.2 428.7 L277.4 401.8 M337.6 401 L319.3 372.4 M379.2 377 L363.5 346.8 M420.8 357.5 L407.7 326.2 M466.3 340.9 L456 308.4 M513.6 328.1 L506.2 294.9 M562.5 319.4 L558 285.7 M610.4 314.9 L608.6 280.9 M662 314.3 L663 280.4 M714.7 318.2 L718.5 284.4 M768.3 326.4 L774.8 293 M820.1 338.5 L829 305.7 M875.1 355.8 L886.5 323.8 M930.6 377.9 L944.3 346.7 M986.4 404.8 L1002.3 374.7 M1039.7 435.1 L1057.5 406.1 M1095.7 471.9 L1115.3 444.1" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M323 563 L312.6 580.1 M381.9 594.6 L373.4 612.7 M444.4 620 L437.9 638.9 M512.4 639.8 L507.8 659.3 M580.3 652.9 L577.4 672.7 M649.7 660.2 L648.4 680.2 M719.8 661.9 L720.1 681.9 M790 658.1 L791.8 678 M861.9 648.6 L865.3 668.3 M929.8 634.1 L934.8 653.5 M995.5 614.6 L1002 633.5" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M645.1 659.9 A200 200 0 0 1 551.2 321" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M852.3 348.1 A200 200 0 0 1 725.7 661.8" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="690" cy="465" r="78" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="1102" cy="551" rx="26" ry="30" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 1060 519 C 1048 544 1050 574 1066 594" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1290" y="520" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="middle">N</text>
+  <text x="110" y="520" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="middle">T</text>
+  <text x="60" y="90" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">OD</text>
+</svg>
