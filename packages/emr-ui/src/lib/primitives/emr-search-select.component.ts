@@ -6,7 +6,7 @@ import { EmrOption } from '@drguptavivek/emr-controller';
   standalone: true,
   template: `
     <div class="emr-field emr-search-select">
-      <label class="emr-field__label" [for]="controlId">{{ label }}</label>
+      <label class="emr-field__label" [class.emr-sr-only]="labelHidden" [for]="controlId">{{ label }}</label>
       @if (multiple && selected.length) {
         <div class="emr-chip-row" aria-label="Selected options">
           @for (item of selected; track item.value) {
@@ -54,6 +54,8 @@ import { EmrOption } from '@drguptavivek/emr-controller';
 export class EmrSearchSelectComponent {
   @Input() controlId = 'emr-search';
   @Input() label = 'Search';
+  /** Keep the label for assistive tech but hide it visually, when a surrounding frame already shows one. */
+  @Input() labelHidden = false;
   @Input() placeholder = 'Type to search';
   @Input() query = '';
   @Input() options: readonly EmrOption[] = [];

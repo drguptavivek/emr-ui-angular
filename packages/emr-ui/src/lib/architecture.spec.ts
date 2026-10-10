@@ -62,4 +62,36 @@ describe('EMR UI architecture boundary', () => {
     }
   });
 
+  it('styles components with design tokens only, never colour literals', () => {
+    // Hex, rgb()/rgba()/hsl()/hsla() literals (including `var(--emr-x, #fff)` fallbacks) break dark mode and theming.
+    // Colours live in foundations/emr.css. Clinical colour DATA belongs in models/stories, not component source.
+    const colourLiteral = /#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?)\(/;
+    const componentSources = sourceText.filter(({ file }) => file.endsWith('.component.ts'));
+    expect(componentSources.length).toBeGreaterThan(0);
+    for (const { file, text } of componentSources) {
+      text.split('\n').forEach((line, index) => {
+        expect(line, `${relative(process.cwd(), file)}:${index + 1} hard-codes a colour; use an --emr-* token`).not.toMatch(colourLiteral);
+      });
+    }
+  });
+
+  it('keeps component-local styles encapsulated', () => {
+    // ViewEncapsulation.None is fine for components styled only by emr.css classes, but combined with
+    // local `styles:` it leaks those rules into every consumer. ::ng-deep pierces another component's
+    // internals: give the inner component an input instead (e.g. EmrSearchSelect `labelHidden`).
+    // ponytail: four older components predate this rule; migrate them, then empty this list.
+    const grandfathered = new Set([
+      'domain/emr-diagnostic-result-summary.component.ts',
+      'domain/emr-document-upload-queue.component.ts',
+      'domain/emr-family-pedigree.component.ts',
+      'domain/emr-staged-checklist.component.ts',
+    ]);
+    for (const { file, text } of sourceText.filter(({ file }) => file.endsWith('.component.ts'))) {
+      const name = relative(libraryRoot, file);
+      expect(text, name).not.toMatch(/::ng-deep|ViewEncapsulation\.ShadowDom/);
+      if (/ViewEncapsulation\.None/.test(text) && /\bstyles:/.test(text)) {
+        expect(grandfathered.has(name), `${name}: unencapsulated local styles`).toBe(true);
+      }
+    }
+  });
 });

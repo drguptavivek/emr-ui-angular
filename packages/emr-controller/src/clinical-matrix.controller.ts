@@ -85,7 +85,9 @@ export class ClinicalMatrixController extends StateController<
         const presentation = state.schema.rows
           .find(candidate => candidate.id === intent.rowId)
           ?.assessmentStatusOptions?.find(option => option.value === intent.status);
-        if (!row || !previous || previous.readOnly || previous.disabled || !presentation) return state;
+        if (!row || !previous || previous.readOnly || previous.disabled) return state;
+        if (intent.status !== null && !presentation) return state;
+        const { assessmentStatus: _cleared, ...withoutStatus } = previous;
         return {
           ...state,
           values: {
@@ -94,7 +96,7 @@ export class ClinicalMatrixController extends StateController<
               ...row,
               cells: {
                 ...row.cells,
-                [intent.columnId]: { ...previous, assessmentStatus: presentation }
+                [intent.columnId]: presentation ? { ...previous, assessmentStatus: presentation } : withoutStatus
               }
             }
           }

@@ -147,7 +147,7 @@ import {
     .emr-family-pedigree__person { position: relative; display: flex; min-width: 0; border: 1px solid var(--emr-border); border-radius: 9px; background: var(--emr-surface); transition: border-color .15s ease, box-shadow .15s ease; }
     .emr-family-pedigree__person--selected { border-color: var(--emr-primary); box-shadow: 0 0 0 3px color-mix(in srgb, var(--emr-primary) 16%, transparent); }
     .emr-family-pedigree__person-button { display: grid; flex: 1; min-width: 0; gap: 7px; border: 0; border-radius: 8px; background: transparent; padding: 12px; color: inherit; text-align: left; cursor: pointer; }
-    .emr-family-pedigree__person-button:focus-visible { outline: 3px solid #9bd4cb; outline-offset: 2px; }
+    .emr-family-pedigree__person-button:focus-visible { outline: 3px solid var(--emr-focus); outline-offset: 2px; }
     .emr-family-pedigree__person-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
     .emr-family-pedigree__person-top { align-items: center; }
     .emr-family-pedigree__pedigree-symbol {

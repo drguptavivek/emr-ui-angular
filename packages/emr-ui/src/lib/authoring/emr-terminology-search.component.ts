@@ -33,9 +33,9 @@ const roleLabels: Record<TerminologyBindingRole, string> = {
       <div class="emr-authoring-grid emr-authoring-grid--search">
         <label class="emr-field-frame__label" [for]="sourceControlId()">Source</label>
         <select class="emr-select" [id]="sourceControlId()" [value]="model?.sourceId ?? ''" [disabled]="readOnly" (change)="sourceChanged($event)">
-          <option value="">Choose terminology</option>
+          <option value="" [selected]="!model?.sourceId">Choose terminology</option>
           @for (source of sources; track source.id) {
-            <option [value]="source.id" [disabled]="!source.available">{{ source.label }}{{ source.versionLabel ? ' · ' + source.versionLabel : '' }}</option>
+            <option [value]="source.id" [selected]="source.id === model?.sourceId" [disabled]="!source.available">{{ source.label }}{{ source.versionLabel ? ' · ' + source.versionLabel : '' }}</option>
           }
         </select>
         <label class="emr-field-frame__label" [for]="queryControlId()">Search</label>

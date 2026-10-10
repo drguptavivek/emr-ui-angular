@@ -54,8 +54,8 @@ export class EmrClinicalCellRendererDirective {
               @case ('select') {
                 <select class="emr-select" [value]="primitiveValue(cell)" [disabled]="cell?.disabled" [attr.aria-label]="row.label + ', ' + column.label"
                   [attr.aria-invalid]="!!cell?.error" (focus)="focus(row.id, column.id)" (change)="selectChanged(row, column, $event)">
-                  <option value="">Select</option>
-                  @for (option of row.options ?? []; track option.value) { <option [value]="option.value" [disabled]="option.disabled">{{ option.label }}</option> }
+                  <option value="" [selected]="primitiveValue(cell) === ''">Select</option>
+                  @for (option of row.options ?? []; track option.value) { <option [value]="option.value" [selected]="option.value === primitiveValue(cell)" [disabled]="option.disabled">{{ option.label }}</option> }
                 </select>
               }
               @case ('boolean') {
@@ -103,10 +103,11 @@ export class EmrClinicalCellRendererDirective {
             <span class="emr-badge" [class]="'emr-badge emr-tone-' + status.tone">{{ status.label }}</span>
           }
           @if (!isCellReadOnly(cell) && row.assessmentStatusOptions?.length) {
-            <select class="emr-select" [value]="cell?.assessmentStatus?.value ?? 'recorded'" [disabled]="cell?.disabled"
+            <select class="emr-select" [value]="cell?.assessmentStatus?.value ?? ''" [disabled]="cell?.disabled"
               [attr.aria-label]="'Assessment status for ' + row.label + ', ' + column.label"
               (change)="assessmentStatusChanged(row, column, $event)">
-              @for (option of row.assessmentStatusOptions; track option.value) { <option [value]="option.value">{{ option.label }}</option> }
+              <option value="" [selected]="!cell?.assessmentStatus?.value">Status not set</option>
+              @for (option of row.assessmentStatusOptions; track option.value) { <option [value]="option.value" [selected]="option.value === cell?.assessmentStatus?.value">{{ option.label }}</option> }
             </select>
           }
         }
@@ -180,7 +181,7 @@ export class EmrClinicalMatrixComponent {
   booleanChanged(row: ClinicalRow, column: ClinicalColumn, event: Event): void { const raw = (event.target as HTMLSelectElement).value; this.emitCell(row, column, raw === '' ? null : raw === 'true'); }
   selectChanged(row: ClinicalRow, column: ClinicalColumn, event: Event): void { const raw = (event.target as HTMLSelectElement).value; this.emitCell(row, column, raw || null); }
   quantityChanged(row: ClinicalRow, column: ClinicalColumn, event: Event): void { const raw = (event.target as HTMLInputElement).value; this.emitCell(row, column, { value: raw === '' ? null : Number(raw), unit: this.quantityUnit(row, this.cellFor(row.id, column.id)) }); }
-  assessmentStatusChanged(row: ClinicalRow, column: ClinicalColumn, event: Event): void { this.intent.emit({ type: 'cellAssessmentStatusEditRequested', rowId: row.id, columnId: column.id, status: (event.target as HTMLSelectElement).value as ClinicalAssessmentStatus }); }
+  assessmentStatusChanged(row: ClinicalRow, column: ClinicalColumn, event: Event): void { this.intent.emit({ type: 'cellAssessmentStatusEditRequested', rowId: row.id, columnId: column.id, status: ((event.target as HTMLSelectElement).value || null) as ClinicalAssessmentStatus | null }); }
   remarkChanged(rowId: string, event: Event): void { this.intent.emit({ type: 'remarkEditRequested', rowId, remark: (event.target as HTMLInputElement).value }); }
   private emitCell(row: ClinicalRow, column: ClinicalColumn, value: ClinicalCellState['value']): void { this.intent.emit({ type: 'cellEditRequested', rowId: row.id, columnId: column.id, value }); }
   private isQuantity(value: ClinicalCellState['value'] | undefined): value is ClinicalQuantityValue { return typeof value === 'object' && value !== null && 'unit' in value; }

@@ -592,6 +592,7 @@ interface EmrSearchSelectProps {
 |---|---|---|---|
 | inputId | `string` | `'emr-search'` | |
 | label | `string` | `'Search'` | |
+| labelHidden | `boolean` | `false` | keeps the label for assistive tech but hides it visually, for use inside a frame that already shows a label (e.g. `EmrCodedInput`) |
 | placeholder | `string` | `'Type to search'` | |
 | query | `string` | `''` | |
 | options | `readonly EmrOption[]` | `[]` | rendered inside the listbox panel when `open` |

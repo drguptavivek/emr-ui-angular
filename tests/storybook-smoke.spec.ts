@@ -109,6 +109,33 @@ test.describe('Storybook EMR catalogue smoke tests', () => {
     }
   });
 
+  test('pre-selected select values display their option, not the placeholder', async ({ page }) => {
+    // [label substring, expected option value]; labels are aria-label or the wrapping <label> text.
+    const cases: Record<string, Array<[string, string]>> = {
+      'emr-clinical-forms-history--history': [['Status', 'active']],
+      'emr-clinical-forms-history--explicit-assessment-status': [['History of present illness assessment status', 'declined']],
+      'emr-clinical-forms-system-examinations--general-and-systems': [['General appearance', 'well']],
+      'emr-clinical-assessment--neurology-four-limb': [
+        ['Tone, Left arm', 'increased'], ['Biceps reflex, Left arm', 'brisk'], ['Plantar response, Left leg', 'equivocal'], ['Plantar response, Right leg', 'down']
+      ]
+    };
+    for (const [id, expected] of Object.entries(cases)) {
+      await page.goto(`/iframe.html?id=${id}&viewMode=story`, { waitUntil: 'domcontentloaded' });
+      await page.locator('select').first().waitFor({ state: 'attached' });
+      const selects = await page.locator('select').evaluateAll(elements => elements
+        .filter(element => element.getClientRects().length > 0)
+        .map(element => ({
+          label: (element.getAttribute('aria-label') ?? (element as HTMLSelectElement).labels?.[0]?.textContent ?? '').replace(/\s+/g, ' ').trim(),
+          value: (element as HTMLSelectElement).value
+        })));
+      for (const [label, value] of expected) {
+        const match = selects.find(select => select.label.includes(label));
+        expect(match, `${id}: no visible select labelled "${label}"`).toBeDefined();
+        expect(match?.value, `${id}: "${label}" should display its stored value`).toBe(value);
+      }
+    }
+  });
+
   test('keyboard navigation and read-only states remain operable', async ({ page }) => {
     await page.goto('/iframe.html?id=foundations-primitives--controls&viewMode=story', { waitUntil: 'domcontentloaded' });
     const tabs = page.getByRole('tab');

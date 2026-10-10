@@ -106,9 +106,9 @@ export class EmrDateInputComponent extends EmrFieldBase {
       <span class="emr-field__label">{{ label }} @if (required) { <span class="emr-field__required" aria-hidden="true">*</span> }</span>
       <select class="emr-select" [id]="controlId" [value]="value ?? ''" [disabled]="disabled" [required]="required" [attr.aria-readonly]="readOnly || null"
         [attr.aria-invalid]="!!error" [attr.aria-describedby]="describedBy()" (change)="onSelectChange($event)">
-        @if (placeholder) { <option value="">{{ placeholder }}</option> }
+        @if (placeholder) { <option value="" [selected]="!value">{{ placeholder }}</option> }
         @for (option of options; track option.value) {
-          <option [value]="option.value" [disabled]="option.disabled">{{ option.label }}</option>
+          <option [value]="option.value" [selected]="option.value === value" [disabled]="option.disabled">{{ option.label }}</option>
         }
       </select>
       @if (hint) { <span class="emr-field__hint" [id]="controlId + '-hint'">{{ hint }}</span> }
@@ -145,7 +145,7 @@ export class EmrSelectComponent extends EmrFieldBase {
           [attr.aria-invalid]="!!error" [attr.aria-describedby]="describedBy()" (input)="emitQuantityValue($event)" />
         <select class="emr-select" [id]="controlId + '-unit'" [value]="unit ?? ''" [disabled]="disabled" [attr.aria-readonly]="readOnly || null"
           [attr.aria-label]="label + ' unit'" [attr.aria-describedby]="describedBy()" (change)="emitUnit($event)">
-          @for (option of units; track option.value) { <option [value]="option.value" [disabled]="option.disabled">{{ option.label }}</option> }
+          @for (option of units; track option.value) { <option [value]="option.value" [selected]="option.value === unit" [disabled]="option.disabled">{{ option.label }}</option> }
         </select>
       </div>
       @if (hint) { <span class="emr-field__hint" [id]="controlId + '-hint'">{{ hint }}</span> }

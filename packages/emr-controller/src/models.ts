@@ -238,7 +238,8 @@ export type ClinicalMatrixIntent =
       type: 'cellAssessmentStatusEditRequested';
       rowId: string;
       columnId: string;
-      status: ClinicalAssessmentStatus;
+      /** `null` clears the status: "not set" is distinct from every one of the six statuses. */
+      status: ClinicalAssessmentStatus | null;
     }
   | { type: 'cellFocused'; rowId: string; columnId: string }
   | {

@@ -207,6 +207,16 @@ describe('ClinicalMatrixController', () => {
     expect(controller.getSnapshot().values.power.remark).toBe('');
     expect(controller.getSnapshot().lastExternalIntent).toMatchObject({ type: 'customCellIntent', action: 'open-scale' });
   });
+
+  it('clears a status on null rather than defaulting it to recorded', () => {
+    const controller = new ClinicalMatrixController(schema, values);
+    controller.dispatch({ type: 'cellAssessmentStatusEditRequested', rowId: 'power', columnId: 'right-arm', status: 'unable-to-assess' });
+    controller.dispatch({ type: 'cellAssessmentStatusEditRequested', rowId: 'power', columnId: 'right-arm', status: null });
+
+    const cell = controller.getSnapshot().values.power.cells['right-arm'];
+    expect('assessmentStatus' in cell).toBe(false);
+    expect(JSON.parse(JSON.stringify(cell))).not.toHaveProperty('assessmentStatus');
+  });
 });
 
 describe('HierarchyOrderController', () => {
