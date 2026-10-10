@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img">
+  <title>Horizontal cross-section of the globe, anterior at left</title>
+  <rect width="1400" height="1000" fill="#ffffff"/>
+  <g><path d="M405.6 330 A234.4 234.4 0 0 0 405.6 670.0 L415.2 659.8 A220.4 220.4 0 0 1 415.2 340.2 Z" fill="#cbd5e1" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g><path d="M424.6 341 A318 318 0 0 1 565.6 211.8 L583.4 249.9 L540 285 L520 312 L510 338 L498 318 L492 342 L482 322 L474 346 L462 330 L454 350 L438 354 L424 346 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g><path d="M420 348 C424 385 426 420 428 446 L440 448 C438 418 436 385 434 351" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g><path d="M456 352 L463 391 M476 347 L494 373 M502 340 L527 391" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(0 1000) scale(1 -1)"><path d="M424.6 341 A318 318 0 0 1 565.6 211.8 L583.4 249.9 L540 285 L520 312 L510 338 L498 318 L492 342 L482 322 L474 346 L462 330 L454 350 L438 354 L424 346 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M420 348 C424 385 426 420 428 446 L440 448 C438 418 436 385 434 351" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M456 352 L463 391 M476 347 L494 373 M502 340 L527 391" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path d="M495 372 C455 375 435 440 435 500 C435 560 455 625 495 628 C535 625 555 560 555 500 C555 440 535 375 495 372 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M335 500 L976 500" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M405.6 330 A340 340 0 0 1 1030.5 579.6" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M993.1 672.3 A340 340 0 0 1 405.6 670" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M424.6 341 A318 318 0 0 1 1002.4 598.4" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M985.9 639.2 A318 318 0 0 1 424.6 659" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M574.1 229.9 A298 298 0 0 1 983.8 590.9" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M967.3 631.7 A298 298 0 0 1 574.1 770.1" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M583.4 249.9 A276 276 0 0 1 975.6 484.6" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M975.6 484.6 Q996 500 975.6 515.4" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M975.6 515.4 A276 276 0 0 1 962.7 584.6" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M947.7 621.7 A276 276 0 0 1 583.4 750.1" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M574.1 229.9 L583.4 249.9" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M574.1 770.1 L583.4 750.1" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="rotate(22 700 500)"><path d="M976 480 L1018 478 C1030 478 1038 468 1050 466 L1290 466" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1036.3 450 L1290 450" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M976 520 L1018 522 C1030 522 1038 532 1050 534 L1290 534" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1036.3 550 L1290 550" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="790" y="580" font-family="system-ui, sans-serif" font-size="32" fill="#94a3b8" text-anchor="middle">Vitreous cavity</text>
+  <text x="495" y="590" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Lens</text>
+  <path d="M310 335.8 L366 380" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="300" y="345" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Cornea</text>
+  <path d="M310 510.8 L392 500" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="300" y="520" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Anterior chamber</text>
+  <path d="M310 690.8 L424 600" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="300" y="700" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Iris</text>
+  <path d="M440 100.8 L505 290" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="440" y="110" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Ciliary body</text>
+  <path d="M570 320.8 L512 367" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="580" y="330" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Zonules</text>
+  <path d="M1030 205.8 L911.5 248" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="1040" y="215" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Sclera</text>
+  <path d="M1030 255.8 L898 264.1" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="1040" y="265" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Choroid</text>
+  <path d="M1030 305.8 L884.5 280.1" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="1040" y="315" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Retina</text>
+  <path d="M1030 485.8 L980 500" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="1040" y="495" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Macula / fovea</text>
+  <path d="M880 850.8 L957 607" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="880" y="860" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Optic disc</text>
+  <path d="M1080 560.8 L1136 622" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="1090" y="570" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Nerve sheath (dura)</text>
+  <path d="M1110 820.8 L1136 676" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="1120" y="830" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Optic nerve</text>
+  <text x="60" y="950" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="start">Anterior</text>
+  <text x="1340" y="950" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="end">Posterior</text>
+</svg>

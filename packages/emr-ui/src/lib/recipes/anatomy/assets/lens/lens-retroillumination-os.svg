@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img">
+  <title>Lens retroillumination chart, left eye (OS): dilated pupil with clock hours</title>
+  <rect width="1200" height="1200" fill="#ffffff"/>
+  <circle cx="600" cy="600" r="430" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="600" cy="600" r="290" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <circle cx="600" cy="600" r="150" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M600 450 L600 170 M675 470.1 L815 227.6 M729.9 525 L972.4 385 M750 600 L1030 600 M729.9 675 L972.4 815 M675 729.9 L815 972.4 M600 750 L600 1030 M525 729.9 L385 972.4 M470.1 675 L227.6 815 M450 600 L170 600 M470.1 525 L227.6 385 M525 470.1 L385 227.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M600 170 L600 146 M815 227.6 L827 206.8 M972.4 385 L993.2 373 M1030 600 L1054 600 M972.4 815 L993.2 827 M815 972.4 L827 993.2 M600 1030 L600 1054 M385 972.4 L373 993.2 M227.6 815 L206.8 827 M170 600 L146 600 M227.6 385 L206.8 373 M385 227.6 L373 206.8" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round"/>
+  <text x="600" y="123" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">12</text>
+  <text x="1092" y="615" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">3</text>
+  <text x="600" y="1107" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">6</text>
+  <text x="108" y="615" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">9</text>
+  <text x="1092" y="680" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">T</text>
+  <text x="108" y="680" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">N</text>
+  <text x="60" y="82" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">OS</text>
+</svg>

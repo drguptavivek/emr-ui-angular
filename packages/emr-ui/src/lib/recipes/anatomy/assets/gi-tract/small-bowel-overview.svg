@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Small bowel overview from the duodenojejunal flexure to the ileocaecal valve with the mesentery root</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M290 80 C260 260 225 420 215 560 C205 700 225 860 285 1000 C325 1085 365 1130 400 1160 L600 1160 C635 1130 675 1085 715 1000 C775 860 795 700 785 560 C775 420 740 260 710 80" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M325 690 L325 885" fill="none" stroke="#475569" stroke-width="56" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M325 880 L325 990" fill="none" stroke="#475569" stroke-width="90" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M470 170 C470 255 540 270 548 345 C548 362 540 372 520 372 L455 372 C415 372 410 442 450 442 L690 442 C730 442 720 512 680 512 L445 512 C405 512 400 582 440 582 L665 582 C705 582 690 652 650 652 L435 652 C395 652 390 722 430 722 L630 722 C670 722 640 792 600 792 L420 792 C380 792 430 892 372 905" fill="none" stroke="#475569" stroke-width="38" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M325 690 L325 885" fill="none" stroke="#ffffff" stroke-width="44" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M325 880 L325 990" fill="none" stroke="#ffffff" stroke-width="78" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M470 170 C470 255 540 270 548 345 C548 362 540 372 520 372 L455 372 C415 372 410 442 450 442 L690 442 C730 442 720 512 680 512 L445 512 C405 512 400 582 440 582 L665 582 C705 582 690 652 650 652 L435 652 C395 652 390 722 430 722 L630 722 C670 722 640 792 600 792 L420 792 C380 792 430 892 372 905" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M346.0 687.5 L304.0 687.5" fill="none" stroke="#ffffff" stroke-width="7"/>
+  <path d="M482.0 167.3 L458.0 167.7" fill="none" stroke="#ffffff" stroke-width="7"/>
+  <path d="M325 680 L325 640" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 10"/>
+  <path d="M372 884 C386 896 386 914 372 926" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M548 350 C510 520 440 740 380 898" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <circle cx="548" cy="345" r="9" fill="#ffffff" stroke="#475569" stroke-width="4"/>
+  <text x="470" y="130" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Duodenum (D4)</text>
+  <path d="M558 340 L780 250" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="790" y="244" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Duodenojejunal</text><text x="790" y="274" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">flexure</text>
+  <path d="M690 442 L780 470" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="790" y="479" font-family="system-ui, sans-serif" font-size="28" fill="#475569">Jejunum</text>
+  <path d="M600 800 L690 820" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="700" y="829" font-family="system-ui, sans-serif" font-size="28" fill="#475569">Ileum</text>
+  <path d="M465 600 L210 540" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="200" y="549" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Mesentery root</text>
+  <path d="M372 905 L200 960" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="190" y="954" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Ileocaecal</text><text x="190" y="984" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">valve</text>
+  <path d="M290 990 L200 1060" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="190" y="1069" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Caecum</text>
+  <path d="M325 760 L200 660" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="190" y="654" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Ascending</text><text x="190" y="684" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">colon</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text><text x="950" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="500" y="60" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Anterior</text>
+</svg>

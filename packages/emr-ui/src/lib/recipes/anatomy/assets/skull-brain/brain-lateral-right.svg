@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img">
+  <title>Brain, right lateral view, anterior to the right of the drawing: lobes, central sulcus, Sylvian fissure, cerebellum, brainstem</title>
+  <rect width="1400" height="1000" fill="#ffffff"/>
+  <path d="M 384 530 C 360 610, 390 690, 470 716 C 550 742, 640 724, 690 670 C 706 648, 708 640, 700 636" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 408 600 C 470 640, 570 650, 665 625 M 420 645 C 485 685, 570 690, 672 660 M 445 684 C 505 712, 580 712, 645 694" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 718 645 C 712 690, 716 730, 724 760 C 730 800, 728 830, 726 862 M 796 640 C 826 675, 838 722, 814 750 C 792 778, 784 820, 778 862" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 716 725 C 750 735, 790 738, 812 738 M 726 796 C 745 800, 765 800, 780 796" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 1040 432 C 1046 330, 982 222, 882 177 C 782 132, 600 122, 500 162 C 400 197, 330 292, 316 402 C 310 440, 320 500, 372 520 C 440 545, 500 575, 560 600 C 620 625, 700 645, 790 640 C 860 635, 905 615, 915 585 C 922 565, 915 545, 930 530 C 975 525, 1030 490, 1040 432 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 770 150 C 790 230, 812 320, 842 430 M 610 160 C 640 230, 662 300, 682 380" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 890 562 C 800 548, 710 504, 632 442" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 930 530 C 840 508, 745 470, 650 396" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 690 146 C 705 220, 730 290, 745 340 C 755 380, 775 410, 790 460" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 505 164 C 480 240, 470 330, 462 560" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 650 396 C 580 396, 520 398, 468 404" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="920" y="330" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Frontal</text>
+  <text x="560" y="290" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Parietal</text>
+  <text x="392" y="410" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Occipital</text>
+  <text x="800" y="600" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Temporal</text>
+  <text x="540" y="765" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Cerebellum</text>
+  <text x="860" y="800" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Brainstem</text>
+  <text x="690" y="96" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Central sulcus</text>
+  <path d="M 690 106 L 690 146" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="960" y="660" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="start">Sylvian fissure</text>
+  <path d="M 956 648 L 932 534" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1340" y="90" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#475569" text-anchor="end">Anterior →</text>
+  <text x="60" y="90" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">← Posterior</text>
+</svg>

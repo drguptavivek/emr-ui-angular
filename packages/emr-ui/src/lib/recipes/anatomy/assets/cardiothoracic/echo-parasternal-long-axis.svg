@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1200" viewBox="0 0 1700 1200" role="img">
+  <title>Echo parasternal long-axis view, schematic</title>
+  <rect width="1700" height="1200" fill="#ffffff"/>
+  <g transform="translate(50 20)">
+  <path d="M800 50 L58 792 A1050 1050 0 0 0 1542 792 Z" fill="none" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="800" cy="50" r="8" fill="#ffffff" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M400 470 C480 360 700 275 930 265 C1020 270 1075 300 1085 345 C1040 380 980 388 900 390 C760 395 560 420 400 470 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M370 520 C510 470 700 442 880 432" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M400 470 L370 520" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M370 520 C330 620 400 740 520 800 C620 845 760 850 840 815" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M345 535 C290 650 370 800 520 870 C640 920 790 915 880 860" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M345 535 L370 520" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M890 622 C940 650 1000 656 1040 634 C1080 614 1120 610 1165 612 C1190 690 1180 790 1130 840 C1060 900 930 890 850 815 C860 760 870 690 890 622 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M880 432 C920 418 960 412 1010 420 C1060 428 1120 432 1170 433" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M885 612 C930 645 995 650 1035 628 C1075 606 1120 603 1170 603" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M890 432 C905 470 920 500 935 520" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M892 612 C905 570 920 545 935 522" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M886 618 C850 660 800 700 765 730" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M850 815 C830 800 805 785 790 775" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="960" cy="960" r="48" fill="none" stroke="#475569" stroke-width="5"/>
+  <text x="450" y="290" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">RV</text>
+  <path d="M460 280.4 L730 335" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="730" cy="335" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="360" y="395" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Interventricular septum</text>
+  <path d="M370 385.4 L600 432" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="600" cy="432" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="560" y="640" font-family="system-ui, sans-serif" font-size="40" text-anchor="start" font-weight="700" fill="#94a3b8">LV</text>
+  <text x="330" y="830" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Posterior wall</text>
+  <path d="M340 820.4 L520 835" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="520" cy="835" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1230" y="300" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">RVOT</text>
+  <path d="M1220 290.4 L1040 300" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1040" cy="300" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1280" y="400" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Aortic valve</text>
+  <path d="M1270 390.4 L920 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="920" cy="520" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1280" y="560" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Ascending aorta</text>
+  <path d="M1270 550.4 L1130 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1130" cy="520" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1280" y="760" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Left atrium</text>
+  <path d="M1270 750.4 L1050 760" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1050" cy="760" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="735" y="790" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Mitral valve</text>
+  <path d="M745 780.4 L780 748" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="780" cy="748" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1100" y="1015" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Descending aorta</text>
+  <path d="M1090 1005.4 L1000 985" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1000" cy="985" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="800" y="12" font-family="system-ui, sans-serif" font-size="28" text-anchor="middle" font-weight="700" fill="#94a3b8">Anterior</text>
+  <text x="800" y="1140" font-family="system-ui, sans-serif" font-size="28" text-anchor="middle" font-weight="700" fill="#94a3b8">Posterior</text>
+  <text x="30" y="1070" font-family="system-ui, sans-serif" font-size="26" text-anchor="start" font-weight="700" fill="#94a3b8">Parasternal long axis.</text>
+  <text x="30" y="1100" font-family="system-ui, sans-serif" font-size="26" text-anchor="start" font-weight="700" fill="#94a3b8">LV apex to viewer left,</text>
+  <text x="30" y="1130" font-family="system-ui, sans-serif" font-size="26" text-anchor="start" font-weight="700" fill="#94a3b8">aortic root to viewer right.</text>
+  </g>
+</svg>

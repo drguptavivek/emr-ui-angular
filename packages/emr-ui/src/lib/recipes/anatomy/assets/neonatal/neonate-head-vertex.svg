@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1200" viewBox="0 0 1400 1200" role="img">
+  <title>Newborn skull from above (vertex) with anterior and posterior fontanelles and sagittal, coronal, lambdoid and metopic sutures; face at the top, baby's right on the viewer's right</title>
+  <rect width="1400" height="1200" fill="#ffffff"/>
+  <path d="M700 150 C736.7 150 775.8 150.5 810 168 C844.2 185.5 881.7 217.2 905 255 C928.3 292.8 940.5 344.2 950 395 C959.5 445.8 963.7 504.2 962 560 C960.3 615.8 957 678.3 940 730 C923 781.7 900 838 860 870 C820 902 753.3 922 700 922 C646.7 922 580 902 540 870 C500 838 477 781.7 460 730 C443 678.3 439.7 615.8 438 560 C436.3 504.2 440.5 445.8 450 395 C459.5 344.2 471.7 292.8 495 255 C518.3 217.2 555.8 185.5 590 168 C624.2 150.5 663.3 150 700 150 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M438 515 C410 510 404 595 438 610" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M962 515 C990 510 996 595 962 610" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M664 152 C674 108 726 108 736 152" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700 288 L756 360 L700 432 L644 360 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700 432 L700 745" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700 288 L700 152" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700 744 L726 790 L674 790 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M642 362 C570 354 495 368 451 412" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M675 790 C610 800 550 820 510 842" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M758 362 C830 354 905 368 949 412" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M725 790 C790 800 850 820 890 842" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="410" y="215" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="end">Metopic suture</text>
+  <path d="M418 207 L698 215" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="410" y="400" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="end">Coronal suture</text>
+  <path d="M418 392 L550 362" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="410" y="840" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="end">Lambdoid suture</text>
+  <path d="M418 832 L585 825" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="990" y="350" font-family="system-ui, sans-serif" font-size="26" fill="#475569">Anterior fontanelle</text>
+  <path d="M982 342 L736 360" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="990" y="570" font-family="system-ui, sans-serif" font-size="26" fill="#475569">Sagittal suture</text>
+  <path d="M982 562 L702 570" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="990" y="780" font-family="system-ui, sans-serif" font-size="26" fill="#475569">Posterior fontanelle</text>
+  <path d="M982 772 L714 776" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="700" y="62" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="middle">Anterior (face)</text>
+  <text x="700" y="1000" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="middle">Posterior (occiput)</text>
+  <text x="700" y="1160" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Viewed from above, face at the top: baby's right on the viewer's right. Use for caput, cephalhaematoma, moulding and subgaleal swelling.</text>
+  <text x="50" y="610" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">L</text>
+  <text x="1350" y="610" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">R</text>
+</svg>

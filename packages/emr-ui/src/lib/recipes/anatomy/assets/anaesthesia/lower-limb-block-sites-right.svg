@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1800" viewBox="0 0 1900 1800" role="img">
+  <title>Right lower limb with nerve block sites, anterior view with posterior inset</title>
+  <rect width="1900" height="1800" fill="#ffffff"/>
+  <g transform="translate(120 0)">
+  <path d="M 262 90 C 238 180 232 290 240 360 C 246 460 250 560 262 700 C 268 790 272 850 278 905 C 262 960 250 1060 262 1160 C 275 1250 300 1340 308 1410 C 296 1480 290 1560 292 1640 C 292 1668 304 1686 322 1690 C 330 1708 352 1712 364 1704 C 378 1718 402 1722 414 1710 C 426 1724 454 1722 464 1702 C 480 1690 486 1664 480 1640 C 486 1580 470 1480 455 1410 C 470 1330 495 1230 508 1120 C 520 1040 520 960 530 880 C 580 700 650 520 700 400 C 722 372 745 345 760 330" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 760 90 L 760 330" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 310 175 C 420 220 600 290 715 335" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 396 828 A 42 42 0 1 1 395.9 828" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 340 1382 C 328 1396 330 1420 344 1428 M 458 1376 C 472 1392 470 1418 454 1424" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 395 1330 C 400 1400 412 1470 428 1520 M 360 1340 C 366 1410 380 1470 398 1520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="440" cy="250" r="13" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="440" cy="250" r="3.5" fill="#475569" stroke="none"/>
+  <circle cx="490" cy="294" r="13" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="490" cy="294" r="3.5" fill="#475569" stroke="none"/>
+  <circle cx="540" cy="646" r="13" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="540" cy="646" r="3.5" fill="#475569" stroke="none"/>
+  <circle cx="338" cy="1388" r="13" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="338" cy="1388" r="3.5" fill="#475569" stroke="none"/>
+  <circle cx="386" cy="1412" r="13" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="386" cy="1412" r="3.5" fill="#475569" stroke="none"/>
+  <circle cx="432" cy="1386" r="13" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="432" cy="1386" r="3.5" fill="#475569" stroke="none"/>
+  <text x="230" y="240" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Fascia iliaca</text>
+  <path d="M 238 231 L 427 250" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="840" y="300" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Femoral</text>
+  <path d="M 832 291 L 504 294" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="790" y="656" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Adductor canal</text>
+  <path d="M 782 647 L 553 648" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="230" y="1378" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Superficial peroneal</text>
+  <path d="M 238 1369 L 325 1388" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="640" y="1368" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Saphenous</text>
+  <path d="M 632 1359 L 445 1386" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="640" y="1456" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Deep peroneal</text>
+  <path d="M 632 1447 L 398 1418" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="396" y="945" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Patella</text>
+  <text x="432" y="156" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">ASIS</text>
+  <text x="790" y="396" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="start">Pubic tubercle</text>
+  <path d="M 782 387 L 718 340" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(1100 700)">
+  <path d="M 400 90 C 406 160 408 230 400 280 C 422 340 428 420 406 500 C 388 580 360 640 346 700 C 346 740 350 770 358 800 C 374 840 366 880 332 886 C 316 890 290 890 270 886 C 238 880 226 840 240 800 C 248 770 254 740 254 700 C 240 640 212 580 194 500 C 172 420 178 340 204 280 C 194 230 196 160 200 90" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 302 100 L 382 270 L 302 382 L 220 270 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 200 284 C 250 296 350 296 400 284" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 354 560 L 358 720 M 386 560 L 382 720" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 254 716 C 236 730 238 756 258 766 M 346 716 C 366 730 364 756 344 766" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="302" cy="168" r="13" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="302" cy="168" r="3.5" fill="#475569" stroke="none"/>
+  <circle cx="266" cy="736" r="11" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="266" cy="736" r="3.5" fill="#475569" stroke="none"/>
+  <circle cx="334" cy="740" r="11" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="334" cy="740" r="3.5" fill="#475569" stroke="none"/>
+  <text x="470" y="160" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Popliteal sciatic</text>
+  <path d="M 462 151 L 315 168" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="150" y="728" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Posterior tibial</text>
+  <path d="M 158 719 L 253 736" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="470" y="748" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Sural</text>
+  <path d="M 462 739 L 347 740" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="300" y="20" font-family="system-ui, sans-serif" font-size="24" fill="#475569" text-anchor="middle">Posterior view</text>
+  <text x="130" y="56" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="#475569" text-anchor="start">L</text>
+  <text x="470" y="56" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="#475569" text-anchor="end">R</text>
+  </g>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="1000" y="80" font-family="system-ui, sans-serif" font-size="24" fill="#475569" text-anchor="middle">Anterior view</text>
+</svg>

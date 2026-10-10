@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img">
+  <title>Larynx on laryngoscopy, abducted vocal cords, anterior at top</title>
+  <rect width="1200" height="1000" fill="#ffffff"/>
+  <path d="M 250 190 C 150 420 215 720 370 850 C 450 915 750 915 830 850 C 985 720 1050 420 950 190 C 850 135 350 135 250 190 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 340 195 C 450 165 750 165 860 195" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 385 410 C 395 295 490 238 600 238 C 710 238 805 295 815 410 C 765 358 690 338 600 338 C 510 338 435 358 385 410 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 392 405 C 365 530 395 660 478 765" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 808 405C 835 530 805 660 722 765" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 335 500 C 322 650 358 770 425 822 C 452 835 475 812 480 785" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 865 500C 878 650 842 770 775 822C 748 835 725 812 720 785" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 480 760 C 478 730 500 718 520 724 C 542 730 550 760 538 788 C 524 806 484 798 480 760 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 720 760C 722 730 700 718 680 724C 658 730 650 760 662 788C 676 806 716 798 720 760Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 538 795 C 570 818 630 818 662 795" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 598 410 C 550 505 497 605 468 705" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 602 410C 650 505 703 605 732 705" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 594 395 C 520 470 448 575 430 690" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 606 395C 680 470 752 575 770 690" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 600 442 C 590 550 566 650 545 730" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 600 442C 610 550 634 650 655 730" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 588 452 C 546 530 520 625 515 715" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 612 452C 654 530 680 625 685 715" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="962" y="165" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Base of tongue</text>
+  <path d="M 946 160 L 800 178" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="215" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Vallecula</text>
+  <text x="962" y="330" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Epiglottis</text>
+  <path d="M 946 326 L 800 310" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="962" y="480" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Aryepiglottic fold</text>
+  <path d="M 946 475 L 806 470" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="962" y="600" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">False cord</text>
+  <path d="M 946 595 L 760 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="962" y="710" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">True vocal cord</text>
+  <path d="M 946 705 L 670 620" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="962" y="830" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Arytenoid</text>
+  <path d="M 946 825 L 695 770" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="600" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Piriform fossa</text>
+  <path d="M 240 595 L 330 640" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="372" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Anterior commissure</text>
+  <path d="M 600 380 L 600 420" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="878" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Interarytenoid notch</text>
+  <path d="M 600 850 L 600 816" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="100" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="1140" y="100" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="600" y="90" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Anterior</text>
+  <text x="600" y="965" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Posterior</text>
+</svg>

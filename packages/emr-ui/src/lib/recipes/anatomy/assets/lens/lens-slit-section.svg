@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img">
+  <title>Lens slit-lamp optical section with anterior up: capsule, cortex and nuclear zones</title>
+  <rect width="1400" height="1000" fill="#ffffff"/>
+  <path d="M450 500 C462.5 340 575 250 700 250 C825 250 937.5 340 950 500 C937.5 685.6 825 790 700 790 C575 790 462.5 685.6 450 500 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M525 500 C533.75 388 612.5 325 700 325 C787.5 325 866.25 388 875 500 C866.25 629.9200000000001 787.5 703 700 703 C612.5 703 533.75 629.9200000000001 525 500 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M575 500 C581.25 420 637.5 375 700 375 C762.5 375 818.75 420 825 500 C818.75 592.8 762.5 645 700 645 C637.5 645 581.25 592.8 575 500 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M620 500 C624 448.8 660 420 700 420 C740 420 776 448.8 780 500 C776 559.392 740 592.8 700 592.8 C660 592.8 624 559.392 620 500 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M660 500 C662 474.4 680 460 700 460 C720 460 738 474.4 740 500 C738 529.696 720 546.4 700 546.4 C680 546.4 662 529.696 660 500 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M420 250 L700 250" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="250" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="412" y="259" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Anterior capsule</text>
+  <path d="M420 287.5 L700 287.5" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="287.5" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="412" y="296.5" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Anterior cortex</text>
+  <path d="M420 350 L700 350" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="350" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="412" y="359" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Adult nucleus</text>
+  <path d="M420 397.5 L700 397.5" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="397.5" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="412" y="406.5" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Infantile nucleus</text>
+  <path d="M420 440 L700 440" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="440" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="412" y="449" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Fetal nucleus</text>
+  <path d="M700 500 L980 500" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="500" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="988" y="509" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Embryonic nucleus</text>
+  <path d="M700 746.5 L980 746.5" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="746.5" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="988" y="755.5" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Posterior cortex</text>
+  <path d="M700 790 L980 790" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="790" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="988" y="799" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Posterior capsule</text>
+  <path d="M1180 110 L1010 235 M1041 230 L1010 235 L1024 207" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1190" y="110" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Slit beam</text>
+  <path d="M700 200 L700 130 M684 150 L700 130 L716 150" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="740" y="170" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Anterior</text>
+  <text x="740" y="900" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Posterior</text>
+  <path d="M700 830 L700 860 M684 842 L700 862 L716 842" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

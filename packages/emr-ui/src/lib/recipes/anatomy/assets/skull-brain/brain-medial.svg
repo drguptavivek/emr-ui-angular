@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img">
+  <title>Brain, midsagittal view, anterior to the left: corpus callosum, thalamus, ventricles, cerebellum, brainstem, pituitary</title>
+  <rect width="1400" height="1000" fill="#ffffff"/>
+  <path d="M 548 560 C 500 556, 440 548, 390 530 C 320 510, 275 495, 262 470 C 248 360, 310 235, 450 178 C 600 120, 880 112, 1010 185 C 1100 235, 1152 340, 1146 450 C 1144 500, 1118 522, 1082 526 C 1000 530, 920 520, 860 500 L 794 524" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 380 380 C 375 310, 430 262, 520 248 C 640 230, 790 245, 860 300 C 900 335, 895 385, 850 400 C 810 372, 760 320, 660 308 C 580 298, 500 324, 472 362 C 462 386, 442 404, 420 412 C 396 408, 380 396, 380 380 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 472 366 C 540 326, 660 320, 760 352 C 840 380, 886 432, 886 490 C 884 540, 836 576, 768 586 C 720 592, 680 586, 654 566 C 690 556, 740 552, 788 536 C 826 516, 836 480, 816 450 C 786 410, 700 386, 624 386 C 566 386, 520 400, 494 416" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 566 440 C 566 400, 616 396, 690 400 C 750 404, 782 434, 770 470 C 758 504, 690 510, 640 502 C 596 494, 566 476, 566 440 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="668" cy="440" r="12" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M 548 560 C 566 600, 590 630, 580 668 C 568 706, 590 740, 604 770 C 616 810, 626 860, 636 930 M 790 520 C 800 560, 790 600, 770 632 C 756 690, 760 760, 746 820 C 740 860, 742 900, 746 930" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 520 562 C 516 580, 514 592, 520 604" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="528" cy="632" rx="32" ry="24" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M 794 526 C 890 516, 1040 520, 1090 590 C 1150 680, 1100 790, 1000 830 C 910 862, 810 840, 752 800" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 880 575 C 960 565, 1030 580, 1062 640 M 900 635 C 970 625, 1030 640, 1066 700" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 700 515 C 730 560, 752 610, 756 650 M 756 650 L 832 710 L 750 790 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="640" y="214" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Corpus callosum</text>
+  <text x="668" y="490" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Thalamus</text>
+  <text x="960" y="450" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Lateral ventricle</text>
+  <text x="985" y="770" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Cerebellum</text>
+  <text x="560" y="860" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Brainstem</text>
+  <text x="470" y="640" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Pituitary</text>
+  <text x="846" y="716" font-family="system-ui, sans-serif" font-size="20" fill="#94a3b8" text-anchor="start">4th ventricle</text>
+  <text x="60" y="90" font-family="system-ui, sans-serif" font-size="36" font-weight="700" fill="#475569" text-anchor="start">Anterior</text>
+  <text x="1340" y="90" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Posterior</text>
+</svg>

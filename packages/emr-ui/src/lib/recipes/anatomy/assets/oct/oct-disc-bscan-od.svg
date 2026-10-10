@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img">
+  <title>OCT optic nerve head B-scan, right eye (OD): cup, rim RNFL, Bruch's membrane opening and lamina cribrosa</title>
+  <rect width="1600" height="1000" fill="#ffffff"/>
+  <path d="M90 280 C118.3 280.3 216.7 283.3 260 282 C303.3 280.7 326.7 278.2 350 272 C373.3 265.8 385 253 400 245 C415 237 426.7 216.5 440 224 C453.3 231.5 466.7 264 480 290 C493.3 316 508 350 520 380 C532 410 543.7 443.3 552 470 C560.3 496.7 565.3 518.3 570 540 C574.7 561.7 578.3 590 580 600" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700 600 C701.7 590 705.3 561.7 710 540 C714.7 518.3 719.7 496.7 728 470 C736.3 443.3 748 410 760 380 C772 350 786.7 316 800 290 C813.3 264 826.7 231.5 840 224 C853.3 216.5 865 237 880 245 C895 253 906.7 265.8 930 272 C953.3 278.2 976.7 280.7 1020 282 C1063.3 283.3 1161.7 280.3 1190 280" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90 320 C118.3 320.3 216.7 322.7 260 322 C303.3 321.3 326.7 319.7 350 316 C373.3 312.3 385 304.7 400 300 C415 295.3 426.7 281.3 440 288 C453.3 294.7 468 321.3 480 340 C492 358.7 506.7 390 512 400" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M768 400 C773.3 390 788 358.7 800 340 C812 321.3 826.7 294.7 840 288 C853.3 281.3 865 295.3 880 300 C895 304.7 906.7 312.3 930 316 C953.3 319.7 976.7 321.3 1020 322 C1063.3 322.7 1161.7 320.3 1190 320" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90 450 C125 450 248.3 449.2 300 450 C351.7 450.8 375 448.3 400 455 C425 461.7 435.7 477.8 450 490 C464.3 502.2 480 521.7 486 528" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M794 528 C800 521.7 815.7 502.2 830 490 C844.3 477.8 855 461.7 880 455 C905 448.3 928.3 450.8 980 450 C1031.7 449.2 1155 450 1190 450" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90 480 L470 480 L470 496 L90 496 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90 540 L490 540" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90 700 L472 700" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M490 540 L472 700 L462 900" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1190 480 L810 480 L810 496 L1190 496 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1190 540 L790 540" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1190 700 L808 700" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M790 540 L808 700 L818 900" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M474 648 C560 700 720 700 806 648 L808 674 C720 726 560 726 472 674 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="640" y="420" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Optic cup</text>
+  <text x="640" y="790" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Lamina cribrosa</text>
+  <path d="M640 760 L640 722" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="640" cy="719" r="7" fill="#94a3b8" stroke="none"/>
+  <path d="M350 175 L448 268" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="450" cy="270" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="60" y="170" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">RNFL thickening at rim</text>
+  <path d="M1230 175 L832 268" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="830" cy="270" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="1240" y="170" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Neuroretinal rim</text>
+  <path d="M480 592 L490 545" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="490" cy="542" r="7" fill="#94a3b8" stroke="none"/>
+  <path d="M850 592 L790 545" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="790" cy="542" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="350" y="612" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">BMO</text>
+  <text x="880" y="612" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">BMO</text>
+  <text x="220" y="400" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Retina</text>
+  <text x="1060" y="400" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Retina</text>
+  <text x="220" y="625" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Choroid</text>
+  <text x="1060" y="625" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Choroid</text>
+  <path d="M490 540 L790 540" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M1150 488 L1235 479" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1150" cy="488" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="1245" y="488" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">RPE</text>
+  <path d="M1150 540 L1235 536" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1150" cy="540" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="1245" y="545" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Bruch's membrane</text>
+  <text x="150" y="930" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">T</text>
+  <text x="1140" y="930" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">N</text>
+  <text x="60" y="82" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">OD</text>
+</svg>

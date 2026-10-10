@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img">
+  <title>Sigmoid colon, rectum and anal canal with distance from the anal verge</title>
+  <rect width="1200" height="1200" fill="#ffffff"/>
+  <path d="M480 480 C480 430 450 410 400 410 C300 410 250 360 290 290 C330 220 450 250 520 215 C590 180 650 150 690 90" fill="none" stroke="#475569" stroke-width="64" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M480 480 C480 430 450 410 400 410 C300 410 250 360 290 290 C330 220 450 250 520 215 C590 180 650 150 690 90" fill="none" stroke="#ffffff" stroke-width="52" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M670.7 73.9 L712.1 102.0" fill="none" stroke="#ffffff" stroke-width="7"/>
+  <path d="M451 478 L509 478 L509 484 L451 484 Z" fill="#ffffff" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M509 480 C520 520 556 560 560 640 C564 720 566 800 548 880 C540 905 520 915 504 930 L504 1070 C506 1086 520 1090 538 1086" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M451 480 C440 520 404 560 400 640 C396 720 394 800 412 880 C420 905 440 915 456 930 L456 1070 C454 1086 440 1090 422 1086" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M554 580 C536 574 516 580 505 592" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M396 740 C420 732 446 738 460 752" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M556 840 C536 832 516 838 505 852" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M452 926 L508 926" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M330 1080 L650 1080" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M150 880 L760 880 M150 680 L760 680 M150 480 L760 480" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M180 1080 L180 480" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M160 1080 L180 1080" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 1040 L180 1040" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 1000 L180 1000" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 960 L180 960" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 920 L180 920" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M160 880 L180 880" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 840 L180 840" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 800 L180 800" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 760 L180 760" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 720 L180 720" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M160 680 L180 680" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 640 L180 640" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 600 L180 600" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 560 L180 560" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 520 L180 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M160 480 L180 480" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="142" y="1089" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="end">0 cm</text>
+  <text x="142" y="889" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="end">5 cm</text>
+  <text x="142" y="689" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="end">10 cm</text>
+  <text x="142" y="489" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="end">15 cm</text>
+  <text x="180" y="1135" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Distance from the anal verge</text>
+  <path d="M880 486 L880 674" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="896" y="589" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Upper third</text>
+  <path d="M880 686 L880 874" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="896" y="789" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Middle third</text>
+  <path d="M880 886 L880 1074" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="896" y="989" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Lower third</text>
+  <path d="M509 482 L590 410" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="600" y="404" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Rectosigmoid</text><text x="600" y="434" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">junction</text>
+  <path d="M554 580 L590 576" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="600" y="585" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Valve of Houston</text>
+  <path d="M508 920 L590 920" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="600" y="929" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Anorectal junction</text>
+  <path d="M504 1000 L590 1000" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="600" y="1009" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Anal canal</text>
+  <text x="480" y="790" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Rectum</text>
+  <text x="215" y="349" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Sigmoid colon</text>
+  <text x="740" y="80" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Descending colon</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text><text x="1150" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="600" y="55" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Anterior</text>
+</svg>

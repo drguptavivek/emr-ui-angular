@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="1200" viewBox="0 0 1300 1200" role="img">
+  <title>Newborn head, left lateral view, with sutures, fontanelles, ear and face profile; face to the viewer's left</title>
+  <rect width="1300" height="1200" fill="#ffffff"/>
+  <path d="M720 1060 C718.3 1043.3 705.7 998.3 710 960 C714.3 921.7 734 872.5 746 830 C758 787.5 773.8 750 782 705 C790.2 660 798.3 609.2 795 560 C791.7 510.8 779.5 451.7 762 410 C744.5 368.3 718.7 334.7 690 310 C661.3 285.3 625 269 590 262 C555 255 511.7 260.8 480 268 C448.3 275.2 421.7 285.5 400 305 C378.3 324.5 360.8 357.5 350 385 C339.2 412.5 337.7 443.3 335 470 C332.3 496.7 335.5 525 334 545 C332.5 565 334.7 572.2 326 590 C317.3 607.8 282.7 635.3 282 652 C281.3 668.7 317.3 678.3 322 690 C326.7 701.7 310 712.3 310 722 C310 731.7 321.3 738.7 322 748 C322.7 757.3 310 764 314 778 C318 792 330 816 346 832 C362 848 387 855.2 410 874 C433 892.8 474 914 484 945 C494 976 472.3 1040.8 470 1060" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M580 560 C586.7 558 609 542.7 620 548 C631 553.3 642.7 575 646 592 C649.3 609 645.3 632.7 640 650 C634.7 667.3 624.3 689.3 614 696 C603.7 702.7 587 696 578 690 C569 684 563 665 560 660" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M598 585 C601.3 585.8 614.3 582.5 618 590 C621.7 597.5 622.7 619.2 620 630 C617.3 640.8 605 650.8 602 655" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M420 522 C415.8 519.7 403.7 508 395 508 C386.3 508 372.5 519.7 368 522" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M428 486 C422.5 483.3 407 470.3 395 470 C383 469.7 362.5 481.7 356 484" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M320 750 C323.7 751.3 335 757.7 342 758 C349 758.3 358.7 753 362 752" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M690 336 C678.3 330 645 307.3 620 300 C595 292.7 565 291.3 540 292 C515 292.7 481.7 302 470 304" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M452 318 C450.7 331.7 443 371.3 444 400 C445 428.7 451.7 465.8 458 490 C464.3 514.2 478 535.8 482 545" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M714 360 C716.7 375 731.3 416.7 730 450 C728.7 483.3 717.3 528.3 706 560 C694.7 591.7 673.3 618.3 662 640 C650.7 661.7 642 681.7 638 690" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M465 272 L487 306 L465 340 L443 306 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M705 327 L722 357 L688 357 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="830" y="330" font-family="system-ui, sans-serif" font-size="26" fill="#475569">Posterior fontanelle</text>
+  <path d="M822 322 L705 345" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="830" y="470" font-family="system-ui, sans-serif" font-size="26" fill="#475569">Lambdoid suture</text>
+  <path d="M822 462 L728 470" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="250" y="300" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="end">Anterior fontanelle</text>
+  <path d="M258 292 L465 312" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="250" y="400" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="end">Coronal suture</text>
+  <path d="M258 392 L446 380" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="830" y="240" font-family="system-ui, sans-serif" font-size="26" fill="#475569">Sagittal suture</text>
+  <path d="M822 232 L580 291" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1240" y="80" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Posterior</text>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Anterior</text>
+  <text x="1240" y="140" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="650" y="1165" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Left side of the head: face to the viewer's left. Use for caput, cephalhaematoma and moulding.</text>
+</svg>

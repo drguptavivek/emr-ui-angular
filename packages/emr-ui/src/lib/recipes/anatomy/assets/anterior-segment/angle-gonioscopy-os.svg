@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img">
+  <title>Gonioscopy angle chart, left eye (OS), with angle structure rings, quadrants S, N, I, T and clock hours</title>
+  <rect width="1400" height="1000" fill="#ffffff"/>
+  <circle cx="500" cy="500" r="390" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M110 500 a390 390 0 1 0 780 0 a390 390 0 1 0 -780 0 Z M155 500 a345 345 0 1 0 690 0 a345 345 0 1 0 -690 0 Z" fill="#cbd5e1" fill-rule="evenodd" stroke="none"/>
+  <circle cx="500" cy="500" r="345" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="500" cy="500" r="320" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="500" cy="500" r="255" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="500" cy="500" r="215" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M652 348 L775.8 224.2 M652 652 L775.8 775.8 M348 652 L224.2 775.8 M348 348 L224.2 224.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M500 110 L500 88 M890 500 L912 500 M500 890 L500 912 M110 500 L88 500" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round"/>
+  <text x="500" y="69" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">12</text>
+  <text x="946" y="515" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">3</text>
+  <text x="500" y="961" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">6</text>
+  <text x="54" y="515" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">9</text>
+  <text x="500" y="379" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">S</text>
+  <text x="500" y="649" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">I</text>
+  <text x="635" y="514" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">T</text>
+  <text x="365" y="514" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">N</text>
+  <path d="M807.4 260 L985 260" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="807.4" cy="260" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="998" y="269" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Schwalbe's line</text>
+  <path d="M808.3 300 L985 300" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="808.3" cy="300" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="998" y="309" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Trabecular meshwork</text>
+  <path d="M791.5 340 L985 340" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="791.5" cy="340" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="998" y="349" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Scleral spur</text>
+  <path d="M761.3 380 L985 380" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="761.3" cy="380" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="998" y="389" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Ciliary body band</text>
+  <path d="M721 420 L985 420" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="721" cy="420" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="998" y="429" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Iris root</text>
+  <text x="60" y="82" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">OS</text>
+</svg>

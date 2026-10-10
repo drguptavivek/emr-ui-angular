@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img">
+  <title>Lens sagittal cross-section with anterior up: capsule, cortex, nucleus, zonules, ciliary body and iris</title>
+  <rect width="1400" height="1000" fill="#ffffff"/>
+  <path d="M170 335 C300 335 440 350 585 372 L592 398 C450 396 320 398 200 405 Z" fill="#cbd5e1" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1230 335 C1100 335 960 350 815 372 L808 398 C950 396 1080 398 1200 405 Z" fill="#cbd5e1" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 335 C150 420 140 560 160 650 C170 700 190 740 215 770 L285 735 L300 690 L328 645 L296 618 L328 570 L296 538 L328 492 L296 462 L262 432 L200 405" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1230 335 C1250 420 1260 560 1240 650 C1230 700 1210 740 1185 770 L1115 735 L1100 690 L1072 645 L1104 618 L1072 570 L1104 538 L1072 492 L1104 462 L1138 432 L1200 405" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M328 492 L440 468 M328 492 L431 500 M328 570 L431 590 M328 645 L465 632" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1072 492 L960 468 M1072 492 L969 500 M1072 570 L969 590 M1072 645 L935 632" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M410 540 C425 440 550 385 700 385 C850 385 975 440 990 540 C975 650 850 725 700 725 C550 725 425 650 410 540 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M520 540 C525 480 610 455 700 455 C790 455 875 480 880 540 C875 610 790 650 700 650 C610 650 525 610 520 540 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <text x="700" y="560" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Nucleus</text>
+  <text x="700" y="432" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Cortex</text>
+  <path d="M700 380 L700 300" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="385" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="700" y="280" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Anterior capsule</text>
+  <path d="M700 730 L700 810" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="725" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="700" y="850" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Posterior capsule</text>
+  <text x="330" y="305" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Iris</text>
+  <text x="1070" y="305" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Iris</text>
+  <path d="M190 790 L190 604" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="190" cy="600" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="190" y="820" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Ciliary body</text>
+  <path d="M330 858 L318 652" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="316" cy="648" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="250" y="890" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Ciliary processes</text>
+  <path d="M1082 836 L1000 640" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1000" cy="640" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="1090" y="845" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="start">Zonules</text>
+  <path d="M700 150 L700 90 M684 110 L700 90 L716 110" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="740" y="130" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Anterior</text>
+  <text x="740" y="940" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Posterior</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1200" viewBox="0 0 1400 1200" role="img">
+  <title>Airway, sagittal view, endotracheal tube in position</title>
+  <rect width="1400" height="1200" fill="#ffffff"/>
+  <g transform="translate(100 0)">
+  <path d="M 850 1120 C 846 960 846 820 840 720 C 880 690 930 630 950 540 C 985 400 950 220 790 150 C 650 100 470 125 405 205 C 372 245 352 280 344 305 C 336 322 300 338 238 352 C 240 358 242 362 246 364" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 268 388 C 262 404 252 424 252 440 C 252 448 262 452 282 452" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 282 494 C 262 494 248 502 250 516 C 252 530 262 540 264 548 C 260 570 266 600 290 616 C 330 640 395 650 430 692 C 436 800 440 960 440 1120" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 252 368 C 320 338 450 334 560 354 C 620 364 670 350 700 346" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 274 392 L 291 424" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 291 424 L 540 420 C 585 424 612 450 604 502 C 596 480 570 452 540 444 L 292 448 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 296 512 C 375 484 452 496 505 535 C 530 556 534 590 522 624 C 505 646 488 660 470 664 C 420 640 360 612 322 580 C 296 556 288 532 296 512 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 458 672 C 466 662 486 662 494 672 C 486 686 466 686 458 672 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 538 706 C 524 664 526 620 546 580 C 556 590 570 612 568 650 C 566 676 558 694 556 706" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 700 346 C 706 480 708 650 702 760 C 696 790 676 806 668 830 L 668 1120" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 538 700 C 530 715 527 730 527 745 L 527 1058 L 527 1100" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 630 706 C 640 716 634 732 621 742 L 621 1100" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 527 688 C 505 690 484 702 484 730 C 484 754 498 770 527 780" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 527 786 C 508 786 502 796 504 806 C 506 816 518 818 527 816" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 621 740 C 640 738 648 748 648 770 L 648 800 C 648 812 632 814 621 810" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 527 704 L 546 710 L 527 716" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 527 727 L 557 735 L 527 742 Z" fill="#cbd5e1" stroke="#475569" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 621 722 L 598 731 L 621 741 Z" fill="#cbd5e1" stroke="#475569" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 511 822 L 527 822 M 511 846 L 527 846 M 511 870 L 527 870 M 511 894 L 527 894 M 511 918 L 527 918 M 511 942 L 527 942 M 511 966 L 527 966 M 511 990 L 527 990" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 548 1052 L 573 1012 L 598 1052" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 548 1052 C 548 1076 546 1090 546 1100 M 598 1052 C 598 1076 600 1090 600 1100" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="573" cy="842" rx="43" ry="36" fill="#cbd5e1" stroke="#475569" stroke-width="4"/>
+  <path d="M 585 818 L 585 803 L 585 789 L 585 774 L 585 760 L 585 746 L 586 743 L 587 739 L 588 734 L 590 730 L 591 725 L 593 721 L 594 717 L 596 712 L 598 708 L 600 703 L 602 698 L 604 694 L 605 689 L 607 684 L 609 679 L 611 674 L 613 668 L 614 663 L 616 657 L 617 651 L 618 645 L 619 639 L 620 633 L 621 626 L 621 619 L 621 612 L 621 606 L 620 599 L 620 592 L 618 586 L 616 579 L 614 573 L 612 566 L 609 560 L 606 554 L 602 548 L 598 542 L 593 536 L 588 531 L 583 525 L 577 520 L 571 515 L 564 510 L 557 505 L 550 501 L 542 496 L 534 492 L 525 488 L 516 484 L 507 480 L 497 477 L 487 474 L 477 471 L 467 468 L 457 466 L 447 464 L 436 462 L 426 461 L 415 460 L 404 459 L 394 458 L 383 457 L 372 457 L 361 457 L 350 457 L 339 458 L 328 458 L 317 459 L 306 460 L 296 461 L 285 463 L 272 465 L 259 470 L 247 475 L 206 462" fill="none" stroke="#475569" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="200" cy="436" rx="14" ry="24" fill="#cbd5e1" stroke="#475569" stroke-width="4"/>
+  <path d="M 215 502 L 276 477 C 360 464 450 468 520 500 C 588 530 612 575 608 625 C 604 675 580 705 572 745 L 572 905" fill="none" stroke="#475569" stroke-width="18"/>
+  <path d="M 215 502 L 276 477 C 360 464 450 468 520 500 C 588 530 612 575 608 625 C 604 675 580 705 572 745 L 572 905" fill="none" stroke="#ffffff" stroke-width="10"/>
+  <path d="M 257 456 L 271 502" fill="none" stroke="#475569" stroke-width="4" stroke-dasharray="6 5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="288" y="292" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Nasal cavity</text>
+  <path d="M 296 283 L 520 366" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="288" y="568" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Depth at lips</text>
+  <path d="M 296 559 L 368 504" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="268" y="436" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Pilot balloon</text>
+  <path d="M 276 427 L 286 436" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="288" y="668" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Tongue</text>
+  <path d="M 296 659 L 500 556" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="288" y="730" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Epiglottis</text>
+  <path d="M 296 721 L 640 652" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="288" y="800" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Vocal cords</text>
+  <path d="M 296 791 L 645 734" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="288" y="880" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Cuff</text>
+  <path d="M 296 871 L 631 850" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="288" y="960" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Trachea</text>
+  <path d="M 296 951 L 621 962" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1012" y="720" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">ETT</text>
+  <path d="M 1004 711 L 681 770" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1012" y="880" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Oesophagus</text>
+  <path d="M 1004 871 L 746 900" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1012" y="1010" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Carina</text>
+  <path d="M 1004 1001 L 680 1022" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="78" font-family="system-ui, sans-serif" font-size="28" fill="#475569" text-anchor="start">Anterior</text>
+  <text x="1340" y="78" font-family="system-ui, sans-serif" font-size="28" fill="#475569" text-anchor="end">Posterior</text>
+  <text x="60" y="1160" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="start">Midsagittal section, patient facing the viewer's left</text>
+</svg>

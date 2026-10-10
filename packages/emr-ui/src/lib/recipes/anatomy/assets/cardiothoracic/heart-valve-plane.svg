@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" role="img">
+  <title>Cardiac base valve plane seen from above, atria removed</title>
+  <rect width="1800" height="1200" fill="#ffffff"/>
+  <g transform="translate(220 0)">
+  <path d="M330 560 C320 380 360 230 470 185 C580 150 700 190 790 280 C870 350 1000 400 1070 520 C1130 620 1110 760 1040 830 C960 900 880 880 760 960 C690 1010 560 1070 450 1030 C350 990 335 800 330 560 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="470" cy="300" r="95" fill="none" stroke="#475569" stroke-width="5"/>
+  <path d="M470 300 L552 253" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M470 300 L470 395" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M470 300 L388 253" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="610" cy="600" r="150" fill="none" stroke="#94a3b8" stroke-width="5"/>
+  <circle cx="610" cy="600" r="108" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M610 600 L610 492" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M610 600 L704 654" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M610 600 L516 654" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M740 525 L796 493" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="740" cy="525" r="15" fill="#ffffff" stroke="#475569" stroke-width="4"/>
+  <path d="M480 525 L424 493" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="480" cy="525" r="15" fill="#ffffff" stroke="#475569" stroke-width="4"/>
+  <circle cx="905" cy="650" r="140" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M905 650 L835 529" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M905 650 L1045 650" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M905 650 L835 771" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="520" cy="880" rx="150" ry="105" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M372 872 C440 945 600 945 668 872" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="949" y="574" font-family="system-ui, sans-serif" font-size="24" text-anchor="middle" font-weight="700" fill="#94a3b8">Anterior</text>
+  <text x="817" y="650" font-family="system-ui, sans-serif" font-size="24" text-anchor="middle" font-weight="700" fill="#94a3b8">Septal</text>
+  <text x="949" y="726" font-family="system-ui, sans-serif" font-size="24" text-anchor="middle" font-weight="700" fill="#94a3b8">Posterior</text>
+  <text x="520" y="875" font-family="system-ui, sans-serif" font-size="26" text-anchor="middle" font-weight="700" fill="#94a3b8">Anterior leaflet</text>
+  <text x="520" y="958" font-family="system-ui, sans-serif" font-size="24" text-anchor="middle" font-weight="700" fill="#94a3b8">Posterior leaflet</text>
+  <text x="-130" y="70" font-family="system-ui, sans-serif" font-size="40" text-anchor="start" font-weight="700" fill="#475569">L</text>
+  <text x="1330" y="70" font-family="system-ui, sans-serif" font-size="40" text-anchor="end" font-weight="700" fill="#475569">R</text>
+  <text x="290" y="300" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Pulmonary valve</text>
+  <path d="M300 290.4 L400 300" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="400" cy="300" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="290" y="450" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Left main ostium</text>
+  <path d="M300 440.4 L424 493" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="424" cy="493" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="290" y="580" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Left coronary cusp</text>
+  <path d="M300 570.4 L558 570" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="558" cy="570" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="290" y="700" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Non-coronary cusp</text>
+  <path d="M300 690.4 L610 662" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="610" cy="662" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="290" y="830" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Mitral valve</text>
+  <path d="M300 820.4 L395 850" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="395" cy="850" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1180" y="330" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Right coronary ostium</text>
+  <path d="M1170 320.4 L796 493" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="796" cy="493" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1180" y="440" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Right coronary cusp</text>
+  <path d="M1170 430.4 L662 570" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="662" cy="570" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1180" y="650" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Tricuspid valve</text>
+  <path d="M1170 640.4 L1040 650" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1040" cy="650" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1180" y="800" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Aortic valve</text>
+  <path d="M1170 790.4 L716 706" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="716" cy="706" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="450" y="1150" font-family="system-ui, sans-serif" font-size="26" text-anchor="start" font-weight="700" fill="#94a3b8">Viewed from above with the atria removed.</text>
+  <text x="450" y="1182" font-family="system-ui, sans-serif" font-size="26" text-anchor="start" font-weight="700" fill="#94a3b8">Anterior at top, patient's right on viewer's right.</text>
+  <text x="650" y="150" font-family="system-ui, sans-serif" font-size="28" text-anchor="middle" font-weight="700" fill="#94a3b8">Anterior</text>
+  <text x="480" y="1100" font-family="system-ui, sans-serif" font-size="28" text-anchor="middle" font-weight="700" fill="#94a3b8">Posterior</text>
+  </g>
+</svg>

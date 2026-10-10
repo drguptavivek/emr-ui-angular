@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1200" viewBox="0 0 1900 1200" role="img">
+  <title>Lungs with bronchial tree to lobar level, anterior view</title>
+  <rect width="1900" height="1200" fill="#ffffff"/>
+  <g transform="translate(200 0)">
+  <path d="M455 116 C300 118 195 250 140 390 C95 560 112 840 210 965 C250 1022 330 1050 440 1056 C520 1058 580 1040 606 1010 C628 900 640 800 646 700 C654 610 650 520 642 420 C626 245 545 116 455 116 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M945 116 C1100 118 1205 250 1260 390 C1305 560 1288 840 1190 965 C1150 1022 1070 1050 960 1056 C880 1058 810 1045 786 1015 C782 970 776 930 784 880 C796 836 836 790 846 730 C852 695 832 664 806 622 C776 574 758 520 758 460 C762 250 840 118 945 118 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M455 150 C525 150 595 262 612 420 C620 520 622 610 612 700 C606 800 596 890 580 955 C500 995 330 1000 245 932 C150 835 128 560 175 400 C215 268 300 150 455 150 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M945 150 C875 150 800 262 788 420 C786 490 800 550 830 600 C858 646 880 676 872 720 C862 770 832 800 812 850 C802 880 804 925 812 957 C884 1000 1070 1000 1155 932 C1250 835 1272 560 1225 400 C1185 268 1100 150 945 150 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M163 556 C290 640 395 790 470 977" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M163 556 C300 522 470 505 613 522" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1236 478 C1170 600 1090 780 1000 985" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="590" cy="520" rx="46" ry="100" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10"/>
+  <ellipse cx="812" cy="520" rx="46" ry="100" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10"/>
+  <path d="M700 60 L700 340" fill="none" stroke="#475569" stroke-width="50" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M700 340 C672 380 640 430 595 475" fill="none" stroke="#475569" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700 340 C745 380 790 430 818 478" fill="none" stroke="#475569" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M595 475 C560 450 530 420 500 392" fill="none" stroke="#475569" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M595 475 C590 510 586 540 584 568" fill="none" stroke="#475569" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M584 568 C550 585 510 620 468 665" fill="none" stroke="#475569" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M584 568 C576 640 560 730 520 880" fill="none" stroke="#475569" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M818 478 C850 450 880 410 918 368" fill="none" stroke="#475569" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M818 478 C850 520 880 590 892 690" fill="none" stroke="#475569" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M818 478 C880 540 960 700 1010 880" fill="none" stroke="#475569" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700 60 L700 340" fill="none" stroke="#ffffff" stroke-width="40" stroke-linecap="square" stroke-linejoin="round"/>
+  <path d="M700 340 C672 380 640 430 595 475" fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700 340 C745 380 790 430 818 478" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M595 475 C560 450 530 420 500 392" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M595 475 C590 510 586 540 584 568" fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M584 568 C550 585 510 620 468 665" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M584 568 C576 640 560 730 520 880" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M818 478 C850 450 880 410 918 368" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M818 478 C850 520 880 590 892 690" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M818 478 C880 540 960 700 1010 880" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M684 90 L716 90" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M684 116 L716 116" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M684 142 L716 142" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M684 168 L716 168" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M684 194 L716 194" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M684 220 L716 220" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M684 246 L716 246" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M684 272 L716 272" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M684 298 L716 298" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M684 324 L716 324" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="-120" y="90" font-family="system-ui, sans-serif" font-size="40" text-anchor="start" font-weight="700" fill="#475569">R</text>
+  <text x="1520" y="90" font-family="system-ui, sans-serif" font-size="40" text-anchor="end" font-weight="700" fill="#475569">L</text>
+  <text x="60" y="230" font-family="system-ui, sans-serif" font-size="32" text-anchor="end" font-weight="700" fill="#94a3b8">RUL bronchus</text>
+  <path d="M70 219.76 L520 408" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="520" cy="408" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="60" y="600" font-family="system-ui, sans-serif" font-size="32" text-anchor="end" font-weight="700" fill="#94a3b8">RML bronchus</text>
+  <path d="M70 589.76 L500 628" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="500" cy="628" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="60" y="860" font-family="system-ui, sans-serif" font-size="32" text-anchor="end" font-weight="700" fill="#94a3b8">RLL bronchus</text>
+  <path d="M70 849.76 L530 840" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="530" cy="840" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="100" y="130" font-family="system-ui, sans-serif" font-size="32" text-anchor="end" font-weight="700" fill="#94a3b8">Parietal pleura</text>
+  <path d="M110 119.76 L260 201" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="260" cy="201" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="400" y="1140" font-family="system-ui, sans-serif" font-size="32" text-anchor="middle" font-weight="700" fill="#94a3b8">Costophrenic recess</text>
+  <path d="M400 1106 L323 1038" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="323" cy="1038" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="20" y="450" font-family="system-ui, sans-serif" font-size="32" text-anchor="end" font-weight="700" fill="#94a3b8">Hilum</text>
+  <path d="M30 439.76 L546 470" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="546" cy="470" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="760" y="130" font-family="system-ui, sans-serif" font-size="32" text-anchor="start" font-weight="700" fill="#94a3b8">Trachea</text>
+  <path d="M750 119.76 L724 130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="724" cy="130" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1320" y="250" font-family="system-ui, sans-serif" font-size="32" text-anchor="start" font-weight="700" fill="#94a3b8">LUL bronchus</text>
+  <path d="M1310 239.76 L905 380" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="905" cy="380" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1330" y="600" font-family="system-ui, sans-serif" font-size="32" text-anchor="start" font-weight="700" fill="#94a3b8">Lingular bronchus</text>
+  <path d="M1320 589.76 L880 640" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="880" cy="640" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1360" y="850" font-family="system-ui, sans-serif" font-size="32" text-anchor="start" font-weight="700" fill="#94a3b8">LLL bronchus</text>
+  <path d="M1350 839.76 L995 840" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="995" cy="840" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="900" y="450" font-family="system-ui, sans-serif" font-size="32" text-anchor="start" font-weight="700" fill="#94a3b8">Hilum</text>
+  <path d="M890 439.76 L858 470" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="858" cy="470" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1340" y="1130" font-family="system-ui, sans-serif" font-size="32" text-anchor="start" font-weight="700" fill="#94a3b8">Visceral pleura</text>
+  <path d="M1330 1119.76 L1243 690" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1243" cy="690" r="5" fill="#94a3b8" stroke="none"/>
+  </g>
+</svg>

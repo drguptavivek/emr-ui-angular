@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1100" viewBox="0 0 1400 1100" role="img">
+  <title>Liver, Couinaud segments, anterior view</title>
+  <rect width="1400" height="1100" fill="#ffffff"/>
+  <path d="M706 794 C742 832 742 900 702 942 C672 974 620 964 622 926 C626 880 664 832 694 796" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 600 C90 430 210 265 470 222 C600 200 780 190 950 205 C1100 222 1230 320 1300 425 C1250 540 1110 650 940 725 C880 752 800 790 700 800 C560 832 330 810 215 745 C150 705 105 660 100 600 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M690 203 C690 400 700 600 702 797" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M690 203 C560 262 380 470 250 762" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M947 207 C1040 330 1130 440 1228 524" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M947 207 C942 400 934 600 932 733" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M103 540 C350 520 560 535 702 540 C780 542 850 542 932 536" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="815" cy="445" rx="46" ry="30" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10"/>
+  <text x="545" y="420" font-family="system-ui, sans-serif" font-size="50" text-anchor="middle" font-weight="700" fill="#94a3b8">VIII</text>
+  <text x="520" y="665" font-family="system-ui, sans-serif" font-size="50" text-anchor="middle" font-weight="700" fill="#94a3b8">V</text>
+  <text x="255" y="425" font-family="system-ui, sans-serif" font-size="50" text-anchor="middle" font-weight="700" fill="#94a3b8">VII</text>
+  <text x="200" y="650" font-family="system-ui, sans-serif" font-size="50" text-anchor="middle" font-weight="700" fill="#94a3b8">VI</text>
+  <text x="818" y="340" font-family="system-ui, sans-serif" font-size="50" text-anchor="middle" font-weight="700" fill="#94a3b8">IVa</text>
+  <text x="815" y="665" font-family="system-ui, sans-serif" font-size="50" text-anchor="middle" font-weight="700" fill="#94a3b8">IVb</text>
+  <text x="815" y="463" font-family="system-ui, sans-serif" font-size="38" text-anchor="middle" font-weight="700" fill="#94a3b8">I</text>
+  <text x="1070" y="305" font-family="system-ui, sans-serif" font-size="50" text-anchor="middle" font-weight="700" fill="#94a3b8">II</text>
+  <text x="1030" y="520" font-family="system-ui, sans-serif" font-size="50" text-anchor="middle" font-weight="700" fill="#94a3b8">III</text>
+  <text x="60" y="90" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">R</text>
+  <text x="1300" y="90" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">L</text>
+  <path d="M742 890 L790 890" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="800" y="900" font-family="system-ui, sans-serif" font-size="32" text-anchor="start" fill="#94a3b8">Gallbladder</text>
+</svg>

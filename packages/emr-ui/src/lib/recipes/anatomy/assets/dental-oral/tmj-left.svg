@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img">
+  <title>Temporomandibular joint, left lateral schematic</title>
+  <rect width="1200" height="1000" fill="#ffffff"/>
+  <path d="M 1030 300C 960 322 900 330 860 345C 855 325 830 320 815 338C 800 300 740 272 640 270C 560 270 505 290 478 335C 455 358 415 350 390 322C 360 290 330 262 270 250" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 1030 262C 960 262 900 270 855 285C 840 270 820 268 805 280C 790 245 730 215 640 213C 550 213 495 235 465 280C 445 305 410 298 385 268C 355 235 325 208 270 195" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="945" cy="410" rx="52" ry="60" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M 726 830L 718 700C 705 620 700 570 718 525C 740 470 705 408 630 404C 555 400 500 440 510 500C 515 540 545 560 550 600C 555 650 538 750 524 830" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 768 364C 768 324 722 314 688 334C 655 358 600 358 568 338C 536 318 494 326 492 364C 490 394 510 408 532 396C 562 384 610 396 660 392C 695 388 730 432 760 400C 768 390 768 377 768 364Z" fill="#cbd5e1" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="660" y="160" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Glenoid fossa</text>
+  <path d="M 650 172L 644 268" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="470" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Articular eminence</text>
+  <path d="M 370 450L 432 355" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="370" y="580" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Condyle</text>
+  <path d="M 378 574L 508 500" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1140" y="720" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Articular disc</text>
+  <path d="M 940 705L 764 394" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1140" y="530" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">External auditory</text>
+  <text x="1140" y="566" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">meatus</text>
+  <path d="M 1020 510L 968 462" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1140" y="100" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="600" y="90" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Superior</text>
+  <text x="1140" y="960" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="end">Posterior</text>
+  <text x="60" y="960" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="start">Anterior</text>
+</svg>

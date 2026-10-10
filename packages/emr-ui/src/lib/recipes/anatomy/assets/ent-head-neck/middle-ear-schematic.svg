@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img">
+  <title>Middle ear and inner ear, coronal schematic of the right ear</title>
+  <rect width="1400" height="1000" fill="#ffffff"/>
+  <ellipse cx="805" cy="335" rx="52" ry="98" fill="none" stroke="#475569" stroke-width="4"/>
+  <ellipse cx="925" cy="385" rx="46" ry="100" transform="rotate(38 925 385)" fill="none" stroke="#475569" stroke-width="4"/>
+  <ellipse cx="955" cy="505" rx="100" ry="38" fill="none" stroke="#475569" stroke-width="4"/>
+  <ellipse cx="825" cy="490" rx="80" ry="66" fill="#ffffff" stroke="#475569" stroke-width="4"/>
+  <path d="M 829.7 648.8 L 843.9 634.1 L 860.6 622.8 L 879.1 615.3 L 898.6 611.9 L 918.1 612.6 L 936.8 617.2 L 954 625.7 L 968.8 637.3 L 980.8 651.7 L 989.4 668 L 994.3 685.5 L 995.5 703.5 L 992.9 721.1 L 986.8 737.6 L 977.5 752.3 L 965.5 764.5 L 951.4 773.8 L 935.8 780 L 919.5 782.7 L 903.3 781.9 L 887.7 777.8 L 873.6 770.7 L 861.4 760.9 L 851.7 749 L 844.7 735.4 L 840.9 721 L 840.1 706.2 L 842.4 691.9 L 847.6 678.5 L 855.3 666.7 L 865.2 656.9 L 876.7 649.5 L 889.3 644.8 L 902.4 642.8 L 915.4 643.6 L 927.7 647.1 L 938.9 652.9 L 948.4 660.9 L 955.9 670.4 L 961.1 681.2 L 963.9 692.5 L 964.3 704.1 L 962.3 715.2 L 958.1 725.4 L 951.9 734.4 L 944.2 741.7 L 935.3 747.1 L 925.7 750.5 L 915.7 751.7 L 906 750.8 L 896.9 748 L 888.7 743.4 L 881.9 737.4 L 876.6 730.2 L 873 722.2 L 871.3 713.9 L 871.3 705.7 L 873 697.8 L 876.3 690.7 L 880.8 684.6 L 886.4 679.7 L 892.7 676.3 L 899.4 674.3 L 906.2 673.8 L 912.6 674.7 L 918.6 676.9 L 923.7 680.2 L 927.9 684.4 L 931 689.2 L 932.8 694.4 L 933.5 699.6 L 933.1 704.6 L 931.7 709.2 L 929.4 713.2 L 926.4 716.5" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 830 649 L 755 616" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 90 425 C 200 440 320 438 408 432 C 400 400 392 360 396 335 C 440 285 640 270 730 318 C 740 330 742 350 742 370 L 742 640 C 770 700 900 790 1100 855" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 90 580 C 200 575 360 585 462 600 C 468 640 480 665 520 690 C 580 720 760 810 900 880 C 960 910 1010 925 1060 935" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 408 432 C 424 480 446 545 462 600" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 490 322 C 525 322 540 352 528 375 C 518 392 500 396 488 398 C 470 412 456 428 448 440 C 452 470 450 495 446 520 L 438 524 C 430 495 420 465 412 438 C 425 425 445 405 460 385 C 452 350 465 322 490 322 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 533 342 C 550 318 600 318 612 345 C 622 372 600 398 575 402 C 552 404 528 388 533 342 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 611 342 L 665 336" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 588 402 C 604 440 626 470 654 494" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="660" cy="498" rx="7" ry="7" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M 668 502 C 690 484 718 470 740 464" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 668 508 C 690 524 718 524 740 514" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 739 462 L 747 462 L 747 514 L 739 514 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="743" cy="488" rx="12" ry="38" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <ellipse cx="743" cy="612" rx="9" ry="22" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <text x="60" y="385" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">External auditory canal</text>
+  <path d="M 240 400 L 250 440" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="665" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Tympanic membrane</text>
+  <path d="M 270 650 L 436 535" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="380" y="255" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Malleus</text>
+  <path d="M 445 270 L 482 326" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="580" y="240" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Incus</text>
+  <path d="M 600 255 L 592 322" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="500" y="595" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Stapes</text>
+  <path d="M 560 575 L 690 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="736" y="430" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="end">Oval window</text>
+  <path d="M 740 436 L 743 450" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="728" y="655" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Round window</text>
+  <path d="M 735 640 L 741 630" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="790" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Middle-ear cavity</text>
+  <path d="M 325 780 L 540 658" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1110" y="300" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Semicircular canals</text>
+  <path d="M 1100 295 L 960 300" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1110" y="660" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Cochlea</text>
+  <path d="M 1100 655 L 1010 650" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1130" y="815" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Eustachian tube</text>
+  <path d="M 1120 810 L 1030 850" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1130" y="925" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">To nasopharynx</text>
+  <path d="M 1100 855 C 1090 885 1075 910 1060 935" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="100" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="60" y="955" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="start">Lateral</text>
+  <text x="1340" y="955" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="end">Medial</text>
+  <text x="700" y="90" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Superior</text>
+</svg>

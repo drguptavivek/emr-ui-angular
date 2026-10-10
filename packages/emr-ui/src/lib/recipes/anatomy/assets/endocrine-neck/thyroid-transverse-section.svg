@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img">
+  <title>Axial neck section at the thyroid level</title>
+  <rect width="1800" height="1100" fill="#ffffff"/>
+  <g transform="translate(200 0)">
+  <path d="M700 120 C1000 120 1220 260 1220 520 C1220 790 1000 920 700 920 C400 920 180 790 180 520 C180 260 400 120 700 120 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M610 700 C640 688 760 688 790 700 C800 730 800 770 790 790 C760 802 640 802 610 790 C600 770 600 730 610 700 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="850" r="42" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M610 760 C560 760 540 790 540 820 M790 760 C840 760 860 790 860 820" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="745" cy="595" rx="50" ry="34" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <path d="M715 595 L775 595" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700 318 C640 318 580 330 548 350 C505 372 478 410 474 465 C470 520 488 568 530 580 C575 590 615 565 628 520 L772 520 C785 565 825 590 870 580 C912 568 930 520 926 465 C922 410 895 372 852 350 C820 330 760 318 700 318 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700 365 C745 365 780 392 780 440 C780 480 765 515 740 520 L660 520 C635 515 620 480 620 440 C620 392 655 365 700 365 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700 392 C728 392 748 412 748 440 C748 468 732 490 700 490 C668 490 652 468 652 440 C652 412 672 392 700 392 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M692 258 C640 252 585 264 548 290 C528 306 520 322 522 338 L552 340 C560 318 592 300 640 294 C664 292 680 292 692 292 Z" fill="#ffffff" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M708 258 C760 252 815 264 852 290 C872 306 880 322 878 338 L848 340 C840 318 808 300 760 294 C736 292 720 292 708 292 Z" fill="#ffffff" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 330 C300 270 360 232 440 242 C500 250 520 272 505 304 C480 344 400 372 330 387 C295 387 285 360 290 330 Z" fill="#ffffff" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1110 330 C1100 270 1040 232 960 242 C900 250 880 272 895 304 C920 344 1000 372 1070 387 C1105 387 1115 360 1110 330 Z" fill="#ffffff" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="410" cy="475" r="36" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="990" cy="475" r="36" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <ellipse cx="335" cy="440" rx="54" ry="40" fill="#ffffff" stroke="#475569" stroke-width="4"/>
+  <ellipse cx="1065" cy="440" rx="54" ry="40" fill="#ffffff" stroke="#475569" stroke-width="4"/>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" text-anchor="start" font-weight="700" fill="#475569">R</text>
+  <text x="1340" y="80" font-family="system-ui, sans-serif" font-size="40" text-anchor="end" font-weight="700" fill="#475569">L</text>
+  <text x="700" y="100" font-family="system-ui, sans-serif" font-size="30" text-anchor="middle" font-weight="700" fill="#94a3b8">Anterior</text>
+  <text x="700" y="975" font-family="system-ui, sans-serif" font-size="30" text-anchor="middle" font-weight="700" fill="#94a3b8">Posterior</text>
+  <text x="150" y="240" font-family="system-ui, sans-serif" font-size="32" text-anchor="end" font-weight="700" fill="#94a3b8">Strap muscles</text>
+  <path d="M160 229.76 L570 300" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="570" cy="300" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="150" y="330" font-family="system-ui, sans-serif" font-size="32" text-anchor="end" font-weight="700" fill="#94a3b8">Sternocleidomastoid</text>
+  <path d="M160 319.76 L330 335" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="330" cy="335" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="150" y="440" font-family="system-ui, sans-serif" font-size="32" text-anchor="end" font-weight="700" fill="#94a3b8">Internal jugular vein</text>
+  <path d="M160 429.76 L300 445" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="300" cy="445" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="150" y="540" font-family="system-ui, sans-serif" font-size="32" text-anchor="end" font-weight="700" fill="#94a3b8">Common carotid artery</text>
+  <path d="M160 529.76 L385 495" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="385" cy="495" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="150" y="640" font-family="system-ui, sans-serif" font-size="32" text-anchor="end" font-weight="700" fill="#94a3b8">Right lobe</text>
+  <path d="M160 629.76 L510 530" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="510" cy="530" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="150" y="780" font-family="system-ui, sans-serif" font-size="32" text-anchor="end" font-weight="700" fill="#94a3b8">Vertebral body</text>
+  <path d="M160 769.76 L640 750" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="640" cy="750" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1250" y="240" font-family="system-ui, sans-serif" font-size="32" text-anchor="start" font-weight="700" fill="#94a3b8">Isthmus</text>
+  <path d="M1240 229.76 L740 340" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="740" cy="340" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1250" y="360" font-family="system-ui, sans-serif" font-size="32" text-anchor="start" font-weight="700" fill="#94a3b8">Trachea</text>
+  <path d="M1240 349.76 L760 440" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="760" cy="440" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1250" y="540" font-family="system-ui, sans-serif" font-size="32" text-anchor="start" font-weight="700" fill="#94a3b8">Left lobe</text>
+  <path d="M1240 529.76 L890 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="890" cy="520" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1250" y="650" font-family="system-ui, sans-serif" font-size="32" text-anchor="start" font-weight="700" fill="#94a3b8">Oesophagus</text>
+  <path d="M1240 639.76 L790 610" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="790" cy="610" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1250" y="860" font-family="system-ui, sans-serif" font-size="32" text-anchor="start" font-weight="700" fill="#94a3b8">Spinal canal</text>
+  <path d="M1240 849.76 L740 850" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="740" cy="850" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="700" y="1040" font-family="system-ui, sans-serif" font-size="28" text-anchor="middle" font-weight="700" fill="#94a3b8">Axial neck at the thyroid. Radiological orientation: patient right on viewer left.</text>
+  </g>
+</svg>

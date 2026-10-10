@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img">
+  <title>Child lower abdomen and groin with inguinal canals, rings and scrotum</title>
+  <rect width="1200" height="1200" fill="#ffffff"/>
+  <path d="M270 80 C240 300 232 520 250 680 C262 780 240 900 200 1110" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M930 80 C960 300 968 520 950 680 C938 780 960 900 1000 1110" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M440 990 C405 1040 385 1095 378 1135" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M760 990 C795 1040 815 1095 822 1135" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="600" cy="170" r="12" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M250 480 C275 530 300 580 322 612 M950 480 C925 530 900 580 878 612" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="322" cy="622" r="9" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <circle cx="878" cy="622" r="9" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M330 634 C390 690 440 750 474 790 M870 634 C810 690 760 750 726 790" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="480" cy="797" r="8" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <circle cx="720" cy="797" r="8" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M262 760 C300 870 380 950 440 990 M938 760 C900 870 820 950 760 990" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M404 676 C422 692 442 708 454 720 M796 676 C778 692 758 708 746 720" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <circle cx="392" cy="664" r="17" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="808" cy="664" r="17" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="462" cy="728" r="13" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="738" cy="728" r="13" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M600 825 C535 820 485 860 485 945 C485 1025 535 1068 600 1068 C665 1068 715 1025 715 945 C715 860 665 820 600 825" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M600 840 L600 1066" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="552" cy="965" rx="34" ry="48" fill="none" stroke="#94a3b8" stroke-width="3" transform="rotate(8 552 965)"/>
+  <ellipse cx="648" cy="965" rx="34" ry="48" fill="none" stroke="#94a3b8" stroke-width="3" transform="rotate(-8 648 965)"/>
+  <path d="M572 780 C570 830 570 870 572 895 C578 922 622 922 628 895 C630 870 630 830 628 780" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M574 905 C590 915 610 915 626 905" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M322 622 L215 560" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="205" y="569" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">ASIS</text>
+  <path d="M375 664 L215 680" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="205" y="689" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Deep ring</text>
+  <path d="M449 728 L215 790" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="205" y="784" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Superficial</text><text x="205" y="814" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">ring</text>
+  <path d="M776 700 L985 700" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="995" y="709" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Inguinal canal</text>
+  <path d="M860 650 L985 600" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="995" y="609" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Inguinal ligament</text>
+  <path d="M728 797 L985 810" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="995" y="819" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Pubic tubercle</text>
+  <path d="M715 960 L830 1000" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="840" y="1009" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Scrotum</text>
+  <path d="M680 980 L830 1050" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="840" y="1059" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Testis</text>
+  <path d="M628 840 L830 900" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="840" y="909" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Penis</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text><text x="1150" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="600" y="60" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Anterior</text>
+</svg>

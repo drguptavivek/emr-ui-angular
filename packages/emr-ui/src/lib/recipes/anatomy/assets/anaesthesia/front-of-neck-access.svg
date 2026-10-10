@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1100" viewBox="0 0 1100 1100" role="img">
+  <title>Front-of-neck access landmarks, anterior view</title>
+  <rect width="1100" height="1100" fill="#ffffff"/>
+  <path d="M 250 60 C 300 150 400 190 500 192 C 600 190 700 150 750 60" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 366 160 C 366 300 362 480 350 660 C 300 730 170 770 60 840" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 634 160 C 634 300 638 480 650 660 C 700 730 830 770 940 840" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 412 205 C 418 400 430 650 452 860 M 588 205 C 582 400 570 650 548 860" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 452 870 C 400 850 330 835 220 842 M 548 870 C 600 850 670 835 780 842" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 440 862 C 470 906 530 906 560 862" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 436 250 C 466 238 534 238 564 250 C 544 266 456 266 436 250 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 440 302 L 500 324 L 560 302 C 575 347 567 394 535 430 L 500 442 L 465 430 C 433 394 425 347 440 302 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 324 L 500 442" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 466 438 C 490 446 510 446 534 438 L 542 486 C 515 492 485 492 458 486 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 456 488 C 485 494 515 494 544 488 L 548 526 C 515 536 485 536 452 526 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 456 526 L 452 850 M 544 526 L 548 850" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 456 556 C 485 564 515 564 544 556 M 456 586 C 485 594 515 594 544 586 M 456 616 C 485 624 515 624 544 616 M 456 646 C 485 654 515 654 544 646 M 456 676 C 485 684 515 684 544 676 M 456 706 C 485 714 515 714 544 706 M 456 736 C 485 744 515 744 544 736 M 456 766 C 485 774 515 774 544 766 M 456 796 C 485 804 515 804 544 796 M 456 826 C 485 834 515 834 544 826" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="720" y="262" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Hyoid</text>
+  <path d="M 712 253 L 566 252" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="720" y="345" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Thyroid cartilage</text>
+  <path d="M 712 336 L 566 346" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="720" y="470" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Cricothyroid membrane</text>
+  <path d="M 712 461 L 546 466" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="720" y="560" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Cricoid cartilage</text>
+  <path d="M 712 551 L 550 512" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="720" y="680" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Tracheal rings</text>
+  <path d="M 712 671 L 548 668" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="500" y="990" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Sternal notch</text>
+  <path d="M 500 960 L 500 902" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="940" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="500" y="50" font-family="system-ui, sans-serif" font-size="28" fill="#475569" text-anchor="middle">Superior</text>
+  <text x="60" y="1060" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="start">Anterior neck, midline landmarks (laryngeal handshake)</text>
+</svg>

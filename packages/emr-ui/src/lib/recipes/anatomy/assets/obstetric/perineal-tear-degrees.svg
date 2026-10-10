@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1200" viewBox="0 0 1400 1200" role="img">
+  <title>Perineal tear degrees, lithotomy schematic: skin and vaginal epithelium, perineal muscles, external anal sphincter 3a and 3b, internal anal sphincter 3c, anorectal mucosa 4th degree; anterior at the top, patient's right on the viewer's left</title>
+  <rect width="1400" height="1200" fill="#ffffff"/>
+  <path d="M470 80 C520 80 580 95.8 620 125 C660 154.2 688.3 205.8 710 255 C731.7 304.2 738.3 362.5 750 420 C761.7 477.5 770.8 543.3 780 600 C789.2 656.7 808.3 706.7 805 760 C801.7 813.3 786.7 878.3 760 920 C733.3 961.7 693.3 988.3 645 1010 C596.7 1031.7 528.3 1050 470 1050 C411.7 1050 343.3 1031.7 295 1010 C246.7 988.3 206.7 961.7 180 920 C153.3 878.3 138.3 813.3 135 760 C131.7 706.7 150.8 656.7 160 600 C169.2 543.3 178.3 477.5 190 420 C201.7 362.5 208.3 304.2 230 255 C251.7 205.8 280 154.2 320 125 C360 95.8 420 80 470 80 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="470" cy="330" rx="85" ry="145" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="470" cy="484" r="8" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M360 484 L580 484 C570 600 640 690 670 830 A200 200 0 0 1 270 830 C300 690 370 600 360 484 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="470" cy="830" r="160" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="470" cy="830" r="120" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10"/>
+  <path d="M390 830 a80 80 0 1 0 160 0 a80 80 0 1 0 -160 0 Z M422 830 a48 48 0 1 1 96 0 a48 48 0 1 1 -96 0 Z" fill-rule="evenodd" fill="#cbd5e1" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="470" cy="830" r="24" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <text x="900" y="170" font-family="system-ui, sans-serif" font-size="28" fill="#475569">1st degree</text>
+  <text x="900" y="202" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">Vaginal epithelium and perineal skin only</text>
+  <text x="900" y="300" font-family="system-ui, sans-serif" font-size="28" fill="#475569">2nd degree</text>
+  <text x="900" y="332" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">Perineal muscles; anal sphincter intact</text>
+  <text x="900" y="470" font-family="system-ui, sans-serif" font-size="28" fill="#475569">3a</text>
+  <text x="900" y="502" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">EAS torn, less than 50% of thickness</text>
+  <text x="900" y="600" font-family="system-ui, sans-serif" font-size="28" fill="#475569">3b</text>
+  <text x="900" y="632" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">EAS torn, more than 50% of thickness</text>
+  <text x="900" y="730" font-family="system-ui, sans-serif" font-size="28" fill="#475569">3c</text>
+  <text x="900" y="762" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">EAS and internal anal sphincter (IAS) torn</text>
+  <text x="900" y="870" font-family="system-ui, sans-serif" font-size="28" fill="#475569">4th degree</text>
+  <text x="900" y="902" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">EAS, IAS and anorectal mucosa torn</text>
+  <path d="M890 178 L555 330" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M890 178 L770 420" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M890 308 L600 620" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M890 478 L584.7 749.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M890 608 L568.5 812.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M890 738 L531.8 846.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M890 878 L497.6 853.1" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="470" y="45" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Anterior (12 o'clock)</text>
+  <text x="470" y="1105" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Posterior (6 o'clock)</text>
+  <text x="700" y="1165" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Lithotomy: patient's right on the viewer's left. Classify by the deepest structure torn (RCOG / WHO).</text>
+  <text x="900" y="1030" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8">EAS = external anal sphincter</text>
+  <text x="900" y="1060" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8">IAS = internal anal sphincter</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text>
+  <text x="1350" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+</svg>

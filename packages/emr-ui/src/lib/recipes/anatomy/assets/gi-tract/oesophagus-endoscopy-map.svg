@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1400" viewBox="0 0 1000 1400" role="img">
+  <title>Oesophagus endoscopy map with distance scale from the incisors</title>
+  <rect width="1000" height="1400" fill="#ffffff"/>
+  <path d="M425 80 C455 110 465 150 465 200 L465 450 C465 468 482 474 482 490 C482 506 465 510 465 530 L465 640 C465 660 478 668 478 690 C478 710 465 716 465 736 L465 1090 C465 1150 430 1175 430 1240 L430 1345" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M575 80 C545 110 535 150 535 200 L535 1090 C535 1140 600 1170 690 1200 C790 1235 810 1310 770 1345" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M465 240 C490 250 510 250 535 240" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M465 272 C490 282 510 282 535 272" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M180 1110 C300 1100 420 1100 465 1115 M535 1115 C580 1100 700 1100 820 1110" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M465 1100 C470 1115 470 1135 465 1150 M535 1100 C530 1115 530 1135 535 1150" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M465 1152 L479 1184 L493 1152 L507 1184 L521 1152 L535 1184" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M455 1200 L545 1200" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M300 200 L300 1200" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M280 200 L300 200" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 240 L300 240" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 280 L300 280" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 320 L300 320" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 360 L300 360" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M280 400 L300 400" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 440 L300 440" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 480 L300 480" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 520 L300 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 560 L300 560" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M280 600 L300 600" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 640 L300 640" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 680 L300 680" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 720 L300 720" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 760 L300 760" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M280 800 L300 800" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 840 L300 840" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 880 L300 880" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 920 L300 920" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 960 L300 960" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M280 1000 L300 1000" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 1040 L300 1040" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 1080 L300 1080" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 1120 L300 1120" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 1160 L300 1160" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M280 1200 L300 1200" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="270" y="209" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="end">15 cm</text>
+  <text x="270" y="409" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="end">20 cm</text>
+  <text x="270" y="609" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="end">25 cm</text>
+  <text x="270" y="809" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="end">30 cm</text>
+  <text x="270" y="1009" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="end">35 cm</text>
+  <text x="270" y="1209" font-family="system-ui, sans-serif" font-size="26" fill="#475569" text-anchor="end">40 cm</text>
+  <text x="300" y="90" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="end">Distance from incisors</text>
+  <path d="M540 256 L630 256" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="640" y="265" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Upper oesophageal sphincter</text>
+  <path d="M482 490 L630 490" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="640" y="484" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Aortic arch</text><text x="640" y="514" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">indentation</text>
+  <path d="M478 690 L630 690" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="640" y="684" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Left main bronchus</text><text x="640" y="714" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">indentation</text>
+  <path d="M520 1100 L630 1065" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="640" y="1074" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Diaphragmatic hiatus</text>
+  <path d="M545 1168 L630 1176" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="640" y="1170" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Z-line (squamocolumnar</text><text x="640" y="1200" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">junction)</text>
+  <path d="M545 1200 L630 1310" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="640" y="1304" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Gastro-oesophageal</text><text x="640" y="1334" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">junction</text>
+  <path d="M430 1280 L340 1280" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="330" y="1289" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Stomach</text>
+  <text x="500" y="70" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Oesophagus</text>
+  <text x="500" y="1385" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Anterior</text>
+</svg>

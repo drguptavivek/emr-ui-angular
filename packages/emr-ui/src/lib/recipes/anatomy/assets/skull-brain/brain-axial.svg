@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img">
+  <title>Brain, axial slice at the level of the lateral ventricles and basal ganglia, radiological orientation: anterior up, patient right on the left of the image</title>
+  <rect width="1200" height="1200" fill="#ffffff"/>
+  <path d="M 600 150 C 760 150, 905 250, 960 430 C 1000 570, 995 760, 930 900 C 880 1005, 760 1075, 600 1078 C 440 1075, 320 1005, 270 900 C 205 760, 200 570, 240 430 C 295 250, 440 150, 600 150 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 962 530 C 935 548, 912 572, 905 610" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 608 410 C 650 395, 700 430, 695 495 C 692 540, 660 565, 625 560 C 612 520, 606 460, 608 410 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 698 440 C 740 430, 775 465, 772 515 C 770 560, 745 580, 712 578 C 716 540, 708 480, 698 440 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 612 652 C 640 632, 710 642, 735 692 C 750 742, 735 800, 690 810 C 645 818, 612 790, 612 652 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 765 630 C 780 592, 795 562, 806 550 C 872 542, 912 612, 912 682 C 912 742, 872 790, 818 796 C 802 750, 782 692, 765 630 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 830 596 C 848 650, 846 720, 824 772" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 790 535 C 774 572, 756 600, 738 630 C 756 700, 774 760, 788 812" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 650 852 C 690 828, 765 838, 782 888 C 790 932, 745 978, 690 1012 C 668 960, 640 918, 650 852 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 238 530 C 265 548 288 572 295 610" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 592 410 C 550 395 500 430 505 495 C 508 540 540 565 575 560 C 588 520 594 460 592 410 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 502 440 C 460 430 425 465 428 515 C 430 560 455 580 488 578 C 484 540 492 480 502 440 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 588 652 C 560 632 490 642 465 692 C 450 742 465 800 510 810 C 555 818 588 790 588 652 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 435 630 C 420 592 405 562 394 550 C 328 542 288 612 288 682 C 288 742 328 790 382 796 C 398 750 418 692 435 630 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 370 596 C 352 650 354 720 376 772" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 410 535 C 426 572 444 600 462 630 C 444 700 426 760 412 812" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 550 852 C 510 828 435 838 418 888 C 410 932 455 978 510 1012 C 532 960 560 918 550 852 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 600 150 L 600 1078" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="600" cy="690" rx="8" ry="92" fill="#ffffff" stroke="#94a3b8" stroke-width="3"/>
+  <text x="465" y="513" font-family="system-ui, sans-serif" font-size="20" fill="#94a3b8" text-anchor="middle">Caudate</text>
+  <text x="364" y="665" font-family="system-ui, sans-serif" font-size="20" fill="#94a3b8" text-anchor="middle">Basal</text>
+  <text x="364" y="689" font-family="system-ui, sans-serif" font-size="20" fill="#94a3b8" text-anchor="middle">ganglia</text>
+  <text x="500" y="735" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Thalamus</text>
+  <text x="480" y="880" font-family="system-ui, sans-serif" font-size="20" fill="#94a3b8" text-anchor="middle">Lateral</text>
+  <text x="480" y="903" font-family="system-ui, sans-serif" font-size="20" fill="#94a3b8" text-anchor="middle">ventricle</text>
+  <text x="815" y="332" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Internal capsule</text>
+  <path d="M 805 344 L 792 534" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="626" y="360" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="start">Falx</text>
+  <text x="60" y="640" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">R</text>
+  <text x="1140" y="640" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">L</text>
+  <text x="600" y="100" font-family="system-ui, sans-serif" font-size="36" font-weight="700" fill="#475569" text-anchor="middle">Anterior</text>
+  <text x="600" y="1150" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Posterior</text>
+</svg>

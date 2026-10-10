@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1200" viewBox="0 0 1700 1200" role="img">
+  <title>Echo parasternal short-axis view at papillary level, schematic</title>
+  <rect width="1700" height="1200" fill="#ffffff"/>
+  <g transform="translate(50 20)">
+  <path d="M800 50 L58 792 A1050 1050 0 0 0 1542 792 Z" fill="none" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="800" cy="50" r="8" fill="#ffffff" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M690 404 C400 300 300 800 633 839 A260 260 0 0 1 690 404 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="800" cy="640" r="260" fill="#ffffff" stroke="#475569" stroke-width="6"/>
+  <circle cx="800" cy="640" r="165" fill="none" stroke="#475569" stroke-width="5"/>
+  <path d="M883 497 L930 415" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M965 640 L1060 640" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M883 783 L930 865" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M718 783 L670 865" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M635 640 L540 640" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M717 497 L670 415" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="921" cy="710" r="34" fill="#cbd5e1" stroke="#475569" stroke-width="4"/>
+  <circle cx="679" cy="710" r="34" fill="#cbd5e1" stroke="#475569" stroke-width="4"/>
+  <text x="800" y="650" font-family="system-ui, sans-serif" font-size="44" text-anchor="middle" font-weight="700" fill="#94a3b8">LV</text>
+  <text x="494" y="652" font-family="system-ui, sans-serif" font-size="44" text-anchor="middle" font-weight="700" fill="#94a3b8">RV</text>
+  <text x="830" y="345" font-family="system-ui, sans-serif" font-size="30" text-anchor="middle" font-weight="700" fill="#94a3b8">Anterior</text>
+  <path d="M830 357 L800 428" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="800" cy="428" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1250" y="500" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Anterolateral</text>
+  <path d="M1240 490.4 L984 534" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="984" cy="534" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1250" y="780" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Inferolateral</text>
+  <path d="M1240 770.4 L984 746" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="984" cy="746" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="800" y="965" font-family="system-ui, sans-serif" font-size="30" text-anchor="middle" font-weight="700" fill="#94a3b8">Inferior</text>
+  <path d="M800 933 L800 852" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="800" cy="852" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="340" y="800" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Inferoseptal</text>
+  <path d="M350 790.4 L616 746" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="616" cy="746" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="340" y="470" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Anteroseptal</text>
+  <path d="M350 460.4 L616 534" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="616" cy="534" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1250" y="900" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Papillary muscles</text>
+  <path d="M1240 890.4 L921 710" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="921" cy="710" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="800" y="12" font-family="system-ui, sans-serif" font-size="28" text-anchor="middle" font-weight="700" fill="#94a3b8">Anterior</text>
+  <text x="800" y="1140" font-family="system-ui, sans-serif" font-size="28" text-anchor="middle" font-weight="700" fill="#94a3b8">Posterior</text>
+  <text x="30" y="1070" font-family="system-ui, sans-serif" font-size="26" text-anchor="start" font-weight="700" fill="#94a3b8">Parasternal short axis, papillary level.</text>
+  <text x="30" y="1100" font-family="system-ui, sans-serif" font-size="26" text-anchor="start" font-weight="700" fill="#94a3b8">Septum to viewer left,</text>
+  <text x="30" y="1130" font-family="system-ui, sans-serif" font-size="26" text-anchor="start" font-weight="700" fill="#94a3b8">lateral wall to viewer right.</text>
+  </g>
+</svg>

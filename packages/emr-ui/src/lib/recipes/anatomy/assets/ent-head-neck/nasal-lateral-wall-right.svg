@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img">
+  <title>Right lateral nasal wall, sagittal view, anterior to the left</title>
+  <rect width="1200" height="1000" fill="#ffffff"/>
+  <path d="M 165 645 C 135 635 112 610 108 575 C 105 545 125 515 150 478 C 190 415 232 345 262 305 C 285 300 300 318 312 332 C 400 340 500 340 560 332 C 600 324 700 322 745 340 C 785 420 790 600 775 830" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 165 645 C 160 690 175 725 200 745 C 270 738 420 732 650 732" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 650 732 C 700 737 745 762 758 807 C 760 832 740 847 720 837" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 580 336 C 580 400 590 470 650 482 C 705 490 740 455 745 405" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 450 388 C 485 366 550 366 592 386 C 550 410 485 416 450 388 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 345 500 C 352 455 440 452 520 462 C 565 470 596 495 604 520 C 545 536 440 548 372 540 C 350 536 342 520 345 500 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 285 635 C 290 592 400 585 520 600 C 585 610 625 640 645 668 C 560 684 420 692 322 680 C 292 676 283 655 285 635 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 362 512 C 430 500 520 505 580 522" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 300 640 C 400 628 520 638 622 662" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 662 490 L 662 732" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 698 600 C 698 558 740 548 748 588 C 752 620 725 640 705 625" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="725" cy="592" rx="11" ry="20" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M 235 480 C 228 540 228 640 238 742" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="470" y="440" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="start">Superior meatus</text>
+  <text x="430" y="576" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="start">Middle meatus</text>
+  <text x="400" y="716" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="start">Inferior meatus</text>
+  <text x="840" y="395" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Sphenoid sinus</text>
+  <path d="M 830 390 L 735 420" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="840" y="520" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Nasopharynx</text>
+  <path d="M 830 515 L 740 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="840" y="650" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Eustachian tube opening</text>
+  <path d="M 830 645 L 752 612" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="840" y="825" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Soft palate</text>
+  <path d="M 830 820 L 745 810" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="500" y="210" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Superior turbinate</text>
+  <path d="M 510 220 L 515 384" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="260" y="215" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Middle turbinate</text>
+  <path d="M 268 218 L 400 458" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="120" y="820" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Inferior turbinate</text>
+  <path d="M 250 805 L 330 686" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="560" y="870" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Hard palate</text>
+  <path d="M 560 850 L 560 738" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="100" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="600" y="90" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Superior</text>
+  <text x="60" y="950" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="start">Anterior</text>
+  <text x="1140" y="950" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="end">Posterior</text>
+</svg>

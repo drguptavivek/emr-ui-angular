@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="700" viewBox="0 0 1900 700" role="img">
+  <title>Cormack-Lehane laryngoscopic grades 1 to 4</title>
+  <rect width="1900" height="700" fill="#ffffff"/>
+  <g transform="translate(230 330)">
+  <ellipse cx="0" cy="0" rx="150" ry="150" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M -108 -70 C -120 -10 -88 50 -42 82" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 108 -70 C 120 -10 88 50 42 82" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0 -66 L -40 56" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0 -66 L 40 56" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -26 -30 L -22 -22 M 26 -30 L 22 -22" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -52 66 C -58 82 -38 96 -22 88 C -14 82 -18 68 -30 62 C -40 58 -48 60 -52 66 Z" fill="#cbd5e1" stroke="#475569" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 52 66 C 58 82 38 96 22 88 C 14 82 18 68 30 62 C 40 58 48 60 52 66 Z" fill="#cbd5e1" stroke="#475569" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -14 96 C -6 102 6 102 14 96" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -108.1 -104 C -102.1 -84 -50 -78 0 -78 C 50 -78 102.1 -84 108.1 -104 A 150 150 0 0 0 -108.1 -104 Z" fill="#ffffff" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="230" y="560" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Grade 1</text>
+  <text x="230" y="604" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Glottis fully visible</text>
+  <g transform="translate(590 330)">
+  <ellipse cx="0" cy="0" rx="150" ry="150" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M -108 -70 C -120 -10 -88 50 -42 82" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 108 -70 C 120 -10 88 50 42 82" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0 -66 L -40 56" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0 -66 L 40 56" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -26 -30 L -22 -22 M 26 -30 L 22 -22" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -52 66 C -58 82 -38 96 -22 88 C -14 82 -18 68 -30 62 C -40 58 -48 60 -52 66 Z" fill="#cbd5e1" stroke="#475569" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 52 66 C 58 82 38 96 22 88 C 14 82 18 68 30 62 C 40 58 48 60 52 66 Z" fill="#cbd5e1" stroke="#475569" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -14 96 C -6 102 6 102 14 96" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -108.1 -104 C -102.1 -54 -50 -4 0 -4 C 50 -4 102.1 -54 108.1 -104 A 150 150 0 0 0 -108.1 -104 Z" fill="#ffffff" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0 -84 L 0 -18" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="590" y="560" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Grade 2a</text>
+  <text x="590" y="604" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Posterior glottis visible</text>
+  <g transform="translate(950 330)">
+  <ellipse cx="0" cy="0" rx="150" ry="150" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M -108 -70 C -120 -10 -88 50 -42 82" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 108 -70 C 120 -10 88 50 42 82" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0 -66 L -40 56" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0 -66 L 40 56" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -26 -30 L -22 -22 M 26 -30 L 22 -22" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -52 66 C -58 82 -38 96 -22 88 C -14 82 -18 68 -30 62 C -40 58 -48 60 -52 66 Z" fill="#cbd5e1" stroke="#475569" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 52 66 C 58 82 38 96 22 88 C 14 82 18 68 30 62 C 40 58 48 60 52 66 Z" fill="#cbd5e1" stroke="#475569" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -14 96 C -6 102 6 102 14 96" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -108.1 -104 C -102.1 -29 -50 46 0 46 C 50 46 102.1 -29 108.1 -104 A 150 150 0 0 0 -108.1 -104 Z" fill="#ffffff" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0 -84 L 0 32" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="950" y="560" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Grade 2b</text>
+  <text x="950" y="604" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Arytenoids only</text>
+  <g transform="translate(1310 330)">
+  <ellipse cx="0" cy="0" rx="150" ry="150" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M -108.1 -104 C -102.1 4 -50 112 0 112 C 50 112 102.1 4 108.1 -104 A 150 150 0 0 0 -108.1 -104 Z" fill="#ffffff" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0 -84 L 0 98" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="1310" y="560" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Grade 3</text>
+  <text x="1310" y="604" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Epiglottis only</text>
+  <g transform="translate(1670 330)">
+  <ellipse cx="0" cy="0" rx="150" ry="150" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M -120 -30 C -60 -60 60 -60 120 -30" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -130 20 C -60 -10 60 -10 130 20" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -110 80 C -50 50 50 50 110 80" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0 -60 L 0 -10" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="1670" y="560" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Grade 4</text>
+  <text x="1670" y="604" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">No laryngeal structures</text>
+  <text x="230" y="150" font-family="system-ui, sans-serif" font-size="24" fill="#475569" text-anchor="middle">Anterior</text>
+  <text x="230" y="520" font-family="system-ui, sans-serif" font-size="24" fill="#475569" text-anchor="middle">Posterior</text>
+  <text x="950" y="64" font-family="system-ui, sans-serif" font-size="28" fill="#475569" text-anchor="middle">Laryngoscopic view</text>
+</svg>

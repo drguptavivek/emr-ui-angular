@@ -37,4 +37,19 @@ export const DENTAL_ORAL_RECIPES: readonly AnatomyTemplateRecipe[] = [
     laterality: 'bilateral', asset: 'dental-oral/oral-cavity.svg', width: 1200, height: 1000, provenance,
     description: 'Open-mouth view of the oral cavity showing upper and lower front teeth, buccal mucosa, hard and soft palate, uvula, tonsils between the pillars, posterior pharyngeal wall and tongue; patient\'s right on the viewer\'s left.',
   },
+  {
+    id: 'tooth-profile', version: 1, group: 'dental-oral', label: 'Tooth — longitudinal section', region: 'tooth', view: 'longitudinal',
+    laterality: 'not-applicable', asset: 'dental-oral/tooth-profile.svg', width: 1400, height: 1400, provenance,
+    description: 'One tooth in longitudinal section, crown up: enamel, dentine, pulp chamber, root canal, root, periodontal ligament, alveolar bone, gingiva and the cementoenamel junction.',
+  },
+  {
+    id: 'tmj-right', version: 1, group: 'dental-oral', label: 'TMJ — right', region: 'right temporomandibular joint', view: 'lateral',
+    laterality: 'right', asset: 'dental-oral/tmj-right.svg', width: 1200, height: 1000, provenance,
+    description: 'Lateral schematic of the right temporomandibular joint, anterior toward the viewer\'s right: condyle, articular disc, articular eminence, glenoid fossa and external auditory meatus.',
+  },
+  {
+    id: 'tmj-left', version: 1, group: 'dental-oral', label: 'TMJ — left', region: 'left temporomandibular joint', view: 'lateral',
+    laterality: 'left', asset: 'dental-oral/tmj-left.svg', width: 1200, height: 1000, provenance,
+    description: 'Lateral schematic of the left temporomandibular joint, anterior toward the viewer\'s left: condyle, articular disc, articular eminence, glenoid fossa and external auditory meatus.',
+  },
 ];

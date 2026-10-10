@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1300" viewBox="0 0 1800 1300" role="img">
+  <title>Heart four-chamber section, anterior view</title>
+  <rect width="1800" height="1300" fill="#ffffff"/>
+  <g transform="translate(260 0)">
+  <path d="M310 335 C400 300 520 300 610 330 L740 335 C820 318 885 340 920 390 C965 480 988 640 975 770 C960 930 890 1060 790 1110 C720 1135 640 1115 560 1070 C440 1010 320 890 285 740 C255 600 270 430 310 335 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M300 588 L588 602" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M760 606 L940 596" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M606 318 C606 400 606 480 606 540" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M626 330 C626 400 626 480 626 540" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M588 602 C598 760 640 940 706 1078" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M652 700 C662 790 692 930 744 1060" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M925 610 C935 720 925 860 880 960 C850 1020 800 1050 760 1062" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M312 600 C300 700 320 840 400 960 C470 1040 560 1075 640 1090" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M762 608 C760 660 748 710 738 760" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M936 598 C926 650 895 700 868 725" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M308 592 C330 640 380 690 430 715" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M586 606 C575 650 555 690 540 720" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M918 830 C884 822 858 842 860 872 C862 900 892 912 924 902 Z" fill="#cbd5e1" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M880 965 C846 955 820 977 824 1003 C828 1027 856 1035 886 1023 Z" fill="#cbd5e1" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M326 845 C354 835 378 850 376 875 C374 900 346 907 331 895 Z" fill="#cbd5e1" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M380 960 C410 950 436 965 432 990 C428 1010 402 1015 386 1004 Z" fill="#cbd5e1" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M738 760 C780 790 830 830 860 868" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M744 748 C760 850 790 940 828 1000" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M868 725 C872 780 868 830 862 862" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M430 715 C410 770 392 820 378 866" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M540 720 C490 800 440 900 432 988" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M545 712 C480 760 420 820 380 872" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M420 330 L420 120" fill="none" stroke="#475569" stroke-width="66" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M905 420 C960 410 1000 395 1045 385" fill="none" stroke="#475569" stroke-width="52" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M915 520 C970 525 1010 535 1055 545" fill="none" stroke="#475569" stroke-width="52" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M420 330 L420 120" fill="none" stroke="#ffffff" stroke-width="56" stroke-linecap="square" stroke-linejoin="round"/>
+  <path d="M905 420 C960 410 1000 395 1045 385" fill="none" stroke="#ffffff" stroke-width="42" stroke-linecap="square" stroke-linejoin="round"/>
+  <path d="M915 520 C970 525 1010 535 1055 545" fill="none" stroke="#ffffff" stroke-width="42" stroke-linecap="square" stroke-linejoin="round"/>
+  <path d="M690 665 L690 170" fill="none" stroke="#475569" stroke-width="102" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M690 665 L690 170" fill="none" stroke="#ffffff" stroke-width="90" stroke-linecap="square" stroke-linejoin="round"/>
+  <path d="M646 520 C620 540 620 578 646 596" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M734 520 C760 540 760 578 734 596" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M651 585 C660 622 690 630 690 600" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M729 585 C720 622 690 630 690 600" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="-20" y="70" font-family="system-ui, sans-serif" font-size="40" text-anchor="start" font-weight="700" fill="#475569">R</text>
+  <text x="1100" y="70" font-family="system-ui, sans-serif" font-size="40" text-anchor="end" font-weight="700" fill="#475569">L</text>
+  <text x="240" y="215" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">SVC</text>
+  <path d="M250 205.4 L410 215" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="410" cy="215" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="240" y="450" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Right atrium</text>
+  <path d="M250 440.4 L450 450" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="450" cy="450" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="240" y="570" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Interatrial septum</text>
+  <path d="M250 560.4 L606 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="606" cy="520" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="240" y="670" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Tricuspid valve</text>
+  <path d="M250 660.4 L365 668" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="365" cy="668" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="240" y="760" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Chordae tendineae</text>
+  <path d="M250 750.4 L405 780" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="405" cy="780" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="240" y="860" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Papillary muscle</text>
+  <path d="M250 850.4 L340 868" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="340" cy="868" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="240" y="960" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Right ventricle</text>
+  <path d="M250 950.4 L360 940" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="360" cy="940" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1090" y="200" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Aorta (LV outflow)</text>
+  <path d="M1080 190.4 L740 200" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="740" cy="200" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1090" y="450" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Left atrium</text>
+  <path d="M1080 440.4 L860 450" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="860" cy="450" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1090" y="330" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Pulmonary veins</text>
+  <path d="M1080 320.4 L1045 385" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1045" cy="385" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1090" y="570" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Aortic valve</text>
+  <path d="M1080 560.4 L735 585" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="735" cy="585" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1090" y="680" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Mitral valve</text>
+  <path d="M1080 670.4 L912 655" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="912" cy="655" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1090" y="790" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Left ventricle</text>
+  <path d="M1080 780.4 L905 780" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="905" cy="780" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1090" y="920" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Papillary muscles</text>
+  <path d="M1080 910.4 L925 905" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="925" cy="905" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="640" y="1215" font-family="system-ui, sans-serif" font-size="30" text-anchor="middle" font-weight="700" fill="#94a3b8">Interventricular septum</text>
+  <path d="M640 1183 L668 940" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="668" cy="940" r="5" fill="#94a3b8" stroke="none"/>
+  </g>
+</svg>

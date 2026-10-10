@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="1600" viewBox="0 0 1300 1600" role="img">
+  <title>Right upper limb with brachial plexus and wrist nerve block sites, anterior view</title>
+  <rect width="1300" height="1600" fill="#ffffff"/>
+  <g transform="translate(230 0)">
+  <path d="M 700 40 C 702 160 700 260 690 320 C 600 345 470 372 350 418 C 320 430 300 470 288 530 C 280 640 274 740 266 830 C 255 940 236 1040 216 1152 M 322 1152 C 346 1050 380 950 395 830 C 402 740 418 650 450 560 C 466 650 490 780 496 930" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path transform="translate(-61.9 0) scale(1.23 1)" d="M 226 1152 C 212 1172 192 1196 172 1222 C 156 1244 160 1266 180 1262 C 200 1250 216 1230 232 1214 L 232 1370 C 232 1388 255 1388 255 1370 L 255 1290 L 256 1388 C 256 1406 279 1406 279 1388 L 279 1290 L 279 1370 C 279 1388 302 1388 302 1370 L 302 1290 L 302 1330 C 302 1346 326 1346 326 1330 L 326 1290 C 328 1240 322 1200 312 1152" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 830 40 L 830 930" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 722 70 C 740 200 770 330 800 450 M 775 110 C 795 220 810 340 818 452" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 815 470 C 780 450 740 470 690 470 C 600 470 480 448 362 424" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 270 826 C 310 840 350 840 392 826" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 222 1140 C 255 1154 290 1154 320 1140" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 345 440 C 348 520 362 570 396 590" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="722" cy="236" r="13" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="722" cy="236" r="3.5" fill="#475569" stroke="none"/>
+  <circle cx="655" cy="428" r="13" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="655" cy="428" r="3.5" fill="#475569" stroke="none"/>
+  <circle cx="535" cy="526" r="13" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="535" cy="526" r="3.5" fill="#475569" stroke="none"/>
+  <circle cx="410" cy="616" r="13" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="410" cy="616" r="3.5" fill="#475569" stroke="none"/>
+  <circle cx="250" cy="1096" r="11" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="250" cy="1096" r="3.5" fill="#475569" stroke="none"/>
+  <circle cx="272" cy="1128" r="11" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="272" cy="1128" r="3.5" fill="#475569" stroke="none"/>
+  <circle cx="306" cy="1096" r="11" fill="none" stroke="#475569" stroke-width="5"/>
+  <circle cx="306" cy="1096" r="3.5" fill="#475569" stroke="none"/>
+  <text x="560" y="214" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Interscalene</text>
+  <path d="M 568 205 L 708 232" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="520" y="338" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Supraclavicular</text>
+  <path d="M 528 329 L 643 422" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="870" y="540" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Infraclavicular</text>
+  <path d="M 862 531 L 549 526" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="150" y="640" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Axillary</text>
+  <path d="M 158 631 L 396 616" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="150" y="1086" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Radial (wrist)</text>
+  <path d="M 158 1077 L 238 1098" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="150" y="1176" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Median (wrist)</text>
+  <path d="M 158 1167 L 261 1131" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="380" y="1086" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Ulnar (wrist)</text>
+  <path d="M 372 1077 L 319 1097" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="830" y="975" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Midline</text>
+  </g>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="60" y="1560" font-family="system-ui, sans-serif" font-size="24" fill="#475569" text-anchor="start">Anterior view, palm forward</text>
+</svg>

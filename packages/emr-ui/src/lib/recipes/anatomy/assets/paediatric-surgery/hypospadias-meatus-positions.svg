@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Penis in ventral view with hypospadias meatal positions along the midline</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M500 235 C420 235 365 290 365 380 C365 470 430 545 500 548 C570 545 635 470 635 380 C635 290 580 235 500 235" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 235 L500 548" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M436 512 C430 640 428 800 432 950" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M564 512 C570 640 572 800 568 950" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M432 950 C416 1000 420 1090 500 1110 C580 1090 584 1000 568 950" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M432 965 C470 985 530 985 568 965" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 548 L500 1090" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="500" cy="1075" r="11" fill="#cbd5e1" stroke="#475569" stroke-width="4"/>
+  <circle cx="500" cy="985" r="11" fill="#cbd5e1" stroke="#475569" stroke-width="4"/>
+  <circle cx="500" cy="880" r="11" fill="#cbd5e1" stroke="#475569" stroke-width="4"/>
+  <circle cx="500" cy="770" r="11" fill="#cbd5e1" stroke="#475569" stroke-width="4"/>
+  <circle cx="500" cy="655" r="11" fill="#cbd5e1" stroke="#475569" stroke-width="4"/>
+  <circle cx="500" cy="548" r="11" fill="#cbd5e1" stroke="#475569" stroke-width="4"/>
+  <circle cx="500" cy="400" r="11" fill="#cbd5e1" stroke="#475569" stroke-width="4"/>
+  <circle cx="500" cy="160" r="11" fill="#cbd5e1" stroke="#475569" stroke-width="4"/>
+  <path d="M512 1075 L680 1075" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="690" y="1084" font-family="system-ui, sans-serif" font-size="28" fill="#475569">Glanular</text>
+  <path d="M512 985 L680 985" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="690" y="994" font-family="system-ui, sans-serif" font-size="28" fill="#475569">Coronal</text>
+  <path d="M512 880 L680 880" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="690" y="889" font-family="system-ui, sans-serif" font-size="28" fill="#475569">Distal shaft</text>
+  <path d="M512 770 L680 770" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="690" y="779" font-family="system-ui, sans-serif" font-size="28" fill="#475569">Mid-shaft</text>
+  <path d="M512 655 L680 655" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="690" y="664" font-family="system-ui, sans-serif" font-size="28" fill="#475569">Proximal shaft</text>
+  <path d="M512 548 L680 548" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="690" y="557" font-family="system-ui, sans-serif" font-size="28" fill="#475569">Penoscrotal</text>
+  <path d="M512 400 L680 400" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="690" y="409" font-family="system-ui, sans-serif" font-size="28" fill="#475569">Scrotal</text>
+  <path d="M512 160 L680 160" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="690" y="169" font-family="system-ui, sans-serif" font-size="28" fill="#475569">Perineal</text>
+  <path d="M424 1035 L310 1035" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="300" y="1044" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Glans</text>
+  <path d="M440 972 L310 955" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="300" y="964" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Corona</text>
+  <path d="M430 740 L310 740" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="300" y="749" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Shaft</text>
+  <path d="M366 400 L310 400" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="300" y="409" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Scrotum</text>
+  <text x="500" y="60" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Proximal</text>
+  <text x="500" y="1170" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Ventral view (distal at the bottom)</text>
+</svg>

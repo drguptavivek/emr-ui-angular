@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1400" viewBox="0 0 1400 1400" role="img">
+  <title>Tooth in longitudinal section with supporting structures</title>
+  <rect width="1400" height="1400" fill="#ffffff"/>
+  <path d="M 580 620C 562 520 552 400 585 305C 610 238 652 218 700 218C 748 218 790 238 815 305C 848 400 838 520 820 620C 814 520 812 420 788 340C 768 282 736 250 700 250C 664 250 632 282 612 340C 588 420 586 520 580 620Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 581 590C 560 596 546 626 505 640C 462 654 428 650 400 646L 400 706C 460 696 510 692 558 700L 581 668Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 819 590C 840 596 854 626 895 640C 938 654 972 650 1000 646L 1000 706C 940 696 890 692 842 700L 819 668Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 400 1300L 400 706C 460 696 510 692 558 700" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 1000 1300L 1000 706C 940 696 890 692 842 700" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 558 700C 564 830 610 1010 666 1170C 678 1200 722 1200 734 1170C 790 1010 836 830 842 700" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 580 620C 562 520 552 400 585 305C 610 238 652 218 700 218C 748 218 790 238 815 305C 848 400 838 520 820 620C 812 800 765 1000 712 1150C 706 1166 694 1166 688 1150C 635 1000 588 800 580 620Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 648 345C 662 385 680 400 700 400C 720 400 738 385 752 345C 766 400 772 490 762 570C 756 620 740 700 720 860C 710 960 706 1060 703 1150L 697 1150C 694 1060 690 960 680 860C 660 700 644 620 638 570C 628 490 634 400 648 345Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 530 620L 580 620" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 870 620L 820 620" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1040" y="290" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Enamel</text>
+  <path d="M 1030 285 L 812 300" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1040" y="480" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Dentine</text>
+  <path d="M 1030 475 L 790 480" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1040" y="610" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Pulp chamber</text>
+  <path d="M 1030 605 L 752 470" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1040" y="780" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Root canal</text>
+  <path d="M 1030 775 L 716 780" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1040" y="940" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Periodontal ligament</text>
+  <path d="M 1030 935 L 802 920" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1040" y="1090" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Alveolar bone</text>
+  <path d="M 1030 1085 L 960 1040" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="360" y="420" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Crown</text>
+  <path d="M 372 415 L 556 420" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="360" y="625" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Cementoenamel junction</text>
+  <path d="M 372 620 L 530 620" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="360" y="780" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Gingiva</text>
+  <path d="M 372 775 L 490 668" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="360" y="1000" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Root</text>
+  <path d="M 372 995 L 620 960" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="700" y="100" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Occlusal</text>
+  <text x="700" y="1360" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Apical</text>
+</svg>

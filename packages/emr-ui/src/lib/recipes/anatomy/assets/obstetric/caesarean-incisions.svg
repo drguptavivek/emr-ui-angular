@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1200" viewBox="0 0 1400 1200" role="img">
+  <title>Pregnant lower abdomen, anterior view, with dashed reference caesarean incisions: Pfannenstiel transverse lower and midline vertical; patient's right on the viewer's left</title>
+  <rect width="1400" height="1200" fill="#ffffff"/>
+  <path d="M260 70 C254.2 101.7 233.7 193.3 225 260 C216.3 326.7 211.8 400 208 470 C204.2 540 202 615 202 680 C202 745 204.7 806.7 208 860 C211.3 913.3 216.7 958.3 222 1000 C227.3 1041.7 237 1091.7 240 1110" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M860 70 C865.8 101.7 886.3 193.3 895 260 C903.7 326.7 908.2 400 912 470 C915.8 540 918 615 918 680 C918 745 915.3 806.7 912 860 C908.7 913.3 903.3 958.3 898 1000 C892.7 1041.7 883 1091.7 880 1110" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M560 1015 C568 1060 588 1090 600 1110" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M215 975 C310 960 430 915 510 872" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="280" cy="690" r="14" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <text x="280" y="745" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">ASIS</text>
+  <path d="M560 1015 C552 1060 532 1090 520 1110" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M905 975 C810 960 690 915 610 872" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="840" cy="690" r="14" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <text x="840" y="745" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">ASIS</text>
+  <circle cx="560" cy="260" r="16" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="560" cy="830" r="11" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M360 722 Q560 796 760 722" fill="none" stroke="#94a3b8" stroke-width="4" stroke-dasharray="14 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M560 305 L560 790" fill="none" stroke="#94a3b8" stroke-width="4" stroke-dasharray="14 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M770 724 L950 724" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="960" y="732" font-family="system-ui, sans-serif" font-size="26" fill="#475569">Pfannenstiel</text>
+  <text x="960" y="764" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">(transverse lower)</text>
+  <path d="M570 420 L950 420" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="960" y="428" font-family="system-ui, sans-serif" font-size="26" fill="#475569">Midline</text>
+  <text x="960" y="460" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">(vertical)</text>
+  <path d="M580 260 L950 260" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="960" y="268" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Umbilicus</text>
+  <path d="M576 830 L950 830" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="960" y="838" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Pubic symphysis</text>
+  <text x="560" y="1165" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Anterior view: patient's right on the viewer's left. Dashed lines are reference guides only.</text>
+  <text x="560" y="45" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Anterior view</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text>
+  <text x="1350" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+</svg>

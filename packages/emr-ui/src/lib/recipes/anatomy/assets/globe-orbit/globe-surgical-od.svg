@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1400" viewBox="0 0 1400 1400" role="img">
+  <title>Globe for vitreoretinal surgery, right eye (OD), examiner's front view</title>
+  <rect width="1400" height="1400" fill="#ffffff"/>
+  <circle cx="700" cy="700" r="535" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="700" r="496.3" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M565 389.3 A338.8 338.8 0 0 1 835 389.3" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M565 389.3 L565 182.3" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M835 389.3 L835 182.3" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="700" y="300.3" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">SR 7.7</text>
+  <path d="M822.5 983.4 A308.8 308.8 0 0 1 577.5 983.4" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M822.5 983.4 L822.5 1220.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M577.5 983.4 L577.5 1220.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="700" y="1087.8" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">IR 6.5</text>
+  <path d="M952.9 571.3 A283.8 283.8 0 0 1 952.9 828.8" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M952.9 571.3 L1219.3 571.3" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M952.9 828.8 L1219.3 828.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1053.8" y="709" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">MR 5.5</text>
+  <path d="M402.7 815 A318.8 318.8 0 0 1 402.7 585" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M402.7 815 L177.5 815" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M402.7 585 L177.5 585" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="311.3" y="709" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">LR 6.9</text>
+  <circle cx="700" cy="700" r="146.3" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="700" r="52" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="486.7" cy="576.9" r="14" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="524.8" y="607.9" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">ST</text>
+  <circle cx="913.3" cy="576.9" r="14" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="875.2" y="607.9" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">SN</text>
+  <circle cx="486.7" cy="823.1" r="14" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="524.8" y="810.1" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">IT</text>
+  <path d="M700 165 L700 149" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M967.5 236.7 L975.5 222.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1163.3 432.5 L1177.2 424.5" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1235 700 L1251 700" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1163.3 967.5 L1177.2 975.5" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M967.5 1163.3 L975.5 1177.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M700 1235 L700 1251" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M432.5 1163.3 L424.5 1177.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M236.7 967.5 L222.8 975.5" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M165 700 L149 700" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M236.7 432.5 L222.8 424.5" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M432.5 236.7 L424.5 222.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="700" y="128" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">12</text>
+  <text x="1287" y="715" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">3</text>
+  <text x="700" y="1302" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">6</text>
+  <text x="113" y="715" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="middle">9</text>
+  <text x="1355" y="717" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="middle">N</text>
+  <text x="45" y="717" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="middle">T</text>
+  <text x="60" y="100" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="start">OD</text>
+  <path d="M1180 118 L1052 350" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1340" y="108" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Equator (buckle line)</text>
+  <text x="700" y="1340" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Ports about 4 mm from the limbus: ST superotemporal, SN superonasal, IT inferotemporal (infusion)</text>
+  <text x="700" y="1372" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Recti: approximate insertion distance from the limbus in mm. Clock hours as the examiner faces the patient.</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img">
+  <title>Cervix, colposcopic clock-face view</title>
+  <rect width="1200" height="1200" fill="#ffffff"/>
+  <path d="M600 210 C830 210 1005 375 1005 610 C1005 845 830 1010 600 1010 C370 1010 195 845 195 610 C195 375 370 210 600 210 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M600 395 C735 395 830 490 828 615 C826 735 730 828 600 828 C465 828 370 735 372 615 C374 490 465 395 600 395 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M600 580 C622 580 632 598 632 610 C632 624 622 640 600 640 C578 640 568 624 568 610 C568 598 578 580 600 580 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M809 248 L824 222" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M962 401 L988 386" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1018 610 L1070 610" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1125" y="626" font-family="system-ui, sans-serif" font-size="46" text-anchor="middle" fill="#94a3b8">3</text>
+  <path d="M962 819 L988 834" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M809 972 L824 998" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M600 1028 L600 1080" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="1151" font-family="system-ui, sans-serif" font-size="46" text-anchor="middle" fill="#94a3b8">6</text>
+  <path d="M391 972 L376 998" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M238 819 L212 834" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M182 610 L130 610" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="75" y="626" font-family="system-ui, sans-serif" font-size="46" text-anchor="middle" fill="#94a3b8">9</text>
+  <path d="M238 401 L212 386" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M391 248 L376 222" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M600 192 L600 140" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="101" font-family="system-ui, sans-serif" font-size="46" text-anchor="middle" fill="#94a3b8">12</text>
+  <text x="60" y="90" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">R</text>
+  <text x="1090" y="90" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">L</text>
+</svg>

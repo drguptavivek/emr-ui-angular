@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1400" viewBox="0 0 1200 1400" role="img">
+  <title>Term-pregnant abdomen, anterior view, with fundus, umbilicus and pubic symphysis and dashed level guides at the xiphisternum, umbilicus and symphysis; patient's right on the viewer's left</title>
+  <rect width="1200" height="1400" fill="#ffffff"/>
+  <path d="M255 90 C251.7 125 245 225 235 300 C225 375 205 460 195 540 C185 620 176.7 703.3 175 780 C173.3 856.7 178.3 933.3 185 1000 C191.7 1066.7 204.2 1123.3 215 1180 C225.8 1236.7 244.2 1313.3 250 1340" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M785 90 C788.3 125 795 225 805 300 C815 375 835 460 845 540 C855 620 863.3 703.3 865 780 C866.7 856.7 861.7 933.3 855 1000 C848.3 1066.7 835.8 1123.3 825 1180 C814.2 1236.7 795.8 1313.3 790 1340" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M520 1240 C528 1290 550 1320 565 1345" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M185 985 C270 1010 390 1080 475 1150" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M520 236 C450 252 350 290 275 380" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M520 1240 C512 1290 490 1320 475 1345" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M855 985 C770 1010 650 1080 565 1150" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M520 236 C590 252 690 290 765 380" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="520" cy="232" r="8" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M520 285 C710 285 792 470 778 710 C768 910 700 1040 520 1085 C340 1040 272 910 262 710 C248 470 330 285 520 285 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="520" cy="720" r="16" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="520" cy="1130" r="11" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M140 232 L900 232" fill="none" stroke="#94a3b8" stroke-width="4" stroke-dasharray="14 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M140 720 L900 720" fill="none" stroke="#94a3b8" stroke-width="4" stroke-dasharray="14 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M140 1130 L900 1130" fill="none" stroke="#94a3b8" stroke-width="4" stroke-dasharray="14 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="930" y="240" font-family="system-ui, sans-serif" font-size="26" fill="#475569">Xiphisternum</text>
+  <text x="930" y="728" font-family="system-ui, sans-serif" font-size="26" fill="#475569">Umbilicus</text>
+  <text x="930" y="1138" font-family="system-ui, sans-serif" font-size="26" fill="#475569">Pubic symphysis</text>
+  <path d="M906 232 L922 232" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M906 720 L922 720" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M906 1130 L922 1130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="930" y="330" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Fundus</text>
+  <path d="M560 287 L922 322" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="520" y="45" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Anterior view</text>
+  <text x="520" y="1385" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Patient's right on the viewer's left. Dashed lines are level guides only.</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text>
+  <text x="1150" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+</svg>

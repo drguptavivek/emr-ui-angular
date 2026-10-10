@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1000" viewBox="0 0 1800 1000" role="img">
+  <title>Neonatal perineum in lithotomy, male and female, with the normal anal position</title>
+  <rect width="1800" height="1000" fill="#ffffff"/>
+  <path d="M450 95 C570 95 690 240 712 420 C730 580 670 740 580 805 C530 840 490 862 450 862 C410 862 370 840 320 805 C230 740 170 580 188 420 C210 240 330 95 450 95" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M350 255 C350 195 400 180 450 180 C500 180 550 195 550 255 C550 335 500 400 450 400 C400 400 350 335 350 255" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M422 100 C422 140 422 160 424 182 M478 100 C478 140 478 160 476 182" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M450 400 L450 509 M450 581 L450 760" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M450 190 L450 400" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 9"/>
+  <circle cx="450" cy="545" r="36" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10"/>
+  <circle cx="450" cy="545" r="6" fill="none" stroke="#475569" stroke-width="4"/>
+  <text x="450" y="42" font-family="system-ui, sans-serif" font-size="36" font-weight="700" fill="#475569" text-anchor="middle">Male</text>
+  <text x="450" y="74" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Anterior</text>
+  <text x="450" y="940" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Posterior</text>
+  <text x="70" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text>
+  <text x="830" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <path d="M486 545 L740 545" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="750" y="539" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Normal anal</text><text x="750" y="569" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">position</text>
+  <path d="M444 545 L390 545" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="380" y="554" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Anal dimple</text>
+  <path d="M450 470 L330 470" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="320" y="464" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Perineal</text><text x="320" y="494" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">body</text>
+  <path d="M550 280 L740 280" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="750" y="289" font-family="system-ui, sans-serif" font-size="28" fill="#475569">Scrotum</text>
+  <path d="M1350 95 C1470 95 1590 240 1612 420 C1630 580 1570 740 1480 805 C1430 840 1390 862 1350 862 C1310 862 1270 840 1220 805 C1130 740 1070 580 1088 420 C1110 240 1230 95 1350 95" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1350 150 C1290 170 1270 260 1295 350 C1308 395 1335 425 1350 432 C1365 425 1392 395 1405 350 C1430 260 1410 170 1350 150" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1350 215 C1325 230 1325 330 1350 365 C1375 330 1375 230 1350 215" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1350" cy="250" r="4" fill="none" stroke="#475569" stroke-width="3"/>
+  <circle cx="1350" cy="335" r="5" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M1350 432 L1350 509 M1350 581 L1350 760" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1350" cy="545" r="36" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10"/>
+  <circle cx="1350" cy="545" r="6" fill="none" stroke="#475569" stroke-width="4"/>
+  <text x="1350" y="42" font-family="system-ui, sans-serif" font-size="36" font-weight="700" fill="#475569" text-anchor="middle">Female</text>
+  <text x="1350" y="74" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Anterior</text>
+  <text x="1350" y="940" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Posterior</text>
+  <text x="970" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text>
+  <text x="1730" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <path d="M1386 545 L1640 545" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="1650" y="539" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Normal anal</text><text x="1650" y="569" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">position</text>
+  <path d="M1344 545 L1290 545" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="1280" y="554" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Anal dimple</text>
+  <path d="M1350 487 L1230 487" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="1220" y="481" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Perineal</text><text x="1220" y="511" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">body</text>
+  <path d="M1430 290 L1640 290" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="1650" y="299" font-family="system-ui, sans-serif" font-size="28" fill="#475569">Vulva</text>
+  <path d="M900 100 L900 900" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="1400" viewBox="0 0 1300 1400" role="img">
+  <title>Lumbosacral spine, lateral view, with neuraxial landmarks</title>
+  <rect width="1300" height="1400" fill="#ffffff"/>
+  <path d="M 266 90 L 424 90 Q 440 90 440 106 L 440 192 Q 440 208 424 208 L 266 208 Q 250 208 250 192 L 250 106 Q 250 90 266 90 Z" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="345" y="159" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">T12</text>
+  <path d="M 570 94 L 570 204" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 570 108 C 610 112 650 120 682 130 C 686 148 680 164 672 170 C 640 178 610 182 570 188 Z" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 266 244 L 424 244 Q 440 244 440 260 L 440 346 Q 440 362 424 362 L 266 362 Q 250 362 250 346 L 250 260 Q 250 244 266 244 Z" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="345" y="313" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">L1</text>
+  <path d="M 570 248 L 570 358" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 570 262 C 610 266 650 274 682 284 C 686 302 680 318 672 324 C 640 332 610 336 570 342 Z" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 266 398 L 424 398 Q 440 398 440 414 L 440 500 Q 440 516 424 516 L 266 516 Q 250 516 250 500 L 250 414 Q 250 398 266 398 Z" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="345" y="467" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">L2</text>
+  <path d="M 570 402 L 570 512" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 570 416 C 610 420 650 428 682 438 C 686 456 680 472 672 478 C 640 486 610 490 570 496 Z" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 266 552 L 424 552 Q 440 552 440 568 L 440 654 Q 440 670 424 670 L 266 670 Q 250 670 250 654 L 250 568 Q 250 552 266 552 Z" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="345" y="621" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">L3</text>
+  <path d="M 570 556 L 570 666" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 570 570 C 610 574 650 582 682 592 C 686 610 680 626 672 632 C 640 640 610 644 570 650 Z" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 266 706 L 424 706 Q 440 706 440 722 L 440 808 Q 440 824 424 824 L 266 824 Q 250 824 250 808 L 250 722 Q 250 706 266 706 Z" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="345" y="775" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">L4</text>
+  <path d="M 570 710 L 570 820" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 570 724 C 610 728 650 736 682 746 C 686 764 680 780 672 786 C 640 794 610 798 570 804 Z" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 266 860 L 424 860 Q 440 860 440 876 L 440 962 Q 440 978 424 978 L 266 978 Q 250 978 250 962 L 250 876 Q 250 860 266 860 Z" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="345" y="929" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">L5</text>
+  <path d="M 570 864 L 570 974" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 570 878 C 610 882 650 890 682 900 C 686 918 680 934 672 940 C 640 948 610 952 570 958 Z" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 258 214 L 432 214 M 258 238 L 432 238" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 258 368 L 432 368 M 258 392 L 432 392" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 258 522 L 432 522 M 258 546 L 432 546" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 258 676 L 432 676 M 258 700 L 432 700" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 258 830 L 432 830 M 258 854 L 432 854" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 258 984 L 432 984 M 258 1008 L 432 1008" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 264 1014 L 430 1014 C 430 1104 448 1194 470 1254 L 420 1264 C 340 1224 262 1134 250 1034 Q 250 1014 264 1014 Z" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 570 1014 C 570 1104 566 1184 556 1250" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 256 1104 C 310 1118 360 1114 446 1108" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="340" y="1072" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">S1</text>
+  <text x="360" y="1170" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">S2</text>
+  <path d="M 466 60 L 466 1164 C 466 1194 494 1204 512 1210 C 530 1204 538 1174 538 1156 L 538 60 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 484 60 L 484 266 C 484 336 494 366 500 376 C 506 366 516 336 516 266 L 516 60" fill="#ffffff" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 494.4 376 C 486 576 483.2 1004 495.6 1184 M 497.6 376 C 494 576 492.8 1004 500.4 1184 M 500.8 376 C 502 576 502.4 1004 505.2 1184 M 504 376 C 510 576 512 1004 510 1184 M 507.2 376 C 518 576 521.6 1004 514.8 1184" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 120 798 L 1180 798" fill="none" stroke="#475569" stroke-width="4" stroke-dasharray="14 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 810 30 C 800 300 795 520 805 740 C 815 900 830 1020 850 1120 C 870 1200 900 1280 910 1340" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="205" y="236" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">T12–L1</text>
+  <path d="M 213 227 L 244 226" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="205" y="390" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">L1–2</text>
+  <path d="M 213 381 L 244 380" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="205" y="544" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">L2–3</text>
+  <path d="M 213 535 L 244 534" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="205" y="698" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">L3–4</text>
+  <path d="M 213 689 L 244 688" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="205" y="852" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">L4–5</text>
+  <path d="M 213 843 L 244 842" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="205" y="1006" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">L5–S1</text>
+  <path d="M 213 997 L 244 996" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="880" y="382" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Conus medullaris (L1–L2)</text>
+  <path d="M 872 373 L 506 376" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="880" y="541" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Subarachnoid space</text>
+  <path d="M 872 532 L 498 531" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="880" y="695" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Epidural space</text>
+  <path d="M 872 686 L 544 685" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="880" y="1000" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Cauda equina</text>
+  <path d="M 872 991 L 504 900" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1180" y="784" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Tuffier’s line (L4)</text>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="28" fill="#475569" text-anchor="start">Anterior</text>
+  <text x="1180" y="80" font-family="system-ui, sans-serif" font-size="28" fill="#475569" text-anchor="end">Posterior</text>
+</svg>

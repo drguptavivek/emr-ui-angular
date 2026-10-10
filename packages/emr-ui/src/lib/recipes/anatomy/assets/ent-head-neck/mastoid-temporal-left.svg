@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img">
+  <title>Temporal region and mastoid, left lateral view</title>
+  <rect width="1000" height="1200" fill="#ffffff"/>
+  <path d="M 360 0C 570 20 740 120 810 300C 850 410 860 520 840 620C 820 720 800 790 785 870C 775 950 790 1070 800 1200" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 376.7 507.5C 354.7 414 393.2 315 475.7 315C 552.7 315 594 392 594 480C 594 557 563.7 623 530.7 672.5C 511.5 702.8 497.7 752.3 453.7 755C 409.7 757.8 387.7 727.5 393.2 694.5C 396 675.3 385 656 366.8 638.4" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 366.8 638.4C 355.8 601 359.1 546 376.7 507.5" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 388.8 513C 374 436 409.7 341.4 475.7 340.3C 539 339.2 567.6 403 567.6 480C 567.6 546 544.5 601 517 645C 500.5 672.5 486.7 689 470.2 695.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 364.6 535C 386.6 530.6 406.4 548.2 403.1 570.8C 399.8 592.8 379.5 598.3 363.5 583.4" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="440" cy="562" rx="16" ry="27" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M 628 560C 682 680 670 780 596 836C 556 815 520 770 503 726" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 388 505C 310 488 210 482 120 498C 106 512 116 534 136 538C 210 528 300 534 370 550" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 388 505C 430 516 500 520 556 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 456 520L 556 520L 456 602Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 480 298C 560 306 608 380 614 470C 618 560 612 650 598 730C 590 770 586 800 582 826" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="680" y="150" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Suprameatal</text>
+  <text x="680" y="185" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">(Macewen's) triangle</text>
+  <path d="M 520 200L 510 522" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="230" y="440" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Zygomatic root</text>
+  <path d="M 300 452L 380 506" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="550" y="890" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Mastoid tip</text>
+  <path d="M 540 872L 580 836" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="750" y="1000" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Postauricular incision</text>
+  <path d="M 710 980L 620 760" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="940" y="100" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="500" y="80" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Superior</text>
+  <text x="60" y="1160" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="start">Anterior</text>
+  <text x="940" y="1160" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="end">Posterior</text>
+</svg>

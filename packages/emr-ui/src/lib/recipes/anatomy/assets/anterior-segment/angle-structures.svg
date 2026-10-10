@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img">
+  <title>Iridocorneal angle structures, enlarged cross-section with anterior up</title>
+  <rect width="1400" height="1000" fill="#ffffff"/>
+  <path d="M1350 105 C1060 85 800 105 610 170 C470 222 350 330 285 460 C240 550 205 670 185 860" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1350 250 C1100 232 900 245 720 290" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M545 450 C505 520 430 640 345 880 L585 880 L572 820 C545 760 490 700 470 640 C472 612 482 585 498 555 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M720 290 L545 450 L520 372 Z" fill="#cbd5e1" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M545 450 L498 555" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M545 450 L522 468 L534 490 Z" fill="#cbd5e1" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="470" cy="432" rx="24" ry="36" transform="rotate(20 470 432)" fill="#ffffff" stroke="#475569" stroke-width="6"/>
+  <path d="M498 555 C650 570 950 592 1350 600 L1350 684 C1000 676 700 655 470 640 C472 612 482 585 498 555 Z" fill="#cbd5e1" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M510 700 C545 692 585 702 600 730 M528 756 C560 752 600 765 612 795" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1200 100 L1200 40 M1184 60 L1200 40 L1216 60" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1230" y="70" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Anterior</text>
+  <text x="1000" y="200" font-family="system-ui, sans-serif" font-size="32" fill="#94a3b8" text-anchor="middle">Cornea</text>
+  <text x="1120" y="430" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Anterior chamber</text>
+  <text x="300" y="700" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Sclera</text>
+  <text x="1040" y="760" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Posterior chamber</text>
+  <text x="1000" y="650" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Iris</text>
+  <path d="M782 326 L723 293" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="723" cy="293" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="790" y="335" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Schwalbe's line</text>
+  <path d="M782 381 L620 372" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="620" cy="372" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="790" y="390" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Trabecular meshwork</text>
+  <path d="M782 436 L538 462" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="538" cy="462" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="790" y="445" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Scleral spur</text>
+  <path d="M782 491 L522 504" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="522" cy="504" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="790" y="500" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Ciliary body band</text>
+  <path d="M692 761 L478 625" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="478" cy="625" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="700" y="770" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="start">Iris root</text>
+  <text x="470" y="815" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Ciliary body</text>
+  <path d="M258 413 L460 436" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="460" cy="436" r="7" fill="#94a3b8" stroke="none"/>
+  <text x="250" y="422" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Schlemm's canal</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1250" viewBox="0 0 1200 1250" role="img">
+  <title>Paranasal sinuses, frontal view</title>
+  <rect width="1200" height="1250" fill="#ffffff"/>
+  <path d="M 600 80C 430 80 300 190 278 400C 268 540 280 680 315 800C 350 920 420 1030 500 1090C 540 1118 570 1126 600 1126" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 600 80C 770 80 900 190 922 400C 932 540 920 680 885 800C 850 920 780 1030 700 1090C 660 1118 630 1126 600 1126" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="420" cy="520" rx="100" ry="90" transform="rotate(-6 420 520)" fill="none" stroke="#475569" stroke-width="4"/>
+  <ellipse cx="780" cy="520" rx="100" ry="90" transform="rotate(6 780 520)" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M 595 362C 590 302 550 262 495 262C 430 262 385 300 370 352C 410 374 460 374 500 366C 540 360 575 374 595 362Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 605 362C 610 302 650 262 705 262C 770 262 815 300 830 352C 790 374 740 374 700 366C 660 360 625 374 605 362Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 500 300C 520 320 530 340 528 362" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 700 300C 680 320 670 340 672 362" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 546 442C 572 438 570 520 566 570C 562 612 544 622 532 610C 520 590 520 470 546 442Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 654 442C 628 438 630 520 634 570C 638 612 656 622 668 610C 680 590 680 470 654 442Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 524 498C 538 490 554 490 568 498" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 676 498C 662 490 646 490 632 498" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 524 548C 538 540 554 540 566 548" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 676 548C 662 540 646 540 634 548" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 534 596C 546 588 556 588 564 594" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 666 596C 654 588 644 588 636 594" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 600 450C 582 450 576 490 574 550C 572 610 520 660 505 750C 495 820 530 905 600 905C 670 905 705 820 695 750C 680 660 628 610 626 550C 624 490 618 450 600 450Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 600 480L 600 905" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 536 668C 556 640 588 652 586 676C 582 700 552 708 530 698" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 664 668C 644 640 612 652 614 676C 618 700 648 708 670 698" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 508 792C 525 762 560 752 582 772C 586 792 566 806 540 806" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 692 792C 675 762 640 752 618 772C 614 792 634 806 660 806" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 492 645C 424 630 352 645 334 705C 322 775 362 850 438 880C 476 892 494 872 496 820C 498 760 496 700 492 645Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 708 645C 776 630 848 645 866 705C 878 775 838 850 762 880C 724 892 706 872 704 820C 702 760 704 700 708 645Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="945" y="300" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Frontal sinus</text>
+  <path d="M 938 295 L 800 320" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="945" y="480" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Ethmoid sinus</text>
+  <path d="M 938 476 L 668 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="945" y="760" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="start">Maxillary sinus</text>
+  <path d="M 938 755 L 760 770" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="255" y="440" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Orbit</text>
+  <path d="M 262 436 L 340 470" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="255" y="960" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="end">Nasal cavity</text>
+  <path d="M 262 955 L 540 860" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="110" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="1140" y="110" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="600" y="55" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="middle">Superior</text>
+</svg>

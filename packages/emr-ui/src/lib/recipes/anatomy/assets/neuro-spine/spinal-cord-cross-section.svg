@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img">
+  <title>Spinal cord in cross-section, radiological orientation (anterior up, patient right on the left): grey matter horns, main tracts, dorsal and ventral roots</title>
+  <rect width="1200" height="1000" fill="#ffffff"/>
+  <path d="M 600 275 C 700 275, 860 300, 892 430 C 908 510, 872 620, 762 660 C 700 678, 650 675, 600 668 C 550 675, 500 678, 438 660 C 328 620, 292 510, 308 430 C 340 300, 500 275, 600 275 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 600 275 C 597 300, 597 325, 600 358 C 603 325, 603 300, 600 275" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 600 668 L 600 530" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 600 422 C 640 410 668 360 722 335 C 775 312 828 335 818 378 C 810 410 772 432 735 455 C 740 495 752 550 758 598 C 764 630 728 638 712 606 C 700 570 690 528 672 500 C 650 488 625 494 600 494 C 575 494 550 488 528 500 C 510 528 500 570 488 606 C 472 638 436 630 442 598 C 448 550 460 495 465 455 C 428 432 390 410 382 378 C 372 335 425 312 478 335 C 532 360 560 410 600 422 Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="600" cy="458" r="9" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M 610 540 C 650 542, 676 570, 690 620 C 665 648, 632 658, 610 660 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 800 522 C 835 505, 866 532, 860 575 C 852 602, 815 616, 790 598 C 784 570, 788 542, 800 522 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 832 358 C 860 380, 880 422, 874 460 C 850 456, 828 436, 828 410 C 826 388, 826 370, 832 358 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 590 540 C 550 542 524 570 510 620 C 535 648 568 658 590 660 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 400 522 C 365 505 334 532 340 575 C 348 602 385 616 410 598 C 416 570 412 542 400 522 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 368 358 C 340 380 320 422 326 460 C 350 456 372 436 372 410 C 374 388 374 370 368 358 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 805 328 C 855 322, 925 362, 968 432 M 835 348 C 885 352, 935 388, 968 432 M 858 374 C 898 380, 945 406, 968 432" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 968 432 C 990 462, 1004 492, 1012 532" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 762 654 C 805 666, 860 676, 905 690 M 792 640 C 832 656, 872 674, 905 690 M 824 622 C 852 646, 882 672, 905 690" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="942" cy="706" rx="46" ry="28" transform="rotate(28 942 706)" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M 982 684 C 1004 640, 1010 580, 1012 532" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 1012 532 C 1050 530, 1080 528, 1112 526" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="270" y="400" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="end">Spinothalamic</text>
+  <text x="270" y="426" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="end">tract</text>
+  <path d="M 276 410 L 342 422" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="270" y="552" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="end">Lateral</text>
+  <text x="270" y="578" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="end">corticospinal tract</text>
+  <path d="M 276 568 L 340 565" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="545" y="732" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Dorsal columns</text>
+  <path d="M 545 714 L 545 630" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="790" y="252" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Ventral horn</text>
+  <path d="M 780 266 L 765 340" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="740" y="732" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Dorsal horn</text>
+  <path d="M 738 714 L 742 616" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1040" y="410" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="start">Ventral root</text>
+  <text x="960" y="790" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Dorsal root ganglion</text>
+  <path d="M 950 772 L 944 734" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1030" y="570" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="start">Spinal nerve</text>
+  <text x="60" y="140" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="middle">R</text>
+  <text x="1140" y="140" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#475569" text-anchor="middle">L</text>
+  <text x="600" y="105" font-family="system-ui, sans-serif" font-size="36" font-weight="700" fill="#475569" text-anchor="middle">Anterior</text>
+  <text x="600" y="955" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Posterior</text>
+</svg>

@@ -62,7 +62,7 @@ Right and left foot, dorsal and plantar, toes up (800×1400); toenails of both f
 Right and left external ear (lateral, 1000×1200); right and left tympanic membrane (otoscopic, malleus handle and light reflex, quadrants AS/AI/PS/PI, 1000×1000); external nose (1000×1200); nasal septum (sagittal, anterior left, Little's area marked, 1200×1000); oropharynx (open mouth, 1200×1000).
 
 ### dental-oral
-Adult (32) and primary (20) dentition arch charts with no tooth numbers (1200×1500 and 1200×1300); single tooth with five surfaces (1000×1000); tongue (dorsal) and palate (1000×1200); oral cavity (open mouth, 1200×1000).
+Adult (32) and primary (20) dentition arch charts with no tooth numbers (1200×1500 and 1200×1300); single tooth with five surfaces (1000×1000); tongue (dorsal) and palate (1000×1200); oral cavity (open mouth, 1200×1000). Also a single tooth in longitudinal section (1400×1400) and right and left temporomandibular joints (1200×1000).
 
 ### neurological
 Dermatomes and cutaneous peripheral-nerve territories, anterior and posterior, in a classic textbook layout rather than the ASIA key-point map (1000×1600).
@@ -80,7 +80,7 @@ OD and OS external eye as the examiner faces the patient: lids, aperture, carunc
 OD and OS clock-face cornea: limbus, clock hours 12/3/6/9 with N/T, and a dashed pupil (1200×1200).
 
 ### anterior-segment
-OD and OS slit-lamp horizontal cross-section, anterior up: cornea, anterior chamber, iris, lens and angle, with N/T (1400×1000).
+OD and OS slit-lamp horizontal cross-section, anterior up: cornea, anterior chamber, iris, lens and angle, with N/T (1400×1000). Also OD and OS gonioscopy angle charts (angle-structure rings, S/N/I/T quadrants, clock hours) and an enlarged iridocorneal angle cross-section (1400×1000).
 
 ### retina
 OD and OS posterior pole (disc, macula, arcades) and peripheral chart (equator and ora serrata rings, 12 clock-hour radials). Fundus orientation, disc nasal (1200×1200).
@@ -90,6 +90,63 @@ OD and OS enlarged disc: margin, dashed cup, rim and vessels, with ISNT sides la
 
 ### ocular-motility
 Nine diagnostic gaze positions in a 3×3 grid, patient's right on the viewer's left (1400×1200).
+
+### lens
+Lens sagittal cross-section with ciliary body and zonules, and a slit-lamp optical section with nuclear zones (anterior up, 1400×1000); OD and OS red-reflex retroillumination charts with clock hours and N/T (1200×1200).
+
+### oct
+OD and OS schematic OCT B-scans through the macula (layers ILM to sclera, space left for subretinal fluid, haemorrhage and PED) and through the optic nerve head (cup, rim, BMO, lamina cribrosa), nasal on the viewer's right for OD (1600×1000); OD and OS ETDRS 1/3/6 mm grids (1200×1200).
+
+### skeleton
+Whole adult skeleton, anterior and posterior, in anatomical position (800×1600).
+
+### bony-joints
+AP pelvis and hips (1400×1300); right and left knee AP and lateral (1000×1400); right and left shoulder AP (1400×1100); right and left hand bones and foot bones, dorsal (1000×1400; 800×1400); spine AP and lateral C1–coccyx with level labels (800×1600). Carpals and hindfoot are schematic.
+
+### skull-brain
+Skull lateral right and left with sutures and craniotomy landmarks (pterion, asterion); skull vertex with bregma, lambda and Kocher's point (anterior at the top, patient's R on the viewer's right); brain lateral left and right with lobes; brain midsagittal (anterior left); brain axial slice in radiological orientation (anterior up, patient's R on the viewer's left). 1400×1000; vertex 1000×1200; axial 1200×1200.
+
+### neuro-spine
+Sagittal spine C2–S1 with discs, canal, cord, conus and cauda equina (anterior left, 1000×2000); spinal cord cross-section with horns, tracts and roots (anterior up, radiological R/L, 1200×1000); right brachial plexus schematic, anterior view (1400×1000).
+
+### ent-head-neck
+Middle-ear schematic (coronal, right ear, 1400×1000); mastoid and temporal region, right and left, with the suprameatal triangle and a dashed postauricular incision (1000×1200); larynx on laryngoscopy (anterior commissure at the top, patient's R on the viewer's left, 1200×1000); paranasal sinuses, frontal (1200×1250); right lateral nasal wall (anterior left, 1200×1000); cervical lymph-node levels IA–VI, right and left (1000×1400).
+
+### globe-orbit
+Globe horizontal cross-section (anterior left, 1400×1000); OD and OS surgical globe maps with rectus insertions (Tillaux distances), buckle equator and pars plana port positions, examiner's view (1400×1400); OD and OS eyelids (1400×1000); right lacrimal drainage system (1100×1150); right orbit coronal and both orbits axial, radiological orientation (1200×1200; 1400×1000).
+
+### burns
+Lund & Browder charts, adult and child: anterior and posterior figures side by side, divided into the standard regions. No percentages; the age-dependent table is controller data (1600×1100).
+
+### paediatric
+Child (about 5 years) and infant body, anterior and posterior; the infant anterior view shows the anterior fontanelle (800×1400).
+
+### gynaecology
+Colposcopic cervix clock face with transformation zone (12 o'clock anterior, patient's R on the viewer's left); uterus, tubes, ovaries and vagina, frontal (1200×1200).
+
+### organs
+Liver Couinaud segments I–VIII with gallbladder (1400×1100); lung lobes anterior and posterior with trachea and main bronchi (1400×1200); heart with coronary arteries, anterior (1200×1200).
+
+### anaesthesia
+Mallampati classes I–IV (Samsoon–Young, 1600×800); Cormack–Lehane grades 1, 2a, 2b, 3 and 4 (1900×700); sagittal airway with endotracheal tube (cuff, carina, depth at lips), with laryngeal mask, and with tracheostomy tube (facing the viewer's left, 1400×1200); front-of-neck access landmarks (1100×1100); lateral lumbosacral spine with neuraxial landmarks and Tuffier's line (1300×1400); right upper-limb and lower-limb nerve block sites (1300×1600; 1900×1800).
+
+### obstetric
+Episiotomy perineum with midline, mediolateral 60° (RCOG, at crowning) and lateral reference lines; perineal tear degrees 1st–4th including 3a/3b/3c (RCOG wording); perineal repair (all lithotomy, 12 o'clock anterior, patient's R on the viewer's left, 1400×1200). Also cervical dilatation 1–10 cm (1400×700); fetal head position in the pelvis (1800×1200); placenta maternal and fetal surfaces (1900×1000); pregnant abdomen with level guides (1200×1400); caesarean incisions (1400×1200).
+
+### neonatal
+Newborn body anterior (cord stump and clamp) and posterior (900×1400); head vertex with fontanelles and sutures (1400×1200); head lateral right and left (1300×1200); face with palate inset for cleft lip and palate (1700×1050); supine hips and feet (1200×1300).
+
+### gi-tract
+Oesophagus endoscopy map with cm-from-incisors scale, Z-line and GOJ; stomach map (cardia to pylorus, curvatures); stomach retroflexion; duodenum D1–D4 with papillae; colonoscopy map with cm-from-anal-verge ticks; sigmoid and rectum with Houston's valves; small-bowel overview; ERCP biliary and pancreatic ducts. Anterior views have the patient's R on the viewer's left (1000×1000 to 1400×1200).
+
+### paediatric-surgery
+Spina bifida lumbosacral region (posterior); cleft lip and palate classification; abdominal wall defects (gastroschisis and omphalocele sites); anorectal malformation perineum, male and female (lithotomy); hypospadias meatal positions; paediatric inguinoscrotal region (1000×1000 to 1800×1200).
+
+### endocrine-neck
+Thyroid anterior with isthmus, pyramidal lobe, cartilages and thyroid vessels; posterior thyroid with the four parathyroids and recurrent laryngeal nerves (patient's R on the viewer's right); transverse neck section at the thyroid level, radiological orientation, for nodule and adenoma marking.
+
+### cardiothoracic
+Tracheobronchial tree to segmental bronchi; bronchiole and alveolus detail; lungs with airway overlay; heart with great vessels, anterior and posterior; four-chamber section with valves; echo parasternal long axis, parasternal short axis (6-segment ring) and apical four-chamber in echo convention; cardiac valve plane from above.
 
 ### annotation-symbols
 Data-only symbol sets for the annotation canvas's Symbol select, in `recipes/annotation-symbols/` (`surgery.ts`, `retina.ts`, `general-findings.ts`). Each file exports one `AnnotationSymbolSet` (contract type in `@drguptavivek/emr-controller`, `annotation-symbol.models.ts`): `{ id, label, version, reviewStatus: 'unreviewed', provenance, presets, labels }`. A preset is `{ id, label, description?, tool, strokeStyle?, fillPattern?, colour?, width?, classId? }`; `labels` are the `EmrAnnotationLabel`s the presets' `classId`s name, so a host passes `presets` as `symbolPresets` and `labels` into `availableLabels` together. Selecting a preset applies tool, style, fill, colour, width and class in one change. Hex colours are data (components never carry colour literals). Files use `import type` only; `annotation-symbols.spec.ts` enforces that, unique ids, valid tool/style/fill enums, hex colours, resolvable class ids, `reviewStatus: 'unreviewed'`, and this heading.

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img">
+  <title>Terminal bronchiole to alveolar sac, schematic detail</title>
+  <rect width="1400" height="1000" fill="#ffffff"/>
+  <g transform="translate(0 40)">
+  <circle cx="400" cy="460" r="30" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="455" cy="540" r="30" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="510" cy="460" r="30" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="643" cy="515" r="28" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="604" cy="554" r="28" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="653" cy="411" r="28" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="704" cy="528" r="28" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="770" cy="415" r="28" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="717" cy="644" r="28" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="1017" cy="302" r="56" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="1003" cy="383" r="56" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="926" cy="411" r="56" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="863" cy="358" r="56" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="877" cy="277" r="56" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="954" cy="249" r="56" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="940" cy="330" r="58" fill="#ffffff" stroke="none"/>
+  <circle cx="1017" cy="662" r="56" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="1003" cy="743" r="56" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="926" cy="771" r="56" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="863" cy="718" r="56" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="877" cy="637" r="56" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="954" cy="609" r="56" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <circle cx="940" cy="690" r="58" fill="#ffffff" stroke="none"/>
+  <path d="M977 650 C997 622 1027 692 1057 656" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M979 678 C1007 652 1032 708 1055 682" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1002 616 C1012 647 992 677 1007 708" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1035 616 C1047 647 1025 672 1037 704" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M963 731 C983 703 1013 773 1043 737" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M965 759 C993 733 1018 789 1041 763" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M988 697 C998 728 978 758 993 789" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1021 697 C1033 728 1011 753 1023 785" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M886 759 C906 731 936 801 966 765" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M888 787 C916 761 941 817 964 791" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M911 725 C921 756 901 786 916 817" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M944 725 C956 756 934 781 946 813" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M823 706 C843 678 873 748 903 712" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M825 734 C853 708 878 764 901 738" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M848 672 C858 703 838 733 853 764" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M881 672 C893 703 871 728 883 760" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M837 625 C857 597 887 667 917 631" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M839 653 C867 627 892 683 915 657" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M862 591 C872 622 852 652 867 683" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M895 591 C907 622 885 647 897 679" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M914 597 C934 569 964 639 994 603" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M916 625 C944 599 969 655 992 629" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M939 563 C949 594 929 624 944 655" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M972 563 C984 594 962 619 974 651" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M60 500 L340 500" fill="none" stroke="#475569" stroke-width="66" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M340 500 L560 500" fill="none" stroke="#475569" stroke-width="58" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M560 500 C630 500 700 420 790 345 L870 335" fill="none" stroke="#475569" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M560 500 C630 500 700 580 790 655 L870 690" fill="none" stroke="#475569" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M60 500 L340 500" fill="none" stroke="#ffffff" stroke-width="56" stroke-linecap="square" stroke-linejoin="round"/>
+  <path d="M340 500 L560 500" fill="none" stroke="#ffffff" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M560 500 C630 500 700 420 790 345 L870 335" fill="none" stroke="#ffffff" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M560 500 C630 500 700 580 790 655 L870 690" fill="none" stroke="#ffffff" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="200" y="380" font-family="system-ui, sans-serif" font-size="32" text-anchor="middle" font-weight="700" fill="#94a3b8">Terminal bronchiole</text>
+  <path d="M200 392 L200 475" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="200" cy="475" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="440" y="330" font-family="system-ui, sans-serif" font-size="32" text-anchor="middle" font-weight="700" fill="#94a3b8">Respiratory bronchiole</text>
+  <path d="M440 342 L440 478" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="440" cy="478" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="720" y="230" font-family="system-ui, sans-serif" font-size="32" text-anchor="middle" font-weight="700" fill="#94a3b8">Alveolar duct</text>
+  <path d="M720 242 L720 365" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="720" cy="365" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="690" y="810" font-family="system-ui, sans-serif" font-size="32" text-anchor="middle" font-weight="700" fill="#94a3b8">Alveolar duct</text>
+  <path d="M690 776 L730 700" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="730" cy="700" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1120" y="200" font-family="system-ui, sans-serif" font-size="32" text-anchor="start" font-weight="700" fill="#94a3b8">Alveolar sac</text>
+  <path d="M1110 189.76 L1030 268" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1030" cy="268" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1120" y="330" font-family="system-ui, sans-serif" font-size="32" text-anchor="start" font-weight="700" fill="#94a3b8">Alveolus</text>
+  <path d="M1110 319.76 L1000 330" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1000" cy="330" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1120" y="820" font-family="system-ui, sans-serif" font-size="32" text-anchor="start" font-weight="700" fill="#94a3b8">Capillary network</text>
+  <path d="M1110 809.76 L1030 770" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1030" cy="770" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="70" y="940" font-family="system-ui, sans-serif" font-size="28" text-anchor="start" font-weight="700" fill="#94a3b8">Terminal bronchiole to alveolar sac, schematic (not to scale)</text>
+  </g>
+</svg>

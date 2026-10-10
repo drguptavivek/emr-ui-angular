@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img">
+  <title>Brachial plexus, right side schematic, anterior view: roots C5 to T1, trunks, divisions, cords and terminal nerves; spine at the right of the drawing</title>
+  <rect width="1400" height="1000" fill="#ffffff"/>
+  <path d="M 1290 140 L 1290 840" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 1290 290 L 1150 290" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1308" y="300" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="#475569" text-anchor="start">C5</text>
+  <path d="M 1290 410 L 1150 410" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1308" y="420" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="#475569" text-anchor="start">C6</text>
+  <path d="M 1290 540 L 1150 540" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1308" y="550" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="#475569" text-anchor="start">C7</text>
+  <path d="M 1290 670 L 1150 670" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1308" y="680" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="#475569" text-anchor="start">C8</text>
+  <path d="M 1290 790 L 1150 790" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1308" y="800" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="#475569" text-anchor="start">T1</text>
+  <path d="M 1150 290 L 1060 350 M 1150 410 L 1060 350 M 1060 350 L 985 350" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 1150 540 L 985 540" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 1150 670 L 1060 730 M 1150 790 L 1060 730 M 1060 730 L 985 730" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 985 350 L 930 315 L 850 315 M 985 350 L 930 385 L 850 385" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 985 540 L 930 505 L 850 505 M 985 540 L 930 575 L 850 575" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 985 730 L 930 695 L 850 695 M 985 730 L 930 765 L 850 765" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 850 315 C 770 315, 770 330, 700 330 M 850 505 C 770 505, 770 330, 700 330" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 850 385 C 770 385, 770 530, 700 530 M 850 575 C 770 575, 770 530, 700 530 M 850 765 C 770 765, 770 530, 700 530" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 850 695 C 770 695, 770 730, 700 730" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 700 330 L 640 330 M 700 530 L 640 530 M 700 730 L 640 730" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 640 330 C 540 330, 480 230, 340 230" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 640 530 C 540 530, 480 350, 340 350" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 640 530 C 540 530, 480 470, 340 470" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 640 330 C 550 330, 520 610, 450 610" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 640 730 C 550 730, 520 610, 450 610" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 450 610 L 340 610" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 640 730 C 540 730, 480 820, 340 820" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="326" y="239" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#475569" text-anchor="end">Musculocutaneous</text>
+  <text x="326" y="359" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#475569" text-anchor="end">Axillary</text>
+  <text x="326" y="479" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#475569" text-anchor="end">Radial</text>
+  <text x="326" y="619" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#475569" text-anchor="end">Median</text>
+  <text x="326" y="829" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#475569" text-anchor="end">Ulnar</text>
+  <text x="1220" y="100" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Roots</text>
+  <text x="1030" y="100" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Trunks</text>
+  <text x="890" y="100" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Divisions</text>
+  <text x="720" y="100" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Cords</text>
+  <text x="480" y="100" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Terminal nerves</text>
+  <text x="1020" y="334" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Superior</text>
+  <text x="1020" y="524" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Middle</text>
+  <text x="1020" y="714" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Inferior</text>
+  <text x="670" y="312" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Lateral</text>
+  <text x="670" y="512" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Posterior</text>
+  <text x="670" y="712" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Medial</text>
+  <text x="890" y="303" font-family="system-ui, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">ant.</text>
+  <text x="890" y="373" font-family="system-ui, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">post.</text>
+  <text x="890" y="493" font-family="system-ui, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">ant.</text>
+  <text x="890" y="563" font-family="system-ui, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">post.</text>
+  <text x="890" y="683" font-family="system-ui, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">ant.</text>
+  <text x="890" y="753" font-family="system-ui, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">post.</text>
+  <text x="1290" y="880" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Spine</text>
+  <text x="60" y="90" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">R</text>
+  <text x="100" y="90" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="start">Anterior view</text>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img">
+  <title>Mallampati classes I to IV, open-mouth views</title>
+  <rect width="1600" height="800" fill="#ffffff"/>
+  <g transform="translate(230 360)">
+  <ellipse cx="0" cy="0" rx="166" ry="206" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <ellipse cx="0" cy="0" rx="140" ry="180" fill="none" stroke="#475569" stroke-width="6"/>
+  <rect x="-101" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="-67" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="-33" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="1" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="35" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="69" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M -104 -78 C -70 -104 70 -104 104 -78" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -108 -70 C -100 -38 -60 -44 -26 -44 C -10 -44 -6 -48 0 -48 C 6 -48 10 -44 26 -44 C 60 -44 100 -38 108 -70" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -15 -48 C -17 -6 -14 22 0 22 C 14 22 17 -6 15 -48" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -108 -70 C -118 -20 -122 20 -112 70" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 108 -70 C 118 -20 122 20 112 70" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -66 -44 C -78 -10 -82 20 -76 66" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 66 -44 C 78 -10 82 20 76 66" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -114.3 104 C -110.3 82 -60 74 0 74 C 60 74 110.3 82 114.3 104 A 140 180 0 0 1 -114.3 104 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0 80 L 0 144" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="230" y="650" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Class I</text>
+  <text x="230" y="696" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Soft palate, fauces, uvula, pillars</text>
+  <g transform="translate(610 360)">
+  <ellipse cx="0" cy="0" rx="166" ry="206" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <ellipse cx="0" cy="0" rx="140" ry="180" fill="none" stroke="#475569" stroke-width="6"/>
+  <rect x="-101" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="-67" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="-33" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="1" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="35" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="69" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M -104 -78 C -70 -104 70 -104 104 -78" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -108 -70 C -100 -38 -60 -44 -26 -44 C -10 -44 -6 -48 0 -48 C 6 -48 10 -44 26 -44 C 60 -44 100 -38 108 -70" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -15 -48 C -17 -15 -14 7 0 7 C 14 7 17 -15 15 -48" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -137.2 36 C -133.2 14 -60 6 0 6 C 60 6 133.2 14 137.2 36 A 140 180 0 0 1 -137.2 36 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0 12 L 0 76" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="610" y="650" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Class II</text>
+  <text x="610" y="696" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Soft palate, fauces, uvula</text>
+  <g transform="translate(990 360)">
+  <ellipse cx="0" cy="0" rx="166" ry="206" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <ellipse cx="0" cy="0" rx="140" ry="180" fill="none" stroke="#475569" stroke-width="6"/>
+  <rect x="-101" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="-67" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="-33" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="1" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="35" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="69" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M -104 -78 C -70 -104 70 -104 104 -78" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -108 -70 C -100 -52 -60 -58 -26 -58 C -10 -58 -6 -62 0 -62 C 6 -62 10 -58 26 -58 C 60 -58 100 -52 108 -70" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -15 -62 C -17 -48.8 -14 -40 0 -40 C 14 -40 17 -48.8 15 -62" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -139.9 -6 C -135.9 -28 -60 -36 0 -36 C 60 -36 135.9 -28 139.9 -6 A 140 180 0 1 1 -139.9 -6 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0 -30 L 0 34" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="990" y="650" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Class III</text>
+  <text x="990" y="696" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Soft palate, base of uvula</text>
+  <g transform="translate(1370 360)">
+  <ellipse cx="0" cy="0" rx="166" ry="206" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <ellipse cx="0" cy="0" rx="140" ry="180" fill="none" stroke="#475569" stroke-width="6"/>
+  <rect x="-101" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="-67" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="-33" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="1" y="-171" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="35" y="-160" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="69" y="-135" width="32" height="32" rx="9" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M -104 -78 C -70 -104 70 -104 104 -78" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M -133.1 -56 C -129.1 -78 -60 -86 0 -86 C 60 -86 129.1 -78 133.1 -56 A 140 180 0 1 1 -133.1 -56 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0 -80 L 0 -16" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="1370" y="650" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">Class IV</text>
+  <text x="1370" y="696" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Hard palate only</text>
+  <text x="60" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="start">R</text>
+  <text x="1540" y="80" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="800" y="70" font-family="system-ui, sans-serif" font-size="28" fill="#475569" text-anchor="middle">Open mouth, tongue protruded</text>
+</svg>

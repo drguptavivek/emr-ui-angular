@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img">
+  <title>Stomach endoscopy map with regions, curvatures and walls</title>
+  <rect width="1200" height="1200" fill="#ffffff"/>
+  <path d="M470 235 C520 170 700 120 790 190 C880 250 905 420 885 560 C865 740 780 880 640 930 C540 965 430 960 380 925 C340 905 310 905 290 905" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 800 C340 805 380 790 405 765 C428 720 452 620 454 520 C455 420 462 340 470 268" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M440 70 L440 200 C440 230 465 245 470 262" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M520 70 L520 195 C520 215 505 228 495 236" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 800 C250 795 190 805 165 840 C150 870 165 910 200 925 C230 937 265 910 290 905" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 800 L290 905" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M466 300 L893 300" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M456 430 L891 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M452 565 L887 565" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M418 722 C500 790 560 870 610 940" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M470 235 C450 215 420 205 400 205" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M420 745 L444 722" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M460 180 L340 150" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="330" y="159" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Oesophagus</text>
+  <path d="M470 250 L340 245" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="330" y="254" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Cardia</text>
+  <path d="M680 200 L950 130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="960" y="139" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Fundus</text>
+  <text x="700" y="365" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Upper body</text>
+  <text x="700" y="500" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Mid body</text>
+  <text x="660" y="640" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Lower body</text>
+  <path d="M412 745 L260 700" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="250" y="709" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Incisura angularis</text>
+  <path d="M520 860 L520 1040" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="520" y="1049" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Antrum</text>
+  <path d="M290 850 L160 770" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="150" y="779" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Pylorus</text>
+  <path d="M180 880 L100 980" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="100" y="989" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Duodenal bulb</text>
+  <path d="M454 500 L340 480" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="330" y="489" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Lesser curvature</text>
+  <path d="M884 480 L930 480" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="940" y="474" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Greater</text><text x="940" y="504" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">curvature</text>
+  <text x="640" y="790" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8">Anterior wall (facing viewer)</text>
+  <circle cx="1010" cy="1000" r="80" fill="none" stroke="#475569" stroke-width="4"/>
+  <circle cx="1010" cy="1000" r="30" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M1010 920 L1010 970 M1010 1030 L1010 1080 M930 1000 L980 1000 M1040 1000 L1090 1000" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1010" y="908" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Anterior wall</text>
+  <text x="1010" y="1112" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Posterior wall</text>
+  <text x="918" y="1008" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="end">Lesser</text>
+  <text x="1102" y="1008" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8">Greater</text>
+  <text x="1010" y="1170" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Circumference of the lumen</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text><text x="1150" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="600" y="60" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Anterior</text>
+</svg>

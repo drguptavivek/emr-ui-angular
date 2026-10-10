@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img">
+  <title>Skull, right lateral view, anterior to the right of the drawing, with sutures and landmarks</title>
+  <rect width="1400" height="1000" fill="#ffffff"/>
+  <path d="M 958 432 C 986 350, 972 235, 898 172 C 818 102, 660 82, 540 108 C 410 136, 322 235, 316 362 C 312 430, 330 478, 366 505 C 405 530, 455 540, 488 566 C 505 604, 528 626, 548 616 C 566 606, 574 584, 590 570 L 640 575 C 690 585, 730 590, 760 604 C 790 618, 800 640, 820 658 C 845 680, 870 690, 900 694 L 984 694 C 996 660, 996 622, 992 594 C 1012 565, 1004 525, 976 482 C 968 462, 962 445, 958 432 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 752 108 C 772 165, 800 248, 812 332" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 812 332 C 784 262, 692 232, 622 262 C 556 292, 488 392, 446 486" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 436 151 C 380 212, 352 340, 402 428 C 418 458, 434 476, 442 488" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 442 488 C 470 505, 490 540, 492 568" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 872 664 C 910 672, 955 674, 992 660 L 986 694 L 884 694 C 872 686, 868 674, 872 664 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 898 668 L 898 694 M 924 671 L 924 694 M 950 672 L 950 694 M 972 670 L 972 694" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 628 548 C 628 534, 654 530, 657 546 C 660 562, 666 574, 682 586 C 704 592, 722 572, 734 548 C 744 562, 752 600, 766 650 C 776 690, 790 718, 815 724 L 984 724 C 992 740, 988 760, 972 774 C 944 800, 902 806, 850 804 C 790 800, 720 794, 656 786 C 622 780, 604 758, 612 722 C 622 680, 628 620, 628 548 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="850" cy="764" r="6" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M 884 696 L 986 696 L 984 724 L 892 724 C 880 716, 878 706, 884 696 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 910 698 L 910 724 M 936 698 L 936 724 M 962 698 L 962 724" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 598 502 C 660 492, 750 500, 806 522 C 826 508, 862 510, 880 522 C 892 550, 884 590, 852 600 C 826 606, 808 584, 800 552 C 745 530, 660 518, 598 526 C 588 520, 588 508, 598 502 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 905 392 C 940 388, 962 420, 958 462 C 954 505, 925 528, 892 520 C 858 512, 846 470, 856 435 C 864 408, 884 394, 905 392 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 878 598 C 886 630, 888 650, 884 668" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="930" cy="548" r="6" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M 960 445 C 962 480, 966 510, 974 535 M 974 535 C 966 555, 972 575, 988 592" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="568" cy="534" rx="12" ry="20" fill="none" stroke="#475569" stroke-width="4"/>
+  <path d="M 492 568 C 516 578, 544 574, 560 562" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="812" cy="332" r="6" fill="#475569" stroke="#475569" stroke-width="4"/>
+  <circle cx="442" cy="488" r="6" fill="#475569" stroke="#475569" stroke-width="4"/>
+  <circle cx="958" cy="432" r="6" fill="#475569" stroke="#475569" stroke-width="4"/>
+  <circle cx="436" cy="151" r="6" fill="#475569" stroke="#475569" stroke-width="4"/>
+  <text x="828" y="310" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="start">Pterion</text>
+  <path d="M 442 488 L 330 590" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="322" y="604" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="end">Asterion</text>
+  <text x="985" y="405" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="start">Nasion</text>
+  <path d="M 322 440 L 300 452" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="322" cy="440" r="6" fill="#475569" stroke="#475569" stroke-width="4"/>
+  <text x="296" y="458" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="end">Inion</text>
+  <text x="905" y="372" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Orbit</text>
+  <text x="700" y="474" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Zygomatic arch</text>
+  <text x="842" y="636" font-family="system-ui, sans-serif" font-size="21" fill="#94a3b8" text-anchor="middle">Zygoma</text>
+  <text x="942" y="636" font-family="system-ui, sans-serif" font-size="21" fill="#94a3b8" text-anchor="middle">Maxilla</text>
+  <text x="800" y="850" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Mandible</text>
+  <text x="568" y="488" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">EAM</text>
+  <text x="480" y="650" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Mastoid</text>
+  <text x="752" y="70" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Coronal</text>
+  <text x="392" y="140" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="end">Lambdoid</text>
+  <text x="610" y="236" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Squamous</text>
+  <text x="1340" y="90" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#475569" text-anchor="end">Anterior →</text>
+</svg>

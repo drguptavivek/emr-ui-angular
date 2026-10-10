@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img">
+  <title>Lund and Browder burn chart, adult, anterior and posterior</title>
+  <rect width="1600" height="1100" fill="#ffffff"/>
+  <path d="M400 95 C425.5 95 446.4 119.6 446.4 149.7 C446.4 188.2 423.2 213.9 400 213.9 C376.8 213.9 353.6 188.2 353.6 149.7 C353.6 119.6 374.5 95 400 95 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M445.7 133.1 C454.3 131.9 455.2 166.3 446.4 173.5" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M354.3 133.1 C345.7 131.9 344.8 166.3 353.6 173.5" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M421.7 206.3 L423.3 237.4 C445.5 242.3 485.7 247.1 505.4 255.7 C518.9 261.7 525 277.6 525 293.4 C526.3 333.7 538.5 382.7 547.1 422.5 C553.2 462.4 566.7 511.4 572.9 545.7 C579 558 587.6 571.5 592.5 582.5 C598.6 591.1 606 604.6 607.2 615.6 C607.8 624.2 597.4 626.6 594.9 619.3 C592.5 613.2 588.8 608.3 587.6 604.6 L587.6 632.2 C587.6 639.5 577.8 639.5 577.8 632.2 L577.8 613.2 L577.8 638.3 C577.8 645.6 567.9 645.6 567.9 638.3 L567.9 613.2 L567.9 633.4 C567.9 640.7 558.1 640.7 558.1 633.4 L558.1 613.2 L558.1 616.8 C558.1 624.2 548.3 624.2 548.3 616.8 L548.3 613.2 C544.7 591.1 545.9 566.6 548.3 545.7 C543.4 511.4 528.7 462.4 517.7 425.6 C512.8 388.8 501.7 345.9 493.2 320.2 C488.3 358.2 476 395 473.6 431.7 C471.1 468.5 489.5 499.2 490.7 529.8 C494.4 591.2 485.8 658.8 476 721.6 C473.6 751 468.7 781.6 467.4 812.2 C466.2 855.1 460.1 898 455.2 929.8 C457.6 947 478.5 953.1 479.7 967.8 C479.7 982.5 424.5 985 408.6 975.2 C402.5 959.2 419.6 950.7 424.5 929.8 C422.1 885.7 419.6 836.7 417.2 806.1 C417.2 775.5 419.6 744.8 419.6 721.6 C418.4 665 407.4 609.7 400 560.5" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M378.3 206.3 L376.7 237.4 C354.5 242.3 314.3 247.1 294.6 255.7 C281.1 261.7 275 277.6 275 293.4 C273.7 333.7 261.5 382.7 252.9 422.5 C246.8 462.4 233.3 511.4 227.1 545.7 C221 558 212.4 571.5 207.5 582.5 C201.4 591.1 194 604.6 192.8 615.6 C192.2 624.2 202.6 626.6 205.1 619.3 C207.5 613.2 211.2 608.3 212.4 604.6 L212.4 632.2 C212.4 639.5 222.2 639.5 222.2 632.2 L222.2 613.2 L222.2 638.3 C222.2 645.6 232.1 645.6 232.1 638.3 L232.1 613.2 L232.1 633.4 C232.1 640.7 241.9 640.7 241.9 633.4 L241.9 613.2 L241.9 616.8 C241.9 624.2 251.7 624.2 251.7 616.8 L251.7 613.2 C255.3 591.1 254.1 566.6 251.7 545.7 C256.6 511.4 271.3 462.4 282.3 425.6 C287.2 388.8 298.3 345.9 306.8 320.2 C311.7 358.2 324 395 326.4 431.7 C328.9 468.5 310.5 499.2 309.3 529.8 C305.6 591.2 314.2 658.8 324 721.6 C326.4 751 331.3 781.6 332.6 812.2 C333.8 855.1 339.9 898 344.8 929.8 C342.4 947 321.5 953.1 320.3 967.8 C320.3 982.5 375.5 985 391.4 975.2 C397.5 959.2 380.4 950.7 375.5 929.8 C377.9 885.7 380.4 836.7 382.8 806.1 C382.8 775.5 380.4 744.8 380.4 721.6 C381.6 665 392.6 609.7 400 560.5" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M376.7 237.4 L423.3 237.4" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M493.2 320.2 L505.4 255.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M547.1 422.5 L517.7 425.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M572.9 545.7 L548.3 545.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M476 721.6 L419.6 721.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M455.2 929.8 L424.5 929.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M306.8 320.2 L294.6 255.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M252.9 422.5 L282.3 425.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M227.1 545.7 L251.7 545.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M324 721.6 L380.4 721.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M344.8 929.8 L375.5 929.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M470 225.7 L400 225.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M330 225.7 L400 225.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="400" cy="531.6" r="32.1" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10"/>
+  <path d="M429.5 518.7 C449.9 489.8 472.6 519.8 490.7 529.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M370.5 518.7 C350.1 489.8 327.4 519.8 309.3 529.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M635.2 358.2 L518.9 358.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M635.2 483.8 L547.1 483.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M635.2 602.1 L572.9 602.1" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M635.2 959.2 L442.9 959.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M164.8 358.2 L281.1 358.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M164.8 483.8 L252.9 483.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M164.8 602.1 L227.1 602.1" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M164.8 959.2 L357.1 959.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="165" y="145" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">R</text>
+  <text x="605" y="145" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">L</text>
+  <text x="400" y="1055" font-family="system-ui, sans-serif" font-size="32" text-anchor="middle" font-weight="700" fill="#475569">Anterior</text>
+  <text x="400" y="169.4" font-family="system-ui, sans-serif" font-size="26" text-anchor="middle" fill="#94a3b8">Head</text>
+  <text x="476" y="233.7" font-family="system-ui, sans-serif" font-size="24" text-anchor="start" fill="#94a3b8">Neck</text>
+  <text x="324" y="233.7" font-family="system-ui, sans-serif" font-size="24" text-anchor="end" fill="#94a3b8">Neck</text>
+  <text x="400" y="538.6" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle" fill="#94a3b8">Genit.</text>
+  <text x="400" y="411.5" font-family="system-ui, sans-serif" font-size="28" text-anchor="middle" fill="#94a3b8">Trunk</text>
+  <text x="444.1" y="660.7" font-family="system-ui, sans-serif" font-size="24" text-anchor="middle" fill="#94a3b8">Thigh</text>
+  <text x="442.9" y="832.5" font-family="system-ui, sans-serif" font-size="22" text-anchor="middle" fill="#94a3b8">Leg</text>
+  <text x="355.9" y="660.7" font-family="system-ui, sans-serif" font-size="24" text-anchor="middle" fill="#94a3b8">Thigh</text>
+  <text x="357.1" y="832.5" font-family="system-ui, sans-serif" font-size="22" text-anchor="middle" fill="#94a3b8">Leg</text>
+  <text x="645.2" y="366.2" font-family="system-ui, sans-serif" font-size="24" text-anchor="start" fill="#94a3b8">Upper arm</text>
+  <text x="645.2" y="491.8" font-family="system-ui, sans-serif" font-size="24" text-anchor="start" fill="#94a3b8">Forearm</text>
+  <text x="645.2" y="610.1" font-family="system-ui, sans-serif" font-size="24" text-anchor="start" fill="#94a3b8">Hand</text>
+  <text x="645.2" y="967.2" font-family="system-ui, sans-serif" font-size="24" text-anchor="start" fill="#94a3b8">Foot</text>
+  <text x="154.8" y="366.2" font-family="system-ui, sans-serif" font-size="24" text-anchor="end" fill="#94a3b8">Upper arm</text>
+  <text x="154.8" y="491.8" font-family="system-ui, sans-serif" font-size="24" text-anchor="end" fill="#94a3b8">Forearm</text>
+  <text x="154.8" y="610.1" font-family="system-ui, sans-serif" font-size="24" text-anchor="end" fill="#94a3b8">Hand</text>
+  <text x="154.8" y="967.2" font-family="system-ui, sans-serif" font-size="24" text-anchor="end" fill="#94a3b8">Foot</text>
+  <path d="M1200 95 C1225.5 95 1246.4 119.6 1246.4 149.7 C1246.4 188.2 1223.2 213.9 1200 213.9 C1176.8 213.9 1153.6 188.2 1153.6 149.7 C1153.6 119.6 1174.5 95 1200 95 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1245.7 133.1 C1254.3 131.9 1255.2 166.3 1246.4 173.5" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1154.3 133.1 C1145.7 131.9 1144.8 166.3 1153.6 173.5" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1221.7 206.3 L1223.3 237.4 C1245.5 242.3 1285.7 247.1 1305.4 255.7 C1318.9 261.7 1325 277.6 1325 293.4 C1326.3 333.7 1338.5 382.7 1347.1 422.5 C1353.2 462.4 1366.7 511.4 1372.9 545.7 C1379 558 1387.6 571.5 1392.5 582.5 C1398.6 591.1 1406 604.6 1407.2 615.6 C1407.8 624.2 1397.4 626.6 1394.9 619.3 C1392.5 613.2 1388.8 608.3 1387.6 604.6 L1387.6 632.2 C1387.6 639.5 1377.8 639.5 1377.8 632.2 L1377.8 613.2 L1377.8 638.3 C1377.8 645.6 1367.9 645.6 1367.9 638.3 L1367.9 613.2 L1367.9 633.4 C1367.9 640.7 1358.1 640.7 1358.1 633.4 L1358.1 613.2 L1358.1 616.8 C1358.1 624.2 1348.3 624.2 1348.3 616.8 L1348.3 613.2 C1344.7 591.1 1345.9 566.6 1348.3 545.7 C1343.4 511.4 1328.7 462.4 1317.7 425.6 C1312.8 388.8 1301.7 345.9 1293.2 320.2 C1288.3 358.2 1276 395 1273.6 431.7 C1271.1 468.5 1289.5 499.2 1290.7 529.8 C1294.4 591.2 1285.8 658.8 1276 721.6 C1273.6 751 1268.7 781.6 1267.4 812.2 C1266.2 855.1 1260.1 898 1255.2 929.8 C1257.6 947 1278.5 953.1 1279.7 967.8 C1279.7 982.5 1224.5 985 1208.6 975.2 C1202.5 959.2 1219.6 950.7 1224.5 929.8 C1222.1 885.7 1219.6 836.7 1217.2 806.1 C1217.2 775.5 1219.6 744.8 1219.6 721.6 C1218.4 665 1207.4 609.7 1200 560.5" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1178.3 206.3 L1176.7 237.4 C1154.5 242.3 1114.3 247.1 1094.6 255.7 C1081.1 261.7 1075 277.6 1075 293.4 C1073.7 333.7 1061.5 382.7 1052.9 422.5 C1046.8 462.4 1033.3 511.4 1027.1 545.7 C1021 558 1012.4 571.5 1007.5 582.5 C1001.4 591.1 994 604.6 992.8 615.6 C992.2 624.2 1002.6 626.6 1005.1 619.3 C1007.5 613.2 1011.2 608.3 1012.4 604.6 L1012.4 632.2 C1012.4 639.5 1022.2 639.5 1022.2 632.2 L1022.2 613.2 L1022.2 638.3 C1022.2 645.6 1032.1 645.6 1032.1 638.3 L1032.1 613.2 L1032.1 633.4 C1032.1 640.7 1041.9 640.7 1041.9 633.4 L1041.9 613.2 L1041.9 616.8 C1041.9 624.2 1051.7 624.2 1051.7 616.8 L1051.7 613.2 C1055.3 591.1 1054.1 566.6 1051.7 545.7 C1056.6 511.4 1071.3 462.4 1082.3 425.6 C1087.2 388.8 1098.3 345.9 1106.8 320.2 C1111.7 358.2 1124 395 1126.4 431.7 C1128.9 468.5 1110.5 499.2 1109.3 529.8 C1105.6 591.2 1114.2 658.8 1124 721.6 C1126.4 751 1131.3 781.6 1132.6 812.2 C1133.8 855.1 1139.9 898 1144.8 929.8 C1142.4 947 1121.5 953.1 1120.3 967.8 C1120.3 982.5 1175.5 985 1191.4 975.2 C1197.5 959.2 1180.4 950.7 1175.5 929.8 C1177.9 885.7 1180.4 836.7 1182.8 806.1 C1182.8 775.5 1180.4 744.8 1180.4 721.6 C1181.6 665 1192.6 609.7 1200 560.5" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1176.7 237.4 L1223.3 237.4" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1293.2 320.2 L1305.4 255.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1347.1 422.5 L1317.7 425.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1372.9 545.7 L1348.3 545.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1276 721.6 L1219.6 721.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1255.2 929.8 L1224.5 929.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1106.8 320.2 L1094.6 255.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1052.9 422.5 L1082.3 425.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1027.1 545.7 L1051.7 545.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1124 721.6 L1180.4 721.6" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1144.8 929.8 L1175.5 929.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1270 225.7 L1200 225.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1130 225.7 L1200 225.7" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1109.3 529.8 C1145.6 499.8 1172.8 508.4 1200 508.4 C1227.2 508.4 1254.4 499.8 1290.7 529.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1200 508.4 L1200 560.5" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1200 560.5 C1227.2 571.9 1268 571.9 1289.8 545.1" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1200 560.5 C1172.8 571.9 1132 571.9 1110.2 545.1" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1435.2 358.2 L1318.9 358.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1435.2 483.8 L1347.1 483.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1435.2 602.1 L1372.9 602.1" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1435.2 959.2 L1242.9 959.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M964.8 358.2 L1081.1 358.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M964.8 483.8 L1052.9 483.8" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M964.8 602.1 L1027.1 602.1" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M964.8 959.2 L1157.1 959.2" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="965" y="145" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">L</text>
+  <text x="1405" y="145" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">R</text>
+  <text x="1200" y="1055" font-family="system-ui, sans-serif" font-size="32" text-anchor="middle" font-weight="700" fill="#475569">Posterior</text>
+  <text x="1200" y="169.4" font-family="system-ui, sans-serif" font-size="26" text-anchor="middle" fill="#94a3b8">Head</text>
+  <text x="1276" y="233.7" font-family="system-ui, sans-serif" font-size="24" text-anchor="start" fill="#94a3b8">Neck</text>
+  <text x="1124" y="233.7" font-family="system-ui, sans-serif" font-size="24" text-anchor="end" fill="#94a3b8">Neck</text>
+  <text x="1247.2" y="543.4" font-family="system-ui, sans-serif" font-size="19" text-anchor="middle" fill="#94a3b8">Buttock</text>
+  <text x="1152.8" y="543.4" font-family="system-ui, sans-serif" font-size="19" text-anchor="middle" fill="#94a3b8">Buttock</text>
+  <text x="1200" y="395.4" font-family="system-ui, sans-serif" font-size="28" text-anchor="middle" fill="#94a3b8">Trunk</text>
+  <text x="1244.1" y="660.7" font-family="system-ui, sans-serif" font-size="24" text-anchor="middle" fill="#94a3b8">Thigh</text>
+  <text x="1242.9" y="832.5" font-family="system-ui, sans-serif" font-size="22" text-anchor="middle" fill="#94a3b8">Leg</text>
+  <text x="1155.9" y="660.7" font-family="system-ui, sans-serif" font-size="24" text-anchor="middle" fill="#94a3b8">Thigh</text>
+  <text x="1157.1" y="832.5" font-family="system-ui, sans-serif" font-size="22" text-anchor="middle" fill="#94a3b8">Leg</text>
+  <text x="1445.2" y="366.2" font-family="system-ui, sans-serif" font-size="24" text-anchor="start" fill="#94a3b8">Upper arm</text>
+  <text x="1445.2" y="491.8" font-family="system-ui, sans-serif" font-size="24" text-anchor="start" fill="#94a3b8">Forearm</text>
+  <text x="1445.2" y="610.1" font-family="system-ui, sans-serif" font-size="24" text-anchor="start" fill="#94a3b8">Hand</text>
+  <text x="1445.2" y="967.2" font-family="system-ui, sans-serif" font-size="24" text-anchor="start" fill="#94a3b8">Foot</text>
+  <text x="954.8" y="366.2" font-family="system-ui, sans-serif" font-size="24" text-anchor="end" fill="#94a3b8">Upper arm</text>
+  <text x="954.8" y="491.8" font-family="system-ui, sans-serif" font-size="24" text-anchor="end" fill="#94a3b8">Forearm</text>
+  <text x="954.8" y="610.1" font-family="system-ui, sans-serif" font-size="24" text-anchor="end" fill="#94a3b8">Hand</text>
+  <text x="954.8" y="967.2" font-family="system-ui, sans-serif" font-size="24" text-anchor="end" fill="#94a3b8">Foot</text>
+</svg>

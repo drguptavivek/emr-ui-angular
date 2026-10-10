@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1050" viewBox="0 0 1700 1050" role="img">
+  <title>Newborn face front view with lips, and an open-mouth view of the hard and soft palate inset, for cleft lip and palate marking; patient's right on the viewer's left</title>
+  <rect width="1700" height="1050" fill="#ffffff"/>
+  <path d="M420 120 C457.3 120 499.5 118.3 532 140 C564.5 161.7 598.7 206.7 615 250 C631.3 293.3 631.2 351.7 630 400 C628.8 448.3 621.3 500 608 540 C594.7 580 569.7 614 550 640 C530.3 666 511.7 684 490 696 C468.3 708 443.3 712 420 712 C396.7 712 371.7 708 350 696 C328.3 684 309.7 666 290 640 C270.3 614 245.3 580 232 540 C218.7 500 211.2 448.3 210 400 C208.8 351.7 208.7 293.3 225 250 C241.3 206.7 275.5 161.7 308 140 C340.5 118.3 382.7 120 420 120 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M212 390 C174 380 168 470 216 490" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M292 358 Q320 372 348 358" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M282 322 Q320 306 358 322" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="403" cy="498" rx="7" ry="5" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M410 505 L408 548" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M628 390 C666 380 672 470 624 490" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M548 358 Q520 372 492 358" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M558 322 Q520 306 482 322" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="437" cy="498" rx="7" ry="5" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M430 505 L432 548" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M400 430 C394 462 380 480 386 498 C400 510 440 510 454 498 C460 480 446 462 440 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M358 574 C380 548 406 546 420 558 C434 546 460 548 482 574" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M358 574 C390 584 450 584 482 574" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M358 574 C384 616 456 616 482 574" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M434 535 L700 535" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="710" y="543" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Philtrum</text>
+  <path d="M460 560 L700 590" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="710" y="598" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Upper lip</text>
+  <path d="M454 604 L700 650" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="710" y="658" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Lower lip</text>
+  <text x="420" y="62" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Face, front view</text>
+  <path d="M985 820 C982.7 791.7 967.2 703.3 971 650 C974.8 596.7 988.5 542.5 1008 500 C1027.5 457.5 1059.3 418.3 1088 395 C1116.7 371.7 1149.3 360 1180 360 C1210.7 360 1243.3 371.7 1272 395 C1300.7 418.3 1332.5 457.5 1352 500 C1371.5 542.5 1385.2 596.7 1389 650 C1392.8 703.3 1377.3 791.7 1375 820" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1033 800 C1031 775.8 1017.5 700.8 1021 655 C1024.5 609.2 1038 560.8 1054 525 C1070 489.2 1096 458.8 1117 440 C1138 421.2 1159 412 1180 412 C1201 412 1222 421.2 1243 440 C1264 458.8 1290 489.2 1306 525 C1322 560.8 1335.5 609.2 1339 655 C1342.5 700.8 1329 775.8 1327 800" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1180 470 L1180 650" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="1180" cy="450" rx="18" ry="24" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M1030 660 C1100 618 1260 618 1330 660" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1033 800 C1077 748 1134 744 1155 772 C1152 826 1208 826 1205 772 C1226 744 1283 748 1327 800" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1180" y="560" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Hard palate</text>
+  <text x="1180" y="718" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Soft palate</text>
+  <path d="M1205 450 L1427 450" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1439" y="458" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">Incisive papilla</text>
+  <path d="M1192 825 L1427 860" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1439" y="868" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">Uvula</text>
+  <path d="M975 640 L933 640" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="921" y="648" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="end">Alveolar</text>
+  <text x="921" y="676" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="end">ridge</text>
+  <text x="1180" y="62" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Palate, open-mouth view</text>
+  <text x="1180" y="940" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Anterior at the top; patient's right on the viewer's left.</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text>
+  <text x="1650" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="850" y="1010" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Newborn face and palate for cleft lip and palate marking. Patient's right on the viewer's left.</text>
+</svg>

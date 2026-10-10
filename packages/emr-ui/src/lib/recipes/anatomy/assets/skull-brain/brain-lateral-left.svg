@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img">
+  <title>Brain, left lateral view, anterior to the left of the drawing: lobes, central sulcus, Sylvian fissure, cerebellum, brainstem</title>
+  <rect width="1400" height="1000" fill="#ffffff"/>
+  <path d="M 1016 530 C 1040 610 1010 690 930 716 C 850 742 760 724 710 670 C 694 648 692 640 700 636" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 992 600 C 930 640 830 650 735 625 M 980 645 C 915 685 830 690 728 660 M 955 684 C 895 712 820 712 755 694" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 682 645 C 688 690 684 730 676 760 C 670 800 672 830 674 862 M 604 640 C 574 675 562 722 586 750 C 608 778 616 820 622 862" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 684 725 C 650 735 610 738 588 738 M 674 796 C 655 800 635 800 620 796" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 360 432 C 354 330 418 222 518 177 C 618 132 800 122 900 162 C 1000 197 1070 292 1084 402 C 1090 440 1080 500 1028 520 C 960 545 900 575 840 600 C 780 625 700 645 610 640 C 540 635 495 615 485 585 C 478 565 485 545 470 530 C 425 525 370 490 360 432 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 630 150 C 610 230 588 320 558 430 M 790 160 C 760 230 738 300 718 380" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 510 562 C 600 548 690 504 768 442" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 470 530 C 560 508 655 470 750 396" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 710 146 C 695 220 670 290 655 340 C 645 380 625 410 610 460" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 895 164 C 920 240 930 330 938 560" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 750 396 C 820 396 880 398 932 404" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="480" y="330" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Frontal</text>
+  <text x="840" y="290" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Parietal</text>
+  <text x="1008" y="410" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Occipital</text>
+  <text x="600" y="600" font-family="system-ui, sans-serif" font-size="30" fill="#94a3b8" text-anchor="middle">Temporal</text>
+  <text x="860" y="765" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Cerebellum</text>
+  <text x="540" y="800" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Brainstem</text>
+  <text x="710" y="96" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="middle">Central sulcus</text>
+  <path d="M 710 106 L 710 146" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="440" y="660" font-family="system-ui, sans-serif" font-size="22" fill="#94a3b8" text-anchor="end">Sylvian fissure</text>
+  <path d="M 444 648 L 468 534" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="90" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#475569" text-anchor="start">← Anterior</text>
+  <text x="1340" y="90" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Posterior →</text>
+</svg>

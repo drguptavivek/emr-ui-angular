@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1400" viewBox="0 0 1000 1400" role="img">
+  <title>Neck lymph-node levels I to VI, left lateral view</title>
+  <rect width="1000" height="1400" fill="#ffffff"/>
+  <path d="M 120 0C 105 80 112 150 105 225C 95 285 115 320 150 338C 185 372 225 418 265 450C 260 540 248 600 244 660C 238 780 230 900 205 1000C 180 1070 140 1130 130 1250L 128 1400" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 800 0C 815 100 785 190 715 245C 655 285 645 330 648 400C 655 500 678 620 688 740C 698 850 750 940 850 990C 890 1010 930 1030 960 1060" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="608" cy="140" rx="36" ry="78" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M 560 340C 480 400 300 410 162 322" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 560 340C 562 300 564 270 570 240" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 360 470C 330 464 295 468 278 484L 286 504C 306 490 332 490 358 496Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 265 535L 292 552C 306 585 302 625 286 660L 250 652" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="276" cy="700" rx="24" ry="20" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M 200 1062C 280 1038 480 1038 670 1078C 695 1085 698 1105 676 1108C 480 1078 280 1088 200 1108C 180 1103 178 1072 200 1062Z" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 595 262C 480 480 300 780 205 1040" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 660 285C 570 520 420 800 320 1055" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 660 262L 520 262" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 505 345L 355 470" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 175 322L 295 470" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 580 262L 480 507" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 566 507L 258 507" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 464 724L 242 724" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 464 724L 684 724" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 300 520C 294 650 278 850 228 1035" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 664 300C 664 400 672 520 688 640C 700 740 708 850 768 960" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="318" y="448" font-family="system-ui, sans-serif" font-size="36" fill="#94a3b8" text-anchor="middle">IB</text>
+  <text x="435" y="440" font-family="system-ui, sans-serif" font-size="36" fill="#94a3b8" text-anchor="middle">IIA</text>
+  <text x="575" y="400" font-family="system-ui, sans-serif" font-size="36" fill="#94a3b8" text-anchor="middle">IIB</text>
+  <text x="460" y="625" font-family="system-ui, sans-serif" font-size="36" fill="#94a3b8" text-anchor="middle">III</text>
+  <text x="328" y="910" font-family="system-ui, sans-serif" font-size="36" fill="#94a3b8" text-anchor="middle">IV</text>
+  <text x="590" y="570" font-family="system-ui, sans-serif" font-size="36" fill="#94a3b8" text-anchor="middle">VA</text>
+  <text x="590" y="890" font-family="system-ui, sans-serif" font-size="36" fill="#94a3b8" text-anchor="middle">VB</text>
+  <text x="160" y="440" font-family="system-ui, sans-serif" font-size="36" fill="#94a3b8" text-anchor="middle">IA</text>
+  <path d="M 185 425L 222 385" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="170" y="820" font-family="system-ui, sans-serif" font-size="36" fill="#94a3b8" text-anchor="middle">VI</text>
+  <path d="M 192 808L 255 790" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="390" y="350" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Mandible</text>
+  <path d="M 390 356L 388 384" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="390" y="778" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">SCM</text>
+  <text x="210" y="560" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Hyoid</text>
+  <path d="M 214 552L 278 496" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="880" y="1210" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8" text-anchor="end">Clavicle</text>
+  <path d="M 790 1195L 670 1100" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="940" y="100" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="60" y="1360" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="start">Anterior</text>
+  <text x="940" y="1360" font-family="system-ui, sans-serif" font-size="30" fill="#475569" text-anchor="end">Posterior</text>
+</svg>

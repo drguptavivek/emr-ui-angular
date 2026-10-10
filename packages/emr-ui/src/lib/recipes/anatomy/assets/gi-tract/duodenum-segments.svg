@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img">
+  <title>Duodenum C-loop segments D1 to D4 with papillae and pancreatic head</title>
+  <rect width="1000" height="1000" fill="#ffffff"/>
+  <path d="M368 300 C450 275 570 285 660 325 C700 345 720 370 712 400 C700 450 645 460 630 530 C615 610 640 650 592 725 C550 790 450 805 368 790" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10"/>
+  <path d="M712 400 C760 380 820 340 900 330" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 10"/>
+  <path d="M880 190 C780 188 700 190 640 192" fill="none" stroke="#475569" stroke-width="118" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M640 192 C560 188 450 200 385 252 C340 280 322 330 322 400 L322 700 C322 790 380 850 470 860 L640 860 C720 860 760 800 760 720 L760 430 C760 390 790 350 850 340" fill="none" stroke="#475569" stroke-width="70" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M880 190 C780 188 700 190 640 192" fill="none" stroke="#ffffff" stroke-width="106" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M640 192 C560 188 450 200 385 252 C340 280 322 330 322 400 L322 700 C322 790 380 850 470 860 L640 860 C720 860 760 800 760 720 L760 430 C760 390 790 350 850 340" fill="none" stroke="#ffffff" stroke-width="58" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M881.5 242.0 L883.5 138.1" fill="none" stroke="#ffffff" stroke-width="7"/>
+  <path d="M847.6 312.0 L857.3 367.1" fill="none" stroke="#ffffff" stroke-width="7"/>
+  <path d="M648 134 L648 250" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="357" cy="520" r="11" fill="#ffffff" stroke="#475569" stroke-width="4"/>
+  <circle cx="357" cy="440" r="7" fill="#ffffff" stroke="#475569" stroke-width="4"/>
+  <path d="M368 520 L390 520" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="400" y="529" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">Major papilla</text>
+  <path d="M364 440 L390 440" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="400" y="449" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8">Minor papilla</text>
+  <path d="M648 134 L660 90" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="660" y="99" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Pylorus</text>
+  <text x="830" y="110" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Stomach (antrum)</text>
+  <text x="500" y="130" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">D1 (bulb)</text>
+  <path d="M287 600 L250 600" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="240" y="594" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">D2</text><text x="240" y="624" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">(descending)</text>
+  <text x="540" y="960" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">D3 (horizontal)</text>
+  <text x="810" y="649" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">D4 (ascending)</text>
+  <path d="M762 410 L790 420" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="800" y="414" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Duodenojejunal</text><text x="800" y="444" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">flexure</text>
+  <text x="850" y="285" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Jejunum</text>
+  <path d="M336 840 L260 920" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="250" y="914" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Inferior</text><text x="250" y="944" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">duodenal flexure</text>
+  <path d="M362 240 L260 170" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="250" y="164" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Superior</text><text x="250" y="194" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">duodenal flexure</text>
+  <text x="500" y="650" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Pancreatic head</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text><text x="950" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+  <text x="500" y="60" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Anterior</text>
+</svg>

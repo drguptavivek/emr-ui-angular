@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img">
+  <title>ERCP schematic of the biliary tree, pancreatic duct and ampulla</title>
+  <rect width="1200" height="1200" fill="#ffffff"/>
+  <path d="M420 830 C450 790 520 775 580 765 C660 750 740 700 820 660 C900 620 980 590 1030 600 C1060 612 1060 650 1030 668 C980 700 900 740 830 790 C760 840 700 890 640 940 C580 990 500 1020 440 990 C400 965 395 880 420 830 Z" fill="#ffffff" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M470 700 C430 740 345 760 345 830 L345 1010 C345 1090 420 1110 520 1110" fill="none" stroke="#475569" stroke-width="80" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M470 700 C430 740 345 760 345 830 L345 1010 C345 1090 420 1110 520 1110" fill="none" stroke="#ffffff" stroke-width="68" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M494.8 721.9 L448.8 674.6" fill="none" stroke="#ffffff" stroke-width="7"/>
+  <path d="M522.6 1077.0 L522.4 1143.0" fill="none" stroke="#ffffff" stroke-width="7"/>
+  <path d="M352 486 C330 510 300 560 300 630 C300 690 335 722 365 702 C395 678 395 600 374 524 C368 504 360 494 352 486 Z" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M590 300 L590 440" fill="none" stroke="#475569" stroke-width="24" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M590 440 C590 560 560 660 520 760 C490 830 450 870 405 905" fill="none" stroke="#475569" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M590 450 C540 468 440 460 356 492" fill="none" stroke="#475569" stroke-width="16" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M1000 640 C900 690 800 740 720 790 C640 840 560 860 500 880 C470 890 440 900 405 905" fill="none" stroke="#475569" stroke-width="18" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M590 300 L590 440" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M590 440 C590 560 560 660 520 760 C490 830 450 870 405 905" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M590 450 C540 468 440 460 356 492" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M1000 640 C900 690 800 740 720 790 C640 840 560 860 500 880 C470 890 440 900 405 905" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M590 300 C560 250 500 230 440 215" fill="none" stroke="#475569" stroke-width="18" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M590 300 C620 250 680 230 740 215" fill="none" stroke="#475569" stroke-width="18" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M590 300 C560 250 500 230 440 215" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M590 300 C620 250 680 230 740 215" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M440 215 C400 200 350 170 310 130" fill="none" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path d="M440 215 C400 215 340 210 280 215" fill="none" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path d="M440 215 C410 240 370 270 330 290" fill="none" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path d="M740 215 C780 200 830 170 870 130" fill="none" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path d="M740 215 C780 215 840 210 900 215" fill="none" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path d="M740 215 C770 240 810 270 850 290" fill="none" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path d="M375 190 C350 190 335 175 320 160" fill="none" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path d="M815 190 C840 190 855 175 870 160" fill="none" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  <path d="M590 450 C540 468 440 460 356 492" fill="none" stroke="#475569" stroke-width="16" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M590 450 C540 468 440 460 356 492" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="butt" stroke-linejoin="round"/>
+  <circle cx="380" cy="905" r="20" fill="#ffffff" stroke="#475569" stroke-width="5"/>
+  <path d="M390 940 L390 940" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M525 252 L505 335" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="495" y="329" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Right hepatic</text><text x="495" y="359" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">duct</text>
+  <path d="M655 252 L675 335" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="685" y="329" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Left hepatic</text><text x="685" y="359" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">duct</text>
+  <path d="M590 392 L730 392" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="740" y="401" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Common hepatic duct</text>
+  <text x="470" y="440" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Cystic duct</text>
+  <path d="M292 600 L160 600" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="150" y="609" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Gallbladder</text>
+  <path d="M570 600 L730 600" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="740" y="609" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Common bile duct</text>
+  <path d="M900 690 L1030 770" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="1030" y="764" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Pancreatic duct</text><text x="1030" y="794" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">(of Wirsung)</text>
+  <path d="M700 920 L890 960" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="900" y="969" font-family="system-ui, sans-serif" font-size="28" fill="#94a3b8">Pancreas</text>
+  <path d="M345 970 L170 970" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="160" y="964" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Duodenum</text><text x="160" y="994" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">(D2)</text>
+  <path d="M385 880 L210 840" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="200" y="834" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">Ampulla of Vater</text><text x="200" y="864" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="end">(major papilla)</text>
+  <text x="600" y="100" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8" text-anchor="middle">Intrahepatic ducts</text>
+  <text x="50" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569">R</text><text x="1150" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#475569" text-anchor="end">L</text>
+</svg>

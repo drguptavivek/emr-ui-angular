@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1200" viewBox="0 0 1400 1200" role="img">
+  <title>Lungs and lobes, posterior view</title>
+  <rect width="1400" height="1200" fill="#ffffff"/>
+  <path d="M455 150 C525 150 595 262 612 420 C620 520 622 640 610 760 C600 860 596 920 585 955 C500 995 330 1000 245 932 C150 835 128 560 175 400 C215 268 300 150 455 150 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M945 150 C875 150 805 262 788 420 C780 520 778 640 790 760 C800 860 804 920 815 955 C900 995 1070 1000 1155 932 C1250 835 1272 560 1225 400 C1185 268 1100 150 945 150 Z" fill="#ffffff" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M612 340 C480 400 290 560 168 770" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M788 340 C920 400 1110 560 1232 770" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M668 90 L668 380 C660 410 620 438 556 468 C542 474 536 496 548 514 C600 524 668 500 700 452 C760 502 836 548 872 566 C888 560 892 530 878 516 C826 488 770 430 732 380 L732 90 Z" fill="#ffffff"/>
+  <path d="M668 90 L668 380 C660 410 620 438 556 468 C542 474 536 496 548 514 C600 524 668 500 700 452 C760 502 836 548 872 566 C888 560 892 530 878 516 C826 488 770 430 732 380 L732 90" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="420" y="330" font-family="system-ui, sans-serif" font-size="46" text-anchor="middle" font-weight="700" fill="#94a3b8">LUL</text>
+  <text x="380" y="790" font-family="system-ui, sans-serif" font-size="46" text-anchor="middle" font-weight="700" fill="#94a3b8">LLL</text>
+  <text x="980" y="330" font-family="system-ui, sans-serif" font-size="46" text-anchor="middle" font-weight="700" fill="#94a3b8">RUL</text>
+  <text x="1020" y="790" font-family="system-ui, sans-serif" font-size="46" text-anchor="middle" font-weight="700" fill="#94a3b8">RLL</text>
+  <text x="60" y="90" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">L</text>
+  <text x="1300" y="90" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569">R</text>
+</svg>

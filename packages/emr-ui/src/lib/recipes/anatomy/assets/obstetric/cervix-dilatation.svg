@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700" role="img">
+  <title>Cervical dilatation circles from 1 to 10 cm, drawn in proportion</title>
+  <rect width="1400" height="700" fill="#ffffff"/>
+  <text x="700" y="90" font-family="system-ui, sans-serif" font-size="34" fill="#475569" text-anchor="middle">Cervical dilatation (cm)</text>
+  <circle cx="97" cy="300" r="9.5" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M97 323.5 L97 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="97" y="490" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">1</text>
+  <circle cx="145.5" cy="300" r="19" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M145.5 333 L145.5 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="145.5" y="490" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">2</text>
+  <circle cx="213" cy="300" r="28.5" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M213 342.5 L213 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="213" y="490" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">3</text>
+  <circle cx="299.5" cy="300" r="38" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M299.5 352 L299.5 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="299.5" y="490" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">4</text>
+  <circle cx="405" cy="300" r="47.5" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M405 361.5 L405 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="405" y="490" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">5</text>
+  <circle cx="529.5" cy="300" r="57" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M529.5 371 L529.5 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="529.5" y="490" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">6</text>
+  <circle cx="673" cy="300" r="66.5" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M673 380.5 L673 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="673" y="490" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">7</text>
+  <circle cx="835.5" cy="300" r="76" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M835.5 390 L835.5 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="835.5" y="490" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">8</text>
+  <circle cx="1017" cy="300" r="85.5" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M1017 399.5 L1017 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1017" y="490" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">9</text>
+  <circle cx="1217.5" cy="300" r="95" fill="none" stroke="#475569" stroke-width="6"/>
+  <path d="M1217.5 409 L1217.5 430" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1217.5" y="490" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#475569" text-anchor="middle">10</text>
+  <text x="700" y="620" font-family="system-ui, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Circle diameters are in proportion: 1 to 10 cm. 10 cm = fully dilated.</text>
+</svg>

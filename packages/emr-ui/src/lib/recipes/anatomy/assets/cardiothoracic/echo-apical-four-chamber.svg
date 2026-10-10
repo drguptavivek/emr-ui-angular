@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1200" viewBox="0 0 1700 1200" role="img">
+  <title>Echo apical four-chamber view, schematic</title>
+  <rect width="1700" height="1200" fill="#ffffff"/>
+  <g transform="translate(50 20)">
+  <path d="M800 50 L58 792 A1050 1050 0 0 0 1542 792 Z" fill="none" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="800" cy="50" r="8" fill="#ffffff" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M800 170 C700 175 600 285 560 425 C530 520 520 600 532 668" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M800 170 C920 175 1050 285 1090 445 C1115 540 1115 620 1100 682" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M795 188 C790 300 790 500 796 705" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M812 188 C830 300 836 500 850 702" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M830 205 C930 220 1030 305 1052 450 C1070 540 1070 620 1062 682" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M790 205 C710 220 630 310 600 430 C578 520 570 600 574 668" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M532 668 L796 705" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M850 702 L1100 682" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M532 668 C508 770 535 900 635 950 C705 978 775 960 808 930" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1100 682 C1128 780 1100 900 1000 948 C920 980 850 962 826 930" fill="none" stroke="#475569" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M796 705 C798 780 804 860 806 928" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M818 705 C820 780 824 860 826 930" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M794 705 C780 670 765 645 745 625" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M538 668 C560 640 590 618 615 600" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M852 700 C870 660 892 625 910 598" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1098 684 C1075 660 1050 640 1030 625" fill="none" stroke="#475569" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M985 935 L1005 1015" fill="none" stroke="#475569" stroke-width="46" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M1065 885 L1135 945" fill="none" stroke="#475569" stroke-width="46" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M985 935 L1005 1015" fill="none" stroke="#ffffff" stroke-width="36" stroke-linecap="square" stroke-linejoin="round"/>
+  <path d="M1065 885 L1135 945" fill="none" stroke="#ffffff" stroke-width="36" stroke-linecap="square" stroke-linejoin="round"/>
+  <text x="690" y="470" font-family="system-ui, sans-serif" font-size="44" text-anchor="middle" font-weight="700" fill="#94a3b8">RV</text>
+  <text x="940" y="470" font-family="system-ui, sans-serif" font-size="44" text-anchor="middle" font-weight="700" fill="#94a3b8">LV</text>
+  <text x="650" y="830" font-family="system-ui, sans-serif" font-size="44" text-anchor="middle" font-weight="700" fill="#94a3b8">RA</text>
+  <text x="960" y="830" font-family="system-ui, sans-serif" font-size="44" text-anchor="middle" font-weight="700" fill="#94a3b8">LA</text>
+  <text x="450" y="720" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Tricuspid valve</text>
+  <path d="M460 710.4 L576 634" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="576" cy="634" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="1190" y="720" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Mitral valve</text>
+  <path d="M1180 710.4 L1052 642" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1052" cy="642" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="560" y="330" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Interventricular septum</text>
+  <path d="M570 320.4 L792 330" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="792" cy="330" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="420" y="830" font-family="system-ui, sans-serif" font-size="30" text-anchor="end" font-weight="700" fill="#94a3b8">Interatrial septum</text>
+  <path d="M430 820.4 L808 820" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="808" cy="820" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="900" y="110" font-family="system-ui, sans-serif" font-size="30" text-anchor="start" font-weight="700" fill="#94a3b8">Apex</text>
+  <path d="M890 100.4 L800 172" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="800" cy="172" r="5" fill="#94a3b8" stroke="none"/>
+  <text x="800" y="1140" font-family="system-ui, sans-serif" font-size="28" text-anchor="middle" font-weight="700" fill="#94a3b8">Base (atria)</text>
+  <text x="30" y="1040" font-family="system-ui, sans-serif" font-size="26" text-anchor="start" font-weight="700" fill="#94a3b8">Apical four-chamber.</text>
+  <text x="30" y="1070" font-family="system-ui, sans-serif" font-size="26" text-anchor="start" font-weight="700" fill="#94a3b8">Echo convention: apex at top,</text>
+  <text x="30" y="1100" font-family="system-ui, sans-serif" font-size="26" text-anchor="start" font-weight="700" fill="#94a3b8">LV on viewer right,</text>
+  <text x="30" y="1130" font-family="system-ui, sans-serif" font-size="26" text-anchor="start" font-weight="700" fill="#94a3b8">RV on viewer left.</text>
+  </g>
+</svg>
