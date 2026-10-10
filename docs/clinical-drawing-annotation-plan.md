@@ -2,7 +2,11 @@
 
 Date: 9 October 2026
 
-Status: Planned. This document does not authorize implementation or a framework migration.
+Status:
+- Phase 1 (shared foundation) implemented 9 October 2026.
+- Phase 2 anatomy and ophthalmic outline sets implemented 10 October 2026: 105 views in 24 L5 sets, all unreviewed.
+- The compact toolbar and annotation list exist as standalone components; the canvas has not adopted them yet (Phase 4).
+- Phases 3–5 remain. No framework migration is authorised.
 
 ## Goal
 
@@ -48,7 +52,7 @@ Build a modular Storybook catalogue for anatomical drawings, clinical photograph
 | Vascular | Limb pulse-site and superficial-vein schematics |
 | Wound/procedure | Wound surface and depth schematic; incision, drain, stoma, catheter and injection-site maps |
 
-Every template records stable ID, asset version, provenance/licence, anatomical region, view, laterality where applicable, fixed coordinate bounds and accessible description. Illustrations require clinical review before production use. Diagram dimensions do not imply patient measurements.
+Each view is its own standalone `.svg` asset file (one view per file, never a sprite or a combined sheet), paired with a data-only L5 recipe entry. Every template records stable ID, asset version, provenance/licence, anatomical region, view, laterality where applicable, fixed coordinate bounds and accessible description. Illustrations require clinical review before production use. Diagram dimensions do not imply patient measurements.
 
 ## Ophthalmology catalogue
 
@@ -60,15 +64,17 @@ Every template records stable ID, asset version, provenance/licence, anatomical 
 | Retina | OD/OS posterior pole and peripheral retinal chart | Finding location, extent and associated notes |
 | Optic disc | Disc detail and fundus photograph | Controller-supplied disc findings and measurements |
 | OCT | B-scan and en-face images with frame identity | Scan metadata, supplied metrics, interpretation and report attachments |
-| Refraction | Optional axis illustration | OD/OS sphere, cylinder, axis, add, prism, visual acuity and remarks |
+| Refraction | Optical (power) cross per eye, drawn from the structured values; optional axis illustration | OD/OS sphere, cylinder, axis, add, prism, visual acuity and remarks |
+| Retinoscopy | Retinoscopy cross per eye (neutralising powers on the two principal meridians) | Working distance and gross/net findings |
 | Spectacle prescription | Existing horizontal OD/OS recording | Prescription fields and instructions |
 | Motility | Ocular motility chart | Gaze-position findings |
 | Perimetry | Result image with optional overlays | Test metadata, supplied results and interpretation |
 
-Refraction and measurements stay structured; drawing complements them. Initial OCT support covers raster exports and supplied reports. DICOM parsing, windowing, volumetric navigation and segmentation are separately scoped imaging work.
+Refraction and measurements stay structured; drawing complements them. Standard notations such as the optical cross and the retinoscopy cross are structured-value renderings: the controller supplies the powers and axes, and the component draws them; they are not free drawing. Initial OCT support covers raster exports and supplied reports. DICOM parsing, windowing, volumetric navigation and segmentation are separately scoped imaging work.
 
 ## Shared editor capabilities
 
+- One shared, extremely compact editor chrome for every annotation surface: a single dense row of icon-only buttons (select, move, eraser, text, shape tools, colour/width, undo/redo, zoom/fit). Each button has an accessible name and tooltip and a 44px hit area, and uses shared icons and tokens. Beside or below the canvas sits a compact, numbered list of annotations. Specialty views reuse this chrome rather than restyling it.
 - Select/move, text, arrow, line, curve, ellipse/circle, rectangle, polygon and freehand tools.
 - Independent layers with label/class assignment, selection, hide/show, lock, delete and reorder.
 - Consistent undo/redo, zoom/pan, fit/reset view, save status and export actions.
@@ -91,18 +97,23 @@ Extend the existing annotation contract with:
 
 URLs and local upload handles are transient display resources, not durable image identity. Controllers resolve uploads, terminology bindings, persistence, revision history and export adapters. Handle existing schema versions explicitly and determine whether a migration is needed before changing saved data.
 
-## Existing implementation gaps
+## Implementation gaps — status after Phase 1
 
-Read-only planning inspection identified:
+Resolved in Phase 1:
 
-- UI and controller annotation types are duplicated.
-- Current image/overlay coordinate handling can misregister marks on letterboxed images.
-- Photo stories use placeholder grid SVGs; several contain hard-coded teal.
-- Anatomy and clinical labels are embedded in the editor instead of supplied as catalogue data.
-- File selection uses an additional output rather than the shared typed-intent boundary.
-- Annotation-specific interaction and representative visual tests need coverage.
+- Duplicate UI/controller types: the canvas now imports every type from `annotation.models.ts`. Its layers are the durable `AnnotationLayerRecord` union.
+- Letterbox misregistration: the canvas takes the background's intrinsic aspect ratio, and the overlay `viewBox` is the image's pixel size. Pointer, image and overlay share one rectangle. A Playwright test checks this at 360, 768 and 1280px.
+- Hard-coded teal: removed from the component and the stories. `brushColor` is now a required, controller-supplied value; the component holds no colour constants.
+- Embedded anatomy and labels: the fallback outlines moved to `stories/annotation.fixtures.ts`, as unreviewed placeholders. The component has no built-in templates or classes, and shows an empty state instead.
+- Upload handling: the component no longer reads files. `nativeFilesSelected` was never a violation, because api-conventions §2.4 sanctions it. What crossed the boundary was the `FileReader` → template step, which now belongs to the controller.
+- Durable contract: `AnnotationDocument` is now schema v2, with a required `background` (image id and intrinsic size). Deserialization validates every layer's shape and geometry; v1 is rejected because no v1 data was ever persisted.
 
-Recheck these against the current tree before implementation; other work is in progress.
+Open, and carried into later phases:
+
+- Layers are not keyed by background, so marks survive a background switch (Phase 4, multi-view).
+- Undo/redo history is still component-owned and resets on every `model` change (Phase 4, controlled revision history).
+- The text label size ignores `fontSize` because of the deliberate 48px CSS literal. Emoji icon buttons instead of the shared icon set, and no axe coverage for the canvas yet (Phase 5).
+- The L5 recipe layer has no folder, catalogue page or `catalog.spec.ts` rule yet (Phase 2 starts it).
 
 ## Delivery phases and ownership
 

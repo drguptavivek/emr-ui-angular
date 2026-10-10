@@ -2,6 +2,45 @@
 
 Current state and pending work live in `handoff.md`. Exact changes and authorship live in Git.
 
+## 10 October 2026 — `10732c3`, `d89b4ef` — annotation foundation and fixes to existing components
+
+- The annotation canvas now uses the controller's types; its duplicate UI type system is deleted.
+- `AnnotationDocument` schema v2 adds a required `background` (image id and intrinsic size). Deserialization now validates layers; v1 is rejected.
+- Fixed letterboxed-image misregistration: the canvas takes the image's aspect ratio and the overlay uses image-pixel units. A Playwright registration test covers it.
+- Removed teal and every UI-owned colour; `brushColor` is controller-supplied.
+- Moved the placeholder anatomy outlines from the component into story fixtures. The component now shows an empty state.
+- File reading moved out of the component; the Dermatology story host plays the controller's part.
+- Updated the L4 catalogue entry, the drawing plan (status, gap list, one-SVG-per-view rule, optical/retinoscopy cross) and the handoff.
+
+## 10 October 2026 — `6064652` and the following commit — L5 anatomy outlines and 15 new components
+
+Built by parallel subagents from one architecture review, then integrated and checked centrally.
+
+- **L5 recipes.** Added the `AnatomyTemplateRecipe` contract and `anatomyTemplateToImage` (controller), plus 105 standalone outline SVGs in 24 sets: whole body, head/scalp, face, neck, thorax, back, pelvis, genital/perineal, upper and lower limbs, hands, feet, ENT, dental/oral, neurological, vascular, wound/procedure, abdomen and six ophthalmic sets.
+  - `recipes.spec.ts` enforces the drawing standard: size, palette, no scripts or external references, one recipe per SVG, documented groups.
+  - The SVGs ship at `dist/emr-ui/assets/anatomy`. Storybook has a gallery and a draw-on-outline story.
+  - Every outline is `unreviewed`.
+- **New components:**
+  - `EmrDoseSchedule`: every dosage form, words before codes, and an OD frequency/site guard.
+  - `EmrClinicalTranscript` + `EmrEvidenceSuggestionList` + `NoteCaptureController`: evidence-linked dictation/typed note capture.
+  - `EmrMeridianCross`: optical and retinoscopy cross with axis labels.
+  - `EmrOcularMotilityChart`.
+  - `EmrOctFindingRecord`.
+  - `EmrAnnotationToolbar` (compact, shape glyphs, one pen button) and `EmrAnnotationList`.
+  - `EmrObservationFlowsheet` and `EmrObservationTrend`.
+  - `EmrCodedInput` (L2).
+  - `EmrScoreResultCard`.
+  - `EmrCaptureStatusBar`.
+  - `EmrMedicationReconciliation`.
+  - `EmrWorkQueue`.
+- **Fixes to existing components:**
+  - The typed field and clinical matrix no longer present "status not set" as "recorded"; the matrix intent takes `null` to clear.
+  - `EmrSelect` now shows a pre-selected value: options bind `[selected]`, because `[value]` was applied before @for options existed. Other selects are tracked in the handoff.
+  - `EmrSearchSelect` gains `labelHidden`.
+  - The staged checklist's disabled items use muted text instead of opacity, which failed contrast.
+  - 51 hex colour fallbacks were removed from five components.
+- **New architecture rules:** no colour literals in components; no `::ng-deep` and no unencapsulated local styles (four older components grandfathered).
+
 ## 9 October 2026 — `8baf858`
 
 - Added VAS primitive, stories, catalogue/public exports, documentation and visual baselines.
@@ -24,7 +63,7 @@ These are historical summaries, not fresh verification or claims that every work
 - Added dermatology, paired-retina, surgery-planning and read-only photo stories with class labels. Former notes reported controller/UI/Storybook builds for that work; these do not establish current validation.
 - Reorganised components into layers and added field-contract documentation (`a95d1ec`).
 
-## Uncommitted documentation maintenance
+## 9 October 2026 — `b7a2ecf` (documentation maintenance)
 
 - Converted `handoff.md` into a current-state document with explicit validation limits and pending work.
 - Moved historical progress summaries into this changelog.

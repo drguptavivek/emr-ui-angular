@@ -117,7 +117,8 @@ test.describe('Storybook EMR catalogue smoke tests', () => {
       'emr-clinical-forms-system-examinations--general-and-systems': [['General appearance', 'well']],
       'emr-clinical-assessment--neurology-four-limb': [
         ['Tone, Left arm', 'increased'], ['Biceps reflex, Left arm', 'brisk'], ['Plantar response, Left leg', 'equivocal'], ['Plantar response, Right leg', 'down']
-      ]
+      ],
+      'emr-medications-reconciliation--discharge-with-stops': [['Enoxaparin', 'stop'], ['Amlodipine', 'continue'], ['Paracetamol', 'modify'], ['Amoxicillin', 'new']]
     };
     for (const [id, expected] of Object.entries(cases)) {
       await page.goto(`/iframe.html?id=${id}&viewMode=story`, { waitUntil: 'domcontentloaded' });

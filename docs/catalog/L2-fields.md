@@ -149,3 +149,63 @@ All 10 cases in the real `ClinicalFieldType` union are handled — there is no u
 
 **Depends on** — `EmrFieldFrameComponent` (L2, same layer).
 **Used by** — `EmrRepeatableGroup` (L3), `EmrClinicalForm` (L3), `EmrFieldGenerator` (L6, for its live preview) — all verified in the import graph.
+
+---
+
+### EmrCodedInput
+**Layer** L2 · **Selector** `emr-coded-input` · **Status** stable · **Story** `emr-fields-coded-input--single`
+
+**Need** — A coded answer (diagnosis, observation, procedure) must be captured as a real concept (system, code, display), not free text, and the clinician must be able to see which terminology each chosen concept comes from. `docs/field-contract.md` names this component as the consumer of the `answer-value-set` terminology binding.
+
+**Purpose** — Renders one coded field: the chosen concepts as chips, each with the display name and the code system name and code as text ("SNOMED CT 77075001", "ICD-10 H40.11", "LOINC 56844-4"), a 44px "Remove <display>" button per chip, and a search box built on `EmrSearchSelect` inside an `EmrFieldFrame`. Typing, search, open/close, choosing a result and removing a chip are emitted as intents; the search intent carries the contract's `answer-value-set` `valueSetCanonical`. Single or multiple follows `cardinality.max` through the shape of `value` (one concept, or a list). An optional assessment-status select (`presentation.assessmentStatusOptions`) emits `statusChangeRequested`, and the six no-value states keep their own badge. Validation messages are shown with a text prefix (Error / Warning / Note) and linked to the control with `aria-describedby`. The controller owns terminology lookup, paging, debouncing, edition and version, synonym matching and all validation including binding strength; the UI never calls a port and never filters or reorders `options`. A read-only field with no value shows "Not supplied".
+
+**API**
+```ts
+export interface CodedInputViewModel {
+  readonly definition: EmrFieldDefinition;
+  readonly value: EmrCodedValue | readonly EmrCodedValue[] | null;
+  readonly status?: ClinicalAssessmentStatus;
+  readonly query: string; readonly options: readonly EmrCodedValue[];
+  readonly open: boolean; readonly loading: boolean;
+  readonly messages: readonly EmrValidationMessage[];
+  readonly readOnly?: boolean; readonly emptyMessage: string;
+  readonly systemLabels?: Readonly<Record<string, string>>;   // system URI -> "SNOMED CT"
+}
+export type CodedInputIntent =
+  | { type: 'queryChangeRequested'; query: string }
+  | { type: 'searchRequested'; query: string; valueSetCanonical?: string }
+  | { type: 'openRequested' } | { type: 'closeRequested' }
+  | { type: 'conceptSelected'; concept: EmrCodedValue }
+  | { type: 'conceptRemoveRequested'; code: string; system: string }
+  | { type: 'statusChangeRequested'; status: ClinicalAssessmentStatus };
+
+export class EmrCodedInputComponent {
+  @Input({ required: true }) model!: CodedInputViewModel;
+  @Input() headingId?: string;
+  @Output() readonly intent = new EventEmitter<CodedInputIntent>();
+}
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| `model` | `CodedInputViewModel` (required) | — | field definition, value, query, results and messages, all supplied by the controller |
+| `headingId` | `string` | field label | id of an external heading; when set it names the group via `aria-labelledby` |
+| `intent` (output) | `EventEmitter<CodedInputIntent>` | — | the seven intents above |
+
+**Example**
+```html
+<emr-coded-input [model]="diagnosisModel" (intent)="onDiagnosisIntent($event)" />
+```
+
+**Known gaps**
+- API deviation: it is L2 but takes `model` and a single `intent`, because it has a multi-action surface (query, search, selection, removal, status) that does not fit a single `valueChange`.
+- `systemLabels` is an addition to the spec's view model: `EmrCodedValue.system` is a URI, and the UI must not map URIs to names, so the controller supplies the names. An unmapped system is shown as its raw URI.
+- The results list is the `EmrSearchSelect` panel: results are keyed by system and code, and the panel's own empty state is replaced by a status line below the input when there are no results, because an empty `role="listbox"` fails axe `aria-required-children`.
+- No terminology lookup, paging, debouncing, synonym matching, edition/version handling or binding-strength validation (all controller).
+- Chips show the display name given in the value; a concept version (`EmrCodedValue.version`) is not displayed.
+
+**Depends on** — `EmrFieldFrameComponent`, `EmrSearchSelectComponent`.
+
+**Used by** — none yet (intended for `EmrTypedField` coded fields with a `search` widget and for diagnosis and observation capture).

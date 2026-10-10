@@ -407,3 +407,109 @@ export class EmrClinicalCellRendererDirective {
 
 **Depends on** — none.
 **Used by** — `EmrClinicalMatrix` (L3, same file; content-projected, not imported as a component).
+
+---
+
+### EmrAnnotationToolbar
+**Layer** L3 · **Selector** `emr-annotation-toolbar` · **Status** stable · **Story** `emr-annotation-toolbar--all-tools`
+
+**Need** — Any annotation surface needs the same small set of controls (tools, colour, line width, undo/redo, zoom, save) without each canvas rebuilding them or spending a screen row per control.
+
+**Purpose** — One dense, wrapping row of icon-only buttons. Each has a 44px hit area around a 34px face, a `title` tooltip and an `aria-label`; the active tool, colour and width carry `aria-pressed` and a shape cue (filled face plus underline, check on the swatch), never colour alone. Tools come from a generic `tools[]` list (id, label, heroicon name, optional shortcut hint); an icon name outside the fixed registered set shows the label's first letter. The toolbar is a single Tab stop with arrow-key roving (Home/End supported) and `role="group"` per cluster. It never knows what a tool does and holds no geometry, history, zoom or colour state; `readOnly` disables everything except zoom.
+
+**API**
+```ts
+export interface ToolbarTool { readonly id: string; readonly label: string; readonly icon: string; readonly disabled?: boolean; readonly shortcutLabel?: string }
+export interface ToolbarColour { readonly id: string; readonly label: string; readonly hex: string }
+export interface ToolbarWidth { readonly id: string; readonly label: string; readonly px: number }
+export interface AnnotationToolbarViewModel {
+  readonly tools: readonly ToolbarTool[]; readonly selectedToolId?: string;
+  readonly colours: readonly ToolbarColour[]; readonly selectedColourId?: string;
+  readonly widths: readonly ToolbarWidth[]; readonly selectedWidthId?: string;
+  readonly canUndo: boolean; readonly canRedo: boolean; readonly zoomLabel: string;
+  readonly canSave: boolean; readonly saveLabel?: string; readonly readOnly?: boolean;
+}
+export type AnnotationToolbarIntent =
+  | { type: 'toolSelected'; toolId: string } | { type: 'colourSelected'; colourId: string } | { type: 'widthSelected'; widthId: string }
+  | { type: 'undoRequested' } | { type: 'redoRequested' } | { type: 'zoomInRequested' } | { type: 'zoomOutRequested' }
+  | { type: 'zoomFitRequested' } | { type: 'zoomResetRequested' } | { type: 'saveRequested' };
+
+export class EmrAnnotationToolbarComponent {
+  @Input({ required: true }) model!: AnnotationToolbarViewModel;
+  @Input() headingId?: string;
+  @Output() readonly intent = new EventEmitter<AnnotationToolbarIntent>();
+}
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| `model` | `AnnotationToolbarViewModel` (required) | — | tools, colours, widths, enabled flags and zoom text, all supplied |
+| `headingId` | `string` | none | id of a visible label; otherwise the toolbar is named "Annotation tools" |
+| `intent` (output) | `EventEmitter<AnnotationToolbarIntent>` | — | one intent per button |
+
+**Example**
+```html
+<emr-annotation-toolbar [model]="toolbarModel" (intent)="onToolbarIntent($event)" />
+```
+
+**Known gaps**
+- Registered icons: `heroCursorArrowRays`, `heroArrowsPointingOut`, `heroHandRaised`, `heroBackspace`, `heroPencil`, `heroPencilSquare`, `heroMinus`, `heroArrowLongRight`, `heroArrowTrendingUp`, `heroSquare2Stack`, `heroStop`, `heroCircleStack`, `heroBars3BottomLeft`. Anything else falls back to the label initial.
+- Group names ("Tools", "Colour", "Line width", "History", "Zoom", "Save") and the Undo/Redo/Zoom labels are English UI text.
+- Colour swatches are rendered from supplied `hex` data; light swatches rely on the swatch ring for contrast.
+- At 44px per button the full 11-tool, 6-colour set needs about 1210px and wraps below that.
+- Hidden in print.
+
+**Depends on** — `NgIcon` (heroicons outline).
+
+**Used by** — none yet (the clinical annotation canvas will adopt it).
+
+---
+
+### EmrAnnotationList
+**Layer** L3 · **Selector** `emr-annotation-list` · **Status** stable · **Story** `emr-annotation-list--populated`
+
+**Need** — A drawing with many marks needs a compact way to see, select and manage each one by number, without opening a large layer panel.
+
+**Purpose** — A tight numbered `<ol>` of annotation layers (`AnnotationLayerRecord`). Each row, 44px high, shows the number, colour swatch, label, optional class and description, tool glyph and a lock marker, with icon buttons to hide/show, lock, move up/down and delete. The selected row follows `selectedLayerId` and carries `aria-current`, a side bar and bold text; hidden rows are italic with a dashed swatch and an eye-slash icon. Visibility and lock buttons use `aria-pressed`. Rows are arrow-key navigable and only the active row's buttons are in the Tab order, so 50 rows are not 300 tab stops. The list holds no order, numbering, visibility or lock state; it only emits intents. Up is disabled on the first row and down on the last. In `readOnly` mode lock, reorder and delete are hidden and selecting and hiding stay available.
+
+**API**
+```ts
+export interface AnnotationListItem { readonly layer: AnnotationLayerRecord; readonly number: number; readonly classLabel?: string; readonly locked?: boolean; readonly description?: string }
+export interface AnnotationListViewModel { readonly items: readonly AnnotationListItem[]; readonly selectedLayerId?: string; readonly emptyMessage: string; readonly readOnly?: boolean }
+export type AnnotationListIntent =
+  | { type: 'layerSelected'; layerId: string } | { type: 'layerVisibilityToggleRequested'; layerId: string }
+  | { type: 'layerLockToggleRequested'; layerId: string } | { type: 'layerMoveRequested'; layerId: string; direction: 'up' | 'down' }
+  | { type: 'layerRemoveRequested'; layerId: string } | { type: 'layerRenameRequested'; layerId: string; label: string };
+
+export class EmrAnnotationListComponent {
+  @Input({ required: true }) model!: AnnotationListViewModel;
+  @Input() headingId?: string;
+  @Output() readonly intent = new EventEmitter<AnnotationListIntent>();
+}
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| `model` | `AnnotationListViewModel` (required) | — | items, selection, empty text, read-only flag |
+| `headingId` | `string` | none | id of a visible label; otherwise the list is named "Annotations" |
+| `intent` (output) | `EventEmitter<AnnotationListIntent>` | — | select, visibility, lock, move, remove |
+
+**Example**
+```html
+<emr-annotation-list [model]="listModel" (intent)="onListIntent($event)" />
+```
+
+**Known gaps**
+- `layerRenameRequested` is in the intent contract but the list has no rename control yet.
+- Delete emits immediately; the controller owns any confirmation. Lock does not disable reorder or delete in the UI; the controller decides what a locked layer allows.
+- Long labels clamp to two lines on screen (full text in the tooltip) and show in full in print.
+- Row actions are hidden in print.
+- The list does not scroll itself; constrain its container for long lists.
+
+**Depends on** — `NgIcon` (heroicons outline).
+
+**Used by** — none yet (the clinical annotation canvas will adopt it).
