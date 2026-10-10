@@ -375,9 +375,11 @@
 .emr-annotation-canvas__notice { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px; font-size:var(--emr-text-sm); color: var(--emr-text-muted); border-bottom: 1px solid var(--emr-border); }
 
 .emr-annotation-canvas__workbench { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 320px); gap: 12px; padding: 12px; }
-.emr-annotation-canvas__canvas { position: relative; min-height: 420px; border: 1px solid var(--emr-border); border-radius: 10px; overflow: hidden; background: var(--emr-surface-soft); touch-action: none; }
+/* Edge drawn with box-shadow, not border: aspect-ratio sizes the border box, so a border would
+   squeeze the content box off the image's proportions and reintroduce a letterbox. */
+.emr-annotation-canvas__canvas { position: relative; align-self: start; box-shadow: 0 0 0 1px var(--emr-border); border-radius: 10px; overflow: hidden; background: var(--emr-surface-soft); touch-action: none; }
 .emr-annotation-canvas__image,
-.emr-annotation-canvas__overlay { width: 100%; height: 100%; min-height: 420px; display: block; }
+.emr-annotation-canvas__overlay { width: 100%; height: 100%; display: block; }
 .emr-annotation-canvas__image { object-fit: contain; background: var(--emr-surface); }
 .emr-annotation-canvas__overlay { position: absolute; inset: 0; }
 .emr-annotation-canvas__overlay line,
@@ -386,6 +388,9 @@
 .emr-annotation-canvas__overlay polyline,
 .emr-annotation-canvas__overlay ellipse,
 .emr-annotation-canvas__overlay text { stroke: currentColor; fill: none; }
+/* Strokes keep their on-screen width however the image is scaled. */
+.emr-annotation-canvas__overlay * { vector-effect: non-scaling-stroke; }
+.emr-annotation-canvas__empty { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; padding: 16px; text-align: center; color: var(--emr-text-muted); font-size: var(--emr-text-sm); }
 .emr-annotation-canvas__text { fill: currentColor; font-size: 48px; }
 .emr-annotation-canvas__layers { border: 1px solid var(--emr-border); border-radius: 10px; background: var(--emr-surface); overflow: hidden; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; max-height: 462px; }
 .emr-annotation-canvas__layers--hidden { display: none; }
@@ -444,9 +449,6 @@
   .emr-matrix-card__label { color: var(--emr-text-muted); font-size:var(--emr-text-sm); font-weight: 650; }
   .emr-annotation-canvas__header { gap: 8px; }
   .emr-annotation-canvas__workbench { grid-template-columns: 1fr; }
-  .emr-annotation-canvas__canvas { min-height: 320px; }
-  .emr-annotation-canvas__image,
-  .emr-annotation-canvas__overlay { min-height: 320px; }
   .emr-annotation-canvas__layers { max-height: none; }
   .emr-annotation-canvas__layers--hidden { display: grid; }
   .emr-annotation-canvas__layers-header { position: sticky; top: 0; z-index: 1; }

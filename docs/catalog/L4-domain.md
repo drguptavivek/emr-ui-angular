@@ -623,47 +623,32 @@ export class EmrFamilyPedigreeComponent {
 ## Diagnostics and specialty
 
 ### EmrClinicalAnnotationCanvas
-**Layer** L4 · **Selector** `emr-clinical-annotation-canvas` · **Status** stable · **Story** `emr-clinical-photo-annotation--dermatology`
+**Layer** L4 · **Selector** `emr-clinical-annotation-canvas` · **Status** stable · **Story** `emr-clinical-photo-annotation--dermatology` (also `--retina-pairs`, `--surgery-planning`, `--dermatology-readonly`)
 
-**Need** — Dermatology, retina, and surgical-planning photo documentation needs a controlled drawing surface over a clinical image template: mark lesions/incisions/measurement lines, label them against a controller-defined vocabulary, and hand the resulting layers back as immutable state — the largest and most interactive component in the catalogue (1107 lines).
+**Need** — Dermatology, retina and surgical-planning documentation needs a drawing surface over a clinical image: mark lesions, incisions and measurement lines, label them from a controller-defined vocabulary, and hand the resulting layers back as immutable state.
 
-**Purpose** — A six-tool annotation surface (see tool set below) over one selected image template, with a togglable layer panel (visibility toggle, reordering, deletion, label assignment per layer), local undo/redo (up to 40 full-state snapshots), and a `save()` action. Every mutation funnels through `applyState()`, which emits a `stateChanged` intent carrying the *entire* next state plus a `reason` string; undo/redo emit dedicated `undoRequested`/`redoRequested` intents instead of a state diff. It never persists, never uploads the drawn image, and never assigns clinical meaning to a shape beyond the controller-supplied `availableLabels` a user attaches to a layer.
+**Purpose** — A six-tool annotation surface over one controller-supplied background image. It has a togglable layer panel (visibility, reorder, delete, class per layer), local undo/redo (up to 40 snapshots) and a save action. Every mutation goes through `applyState()`, which emits a `stateChanged` intent carrying the whole next state plus a `reason` string; undo/redo emit `undoRequested`/`redoRequested`. It never persists, never reads or uploads files, never supplies background images or class vocabularies, and never assigns clinical meaning to a shape beyond the `availableLabels` a user attaches to a layer.
 
-**Tool set.** `EmrAnnotationTool = 'text' | 'line' | 'curve' | 'circle' | 'polygon' | 'freeform'` — a fixed six-item toolbar (`availableTools`), plus a brush-color `<input type="color">`, a brush-width range slider (1–12), a text-content field for the text tool, and a dedicated "Finish polygon" affordance (also closable by double-click).
+**Contract** — All types live in `@drguptavivek/emr-controller` (`annotation.models.ts`); the component declares none of its own. Layers are the durable `AnnotationLayerRecord` union (`text` · `line` · `circle` · `AnnotationPathRecord` for `curve`/`polygon`/`freeform`), so a saved `AnnotationDocument` (schema v2) holds exactly what the canvas draws.
 
-**Layer model.** `state.layers: EmrAnnotationLayer[]` is a discriminated union keyed by `tool`, each variant extending a common base:
 ```ts
-export interface EmrAnnotationLayerBase {
-  id: string; tool: EmrAnnotationTool; label: string; color: string; strokeWidth: number;
-  visible: boolean; classIds?: string[];
+export interface EmrClinicalImageTemplate {
+  id: string; label: string; imageUrl: string;
+  width: number; height: number;          // intrinsic pixels — sizes the drawing surface
+  altText?: string;
 }
-export interface EmrAnnotationTextLayer extends EmrAnnotationLayerBase { tool: 'text'; point: EmrAnnotationPoint; text: string; fontSize: number; }
-export interface EmrAnnotationLineLayer extends EmrAnnotationLayerBase { tool: 'line'; points: [EmrAnnotationPoint, EmrAnnotationPoint]; }
-export interface EmrAnnotationCurveLayer extends EmrAnnotationLayerBase { tool: 'curve'; points: EmrAnnotationPoint[]; }
-export interface EmrAnnotationCircleLayer extends EmrAnnotationLayerBase { tool: 'circle'; center: EmrAnnotationPoint; radiusX: number; radiusY: number; }
-export interface EmrAnnotationPolygonLayer extends EmrAnnotationLayerBase { tool: 'polygon'; points: EmrAnnotationPoint[]; }
-export interface EmrAnnotationFreeformLayer extends EmrAnnotationLayerBase { tool: 'freeform'; points: EmrAnnotationPoint[]; }
-export type EmrAnnotationLayer =
-  | EmrAnnotationTextLayer | EmrAnnotationLineLayer | EmrAnnotationCurveLayer
-  | EmrAnnotationCircleLayer | EmrAnnotationPolygonLayer | EmrAnnotationFreeformLayer;
-```
-Layers support per-layer `visible` toggle, `moveLayer` reordering, deletion, and a class/label dropdown (`setLayerLabel`) sourced from `state.availableLabels: EmrAnnotationLabel[]`.
-
-**API**
-```ts
-export interface EmrClinicalImageTemplate { id: string; label: string; imageUrl: string; altText?: string; }
 export interface EmrAnnotationLabel { id: string; label: string; description?: string; color?: string; }
 export interface EmrClinicalAnnotationCanvasState {
   instanceId: string; title: string; description?: string;
-  imageTemplates: EmrClinicalImageTemplate[]; availableLabels: EmrAnnotationLabel[];
-  selectedImageId?: string; selectedLabelId?: string; selectedTool?: EmrAnnotationTool;
-  brushColor?: string; brushWidth?: number; layers: EmrAnnotationLayer[]; selectedLayerId?: string;
+  imageTemplates: readonly EmrClinicalImageTemplate[]; availableLabels: readonly EmrAnnotationLabel[];
+  selectedImageId?: string; selectedLabelId?: string; selectedTool?: AnnotationTool;
+  brushColor: string;                      // required: a mark's colour is saved data
+  brushWidth?: number; layers: readonly AnnotationLayerRecord[]; selectedLayerId?: string;
   textContent?: string; showLayerPanel?: boolean; photoUploadHint?: string; readOnly?: boolean; photoAccept?: string;
 }
 export interface EmrClinicalAnnotationCanvasIntent {
   type: 'stateChanged' | 'undoRequested' | 'redoRequested' | 'saveRequested';
-  state: EmrClinicalAnnotationCanvasState;
-  reason: string;
+  state: EmrClinicalAnnotationCanvasState; reason: string;
 }
 
 export class EmrClinicalAnnotationCanvasComponent implements OnChanges {
@@ -674,6 +659,8 @@ export class EmrClinicalAnnotationCanvasComponent implements OnChanges {
 }
 ```
 
+**Coordinates.** Points are normalized to the background image's intrinsic rectangle: (0,0) top-left, (1,1) bottom-right, with x and y scaled separately. The canvas takes the image's own aspect ratio (`width / height`) and the SVG overlay uses the image's pixel size as its `viewBox`. The pointer, the painted image and the overlay therefore share one rectangle at every rendered size, so there is no letterboxing and marks stay registered on resize. Strokes use `vector-effect: non-scaling-stroke`.
+
 **Attributes**
 
 | name | type | default | notes |
@@ -681,7 +668,9 @@ export class EmrClinicalAnnotationCanvasComponent implements OnChanges {
 | `model` | `EmrClinicalAnnotationCanvasState` (required) | — | image templates, labels, layers, tool/brush selection |
 | `headingId` | `string` | `'emr-clinical-annotation-canvas-heading'` | root `aria-labelledby` target |
 | `intent` (output) | `EventEmitter<EmrClinicalAnnotationCanvasIntent>` | — | `stateChanged` / `undoRequested` / `redoRequested` / `saveRequested`, always carrying full state |
-| `nativeFilesSelected` (output) | `EventEmitter<readonly File[]>` | — | raw file picker output for a new background photo; the component never uploads it |
+| `nativeFilesSelected` (output) | `EventEmitter<readonly File[]>` | — | sanctioned escape hatch (api-conventions §2.4). The controller reads the file, registers it, and answers with a new template (stable id, URL, intrinsic size) in the next `model`. |
+
+The controller must supply each template's **true** intrinsic `width`/`height`. Wrong dimensions make `object-fit: contain` letterbox the image inside the surface, and marks misregister again; nothing flags this.
 
 **Example**
 ```html
@@ -690,34 +679,13 @@ export class EmrClinicalAnnotationCanvasComponent implements OnChanges {
 
 **Known gaps.**
 
-1. **Local type system duplicated from the controller package.** `emr-clinical-annotation-canvas.component.ts` declares its own complete type system at the top of the file (`EmrAnnotationTool`, `EmrAnnotationPoint`, `EmrClinicalImageTemplate`, `EmrAnnotationLabel`, `EmrAnnotationLayerBase` and its six variants, `EmrClinicalAnnotationCanvasState`, `EmrClinicalAnnotationCanvasIntent`) rather than importing from `packages/emr-controller/src/annotation.models.ts`, which already defines an overlapping — but structurally different — type system. The component file has **zero** import from `@drguptavivek/emr-controller`; it is fully self-contained. The controller file's own doc comment even names this split deliberately: *"The `EmrClinicalAnnotationCanvasComponent` (UI package) owns only transient drawing behaviour... Persistence, versioning, and wire mapping are controller responsibilities, so the durable payload shape and (de)serialization live here."* That intent is reasonable, but the two type systems have drifted rather than sharing a spine:
-   ```ts
-   // controller (annotation.models.ts) — persistence-oriented, versioned
-   export const ANNOTATION_SCHEMA_VERSION = 1 as const;
-   interface AnnotationLayerCommon {
-     id: string; label: string; color: string; strokeWidth: number; visible: boolean;
-     classIds?: readonly string[];           // readonly
-   }
-   export interface AnnotationLineRecord extends AnnotationLayerCommon {
-     tool: 'line'; points: readonly [AnnotationPoint, AnnotationPoint];   // readonly tuple
-   }
-   export interface AnnotationPathRecord extends AnnotationLayerCommon {
-     tool: 'curve' | 'polygon' | 'freeform';  // one merged variant for all three path tools
-     points: readonly AnnotationPoint[];
-   }
-   export interface AnnotationDocument {
-     schemaVersion: typeof ANNOTATION_SCHEMA_VERSION; instanceId: string; title: string;
-     imageTemplateId?: string; layers: readonly AnnotationLayerRecord[]; updatedAt?: string;
-   }
-   export interface AnnotationRepositoryPort {
-     save(document: AnnotationDocument, signal: AbortSignal): Promise<void>;
-     load(instanceId: string, signal: AbortSignal): Promise<AnnotationDocument | null>;
-   }
-   ```
-   Concrete drift: `EmrAnnotationLayerBase.classIds?: string[]` is mutable vs. the controller's `readonly string[]`; the controller merges curve/polygon/freeform into one `AnnotationPathRecord`, while the UI keeps three separate interfaces; the controller's line record uses a `readonly` tuple, the UI's is a mutable `[EmrAnnotationPoint, EmrAnnotationPoint]`; and the UI's `EmrClinicalAnnotationCanvasState`/`...Intent`/`EmrClinicalImageTemplate`/`EmrAnnotationLabel` — image templates, label vocabulary, tool/brush selection, the intent envelope — have **no counterpart at all** in the controller file, while the controller's versioning (`schemaVersion`), `updatedAt`, and `AnnotationRepositoryPort`/serialize/deserialize pipeline are never referenced by the UI component. A controller adapter wiring `stateChanged`/`saveRequested` to `AnnotationRepositoryPort.save()` has to hand-map between these two shapes; there is no shared source of truth today.
-2. **Built-in fallback content.** The component ships its own `FALLBACK_TEMPLATES` (five SVG data-URI anatomy outlines — abdominal, limb, scalp, whole-body, retina OD/OS) and `FALLBACK_LABELS` (`lesion`, `normal`, `scar`, `inflammation`), used whenever the controller supplies empty `imageTemplates`/`availableLabels` arrays. This is a soft exception to "labels are never derived by the UI": the fallback label vocabulary is only a placeholder for an empty controller array, but it does bake clinically-flavoured words (lesion/inflammation) into the UI package rather than leaving that entirely to the controller.
+1. **One layer list for all backgrounds.** `layers` is not keyed by image, so switching or uploading a background keeps marks drawn on the previous one. The durable document ties layers to one `background`; multi-view records are drawing-plan Phase 4.
+2. **Text size ignores `fontSize`.** `.emr-annotation-canvas__text { font-size: 48px }` (the one deliberate literal) overrides the SVG attribute, and is in image pixels, so labels shrink with the image.
+3. **Undo/redo history is component-owned** and is reset whenever `model` changes. Controlled revision history is drawing-plan Phase 4.
+4. **Tall images are not height-capped.** A portrait template renders at full column width, so the page may scroll.
+5. **Icon-only layer buttons** (➕, 👁, 🗑) use emoji glyphs rather than the shared icon set. The canvas is not yet in the Playwright axe set.
 
-**Depends on** — `NgIcon` only; no other UI-package component
+**Depends on** — `NgIcon`; types from `@drguptavivek/emr-controller`
 **Used by** — not consumed internally
 
 ---

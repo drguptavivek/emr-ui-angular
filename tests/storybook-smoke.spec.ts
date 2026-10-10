@@ -265,6 +265,31 @@ test.describe('Storybook EMR catalogue smoke tests', () => {
     expect(new Set(pairedBoxes.map(box => box.top)).size).toBe(1);
   });
 
+  test('annotation marks stay registered to the image at every width', async ({ page }) => {
+    // Surgery planning: a 1400x900 template with a line drawn from (0.2, 0.46) to (0.8, 0.54).
+    // Retina pairs: 1000x900. Each runs at the project's 360/768/1280px viewport.
+    for (const id of ['emr-clinical-photo-annotation--surgery-planning', 'emr-clinical-photo-annotation--retina-pairs']) {
+      await page.goto(`/iframe.html?id=${id}&viewMode=story`, { waitUntil: 'domcontentloaded' });
+      const image = page.locator('.emr-annotation-canvas__image');
+      await expect(image).toBeVisible();
+      await image.evaluate(element => (element as HTMLImageElement).decode());
+      const boxes = await page.evaluate(() => {
+        const rect = (selector: string) => document.querySelector(selector)!.getBoundingClientRect();
+        const img = document.querySelector('.emr-annotation-canvas__image') as HTMLImageElement;
+        return { image: rect('.emr-annotation-canvas__image'), overlay: rect('.emr-annotation-canvas__overlay'), natural: img.naturalWidth / img.naturalHeight };
+      });
+      // No letterboxing: the overlay coincides with the image, which keeps its own proportions.
+      for (const side of ['x', 'y', 'width', 'height'] as const) expect(boxes.overlay[side]).toBeCloseTo(boxes.image[side], 0);
+      expect(boxes.image.width / boxes.image.height).toBeCloseTo(boxes.natural, 2);
+    }
+
+    await page.goto('/iframe.html?id=emr-clinical-photo-annotation--surgery-planning&viewMode=story');
+    const lineBox = await page.locator('.emr-annotation-canvas__overlay line').first().boundingBox();
+    const imageBox = await page.locator('.emr-annotation-canvas__image').boundingBox();
+    expect((lineBox!.x - imageBox!.x) / imageBox!.width).toBeCloseTo(0.2, 1);
+    expect((lineBox!.x + lineBox!.width - imageBox!.x) / imageBox!.width).toBeCloseTo(0.8, 1);
+  });
+
   test('representative workflows match visual baselines', async ({ page }, testInfo) => {
     test.skip(!testInfo.project.name.startsWith('chromium'), 'One browser engine owns deterministic visual baselines.');
     const ids = [

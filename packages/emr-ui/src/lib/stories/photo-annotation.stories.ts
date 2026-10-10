@@ -1,9 +1,12 @@
+import { Component, signal } from '@angular/core';
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
-import {
-  EmrAnnotationLabel,
-  EmrClinicalAnnotationCanvasState,
-  EmrClinicalAnnotationCanvasComponent,
-} from '../domain/emr-clinical-annotation-canvas.component';
+import type { EmrAnnotationLabel, EmrClinicalAnnotationCanvasState } from '@drguptavivek/emr-controller';
+import { EmrClinicalAnnotationCanvasComponent } from '../domain/emr-clinical-annotation-canvas.component';
+import { placeholderAnatomyTemplates } from './annotation.fixtures';
+
+/** Intrinsic size of every `svgFromText` placeholder. */
+const placeholderSize = { width: 1400, height: 900 } as const;
+const slate = '#475f70';
 
 const svgFromText = (label: string, subtitle: string, accent: string): string => `data:image/svg+xml,${encodeURIComponent(`
   <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
@@ -19,20 +22,20 @@ const dermatologyLabels: EmrAnnotationLabel[] = [
   { id: 'lesion', label: 'Lesion', color: '#dc2626' },
   { id: 'scar', label: 'Scar', color: '#475569' },
   { id: 'excoriation', label: 'Excoriation', color: '#ea580c' },
-  { id: 'inflammatory', label: 'Inflammatory patch', color: '#0f766e' },
-  { id: 'normal', label: 'Normal skin', color: '#0f766e' },
+  { id: 'inflammatory', label: 'Inflammatory patch', color: '#be123c' },
+  { id: 'normal', label: 'Normal skin', color: '#64748b' },
 ];
 
 const retinaLabels: EmrAnnotationLabel[] = [
   { id: 'retina-dry', label: 'Dry lesion', color: '#0284c7' },
   { id: 'hemorrhage', label: 'Hemorrhage', color: '#b91c1c' },
-  { id: 'edema', label: 'Edema', color: '#0f766e' },
+  { id: 'edema', label: 'Edema', color: '#2563eb' },
   { id: 'normal', label: 'Normal retina', color: '#64748b' },
   { id: 'artifact', label: 'Image artifact', color: '#7c3aed' },
 ];
 
 const surgicalLabels: EmrAnnotationLabel[] = [
-  { id: 'incision', label: 'Incision', color: '#0f766e' },
+  { id: 'incision', label: 'Incision', color: '#7c3aed' },
   { id: 'margin', label: 'Margin', color: '#b45309' },
   { id: 'excision', label: 'Excision plan', color: '#be185d' },
   { id: 'landmark', label: 'Landmark', color: '#0369a1' },
@@ -44,14 +47,14 @@ const dermStoryState: EmrClinicalAnnotationCanvasState = {
   title: 'Dermatology photo annotation',
   description: 'Upload a skin photo and tag each annotation with lesion class labels for dermatology reporting workflows.',
   imageTemplates: [
-    { id: 'derm-outline', label: 'Dermatology outline', imageUrl: svgFromText('Dermatology', 'Right forearm lesion map', '#0f766e'), altText: 'Dermatology anatomy outline' },
-    { id: 'derm-sample', label: 'Uploaded clinical photo', imageUrl: svgFromText('Patient skin photo', 'Replace by clicking Upload photo', '#0369a1'), altText: 'Dermatology sample photo' },
+    { id: 'derm-outline', label: 'Dermatology outline', imageUrl: svgFromText('Dermatology', 'Right forearm lesion map', slate), ...placeholderSize, altText: 'Dermatology anatomy outline' },
+    { id: 'derm-sample', label: 'Uploaded clinical photo', imageUrl: svgFromText('Patient skin photo', 'Replace by clicking Upload photo', '#0369a1'), ...placeholderSize, altText: 'Dermatology sample photo' },
   ],
   availableLabels: dermatologyLabels,
   selectedImageId: 'derm-sample',
   selectedLabelId: 'lesion',
   selectedTool: 'freeform',
-  brushColor: '#0f766e',
+  brushColor: slate,
   brushWidth: 3,
   textContent: 'ABCD',
   layers: [
@@ -90,10 +93,7 @@ const retinaStoryState: EmrClinicalAnnotationCanvasState = {
   instanceId: 'photo-annotator-retina-demo',
   title: 'Retina pair annotation',
   description: 'Specialty labels for OD/OS retinal marking with separate template choice for each encounter.',
-  imageTemplates: [
-    { id: 'retina-od', label: 'Retina OD', imageUrl: svgFromText('Retina OD', 'Use right-eye label classes', '#0369a1'), altText: 'Right eye retina outline' },
-    { id: 'retina-os', label: 'Retina OS', imageUrl: svgFromText('Retina OS', 'Use left-eye label classes', '#9333ea'), altText: 'Left eye retina outline' },
-  ],
+  imageTemplates: placeholderAnatomyTemplates.filter(template => template.id.startsWith('retina-')),
   availableLabels: retinaLabels,
   selectedImageId: 'retina-od',
   selectedLabelId: 'hemorrhage',
@@ -112,13 +112,14 @@ const surgeryStoryState: EmrClinicalAnnotationCanvasState = {
   title: 'Surgery planning annotation',
   description: 'Upload surgical field images and classify markings like margins, incisions, and landmarks.',
   imageTemplates: [
-    { id: 'surgery-body', label: 'Surgical body template', imageUrl: svgFromText('Surgical planning', 'Upload field photo and annotate', '#0f766e'), altText: 'Surgical field template' },
+    { id: 'surgery-body', label: 'Surgical body template', imageUrl: svgFromText('Surgical planning', 'Upload field photo and annotate', slate), ...placeholderSize, altText: 'Surgical field template' },
+    ...placeholderAnatomyTemplates.filter(template => !template.id.startsWith('retina-')),
   ],
   availableLabels: surgicalLabels,
   selectedImageId: 'surgery-body',
   selectedLabelId: 'landmark',
   selectedTool: 'line',
-  brushColor: '#0f766e',
+  brushColor: slate,
   brushWidth: 3,
   layers: [
     {
@@ -150,9 +151,45 @@ const surgeryStoryState: EmrClinicalAnnotationCanvasState = {
   photoUploadHint: 'Upload operative photo and classify each drawing by annotation label before saving.',
 };
 
+/**
+ * Plays the controller's part for uploads: the canvas only emits the chosen files, and
+ * this host turns one into a template with a stable id, a URL and its intrinsic size.
+ * A real controller would store the file and return a durable id instead.
+ */
+@Component({
+  selector: 'emr-annotation-upload-story',
+  standalone: true,
+  imports: [EmrClinicalAnnotationCanvasComponent],
+  template: `<div class="emr-story-surface"><emr-clinical-annotation-canvas [model]="model()" (intent)="latest = $event.state" (nativeFilesSelected)="addPhoto($event)" /></div>`,
+})
+class AnnotationUploadStoryComponent {
+  // A signal, because the update lands in an async FileReader callback with no zone to notice it.
+  readonly model = signal<EmrClinicalAnnotationCanvasState>(dermStoryState);
+  latest: EmrClinicalAnnotationCanvasState = dermStoryState;
+  private uploads = 0;
+
+  addPhoto(files: readonly File[]): void {
+    const file = files[0];
+    if (!file?.type.startsWith('image/')) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      const imageUrl = String(reader.result);
+      const image = new Image();
+      image.onload = () => {
+        const id = `story-upload-${this.uploads += 1}`;
+        const template = { id, label: `Uploaded: ${file.name}`, imageUrl, width: image.naturalWidth, height: image.naturalHeight, altText: file.name };
+        this.latest = { ...this.latest, imageTemplates: [template, ...this.latest.imageTemplates], selectedImageId: id };
+        this.model.set(this.latest);
+      };
+      image.src = imageUrl;
+    };
+    reader.readAsDataURL(file);
+  }
+}
+
 const meta: Meta = {
   title: 'EMR / Clinical / Photo annotation',
-  decorators: [moduleMetadata({ imports: [EmrClinicalAnnotationCanvasComponent] })],
+  decorators: [moduleMetadata({ imports: [EmrClinicalAnnotationCanvasComponent, AnnotationUploadStoryComponent] })],
   parameters: {
     docs: {
       description: {
@@ -168,7 +205,7 @@ export default meta;
 type Story = StoryObj;
 
 export const Dermatology: Story = {
-  render: () => ({ template: `<div class="emr-story-surface"><emr-clinical-annotation-canvas [model]="model" /></div>`, props: { model: dermStoryState } }),
+  render: () => ({ template: `<emr-annotation-upload-story />` }),
 };
 
 export const RetinaPairs: Story = {
