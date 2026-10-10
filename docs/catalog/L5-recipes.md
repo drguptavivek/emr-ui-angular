@@ -90,3 +90,12 @@ OD and OS enlarged disc: margin, dashed cup, rim and vessels, with ISNT sides la
 
 ### ocular-motility
 Nine diagnostic gaze positions in a 3×3 grid, patient's right on the viewer's left (1400×1200).
+
+### annotation-symbols
+Data-only symbol sets for the annotation canvas's Symbol select, in `recipes/annotation-symbols/` (`surgery.ts`, `retina.ts`, `general-findings.ts`). Each file exports one `AnnotationSymbolSet` (contract type in `@drguptavivek/emr-controller`, `annotation-symbol.models.ts`): `{ id, label, version, reviewStatus: 'unreviewed', provenance, presets, labels }`. A preset is `{ id, label, description?, tool, strokeStyle?, fillPattern?, colour?, width?, classId? }`; `labels` are the `EmrAnnotationLabel`s the presets' `classId`s name, so a host passes `presets` as `symbolPresets` and `labels` into `availableLabels` together. Selecting a preset applies tool, style, fill, colour, width and class in one change. Hex colours are data (components never carry colour literals). Files use `import type` only; `annotation-symbols.spec.ts` enforces that, unique ids, valid tool/style/fill enums, hex colours, resolvable class ids, `reviewStatus: 'unreviewed'`, and this heading.
+
+- `surgery` — sutures (sutured curve), incision, planned incision (dashed), excision margin (dashed polygon), drain site (arrow), area to excise (hatched polygon), callout note.
+- `retina` — the conventional retinal-drawing colour code: red for attached retina, arteriole, haemorrhage and retinal break; blue for detached retina (hatch), lattice degeneration (lattice) and vein; green vitreous opacity; yellow exudate; brown pigment; plus a callout.
+- `general-findings` — skin and wound findings: inflammation, swelling, redness, lump or mass, scar, staples (stapled), sutures (sutured), open wound, laceration, bruise (crosshatch), abrasion, ulcer, burn, rash, tenderness (callout) and pain point (arrow). The Symbol select shows these by default where no specialty set is chosen.
+
+Every set starts `reviewStatus: 'unreviewed'`; a clinician must review the colours and conventions before production use. Stories: `emr-clinical-photo-annotation--retina-symbols`, `clinical-drawing-anatomy-outlines--surgical-symbols` and `--wound-and-skin-findings`.

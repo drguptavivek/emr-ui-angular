@@ -348,62 +348,6 @@
 .emr-matrix__error { color: var(--emr-danger); }
 .emr-matrix-cards { display: none; }
 
-.emr-clinical-annotation-canvas { display: block; border: 1px solid var(--emr-border); border-radius: 12px; background: var(--emr-surface); overflow: hidden; }
-.emr-annotation-canvas__header { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--emr-border); }
-.emr-annotation-canvas__title { margin: 0; font-size:var(--emr-text-lg); color: var(--emr-text); }
-.emr-annotation-canvas__description { margin: 3px 0 0; color: var(--emr-text-muted); font-size:var(--emr-text-sm); }
-.emr-annotation-canvas__header-actions { display: flex; gap: 6px; flex-wrap: wrap; }
-.emr-annotation-canvas__toolbar { display: grid; gap: 10px; padding: 12px 16px; border-bottom: 1px solid var(--emr-border); background: var(--emr-surface-accent); }
-.emr-annotation-canvas__upload,
-.emr-annotation-canvas__label-control { display: grid; gap: 6px; min-width: 180px; }
-.emr-annotation-canvas__upload label,
-.emr-annotation-canvas__label-control label { display: grid; gap: 6px; }
-.emr-annotation-canvas__upload input[type="file"] { width: min(320px, 100%); min-height: var(--emr-control-height); display: grid; place-items: center; border: 1px dashed var(--emr-border); border-radius: 8px; padding: 8px; background: var(--emr-surface); color: var(--emr-text); }
-.emr-annotation-canvas__upload small { display: block; font-size:var(--emr-text-2xs); color: var(--emr-text-muted); line-height: 1.25; }
-.emr-annotation-canvas__control label,
-.emr-annotation-canvas__pen label,
-.emr-annotation-canvas__text-input { display: grid; gap: 6px; min-width: 180px; }
-.emr-annotation-canvas__toolbar span,
-.emr-annotation-canvas__tools { color: var(--emr-text-muted); font-size:var(--emr-text-sm); font-weight: 700; }
-.emr-annotation-canvas__tools { display: flex; flex-wrap: wrap; gap: 7px; }
-.emr-annotation-canvas__control label .emr-select,
-.emr-annotation-canvas__control label .emr-control { width: min(320px, 100%); }
-.emr-annotation-canvas__pen { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); align-items: end; }
-.emr-annotation-canvas__range,
-.emr-annotation-canvas__color { width: 120px; min-height: 44px; border: 1px solid var(--emr-border); border-radius: 8px; padding: 0; }
-.emr-annotation-range { background: transparent; }
-.emr-annotation-canvas__notice { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px; font-size:var(--emr-text-sm); color: var(--emr-text-muted); border-bottom: 1px solid var(--emr-border); }
-
-.emr-annotation-canvas__workbench { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 320px); gap: 12px; padding: 12px; }
-/* Edge drawn with box-shadow, not border: aspect-ratio sizes the border box, so a border would
-   squeeze the content box off the image's proportions and reintroduce a letterbox. */
-.emr-annotation-canvas__canvas { position: relative; align-self: start; box-shadow: 0 0 0 1px var(--emr-border); border-radius: 10px; overflow: hidden; background: var(--emr-surface-soft); touch-action: none; }
-.emr-annotation-canvas__image,
-.emr-annotation-canvas__overlay { width: 100%; height: 100%; display: block; }
-.emr-annotation-canvas__image { object-fit: contain; background: var(--emr-surface); }
-.emr-annotation-canvas__overlay { position: absolute; inset: 0; }
-.emr-annotation-canvas__overlay line,
-.emr-annotation-canvas__overlay path,
-.emr-annotation-canvas__overlay polygon,
-.emr-annotation-canvas__overlay polyline,
-.emr-annotation-canvas__overlay ellipse,
-.emr-annotation-canvas__overlay text { stroke: currentColor; fill: none; }
-/* Strokes keep their on-screen width however the image is scaled. */
-.emr-annotation-canvas__overlay * { vector-effect: non-scaling-stroke; }
-.emr-annotation-canvas__empty { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; padding: 16px; text-align: center; color: var(--emr-text-muted); font-size: var(--emr-text-sm); }
-.emr-annotation-canvas__text { fill: currentColor; font-size: 48px; }
-.emr-annotation-canvas__layers { border: 1px solid var(--emr-border); border-radius: 10px; background: var(--emr-surface); overflow: hidden; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; max-height: 462px; }
-.emr-annotation-canvas__layers--hidden { display: none; }
-.emr-annotation-canvas__layers-header { min-height: 45px; display: flex; justify-content: space-between; align-items: center; padding: 10px; border-bottom: 1px solid var(--emr-border); background: var(--emr-surface-accent); }
-.emr-annotation-canvas__layers-header h3 { margin: 0; font-size:var(--emr-text-md); }
-.emr-annotation-canvas__layer-list { margin: 0; padding: 8px; display: grid; gap: 6px; list-style: none; overflow: auto; min-height: 0; }
-.emr-annotation-canvas__layer-row { display: grid; grid-template-columns: auto minmax(120px, 1fr) minmax(170px, 220px) auto; gap: 6px; align-items: center; padding: 4px; border-radius: 8px; }
-.emr-annotation-canvas__layer-row--active { background: var(--emr-surface-accent); }
-.emr-annotation-canvas__layer-actions { display: flex; gap: 4px; }
-.emr-annotation-canvas__layer-hint { margin: 0; padding: 10px; color: var(--emr-text-muted); font-size:var(--emr-text-xs); border-top: 1px solid var(--emr-border); }
-.emr-annotation-canvas__layer-class-label { min-width: 0; }
-.emr-annotation-canvas__layer-class-select { width: 100%; min-height: 44px; border: 1px solid var(--emr-border); border-radius: 8px; padding: 7px 8px; background: var(--emr-surface); color: var(--emr-text); font: inherit; }
-
 .emr-order-layout { display: grid; grid-template-columns: minmax(280px, .85fr) minmax(320px, 1.15fr); gap: 16px; }
 .emr-panel { border: 1px solid var(--emr-border); border-radius: 10px; background: var(--emr-surface); overflow: hidden; }
 .emr-panel__header { padding: 13px 14px; border-bottom: 1px solid var(--emr-border); display: flex; align-items: center; gap: 8px; }
@@ -447,11 +391,6 @@
   .emr-matrix-card__title { padding: 10px 12px; background: var(--emr-surface-raised); font-weight: 750; }
   .emr-matrix-card__cell { display: grid; grid-template-columns: minmax(100px, .7fr) minmax(0, 1fr); gap: 8px; align-items: center; padding: 9px 10px; border-top: 1px solid var(--emr-border); }
   .emr-matrix-card__label { color: var(--emr-text-muted); font-size:var(--emr-text-sm); font-weight: 650; }
-  .emr-annotation-canvas__header { gap: 8px; }
-  .emr-annotation-canvas__workbench { grid-template-columns: 1fr; }
-  .emr-annotation-canvas__layers { max-height: none; }
-  .emr-annotation-canvas__layers--hidden { display: grid; }
-  .emr-annotation-canvas__layers-header { position: sticky; top: 0; z-index: 1; }
   .emr-order-layout { grid-template-columns: 1fr; }
   .emr-order-fields { grid-template-columns: 1fr; }
   .emr-form-grid { grid-template-columns: 1fr; gap: 10px; }

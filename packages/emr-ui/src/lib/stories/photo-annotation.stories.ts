@@ -1,7 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
-import type { EmrAnnotationLabel, EmrClinicalAnnotationCanvasState } from '@drguptavivek/emr-controller';
+import { anatomyTemplateToImage } from '@drguptavivek/emr-controller';
+import type { AnnotationSymbolSet, EmrAnnotationLabel, EmrClinicalAnnotationCanvasState } from '@drguptavivek/emr-controller';
 import { EmrClinicalAnnotationCanvasComponent } from '../domain/emr-clinical-annotation-canvas.component';
+import { ANATOMY_RECIPES } from '../recipes/anatomy';
+import { GENERAL_FINDINGS_SYMBOLS } from '../recipes/annotation-symbols/general-findings';
+import { RETINA_SYMBOLS } from '../recipes/annotation-symbols/retina';
+import { SURGERY_SYMBOLS } from '../recipes/annotation-symbols/surgery';
 import { placeholderAnatomyTemplates } from './annotation.fixtures';
 
 /** Intrinsic size of every `svgFromText` placeholder. */
@@ -17,6 +22,22 @@ const svgFromText = (label: string, subtitle: string, accent: string): string =>
     <path d="M90 260h1220M90 420h1220M90 580h1220M90 740h1220" stroke="#e2e8f0" stroke-width="14" stroke-linecap="round"/>
   </svg>
 `)}`;
+
+/** Pen palettes are controller data (mark colours are saved with each mark), so the canvas supplies none of its own. */
+const penColours = [
+  { id: 'slate', label: 'Slate', hex: '#475f70' },
+  { id: 'red', label: 'Red', hex: '#dc2626' },
+  { id: 'blue', label: 'Blue', hex: '#2563eb' },
+  { id: 'green', label: 'Green', hex: '#15803d' },
+  { id: 'amber', label: 'Amber', hex: '#b45309' },
+  { id: 'purple', label: 'Purple', hex: '#7c3aed' },
+] as const;
+const penWidths = [
+  { id: 'fine', label: 'Fine', px: 2 },
+  { id: 'medium', label: 'Medium', px: 3 },
+  { id: 'bold', label: 'Bold', px: 4 },
+  { id: 'heavy', label: 'Heavy', px: 6 },
+] as const;
 
 const dermatologyLabels: EmrAnnotationLabel[] = [
   { id: 'lesion', label: 'Lesion', color: '#dc2626' },
@@ -42,6 +63,13 @@ const surgicalLabels: EmrAnnotationLabel[] = [
   { id: 'normal', label: 'Normal anatomy', color: '#64748b' },
 ];
 
+/** A symbol set is controller data: its presets go in as `symbolPresets` and its classes join the story's own. */
+const withSymbols = (state: EmrClinicalAnnotationCanvasState, set: AnnotationSymbolSet): EmrClinicalAnnotationCanvasState => ({
+  ...state,
+  symbolPresets: set.presets,
+  availableLabels: [...state.availableLabels, ...set.labels.filter(label => !state.availableLabels.some(own => own.id === label.id))],
+});
+
 const dermStoryState: EmrClinicalAnnotationCanvasState = {
   instanceId: 'photo-annotator-derm-demo',
   title: 'Dermatology photo annotation',
@@ -56,6 +84,8 @@ const dermStoryState: EmrClinicalAnnotationCanvasState = {
   selectedTool: 'freeform',
   brushColor: slate,
   brushWidth: 3,
+  colourOptions: penColours,
+  widthOptions: penWidths,
   textContent: 'ABCD',
   layers: [
     {
@@ -151,6 +181,39 @@ const surgeryStoryState: EmrClinicalAnnotationCanvasState = {
   photoUploadHint: 'Upload operative photo and classify each drawing by annotation label before saving.',
 };
 
+const retinaSymbolsState: EmrClinicalAnnotationCanvasState = withSymbols({
+  ...retinaStoryState,
+  instanceId: 'photo-annotator-retina-symbols-demo',
+  title: 'Retinal drawing: OD periphery',
+  description: 'Standard retinal-drawing colour code: blue hatching for detached retina, blue lattice for lattice degeneration, red for breaks.',
+  imageTemplates: ANATOMY_RECIPES.filter(recipe => recipe.id.startsWith('retina-')).map(recipe => ({ ...anatomyTemplateToImage(recipe, '/assets/anatomy'), label: recipe.label })),
+  availableLabels: [],
+  selectedImageId: 'retina-peripheral-od',
+  selectedLabelId: 'lattice-degeneration',
+  selectedTool: 'polygon',
+  selectedSymbolId: 'retina-lattice',
+  brushFillPattern: 'lattice',
+  brushColor: '#2563eb',
+  brushWidth: 3,
+  layout: 'draw',
+  layers: [
+    {
+      id: 'sym-lattice', tool: 'polygon', label: 'Lattice degeneration', color: '#2563eb', strokeWidth: 3, visible: true, fillPattern: 'lattice', classIds: ['lattice-degeneration'],
+      points: [{ x: 0.68, y: 0.22 }, { x: 0.82, y: 0.3 }, { x: 0.85, y: 0.4 }, { x: 0.72, y: 0.37 }],
+    },
+    {
+      id: 'sym-tear', tool: 'polygon', label: 'Horseshoe tear', color: '#dc2626', strokeWidth: 3, visible: true, classIds: ['retinal-break'],
+      points: [{ x: 0.22, y: 0.62 }, { x: 0.24, y: 0.55 }, { x: 0.3, y: 0.53 }, { x: 0.35, y: 0.58 }, { x: 0.33, y: 0.6 }, { x: 0.3, y: 0.57 }, { x: 0.26, y: 0.59 }, { x: 0.25, y: 0.64 }],
+    },
+    {
+      id: 'sym-note', tool: 'callout', label: "Lattice 2 o'clock", color: '#334155', strokeWidth: 3, visible: true, classIds: ['retina-note'],
+      points: [{ x: 0.8, y: 0.14 }, { x: 0.75, y: 0.27 }], text: "Lattice 2 o'clock", fontSize: 40,
+    },
+  ],
+  selectedLayerId: undefined,
+  textContent: '',
+}, RETINA_SYMBOLS);
+
 /**
  * Plays the controller's part for uploads: the canvas only emits the chosen files, and
  * this host turns one into a template with a stable id, a URL and its intrinsic size.
@@ -164,8 +227,8 @@ const surgeryStoryState: EmrClinicalAnnotationCanvasState = {
 })
 class AnnotationUploadStoryComponent {
   // A signal, because the update lands in an async FileReader callback with no zone to notice it.
-  readonly model = signal<EmrClinicalAnnotationCanvasState>(dermStoryState);
-  latest: EmrClinicalAnnotationCanvasState = dermStoryState;
+  readonly model = signal<EmrClinicalAnnotationCanvasState>(withSymbols(dermStoryState, GENERAL_FINDINGS_SYMBOLS));
+  latest: EmrClinicalAnnotationCanvasState = this.model();
   private uploads = 0;
 
   addPhoto(files: readonly File[]): void {
@@ -209,13 +272,23 @@ export const Dermatology: Story = {
 };
 
 export const RetinaPairs: Story = {
-  render: () => ({ template: `<div class="emr-story-surface"><emr-clinical-annotation-canvas [model]="model" /></div>`, props: { model: retinaStoryState } }),
+  render: () => ({ template: `<div class="emr-story-surface"><emr-clinical-annotation-canvas [model]="model" /></div>`, props: { model: withSymbols(retinaStoryState, RETINA_SYMBOLS) } }),
 };
 
 export const SurgeryPlanning: Story = {
-  render: () => ({ template: `<div class="emr-story-surface"><emr-clinical-annotation-canvas [model]="model" /></div>`, props: { model: surgeryStoryState } }),
+  render: () => ({ template: `<div class="emr-story-surface"><emr-clinical-annotation-canvas [model]="model" /></div>`, props: { model: withSymbols(surgeryStoryState, SURGERY_SYMBOLS) } }),
 };
 
 export const DermatologyReadonly: Story = {
   render: () => ({ template: `<div class="emr-story-surface"><emr-clinical-annotation-canvas [model]="model" /></div>`, props: { model: { ...dermStoryState, readOnly: true } } }),
+};
+
+/** The large drawing surface: toolbar, zoom, class and background selects, and the editable marks panel. */
+export const DrawMode: Story = {
+  render: () => ({ template: `<div class="emr-story-surface"><emr-clinical-annotation-canvas [model]="model" /></div>`, props: { model: { ...withSymbols(surgeryStoryState, SURGERY_SYMBOLS), layout: 'draw' } } }),
+};
+
+/** Retinal drawing with the conventional colour code, a lattice patch, a horseshoe tear and a callout. */
+export const RetinaSymbols: Story = {
+  render: () => ({ template: `<div class="emr-story-surface"><emr-clinical-annotation-canvas [model]="model" /></div>`, props: { model: retinaSymbolsState } }),
 };

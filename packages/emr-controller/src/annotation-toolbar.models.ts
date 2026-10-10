@@ -43,6 +43,8 @@ export interface AnnotationToolbarViewModel {
   readonly saveLabel?: string;
   /** Disables everything except zoom. */
   readonly readOnly?: boolean;
+  /** Disables the four zoom buttons (the host has locked pan and zoom). */
+  readonly zoomLocked?: boolean;
 }
 
 export type AnnotationToolbarIntent =

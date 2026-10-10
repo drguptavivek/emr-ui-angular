@@ -1,13 +1,17 @@
 import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, OnChanges, Output, QueryList, ViewChildren } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import {
-  heroArrowTrendingUp, heroBars3BottomLeft, heroChevronDown, heroChevronUp, heroCircleStack, heroEye, heroEyeSlash,
-  heroLockClosed, heroLockOpen, heroMinus, heroPencil, heroSquare2Stack, heroTrash
+  heroChevronDown, heroChevronUp, heroEye, heroEyeSlash, heroLockClosed, heroLockOpen, heroTrash
 } from '@ng-icons/heroicons/outline';
 import type { AnnotationLayerRecord, AnnotationListIntent, AnnotationListItem, AnnotationListViewModel } from '@drguptavivek/emr-controller';
 
-const TOOL_ICON: Record<AnnotationLayerRecord['tool'], string> = {
-  text: 'heroBars3BottomLeft', line: 'heroMinus', curve: 'heroArrowTrendingUp', circle: 'heroCircleStack', polygon: 'heroSquare2Stack', freeform: 'heroPencil'
+/** Tool -> the same `shape-*` glyph id the toolbar draws, so a row and its tool button read as one. */
+const TOOL_GLYPH: Record<AnnotationLayerRecord['tool'], string> = {
+  text: 'shape-text', line: 'shape-line', arrow: 'shape-arrow', callout: 'shape-callout', curve: 'shape-curve', circle: 'shape-ellipse', polygon: 'shape-polygon', freeform: 'shape-freehand'
+};
+/** Accessible name and tooltip for the icon-only tool marker; never shown as visible words. */
+const TOOL_NAME: Record<AnnotationLayerRecord['tool'], string> = {
+  text: 'Text', line: 'Line', arrow: 'Arrow', callout: 'Callout', curve: 'Curve', circle: 'Circle', polygon: 'Polygon', freeform: 'Freehand'
 };
 const NAV = ['ArrowDown', 'ArrowUp', 'Home', 'End'];
 
@@ -15,10 +19,7 @@ const NAV = ['ArrowDown', 'ArrowUp', 'Home', 'End'];
   selector: 'emr-annotation-list',
   standalone: true,
   imports: [NgIcon],
-  providers: [...provideIcons({
-    heroArrowTrendingUp, heroBars3BottomLeft, heroChevronDown, heroChevronUp, heroCircleStack, heroEye, heroEyeSlash,
-    heroLockClosed, heroLockOpen, heroMinus, heroPencil, heroSquare2Stack, heroTrash
-  })],
+  providers: [...provideIcons({ heroChevronDown, heroChevronUp, heroEye, heroEyeSlash, heroLockClosed, heroLockOpen, heroTrash })],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     @if (model.items.length) {
@@ -26,47 +27,63 @@ const NAV = ['ArrowDown', 'ArrowUp', 'Home', 'End'];
         @for (it of model.items; track it.layer.id; let first = $first; let last = $last) {
           <li class="al__row" [class.al__row--on]="it.layer.id === model.selectedLayerId" [class.al__row--off]="!it.layer.visible"
               [attr.aria-current]="it.layer.id === model.selectedLayerId ? 'true' : null" [attr.data-id]="it.layer.id">
-            <button #sel type="button" class="al__main" [attr.data-id]="it.layer.id" [attr.tabindex]="tab(it.layer.id)" [attr.title]="it.description ?? it.layer.label"
+            <button #sel type="button" class="al__main" [attr.data-id]="it.layer.id" [attr.tabindex]="tab(it.layer.id)" [attr.title]="full(it)"
                     (click)="intent.emit({ type: 'layerSelected', layerId: it.layer.id })">
               <span class="al__no" aria-hidden="true">{{ it.number }}</span>
               <span class="al__sw" aria-hidden="true" [style.background]="it.layer.color"></span>
               <span class="al__txt">
-                <span class="al__name">{{ it.layer.label }}@if (it.classLabel) { <span class="al__cls"> · {{ it.classLabel }}</span> }</span>
+                <span class="al__name">{{ primary(it) }}@if (secondary(it); as extra) { <span class="al__cls"> · {{ extra }}</span> }</span>
                 @if (it.description) { <span class="al__desc">{{ it.description }}</span> }
               </span>
-              <ng-icon class="al__tool" [name]="toolIcon(it.layer)" aria-hidden="true" />
-              @if (it.locked) { <ng-icon class="al__tool" name="heroLockClosed" aria-hidden="true" /> }
-              <span class="emr-sr-only">Drawing {{ it.number }}, {{ it.layer.tool }}@if (it.locked) {, locked}@if (!it.layer.visible) {, hidden}</span>
+              <span class="al__tool" role="img" [attr.aria-label]="toolName(it.layer)" [attr.title]="toolName(it.layer)">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">@switch (glyph(it.layer)) {
+                  @case ('shape-line') { <path d="M5 19 19 5" /> }
+                  @case ('shape-arrow') { <path d="M5 19 19 5M11 5h8v8" /> }
+                  @case ('shape-callout') { <path d="M19 5 9 15M9 15h5M9 15v-5M3 21h7" /> }
+                  @case ('shape-curve') { <path d="M6 19C6 9 18 15 18 5" /> }
+                  @case ('shape-ellipse') { <ellipse cx="12" cy="12" rx="8" ry="6" /> }
+                  @case ('shape-polygon') { <path d="m12 4 8 6-3 10H7L4 10z" /> }
+                  @case ('shape-freehand') { <path d="M4 14c2-6 4-6 5-2s3 4 5-1 4-3 6 1" /> }
+                  @case ('shape-text') { <path d="M6 6h12M12 6v13M9.5 19h5" /> }
+                }</svg>
+              </span>
+              @if (it.locked) { <ng-icon class="al__tool" name="heroLockClosed" role="img" aria-label="Locked" title="Locked" /> }
+              @if (model.readOnly && !it.layer.visible) { <ng-icon class="al__tool" name="heroEyeSlash" role="img" aria-label="Hidden" title="Hidden" /> }
+              <span class="emr-sr-only">Drawing {{ it.number }}@if (it.locked) {, locked}@if (!it.layer.visible) {, hidden}</span>
             </button>
-            <span class="al__acts">
-              <button type="button" class="al__b" [attr.tabindex]="tab(it.layer.id)" [attr.aria-pressed]="it.layer.visible"
-                      [attr.aria-label]="'Show drawing ' + it.number + ', ' + it.layer.label" [attr.title]="it.layer.visible ? 'Hide drawing' : 'Show drawing'"
-                      (click)="intent.emit({ type: 'layerVisibilityToggleRequested', layerId: it.layer.id })">
-                <span class="al__f"><ng-icon [name]="it.layer.visible ? 'heroEye' : 'heroEyeSlash'" aria-hidden="true" /></span>
-              </button>
-              @if (!model.readOnly) {
-                <button type="button" class="al__b" [attr.tabindex]="tab(it.layer.id)" [attr.aria-pressed]="!!it.locked"
-                        [attr.aria-label]="'Lock drawing ' + it.number + ', ' + it.layer.label" [attr.title]="it.locked ? 'Unlock drawing' : 'Lock drawing'"
-                        (click)="intent.emit({ type: 'layerLockToggleRequested', layerId: it.layer.id })">
-                  <span class="al__f"><ng-icon [name]="it.locked ? 'heroLockClosed' : 'heroLockOpen'" aria-hidden="true" /></span>
+            @if (!model.readOnly) {
+              <span class="al__acts">
+                <button type="button" class="al__b al__b--eye" [attr.tabindex]="tab(it.layer.id)" [attr.aria-pressed]="it.layer.visible"
+                        [attr.aria-label]="'Show drawing ' + it.number + ', ' + primary(it)" [attr.title]="it.layer.visible ? 'Hide drawing' : 'Show drawing'"
+                        (click)="intent.emit({ type: 'layerVisibilityToggleRequested', layerId: it.layer.id })">
+                  <span class="al__f"><ng-icon [name]="it.layer.visible ? 'heroEye' : 'heroEyeSlash'" aria-hidden="true" /></span>
                 </button>
-                <button type="button" class="al__b" [attr.tabindex]="tab(it.layer.id)" [disabled]="first"
-                        [attr.aria-label]="'Move drawing ' + it.number + ' up, ' + it.layer.label" title="Move up"
-                        (click)="intent.emit({ type: 'layerMoveRequested', layerId: it.layer.id, direction: 'up' })">
-                  <span class="al__f"><ng-icon name="heroChevronUp" aria-hidden="true" /></span>
-                </button>
-                <button type="button" class="al__b" [attr.tabindex]="tab(it.layer.id)" [disabled]="last"
-                        [attr.aria-label]="'Move drawing ' + it.number + ' down, ' + it.layer.label" title="Move down"
-                        (click)="intent.emit({ type: 'layerMoveRequested', layerId: it.layer.id, direction: 'down' })">
-                  <span class="al__f"><ng-icon name="heroChevronDown" aria-hidden="true" /></span>
-                </button>
+                @if (model.canLock) {
+                  <button type="button" class="al__b" [attr.tabindex]="tab(it.layer.id)" [attr.aria-pressed]="!!it.locked"
+                          [attr.aria-label]="'Lock drawing ' + it.number + ', ' + primary(it)" [attr.title]="it.locked ? 'Unlock drawing' : 'Lock drawing'"
+                          (click)="intent.emit({ type: 'layerLockToggleRequested', layerId: it.layer.id })">
+                    <span class="al__f"><ng-icon [name]="it.locked ? 'heroLockClosed' : 'heroLockOpen'" aria-hidden="true" /></span>
+                  </button>
+                }
+                @if (it.layer.id === model.selectedLayerId) {
+                  <button type="button" class="al__b" [attr.tabindex]="tab(it.layer.id)" [disabled]="first"
+                          [attr.aria-label]="'Move drawing ' + it.number + ' up, ' + primary(it)" title="Move up"
+                          (click)="intent.emit({ type: 'layerMoveRequested', layerId: it.layer.id, direction: 'up' })">
+                    <span class="al__f"><ng-icon name="heroChevronUp" aria-hidden="true" /></span>
+                  </button>
+                  <button type="button" class="al__b" [attr.tabindex]="tab(it.layer.id)" [disabled]="last"
+                          [attr.aria-label]="'Move drawing ' + it.number + ' down, ' + primary(it)" title="Move down"
+                          (click)="intent.emit({ type: 'layerMoveRequested', layerId: it.layer.id, direction: 'down' })">
+                    <span class="al__f"><ng-icon name="heroChevronDown" aria-hidden="true" /></span>
+                  </button>
+                }
                 <button type="button" class="al__b al__b--danger" [attr.tabindex]="tab(it.layer.id)"
-                        [attr.aria-label]="'Delete drawing ' + it.number + ', ' + it.layer.label" title="Delete drawing"
+                        [attr.aria-label]="'Delete drawing ' + it.number + ', ' + primary(it)" title="Delete drawing"
                         (click)="intent.emit({ type: 'layerRemoveRequested', layerId: it.layer.id })">
                   <span class="al__f"><ng-icon name="heroTrash" aria-hidden="true" /></span>
                 </button>
-              }
-            </span>
+              </span>
+            }
           </li>
         }
       </ol>
@@ -80,14 +97,15 @@ const NAV = ['ArrowDown', 'ArrowUp', 'Home', 'End'];
     .al__row{display:flex;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--emr-border);break-inside:avoid}
     .al__row:last-child{border-bottom:0}
     .al__row--on{background:var(--emr-primary-soft);box-shadow:inset 4px 0 0 var(--emr-primary)}
-    .al__main{flex:1 1 200px;min-width:0;min-height:var(--emr-control-height);display:flex;align-items:center;gap:8px;padding:2px 8px 2px 12px;border:0;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer;--ng-icon__size:16px}
+    .al__main{flex:1 1 150px;min-width:0;min-height:var(--emr-control-height);display:flex;align-items:center;gap:8px;padding:2px 8px 2px 12px;border:0;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer;--ng-icon__size:16px}
     .al__no{flex:none;min-width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--emr-border);border-radius:6px;background:var(--emr-surface);font-family:var(--emr-font-mono);font-size:var(--emr-text-xs);font-weight:var(--emr-weight-bold)}
     .al__sw{flex:none;width:14px;height:14px;border-radius:50%;border:2px solid var(--emr-text-muted)}
-    .al__txt{flex:1;min-width:0;display:grid}
-    .al__name{font-size:var(--emr-text-md);font-weight:var(--emr-weight-medium);line-height:var(--emr-leading-tight);overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden}
+    .al__txt{flex:1;min-width:0;display:grid;grid-template-columns:minmax(0,1fr)}
+    .al__name{font-size:var(--emr-text-md);font-weight:var(--emr-weight-medium);line-height:var(--emr-leading-tight);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .al__cls{font-weight:var(--emr-weight-regular)}
     .al__desc{font-size:var(--emr-text-xs);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    .al__tool{flex:none;color:var(--emr-text-muted)}
+    .al__tool{flex:none;display:inline-flex;color:var(--emr-text-muted)}
+    .al__tool svg{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
     .al__row--on .al__name{font-weight:var(--emr-weight-bold)}
     .al__row--off .al__name{font-style:italic}
     .al__row--off .al__sw{border-style:dashed}
@@ -97,11 +115,11 @@ const NAV = ['ArrowDown', 'ArrowUp', 'Home', 'End'];
     .al__b:hover:not(:disabled) .al__f{background:var(--emr-surface-soft);border-color:var(--emr-border)}
     .al__b--danger{color:var(--emr-danger)}
     .al__b--danger:hover:not(:disabled) .al__f{background:var(--emr-danger-soft);border-color:var(--emr-danger)}
-    .al__b[aria-pressed="true"] .al__f{background:var(--emr-primary-soft);border-color:var(--emr-primary-border)}
+    .al__b[aria-pressed="true"]:not(.al__b--eye) .al__f{background:var(--emr-primary-soft);border-color:var(--emr-primary-border)}
     .al__b:disabled{cursor:not-allowed;opacity:.52}
     .al__main:focus-visible,.al__b:focus-visible{outline:3px solid color-mix(in srgb,var(--emr-focus) 70%,transparent);outline-offset:-3px;border-radius:8px}
     .al__empty{margin:0;min-height:0;padding:16px;border:1px dashed var(--emr-border);border-radius:8px;font-size:var(--emr-text-md)}
-    @media print{.al__acts{display:none}.al__name{display:block;-webkit-line-clamp:unset;line-clamp:unset;overflow:visible}.al__desc{white-space:normal;overflow:visible}.al__row--on{box-shadow:none}}
+    @media print{.al__acts{display:none}.al__name{white-space:normal;overflow:visible}.al__desc{white-space:normal;overflow:visible}.al__row--on{box-shadow:none}}
   `],
 })
 export class EmrAnnotationListComponent implements OnChanges {
@@ -119,7 +137,13 @@ export class EmrAnnotationListComponent implements OnChanges {
     else if (!this.active || !ids.includes(this.active)) this.active = ids[0];
   }
 
-  toolIcon(l: AnnotationLayerRecord): string { return TOOL_ICON[l.tool]; }
+  glyph(l: AnnotationLayerRecord): string { return TOOL_GLYPH[l.tool]; }
+  toolName(l: AnnotationLayerRecord): string { return TOOL_NAME[l.tool]; }
+  /** The annotation itself: its class when it has one, otherwise the mark's own label or typed text. */
+  primary(it: AnnotationListItem): string { return it.classLabel || it.layer.label; }
+  /** The mark's own label or text, shown after the class only when it says something the class does not. */
+  secondary(it: AnnotationListItem): string { return it.classLabel && it.layer.label && it.layer.label !== it.classLabel ? it.layer.label : ''; }
+  full(it: AnnotationListItem): string { return [this.primary(it), this.secondary(it), it.description].filter(Boolean).join(' · '); }
   tab(id: string): number { return id === this.active ? 0 : -1; }
 
   protected onFocus(e: FocusEvent): void { this.active = (e.target as HTMLElement).closest('li')?.dataset['id'] ?? this.active; }

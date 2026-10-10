@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, OnChanges, Output, QueryList, ViewChild, ViewChildren, inject } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import {
-  heroArrowLongRight, heroArrowsPointingIn, heroArrowsPointingOut, heroArrowTrendingUp, heroArrowUturnLeft, heroArrowUturnRight,
+  heroArrowLongRight, heroArrowsPointingIn, heroArrowsPointingOut, heroViewfinderCircle, heroArrowTrendingUp, heroArrowUturnLeft, heroArrowUturnRight,
   heroArrowDownTray, heroBackspace, heroBars3BottomLeft, heroCheck, heroCircleStack, heroCursorArrowRays, heroHandRaised,
   heroMagnifyingGlassMinus, heroMagnifyingGlassPlus, heroMinus, heroPencil, heroPencilSquare, heroSquare2Stack, heroStop
 } from '@ng-icons/heroicons/outline';
@@ -14,7 +14,7 @@ const KNOWN = new Set([
 ]);
 /** Purpose-drawn inline glyphs for geometric tools, selected by `tool.icon`. */
 const GLYPHS = new Set([
-  'shape-line', 'shape-arrow', 'shape-curve', 'shape-rect', 'shape-ellipse', 'shape-polygon', 'shape-freehand', 'shape-text', 'shape-eraser'
+  'shape-line', 'shape-arrow', 'shape-curve', 'shape-rect', 'shape-ellipse', 'shape-polygon', 'shape-freehand', 'shape-text', 'shape-eraser', 'shape-callout', 'shape-suture', 'shape-hatch', 'shape-lattice'
 ]);
 let nextPenId = 0;
 const NAV = ['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp', 'Home', 'End'];
@@ -24,7 +24,7 @@ const NAV = ['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp', 'Home', 'End'];
   standalone: true,
   imports: [NgIcon],
   providers: [...provideIcons({
-    heroArrowLongRight, heroArrowsPointingIn, heroArrowsPointingOut, heroArrowTrendingUp, heroArrowUturnLeft, heroArrowUturnRight,
+    heroArrowLongRight, heroArrowsPointingIn, heroArrowsPointingOut, heroViewfinderCircle, heroArrowTrendingUp, heroArrowUturnLeft, heroArrowUturnRight,
     heroArrowDownTray, heroBackspace, heroBars3BottomLeft, heroCheck, heroCircleStack, heroCursorArrowRays, heroHandRaised,
     heroMagnifyingGlassMinus, heroMagnifyingGlassPlus, heroMinus, heroPencil, heroPencilSquare, heroSquare2Stack, heroStop
   })],
@@ -52,6 +52,10 @@ const NAV = ['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp', 'Home', 'End'];
                     @case ('shape-freehand') { <path d="M4 14c2-6 4-6 5-2s3 4 5-1 4-3 6 1" /> }
                     @case ('shape-text') { <path d="M6 6h12M12 6v13M9.5 19h5" /> }
                     @case ('shape-eraser') { <path d="m4 15 9-9 7 7-6 6H8zM9 10l7 7" /> }
+                    @case ('shape-callout') { <path d="M19 5 9 15M9 15h5M9 15v-5M3 21h7" /> }
+                    @case ('shape-suture') { <path d="M4 12h16M7 9l2 6M11 9l2 6M15 9l2 6" /> }
+                    @case ('shape-hatch') { <path d="M5 5h14v14H5zM5 13l8-8M5 19 19 5M11 19l8-8" /> }
+                    @case ('shape-lattice') { <path d="M9 4v16M15 4v16M4 9h16M4 15h16" /> }
                   }</svg>
                 } @else if (known(t.icon)) { <ng-icon [name]="t.icon" aria-hidden="true" /> } @else { <span class="tb__init" aria-hidden="true">{{ t.label.slice(0, 1) }}</span> }
               </span>
@@ -82,15 +86,15 @@ const NAV = ['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp', 'Home', 'End'];
         </button>
       </div>
       <div class="tb__g" role="group" aria-label="Zoom">
-        <button #b type="button" class="tb__b" data-key="zoomOut" [attr.tabindex]="tab('zoomOut')" aria-label="Zoom out" title="Zoom out"
+        <button #b type="button" class="tb__b" data-key="zoomOut" [attr.tabindex]="tab('zoomOut')" [disabled]="!!model.zoomLocked" aria-label="Zoom out" title="Zoom out"
                 (click)="intent.emit({ type: 'zoomOutRequested' })"><span class="tb__f"><ng-icon name="heroMagnifyingGlassMinus" aria-hidden="true" /></span></button>
-        <button #b type="button" class="tb__b" data-key="zoomReset" [attr.tabindex]="tab('zoomReset')"
+        <button #b type="button" class="tb__b" data-key="zoomReset" [attr.tabindex]="tab('zoomReset')" [disabled]="!!model.zoomLocked"
                 [attr.aria-label]="'Reset zoom, currently ' + model.zoomLabel" title="Reset zoom"
                 (click)="intent.emit({ type: 'zoomResetRequested' })"><span class="tb__f tb__f--text">{{ model.zoomLabel }}</span></button>
-        <button #b type="button" class="tb__b" data-key="zoomIn" [attr.tabindex]="tab('zoomIn')" aria-label="Zoom in" title="Zoom in"
+        <button #b type="button" class="tb__b" data-key="zoomIn" [attr.tabindex]="tab('zoomIn')" [disabled]="!!model.zoomLocked" aria-label="Zoom in" title="Zoom in"
                 (click)="intent.emit({ type: 'zoomInRequested' })"><span class="tb__f"><ng-icon name="heroMagnifyingGlassPlus" aria-hidden="true" /></span></button>
-        <button #b type="button" class="tb__b" data-key="zoomFit" [attr.tabindex]="tab('zoomFit')" aria-label="Fit to view" title="Fit to view"
-                (click)="intent.emit({ type: 'zoomFitRequested' })"><span class="tb__f"><ng-icon name="heroArrowsPointingIn" aria-hidden="true" /></span></button>
+        <button #b type="button" class="tb__b" data-key="zoomFit" [attr.tabindex]="tab('zoomFit')" [disabled]="!!model.zoomLocked" aria-label="Fit to view" title="Fit to view"
+                (click)="intent.emit({ type: 'zoomFitRequested' })"><span class="tb__f"><ng-icon name="heroViewfinderCircle" aria-hidden="true" /></span></button>
       </div>
       <div class="tb__g" role="group" aria-label="Save">
         <button #b type="button" class="tb__b" data-key="save" [attr.tabindex]="tab('save')"
@@ -228,7 +232,7 @@ export class EmrAnnotationToolbarComponent implements OnChanges {
       ...m.tools.filter((t) => !off && !t.disabled).map((t) => `t:${t.id}`),
       ...(!off && (m.colours.length || m.widths.length) ? ['pen'] : []),
       ...(!off && m.canUndo ? ['undo'] : []), ...(!off && m.canRedo ? ['redo'] : []),
-      'zoomOut', 'zoomReset', 'zoomIn', 'zoomFit',
+      ...(m.zoomLocked ? [] : ['zoomOut', 'zoomReset', 'zoomIn', 'zoomFit']),
       ...(!off && m.canSave ? ['save'] : []),
     ];
   }

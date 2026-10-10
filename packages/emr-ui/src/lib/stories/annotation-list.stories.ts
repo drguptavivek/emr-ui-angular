@@ -10,7 +10,7 @@ const meta: Meta<EmrAnnotationListComponent> = {
     docs: {
       description: {
         component:
-          'Tight numbered list of annotation layers. Each row shows number, colour, label, class and tool glyph, with icon buttons to hide, lock, reorder and delete. The list owns no order, visibility or lock state: it renders what it is given and emits intents. Arrow keys move between rows; only the active row\'s buttons are in the Tab order.'
+          'Tight numbered list of annotation layers. Each row is one line: number, colour, the annotation (its class, plus the mark\'s own label or typed text), a tool icon drawn with the toolbar\'s glyphs, then icon-only buttons to hide, reorder and delete (lock shows only when canLock is set). With readOnly it is a plain legend with no buttons. The list owns no order, visibility or lock state: it renders what it is given and emits intents. Arrow keys move between rows; only the active row\'s buttons are in the Tab order.'
       }
     }
   }
@@ -19,12 +19,12 @@ export default meta;
 type Story = StoryObj<EmrAnnotationListComponent>;
 
 const common = { strokeWidth: 3, visible: true };
-const lesion1: AnnotationLayerRecord = { ...common, id: 'l1', label: 'Lesion 1 — circle', color: '#d92d20', tool: 'circle', center: { x: 0.42, y: 0.38 }, radiusX: 0.08, radiusY: 0.07 };
-const incision: AnnotationLayerRecord = { ...common, id: 'l2', label: 'Incision — line', color: '#1d4ed8', tool: 'line', points: [{ x: 0.2, y: 0.5 }, { x: 0.6, y: 0.55 }] };
-const margin: AnnotationLayerRecord = { ...common, id: 'l3', label: 'Lesion margin — freehand', color: '#15803d', tool: 'freeform', points: [{ x: 0.3, y: 0.3 }, { x: 0.35, y: 0.33 }, { x: 0.4, y: 0.3 }] };
-const note: AnnotationLayerRecord = { ...common, id: 'l4', label: 'Note — text', color: '#111827', tool: 'text', point: { x: 0.7, y: 0.2 }, text: 'Erythema spreading laterally', fontSize: 14 };
-const border: AnnotationLayerRecord = { ...common, id: 'l5', label: 'Plaque border — polygon', color: '#7e22ce', tool: 'polygon', points: [{ x: 0.5, y: 0.6 }, { x: 0.6, y: 0.65 }, { x: 0.55, y: 0.75 }] };
-const vessel: AnnotationLayerRecord = { ...common, id: 'l6', label: 'Vessel course — curve', color: '#ea580c', tool: 'curve', points: [{ x: 0.1, y: 0.8 }, { x: 0.3, y: 0.7 }, { x: 0.5, y: 0.85 }] };
+const lesion1: AnnotationLayerRecord = { ...common, id: 'l1', label: 'Lesion', color: '#d92d20', tool: 'circle', center: { x: 0.42, y: 0.38 }, radiusX: 0.08, radiusY: 0.07 };
+const incision: AnnotationLayerRecord = { ...common, id: 'l2', label: 'Incision', color: '#1d4ed8', tool: 'line', points: [{ x: 0.2, y: 0.5 }, { x: 0.6, y: 0.55 }] };
+const margin: AnnotationLayerRecord = { ...common, id: 'l3', label: 'Lesion margin', color: '#15803d', tool: 'freeform', points: [{ x: 0.3, y: 0.3 }, { x: 0.35, y: 0.33 }, { x: 0.4, y: 0.3 }] };
+const note: AnnotationLayerRecord = { ...common, id: 'l4', label: 'Erythema spreading laterally', color: '#111827', tool: 'text', point: { x: 0.7, y: 0.2 }, text: 'Erythema spreading laterally', fontSize: 14 };
+const border: AnnotationLayerRecord = { ...common, id: 'l5', label: 'Plaque border', color: '#7e22ce', tool: 'polygon', points: [{ x: 0.5, y: 0.6 }, { x: 0.6, y: 0.65 }, { x: 0.55, y: 0.75 }] };
+const vessel: AnnotationLayerRecord = { ...common, id: 'l6', label: 'Vessel course', color: '#ea580c', tool: 'curve', points: [{ x: 0.1, y: 0.8 }, { x: 0.3, y: 0.7 }, { x: 0.5, y: 0.85 }] };
 
 const items: readonly AnnotationListItem[] = [
   { layer: lesion1, number: 1, classLabel: 'Lesion' },
@@ -48,6 +48,7 @@ export const Empty: Story = { render: () => render(base({ items: [], selectedLay
 
 export const WithHiddenAndLocked: Story = {
   render: () => render(base({
+    canLock: true,
     items: [
       { layer: lesion1, number: 1, classLabel: 'Lesion', locked: true },
       { layer: { ...incision, visible: false }, number: 2, classLabel: 'Incision' },
@@ -78,7 +79,7 @@ export const FiftyItems: Story = {
     selectedLayerId: 'g12',
     items: Array.from({ length: 50 }, (_, i): AnnotationListItem => {
       const k = kinds[i % kinds.length];
-      return { layer: { ...k, id: `g${i + 1}`, label: `${NAMES[i % NAMES.length]} ${i + 1} — ${k.tool}`, visible: i % 7 !== 3 } as AnnotationLayerRecord, number: i + 1, locked: i % 9 === 4 };
+      return { layer: { ...k, id: `g${i + 1}`, label: NAMES[i % NAMES.length], visible: i % 7 !== 3 } as AnnotationLayerRecord, number: i + 1, locked: i % 9 === 4 };
     })
   }), 'max-width: 560px; max-height: 420px; overflow: auto')
 };

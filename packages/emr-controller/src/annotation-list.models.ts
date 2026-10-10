@@ -15,8 +15,10 @@ export interface AnnotationListViewModel {
   readonly items: readonly AnnotationListItem[];
   readonly selectedLayerId?: string;
   readonly emptyMessage: string;
-  /** Hides lock, reorder and delete; selecting and hiding stay available for review. */
+  /** A plain legend: number, swatch, annotation and tool icon only. Every row action is hidden; selecting stays available. */
   readonly readOnly?: boolean;
+  /** Shows the lock button. Default false: lock means nothing until marks can be moved. */
+  readonly canLock?: boolean;
 }
 
 /** `layerRenameRequested` is part of the contract for the controller; this list has no rename control yet. */
