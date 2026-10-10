@@ -22,6 +22,7 @@ export * from './ehr-template.controller.js';
 export * from './spectacle-prescription.models.js';
 export * from './pac.models.js';
 export * from './annotation.models.js';
+export * from './annotation-symbol.models.js';
 export * from './anatomy-template.models.js';
 
 // Capture contract — see docs/field-contract.md
@@ -46,3 +47,7 @@ export * from './capture-status.models.js';
 export * from './ocular-motility.models.js';
 export * from './medication-reconciliation.models.js';
 export * from './work-queue.models.js';
+export * from './image-template-picker.models.js';
+export * from './attestation.models.js';
+export * from './schedule-slot.models.js';
+export * from './time-axis.models.js';

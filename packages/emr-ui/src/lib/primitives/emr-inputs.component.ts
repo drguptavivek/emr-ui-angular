@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Directive, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Directive, EventEmitter, Input, Output, ViewEncapsulation, computed, input, output } from '@angular/core';
 import { EmrOption } from '@drguptavivek/emr-controller';
 
 @Directive()
@@ -97,6 +97,80 @@ export class EmrDateInputComponent extends EmrFieldBase {
   @Output() readonly valueChange = new EventEmitter<string>();
   inputValue(event: Event): string { return (event.target as HTMLInputElement).value; }
 }
+
+/**
+ * Signal-input surface shared by the native time and datetime-local controls. Not exported:
+ * the two components below are the public API. Values are the browser's own wire strings,
+ * never parsed here — timezone, ordering and range rules belong to the controller.
+ */
+@Directive()
+abstract class EmrTemporalInputBase {
+  readonly controlId = input('emr-field');
+  readonly label = input('');
+  readonly hint = input('');
+  readonly error = input('');
+  readonly required = input(false);
+  readonly disabled = input(false);
+  readonly readOnly = input(false);
+  readonly value = input<string | null>(null);
+  readonly min = input<string>();
+  readonly max = input<string>();
+  /** Empty input clears to `null`, never `''`, so "not entered" stays distinct from a value. */
+  readonly valueChange = output<string | null>();
+
+  protected readonly describedBy = computed(() => {
+    const ids: string[] = [];
+    if (this.hint()) ids.push(`${this.controlId()}-hint`);
+    if (this.error()) ids.push(`${this.controlId()}-error`);
+    return ids.length ? ids.join(' ') : null;
+  });
+
+  protected emitValue(event: Event): void {
+    const raw = (event.target as HTMLInputElement).value;
+    this.valueChange.emit(raw === '' ? null : raw);
+  }
+}
+
+/** Native time-of-day control. Value is `'HH:mm'` (or `'HH:mm:ss'` when `step` is under 60) or `null`. */
+@Component({
+  selector: 'emr-time-input',
+  standalone: true,
+  template: `
+    <label class="emr-field" [for]="controlId()">
+      <span class="emr-field__label">{{ label() }} @if (required()) { <span class="emr-field__required" aria-hidden="true">*</span> }</span>
+      <input class="emr-control" [id]="controlId()" type="time" [value]="value() ?? ''" [attr.min]="min()" [attr.max]="max()" [attr.step]="step()"
+        [required]="required()" [disabled]="disabled()" [readOnly]="readOnly()" [attr.aria-invalid]="!!error()"
+        [attr.aria-describedby]="describedBy()" (input)="emitValue($event)" />
+      @if (hint()) { <span class="emr-field__hint" [id]="controlId() + '-hint'">{{ hint() }}</span> }
+      @if (error()) { <span class="emr-field__error" [id]="controlId() + '-error'">{{ error() }}</span> }
+    </label>
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None
+})
+export class EmrTimeInputComponent extends EmrTemporalInputBase {
+  /** Granularity in seconds, forwarded to the native `step`. Browser default is 60. */
+  readonly step = input<number>();
+}
+
+/** Native local date-and-time control. Value is `'YYYY-MM-DDTHH:mm'` (no zone) or `null`. */
+@Component({
+  selector: 'emr-datetime-input',
+  standalone: true,
+  template: `
+    <label class="emr-field" [for]="controlId()">
+      <span class="emr-field__label">{{ label() }} @if (required()) { <span class="emr-field__required" aria-hidden="true">*</span> }</span>
+      <input class="emr-control" [id]="controlId()" type="datetime-local" [value]="value() ?? ''" [attr.min]="min()" [attr.max]="max()"
+        [required]="required()" [disabled]="disabled()" [readOnly]="readOnly()" [attr.aria-invalid]="!!error()"
+        [attr.aria-describedby]="describedBy()" (input)="emitValue($event)" />
+      @if (hint()) { <span class="emr-field__hint" [id]="controlId() + '-hint'">{{ hint() }}</span> }
+      @if (error()) { <span class="emr-field__error" [id]="controlId() + '-error'">{{ error() }}</span> }
+    </label>
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None
+})
+export class EmrDateTimeInputComponent extends EmrTemporalInputBase {}
 
 @Component({
   selector: 'emr-select',

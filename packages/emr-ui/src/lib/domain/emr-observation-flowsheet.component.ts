@@ -1,7 +1,8 @@
 import { NgTemplateOutlet } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
+import type { ClinicalAssessmentStatus } from '@drguptavivek/emr-controller';
 import type {
-  ClinicalAssessmentStatus, FlowsheetCell, FlowsheetCellMap, FlowsheetIntent, FlowsheetRow, FlowsheetViewModel
+  FlowsheetCell, FlowsheetCellMap, FlowsheetIntent, FlowsheetRow, FlowsheetViewModel
 } from '@drguptavivek/emr-controller';
 import { EmrStateMessageComponent } from '../primitives/emr-feedback.component';
 
@@ -16,6 +17,9 @@ const STATUS_WORDS: Record<ClinicalAssessmentStatus, string> = {
   declined: 'Declined',
   unknown: 'Unknown'
 };
+
+/** One header cell over a run of adjacent columns; `label` is null for ungrouped columns. */
+type HeadGroup = { readonly key: string; readonly label: string | null; readonly span: number };
 
 type Item =
   | { readonly kind: 'group'; readonly key: string; readonly label: string }
@@ -47,9 +51,24 @@ type Item =
           <table class="fs__table">
             <caption class="emr-sr-only">{{ model.title }}. Time runs across the columns; scroll sideways for more.</caption>
             <thead>
+              @if (headGroups.length) {
+                <tr class="fs__cgrow">
+                  <th scope="col" rowspan="2" class="fs__corner">Observation</th>
+                  @if (showRef) { <th scope="col" rowspan="2" class="fs__refh">Reference range</th> }
+                  @for (g of headGroups; track g.key) {
+                    @if (g.label !== null) {
+                      <th scope="colgroup" [attr.colspan]="g.span" class="fs__cgh">{{ g.label }}</th>
+                    } @else {
+                      <td [attr.colspan]="g.span" class="fs__cgh fs__cgh--none"></td>
+                    }
+                  }
+                </tr>
+              }
               <tr>
-                <th scope="col" class="fs__corner">Observation</th>
-                @if (showRef) { <th scope="col" class="fs__refh">Reference range</th> }
+                @if (!headGroups.length) {
+                  <th scope="col" class="fs__corner">Observation</th>
+                  @if (showRef) { <th scope="col" class="fs__refh">Reference range</th> }
+                }
                 @for (col of model.columns; track col.id) {
                   <th scope="col" class="fs__colh" [class.fs__colh--current]="col.current">
                     @if (!model.readOnly) {
@@ -157,7 +176,10 @@ type Item =
     .fs__scroll:focus-visible{outline:3px solid var(--emr-focus);outline-offset:2px}
     .fs__table{border-collapse:separate;border-spacing:0;font-size:var(--emr-text-sm);line-height:var(--emr-leading-tight);width:max-content;min-width:100%}
     .fs__table th,.fs__table td{border-bottom:1px solid var(--emr-border);border-right:1px solid var(--emr-border);padding:0;text-align:left;vertical-align:middle;background:var(--emr-surface)}
-    .fs__table thead th{position:sticky;top:0;z-index:2;background:var(--emr-surface-raised);font-size:var(--emr-text-xs)}
+    .fs__table thead th,.fs__table thead td{position:sticky;top:0;z-index:2;background:var(--emr-surface-raised);font-size:var(--emr-text-xs)}
+    .fs__cgh{height:2.25rem;padding:4px 8px!important;text-align:center!important;white-space:nowrap;font-size:var(--emr-text-xs);font-weight:var(--emr-weight-bold);text-transform:uppercase;letter-spacing:.06em;box-shadow:inset 0 -2px 0 var(--emr-primary)}
+    .fs__cgh--none{box-shadow:none}
+    .fs__cgrow + tr th{top:2.25rem}
     .fs__table tfoot th,.fs__table tfoot td{position:sticky;bottom:0;z-index:2;background:var(--emr-surface-raised);font-weight:var(--emr-weight-bold)}
     .fs__table tfoot th.fs__rowh{z-index:3}
     .fs__corner,.fs__rowh{position:sticky;left:0;z-index:1;min-width:8.5rem;max-width:12rem;box-shadow:1px 0 0 var(--emr-border)}
@@ -202,6 +224,7 @@ export class EmrObservationFlowsheetComponent implements OnChanges {
   items: readonly Item[] = [];
   showRef = false;
   span = 1;
+  headGroups: readonly HeadGroup[] = [];
 
   ngOnChanges(): void {
     const groups = new Map((this.model.groups ?? []).map((g) => [g.id, g.label]));
@@ -212,6 +235,28 @@ export class EmrObservationFlowsheetComponent implements OnChanges {
     });
     this.showRef = [...this.model.rows, ...(this.model.footerRows ?? [])].some((r) => !!r.referenceLabel);
     this.span = 1 + (this.showRef ? 1 : 0) + this.model.columns.length;
+    this.headGroups = this.groupColumns();
+  }
+
+  /**
+   * Header cells for `columnGroups`, one per run of adjacent columns in the same group, walked in
+   * column order so the header can never drift from the cells. Empty when no groups are supplied.
+   */
+  private groupColumns(): readonly HeadGroup[] {
+    const groups = this.model.columnGroups ?? [];
+    if (!groups.length) return [];
+    const groupOf = new Map(groups.flatMap((g) => g.columnIds.map((id) => [id, g] as const)));
+    const runs: HeadGroup[] = [];
+    this.model.columns.forEach((col, i) => {
+      const g = groupOf.get(col.id);
+      const last = runs[runs.length - 1];
+      if (last && groupOf.get(this.model.columns[i - 1].id) === g) {
+        runs[runs.length - 1] = { ...last, span: last.span + 1 };
+      } else {
+        runs.push({ key: `${g?.id ?? '-'}:${i}`, label: g?.label ?? null, span: 1 });
+      }
+    });
+    return runs;
   }
 
   titleId(): string { return this.headingId ?? `${this.uid}-heading`; }

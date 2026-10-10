@@ -623,28 +623,49 @@ export class EmrFamilyPedigreeComponent {
 ## Diagnostics and specialty
 
 ### EmrClinicalAnnotationCanvas
-**Layer** L4 · **Selector** `emr-clinical-annotation-canvas` · **Status** stable · **Story** `emr-clinical-photo-annotation--dermatology` (also `--retina-pairs`, `--surgery-planning`, `--dermatology-readonly`)
+**Layer** L4 · **Selector** `emr-clinical-annotation-canvas` · **Status** stable · **Story** `emr-clinical-photo-annotation--dermatology` (also `--retina-pairs`, `--retina-symbols`, `--surgery-planning`, `--dermatology-readonly`, `--draw-mode`; and `clinical-drawing-anatomy-outlines--draw-on-outlines`, `--draw-mode-portrait`, `--surgical-symbols`, `--wound-and-skin-findings`, `--full-screen-pan-and-lock`)
 
-**Need** — Dermatology, retina and surgical-planning documentation needs a drawing surface over a clinical image: mark lesions, incisions and measurement lines, label them from a controller-defined vocabulary, and hand the resulting layers back as immutable state.
+**Need** — Dermatology, retina and surgical-planning documentation needs a drawing surface over a clinical image: mark lesions, incisions and measurement lines, label them from a controller-defined vocabulary, and hand the resulting layers back as immutable state. The same surface has to be readable inside a record and large enough to draw on.
 
-**Purpose** — A six-tool annotation surface over one controller-supplied background image. It has a togglable layer panel (visibility, reorder, delete, class per layer), local undo/redo (up to 40 snapshots) and a save action. Every mutation goes through `applyState()`, which emits a `stateChanged` intent carrying the whole next state plus a `reason` string; undo/redo emit `undoRequested`/`redoRequested`. It never persists, never reads or uploads files, never supplies background images or class vocabularies, and never assigns clinical meaning to a shape beyond the `availableLabels` a user attaches to a layer.
+**Purpose** — A nine-tool annotation surface (Pan, Text, Line, Arrow, Callout, Curve, Circle, Polygon, Freehand) over one controller-supplied background image, in two presentations chosen by `layout`. **Compact** (default) is for reading: a slim header (icon, title, mark count, a numbers toggle, a marks show/hide toggle and a Draw button), the capped image with its marks, and the marks legend. **Draw** is the large editing surface: header with a pan-and-zoom lock, a full-screen toggle and Done, one row of `emr-annotation-toolbar` plus compact Class, Symbol (when `symbolPresets` is supplied) and Background selects and an Add photo icon button, the zoomable stage, and the editable `emr-annotation-list` as a side panel (it drops below the stage under about 900px of container width). Every mutation goes through `applyState()`, which emits a `stateChanged` intent carrying the whole next state plus a `reason`; undo/redo emit `undoRequested`/`redoRequested` and save emits `saveRequested`. It never persists, never reads or uploads files, never supplies images, classes or pen palettes, and never assigns clinical meaning to a shape beyond the class a user attaches.
 
-**Contract** — All types live in `@drguptavivek/emr-controller` (`annotation.models.ts`); the component declares none of its own. Layers are the durable `AnnotationLayerRecord` union (`text` · `line` · `circle` · `AnnotationPathRecord` for `curve`/`polygon`/`freeform`), so a saved `AnnotationDocument` (schema v2) holds exactly what the canvas draws.
+**Contract** — All types live in `@drguptavivek/emr-controller` (`annotation.models.ts`); the component declares none of its own. Layers are the durable `AnnotationLayerRecord` union (`text` · `line`/`arrow` (`AnnotationLineRecord`) · `callout` · `circle` · `AnnotationPathRecord` for `curve`/`polygon`/`freeform`), so a saved `AnnotationDocument` holds exactly what the canvas draws. Schema stays v2: arrow, callout, `strokeStyle` and `fillPattern` are additive and `isValidLayer` accepts them and rejects unknown style or fill values. `pan` is a UI-only selected tool; no layer ever has it.
 
 ```ts
 export interface EmrClinicalImageTemplate {
   id: string; label: string; imageUrl: string;
   width: number; height: number;          // intrinsic pixels — sizes the drawing surface
   altText?: string;
+  group?: string;                         // optional <optgroup> heading in the Background select
 }
 export interface EmrAnnotationLabel { id: string; label: string; description?: string; color?: string; }
+export interface EmrAnnotationColourOption { id: string; label: string; hex: string }   // pen colour, supplied by the controller
+export interface EmrAnnotationWidthOption { id: string; label: string; px: number }     // pen width
+export type EmrAnnotationCanvasLayout = 'compact' | 'draw';
 export interface EmrClinicalAnnotationCanvasState {
   instanceId: string; title: string; description?: string;
   imageTemplates: readonly EmrClinicalImageTemplate[]; availableLabels: readonly EmrAnnotationLabel[];
-  selectedImageId?: string; selectedLabelId?: string; selectedTool?: AnnotationTool;
+  selectedImageId?: string; selectedLabelId?: string; selectedTool?: EmrAnnotationSelectedTool;   // AnnotationTool | 'pan'
   brushColor: string;                      // required: a mark's colour is saved data
   brushWidth?: number; layers: readonly AnnotationLayerRecord[]; selectedLayerId?: string;
   textContent?: string; showLayerPanel?: boolean; photoUploadHint?: string; readOnly?: boolean; photoAccept?: string;
+  layout?: EmrAnnotationCanvasLayout;      // default 'compact'
+  showMarkerNumbers?: boolean;             // default true
+  colourOptions?: readonly EmrAnnotationColourOption[];
+  widthOptions?: readonly EmrAnnotationWidthOption[];
+  symbolPresets?: readonly AnnotationSymbolPreset[];   // controller / L5 symbol set; shows the Symbol select
+  selectedSymbolId?: string;
+  brushStrokeStyle?: AnnotationStrokeStyle;            // copied onto new marks
+  brushFillPattern?: AnnotationFillPattern;            // copied onto new closed marks
+}
+export type AnnotationStrokeStyle = 'solid' | 'dashed' | 'sutured' | 'stapled';
+export type AnnotationFillPattern = 'none' | 'hatch' | 'crosshatch' | 'lattice';
+export interface AnnotationLineRecord    { tool: 'line' | 'arrow'; points: readonly [AnnotationPoint, AnnotationPoint]; /* head at points[1] */ }
+export interface AnnotationCalloutRecord { tool: 'callout'; points: readonly [AnnotationPoint, AnnotationPoint]; text: string; fontSize: number; /* text at the tail points[0], head at points[1] */ }
+export interface AnnotationSymbolPreset {
+  id: string; label: string; description?: string; tool: AnnotationTool;
+  strokeStyle?: AnnotationStrokeStyle; fillPattern?: AnnotationFillPattern;
+  colour?: string; width?: number; classId?: string;   // hex data; classId must be in availableLabels to apply
 }
 export interface EmrClinicalAnnotationCanvasIntent {
   type: 'stateChanged' | 'undoRequested' | 'redoRequested' | 'saveRequested';
@@ -659,18 +680,32 @@ export class EmrClinicalAnnotationCanvasComponent implements OnChanges {
 }
 ```
 
-**Coordinates.** Points are normalized to the background image's intrinsic rectangle: (0,0) top-left, (1,1) bottom-right, with x and y scaled separately. The canvas takes the image's own aspect ratio (`width / height`) and the SVG overlay uses the image's pixel size as its `viewBox`. The pointer, the painted image and the overlay therefore share one rectangle at every rendered size, so there is no letterboxing and marks stay registered on resize. Strokes use `vector-effect: non-scaling-stroke`.
+**Composition.** The draw row is an `EmrAnnotationToolbar` fed the nine tools (`pan`→`heroHandRaised`, `text`→`shape-text`, `line`→`shape-line`, `arrow`→`shape-arrow`, `callout`→`shape-callout`, `curve`→`shape-curve`, `circle`→`shape-ellipse`, `polygon`→`shape-polygon`, `freeform`→`shape-freehand`), the controller's `colourOptions`/`widthOptions` (selected by matching `brushColor` hex and `brushWidth` px), undo/redo availability from the component's own stacks, save and zoom. With no `colourOptions` and no `widthOptions` the toolbar shows no pen. The marks panel is an `EmrAnnotationList` (editable in draw, `readOnly` legend in compact) with `canLock` false, because lock means nothing until marks can be moved. A new mark is labelled with the selected class's label (fallback "Annotation"); a text mark is labelled with its typed text. The tool name is never used as a label; with a symbol selected and no class, the symbol's label is used, and a callout is labelled with its text.
+
+**Arrows, callouts and symbols.** *Arrow:* press at the tail, drag to the head, release; the head is a filled triangle polygon (not an SVG `<marker>`, which colours and scales inconsistently under `non-scaling-stroke`) computed from the segment direction at about 3% of the image width, filled with the mark colour, and the shaft stops inside it. *Callout:* the same gesture, plus the text from the existing text field at draw time, set at the tail on the side away from the head; its size is the record's `fontSize` in image pixels (new callouts get 3% of the image width). A click without a drag creates neither. Arrow and callout are numbered at their head. *Stroke styles:* `dashed` is a `stroke-dasharray`; `sutured` draws short perpendicular ticks and `stapled` draws small ⊓ brackets straddling the line at fixed arc-length intervals along the mark's points (presentation maths, nothing stored). *Fills:* `hatch`, `crosshatch` and `lattice` (a `#` grid) are one SVG `<pattern patternUnits="userSpaceOnUse">` per filled layer in the component's own `<defs>`, drawn in the layer colour through `currentColor`, applied to polygon, circle and freeform. *Symbol select:* choosing a preset applies its tool, stroke style, fill, colour, width and class in one `symbol-selected` change (one Undo). New marks copy the active stroke style and fill; choosing a different tool clears the symbol, style and fill. Presets are controller or L5 data (`recipes/annotation-symbols`).
+
+**View-only state.** `layout` and `showMarkerNumbers` change through `applyState()` with reasons `layout-changed` and `marker-numbers-toggled`. Neither arms Undo, and undo/redo preserve the current `layout` and `showMarkerNumbers`. Zoom and the marks show/hide toggle are transient UI state, like scroll: they are not in the model and are not emitted.
+
+**Coordinates and layout.** Points are normalized to the background image's intrinsic rectangle: (0,0) top-left, (1,1) bottom-right, with x and y scaled separately. The stage's box is the image rectangle (`aspect-ratio`, never `max-height`), the SVG overlay uses the image's pixel size as its `viewBox`, and the pointer maths uses the stage's `getBoundingClientRect()`, so marks stay registered at every size and zoom. Height is capped by constraining **width**: `--ac-ratio` (W/H) is bound as a custom property and the figure is `min(100%, cap × ratio / (1 − 2·gutter))` wide, with `--ac-cap` about 560px in compact and 72vh in draw (component-local, not tokens).
+
+**Zoom (draw only).** Zoom is a multiplier of the fitted width (50 / 75 / 100 / 150 / 200 / 300%); 100% is the image fitted to the height cap. Reset returns to 100%. Fit also returns to 100% but sizes the image to the whole visible height (the cap grows from 72vh to the viewport height minus the controls, so the image visibly gets larger, and is already that size in full screen, where Fit only undoes a zoom) and scrolls to the corner. It changes the figure's **width** inside an `overflow: auto` viewport, never `transform: scale()`, so the layout box grows, the viewport scrolls and pointer mapping stays exact. The viewport becomes a focusable, labelled scroll region while zoomed.
+
+**Pan, lock and full screen (draw only; all transient UI state, never in the model or history).** *Pan* is the first tool: dragging the stage scrolls the zoomed viewport by the drag delta (grab and grabbing cursors), makes no marks, and with the viewport focused the arrow keys scroll it. *Lock* (header toggle, `aria-pressed`, "Lock pan and zoom") sets the viewport to `overflow: hidden` so wheel and trackpad cannot shift it, keeps `touch-action: none` on the stage, disables the four zoom buttons (`AnnotationToolbarViewModel.zoomLocked`) and stops Pan from moving the view; it never changes the stage size or scroll offset, so marks stay registered. Choosing any drawing tool or symbol locks automatically and choosing Pan unlocks; the toggle overrides either way. The canvas opens locked unless its `selectedTool` is `pan`. *Full screen* (header toggle, "Full screen" / "Exit full screen", `aria-pressed`) turns the host into a fixed CSS overlay (no Fullscreen API, no `document` access) that holds only a slim header, the toolbar row with its selects, the stage and the marks list; the description is hidden. The stage cap becomes the viewport height minus the controls and is still constrained by width. Escape exits and returns focus to the toggle. Print and compact mode ignore it.
+
+**Number labels.** Each visible mark gets a small neutral label (`--emr-surface-raised`, `--emr-text-muted`, `--emr-border`; never the mark colour) in a gutter beside the image, joined to the mark's anchor by a thin leader line and a dot. Nothing sits on the image. The figure has percentage gutters (7% each) so every position is a percentage of the figure: anchor x = gutter + x·(100 − 2·gutter). A mark goes to the left gutter when its anchor is in the left half (text marks always go left so the leader meets the start of the text); each gutter is sorted by height and spread to a minimum gap (larger for short, wide images) so labels never overlap. The number is the mark's position in `layers` and matches the legend. Labels and leaders scale with the figure at every zoom, are `aria-hidden` (the list carries the accessible text), and are hidden by the numbers toggle, and always shown in print. A hidden layer (`visible: false`) is not drawn and gets no label.
+
+**Print.** Print is a presentation context (`.emr-print` or `@media print`), not an input. It forces the compact presentation whatever `layout` says: toolbar, selects, upload, header buttons and text field are hidden, zoom is off, the viewport does not clip, the cap becomes 140mm, the marks and numbers are shown (regardless of the toggles) and the legend lists every mark in full.
 
 **Attributes**
 
 | name | type | default | notes |
 |---|---|---|---|
-| `model` | `EmrClinicalAnnotationCanvasState` (required) | — | image templates, labels, layers, tool/brush selection |
+| `model` | `EmrClinicalAnnotationCanvasState` (required) | — | image templates, labels, layers, tool/brush selection, layout, pen palettes |
 | `headingId` | `string` | `'emr-clinical-annotation-canvas-heading'` | root `aria-labelledby` target |
 | `intent` (output) | `EventEmitter<EmrClinicalAnnotationCanvasIntent>` | — | `stateChanged` / `undoRequested` / `redoRequested` / `saveRequested`, always carrying full state |
-| `nativeFilesSelected` (output) | `EventEmitter<readonly File[]>` | — | sanctioned escape hatch (api-conventions §2.4). The controller reads the file, registers it, and answers with a new template (stable id, URL, intrinsic size) in the next `model`. |
+| `nativeFilesSelected` (output) | `EventEmitter<readonly File[]>` | — | sanctioned escape hatch (api-conventions §2.4), emitted by the Add photo icon button (a label around a visually hidden file input). The controller reads the file, registers it, and answers with a new template (stable id, URL, intrinsic size) in the next `model`. |
 
-The controller must supply each template's **true** intrinsic `width`/`height`. Wrong dimensions make `object-fit: contain` letterbox the image inside the surface, and marks misregister again; nothing flags this.
+The controller must supply each template's **true** intrinsic `width`/`height`. Wrong dimensions make `object-fit: contain` letterbox the image inside the surface, and marks misregister; nothing flags this.
 
 **Example**
 ```html
@@ -679,13 +714,18 @@ The controller must supply each template's **true** intrinsic `width`/`height`. 
 
 **Known gaps.**
 
+0. **Pan, lock and full screen are not remembered**; a host that wants them restored must reapply them (they are not in the view model).
 1. **One layer list for all backgrounds.** `layers` is not keyed by image, so switching or uploading a background keeps marks drawn on the previous one. The durable document ties layers to one `background`; multi-view records are drawing-plan Phase 4.
-2. **Text size ignores `fontSize`.** `.emr-annotation-canvas__text { font-size: 48px }` (the one deliberate literal) overrides the SVG attribute, and is in image pixels, so labels shrink with the image.
-3. **Undo/redo history is component-owned** and is reset whenever `model` changes. Controlled revision history is drawing-plan Phase 4.
-4. **Tall images are not height-capped.** A portrait template renders at full column width, so the page may scroll.
-5. **Icon-only layer buttons** (➕, 👁, 🗑) use emoji glyphs rather than the shared icon set. The canvas is not yet in the Playwright axe set.
+2. **Text-tool size ignores `fontSize`.** `.ac__text-mark { font-size: 48px }` (a deliberate literal, now component-local) overrides the SVG attribute, and is in image pixels, so text labels shrink with the image. Callouts do honour their `fontSize`. A callout's text cannot be edited after placement, and text near an image edge is clipped by the surface.
+3. **Undo/redo history is component-owned** and is reset whenever `model` changes, so a host that feeds every `stateChanged` straight back loses history. Controlled revision history is drawing-plan Phase 4.
+4. **A mark's class cannot be changed after it is drawn.** The per-row class select is gone; Class applies to the next mark. Needs a list or toolbar affordance and a selected-mark edit intent.
+5. **Marks cannot be moved or edited**, so Lock is hidden (`canLock` false) and there is no select/move/eraser tool.
+6. **Reorder is offered on the selected row only** (the list's rule), so rows are not reachable for reordering until selected.
+7. **A mark near the image edge has its leader cross the image** to the nearest gutter; a very crowded gutter relaxes the label gap rather than dropping labels.
 
-**Depends on** — `NgIcon`; types from `@drguptavivek/emr-controller`
+**Select styling.** The Class, Symbol and Background selects use `appearance: none` with a CSS-gradient chevron in `currentColor`, because WebKit ignores padding on a native select and the prefix icon overlapped the text.
+
+**Depends on** — `NgIcon`; `EmrAnnotationToolbar`, `EmrAnnotationList`; types from `@drguptavivek/emr-controller`
 **Used by** — not consumed internally
 
 ---
@@ -1434,24 +1474,40 @@ export class EmrObservationFlowsheetComponent {
 ### EmrObservationTrend
 **Layer** L4 · **Selector** `emr-observation-trend` · **Status** stable · **Story** `emr-observations-trend--blood-pressure`
 
-**Need** — A trend is quicker to read as a line than as a column of numbers: blood pressure over a week, intraocular pressure in the right and left eye across visits, HbA1c, or a child's weight against growth reference curves. The chart must still work without a mouse, without colour vision, and with a screen reader.
+**Need** — A trend is quicker to read as a line than as a column of numbers: blood pressure over a week, intraocular pressure in the right and left eye across visits, HbA1c, a child's weight against growth reference curves, and on the ward serum potassium against safe and danger ranges, SpO2 against a lower target, creatinine against an upper limit, or two measures on two scales (heart rate with blood pressure, glucose with insulin rate). The chart must still work without a mouse, without colour vision, and with a screen reader.
 
-**Purpose** — Draws one or two (or more) series as an inline SVG line-and-marker chart with no chart library. The controller supplies the axes (`xMin`/`xMax`/`yMin`/`yMax`, ticks and labels), reference bands, growth `referenceCurves`, flagged points and a plain-language `summaryText`; the component only maps those numbers to pixels for the measured width. Colour comes from the existing `emr-tone-*` classes via `currentColor`, never hex. Series also differ by marker shape (circle, square, diamond, triangle) and dash, flagged points get an extra ring, and the legend is text. Accessibility: the picture is `<svg role="img">` titled from `title` and described by `summaryText`, a visually hidden table lists every point, and the points form one keyboard listbox (a single Tab stop): left and right move along a series, up and down switch series, Home and End jump, Enter or Space emits `pointSelected`. Hovering or focusing a point shows a tooltip. It never computes percentiles, smooths, finds outliers, converts units, chooses the y range or parses dates.
+**Purpose** — Draws one or more series as an inline SVG line-and-marker chart with no chart library. The controller supplies the axes (`xMin`/`xMax`/`yMin`/`yMax`, ticks and labels, an optional right-hand `secondaryAxis`, optional unlabelled `xMinorTicks`), reference bands (closed or open-ended), growth `referenceCurves`, flagged points, an optional granularity caption and selector, and a plain-language `summaryText`; the component only maps those numbers to pixels for the measured width. A band without `yFrom` runs to the bottom of the plot and one without `yTo` to the top; bands are clipped to the plot, get a dashed line at each supplied bound and an optional `edgeLabel` at that line. Bands differ without colour by `pattern` (`solid` or `hatched`, an SVG pattern unique per instance), by their legend swatch (an edge is drawn only on bounded sides) and by their supplied `label`, which must name an open-ended band as such ("Target 94 % and above"); the component never composes band wording. Series and bands with `axis: 'secondary'` scale against `secondaryAxis` (falling back to primary when it is absent), and on a dual-axis chart the legend says "(left axis)" or "(right axis)". Colour comes from the existing `emr-tone-*` classes via `currentColor`, never hex. Series also differ by marker shape (circle, square, diamond, triangle) and dash, flagged points get an extra ring, and the legend is text. Accessibility: the picture is `<svg role="img">` titled from `title` and described only by `summaryText`, a visually hidden table lists every point with its unit and axis, and the points form one keyboard listbox (a single Tab stop): left and right move along a series, up and down switch series, Home and End jump, Enter or Space emits `pointSelected`. The granularity selector is a group of `aria-pressed` buttons emitting `granularityChangeRequested`. It never computes percentiles, smooths, finds outliers, converts units, chooses the y range, decides which values are abnormal, picks ticks for a granularity, or parses dates. Bound clipping and axis resolution live in the controller package as pure helpers (`clipTrendBand`, `resolveTrendAxis`).
 
 **API**
 ```ts
+export type TrendAxis = 'primary' | 'secondary';
 export interface TrendPoint { readonly id: string; readonly x: number; readonly y: number; readonly xLabel: string; readonly valueLabel: string; readonly flag?: EmrBadge }
-export interface TrendSeries { readonly id: string; readonly label: string; readonly tone: EmrTone; readonly points: readonly TrendPoint[]; readonly dashed?: boolean }
-export interface TrendBand { readonly id: string; readonly label: string; readonly yFrom: number; readonly yTo: number; readonly tone: EmrTone }
+export interface TrendSeries {
+  readonly id: string; readonly label: string; readonly tone: EmrTone; readonly points: readonly TrendPoint[]; readonly dashed?: boolean;
+  readonly axis?: TrendAxis; readonly unitLabel?: string;
+}
+export interface TrendBand {
+  readonly id: string; readonly label: string; readonly yFrom?: number; readonly yTo?: number; readonly tone: EmrTone;
+  readonly axis?: TrendAxis; readonly pattern?: 'solid' | 'hatched'; readonly edgeLabel?: string;
+}
 export interface TrendCurve { readonly id: string; readonly label: string; readonly points: readonly { x: number; y: number }[] }
+export interface TrendSecondaryAxis { readonly yLabel: string; readonly yMin: number; readonly yMax: number; readonly yTicks: readonly { y: number; label: string }[] }
 export interface ObservationTrendViewModel {
   readonly id: string; readonly title: string; readonly yLabel: string; readonly yMin: number; readonly yMax: number; readonly xMin: number; readonly xMax: number;
   readonly xTicks: readonly { x: number; label: string }[]; readonly yTicks: readonly { y: number; label: string }[];
+  readonly secondaryAxis?: TrendSecondaryAxis; readonly xGranularityLabel?: string; readonly xMinorTicks?: readonly { x: number }[];
+  readonly granularityOptions?: readonly { id: string; label: string; selected?: boolean }[];
   readonly series: readonly TrendSeries[]; readonly bands?: readonly TrendBand[]; readonly referenceCurves?: readonly TrendCurve[];
   readonly selectedPointId?: string; readonly summaryText: string; readonly emptyMessage: string; readonly readOnly?: boolean;
 }
 export type ObservationTrendIntent =
-  | { type: 'pointSelected'; seriesId: string; pointId: string } | { type: 'rangeChangeRequested'; xMin: number; xMax: number };
+  | { type: 'pointSelected'; seriesId: string; pointId: string }
+  | { type: 'rangeChangeRequested'; xMin: number; xMax: number }
+  | { type: 'granularityChangeRequested'; granularityId: string };
+
+// Pure helpers (controller package)
+export function resolveTrendAxis(item: { axis?: TrendAxis }, model: Pick<ObservationTrendViewModel, 'yLabel' | 'yMin' | 'yMax' | 'secondaryAxis'>): TrendScale;
+export function clipTrendBand(band: Pick<TrendBand, 'yFrom' | 'yTo'>, scale: Pick<TrendScale, 'yMin' | 'yMax'>): TrendBandExtent | null;
 
 export class EmrObservationTrendComponent {
   @Input({ required: true }) model!: ObservationTrendViewModel;
@@ -1464,28 +1520,31 @@ export class EmrObservationTrendComponent {
 
 | name | type | default | notes |
 |---|---|---|---|
-| `model` | `ObservationTrendViewModel` (required) | — | axes, series, bands, reference curves, summary; all labels controller-supplied |
+| `model` | `ObservationTrendViewModel` (required) | — | axes, secondary axis, series, bands, reference curves, granularity, summary; all labels controller-supplied |
 | `headingId` | `string` | generated | id of the visible title, used for `aria-labelledby` |
-| `intent` (output) | `EventEmitter<ObservationTrendIntent>` | — | `pointSelected` (not emitted when `readOnly`) |
+| `intent` (output) | `EventEmitter<ObservationTrendIntent>` | — | `pointSelected` (not emitted when `readOnly`), `granularityChangeRequested` (from the segmented control) |
 
 **Example**
 ```html
-<emr-observation-trend [model]="bpTrend" (intent)="onTrendIntent($event)" />
+<emr-observation-trend [model]="potassiumTrend" (intent)="onTrendIntent($event)" />
 ```
 
 **Known gaps**
 - `rangeChangeRequested` is part of the intent union for hosts that add range controls, but this component has no zoom or pan control and never emits it.
-- `readOnly` is an addition to the spec'd model: it keeps the points inspectable (tooltip, keyboard) but stops them emitting `pointSelected`.
+- `granularityChangeRequested` is emitted for every press, including the already-selected option; the controller re-supplies ticks, points and `selected`. The segmented control's group name is the title plus the fixed text ", time scale".
+- `readOnly` is an addition to the spec'd model: it keeps the points inspectable (tooltip, keyboard) but stops them emitting `pointSelected`. It does not affect the granularity control.
+- The axis words in the legend suffix and SR table ("left axis", "right axis") are fixed English text.
+- An `edgeLabel` sits at the band's upper bound on a closed band and at its only bound on an open-ended one; it is omitted when that bound is off the plot. Edge labels of adjacent bands can collide; the controller should supply them sparingly.
+- The legend swatch draws its top edge when `yTo` is supplied and its bottom edge when `yFrom` is, so it assumes `yFrom <= yTo` (the plot itself accepts either order).
+- Gridlines follow the primary axis only; the secondary axis draws ticks but no gridlines. Reference curves always use the primary axis.
 - The chart redraws to the measured width with a `ResizeObserver` (skipped on the server, which renders a 640px layout until the browser measures it).
-- Tick labels are placed exactly where supplied; the controller must choose ticks that do not collide at narrow widths. Band labels sit at the band's left edge and can overlap points.
+- Tick labels are placed exactly where supplied; the controller must choose ticks that do not collide at narrow widths. Band labels live in the legend only.
 - Very dense series (200 points renders fine) draw every marker; no decimation.
-- Reference curves are drawn as supplied, with no percentile logic. Growth-chart data in the stories is synthetic.
+- Reference curves are drawn as supplied, with no percentile logic. All story data is synthetic.
 
 **Depends on** — none (uses the shared `emr-tone-*`, `emr-badge`, `emr-empty` and `emr-sr-only` classes).
 
-**Used by** — none yet (intended for vitals, ophthalmic follow-up and paediatric growth).
-
----
+**Used by** — none yet (intended for vitals, inpatient laboratory trends, ophthalmic follow-up and paediatric growth).
 
 ---
 

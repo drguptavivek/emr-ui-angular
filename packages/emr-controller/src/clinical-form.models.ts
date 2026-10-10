@@ -7,6 +7,8 @@ export type ClinicalFieldType =
   | 'integer'
   | 'decimal'
   | 'date'
+  | 'time'
+  | 'datetime'
   | 'select'
   | 'multiselect'
   | 'boolean'

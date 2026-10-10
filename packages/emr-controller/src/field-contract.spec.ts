@@ -136,6 +136,22 @@ describe('field-contract adapters', () => {
     }
   });
 
+  it('round-trips time and datetime value types without falling back to text', () => {
+    for (const type of ['time', 'datetime'] as const) {
+      const generated = fullyPopulated({ type });
+      expect(fromGeneratedFieldDefinition(generated).contract.valueType).toBe(type);
+      expect(toGeneratedFieldDefinition(fromGeneratedFieldDefinition(generated))).toEqual(generated);
+
+      const clinical: ClinicalFieldDefinition = { kind: 'field', id: 'seen-at', label: 'Seen at', type };
+      expect(toClinicalFieldDefinition(fromClinicalFieldDefinition(clinical)).type).toBe(type);
+    }
+  });
+
+  it('still narrows value types with no legacy counterpart to text', () => {
+    const coded = fromClinicalFieldDefinition({ id: 'dx', label: 'Diagnosis', type: 'text' });
+    expect(toClinicalFieldDefinition({ ...coded, contract: { ...coded.contract, valueType: 'coded' } }).type).toBe('text');
+  });
+
   it('toClinicalFieldDefinition is intentionally lossy for terminology, validation and revision', () => {
     const original = fullyPopulated();
     const definition = fromGeneratedFieldDefinition(original);

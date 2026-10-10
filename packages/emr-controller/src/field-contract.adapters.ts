@@ -26,8 +26,8 @@ function clinicalTypeToValueType(type: ClinicalFieldType): EmrValueType {
 
 /**
  * Narrows an `EmrValueType` back down to `ClinicalFieldType`. Value types with no
- * legacy `ClinicalFieldType` counterpart (time, datetime, partial-date, coded, scale,
- * attachment, annotation) have no lossless target and fall back to 'text', the
+ * legacy `ClinicalFieldType` counterpart (partial-date, coded, scale, attachment,
+ * annotation) have no lossless target and fall back to 'text', the
  * closest legacy rendering. This narrowing is inherently lossy — see
  * `toClinicalFieldDefinition` below for why that is expected.
  */
@@ -38,6 +38,8 @@ function valueTypeToClinicalType(valueType: EmrValueType): ClinicalFieldType {
     case 'integer':
     case 'decimal':
     case 'date':
+    case 'time':
+    case 'datetime':
     case 'select':
     case 'multiselect':
     case 'boolean':

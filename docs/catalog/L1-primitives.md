@@ -1,6 +1,6 @@
 # L1 — Primitives
 
-L1 is the layer of mechanical, presentation-only building blocks: inputs, choice controls, feedback surfaces, tabs, a separator, a Likert scale, and three layout helpers. None of these components know anything about clinical meaning — they bind a value, options, and validation *display* state, and emit change/intent events. A component at this layer may depend only on L0 (CSS tokens/classes) and framework/controller primitive types (`EmrOption`, `EmrTone`) from `@drguptavivek/emr-controller`. It must never import anything from L2 or above, and per the verified import graph it never imports another L1 sibling either — the 21 components below are independent leaves.
+L1 is the layer of mechanical, presentation-only building blocks: inputs, choice controls, feedback surfaces, tabs, a separator, a Likert scale, and three layout helpers. None of these components know anything about clinical meaning — they bind a value, options, and validation *display* state, and emit change/intent events. A component at this layer may depend only on L0 (CSS tokens/classes) and framework/controller primitive types (`EmrOption`, `EmrTone`) from `@drguptavivek/emr-controller`. It must never import anything from L2 or above, and per the verified import graph it never imports another L1 sibling either — the 25 components below are independent leaves.
 
 Source files: `packages/emr-ui/src/lib/primitives/*.component.ts` (including `emr-card-layout.component.ts`).
 
@@ -24,7 +24,7 @@ abstract class EmrFieldBase {
 }
 ```
 
-Because it is not exported, consumers cannot reference `EmrFieldBase` by type — it only documents the common surface. Each subclass entry below is documented as `extends EmrFieldBase` and lists only its own additional inputs/outputs.
+Because it is not exported, consumers cannot reference `EmrFieldBase` by type — it only documents the common surface. Each subclass entry below is documented as `extends EmrFieldBase` and lists only its own additional inputs/outputs. `EmrTimeInput` and `EmrDateTimeInput` do not extend it; they use signal inputs on a separate non-exported base.
 
 ---
 
@@ -186,6 +186,158 @@ Note: unlike its sibling inputs, `EmrDateInput` does not emit a `blurred` output
 
 **Depends on** — L0 tokens only
 **Used by** — not consumed internally
+
+---
+
+### EmrTimeInput
+**Layer** L1 · **Selector** `emr-time-input` · **Status** stable · **Story** `emr-fields-time-and-datetime--time-populated`
+
+**Need** — Clinical events are often timed within a known day — drops instilled, IOP measured, symptom onset — and need a native time picker consistent with the rest of the form chrome.
+
+**Purpose** — Renders a `type="time"` control bound to a 24-hour `HH:mm` string, or `null` when empty. It performs no parsing, no range validation and no timezone handling; the browser's native control and the controller own those. Uses signal `input()`/`output()` and does not extend `EmrFieldBase`.
+
+**API**
+```ts
+controlId = input('emr-field');
+label = input('');
+hint = input('');
+error = input('');
+required = input(false);
+disabled = input(false);
+readOnly = input(false);
+value = input<string | null>(null);   // 'HH:mm', or 'HH:mm:ss' when step < 60
+min = input<string>();                 // forwarded as HTML min
+max = input<string>();                 // forwarded as HTML max
+step = input<number>();                // seconds, forwarded as HTML step (browser default 60)
+valueChange = output<string | null>(); // [(value)] partner; empty input emits null, never ''
+```
+
+**Example**
+```html
+<emr-time-input controlId="iop-time" label="IOP measured at" [step]="300" [(value)]="iopTime" />
+```
+
+**Depends on** — L0 tokens only
+**Used by** — not consumed internally (`EmrTypedField` renders its own native `type="time"` for `type: 'time'`)
+
+---
+
+### EmrDateTimeInput
+**Layer** L1 · **Selector** `emr-datetime-input` · **Status** stable · **Story** `emr-fields-time-and-datetime--date-time-populated`
+
+**Need** — Admission, procedure start and last-oral-intake times need both a date and a time captured as one value, without the clinician switching between two controls.
+
+**Purpose** — Renders a `type="datetime-local"` control bound to a zone-less `YYYY-MM-DDTHH:mm` string, or `null` when empty. It attaches no timezone and does no ordering or range checks; interpreting local time is the controller's job. Uses signal `input()`/`output()` and does not extend `EmrFieldBase`.
+
+**API**
+```ts
+controlId = input('emr-field');
+label = input('');
+hint = input('');
+error = input('');
+required = input(false);
+disabled = input(false);
+readOnly = input(false);
+value = input<string | null>(null);   // 'YYYY-MM-DDTHH:mm', no zone
+min = input<string>();                 // forwarded as HTML min
+max = input<string>();                 // forwarded as HTML max
+valueChange = output<string | null>(); // [(value)] partner; empty input emits null, never ''
+```
+
+**Example**
+```html
+<emr-datetime-input controlId="seen-at" label="Seen by clinician" [(value)]="seenAt" />
+```
+
+**Depends on** — L0 tokens only
+**Used by** — not consumed internally (`EmrTypedField` renders its own native `type="datetime-local"` for `type: 'datetime'`)
+
+---
+
+### EmrStatusCell
+**Layer** L1 · **Selector** `emr-status-cell` · **Status** stable · **Story** `emr-primitives-status-cell--all-tones`
+
+**Need** — Inpatient surfaces (MAR cells, task rows, bed tiles, checklist items) need one consistent cell showing a caller-supplied state with an optional action and attribution.
+
+**Purpose** — Renders a badge from `status`, optional value, attribution line, secondary note and at most one action button. It derives no tone, label or meaning; it does not decide what the action does.
+
+**API**
+```ts
+// signal input()/output()
+status: EmrBadge (required); valueLabel?: string;
+attribution?: { nameLabel: string; roleLabel?: string; timeLabel?: string };
+action?: { label: string; icon?: string };
+secondaryNote?: string; readOnly = false; compact = false; selectable = false; controlId?: string;
+actionClicked: output<void>(); selected: output<void>();
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| status | `EmrBadge` | required | tone class `emr-tone-<tone>`; `assistiveText` rendered sr-only |
+| valueLabel | `string` | — | shown beside the badge |
+| attribution | object | — | joined `name · role · time` |
+| action | `{label, icon?}` | — | renders one button; hidden when `readOnly` or `compact` |
+| secondaryNote | `string` | — | muted line |
+| readOnly | `boolean` | `false` | hides the action |
+| compact | `boolean` | `false` | badge only; full content in an sr-only span |
+| selectable | `boolean` | `false` | body becomes role="button", tabindex 0, Enter/Space emit `selected` |
+| controlId | `string` | — | id on the cell body |
+| actionClicked (output) | `OutputEmitterRef<void>` | — | past-tense pass-through |
+| selected (output) | `OutputEmitterRef<void>` | — | click or Enter/Space on a selectable body |
+
+**Example**
+```html
+<emr-status-cell [status]="badge" valueLabel="500 mg" [attribution]="who" [action]="{ label: 'Record' }" (actionClicked)="onRecord()" />
+```
+
+**Depends on** — L0 tokens only (`.emr-badge`, `.emr-tone-*`, `.emr-button`, `.emr-sr-only`)
+**Used by** — not consumed internally
+
+---
+
+### EmrStageStepper
+**Layer** L1 · **Selector** `emr-stage-stepper` · **Status** stable · **Story** `emr-primitives-stage-stepper--three-stages`
+
+**Need** — Multi-phase records (admission-to-discharge journey, OT patient flow, staged checklists) need the same accessible numbered stage navigation without each re-implementing `aria-current`, status badges and keyboard movement.
+
+**Purpose** — Renders a `<nav>` containing an `<ol>` of numbered stages, each a `<button>` (or a static `<span>` when `readOnly`) with label, optional description and optional caller-supplied status badge. It does not decide which stage is active, complete or reachable; it only emits the selected stage id.
+
+**API**
+```ts
+export interface EmrStage { id: string; label: string; status?: EmrBadge; description?: string }
+// signal input()/output()
+stages: readonly EmrStage[]            // required
+activeId?: string
+ariaLabel = 'Stages'
+orientation: 'horizontal' | 'vertical' = 'horizontal'
+readOnly = false
+idPrefix?: string
+// stageSelected: OutputEmitterRef<string>
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| stages | `readonly EmrStage[]` | required | status is an `EmrBadge`; label and tone come from the caller |
+| activeId | `string` | — | gets `aria-current="step"` and active styling |
+| ariaLabel | `string` | `'Stages'` | accessible name of the `<nav>` |
+| orientation | `'horizontal' \| 'vertical'` | `'horizontal'` | horizontal wraps; stacks at 640px and below |
+| readOnly | `boolean` | `false` | stages become non-interactive list items |
+| idPrefix | `string` | auto | prefix for stage element ids |
+| stageSelected (output) | `string` | — | stage id on click / Enter / Space |
+
+Keyboard: roving tabindex (one tab stop: last focused, else active, else first); Arrow keys move focus, Home/End jump to first/last; Enter/Space select. Status is always text, never colour alone.
+
+**Example**
+```html
+<emr-stage-stepper ariaLabel="Admission journey" [stages]="stages" [activeId]="activeId" (stageSelected)="onStage($event)" />
+```
+
+**Depends on** — L0 tokens; `EmrBadge` type from `@drguptavivek/emr-controller`
+**Used by** — `EmrStagedChecklistComponent`
 
 ---
 

@@ -1,11 +1,13 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import type { FlowsheetCell, FlowsheetColumn, FlowsheetIntent, FlowsheetRow, FlowsheetViewModel } from '@drguptavivek/emr-controller';
+import type { TimeAxisIntent, TimeAxisViewModel } from '@drguptavivek/emr-controller';
 import { EmrObservationFlowsheetComponent } from '../domain/emr-observation-flowsheet.component';
+import { EmrTimeAxisComponent } from '../structures/emr-time-axis.component';
 
 const meta: Meta<EmrObservationFlowsheetComponent> = {
   title: 'EMR / Observations / Flowsheet',
   component: EmrObservationFlowsheetComponent,
-  decorators: [moduleMetadata({ imports: [EmrObservationFlowsheetComponent] })],
+  decorators: [moduleMetadata({ imports: [EmrObservationFlowsheetComponent, EmrTimeAxisComponent] })],
   parameters: {
     docs: {
       description: {
@@ -146,6 +148,52 @@ const mar: FlowsheetViewModel = {
   selectedCell: { rowId: 'amox', columnId: 'm2' }
 };
 export const MedicationAdministration: Story = { render: () => render(mar) };
+
+// ---- ICU hourly chart with column groups -------------------------------
+const icuCols = Array.from({ length: 9 }, (_, i) => c(`i${i}`, `${String(6 + i).padStart(2, '0')}:00`, 'Day 3', i === 8));
+const icu: FlowsheetViewModel = {
+  id: 'icu', title: 'ICU hourly chart', emptyMessage: 'Nothing charted.',
+  columns: icuCols,
+  columnGroups: [
+    { id: 'vent', label: 'Ventilator', columnIds: ['i0', 'i1', 'i2'] },
+    { id: 'haemo', label: 'Haemodynamics', columnIds: ['i3', 'i4', 'i5'] },
+    { id: 'abg', label: 'ABG', columnIds: ['i6', 'i7', 'i8'] }
+  ],
+  rows: [
+    r('fio2', 'FiO₂', { unitLabel: '%' }), r('peep', 'PEEP', { unitLabel: 'cmH₂O' }),
+    r('map', 'Mean arterial pressure', { unitLabel: 'mmHg' }), r('hr', 'Heart rate', { unitLabel: 'beats/min' }),
+    r('ph', 'pH'), r('pao2', 'PaO₂', { unitLabel: 'kPa' })
+  ],
+  cells: grid(['fio2', 'peep', 'map', 'hr', 'ph', 'pao2'], icuCols.map((x) => x.id), (row, _col, i) => {
+    const data: Record<string, string[]> = {
+      fio2: ['60', '60', '55', '50', '50', '45', '45', '40', '40'], peep: ['10', '10', '10', '8', '8', '8', '8', '6', '6'],
+      map: ['62', '64', '68', '70', '72', '71', '74', '73', '75'], hr: ['112', '108', '104', '98', '96', '94', '92', '90', '88'],
+      ph: ['7.28', '7.30', '7.31', '7.33', '7.35', '7.36', '7.37', '7.38', '7.38'], pao2: ['8.1', '8.6', '9.0', '9.4', '9.8', '10.1', '10.4', '10.6', '10.8']
+    };
+    return v(data[row][i], { editable: true });
+  })
+};
+export const IcuHourlyChart: Story = { render: () => render(icu) };
+
+// ---- Time axis stacked above the flowsheet -----------------------------
+// One outer scroller moves both together; `--emr-time-axis-lead` matches the flowsheet's 8.5rem row-header column.
+const axis: TimeAxisViewModel = { id: 'vitals-axis', title: 'Time', ticks: vitalCols, stepLabel: 'Two hourly', canShiftEarlier: false, canShiftLater: false };
+export const WithTimeAxis: Story = {
+  render: () => ({
+    props: {
+      axis, model: { ...vitals, selectedCell: undefined },
+      onAxis(this: { axis: TimeAxisViewModel }, e: TimeAxisIntent) {
+        if (e.type === 'tickSelected') this.axis = { ...this.axis, selectedTickId: e.tickId };
+      }
+    },
+    template: `<div class="emr-story-surface" style="overflow-x:auto">
+      <div style="width:max-content;display:grid;gap:8px;--emr-time-axis-lead:8.5rem">
+        <emr-time-axis [model]="axis" (intent)="onAxis($event)" />
+        <emr-observation-flowsheet [model]="model" />
+      </div>
+    </div>`
+  })
+};
 
 // ---- States -------------------------------------------------------------
 export const Empty: Story = { render: () => render({ ...vitals, rows: [], cells: {}, selectedCell: undefined }) };

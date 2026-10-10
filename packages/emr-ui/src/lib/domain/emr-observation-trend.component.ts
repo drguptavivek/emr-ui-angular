@@ -1,7 +1,8 @@
 import {
   AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, Output, inject
 } from '@angular/core';
-import type { EmrTone, ObservationTrendIntent, ObservationTrendViewModel, TrendPoint } from '@drguptavivek/emr-controller';
+import { clipTrendBand, resolveTrendAxis } from './observation-trend.logic';
+import type { EmrTone, ObservationTrendIntent, ObservationTrendViewModel, TrendBand, TrendPoint, TrendScale } from '@drguptavivek/emr-controller';
 
 let nextTrendId = 0;
 const f = (n: number): string => n.toFixed(1);
@@ -20,16 +21,20 @@ interface Marker {
   readonly d: string;
   readonly ringD: string;
   readonly name: string;
+  /** Supplied unit plus, on a dual-axis chart, which axis; for the screen-reader table. */
+  readonly unitAxis: string;
 }
 
 interface View {
   readonly w: number; readonly h: number; readonly ml: number; readonly mt: number; readonly plotW: number; readonly plotH: number;
-  readonly bands: readonly { id: string; label: string; tone: EmrTone; y: number; height: number }[];
+  readonly bands: readonly { id: string; tone: EmrTone; hatchId: string | null; y: number; height: number; edges: readonly number[]; edgeLabel?: string; labelY?: number }[];
   readonly curves: readonly { id: string; label: string; d: string; lx: number; ly: number }[];
   readonly lines: readonly { id: string; tone: EmrTone; dashed: boolean; d: string }[];
   readonly markers: readonly Marker[];
   readonly xt: readonly { x: number; label: string; anchor: string }[];
   readonly yt: readonly { y: number; label: string }[];
+  readonly yt2: readonly { y: number; label: string }[];
+  readonly minor: readonly number[];
 }
 
 /** Marker outline by series order, so series differ by shape and not only by colour. */
@@ -49,6 +54,18 @@ function shapePath(shape: number, x: number, y: number, r: number): string {
   template: `
     <section class="tr" [attr.aria-labelledby]="titleId()">
       <h3 class="tr__title" [id]="titleId()">{{ model.title }}</h3>
+      @if (model.xGranularityLabel || model.granularityOptions?.length) {
+        <div class="tr__bar">
+          @if (model.xGranularityLabel) { <span class="tr__gran">{{ model.xGranularityLabel }}</span> }
+          @if (model.granularityOptions?.length) {
+            <div class="tr__seg" role="group" [attr.aria-label]="model.title + ', time scale'">
+              @for (g of model.granularityOptions; track g.id) {
+                <button type="button" class="tr__segbtn" [attr.aria-pressed]="!!g.selected" (click)="intent.emit({ type: 'granularityChangeRequested', granularityId: g.id })">{{ g.label }}</button>
+              }
+            </div>
+          }
+        </div>
+      }
       @if (!hasData) {
         <div class="emr-empty" role="status">{{ model.emptyMessage }}</div>
       } @else {
@@ -59,13 +76,21 @@ function shapePath(shape: number, x: number, y: number, r: number): string {
                 <line x1="1" y1="7" x2="29" y2="7" class="tr__sw" [attr.stroke-dasharray]="s.dashed ? '6 4' : null" />
                 <path class="tr__mk" [attr.d]="shapePath(i, 15, 7, 4)" />
               </svg>
-              <span class="tr__keytext">{{ s.label }}</span>
+              <span class="tr__keytext">{{ s.label }}{{ axisNote(s) }}</span>
             </li>
           }
-          @for (b of model.bands; track b.id) {
+          @for (b of model.bands; track b.id; let i = $index) {
             <li class="tr__key emr-tone-{{ b.tone }}">
-              <svg width="30" height="14" viewBox="0 0 30 14" aria-hidden="true" focusable="false"><rect x="1" y="1" width="28" height="12" class="tr__bandsw" /></svg>
-              <span class="tr__keytext">{{ b.label }}</span>
+              <svg width="30" height="14" viewBox="0 0 30 14" aria-hidden="true" focusable="false">
+                @if (b.pattern === 'hatched') {
+                  <defs><pattern [id]="uid + '-lh' + i" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" class="tr__hatch" /></pattern></defs>
+                }
+                <rect x="1" y="1" width="28" height="12" class="tr__bandsw" [class.tr__bandsw--hatch]="b.pattern === 'hatched'" [style.fill]="b.pattern === 'hatched' ? 'url(#' + uid + '-lh' + i + ')' : null" />
+                <!-- An edge on the swatch only where the band has a bound, so open-ended bands read as open. -->
+                @if (b.yTo !== undefined) { <line x1="1" y1="1" x2="29" y2="1" class="tr__bandedge" /> }
+                @if (b.yFrom !== undefined) { <line x1="1" y1="13" x2="29" y2="13" class="tr__bandedge" /> }
+              </svg>
+              <span class="tr__keytext">{{ b.label }}{{ axisNote(b) }}</span>
             </li>
           }
           @for (c of model.referenceCurves; track c.id) {
@@ -82,9 +107,22 @@ function shapePath(shape: number, x: number, y: number, r: number): string {
             <desc [id]="uid + '-d'">{{ model.summaryText }}</desc>
             <defs><clipPath [id]="uid + '-clip'"><rect [attr.x]="view.ml" [attr.y]="view.mt" [attr.width]="view.plotW" [attr.height]="view.plotH" /></clipPath></defs>
             @for (b of view.bands; track b.id) {
+              <!-- The hatch pattern lives inside the toned group so its currentColor resolves to the band's tone. -->
               <g class="emr-tone-{{ b.tone }}" [attr.clip-path]="'url(#' + uid + '-clip)'">
-                <rect class="tr__band" [attr.x]="view.ml" [attr.y]="b.y" [attr.width]="view.plotW" [attr.height]="b.height" />
+                @if (b.hatchId) {
+                  <defs><pattern [id]="b.hatchId" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" class="tr__hatch" /></pattern></defs>
+                }
+                <rect class="tr__band" [class.tr__band--hatch]="!!b.hatchId" [style.fill]="b.hatchId ? 'url(#' + b.hatchId + ')' : null" [attr.x]="view.ml" [attr.y]="b.y" [attr.width]="view.plotW" [attr.height]="b.height" />
+                @for (e of b.edges; track $index) {
+                  <line class="tr__bound" [attr.x1]="view.ml" [attr.x2]="view.ml + view.plotW" [attr.y1]="e" [attr.y2]="e" />
+                }
+                @if (b.edgeLabel && b.labelY !== undefined) {
+                  <text class="tr__edgelabel" text-anchor="end" [attr.x]="view.ml + view.plotW - 4" [attr.y]="b.labelY < view.mt + 14 ? b.labelY + 12 : b.labelY - 4">{{ b.edgeLabel }}</text>
+                }
               </g>
+            }
+            @for (x of view.minor; track $index) {
+              <line class="tr__minor" [attr.x1]="x" [attr.x2]="x" [attr.y1]="view.mt" [attr.y2]="view.mt + view.plotH" />
             }
             @for (t of view.yt; track t.y) {
               <line class="tr__grid" [attr.x1]="view.ml" [attr.x2]="view.ml + view.plotW" [attr.y1]="t.y" [attr.y2]="t.y" />
@@ -97,6 +135,14 @@ function shapePath(shape: number, x: number, y: number, r: number): string {
             <line class="tr__axis" [attr.x1]="view.ml" [attr.x2]="view.ml" [attr.y1]="view.mt" [attr.y2]="view.mt + view.plotH" />
             <line class="tr__axis" [attr.x1]="view.ml" [attr.x2]="view.ml + view.plotW" [attr.y1]="view.mt + view.plotH" [attr.y2]="view.mt + view.plotH" />
             <text class="tr__ylabel" text-anchor="middle" [attr.transform]="'translate(14 ' + (view.mt + view.plotH / 2) + ') rotate(-90)'">{{ model.yLabel }}</text>
+            @if (model.secondaryAxis; as ax) {
+              <line class="tr__axis" [attr.x1]="view.ml + view.plotW" [attr.x2]="view.ml + view.plotW" [attr.y1]="view.mt" [attr.y2]="view.mt + view.plotH" />
+              @for (t of view.yt2; track t.y) {
+                <line class="tr__axis" [attr.x1]="view.ml + view.plotW" [attr.x2]="view.ml + view.plotW + 5" [attr.y1]="t.y" [attr.y2]="t.y" />
+                <text class="tr__tick" text-anchor="start" [attr.x]="view.ml + view.plotW + 8" [attr.y]="t.y" dy=".32em">{{ t.label }}</text>
+              }
+              <text class="tr__ylabel" text-anchor="middle" [attr.transform]="'translate(' + (view.w - 14) + ' ' + (view.mt + view.plotH / 2) + ') rotate(90)'">{{ ax.yLabel }}</text>
+            }
             <g [attr.clip-path]="'url(#' + uid + '-clip)'">
               @for (c of view.curves; track c.id) { <path class="tr__ref" [attr.d]="c.d" /> }
               @for (l of view.lines; track l.id) {
@@ -134,10 +180,10 @@ function shapePath(shape: number, x: number, y: number, r: number): string {
 
         <div class="emr-sr-only"><table>
           <caption>{{ model.title }}. {{ model.summaryText }}</caption>
-          <thead><tr><th scope="col">Series</th><th scope="col">Time</th><th scope="col">Value</th><th scope="col">Flag</th></tr></thead>
+          <thead><tr><th scope="col">Series</th><th scope="col">Unit and axis</th><th scope="col">Time</th><th scope="col">Value</th><th scope="col">Flag</th></tr></thead>
           <tbody>
             @for (m of view.markers; track m.domId) {
-              <tr><th scope="row">{{ m.seriesLabel }}</th><td>{{ m.point.xLabel }}</td><td>{{ m.point.valueLabel }}</td><td>{{ m.point.flag ? m.point.flag.label + (m.point.flag.assistiveText ? ', ' + m.point.flag.assistiveText : '') : 'None' }}</td></tr>
+              <tr><th scope="row">{{ m.seriesLabel }}</th><td>{{ m.unitAxis }}</td><td>{{ m.point.xLabel }}</td><td>{{ m.point.valueLabel }}</td><td>{{ m.point.flag ? m.point.flag.label + (m.point.flag.assistiveText ? ', ' + m.point.flag.assistiveText : '') : 'None' }}</td></tr>
             }
           </tbody>
         </table></div>
@@ -153,12 +199,27 @@ function shapePath(shape: number, x: number, y: number, r: number): string {
     .tr__keytext{color:var(--emr-text)}
     .tr__sw{stroke:currentColor;stroke-width:2}
     .tr__mk{fill:var(--emr-surface);stroke:currentColor;stroke-width:2}
-    .tr__bandsw{fill:currentColor;fill-opacity:.2;stroke:currentColor;stroke-width:1}
+    .tr__bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+    .tr__gran{color:var(--emr-text-muted);font-size:var(--emr-text-sm);font-weight:var(--emr-weight-bold)}
+    .tr__seg{display:inline-flex;border:1px solid var(--emr-border);border-radius:8px;overflow:hidden}
+    .tr__segbtn{min-height:32px;padding:4px 12px;border:0;border-left:1px solid var(--emr-border);background:var(--emr-surface);color:var(--emr-text);font:inherit;font-size:var(--emr-text-sm);cursor:pointer}
+    .tr__segbtn:first-child{border-left:0}
+    .tr__segbtn:hover{background:var(--emr-primary-soft)}
+    .tr__segbtn:focus-visible{outline:3px solid var(--emr-focus);outline-offset:-3px}
+    .tr__segbtn[aria-pressed="true"]{background:var(--emr-primary-soft);box-shadow:inset 0 -3px 0 var(--emr-primary);font-weight:var(--emr-weight-bold)}
+    .tr__bandsw{fill:currentColor;fill-opacity:.2}
+    .tr__bandsw--hatch{fill-opacity:1}
+    .tr__bandedge{stroke:currentColor;stroke-width:2}
+    .tr__hatch{stroke:currentColor;stroke-width:1.5;stroke-opacity:.55}
     .tr__refsw{stroke:var(--emr-text-muted);stroke-width:1.5;stroke-dasharray:1 3;stroke-linecap:round}
     .tr__plot{position:relative;min-width:0;border:1px solid var(--emr-border);border-radius:8px;background:var(--emr-surface);overflow:hidden}
     .tr__svg{display:block;max-width:100%}
     .tr__overlay{position:absolute;inset:0;pointer-events:none}
     .tr__band{fill:currentColor;fill-opacity:.14}
+    .tr__band--hatch{fill-opacity:1}
+    .tr__bound{stroke:currentColor;stroke-width:1;stroke-dasharray:4 3}
+    .tr__edgelabel{fill:currentColor;font-size:var(--emr-text-2xs);font-weight:var(--emr-weight-bold);paint-order:stroke;stroke:var(--emr-surface);stroke-width:3px;stroke-linejoin:round}
+    .tr__minor{stroke:var(--emr-border);stroke-width:1;stroke-dasharray:2 4}
 
     .tr__grid{stroke:var(--emr-border);stroke-width:1}
     .tr__axis{stroke:var(--emr-text-muted);stroke-width:1}
@@ -190,7 +251,7 @@ export class EmrObservationTrendComponent implements OnChanges, AfterViewInit, O
 
   readonly uid = `emr-trend-${++nextTrendId}`;
   readonly shapePath = shapePath;
-  view: View = { w: 640, h: 320, ml: 56, mt: 12, plotW: 568, plotH: 272, bands: [], curves: [], lines: [], markers: [], xt: [], yt: [] };
+  view: View = { w: 640, h: 320, ml: 56, mt: 12, plotW: 568, plotH: 272, bands: [], curves: [], lines: [], markers: [], xt: [], yt: [], yt2: [], minor: [] };
   hasData = false;
   focused = false;
   hover: string | null = null;
@@ -215,6 +276,12 @@ export class EmrObservationTrendComponent implements OnChanges, AfterViewInit, O
   }
 
   ngOnDestroy(): void { this.observer?.disconnect(); }
+
+  /** Legend suffix naming the axis, only on a dual-axis chart. */
+  axisNote(item: { readonly axis?: TrendBand['axis'] }): string {
+    if (!this.model.secondaryAxis) return '';
+    return resolveTrendAxis(item, this.model).axis === 'secondary' ? ' (right axis)' : ' (left axis)';
+  }
 
   titleId(): string { return this.headingId ?? `${this.uid}-heading`; }
 
@@ -274,43 +341,62 @@ export class EmrObservationTrendComponent implements OnChanges, AfterViewInit, O
     const m = this.model;
     const h = w < 520 ? 250 : 320;
     const ml = w < 520 ? 46 : 56;
+    const mr = m.secondaryAxis ? ml : 16;
     const mt = 12;
-    const plotW = Math.max(w - ml - 16, 10);
+    const plotW = Math.max(w - ml - mr, 10);
     const plotH = h - mt - 36;
     const dx = m.xMax - m.xMin || 1;
-    const dy = m.yMax - m.yMin || 1;
     const px = (x: number): number => ml + ((x - m.xMin) / dx) * plotW;
-    const py = (y: number): number => mt + plotH - ((y - m.yMin) / dy) * plotH;
+    const yOf = (sc: Pick<TrendScale, 'yMin' | 'yMax'>) => {
+      const dy = sc.yMax - sc.yMin || 1;
+      return (y: number): number => mt + plotH - ((y - sc.yMin) / dy) * plotH;
+    };
+    const py = yOf(m);
+    const dual = !!m.secondaryAxis;
+    const py2 = m.secondaryAxis ? yOf(m.secondaryAxis) : py;
     const dense = m.series.some((s) => s.points.length > 60);
     const r = dense ? 2 : 5;
 
-    const markers = m.series.flatMap((s, seriesIdx) => s.points.map((p, idx): Marker => {
-      const x = px(p.x); const y = py(p.y);
-      const flag = p.flag ? `, ${p.flag.label}${p.flag.assistiveText ? ' ' + p.flag.assistiveText : ''}` : '';
-      return {
-        domId: `${this.uid}-p-${seriesIdx}-${idx}`, seriesId: s.id, seriesIdx, idx, point: p, seriesLabel: s.label, tone: s.tone, px: x, py: y,
-        d: shapePath(seriesIdx, x, y, r), ringD: shapePath(seriesIdx, x, y, r + 5), name: `${s.label}, ${p.xLabel}: ${p.valueLabel}${flag}`
-      };
-    }));
+    const markers = m.series.flatMap((s, seriesIdx) => {
+      const sc = resolveTrendAxis(s, m); const sy = yOf(sc);
+      const unitAxis = (s.unitLabel ?? sc.yLabel) + (dual ? (sc.axis === 'secondary' ? ', right axis' : ', left axis') : '');
+      return s.points.map((p, idx): Marker => {
+        const x = px(p.x); const y = sy(p.y);
+        const flag = p.flag ? `, ${p.flag.label}${p.flag.assistiveText ? ' ' + p.flag.assistiveText : ''}` : '';
+        return {
+          domId: `${this.uid}-p-${seriesIdx}-${idx}`, seriesId: s.id, seriesIdx, idx, point: p, seriesLabel: s.label, tone: s.tone, px: x, py: y,
+          d: shapePath(seriesIdx, x, y, r), ringD: shapePath(seriesIdx, x, y, r + 5), name: `${s.label}, ${p.xLabel}: ${p.valueLabel}${flag}`, unitAxis
+        };
+      });
+    });
     const xt = m.xTicks.map((t) => {
       const x = px(t.x);
-      return { x, label: t.label, anchor: x < ml + 14 ? 'start' : x > w - 30 ? 'end' : 'middle' };
+      return { x, label: t.label, anchor: x < ml + 14 ? 'start' : x > ml + plotW - 14 ? 'end' : 'middle' };
     });
     return {
       w, h, ml, mt, plotW, plotH,
-      bands: (m.bands ?? []).map((b) => {
-        const top = py(Math.max(b.yFrom, b.yTo)); const bottom = py(Math.min(b.yFrom, b.yTo));
-        return { id: b.id, label: b.label, tone: b.tone, y: top, height: Math.max(bottom - top, 0) };
+      bands: (m.bands ?? []).flatMap((b, i) => {
+        const sc = resolveTrendAxis(b, m); const by = yOf(sc);
+        const ext = clipTrendBand(b, sc);
+        if (!ext) return [];
+        const top = by(ext.hi);
+        return [{
+          id: b.id, tone: b.tone, hatchId: b.pattern === 'hatched' ? `${this.uid}-h${i}` : null, y: top, height: Math.max(by(ext.lo) - top, 0),
+          edges: ext.edges.map(by), edgeLabel: b.edgeLabel, labelY: ext.labelAt === undefined ? undefined : by(ext.labelAt)
+        }];
       }),
       curves: (m.referenceCurves ?? []).map((c) => {
         const last = c.points[c.points.length - 1];
         return { id: c.id, label: c.label, d: c.points.map((p, i) => `${i ? 'L' : 'M'}${f(px(p.x))} ${f(py(p.y))}`).join(''), lx: last ? px(last.x) - 4 : 0, ly: last ? py(last.y) - 4 : 0 };
       }),
-      lines: m.series.filter((s) => s.points.length > 1).map((s) => ({
-        id: s.id, tone: s.tone, dashed: !!s.dashed, d: s.points.map((p, i) => `${i ? 'L' : 'M'}${f(px(p.x))} ${f(py(p.y))}`).join('')
-      })),
+      lines: m.series.filter((s) => s.points.length > 1).map((s) => {
+        const sy = yOf(resolveTrendAxis(s, m));
+        return { id: s.id, tone: s.tone, dashed: !!s.dashed, d: s.points.map((p, i) => `${i ? 'L' : 'M'}${f(px(p.x))} ${f(sy(p.y))}`).join('') };
+      }),
       markers, xt,
-      yt: m.yTicks.map((t) => ({ y: py(t.y), label: t.label }))
+      yt: m.yTicks.map((t) => ({ y: py(t.y), label: t.label })),
+      yt2: (m.secondaryAxis?.yTicks ?? []).map((t) => ({ y: py2(t.y), label: t.label })),
+      minor: (m.xMinorTicks ?? []).map((t) => px(t.x))
     };
   }
 }

@@ -209,3 +209,110 @@ export class EmrCodedInputComponent {
 **Depends on** — `EmrFieldFrameComponent`, `EmrSearchSelectComponent`.
 
 **Used by** — none yet (intended for `EmrTypedField` coded fields with a `search` widget and for diagnosis and observation capture).
+
+---
+
+### EmrAttestation
+**Layer** L2 · **Selector** `emr-attestation` · **Status** stable · **Story** `EMR / Capture / Attestation`
+
+**Need** - signing, witnessing and co-signing recur across inpatient records (MAR witness, transfusion two-person check, swab counts, controlled drugs, consent, discharge sign-off). The status bar and staged checklist each carried a private version.
+
+**Purpose** - renders the caller-supplied attestation statement, one row per `CaptureSignatory` (name, role, status badge, signed-at label or "Not supplied") and Sign / Amend buttons shown only when `canSign` / `canAmend` and not `readOnly`. It does NOT decide who may sign, format timestamps, or evaluate completeness; every label and badge comes from the controller. Compact enough for a flowsheet cell popover or checklist phase footer; action buttons are hidden in print.
+
+**API**
+```ts
+export class EmrAttestationComponent {
+  readonly model = input.required<AttestationViewModel>();
+  readonly headingId = input<string>();
+  readonly intent = output<AttestationIntent>();
+}
+// AttestationIntent = signRequested(signatoryId?) | amendRequested | signatorySelected(signatoryId)
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| `model` | `AttestationViewModel` (required) | - | title, statement, signatories, canSign, signLabel, canAmend, amendLabel, readOnly, error |
+| `headingId` | `string` | generated | id of the title heading, used for `aria-labelledby` |
+
+**Example**
+```html
+<emr-attestation [model]="witnessModel" (intent)="onAttest($event)" />
+```
+
+**Depends on** - none. **Used by** - none yet (status bar and staged checklist not retrofitted).
+
+---
+
+### EmrScheduleSlotPicker
+**Layer** L2 · **Selector** `emr-schedule-slot-picker` · **Status** stable · **Story** `emr-medications-slot-picker--four-slots-empty`
+
+**Need** — a drug order composer must capture *when* and *how much* a medicine is taken as structured `DoseSlot[]`, the same shape `EmrDoseSchedule` renders, rather than a free-text frequency that the patient-facing card would have to parse.
+
+**Purpose** — renders a `<fieldset>`/`<legend>` group with one checkbox per controller-supplied slot (four standard slots, hourly slots, or a single PRN slot). A ticked slot shows an amount control: a number input (`amountMode: 'numeric'`, with `unitLabel` beside it) or a text input (`amountMode: 'label'`, e.g. "thin layer"). Optional preset buttons tick a fixed set of slot ids and replace the selection; slots already ticked keep their amount, new ones start at `defaultAmount` / `defaultAmountLabel`. The button whose slot ids equal the current selection shows `aria-pressed="true"` and a tick glyph. Every change emits a new immutable `DoseSlot[]` in `slots` order through `valueChange`; unticked slots are omitted, and an emptied amount becomes `amount: null` with the slot still ticked. It does NOT derive frequency text or codes, totals, durations or tapers, does NOT validate amounts (no clinical bounds), and does NOT pluralise units — the controller does all of that from the emitted value. Value building lives in the controller as pure functions (`toggleSlot`, `setSlotAmount`, `applySlotPreset`). Read-only renders each slot as text ("1 tablets" uses the supplied `unitLabel` verbatim; "Not selected" otherwise); `disabled` disables the whole fieldset.
+
+**API**
+```ts
+// schedule-slot.models.ts
+export interface ScheduleSlotDefinition { id: string; label: string; timeHint?: string }
+export interface ScheduleSlotPreset { id: string; label: string; slotIds: readonly string[] }
+export type ScheduleAmountMode = 'numeric' | 'label';
+export type ScheduleSlotSeed = Pick<DoseSlot, 'amount' | 'amountLabel'>;
+export const toggleSlot: (value, slots, slotId, checked, seed) => DoseSlot[];
+export const setSlotAmount: (value, slots, slotId, amounts: ScheduleSlotSeed) => DoseSlot[];
+export const applySlotPreset: (value, slots, preset, seed) => DoseSlot[];
+
+export class EmrScheduleSlotPickerComponent {
+  readonly controlId = input<string>();
+  readonly label = input.required<string>();
+  readonly hint = input<string>();
+  readonly error = input<string>();
+  readonly required = input(false);
+  readonly readOnly = input(false);
+  readonly disabled = input(false);
+  readonly value = input<readonly DoseSlot[] | null>(null);
+  readonly slots = input.required<readonly ScheduleSlotDefinition[]>();
+  readonly unitLabel = input<string>();
+  readonly amountMode = input<ScheduleAmountMode>('numeric');
+  readonly presets = input<readonly ScheduleSlotPreset[]>([]);
+  readonly defaultAmount = input(1);
+  readonly defaultAmountLabel = input('');
+  readonly valueChange = output<readonly DoseSlot[]>();
+}
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| `controlId` | `string` | generated | id of the fieldset; checkboxes are `{controlId}-{slot.id}`, amounts `{controlId}-{slot.id}-amount`, message `{controlId}-message` |
+| `label` | `string` (required) | — | legend text |
+| `hint` / `error` | `string` | — | one message region below the grid; error wins and is prefixed "Error:" |
+| `required` | `boolean` | `false` | `*` plus a screen-reader "Required"; the controller decides whether an empty value is an error |
+| `readOnly` | `boolean` | `false` | renders text, no controls, no presets |
+| `disabled` | `boolean` | `false` | disables the fieldset |
+| `value` | `readonly DoseSlot[] \| null` | `null` | ticked slots; ids not in `slots` are ignored |
+| `slots` | `readonly ScheduleSlotDefinition[]` (required) | — | available slots, in display and emission order |
+| `unitLabel` | `string` | — | shown after numeric amounts and in the amount's accessible name |
+| `amountMode` | `'numeric' \| 'label'` | `'numeric'` | edits `amount` or `amountLabel` |
+| `presets` | `readonly ScheduleSlotPreset[]` | `[]` | buttons above the grid |
+| `defaultAmount` | `number` | `1` | starting amount for a newly ticked slot (numeric) |
+| `defaultAmountLabel` | `string` | `''` | starting text for a newly ticked slot (label) |
+| `valueChange` (output) | `readonly DoseSlot[]` | — | `[(value)]` partner |
+
+**Example**
+```html
+<emr-schedule-slot-picker controlId="rx-slots" label="When to take" [slots]="slots" [presets]="presets"
+  unitLabel="tablets" [(value)]="doseSlots" />
+<emr-dose-schedule [model]="scheduleModelFrom(doseSlots)" />
+```
+
+**Known gaps**
+- `defaultAmountLabel` is an addition to the brief: `EmrDoseSchedule` shows a slot with `amount: null` and an empty `amountLabel` as "none", so label mode needs a starting text to read as ticked.
+- `valueChange` emits `readonly DoseSlot[]` (an empty array when nothing is ticked), never `null`.
+- Presets are not a `role="toolbar"` with arrow-key roving focus; they are a labelled group of tab-stop buttons.
+- Numeric amounts accept any non-negative decimal; fractions are typed as decimals (0.5) and `EmrDoseSchedule` formats them.
+
+**Depends on** — none (no component imports). Value building: `toggleSlot`, `setSlotAmount`, `applySlotPreset` from `@drguptavivek/emr-controller`.
+**Used by** — none yet (intended for the drug order composer, paired with `EmrDoseSchedule` as its preview).

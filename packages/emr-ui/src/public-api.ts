@@ -11,6 +11,8 @@ export * from './lib/primitives/emr-separator.component';
 export * from './lib/primitives/emr-likert.component';
 export * from './lib/primitives/emr-vas.component';
 export * from './lib/primitives/emr-card-layout.component';
+export * from './lib/primitives/emr-status-cell.component';
+export * from './lib/primitives/emr-stage-stepper.component';
 
 // ---------------------------------------------------------------------
 // L2 fields
@@ -18,6 +20,8 @@ export * from './lib/primitives/emr-card-layout.component';
 export * from './lib/fields/emr-field-frame.component';
 export * from './lib/fields/emr-typed-field.component';
 export * from './lib/fields/emr-coded-input.component';
+export * from './lib/fields/emr-attestation.component';
+export * from './lib/fields/emr-schedule-slot-picker.component';
 
 // ---------------------------------------------------------------------
 // L3 structures
@@ -29,6 +33,8 @@ export * from './lib/structures/emr-clinical-list.component';
 export * from './lib/structures/emr-clinical-matrix.component';
 export * from './lib/structures/emr-annotation-toolbar.component';
 export * from './lib/structures/emr-annotation-list.component';
+export * from './lib/structures/emr-image-template-picker.component';
+export * from './lib/structures/emr-time-axis.component';
 
 // ---------------------------------------------------------------------
 // L4 domain

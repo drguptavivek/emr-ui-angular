@@ -118,5 +118,8 @@ and `emr-theme-dark` token sets stay in sync in `emr.css`.
   ids from `stories/*.stories.ts`.
 - Controller is ESM: relative imports need the `.js` extension.
 - Spec files are excluded from `tsc`, so tests are not typechecked.
+- UI components import only **types** from `@drguptavivek/emr-controller`. `check:ssr` loads the built
+  FESM with the controller unresolvable, so a runtime import there fails with `ERR_MODULE_NOT_FOUND`.
+  Pure helpers a component needs at runtime live in a UI-side `*.logic.ts` file.
 - Anything serialized must be an enumerable own property. A symbol-keyed or non-enumerable
   field survives an in-memory round trip and vanishes through `JSON.stringify`.

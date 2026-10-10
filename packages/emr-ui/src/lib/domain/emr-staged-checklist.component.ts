@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
+import { EmrStageStepperComponent } from '../primitives/emr-stage-stepper.component';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { heroCheckCircle } from '@ng-icons/heroicons/outline';
 import type { ChecklistItemDefinition, ChecklistItemState, StagedChecklistIntent, StagedChecklistViewModel } from '@drguptavivek/emr-controller';
@@ -6,7 +7,7 @@ import type { ChecklistItemDefinition, ChecklistItemState, StagedChecklistIntent
 @Component({
   selector: 'emr-staged-checklist',
   standalone: true,
-  imports: [NgIcon],
+  imports: [NgIcon, EmrStageStepperComponent],
   providers: [...provideIcons({ heroCheckCircle })],
   template: `
     <section class="emr-staged-checklist" [attr.aria-labelledby]="headingId()">
@@ -19,18 +20,9 @@ import type { ChecklistItemDefinition, ChecklistItemState, StagedChecklistIntent
         @if (model.readOnly) { <span class="emr-staged-checklist__state">Read only</span> }
       </header>
 
-      <nav class="emr-staged-checklist__phases" aria-label="Checklist phases">
-        @for (phase of model.schema.phases; track phase.id; let index = $index) {
-          <button type="button" class="emr-staged-checklist__phase"
-            [class.emr-staged-checklist__phase--active]="phase.id === model.activePhaseId"
-            [attr.aria-current]="phase.id === model.activePhaseId ? 'step' : null"
-            (click)="emit({ type: 'phaseSelected', phaseId: phase.id })">
-            <span class="emr-staged-checklist__phase-number">{{ index + 1 }}</span>
-            <span>{{ phase.label }}</span>
-            @if (model.phaseStatuses?.[phase.id]; as status) { <span class="emr-staged-checklist__status" [attr.data-tone]="status.tone">{{ status.label }}</span> }
-          </button>
-        }
-      </nav>
+      <emr-stage-stepper class="emr-staged-checklist__phases" ariaLabel="Checklist phases"
+        [stages]="stages()" [activeId]="model.activePhaseId"
+        (stageSelected)="emit({ type: 'phaseSelected', phaseId: $event })" />
 
       @if (activePhase(); as phase) {
         <div class="emr-staged-checklist__body">
@@ -65,18 +57,14 @@ import type { ChecklistItemDefinition, ChecklistItemState, StagedChecklistIntent
     .emr-staged-checklist { background: var(--emr-surface); border: 1px solid var(--emr-border); border-radius: 12px; overflow: hidden; }
     .emr-staged-checklist__header, .emr-staged-checklist__phase-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 20px 24px; }
     h2, h3, p { margin: 0; } h2, h3 { color: var(--emr-text); } p { color: var(--emr-text-muted); margin-top: 4px; }
-    .emr-staged-checklist__state, .emr-staged-checklist__status { border-radius: 999px; padding: 4px 9px; font-size:var(--emr-text-xs); background: var(--emr-surface-soft); color: var(--emr-text); }
-    .emr-staged-checklist__phases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--emr-border); background: var(--emr-surface-slate); }
-    .emr-staged-checklist__phase { min-height: 56px; padding: 10px 14px; display: flex; align-items: center; gap: 8px; border: 0; border-inline-end: 1px solid var(--emr-border); background: transparent; color: var(--emr-text); font: inherit; text-align: start; cursor: pointer; }
+    .emr-staged-checklist__state { border-radius: 999px; padding: 4px 9px; font-size:var(--emr-text-xs); background: var(--emr-surface-soft); color: var(--emr-text); }
     .emr-staged-checklist__phase:last-child { border-inline-end: 0; } .emr-staged-checklist__phase--active { background: var(--emr-surface-accent); color: var(--emr-primary); box-shadow: inset 0 -3px var(--emr-primary); }
-    .emr-staged-checklist__phase-number { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: var(--emr-neutral-soft); font-weight: 700; }
-    .emr-staged-checklist__status { margin-inline-start: auto; } .emr-staged-checklist__status[data-tone="danger"] { background: var(--emr-danger-soft); color: var(--emr-danger); }
     .emr-staged-checklist__body { padding-bottom: 20px; } .emr-staged-checklist__item { margin: 0 24px; padding: 16px 0; border-bottom: 1px solid var(--emr-border); } .emr-staged-checklist__item--disabled { color: var(--emr-text-muted); } /* not opacity: fading text below 4.5:1 fails contrast */
     .emr-staged-checklist__signoff { margin: 0 24px 8px; padding: 10px 12px; border-radius: 8px; background: var(--emr-success-soft); color: var(--emr-text); }
     .emr-staged-checklist__control, fieldset, .emr-staged-checklist__field { display: flex; gap: 10px; align-items: center; } fieldset { border: 0; padding: 0; margin: 0; flex-wrap: wrap; } legend { font-weight: 650; flex-basis: 100%; margin-bottom: 8px; }
     .emr-staged-checklist__field { align-items: stretch; flex-direction: column; } .emr-staged-checklist__field span { font-weight: 650; } input, select, textarea { min-height: 44px; border: 1px solid var(--emr-border); border-radius: 8px; padding: 9px 11px; font: inherit; color: inherit; background: var(--emr-surface); } textarea { min-height: 72px; resize: vertical; }
     .emr-staged-checklist__description { font-size:var(--emr-text-md); margin-inline-start: 28px; } .emr-staged-checklist__error { color: var(--emr-danger); font-size:var(--emr-text-md); } :focus-visible { outline: 3px solid var(--emr-focus); outline-offset: 2px; }
-    @media (max-width: 640px) { .emr-staged-checklist__header, .emr-staged-checklist__phase-heading { flex-direction: column; } .emr-staged-checklist__phases { grid-template-columns: 1fr; } .emr-staged-checklist__phase { border-inline-end: 0; border-bottom: 1px solid var(--emr-border); } .emr-button { width: 100%; } }
+    @media (max-width: 640px) { .emr-staged-checklist__header, .emr-staged-checklist__phase-heading { flex-direction: column; } .emr-button { width: 100%; } }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
@@ -85,6 +73,7 @@ export class EmrStagedChecklistComponent {
   @Input({ required: true }) model!: StagedChecklistViewModel;
   @Output() readonly intent = new EventEmitter<StagedChecklistIntent>();
   readonly yesNoNa = ['yes', 'no', 'na'];
+  stages() { return this.model.schema.phases.map(phase => ({ id: phase.id, label: phase.label, status: this.model.phaseStatuses?.[phase.id] })); }
   headingId(): string { return `emr-staged-checklist-${this.model.schema.id}-heading`; }
   activePhase() { return this.model?.schema.phases.find(phase => phase.id === this.model.activePhaseId); }
   itemState(item: ChecklistItemDefinition): ChecklistItemState { return this.model.items[item.id] ?? { value: null }; }

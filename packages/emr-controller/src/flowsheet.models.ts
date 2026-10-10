@@ -1,4 +1,4 @@
-import type { ClinicalAssessmentStatus, EmrBadge } from './models.js';
+import type { ClinicalAssessmentStatus, ClinicalColumnGroup, EmrBadge } from './models.js';
 import type { EmrNodePath } from './node-path.js';
 
 /** A time column (an observation time, a shift, a day). Every label is controller-supplied. */
@@ -42,6 +42,8 @@ export interface FlowsheetViewModel {
   readonly groups?: readonly { readonly id: string; readonly label: string }[];
   readonly rows: readonly FlowsheetRow[];
   readonly columns: readonly FlowsheetColumn[];
+  /** Header blocks over runs of columns (e.g. Ventilator, Haemodynamics). Same shape as the matrix. */
+  readonly columnGroups?: readonly ClinicalColumnGroup[];
   /** rowId -> columnId -> cell. A missing cell renders "Not supplied". */
   readonly cells: FlowsheetCellMap;
   /** Totals and balances. The controller computes them; the component only lays them out. */

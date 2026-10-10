@@ -22,15 +22,21 @@ const high = { label: 'High', tone: 'danger' as const, assistiveText: 'above the
 const pt = (id: string, x: number, y: number, xLabel: string, unit: string, flag?: TrendPoint['flag']): TrendPoint =>
   ({ id, x, y, xLabel, valueLabel: `${y} ${unit}`, flag });
 
-const render = (model: ObservationTrendViewModel) => ({
+const render = (model: ObservationTrendViewModel, dark = false) => ({
   props: {
     model,
     onIntent(e: ObservationTrendIntent) {
       const host = this as { model: ObservationTrendViewModel };
       if (e.type === 'pointSelected') host.model = { ...host.model, selectedPointId: e.pointId };
+      // Story stand-in for the controller: it only moves the selection; a real controller would refetch and re-tick the x axis.
+      if (e.type === 'granularityChangeRequested') {
+        host.model = { ...host.model, granularityOptions: host.model.granularityOptions?.map((g) => ({ ...g, selected: g.id === e.granularityId })) };
+      }
     }
   },
-  template: `<div class="emr-story-surface"><div style="max-width: 760px"><emr-observation-trend [model]="model" (intent)="onIntent($event)" /></div></div>`
+  template: dark
+    ? `<div class="emr-theme-dark" style="padding:16px;background:var(--emr-surface)"><div style="max-width: 760px"><emr-observation-trend [model]="model" (intent)="onIntent($event)" /></div></div>`
+    : `<div class="emr-story-surface"><div style="max-width: 760px"><emr-observation-trend [model]="model" (intent)="onIntent($event)" /></div></div>`
 });
 
 // ---- Blood pressure -----------------------------------------------------
@@ -122,3 +128,138 @@ export const DenseSeries: Story = {
 };
 
 export const Mobile: Story = { parameters: { viewport: { defaultViewport: 'mobile1' } }, render: () => render(bp) };
+
+// ---- Inpatient: open-ended and danger bands -----------------------------
+const low = { label: 'Low', tone: 'danger' as const, assistiveText: 'below the safe range' };
+const hours = (n: number, step: number) => Array.from({ length: n }, (_, i) => `${String((6 + i * step) % 24).padStart(2, '0')}:00`);
+const kLabels = ['Day 1 06:00', 'Day 1 18:00', 'Day 2 06:00', 'Day 2 18:00', 'Day 3 06:00', 'Day 3 18:00', 'Day 4 06:00'];
+const kVals = [2.8, 3.1, 3.6, 4.2, 5.4, 6.3, 4.8];
+const potassium: ObservationTrendViewModel = {
+  id: 'k', title: 'Serum potassium, 4 days', yLabel: 'mmol/L', yMin: 2, yMax: 7.5, xMin: 0, xMax: 6,
+  xTicks: kLabels.map((label, x) => ({ x, label: label.replace(' 06:00', '') })).filter((_, i) => i % 2 === 0),
+  yTicks: [2, 3, 4, 5, 6, 7].map((y) => ({ y, label: String(y) })),
+  series: [{
+    id: 'k', label: 'Potassium', tone: 'info', unitLabel: 'mmol/L',
+    points: kVals.map((y, i) => pt(`k${i}`, i, y, kLabels[i], 'mmol/L', y < 3.0 ? low : y > 6.0 ? high : undefined))
+  }],
+  bands: [
+    { id: 'klo', label: 'Danger, below 3.0', yTo: 3.0, tone: 'danger', pattern: 'hatched', edgeLabel: '3.0 mmol/L' },
+    { id: 'ksafe', label: 'Safe range 3.5 to 5.0', yFrom: 3.5, yTo: 5.0, tone: 'success', edgeLabel: '5.0 mmol/L' },
+    { id: 'khi', label: 'Danger, above 6.0', yFrom: 6.0, tone: 'danger', pattern: 'hatched', edgeLabel: '6.0 mmol/L' }
+  ],
+  summaryText: 'Potassium was low at 2.8 mmol/L on admission, reached the safe range by day 2, rose to 6.3 mmol/L on the evening of day 3 and was back to 4.8 mmol/L on day 4.',
+  emptyMessage: 'No potassium results.'
+};
+export const SerumPotassiumWithRanges: Story = { render: () => render(potassium) };
+
+const spoT = hours(12, 2);
+const spo = [97, 96, 95, 93, 91, 92, 94, 95, 96, 96, 97, 97];
+export const Spo2LowerBoundOnly: Story = {
+  render: () => render({
+    id: 'spo2', title: 'Oxygen saturation, 24 hours', yLabel: 'SpO2 %', yMin: 85, yMax: 100, xMin: 0, xMax: 11,
+    xTicks: spoT.map((label, x) => ({ x, label })).filter((_, i) => i % 3 === 0), yTicks: [85, 90, 95, 100].map((y) => ({ y, label: String(y) })),
+    series: [{ id: 'spo2', label: 'SpO2', tone: 'info', points: spo.map((y, i) => pt(`o${i}`, i, y, spoT[i], '%', y < 94 ? { label: 'Low', tone: 'warning', assistiveText: 'below the target' } : undefined)) }],
+    bands: [{ id: 'tgt', label: 'Target 94 % and above', yFrom: 94, tone: 'success', edgeLabel: '94 %' }],
+    summaryText: 'Saturation dipped below the 94 percent target between 12:00 and 16:00, lowest 91 percent, and recovered to 97 percent by the next morning.',
+    emptyMessage: 'No saturation readings.'
+  })
+};
+
+const crDays = ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'];
+const cr = [88, 96, 124, 141, 118, 97];
+export const CreatinineUpperBoundOnly: Story = {
+  render: () => render({
+    id: 'cr', title: 'Serum creatinine, 6 days', yLabel: 'µmol/L', yMin: 40, yMax: 180, xMin: 0, xMax: 5,
+    xTicks: crDays.map((label, x) => ({ x, label })), yTicks: [40, 80, 120, 160].map((y) => ({ y, label: String(y) })),
+    series: [{ id: 'cr', label: 'Creatinine', tone: 'warning', points: cr.map((y, i) => pt(`c${i}`, i, y, crDays[i], 'µmol/L', y > 110 ? high : undefined)) }],
+    bands: [{ id: 'ref', label: 'Reference, up to 110', yTo: 110, tone: 'success', edgeLabel: '110 µmol/L' }],
+    summaryText: 'Creatinine rose from 88 to a peak of 141 micromol per litre on day 4 and fell back to 97 by day 6.',
+    emptyMessage: 'No creatinine results.'
+  })
+};
+
+// ---- Dual axis ------------------------------------------------------------
+const vT = hours(9, 3);
+const hr = [78, 82, 96, 112, 118, 104, 92, 86, 80];
+const sbp = [124, 120, 108, 96, 88, 98, 110, 118, 122];
+export const DualAxisHeartRateAndBloodPressure: Story = {
+  render: () => render({
+    id: 'hrbp', title: 'Heart rate and systolic pressure, 24 hours', yLabel: 'beats/min', yMin: 40, yMax: 140, xMin: 0, xMax: 8,
+    xTicks: vT.map((label, x) => ({ x, label })).filter((_, i) => i % 2 === 0), yTicks: [40, 60, 80, 100, 120, 140].map((y) => ({ y, label: String(y) })),
+    secondaryAxis: { yLabel: 'mmHg', yMin: 60, yMax: 180, yTicks: [60, 90, 120, 150, 180].map((y) => ({ y, label: String(y) })) },
+    series: [
+      { id: 'hr', label: 'Heart rate', tone: 'danger', unitLabel: 'beats/min', points: hr.map((y, i) => pt(`hr${i}`, i, y, vT[i], 'beats/min', y > 110 ? high : undefined)) },
+      { id: 'sbp', label: 'Systolic pressure', tone: 'info', dashed: true, axis: 'secondary', unitLabel: 'mmHg', points: sbp.map((y, i) => pt(`bp${i}`, i, y, vT[i], 'mmHg', y < 90 ? low : undefined)) }
+    ],
+    bands: [{ id: 'sbplo', label: 'Systolic below 90', yTo: 90, axis: 'secondary', tone: 'danger', pattern: 'hatched', edgeLabel: '90 mmHg' }],
+    summaryText: 'Heart rate rose to 118 beats per minute at 18:00 while systolic pressure fell to 88 mmHg; both returned toward baseline by the next morning.',
+    emptyMessage: 'No vital signs recorded.'
+  })
+};
+
+const gT = hours(8, 3);
+const glucose = [14.2, 12.8, 10.9, 9.4, 8.1, 7.6, 7.9, 8.4];
+const insulin = [6, 5, 4, 3, 2, 2, 2, 2];
+export const DualAxisGlucoseAndInsulin: Story = {
+  render: () => render({
+    id: 'gi', title: 'Capillary glucose and insulin infusion rate', yLabel: 'mmol/L', yMin: 0, yMax: 20, xMin: 0, xMax: 7,
+    xTicks: gT.map((label, x) => ({ x, label })).filter((_, i) => i % 2 === 0), yTicks: [0, 5, 10, 15, 20].map((y) => ({ y, label: String(y) })),
+    secondaryAxis: { yLabel: 'units/hour', yMin: 0, yMax: 10, yTicks: [0, 2, 4, 6, 8, 10].map((y) => ({ y, label: String(y) })) },
+    series: [
+      { id: 'glu', label: 'Glucose', tone: 'warning', unitLabel: 'mmol/L', points: glucose.map((y, i) => pt(`g${i}`, i, y, gT[i], 'mmol/L', y > 10 ? high : undefined)) },
+      { id: 'ins', label: 'Insulin rate', tone: 'info', dashed: true, axis: 'secondary', unitLabel: 'units/hour', points: insulin.map((y, i) => pt(`i${i}`, i, y, gT[i], 'units/hour')) }
+    ],
+    bands: [{ id: 'gtgt', label: 'Glucose target 6 to 10', yFrom: 6, yTo: 10, tone: 'success' }],
+    summaryText: 'Glucose fell from 14.2 to 7.6 mmol/L over 15 hours as the insulin rate was stepped down from 6 to 2 units per hour.',
+    emptyMessage: 'No glucose readings.'
+  })
+};
+
+// ---- Granularity ----------------------------------------------------------
+const hT = Array.from({ length: 24 }, (_, i) => `${String(i).padStart(2, '0')}:00`);
+const hourlyHr = hT.map((_, i) => 74 + Math.round(10 * Math.sin(i / 4)));
+export const HourlyGranularity: Story = {
+  render: () => render({
+    id: 'hourly', title: 'Heart rate, today', yLabel: 'beats/min', yMin: 50, yMax: 100, xMin: 0, xMax: 23, xGranularityLabel: 'Hourly',
+    xTicks: [0, 6, 12, 18, 23].map((x) => ({ x, label: hT[x] })), xMinorTicks: hT.map((_, x) => ({ x })).filter((t) => t.x % 6 !== 0 && t.x !== 23),
+    yTicks: [50, 60, 70, 80, 90, 100].map((y) => ({ y, label: String(y) })),
+    series: [{ id: 'hr', label: 'Heart rate', tone: 'danger', points: hourlyHr.map((y, i) => pt(`hh${i}`, i, y, hT[i], 'beats/min')) }],
+    summaryText: 'Hourly heart rate stayed between 64 and 84 beats per minute today.',
+    emptyMessage: 'No readings today.'
+  })
+};
+
+const weeks = Array.from({ length: 12 }, (_, i) => `Week ${i + 1}`);
+const weight = [82.4, 82.1, 81.6, 81.8, 81.0, 80.6, 80.2, 80.4, 79.8, 79.5, 79.1, 78.8];
+export const WeeklyGranularityWithSelector: Story = {
+  render: () => render({
+    id: 'weekly', title: 'Body weight, 12 weeks', yLabel: 'kg', yMin: 76, yMax: 84, xMin: 0, xMax: 11, xGranularityLabel: 'Weekly',
+    granularityOptions: [{ id: 'day', label: 'Daily' }, { id: 'week', label: 'Weekly', selected: true }, { id: 'month', label: 'Monthly' }],
+    xTicks: [0, 3, 7, 11].map((x) => ({ x, label: weeks[x] })), xMinorTicks: weeks.map((_, x) => ({ x })).filter((t) => ![0, 3, 7, 11].includes(t.x)),
+    yTicks: [76, 78, 80, 82, 84].map((y) => ({ y, label: String(y) })),
+    series: [{ id: 'wt', label: 'Weight', tone: 'info', points: weight.map((y, i) => pt(`wk${i}`, i, y, weeks[i], 'kg')) }],
+    summaryText: 'Weight fell steadily from 82.4 to 78.8 kg over 12 weeks.',
+    emptyMessage: 'No weights recorded.'
+  })
+};
+
+// ---- Theming and legend stress --------------------------------------------
+export const HatchedBandsDark: Story = { render: () => render(potassium, true) };
+
+export const LongLegend: Story = {
+  render: () => render({
+    ...potassium,
+    id: 'long', title: 'Electrolytes with long legend labels',
+    series: [
+      potassium.series[0],
+      { id: 'k2', label: 'Potassium, point-of-care venous blood gas analyser (ward 7 critical care)', tone: 'neutral', dashed: true, unitLabel: 'mmol/L',
+        points: kVals.map((y, i) => pt(`kv${i}`, i, +(y + 0.2).toFixed(1), kLabels[i], 'mmol/L')) },
+      { id: 'k3', label: 'Potassium, repeat laboratory sample after haemolysis flag on the first draw', tone: 'warning', unitLabel: 'mmol/L',
+        points: [3.0, 3.3, 3.7, 4.1, 5.1, 5.9, 4.6].map((y, i) => pt(`kr${i}`, i, y, kLabels[i], 'mmol/L')) }
+    ],
+    bands: [
+      ...(potassium.bands ?? []),
+      { id: 'note', label: 'Hold supplementation and repeat in 2 hours when the result lies in this band (local protocol, synthetic)', yFrom: 5.0, yTo: 6.0, tone: 'warning', pattern: 'hatched' }
+    ]
+  })
+};

@@ -410,6 +410,66 @@ export class EmrClinicalCellRendererDirective {
 
 ---
 
+### EmrTimeAxis
+**Layer** L3 · **Selector** `emr-time-axis` · **Status** stable · **Story** `emr-observations-time-axis--hourly`
+
+**Need** — Inpatient charts (MAR, ICU hourly chart, anaesthesia record, fluid balance) read across time. Clinicians need one shared time scale with an unmistakable "now", that they can step earlier or later and switch between hourly and 15 minute views, and that lines up with the grid or trend beneath it.
+
+**Purpose** — A generic horizontal tick strip with no clinical meaning. Renders a header (title, step as text or a step chooser, Earlier and Later buttons) and a horizontally scrollable row of fixed-width ticks. Each tick shows its label and optional sublabel; the current tick carries the word "Current" and `aria-current="time"` as well as a left bar and tint; the selected tick has a 2px inset border and `aria-selected`. Tick width is `var(--emr-time-axis-col, 5.5rem)` (the flowsheet's column width) and the strip starts after `var(--emr-time-axis-lead, 0px)`, so a consumer can stack a flowsheet or trend underneath and align them. The controller supplies every label, the window of ticks and whether shifting is possible; the component never computes a time. Keyboard: the strip is a horizontal `listbox` with one tab stop (roving tabindex: last focused, else selected, else current, else first); Arrow Left/Right, Home and End move focus only; Enter, Space or click emits `tickSelected`. When `readOnly`, ticks render as a plain ordered list in a focusable scroll region with no buttons or chooser. Print hides the controls and lets the strip overflow.
+
+**API**
+```ts
+export interface TimeAxisTick { id: string; label: string; sublabel?: string; current?: boolean }
+export interface TimeAxisStep { id: string; label: string }
+export interface TimeAxisViewModel {
+  id: string; title?: string; ticks: readonly TimeAxisTick[]; selectedTickId?: string;
+  stepLabel?: string; steps?: readonly TimeAxisStep[]; selectedStepId?: string;
+  canShiftEarlier?: boolean; canShiftLater?: boolean; readOnly?: boolean;
+}
+export type TimeAxisIntent =
+  | { type: 'tickSelected'; tickId: string }
+  | { type: 'shiftEarlierRequested' }
+  | { type: 'shiftLaterRequested' }
+  | { type: 'stepChangeRequested'; stepId: string };
+
+export class EmrTimeAxisComponent {
+  readonly model = input.required<TimeAxisViewModel>();
+  readonly headingId = input<string>();
+  readonly intent = output<TimeAxisIntent>();
+}
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| `model` | `TimeAxisViewModel` (required) | — | ticks, labels, current tick, step and shift availability are controller-supplied |
+| `headingId` | `string` | generated | id of the title heading (visually hidden "Time axis" when `title` is absent), used for `aria-labelledby` |
+| `intent` (output) | `TimeAxisIntent` | — | `tickSelected`, `shiftEarlierRequested`, `shiftLaterRequested`, `stepChangeRequested` |
+| `--emr-time-axis-col` (CSS) | length | `5.5rem` | width of each tick; match the column width of the grid below |
+| `--emr-time-axis-lead` (CSS) | length | `0px` | gutter before the first tick; match the row-header column of the grid below |
+
+**Example**
+```html
+<div style="--emr-time-axis-lead: 8.5rem">
+  <emr-time-axis [model]="axisModel" (intent)="onAxisIntent($event)" />
+  <emr-observation-flowsheet [model]="flowsheetModel" (intent)="onFlowsheetIntent($event)" />
+</div>
+```
+
+**Known gaps**
+- Alignment is nominal: it holds while no flowsheet cell's content is wider than the column and the flowsheet's row-header column is at its 8.5rem minimum (6.5rem under 480px). The flowsheet table also stretches its columns when they do not fill the container.
+- The axis and the flowsheet scroll independently; to keep them together the host wraps both in one scroller (`width:max-content` inside `overflow-x:auto`, as in `emr-observations-flowsheet--with-time-axis`), which disables the flowsheet's sticky row headers.
+- Arrow keys stop at the first and last tick; they do not request a shift. Selection does not follow focus.
+- Print hides the Earlier/Later buttons only; the step text or selected step still prints.
+- Earlier/Later are native disabled buttons when `canShiftEarlier`/`canShiftLater` are not true; they are hidden when `readOnly`.
+
+**Depends on** — none (uses the shared `emr-button`, `emr-select` and `emr-sr-only` classes).
+
+**Used by** — none yet (stacked above `EmrObservationFlowsheet` in `emr-observations-flowsheet--with-time-axis`).
+
+---
+
 ### EmrAnnotationToolbar
 **Layer** L3 · **Selector** `emr-annotation-toolbar` · **Status** stable · **Story** `emr-annotation-toolbar--all-tools`
 
@@ -446,6 +506,7 @@ export class EmrAnnotationToolbarComponent {
 | name | type | default | notes |
 |---|---|---|---|
 | `model` | `AnnotationToolbarViewModel` (required) | — | tools, colours, widths, enabled flags and zoom text, all supplied |
+| `model.zoomLocked` | `boolean` | `false` | disables the four zoom buttons and removes them from the roving focus order (set by a canvas while pan/zoom is locked) |
 | `headingId` | `string` | none | id of a visible label; otherwise the toolbar is named "Annotation tools" |
 | `intent` (output) | `EventEmitter<AnnotationToolbarIntent>` | — | one intent per button |
 
@@ -472,12 +533,12 @@ export class EmrAnnotationToolbarComponent {
 
 **Need** — A drawing with many marks needs a compact way to see, select and manage each one by number, without opening a large layer panel.
 
-**Purpose** — A tight numbered `<ol>` of annotation layers (`AnnotationLayerRecord`). Each row, 44px high, shows the number, colour swatch, label, optional class and description, tool glyph and a lock marker, with icon buttons to hide/show, lock, move up/down and delete. The selected row follows `selectedLayerId` and carries `aria-current`, a side bar and bold text; hidden rows are italic with a dashed swatch and an eye-slash icon. Visibility and lock buttons use `aria-pressed`. Rows are arrow-key navigable and only the active row's buttons are in the Tab order, so 50 rows are not 300 tab stops. The list holds no order, numbering, visibility or lock state; it only emits intents. Up is disabled on the first row and down on the last. In `readOnly` mode lock, reorder and delete are hidden and selecting and hiding stay available.
+**Purpose** — A tight numbered `<ol>` of annotation layers (`AnnotationLayerRecord`). Each row is one 44px line: number, colour swatch, the annotation (its class plus the mark's own label or typed text, truncating with a tooltip), a tool icon drawn with the toolbar's `shape-*` glyphs (never the tool name as words), then icon-only eye and delete buttons; reorder up/down shows only on the selected row, and lock only when `canLock` is set. The selected row follows `selectedLayerId` and carries `aria-current`, a side bar and bold text; hidden rows are italic with a dashed swatch and an eye-slash icon. Visibility and lock buttons use `aria-pressed`. Rows are arrow-key navigable and only the active row's buttons are in the Tab order, so 50 rows are not 300 tab stops. The list holds no order, numbering, visibility or lock state; it only emits intents. Up is disabled on the first row and down on the last. In `readOnly` mode (the canvas's compact legend) every row action is hidden and selecting stays available.
 
 **API**
 ```ts
 export interface AnnotationListItem { readonly layer: AnnotationLayerRecord; readonly number: number; readonly classLabel?: string; readonly locked?: boolean; readonly description?: string }
-export interface AnnotationListViewModel { readonly items: readonly AnnotationListItem[]; readonly selectedLayerId?: string; readonly emptyMessage: string; readonly readOnly?: boolean }
+export interface AnnotationListViewModel { readonly items: readonly AnnotationListItem[]; readonly selectedLayerId?: string; readonly emptyMessage: string; readonly readOnly?: boolean; readonly canLock?: boolean }
 export type AnnotationListIntent =
   | { type: 'layerSelected'; layerId: string } | { type: 'layerVisibilityToggleRequested'; layerId: string }
   | { type: 'layerLockToggleRequested'; layerId: string } | { type: 'layerMoveRequested'; layerId: string; direction: 'up' | 'down' }
@@ -495,6 +556,7 @@ export class EmrAnnotationListComponent {
 | name | type | default | notes |
 |---|---|---|---|
 | `model` | `AnnotationListViewModel` (required) | — | items, selection, empty text, read-only flag |
+| `model.canLock` | `boolean` | `false` | shows the lock button; hidden by default because lock means nothing until marks can be moved |
 | `headingId` | `string` | none | id of a visible label; otherwise the list is named "Annotations" |
 | `intent` (output) | `EventEmitter<AnnotationListIntent>` | — | select, visibility, lock, move, remove |
 
@@ -513,3 +575,65 @@ export class EmrAnnotationListComponent {
 **Depends on** — `NgIcon` (heroicons outline).
 
 **Used by** — none yet (the clinical annotation canvas will adopt it).
+
+---
+
+### EmrImageTemplatePicker
+**Layer** L3 · **Selector** `emr-image-template-picker` · **Status** stable · **Story** `emr-annotation-template-gallery--anatomy-gallery`
+
+**Need** — Choosing one of 105 anatomy outlines (or an uploaded photo) from a long dropdown is slow and error-prone: names alone do not show what the picture is, and left/right variants look alike in a list. A clinician needs to see the thumbnails, find them by name, side or view, and keep the few they use daily at the top.
+
+**Purpose** — A generic gallery picker with no clinical meaning. Renders a header (title, result count, close button), a search box, a wrapping row of group chips (Favourites, All, then each group with its count) and a responsive grid of square thumbnail tiles. Thumbnails use `object-fit: contain` on a neutral surface so varied aspect ratios are never cropped. Each tile shows its label (two lines, ellipsis, full text in a tooltip) and badge chips (for example side and view). The selected tile has a check icon, a thicker border and `aria-pressed`. Favourites render in a pinned section at the top in the controller-supplied order and are not repeated in the main section; each tile has a separate star toggle (not nested in the tile button) when `canEditFavourites` is set. The controller owns the catalogue, the filtering (use the pure `filterImageTemplates` helper), the favourites, their persistence and the selection; the component only renders and emits intents. Keyboard: arrow keys, Home and End move between tiles (roving tab stop; the active tile's star is the next tab stop), Enter or Space selects, Escape asks to close. Hidden in print (an editing surface).
+
+**API**
+```ts
+export interface ImageTemplateOption { id: string; label: string; imageUrl: string; width: number; height: number; altText?: string; groupId?: string; badges?: readonly string[] }
+export interface ImageTemplateGroup { id: string; label: string; count?: number }
+export const FAVOURITES_GROUP_ID = 'favourites';
+export interface ImageTemplatePickerViewModel {
+  title: string; options: readonly ImageTemplateOption[]; groups: readonly ImageTemplateGroup[];
+  selectedGroupId?: string; query: string; selectedId?: string; totalLabel?: string; emptyMessage: string;
+  readOnly?: boolean; favouriteIds?: readonly string[]; canEditFavourites?: boolean;
+}
+export type ImageTemplatePickerIntent =
+  | { type: 'queryChangeRequested'; query: string }
+  | { type: 'groupSelected'; groupId: string | null }
+  | { type: 'templateSelected'; templateId: string }
+  | { type: 'favouriteToggleRequested'; templateId: string; favourite: boolean }
+  | { type: 'closeRequested' };
+export function filterImageTemplates(options, query, groupId?, groups?, favouriteIds?): readonly ImageTemplateOption[];
+
+export class EmrImageTemplatePickerComponent {
+  @Input({ required: true }) model!: ImageTemplatePickerViewModel;
+  @Input() headingId?: string;
+  @Output() readonly intent = new EventEmitter<ImageTemplatePickerIntent>();
+}
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| `model` | `ImageTemplatePickerViewModel` (required) | — | options are already filtered; labels, counts and favourites are controller-supplied |
+| `headingId` | `string` | generated | id of the title heading, used for `aria-labelledby` |
+| `intent` (output) | `EventEmitter<ImageTemplatePickerIntent>` | — | `queryChangeRequested`, `groupSelected` (`null` = All, `'favourites'` = favourites), `templateSelected`, `favouriteToggleRequested`, `closeRequested` |
+
+**Example**
+```html
+<emr-image-template-picker [model]="pickerModel" (intent)="onPickerIntent($event)" />
+```
+```ts
+const options = filterImageTemplates(all, query, groupId, groups, favouriteIds);
+```
+
+**Known gaps**
+- Filtering is not done by the component: the host must pass already-filtered `options` (`filterImageTemplates` is the shared helper). The `'favourites'` group shows favourites in `favouriteIds` order.
+- Group chips are 44px tall and wrap; the row scrolls vertically inside its own region after three rows rather than growing without limit.
+- No virtualisation: very large catalogues render every tile (thumbnails are lazy-loaded).
+- Vertical arrow keys between the Favourites and main sections map by column position, which is approximate when the favourites row is short.
+- Hidden in print; it never prints the selected item (the host prints the chosen image elsewhere).
+- Favourite starring is hidden when `readOnly`; browsing, searching and filtering still work.
+
+**Depends on** — none (uses `NgIcon` and the shared `emr-icon-button`, `emr-search-input`, `emr-button`, `emr-empty`, `emr-sr-only` classes).
+
+**Used by** — none yet (intended as the background chooser for the clinical annotation canvas).
