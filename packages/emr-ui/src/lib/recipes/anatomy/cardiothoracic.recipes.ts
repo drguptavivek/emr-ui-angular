@@ -19,7 +19,7 @@ export const CARDIOTHORACIC_RECIPES: readonly AnatomyTemplateRecipe[] = [
   {
     id: 'lungs-airway-overlay', version: 1, group: 'cardiothoracic', label: 'Lungs with airway overlay', region: 'chest', view: 'anterior',
     laterality: 'bilateral', asset: 'cardiothoracic/lungs-airway-overlay.svg', width: 1900, height: 1200, provenance,
-    description: 'Both lungs with dashed fissures and the bronchial tree to lobar level drawn inside, with the hila, visceral pleura and parietal pleura outline. Patient right on the viewer left.',
+    description: 'Anterior view of both lungs: right oblique and horizontal fissures (RUL, RML, RLL) and left oblique fissure (LUL with lingula, LLL); right dome higher than left; cardiac notch with the lingula; costophrenic angles. The trachea, carina, main and lobar bronchi and their first segmental branches are drawn near the hila only, with the hila marked. A light cardiac silhouette in the mediastinal gap marks the heart borders, with a thin parietal pleura outline and costophrenic recess. The peripheral lung fields are left clear for lesion and bronchus annotation. Patient right on the viewer left.',
   },
   {
     id: 'heart-great-vessels-anterior', version: 1, group: 'cardiothoracic', label: 'Heart and great vessels — anterior', region: 'chest', view: 'anterior',
