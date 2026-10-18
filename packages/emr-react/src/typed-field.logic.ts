@@ -1,4 +1,5 @@
 import type { ClinicalFieldState, ClinicalFieldValue, ClinicalFormSection, ClinicalQuantityValue } from '@drguptavivek/emr-controller';
+import { isEmptyValue } from '@drguptavivek/emr-controller';
 
 /**
  * Number drafts: the user types "-" or "1." on the way to a number. Those are kept as local
@@ -42,9 +43,8 @@ export function toggled(values: ClinicalFieldValue | undefined, value: string): 
 
 /** A hidden field is skipped only while empty: a hidden field that still holds a value is clinical data and stays visible. */
 export function isFieldShown(state: { hidden?: boolean; value: ClinicalFieldValue } | undefined): boolean {
-  if (!state?.hidden) return true;
-  const v = state.value;
-  return !(v === null || v === '' || (Array.isArray(v) && v.length === 0));
+  // Same emptiness rule as the engine (resolveLogic), so "cleared" and "hidden" always agree.
+  return !state?.hidden || !isEmptyValue(state.value);
 }
 
 /**

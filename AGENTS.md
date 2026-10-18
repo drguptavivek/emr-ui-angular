@@ -10,6 +10,8 @@ EMR component library. Three packages, no app. **Not released — break APIs fre
   @drguptavivek/emr-react harness:expo --android` opens it in Expo Go on a booted emulator.
   Both harnesses render `harness/harness-form.tsx`; screens own keyboard avoidance (edge-to-edge).
 - `@drguptavivek/emr-controller` — framework-neutral models, ports, headless controllers
+  (and the form condition engine: `condition.*`, `form-logic.ts`, `engine-version.ts`). emr-react may import it at
+  runtime; emr-ui (Angular) still imports types only.
 
 ## The one rule
 
