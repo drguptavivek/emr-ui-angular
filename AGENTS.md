@@ -6,6 +6,9 @@ EMR component library. Three packages, no app. **Not released — break APIs fre
 - `@drguptavivek/emr-react` — React Native components (Expo, and web via react-native-web). Same
   view models and intents as emr-ui; tokens generated from `emr.css` (`pnpm --filter
   @drguptavivek/emr-react tokens`). Next.js harness: `harness/next` (launch config `emr-react-next`).
+  Expo harness (SDK 58, RN 0.88, React 19.3): `pnpm build:controller`, then `pnpm --filter
+  @drguptavivek/emr-react harness:expo --android` opens it in Expo Go on a booted emulator.
+  Both harnesses render `harness/harness-form.tsx`; screens own keyboard avoidance (edge-to-edge).
 - `@drguptavivek/emr-controller` — framework-neutral models, ports, headless controllers
 
 ## The one rule

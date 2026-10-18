@@ -8,7 +8,10 @@ import type {
   ClinicalFieldState,
   ClinicalFieldValue,
 } from '@drguptavivek/emr-controller';
-import { EmrBadgeView, EmrOptionChip, EmrRow } from './primitives';
+import { EmrBadgeView, EmrOptionChip, EmrRow, EmrSelect } from './primitives';
+
+/** Selects with more options than this render as a dropdown instead of chips. */
+const DROPDOWN_ABOVE = 6;
 import { useEmrLabels } from './labels';
 import { focusRing, fontFamily, fontWeight, useEmrTheme } from './theme';
 import { numberTextOf, parseNumberDraft, sanitizeNumberText, textOf, toggled } from './typed-field.logic';
@@ -104,6 +107,13 @@ export function EmrTypedField({ definition, model, controlId, readOnly = false, 
       break;
     case 'select':
     case 'multiselect': {
+      // A long single-choice list (e.g. 17 VA steps) is a dropdown; short lists stay one-tap chips.
+      if (definition.type === 'select' && (definition.options?.length ?? 0) > DROPDOWN_ABOVE) {
+        control = <EmrSelect label={definition.label} options={definition.options ?? []} value={model?.value as string | null | undefined}
+          invalid={!!model?.error} readOnly={isReadOnly} disabled={isDisabled}
+          onChange={value => { onFocus?.(); onValueChange(value); }} />;
+        break;
+      }
       const multiple = definition.type === 'multiselect';
       control = (
         <View role={multiple ? 'group' : 'radiogroup'} aria-labelledby={labelHidden ? undefined : `${controlId}-label`} accessibilityLabel={definition.label}>

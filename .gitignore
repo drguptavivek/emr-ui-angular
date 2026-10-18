@@ -12,3 +12,4 @@ playwright-report/
 .trace-mcp/
 .next/
 next-env.d.ts
+.expo/

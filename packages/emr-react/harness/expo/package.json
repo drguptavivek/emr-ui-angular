@@ -1,0 +1,5 @@
+{
+  "name": "emr-react-harness-expo",
+  "private": true,
+  "main": "index.tsx"
+}

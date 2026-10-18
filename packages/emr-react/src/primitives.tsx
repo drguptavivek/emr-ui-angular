@@ -1,8 +1,9 @@
 'use client';
 
-import type { ReactNode } from 'react';
-import { Pressable, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { EmrBadge } from '@drguptavivek/emr-controller';
+import { Children, useState, type ReactNode } from 'react';
+import { Modal, Pressable, ScrollView, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
+import type { ClinicalOption, EmrBadge } from '@drguptavivek/emr-controller';
+import { useEmrLabels } from './labels';
 import { focusRing, fontFamily, fontWeight, toneColors, useEmrTheme } from './theme';
 
 /** RNW adds `focused` to the Pressable state; RN's types only declare `pressed`. */
@@ -80,7 +81,9 @@ export function EmrOptionChip({ label, selected, multiple, readOnly, disabled, o
         styles.chip,
         focusRing(t, focused),
         {
+          // Square minimum too: "NC" or "6/6" would otherwise be a target narrower than it is tall.
           minHeight: t.controlHeight,
+          minWidth: t.controlHeight,
           borderColor: selected ? t.primary : t.border,
           borderWidth: selected ? 2 : 1,
           backgroundColor: selected ? t.primarySoft : t.surface,
@@ -95,13 +98,81 @@ export function EmrOptionChip({ label, selected, multiple, readOnly, disabled, o
   );
 }
 
+/** L1. Single-choice dropdown: a field-shaped trigger that opens the option list in a modal sheet. */
+export function EmrSelect({ label, options, value, invalid, readOnly, disabled, onChange }: {
+  label: string;
+  options: readonly ClinicalOption[];
+  value: string | null | undefined;
+  invalid?: boolean;
+  readOnly?: boolean;
+  disabled?: boolean;
+  onChange: (value: string | null) => void;
+}) {
+  const t = useEmrTheme();
+  const labels = useEmrLabels();
+  const [open, setOpen] = useState(false);
+  const current = options.find(option => option.value === value)?.label;
+  const pick = (next: string | null) => { setOpen(false); if (next !== (value ?? null)) onChange(next); };
+  const row = (key: string, text: string, selected: boolean, next: string | null, optionDisabled?: boolean) => (
+    <Pressable key={key} role="radio" aria-checked={selected} aria-disabled={optionDisabled} disabled={optionDisabled} onPress={() => pick(next)}
+      style={({ pressed, focused }: PressState) => [styles.option, focusRing(t, focused),
+        { minHeight: t.controlHeight, backgroundColor: selected ? t.primarySoft : pressed ? t.surfaceRaised : t.surface, opacity: optionDisabled ? 0.6 : 1 }]}>
+      <Text style={{ color: next === null ? t.textMuted : t.text, fontSize: t.textMd, fontFamily: fontFamily(t), fontWeight: fontWeight(selected ? t.weightBold : t.weightRegular) }}>
+        {selected ? '✓ ' : ''}{text}
+      </Text>
+    </Pressable>
+  );
+  return (
+    <>
+      <Pressable role="combobox" aria-expanded={open} aria-label={`${label}, ${current ?? labels.select}`} aria-disabled={disabled} aria-readonly={readOnly}
+        disabled={disabled} onPress={readOnly ? undefined : () => setOpen(true)}
+        style={({ focused }: PressState) => [styles.select, focusRing(t, focused), {
+          minHeight: t.controlHeight, borderColor: invalid ? t.danger : t.border,
+          backgroundColor: disabled ? t.surfaceRaised : t.surface, opacity: disabled ? 0.6 : 1,
+        }]}>
+        <Text numberOfLines={1} style={[styles.flex, { color: current ? t.text : t.textMuted, fontSize: t.textMd, fontFamily: fontFamily(t) }]}>{current ?? labels.select}</Text>
+        <Text aria-hidden style={{ color: t.textMuted, fontSize: t.textMd }}>▾</Text>
+      </Pressable>
+      <Modal visible={open} transparent statusBarTranslucent navigationBarTranslucent animationType="fade" onRequestClose={() => setOpen(false)}>
+        <Pressable aria-label={labels.close} style={styles.backdrop} onPress={() => setOpen(false)}>
+          {/* Inner Pressable swallows taps so only the backdrop closes the sheet. */}
+          <Pressable role="radiogroup" aria-label={label} style={[styles.sheet, { backgroundColor: t.surface, borderColor: t.border }]}>
+            <Text role="heading" style={[styles.sheetTitle, { color: t.text, fontSize: t.textLg, fontWeight: fontWeight(t.weightBold), fontFamily: fontFamily(t) }]}>{label}</Text>
+            <ScrollView>
+              {row('', labels.select, value == null, null)}
+              {options.map(option => row(option.value, option.label, option.value === value, option.value, option.disabled))}
+            </ScrollView>
+          </Pressable>
+        </Pressable>
+      </Modal>
+    </>
+  );
+}
+
+/** Chips lay out as equal-width columns, so wrapped rows line up instead of going ragged. */
+const CHIP_COLUMN_MIN = 140;
+const ROW_GAP = 8;
+
 export function EmrRow({ children }: { children: ReactNode }) {
-  return <View style={styles.row}>{children}</View>;
+  const [width, setWidth] = useState(0);
+  const columns = Math.max(1, Math.floor((width + ROW_GAP) / (CHIP_COLUMN_MIN + ROW_GAP)));
+  const cell = width ? (width - ROW_GAP * (columns - 1)) / columns : undefined;
+  return (
+    <View style={styles.row} onLayout={e => setWidth(e.nativeEvent.layout.width)}>
+      {Children.map(children, child => <View style={{ width: cell }}>{child}</View>)}
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
   badge: { alignSelf: 'flex-start', borderRadius: 999, paddingHorizontal: 8, paddingVertical: 2 },
   button: { borderWidth: 1, borderRadius: 8, paddingHorizontal: 16, alignItems: 'center', justifyContent: 'center' },
-  chip: { borderRadius: 8, paddingHorizontal: 12, justifyContent: 'center' },
-  row: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, alignItems: 'center' },
+  chip: { borderRadius: 8, paddingHorizontal: 12, justifyContent: 'center', alignItems: 'center' },
+  row: { flexDirection: 'row', flexWrap: 'wrap', gap: ROW_GAP },
+  flex: { flex: 1, minWidth: 0 },
+  select: { flexDirection: 'row', alignItems: 'center', gap: 8, borderWidth: 1, borderRadius: 8, paddingHorizontal: 12 },
+  backdrop: { flex: 1, justifyContent: 'center', padding: 24, backgroundColor: 'rgba(0,0,0,0.4)' },
+  sheet: { alignSelf: 'center', width: '100%', maxWidth: 480, maxHeight: '80%', borderWidth: 1, borderRadius: 12, paddingVertical: 8, overflow: 'hidden' },
+  sheetTitle: { paddingHorizontal: 16, paddingVertical: 8 },
+  option: { justifyContent: 'center', paddingHorizontal: 16 },
 });

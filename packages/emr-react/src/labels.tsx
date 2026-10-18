@@ -8,6 +8,8 @@ import { createContext, useContext, useMemo, type ReactNode } from 'react';
  */
 export interface EmrLabels {
   yes: string;
+  select: string;
+  close: string;
   required: string;
   add: string;
   remove: string;
@@ -21,6 +23,8 @@ export interface EmrLabels {
 
 export const emrEnglishLabels: EmrLabels = {
   yes: 'Yes',
+  select: 'Select',
+  close: 'Close',
   required: 'required',
   add: 'Add',
   remove: 'Remove',
