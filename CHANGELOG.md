@@ -8,6 +8,8 @@ Current state and pending work live in `handoff.md`. Exact changes and authorshi
 - **Form matrix blocks.** `ClinicalFormBlock` gains `kind: 'matrix'`: a rows × columns grid (e.g. IOP / CDR × OD / OS) whose cells are ordinary fields stored under their own ids, so intents stay `fieldEditRequested`. Rendered by both the Angular and React forms. Story: `EMR / Clinical forms / History / Per Eye Matrix`.
 - **Engine-resolved visibility.** `ClinicalFieldState` gains `hidden` and `required`. Both forms skip a hidden field only while it is empty; a hidden field holding a value stays visible.
 - `pnpm check` now also typechecks emr-react and the Angular stories.
+- **emr-react L1 primitives (24)**: inputs (text, number, day-first date with ISO value and 8-digit keypad entry, time, date-time, quantity, OD/OS pair, checkbox, toggle, radio group), display (chip, alert, state message, separator, card, columns, field-value row, status cell) and interactive (tabs, search-select, Likert, VAS, stage stepper, time axis). Web gallery at `/gallery` in the Next harness.
+- **`EMR_ENGINE_VERSION` / `requiredEngineFor(schema)`** in emr-controller: the feature level server-supplied definitions are stamped with.
 
 ## 10 October 2026 — anatomy outline redraws
 

@@ -10,6 +10,7 @@ export * from './family-history.controller.js';
 export * from './documents.controller.js';
 export * from './document-viewer.controller.js';
 export * from './clinical-form.models.js';
+export * from './engine-version.js';
 export * from './checklist.models.js';
 export * from './family-history.models.js';
 export * from './documents.models.js';

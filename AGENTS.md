@@ -129,3 +129,6 @@ and `emr-theme-dark` token sets stay in sync in `emr.css`.
   Pure helpers a component needs at runtime live in a UI-side `*.logic.ts` file.
 - Anything serialized must be an enumerable own property. A symbol-keyed or non-enumerable
   field survives an in-memory round trip and vanishes through `JSON.stringify`.
+- Adding a form block kind, field type or condition operator: bump `EMR_ENGINE_VERSION` and teach
+  `requiredEngineFor` about it (emr-controller `engine-version.ts`). Server-supplied definitions are
+  stamped with that level; devices below it keep the last compatible definition.
