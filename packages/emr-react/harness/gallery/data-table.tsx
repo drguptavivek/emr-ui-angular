@@ -1,6 +1,8 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import { Text, View } from 'react-native';
+import { EmrButton } from '../../src/primitives';
 import { EmrDataTable, type EmrDataTableIntent, type EmrDataTableRow } from '../../src/data-table';
 import type { GallerySection } from './types';
 
@@ -77,13 +79,14 @@ function Demo() {
   };
 
   return (
-    <div style={{ display: 'grid', gap: 12 }}>
-      <div style={{ display: 'flex', gap: 8 }}>
+    // RN primitives, not DOM: this demo also renders in the Expo harness (as the native notice).
+    <View style={{ gap: 12 }}>
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
         {(['ready', 'loading', 'error'] as const).map(s => (
-          <button key={s} type="button" aria-pressed={status === s} onClick={() => setStatus(s)}>{s}</button>
+          <EmrButton key={s} small variant={status === s ? 'primary' : 'outline'} label={s} onPress={() => setStatus(s)} />
         ))}
-        <button type="button" onClick={() => setFilters(['pending', 'north'])}>Force empty</button>
-      </div>
+        <EmrButton small variant="outline" label="Force empty" onPress={() => setFilters(['pending', 'north'])} />
+      </View>
       <EmrDataTable
         onIntent={onIntent}
         model={{
@@ -105,8 +108,8 @@ function Demo() {
           error: 'The referral service did not respond.',
         }}
       />
-      <code>{note || 'last intent appears here'}</code>
-    </div>
+      <Text style={{ fontSize: 13 }}>{note || 'last intent appears here'}</Text>
+    </View>
   );
 }
 

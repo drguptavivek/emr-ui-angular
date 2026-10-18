@@ -84,8 +84,11 @@ export function EmrPinPad({ model: m, onIntent, labels, showForgot }: {
           <View key={i} style={[styles.dot, { borderColor: t.primary, backgroundColor: i < m.digitsEntered ? t.primary : 'transparent' }]} />
         ))}
       </Animated.View>
-      {m.error ? <Text role="alert" style={[text, { fontSize: t.textMd, color: t.danger, textAlign: 'center' }]}>{GLYPH.danger} {m.error}</Text> : null}
-      {m.locked && m.lockoutMessage ? <Text role="alert" style={[text, { fontSize: t.textMd, color: t.warning, textAlign: 'center' }]}>{GLYPH.warning} {m.lockoutMessage}</Text> : null}
+      {/* Reserved line: an error appearing must not push the keys down under the user's thumb. */}
+      <View style={{ minHeight: t.textMd * t.leadingNormal, justifyContent: 'center' }}>
+        {m.error ? <Text role="alert" style={[text, { fontSize: t.textMd, color: t.danger, textAlign: 'center' }]}>{GLYPH.danger} {m.error}</Text> : null}
+        {m.locked && m.lockoutMessage ? <Text role="alert" style={[text, { fontSize: t.textMd, color: t.warning, textAlign: 'center' }]}>{GLYPH.warning} {m.lockoutMessage}</Text> : null}
+      </View>
       <View style={styles.keys}>
         {KEYS.map(key => {
           const glyph = key === 'delete' ? '⌫' : key === 'submit' ? '✓' : key;
