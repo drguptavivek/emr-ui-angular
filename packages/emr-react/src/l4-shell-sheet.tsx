@@ -40,7 +40,7 @@ export function EmrSheet({ open, title, showBack, footer, wideBreakpoint = 720, 
     : null;
 
   return (
-    <Modal visible={open} transparent animationType={wide ? 'fade' : 'slide'} onRequestClose={close}>
+    <Modal visible={open} transparent statusBarTranslucent animationType={wide ? 'fade' : 'slide'} onRequestClose={close}>
       <View style={[styles.root, wide ? styles.rootWide : styles.rootNarrow]}>
         <Pressable aria-hidden accessible={false} style={[StyleSheet.absoluteFill, { backgroundColor: t.shadow, opacity: 0.45 }]} onPress={close} />
         <View

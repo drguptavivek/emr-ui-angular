@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Text, View } from 'react-native';
 import { EmrBarChart, EmrFunnelChart, type EmrBarChartModel, type EmrChartIntent } from '../../src/charts';
 import type { GallerySection } from './types';
 
@@ -25,10 +26,10 @@ const patientsSeen: EmrBarChartModel = {
 function Selectable({ model }: { model: EmrBarChartModel }) {
   const [last, setLast] = useState<EmrChartIntent | null>(null);
   return (
-    <div>
+    <View>
       <EmrBarChart model={model} onIntent={setLast} />
-      <p style={{ fontFamily: 'sans-serif', fontSize: 13 }}>{last ? `Intent: ${JSON.stringify(last)}` : 'Activate a bar to see its intent.'}</p>
-    </div>
+      <Text style={{ fontSize: 13 }}>{last ? `Intent: ${JSON.stringify(last)}` : 'Activate a bar to see its intent.'}</Text>
+    </View>
   );
 }
 
