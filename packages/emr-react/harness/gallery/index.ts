@@ -22,6 +22,8 @@ import { gallery as l4Contact } from './l4-contact';
 import { gallery as l4Privacy } from './l4-privacy';
 import { gallery as l4Cards } from './l4-cards';
 import { gallery as l4Drafts } from './l4-drafts';
+import { gallery as l4Medications } from './l4-medications';
+import { gallery as l4SafetyPedigree } from './l4-safety-pedigree';
 import type { GallerySection } from './types';
 
 export const galleryGroups: readonly { id: string; title: string; sections: readonly GallerySection[] }[] = [
@@ -49,4 +51,6 @@ export const galleryGroups: readonly { id: string; title: string; sections: read
   { id: 'l4-drafts', title: 'L4 · Drafts and sent', sections: l4Drafts },
   { id: 'l4-contact', title: 'L4 · Contact attempts', sections: l4Contact },
   { id: 'l4-consent-review', title: 'L4 · Consent review and receipt', sections: l4ConsentReview },
+  { id: 'l4-medications', title: 'L4 · Scores & medications', sections: l4Medications },
+  { id: 'l4-safety-pedigree', title: 'L4 · Safety checklists & pedigree', sections: l4SafetyPedigree },
 ];

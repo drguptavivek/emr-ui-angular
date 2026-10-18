@@ -30,4 +30,6 @@ export * from './l4-contact';
 export * from './l4-privacy';
 export * from './l4-cards';
 export * from './l4-drafts';
+export * from './l4-medications';
+export * from './l4-safety-pedigree';
 export { isFieldShown, isSectionShown } from './typed-field.logic';
