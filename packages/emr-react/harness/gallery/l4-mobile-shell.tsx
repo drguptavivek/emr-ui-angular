@@ -26,6 +26,7 @@ function PinFlow({ flow }: { flow: 'set' | 'unlock' }) {
     title: mode === 'unlock' ? 'Enter PIN' : mode === 'set' ? 'Choose a PIN' : 'Confirm your PIN',
     prompt: mode === 'unlock' ? 'Demo PIN is 1234' : undefined,
     lockoutMessage: locked ? 'Too many attempts. Try again in 30 seconds.' : undefined,
+    biometric: flow === 'unlock' ? { label: 'Use fingerprint / face', available: !locked } : undefined,
   };
   return (
     <View style={{ gap: 8 }}>
@@ -33,6 +34,7 @@ function PinFlow({ flow }: { flow: 'set' | 'unlock' }) {
         if (i.type === 'digitPressed') { setError(undefined); setDigits(d => (d.length < 4 ? d + i.digit : d)); }
         else if (i.type === 'deleted') { setError(undefined); setDigits(d => d.slice(0, -1)); }
         else if (i.type === 'forgotRequested') setDone('Forgot PIN requested');
+        else if (i.type === 'biometricRequested') setDone('Biometric requested (app runs the OS prompt)');
         else if (digits.length < 4) setError('Enter 4 digits');
         else if (flow === 'unlock') {
           if (digits === PIN) { setDone('Unlocked'); setFails(0); setError(undefined); }

@@ -40,12 +40,18 @@ export interface EmrPinPadModel {
   error?: string;
   lockoutMessage?: string;
   locked?: boolean;
+  /**
+   * App-decided biometric unlock ("Use fingerprint / face"). The button shows only while `available`; it
+   * emits `biometricRequested` and the app runs the OS prompt, reporting failure via `error` / `lockoutMessage`.
+   */
+  biometric?: { label: string; available: boolean };
 }
 export type EmrPinPadIntent =
   | { type: 'digitPressed'; digit: string }
   | { type: 'deleted' }
   | { type: 'submitted' }
-  | { type: 'forgotRequested' };
+  | { type: 'forgotRequested' }
+  | { type: 'biometricRequested' };
 
 const KEYS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'delete', '0', 'submit'] as const;
 
@@ -108,6 +114,7 @@ export function EmrPinPad({ model: m, onIntent, labels, showForgot }: {
           );
         })}
       </View>
+      {m.biometric?.available ? <EmrButton variant="outline" label={m.biometric.label} onPress={() => onIntent({ type: 'biometricRequested' })} /> : null}
       {showForgot ? <EmrButton variant="ghost" label={l.pinForgot} onPress={() => onIntent({ type: 'forgotRequested' })} /> : null}
     </View>
   );
