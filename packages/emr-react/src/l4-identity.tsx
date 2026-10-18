@@ -1,7 +1,7 @@
 'use client';
 
 import { useId } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 import type {
   EmrTone, IdentifierCheckIntent, IdentifierCheckViewModel, IdentifierEntryIntent, IdentifierEntryView, IdentifierFindingKind,
   IdentifierFindingView, PatientIdentityIntent, PatientIdentityViewModel,
@@ -16,6 +16,7 @@ import { fontFamily, fontWeight, useEmrTheme } from './theme';
 /** English fallbacks for built-in strings; every one is overridable via the `labels` prop. */
 const DEFAULTS = {
   scan: 'Scan',
+  identifierType: 'Identifier type',
   confirmPatient: 'Confirm patient',
   notThisPatient: 'Not this patient',
   addIdentifier: 'Add identifier',
@@ -67,9 +68,9 @@ export function EmrBarcodeScanField({ value, onValueChange, onSubmit, normalised
   const id = useId();
   const hasMessage = !!(error || warning || hint);
   return (
-    <EmrFieldFrame label={label} controlId={id} hint={hint} warning={warning} error={error}>
+    <EmrFieldFrame label={label} labelNamesControl controlId={id} hint={hint} warning={warning} error={error}>
       {typeOptions ? (
-        <View role="radiogroup" aria-label={label}>
+        <View role="radiogroup" aria-label={`${label}: ${l.identifierType}`}>
           <EmrRow>
             {typeOptions.map(o => (
               <EmrOptionChip key={o.id} label={o.label} selected={o.id === selectedType} readOnly={readOnly}
@@ -80,7 +81,8 @@ export function EmrBarcodeScanField({ value, onValueChange, onSubmit, normalised
       ) : null}
       <View style={styles.entry}>
         <View style={styles.grow}>
-          <ThemedInput nativeID={id} aria-labelledby={`${id}-label`} aria-describedby={hasMessage ? `${id}-message` : undefined}
+          {/* The field label is the input's own accessible name (TalkBack ignores labelledby without it). */}
+          <ThemedInput nativeID={id} aria-label={label} aria-labelledby={Platform.OS === 'web' ? `${id}-label` : undefined} aria-describedby={hasMessage ? `${id}-message` : undefined}
             value={value} onChangeText={onValueChange} invalid={!!error} readOnly={readOnly}
             autoCapitalize="characters" autoCorrect={false} spellCheck={false}
             returnKeyType={onSubmit ? 'done' : undefined} blurOnSubmit={false} onSubmitEditing={onSubmit ? () => onSubmit() : undefined} />

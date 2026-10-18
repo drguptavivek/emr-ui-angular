@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useId, useRef, useState, type ElementRef } from 'react';
-import { Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View, type PressableStateCallbackType } from 'react-native';
+import { useEffect, useId, useRef, useState } from 'react';
+import { Platform, Pressable, ScrollView, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
 import type { EmrBadge } from '@drguptavivek/emr-controller';
 import { textInputKeys, webProps, type WebKeyEvent } from './l1-interactive-shared';
 import { ThemedInput } from './inputs-core';
@@ -38,7 +38,9 @@ export function EmrTopBarSearch({ query, open, loading, groups, labels, onQueryC
   const t = useEmrTheme();
   const baseId = useId();
   const listId = `${baseId}-list`;
-  const inputRef = useRef<ElementRef<typeof TextInput>>(null);
+  // Structural, not ElementRef<typeof TextInput>: ElementRef is deprecated in React 19 types and can lose
+  // focus() depending on which @types/react / react-native types a consuming app resolves.
+  const inputRef = useRef<{ focus(): void } | null>(null);
   const blurTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const suppressOpen = useRef(false);
   const [highlight, setHighlight] = useState(-1);
@@ -85,7 +87,7 @@ export function EmrTopBarSearch({ query, open, loading, groups, labels, onQueryC
   return (
     <View style={styles.bar}>
       <View style={styles.field}>
-        <ThemedInput ref={inputRef} role="combobox" aria-label={labels.search} aria-expanded={showing} aria-controls={listId} aria-autocomplete="list" autoComplete="off" autoCorrect={false}
+        <ThemedInput ref={inputRef as never} role="combobox" aria-label={labels.search} aria-expanded={showing} aria-controls={listId} aria-autocomplete="list" autoComplete="off" autoCorrect={false}
           value={query} placeholder={labels.searchPlaceholder}
           onChangeText={onQueryChange} onSubmitEditing={onSubmit}
           onFocus={() => { clearBlur(); if (!suppressOpen.current) onOpenRequested(); }}

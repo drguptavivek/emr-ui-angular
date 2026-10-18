@@ -1,7 +1,7 @@
 'use client';
 
 import type { ComponentType } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 import { EmrDateTimeText, EmrTypedText, NumberInput, ThemedInput, Unsupported } from './inputs-core';
 import type {
   ClinicalAssessmentStatus,
@@ -41,8 +41,13 @@ export interface EmrTypedFieldProps {
 }
 
 /** L2 frame: label, required marker, and one message line (error > warning > hint). */
-export function EmrFieldFrame({ label, labelHidden, controlId, required, hint, warning, error, children }: {
+export function EmrFieldFrame({ label, labelHidden, labelNamesControl, controlId, required, hint, warning, error, children }: {
   label: string;
+  /**
+   * The control carries the label as its own accessible name, so on native the visible label is hidden from the
+   * screen reader (otherwise TalkBack/VoiceOver read it twice). Web keeps the label for aria-labelledby.
+   */
+  labelNamesControl?: boolean;
   /** Matrix cells: the row and column headers are the visible label; the control keeps it as its accessible name. */
   labelHidden?: boolean;
   controlId: string;
@@ -59,6 +64,7 @@ export function EmrFieldFrame({ label, labelHidden, controlId, required, hint, w
   return (
     <View style={styles.frame}>
       {labelHidden ? null : <Text nativeID={`${controlId}-label`} aria-label={required ? `${label}, ${labels.required}` : label}
+        {...(labelNamesControl && Platform.OS !== 'web' ? { importantForAccessibility: 'no' as const, accessibilityElementsHidden: true } : null)}
         style={{ color: t.text, fontSize: t.textMd, fontWeight: fontWeight(650), fontFamily: fontFamily(t) }}>
         {label}
         {required ? <Text style={{ color: t.danger }}> *</Text> : null}
