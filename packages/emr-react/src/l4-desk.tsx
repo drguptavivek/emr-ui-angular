@@ -58,6 +58,9 @@ export interface EmrOpenReferral {
   flags: string[];
   daysSinceAdviceLabel: string;
   overdueBadge?: EmrBadge;
+  /** Multi-visit referrals, pre-formatted by the app: "2 visits", "Next visit 26-10-2026". */
+  visitCountLabel?: string;
+  nextDueLabel?: string;
 }
 export interface EmrArrivalLinkerModel {
   patient: EmrPatientIdentity;
@@ -210,6 +213,7 @@ export function EmrArrivalLinker({ model: m, labels, onIntent }: {
             name={[r.date, r.centreName, r.purpose].join(', ')} onPress={() => onIntent({ type: 'referralToggled', id: r.id })}>
             <Text style={bold}>{r.date} · {r.centreName}</Text>
             <Text style={body}>{r.purpose}</Text>
+            {r.visitCountLabel || r.nextDueLabel ? <Text style={muted}>{[r.visitCountLabel, r.nextDueLabel].filter(Boolean).join(' · ')}</Text> : null}
             <View style={styles.wrap}>
               {r.flags.map(f => <EmrChip key={f}>{f}</EmrChip>)}
               <Text style={muted}>{r.daysSinceAdviceLabel}</Text>

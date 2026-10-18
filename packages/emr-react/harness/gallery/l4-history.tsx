@@ -40,7 +40,7 @@ const full: EmrPatientHistoryModel = {
     lastSpectacleRx: { date: '10-10-2026', re: rxEye, le: { sph: '+1.00', cyl: '-0.75', axis: '85°', add: '+2.00' }, type: 'Bifocal', statusBadge: { label: 'Delivered', tone: 'success' } },
     lastGlaucomaScreen: { date: '10-10-2026', iopRe: '16 mmHg', iopLe: '18 mmHg', cdrRe: '0.60', cdrLe: '0.50', decision: 'Review in 6 months' },
     lastDrScreen: { date: '10-10-2026', gradeRe: 'R1', gradeLe: 'R0', maculopathyRe: 'M0', decision: 'Routine recall' },
-    openReferrals: [{ id: 'rf-1', date: '10-10-2026', centreName: 'Test Hospital', purpose: 'Cataract surgery', flags: ['Diabetic', 'Hypertensive'], statusBadge: { label: 'Pending', tone: 'warning' } }],
+    openReferrals: [{ id: 'rf-1', date: '10-10-2026', centreName: 'Test Hospital', purpose: 'Cataract surgery', flags: ['Diabetic', 'Hypertensive'], statusBadge: { label: 'Pending', tone: 'warning' }, visitCountLabel: '2 visits', nextDueLabel: 'Next visit 26-10-2026' }],
     openBookings: [{ id: 'bk-1', date: '05-10-2026', type: 'Spectacles', paidBadge: { label: 'Paid', tone: 'success' }, daysOpenLabel: '13 days open', overdueBadge: { label: 'Overdue', tone: 'danger' } }],
     openEpisodes: [admitted, operated],
   },

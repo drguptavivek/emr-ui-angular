@@ -28,7 +28,7 @@ const Linker = ({ existing }: { existing: boolean }) => {
     patient,
     openReferrals: [
       { id: 'r1', date: '01-10-2026', centreName: 'Test Vision Centre 1', purpose: 'Cataract surgery', flags: ['Urgent', 'Diabetic'], daysSinceAdviceLabel: '17 days since advice', overdueBadge: { label: 'Overdue', tone: 'danger' } },
-      { id: 'r2', date: '12-10-2026', centreName: 'Test Vision Centre 2', purpose: 'Glaucoma review', flags: [], daysSinceAdviceLabel: '6 days since advice' },
+      { id: 'r2', date: '12-10-2026', centreName: 'Test Vision Centre 2', purpose: 'Glaucoma review', flags: [], daysSinceAdviceLabel: '6 days since advice', visitCountLabel: '2 visits', nextDueLabel: 'Next visit 26-10-2026' },
     ],
     purposeOptions: [{ id: 'surgery', label: 'Surgery' }, { id: 'review', label: 'Review' }, { id: 'spectacles', label: 'Spectacles' }],
     selectedPurpose: purpose, selectedReferralIds: refs, noReferral: none,

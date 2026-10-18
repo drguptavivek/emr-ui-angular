@@ -57,7 +57,11 @@ export interface EmrPatientSnapshot {
     lastSpectacleRx?: { date: string; re: EmrRxEyeValues; le: EmrRxEyeValues; type?: string; statusBadge: EmrBadge };
     lastGlaucomaScreen?: { date: string; iopRe?: string; iopLe?: string; cdrRe?: string; cdrLe?: string; decision?: string };
     lastDrScreen?: { date: string; gradeRe?: string; gradeLe?: string; maculopathyRe?: string; maculopathyLe?: string; decision?: string };
-    openReferrals: { id: string; date: string; centreName: string; purpose: string; flags: string[]; statusBadge: EmrBadge }[];
+    openReferrals: {
+      id: string; date: string; centreName: string; purpose: string; flags: string[]; statusBadge: EmrBadge;
+      /** Multi-visit referrals, pre-formatted by the app: "2 visits", "Next visit 26-10-2026". */
+      visitCountLabel?: string; nextDueLabel?: string;
+    }[];
     openBookings: { id: string; date: string; type: string; paidBadge: EmrBadge; daysOpenLabel: string; overdueBadge?: EmrBadge }[];
     openEpisodes: EmrCataractEpisode[];
   };
@@ -179,6 +183,7 @@ function SummaryBlocks({ s, l, onIntent, episodeLabels, parity }: {
               <EmrBadgeView badge={r.statusBadge} />
             </View>
             <Text style={muted}>{`${r.centreName} · ${r.date}`}</Text>
+            {r.visitCountLabel || r.nextDueLabel ? <Text style={muted}>{[r.visitCountLabel, r.nextDueLabel].filter(Boolean).join(' · ')}</Text> : null}
             {r.flags.length ? <View style={styles.wrap}>{r.flags.map(f => <EmrChip key={f}>{f}</EmrChip>)}</View> : null}
           </View>
         </RowButton>
