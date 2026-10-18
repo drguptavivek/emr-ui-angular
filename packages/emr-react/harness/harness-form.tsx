@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { KeyboardAvoidingView, Platform, Pressable, ScrollView, StatusBar, Text, View } from 'react-native';
+import { Pressable, ScrollView, Text, View } from 'react-native';
 import { ClinicalFormController, type ClinicalFormViewModel } from '@drguptavivek/emr-controller';
 import { EmrClinicalForm, EmrThemeProvider, useControllerState, useEmrTheme, type EmrColorScheme } from '../src';
 import { opdFormFixture } from './fixtures/opd-form';
@@ -18,11 +18,8 @@ function Surface({ title, scheme, onScheme }: { title: string; scheme: EmrColorS
   const model = useControllerState(controller);
   const [last, setLast] = useState('none yet');
   return (
-    // Edge-to-edge (SDK 54+) no longer resizes the window for the keyboard: pad it away ourselves.
-    // ponytail: Android status-bar inset only; use safe-area-context when iOS matters.
-    <KeyboardAvoidingView behavior={Platform.OS === 'web' ? undefined : 'padding'} style={{ flex: 1, backgroundColor: t.background }}>
-    <ScrollView keyboardShouldPersistTaps="handled"
-      contentContainerStyle={{ padding: 24, paddingTop: 24 + (StatusBar.currentHeight ?? 0), gap: 16, maxWidth: 1100, width: '100%', alignSelf: 'center' }}>
+    <ScrollView keyboardShouldPersistTaps="handled" style={{ backgroundColor: t.background }}
+      contentContainerStyle={{ padding: 24, gap: 16, maxWidth: 1100, width: '100%', alignSelf: 'center' }}>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
         <Text role="heading" aria-level={1} style={{ color: t.text, fontSize: t.text2xl, fontWeight: '700' }}>{title}</Text>
         <Pressable role="button" onPress={() => onScheme(scheme === 'light' ? 'dark' : 'light')}
@@ -33,7 +30,6 @@ function Surface({ title, scheme, onScheme }: { title: string; scheme: EmrColorS
       <Text testID="last-intent" style={{ color: t.textMuted, fontSize: t.textSm }}>Last intent: {last}</Text>
       <EmrClinicalForm model={withRelevance(model)} onIntent={intent => { setLast(JSON.stringify(intent)); controller.dispatch(intent); }} />
     </ScrollView>
-    </KeyboardAvoidingView>
   );
 }
 

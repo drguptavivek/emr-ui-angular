@@ -118,7 +118,8 @@ function TypedText({ value, mode, invalid, onValueChange, ...props }: Omit<Theme
   return (
     <ThemedInput {...props} value={draft} keyboardType="numbers-and-punctuation" inputMode="numeric"
       invalid={invalid || (left && parseText(draft, mode).status === 'draft')}
-      onBlur={e => { setLeft(true); props.onBlur?.(e); }}
+      // Leaving the field tidies a valid entry into display form (keypad 05032026 → 05-03-2026).
+      onBlur={e => { setLeft(true); setDraft(d => { const p = parseText(d, mode); return p.status === 'valid' ? formatText(p.value, mode) : d; }); props.onBlur?.(e); }}
       onChangeText={text => {
         const clean = mode === 'time' ? sanitizeTimeText(text) : sanitizeDateText(text);
         setDraft(clean);

@@ -228,8 +228,9 @@ const styles = StyleSheet.create({
   card: { borderWidth: 1, borderRadius: 10, overflow: 'hidden' },
   cardTitle: { justifyContent: 'center', paddingHorizontal: 16, paddingVertical: 10, borderBottomWidth: 1 },
   cardBody: { padding: 16 },
-  fvr: { flexDirection: 'row', gap: 12, paddingVertical: 8, paddingHorizontal: 8, borderBottomWidth: 1 },
-  fvrCell: { flex: 1, minWidth: 0 },
+  // Four columns until a cell would drop under ~120dp (a phone card), then two per line: no mid-word breaks.
+  fvr: { flexDirection: 'row', flexWrap: 'wrap', gap: 12, paddingVertical: 8, paddingHorizontal: 8, borderBottomWidth: 1 },
+  fvrCell: { flexGrow: 1, flexBasis: 120, minWidth: 0 },
   status: { alignItems: 'flex-start', gap: 4, minWidth: 0 },
   statusBody: { gap: 2, minWidth: 0, maxWidth: '100%' },
   statusMain: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: 6 },
