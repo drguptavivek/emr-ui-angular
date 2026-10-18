@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, type ComponentType } from 'react';
+import { useEmrLabels } from './labels';
 import { Pressable, StyleSheet, Text, View, type LayoutChangeEvent, type PressableStateCallbackType } from 'react-native';
 import type {
   ClinicalAssessmentStatus,
@@ -42,7 +43,6 @@ const DEFAULTS = {
   yes: 'Yes',
   no: 'No',
   warning: 'Warning',
-  datePlaceholder: 'dd-mm-yyyy',
   assessmentStatus: 'Assessment status for',
   statusNotSet: 'Status not set',
   customRendererUnavailable: 'Custom renderer unavailable',
@@ -157,6 +157,7 @@ export function EmrClinicalMatrix({ definition, model = {}, onIntent, readOnly =
 }) {
   const t = useEmrTheme();
   const s = { ...DEFAULTS, ...strings };
+  const dateFormat = useEmrLabels().dateFormat;
   const font = fontFamily(t);
   const [width, setWidth] = useState(0);
   const stacked = isMatrixStacked(width);
@@ -213,7 +214,7 @@ export function EmrClinicalMatrix({ definition, model = {}, onIntent, readOnly =
         }
         case 'date':
           // Day-first display, ISO value — the same date entry as EmrDateInput and form fields.
-          editor = <EmrTypedText aria-label={name} mode="dd-mm-yyyy" placeholder={s.datePlaceholder} invalid={invalid} editable={!disabled}
+          editor = <EmrTypedText aria-label={name} mode={dateFormat} placeholder={dateFormat} invalid={invalid} editable={!disabled}
             value={typeof cell?.value === 'string' && cell.value ? cell.value : null} onFocus={focus} onValueChange={next => emitCell(row, column, next)} />;
           break;
         default: {

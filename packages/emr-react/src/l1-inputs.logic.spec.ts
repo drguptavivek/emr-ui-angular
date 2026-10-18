@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { formatDate, formatTime, joinDateTime, parseDateText, parseTimeText, sanitizeDateText, splitDateTime } from './l1-inputs.logic';
+import { formatDate, formatTime, joinDateTime, parseDateText, parseTimeText, sanitizeDateText, splitDateTime, sameInstant } from './l1-inputs.logic';
 
 describe('parseDateText', () => {
   it('parses day-first with any separator and pads', () => {
@@ -65,7 +65,7 @@ describe('time', () => {
 
 describe('datetime', () => {
   it('joins only when both halves exist', () => {
-    expect(joinDateTime('2026-03-05', '08:30')).toBe('2026-03-05T08:30');
+    expect(Date.parse(joinDateTime('2026-03-05', '08:30')!)).toBe(new Date(2026, 2, 5, 8, 30).getTime()); // UTC instant of local 08:30
     expect(joinDateTime('2026-03-05', null)).toBeNull();
     expect(joinDateTime(null, '08:30')).toBeNull();
   });
@@ -78,5 +78,21 @@ describe('datetime', () => {
     expect(parseDateText('05032026', 'dd-mm-yyyy')).toEqual({ status: 'valid', value: '2026-03-05' });
     expect(parseDateText('20260305', 'yyyy-mm-dd')).toEqual({ status: 'valid', value: '2026-03-05' });
     expect(parseDateText('31022026', 'dd-mm-yyyy')).toEqual({ status: 'draft' });
+  });
+
+  it('reads month-first locales, including 8 keypad digits', () => {
+    expect(parseDateText('03-05-2026', 'mm-dd-yyyy')).toEqual({ status: 'valid', value: '2026-03-05' });
+    expect(parseDateText('03052026', 'mm-dd-yyyy')).toEqual({ status: 'valid', value: '2026-03-05' });
+    expect(formatDate('2026-03-05', 'mm-dd-yyyy')).toBe('03-05-2026');
+  });
+
+  it('stores datetime as a UTC instant and shows local wall-clock time', () => {
+    const utc = joinDateTime('2026-03-05', '09:30')!;
+    expect(utc).toMatch(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/);
+    expect(Date.parse(utc)).toBe(new Date(2026, 2, 5, 9, 30).getTime());
+    expect(splitDateTime(utc)).toEqual({ date: '2026-03-05', time: '09:30' });
+    expect(splitDateTime('2026-03-05T09:30')).toEqual({ date: '2026-03-05', time: '09:30' }); // legacy zone-less = local
+    expect(sameInstant(utc, utc.replace('Z', '.000Z'))).toBe(true);
+    expect(joinDateTime('2026-03-05', null)).toBeNull();
   });
 });

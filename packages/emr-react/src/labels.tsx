@@ -1,12 +1,18 @@
 'use client';
 
 import { createContext, useContext, useMemo, type ReactNode } from 'react';
+import type { DateDisplayFormat } from './l1-inputs.logic';
 
 /**
  * Every string a component renders on its own. Field labels, options and messages come from
  * the definition and model; these are the few built-ins, overridable per locale (e.g. Hindi).
  */
 export interface EmrLabels {
+  /** Locale's date display order (en-IN: dd-mm-yyyy). Values stay ISO; keypad digits are read in this order. */
+  dateFormat: DateDisplayFormat;
+  /** Accessible names of the two halves of a date-time field. */
+  dateLabel: string;
+  timeLabel: string;
   yes: string;
   select: string;
   close: string;
@@ -22,6 +28,9 @@ export interface EmrLabels {
 }
 
 export const emrEnglishLabels: EmrLabels = {
+  dateFormat: 'dd-mm-yyyy',
+  dateLabel: 'Date',
+  timeLabel: 'Time',
   yes: 'Yes',
   select: 'Select',
   close: 'Close',

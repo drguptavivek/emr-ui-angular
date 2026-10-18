@@ -6,7 +6,7 @@ import type { ClinicalFieldValue } from '@drguptavivek/emr-controller';
 import { focusRing, fontFamily, useEmrTheme } from './theme';
 import { numberTextOf, parseNumberDraft, sanitizeNumberText } from './typed-field.logic';
 import {
-  formatDate, formatTime, parseDateText, parseTimeText, sanitizeDateText, sanitizeTimeText,
+  formatDate, formatTime, joinDateTime, parseDateText, parseTimeText, sameInstant, sanitizeDateText, sanitizeTimeText, splitDateTime,
   type DateDisplayFormat, type TextParse,
 } from './l1-inputs.logic';
 
@@ -127,7 +127,46 @@ export function EmrTypedText({ value, mode, invalid, onValueChange, ...props }: 
 }
 
 
+/**
+ * Local date + local time pair for a UTC instant (ISO-8601 with Z). Emits only when both halves are
+ * valid, otherwise null; a half-typed pair stays on screen. Display order comes from `format`.
+ */
+export function EmrDateTimeText({ value, format, label, dateLabel, timeLabel, invalid, readOnly, editable, onFocus, onValueChange }: {
+  value: string | null;
+  format: DateDisplayFormat;
+  label: string;
+  dateLabel: string;
+  timeLabel: string;
+  invalid?: boolean;
+  readOnly?: boolean;
+  editable?: boolean;
+  onFocus?: () => void;
+  onValueChange: (value: string | null) => void;
+}) {
+  const [parts, setParts] = useState(() => splitDateTime(value));
+  useEffect(() => setParts(current => (sameInstant(joinDateTime(current.date, current.time), value) ? current : splitDateTime(value))), [value]);
+  const change = (next: typeof parts) => {
+    setParts(next);
+    const joined = joinDateTime(next.date, next.time);
+    if (!sameInstant(joined, joinDateTime(parts.date, parts.time))) onValueChange(joined);
+  };
+  const common = { invalid, readOnly, editable, onFocus };
+  return (
+    <View role="group" aria-label={label} style={styles.pair}>
+      <View style={[styles.flex, { flexGrow: 2 }]}>
+        <EmrTypedText key={format} {...common} aria-label={`${label}, ${dateLabel}`} placeholder={format} mode={format} value={parts.date}
+          onValueChange={date => change({ ...parts, date })} />
+      </View>
+      <View style={styles.flex}>
+        <EmrTypedText {...common} aria-label={`${label}, ${timeLabel}`} placeholder="hh:mm" mode="time" value={parts.time}
+          onValueChange={time => change({ ...parts, time })} />
+      </View>
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
+  pair: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   input: { width: '100%', borderRadius: 8, paddingHorizontal: 12, paddingVertical: 9 },
   quantity: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   flex: { flex: 1, minWidth: 0 },

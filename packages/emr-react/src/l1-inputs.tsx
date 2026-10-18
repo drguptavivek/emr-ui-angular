@@ -3,7 +3,7 @@
 import { useEffect, useId, useState } from 'react';
 import { Pressable, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
 import type { ClinicalOption } from '@drguptavivek/emr-controller';
-import { EmrTypedText, NumberInput, ThemedInput, type ThemedInputProps } from './inputs-core';
+import { EmrDateTimeText, EmrTypedText, NumberInput, ThemedInput, type ThemedInputProps } from './inputs-core';
 import {
   formatDate, formatTime, joinDateTime, parseDateText, parseTimeText, sanitizeDateText, sanitizeTimeText, splitDateTime,
   type DateDisplayFormat, type TextParse,
@@ -14,7 +14,7 @@ import { focusRing, fontFamily, fontWeight, useEmrTheme } from './theme';
 import { EmrFieldFrame } from './typed-field';
 
 /** Built-in strings these inputs render. Override per locale via the matching prop; ponytail: fold into labels.tsx. */
-const DEFAULTS = { unitLabel: 'unit', dateLabel: 'Date', timeLabel: 'Time' } as const;
+const DEFAULTS = { unitLabel: 'unit' } as const;
 
 type PressState = PressableStateCallbackType & { focused?: boolean };
 
@@ -100,7 +100,7 @@ export function EmrDateInput(p: EmrFieldProps & {
   onValueChange: (value: string | null) => void;
 }) {
   const { id, input } = useControl(p);
-  const format = p.displayFormat ?? 'dd-mm-yyyy';
+  const format = p.displayFormat ?? useEmrLabels().dateFormat;
   return (
     <Frame id={id} p={p}>
       {/* key: switching the display order re-seeds the draft from the value. */}
@@ -120,6 +120,7 @@ export function EmrTimeInput(p: EmrFieldProps & { value: string | null; onValueC
 }
 
 /** Date + time pair. `value` is `YYYY-MM-DDTHH:mm` (no zone); one half alone emits null. */
+/** Date + time of a UTC instant: `value` is ISO-8601 with Z; shown and typed as local date and time. */
 export function EmrDateTimeInput(p: EmrFieldProps & {
   value: string | null;
   displayFormat?: DateDisplayFormat;
@@ -127,30 +128,13 @@ export function EmrDateTimeInput(p: EmrFieldProps & {
   timeLabel?: string;
   onValueChange: (value: string | null) => void;
 }) {
-  const { id, input } = useControl(p);
-  const format = p.displayFormat ?? 'dd-mm-yyyy';
-  const dateLabel = p.dateLabel ?? DEFAULTS.dateLabel;
-  const timeLabel = p.timeLabel ?? DEFAULTS.timeLabel;
-  const [parts, setParts] = useState(() => splitDateTime(p.value));
-  useEffect(() => setParts(current => (joinDateTime(current.date, current.time) === p.value ? current : splitDateTime(p.value))), [p.value]);
-  const change = (next: typeof parts) => {
-    setParts(next);
-    const joined = joinDateTime(next.date, next.time);
-    if (joined !== joinDateTime(parts.date, parts.time)) p.onValueChange(joined);
-  };
-  const { 'aria-labelledby': _labelledBy, ...rest } = input;
+  const { id } = useControl(p);
+  const labels = useEmrLabels();
   return (
     <Frame id={id} p={p}>
-      <View role="group" aria-labelledby={p.labelHidden ? undefined : `${id}-label`} aria-label={input['aria-label']} style={styles.pair}>
-        <View style={[styles.flex, { flexGrow: 2 }]}>
-          <EmrTypedText key={format} {...rest} aria-label={`${p.label}, ${dateLabel}`} placeholder={format} mode={format} value={parts.date}
-            onValueChange={date => change({ ...parts, date })} />
-        </View>
-        <View style={styles.flex}>
-          <EmrTypedText {...rest} id={`${id}-time`} aria-label={`${p.label}, ${timeLabel}`} placeholder="hh:mm" mode="time" value={parts.time}
-            onValueChange={time => change({ ...parts, time })} />
-        </View>
-      </View>
+      <EmrDateTimeText value={p.value} format={p.displayFormat ?? labels.dateFormat} label={p.label}
+        dateLabel={p.dateLabel ?? labels.dateLabel} timeLabel={p.timeLabel ?? labels.timeLabel}
+        invalid={!!p.error} readOnly={p.readOnly} editable={!p.disabled} onFocus={p.onFocus} onValueChange={p.onValueChange} />
     </Frame>
   );
 }

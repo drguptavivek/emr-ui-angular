@@ -2,7 +2,7 @@
 
 import type { ComponentType } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { EmrTypedText, NumberInput, ThemedInput, Unsupported } from './inputs-core';
+import { EmrDateTimeText, EmrTypedText, NumberInput, ThemedInput, Unsupported } from './inputs-core';
 import type {
   ClinicalAssessmentStatus,
   ClinicalFieldDefinition,
@@ -146,15 +146,21 @@ export function EmrTypedField({ definition, model, controlId, readOnly = false, 
     default: {
       if (definition.type === 'date' || definition.type === 'time') {
         // Day-first display, ISO value (same as EmrDateInput): keypad 05032026 → 2026-03-05; impossible dates never emit.
-        const mode = definition.type === 'time' ? 'time' : 'dd-mm-yyyy';
-        control = <EmrTypedText {...inputProps} mode={mode} placeholder={definition.placeholder ?? (mode === 'time' ? 'hh:mm' : 'dd-mm-yyyy')}
+        // Date order from the locale (labels provider); a time-only field stays local wall-clock HH:mm.
+        const mode = definition.type === 'time' ? 'time' : labels.dateFormat;
+        control = <EmrTypedText {...inputProps} mode={mode} placeholder={definition.placeholder ?? (mode === 'time' ? 'hh:mm' : mode)}
           value={textOf(model?.value) || null} onValueChange={onValueChange} />;
         break;
       }
-      // text, multiline, datetime. datetime stays ISO text until it gets a paired widget.
-      const format = { datetime: 'YYYY-MM-DDTHH:MM' }[definition.type as string];
+      if (definition.type === 'datetime') {
+        // UTC instant (ISO with Z) shown and typed as local date + time.
+        control = <EmrDateTimeText value={textOf(model?.value) || null} format={labels.dateFormat} label={definition.label}
+          dateLabel={labels.dateLabel} timeLabel={labels.timeLabel} invalid={!!model?.error} readOnly={isReadOnly} editable={!isDisabled}
+          onFocus={onFocus} onValueChange={onValueChange} />;
+        break;
+      }
       const multiline = definition.type === 'multiline';
-      control = <ThemedInput {...inputProps} placeholder={definition.placeholder ?? format} value={textOf(model?.value)}
+      control = <ThemedInput {...inputProps} placeholder={definition.placeholder} value={textOf(model?.value)}
         multiline={multiline} numberOfLines={multiline ? definition.rows ?? 3 : undefined}
         onChangeText={onValueChange} />;
     }
