@@ -8,6 +8,9 @@ import { gallery as stats } from './stats';
 import { gallery as l4Identity } from './l4-identity';
 import { gallery as l4History } from './l4-history';
 import { gallery as l4Desk } from './l4-desk';
+import { gallery as l4MobileShell } from './l4-mobile-shell';
+import { gallery as l4WebShell } from './l4-web-shell';
+import { gallery as dataTable } from './data-table';
 import type { GallerySection } from './types';
 
 export const galleryGroups: readonly { id: string; title: string; sections: readonly GallerySection[] }[] = [
@@ -21,4 +24,7 @@ export const galleryGroups: readonly { id: string; title: string; sections: read
   { id: 'l4-identity', title: 'L4 · Identity', sections: l4Identity },
   { id: 'l4-history', title: 'L4 · Patient history', sections: l4History },
   { id: 'l4-desk', title: 'L4 · Desk workflows', sections: l4Desk },
+  { id: 'l4-mobile-shell', title: 'L4 · Mobile shell', sections: l4MobileShell },
+  { id: 'l4-web-shell', title: 'L4 · Web shell', sections: l4WebShell },
+  { id: 'data-table', title: 'Web only · Data table', sections: dataTable },
 ];

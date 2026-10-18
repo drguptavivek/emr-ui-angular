@@ -1,0 +1,145 @@
+'use client';
+
+import { useMemo, type ReactNode } from 'react';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import type { EmrBadge, EmrOption, NavItem } from '@drguptavivek/emr-controller';
+import { EmrSearchSelect } from './l1-interactive';
+import { EmrLeftNav, type EmrLeftNavIntent } from './l4-web-shell-nav';
+import { EmrSheet } from './l4-shell-sheet';
+import { useContainerWidth } from './l4-lists-shared';
+import { EmrButton } from './primitives';
+import { fontFamily, fontWeight, useEmrTheme } from './theme';
+
+export * from './l4-web-shell-nav';
+
+/** English fallbacks for built-in strings. Every key is overridable via `labels`. */
+const DEFAULTS = {
+  openNavigation: 'Open navigation',
+  navigationTitle: 'Navigation',
+  navigation: 'Primary navigation',
+  search: 'Search',
+  searchPlaceholder: 'Search patients, barcodes, records',
+  noResults: 'No matching results',
+  userMenu: 'User menu',
+  main: 'Main content',
+  sidePanel: 'Side panel',
+};
+type Labels = Partial<typeof DEFAULTS>;
+
+export interface EmrSearchResult { id: string; label: string; sub?: string; badge?: EmrBadge }
+export interface EmrSearchGroup { id: string; label: string; results: readonly EmrSearchResult[] }
+
+export interface EmrTopBarModel {
+  /** Product title; `titleSlot` replaces it (logo, facility switcher). */
+  title?: string;
+  titleSlot?: ReactNode;
+  /** Visible name on the user-menu trigger. */
+  userLabel?: string;
+  /** Show the hamburger that opens the nav (the shell sets this below the wide breakpoint). */
+  showNavToggle?: boolean;
+  search: { query: string; open: boolean; loading?: boolean; groups: readonly EmrSearchGroup[] };
+}
+
+export type EmrTopBarIntent =
+  | { type: 'queryChanged'; query: string }
+  | { type: 'searchOpenRequested' }
+  | { type: 'searchCloseRequested' }
+  | { type: 'resultSelected'; groupId: string; id: string }
+  | { type: 'menuRequested' }
+  | { type: 'navToggleRequested' };
+
+const SEP = '\u001f';
+
+/**
+ * L4. Product title, global search and user-menu trigger. Results arrive grouped from props;
+ * EmrSearchSelect is flat, so each option's description carries "group · sub · badge".
+ * The search button re-emits queryChanged with the current query (Enter does too).
+ */
+export function EmrTopBar({ model, labels, onIntent }: { model: EmrTopBarModel; labels?: Labels; onIntent: (intent: EmrTopBarIntent) => void }) {
+  const t = useEmrTheme();
+  const l = { ...DEFAULTS, ...labels };
+  const { query, open, loading, groups } = model.search;
+  const options = useMemo<EmrOption[]>(() => groups.flatMap(g => g.results.map(r => ({
+    value: g.id + SEP + r.id,
+    label: r.label,
+    description: [g.label, r.sub, r.badge?.label].filter(Boolean).join(' · '),
+  }))), [groups]);
+  const pick = (value: string) => {
+    const at = value.indexOf(SEP);
+    onIntent({ type: 'resultSelected', groupId: value.slice(0, at), id: value.slice(at + 1) });
+  };
+  return (
+    <View role="banner" style={[styles.top, { backgroundColor: t.surface, borderBottomColor: t.border }]}>
+      {model.showNavToggle ? <EmrButton small variant="ghost" label="☰" accessibilityLabel={l.openNavigation} onPress={() => onIntent({ type: 'navToggleRequested' })} /> : null}
+      {model.titleSlot ?? (model.title ? <Text role="heading" style={{ color: t.text, fontSize: t.textLg, fontWeight: fontWeight(t.weightBold), fontFamily: fontFamily(t) }}>{model.title}</Text> : null)}
+      <View style={styles.search}>
+        <EmrSearchSelect label={l.search} labelHidden placeholder={l.searchPlaceholder} emptyMessage={l.noResults}
+          query={query} options={options} selected={[]} open={open} loading={loading}
+          onQueryChange={q => onIntent({ type: 'queryChanged', query: q })}
+          onSearchRequested={() => onIntent({ type: 'queryChanged', query })}
+          onOpenRequested={() => onIntent({ type: 'searchOpenRequested' })}
+          onCloseRequested={() => onIntent({ type: 'searchCloseRequested' })}
+          onOptionSelect={pick} onRemoveRequested={() => undefined} />
+      </View>
+      <EmrButton variant="outline" label={model.userLabel ?? l.userMenu} accessibilityLabel={l.userMenu} onPress={() => onIntent({ type: 'menuRequested' })} />
+    </View>
+  );
+}
+
+export interface EmrAppShellModel {
+  topBar: EmrTopBarModel;
+  nav: { title?: string; items: readonly NavItem[]; activeId?: string; expandedIds: readonly string[] };
+  /** Whether the nav drawer is open below the wide breakpoint; ignored above it. */
+  navOpen: boolean;
+}
+
+/** Everything the shell can ask for. Sheet close and the hamburger both mean "toggle the drawer". */
+export type EmrAppShellIntent = EmrTopBarIntent | EmrLeftNavIntent;
+
+/**
+ * L4. Port of EmrAppShell: top bar, nav, main content, optional right panel.
+ * At container width >= `wideBreakpoint` (default 1024) the nav is a persistent column;
+ * below it the nav lives in an EmrSheet driven by `model.navOpen`. Unmeasured counts as wide.
+ */
+export function EmrAppShell({ model, rightPanel, wideBreakpoint = 1024, labels, onIntent, children }: {
+  model: EmrAppShellModel;
+  rightPanel?: ReactNode;
+  wideBreakpoint?: number;
+  labels?: Labels;
+  onIntent: (intent: EmrAppShellIntent) => void;
+  children?: ReactNode;
+}) {
+  const t = useEmrTheme();
+  const l = { ...DEFAULTS, ...labels };
+  const { width, onLayout } = useContainerWidth();
+  const wide = width === null || width >= wideBreakpoint;
+  const nav = (
+    <EmrLeftNav items={model.nav.items} activeId={model.nav.activeId} expandedIds={model.nav.expandedIds} labels={{ navigation: l.navigation }} onIntent={onIntent} />
+  );
+  return (
+    <View onLayout={onLayout} style={[styles.root, { backgroundColor: t.surfaceSoft }]}>
+      <EmrTopBar model={{ ...model.topBar, showNavToggle: !wide }} labels={labels} onIntent={onIntent} />
+      <View style={[styles.body, !wide && styles.stack]}>
+        {wide ? <View style={[styles.nav, { backgroundColor: t.surface, borderRightColor: t.border }]}>{nav}</View> : null}
+        <ScrollView role="main" aria-label={l.main} style={styles.main} contentContainerStyle={styles.mainContent}>{children}</ScrollView>
+        {rightPanel ? <View role="complementary" aria-label={l.sidePanel} style={[wide ? styles.right : styles.rightStack, { backgroundColor: t.surface, borderColor: t.border }]}>{rightPanel}</View> : null}
+      </View>
+      {wide ? null : (
+        <EmrSheet open={model.navOpen} title={model.nav.title ?? l.navigationTitle} onIntent={() => onIntent({ type: 'navToggleRequested' })}>{nav}</EmrSheet>
+      )}
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  root: { flex: 1, minHeight: 0 },
+  top: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingHorizontal: 12, paddingVertical: 8, borderBottomWidth: 1, zIndex: 2 },
+  search: { flex: 1, maxWidth: 560 },
+  body: { flex: 1, flexDirection: 'row', minHeight: 0 },
+  stack: { flexDirection: 'column' },
+  nav: { width: 260, borderRightWidth: 1 },
+  main: { flex: 1 },
+  mainContent: { padding: 16 },
+  right: { width: 320, borderLeftWidth: 1 },
+  rightStack: { borderTopWidth: 1 },
+});

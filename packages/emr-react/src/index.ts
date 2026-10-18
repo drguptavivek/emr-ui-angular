@@ -16,4 +16,7 @@ export * from './l4-lists';
 export * from './l4-identity';
 export * from './l4-history';
 export * from './l4-desk';
+export * from './l4-mobile-shell';
+export * from './l4-web-shell';
+export * from './data-table';
 export { isFieldShown, isSectionShown } from './typed-field.logic';
