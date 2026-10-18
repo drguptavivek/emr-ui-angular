@@ -72,3 +72,33 @@ export interface FieldGeneratorControllerOptions {
   terminology: import('./terminology.models.js').TerminologySearchPort;
   repository?: FieldDefinitionRepositoryPort;
 }
+
+export interface TerminologySearchViewModel {
+  readonly role: TerminologyBindingRole;
+  readonly sources: readonly import('./terminology.models.js').TerminologySource[];
+  readonly search?: TerminologySearchState;
+  readonly bindings: readonly TerminologyBinding[];
+  readonly readOnly?: boolean;
+}
+
+export type TerminologySearchIntent = Extract<
+  FieldGeneratorIntent,
+  | { type: 'terminologySearchOpened' }
+  | { type: 'terminologyQueryChanged' }
+  | { type: 'terminologySearchRequested' }
+  | { type: 'terminologyPageChanged' }
+  | { type: 'terminologyRetryRequested' }
+  | { type: 'terminologyConceptSelected' }
+  | { type: 'terminologyBindingRemoved' }
+>;
+
+export interface ValidationRuleEditorViewModel {
+  readonly rules: readonly FieldValidationRule[];
+  readonly readOnly?: boolean;
+}
+
+export type ValidationRuleEditorIntent = Extract<
+  FieldGeneratorIntent,
+  | { type: 'validationRuleAdded' }
+  | { type: 'validationRuleRemoved' }
+>;

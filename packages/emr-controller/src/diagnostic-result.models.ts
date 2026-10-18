@@ -35,3 +35,6 @@ export type DiagnosticResultIntent =
   | { type: 'attachmentRequested'; resultId: string; attachmentId: string }
   | { type: 'resultSelected'; resultId: string }
   | { type: 'retryRequested'; resultId: string };
+
+export type DiagnosticResultSummaryViewModel = DiagnosticResultViewModel;
+export type DiagnosticResultSummaryIntent = DiagnosticResultIntent;

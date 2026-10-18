@@ -89,3 +89,22 @@ export interface EhrTemplateControllerOptions {
   artifactPort?: TemplateArtifactPort;
   repository?: EhrTemplateRepositoryPort;
 }
+
+export interface FieldLibraryPickerViewModel {
+  readonly fields: readonly EmrGeneratedFieldDefinition[];
+  readonly query: string;
+  readonly selectedSectionId?: string;
+  readonly readOnly?: boolean;
+}
+
+export type FieldLibraryPickerIntent = Extract<
+  EhrTemplateIntent,
+  | { type: 'fieldLibraryQueryChanged' }
+  | { type: 'fieldAdded' }
+>;
+
+export type TemplatePreviewViewModel = EhrTemplateViewModel;
+export type TemplatePreviewIntent = EhrTemplateIntent;
+
+export type TemplateComposerViewModel = EhrTemplateViewModel;
+export type TemplateComposerIntent = EhrTemplateIntent;

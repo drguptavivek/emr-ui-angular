@@ -37,3 +37,6 @@ export interface OcularMotilityViewModel {
 export type OcularMotilityIntent =
   | { readonly type: 'cellSelected'; readonly eyeId: string; readonly position: GazePosition }
   | { readonly type: 'cellEditRequested'; readonly eyeId: string; readonly position: GazePosition };
+
+export type OcularMotilityChartViewModel = OcularMotilityViewModel;
+export type OcularMotilityChartIntent = OcularMotilityIntent;

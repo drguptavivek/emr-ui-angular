@@ -12,14 +12,24 @@ import type {
   EmrGeneratedFieldDefinition,
   FieldGeneratorIntent,
   FieldGeneratorViewModel,
+  FieldLibraryPickerIntent,
+  FieldLibraryPickerViewModel,
   FieldValidationRule,
   TemplateArtifactFormat,
+  TemplateComposerIntent,
+  TemplateComposerViewModel,
+  TemplatePreviewIntent,
+  TemplatePreviewViewModel,
   TerminologyBinding,
   TerminologyBindingRole,
   TerminologyBindingStrength,
   TerminologyMappingRelationship,
+  TerminologySearchIntent,
   TerminologySearchState,
+  TerminologySearchViewModel,
   TerminologySource,
+  ValidationRuleEditorIntent,
+  ValidationRuleEditorViewModel,
 } from '@drguptavivek/emr-controller';
 import { EmrClinicalForm } from './clinical-form';
 import { NumberInput, ThemedInput } from './inputs-core';
@@ -41,58 +51,18 @@ import { EmrTypedField } from './typed-field';
 
 type PressState = PressableStateCallbackType & { focused?: boolean };
 
-// ---------------------------------------------------------------------------
-// View models & Intents for standalone L6 surfaces
-// ---------------------------------------------------------------------------
-
-export interface TerminologySearchViewModel {
-  readonly role: TerminologyBindingRole;
-  readonly sources: readonly TerminologySource[];
-  readonly search?: TerminologySearchState;
-  readonly bindings: readonly TerminologyBinding[];
-  readonly readOnly?: boolean;
-}
-
-export type TerminologySearchIntent = Extract<
-  FieldGeneratorIntent,
-  | { type: 'terminologySearchOpened' }
-  | { type: 'terminologyQueryChanged' }
-  | { type: 'terminologySearchRequested' }
-  | { type: 'terminologyPageChanged' }
-  | { type: 'terminologyRetryRequested' }
-  | { type: 'terminologyConceptSelected' }
-  | { type: 'terminologyBindingRemoved' }
->;
-
-export interface ValidationRuleEditorViewModel {
-  readonly rules: readonly FieldValidationRule[];
-  readonly readOnly?: boolean;
-}
-
-export type ValidationRuleEditorIntent = Extract<
-  FieldGeneratorIntent,
-  | { type: 'validationRuleAdded' }
-  | { type: 'validationRuleRemoved' }
->;
-
-export interface FieldLibraryPickerViewModel {
-  readonly fields: readonly EmrGeneratedFieldDefinition[];
-  readonly query: string;
-  readonly selectedSectionId?: string;
-  readonly readOnly?: boolean;
-}
-
-export type FieldLibraryPickerIntent = Extract<
-  EhrTemplateIntent,
-  | { type: 'fieldLibraryQueryChanged' }
-  | { type: 'fieldAdded' }
->;
-
-export type TemplatePreviewViewModel = EhrTemplateViewModel;
-export type TemplatePreviewIntent = EhrTemplateIntent;
-
-export type TemplateComposerViewModel = EhrTemplateViewModel;
-export type TemplateComposerIntent = EhrTemplateIntent;
+export type {
+  FieldLibraryPickerIntent,
+  FieldLibraryPickerViewModel,
+  TemplateComposerIntent,
+  TemplateComposerViewModel,
+  TemplatePreviewIntent,
+  TemplatePreviewViewModel,
+  TerminologySearchIntent,
+  TerminologySearchViewModel,
+  ValidationRuleEditorIntent,
+  ValidationRuleEditorViewModel,
+};
 
 // ---------------------------------------------------------------------------
 // Defaults (overridable via `labels` prop)

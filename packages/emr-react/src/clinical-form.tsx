@@ -12,6 +12,7 @@ import type {
   RepeatableItemState,
 } from '@drguptavivek/emr-controller';
 import { useEmrLabels } from './labels';
+import { EmrRepeatableGroup } from './l3-annotation';
 import { EmrBadgeView, EmrButton } from './primitives';
 import { fontFamily, fontWeight, useEmrTheme } from './theme';
 import { EmrTypedField, type EmrCustomRenderers } from './typed-field';
@@ -61,7 +62,6 @@ export function EmrClinicalForm({ model, onIntent, idPrefix = '', customRenderer
   customRenderers?: EmrCustomRenderers;
 }) {
   const t = useEmrTheme();
-  const labels = useEmrLabels();
   const [width, setWidth] = useState(0);
   const stacked = width > 0 && width < STACK_BELOW;
   const schemaId = model.schema.id;
@@ -153,38 +153,16 @@ export function EmrClinicalForm({ model, onIntent, idPrefix = '', customRenderer
                 const state = model.fields[block.id];
                 return isFieldShown(state) ? fieldCell(block, state, model.readOnly ?? false) : null;
               }
-              const items = model.repeatableGroups[block.id] ?? [];
               return (
                 <View key={block.id} style={[styles.cell, styles.full]}>
-                  <View style={[styles.repeatable, { borderColor: t.border, backgroundColor: t.surfaceSlate }]}>
-                    <View style={styles.repeatHeading}>
-                      <View style={styles.flex}>
-                        <Text role="heading" aria-level={3} style={{ color: t.text, fontSize: t.textLg, fontWeight: fontWeight(t.weightBold), fontFamily: fontFamily(t) }}>{block.label}</Text>
-                        {block.description ? <Text style={{ color: t.textMuted, fontSize: t.textMd, fontFamily: fontFamily(t) }}>{block.description}</Text> : null}
-                      </View>
-                      <EmrButton variant="outline" small label={block.addLabel ?? labels.add} disabled={model.readOnly}
-                        onPress={() => onIntent({ type: 'repeatItemAddRequested', groupId: block.id })} />
-                    </View>
-                    {items.length === 0 ? <Text style={{ color: t.textMuted, fontSize: t.textMd, fontFamily: fontFamily(t), marginTop: 12 }}>{labels.noEntries}</Text> : null}
-                    {items.map((item, index) => {
-                      const itemLabel = item.label ?? labels.entry(index + 1);
-                      return (
-                        <View key={item.id} style={[styles.repeatItem, { borderColor: t.border, backgroundColor: t.surface }]}>
-                          <View style={styles.repeatHeading}>
-                            <Text style={{ color: t.text, fontSize: t.textMd, fontWeight: fontWeight(600), fontFamily: fontFamily(t) }}>{itemLabel}</Text>
-                            <EmrButton variant="ghost" small label={labels.remove} accessibilityLabel={`${labels.remove} ${itemLabel}`}
-                              disabled={model.readOnly || item.readOnly}
-                              onPress={() => onIntent({ type: 'repeatItemRemoveRequested', groupId: block.id, itemId: item.id })} />
-                          </View>
-                          <View style={styles.grid}>
-                            {block.fields.map(field => isFieldShown(item.fields[field.id])
-                              ? fieldCell(field, item.fields[field.id], !!(model.readOnly || item.readOnly), item, block.id)
-                              : null)}
-                          </View>
-                        </View>
-                      );
-                    })}
-                  </View>
+                  <EmrRepeatableGroup
+                    definition={block}
+                    model={model.repeatableGroups[block.id]}
+                    readOnly={model.readOnly}
+                    idPrefix={domId(schemaId)}
+                    customRenderers={customRenderers}
+                    onIntent={onIntent}
+                  />
                 </View>
               );
             })}
@@ -208,13 +186,10 @@ const styles = StyleSheet.create({
   grid: { flexDirection: 'row', flexWrap: 'wrap', marginHorizontal: -GAP / 2, rowGap: GAP },
   cell: { paddingHorizontal: GAP / 2, minWidth: 0 },
   full: { width: '100%' },
-  repeatable: { borderWidth: 1, borderRadius: 8, padding: 16 },
-  repeatHeading: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 },
   matrix: { gap: 8 },
   matrixRow: { flexDirection: 'row', gap: GAP, alignItems: 'flex-start' },
   matrixRowWrap: { borderTopWidth: StyleSheet.hairlineWidth, paddingTop: 8, gap: 6 },
   matrixCells: { flex: 1, minWidth: 0, flexDirection: 'row', gap: GAP, alignItems: 'flex-start' },
   matrixCell: { flex: 1, minWidth: 0 },
   matrixRowLabel: { width: '22%', paddingTop: 12 },
-  repeatItem: { marginTop: 12, padding: 12, borderWidth: 1, borderRadius: 8, gap: 12 },
 });

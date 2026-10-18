@@ -63,3 +63,6 @@ export type FlowsheetIntent =
   | { readonly type: 'columnAddRequested' }
   | { readonly type: 'rowSelected'; readonly rowId: string }
   | { readonly type: 'retryRequested' };
+
+export type ObservationFlowsheetViewModel = FlowsheetViewModel;
+export type ObservationFlowsheetIntent = FlowsheetIntent;

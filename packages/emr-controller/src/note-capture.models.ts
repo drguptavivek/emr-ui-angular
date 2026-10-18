@@ -103,3 +103,8 @@ export interface NoteCaptureSummary {
   readonly spans: readonly EvidenceSpan[];
   readonly suggestions: readonly FieldSuggestion[];
 }
+
+export type ClinicalTranscriptViewModel = NoteCaptureViewModel;
+export type ClinicalTranscriptIntent = NoteCaptureIntent;
+export type EvidenceSuggestionListViewModel = NoteCaptureViewModel;
+export type EvidenceSuggestionListIntent = NoteCaptureIntent;
