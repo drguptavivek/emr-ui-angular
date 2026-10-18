@@ -2,6 +2,12 @@
 
 Current state and pending work live in `handoff.md`. Exact changes and authorship live in Git.
 
+## 18 October 2026 — VCMS D14–D16 (React Native; Angular deferred)
+
+- Contracts in emr-controller: `IdentifierEntryView`, `IdentifierCheckViewModel`, `LinkCardsViewModel` (identity.models); `MergeCompareViewModel` (2–4 sources, breaking: replaces left/right), `ContactAttemptViewModel.consequence`, `DraftRecordListViewModel` (workflow.models); `ClinicalFormViewModel.correction` + `correctionRequested`.
+- emr-react: `EmrLinkCards` (typed or scanned entry, Enter adds the card, same-person / not-same, primary card), N-way `EmrMergeCompare`, `EmrDraftRecordList` (move / discard with confirm), contact-attempt consequence alert, form "request correction" action; `EmrBarcodeScanField` gains `onSubmit`.
+- Angular twins were started and then deferred at the user's request; the uncommitted work is parked in `.claude/angular-parked/`.
+
 ## 18 October 2026 — consent and privacy self-service (Angular + React Native)
 
 - **Shared contracts in emr-controller**: `identity.models` (PatientIdentityViewModel, with `alerts`), `consent.models` (capture, review, receipt, status, `PendingConfirmation`), `privacy.models` (sharing grants, access log, rights requests, privacy centre). Both renderers use these.

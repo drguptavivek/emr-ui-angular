@@ -17,6 +17,7 @@ export * from './form-logic.js';
 export * from './identity.models.js';
 export * from './consent.models.js';
 export * from './privacy.models.js';
+export * from './workflow.models.js';
 export * from './checklist.models.js';
 export * from './family-history.models.js';
 export * from './documents.models.js';

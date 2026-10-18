@@ -26,4 +26,6 @@ export * from './l4-consent';
 export * from './l4-consent-review';
 export * from './l4-contact';
 export * from './l4-privacy';
+export * from './l4-cards';
+export * from './l4-drafts';
 export { isFieldShown, isSectionShown } from './typed-field.logic';

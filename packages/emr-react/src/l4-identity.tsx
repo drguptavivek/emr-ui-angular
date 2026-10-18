@@ -2,7 +2,10 @@
 
 import { useId } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import type { EmrTone, PatientIdentityIntent, PatientIdentityViewModel } from '@drguptavivek/emr-controller';
+import type {
+  EmrTone, IdentifierCheckIntent, IdentifierCheckViewModel, IdentifierEntryIntent, IdentifierEntryView, IdentifierFindingKind,
+  IdentifierFindingView, PatientIdentityIntent, PatientIdentityViewModel,
+} from '@drguptavivek/emr-controller';
 import { EmrChip, EmrAlert, EmrCard } from './l1-display';
 import { EmrCheckbox } from './l1-inputs';
 import { ThemedInput } from './inputs-core';
@@ -34,51 +37,22 @@ export type EmrIdentityLabels = typeof DEFAULTS;
 
 // ---- Models and intents (pre-resolved strings; the controller owns every rule) ----
 
-export interface EmrBarcodeScanFieldProps {
-  value: string;
+export type EmrBarcodeScanFieldProps = IdentifierEntryView & {
   onValueChange: (raw: string) => void;
-  normalisedValue?: string;
-  error?: string;
-  warning?: string;
-  label: string;
-  hint?: string;
-  readOnly?: boolean;
-  typeOptions?: { id: string; label: string }[];
-  selectedType?: string;
+  /** Keyboard "done"/Enter: the app treats it as "use this value" (e.g. add the card). */
+  onSubmit?: () => void;
   labels?: Partial<EmrIdentityLabels>;
   onIntent: (intent: EmrBarcodeScanIntent) => void;
-}
-export type EmrBarcodeScanIntent = { type: 'scanRequested' } | { type: 'typeSelected'; id: string };
+};
+export type EmrBarcodeScanIntent = IdentifierEntryIntent;
 
 export type EmrPatientIdentity = PatientIdentityViewModel;
 export type EmrPatientIdentityIntent = PatientIdentityIntent;
 
-export type EmrIdentifierFindingKind = 'on_other_patient' | 'demographic_mismatch' | 'same_type_exists' | 'possible_duplicate';
-export interface EmrIdentifierFinding {
-  id: string;
-  kind: EmrIdentifierFindingKind;
-  message: string;
-  evidence: { label: string; value: string }[];
-  candidate?: EmrPatientIdentity & { id: string };
-  acknowledged?: boolean;
-}
-export interface EmrIdentifierCheckModel {
-  identifier: { label: string; display: string };
-  outcome: 'blocked' | 'warnings' | 'ok';
-  findings: EmrIdentifierFinding[];
-  canConfirm: boolean;
-  /** Controller-decided: offered when the patient already holds this identifier type. */
-  canAddAsAdditional?: boolean;
-  canReplaceExisting?: boolean;
-}
-export type EmrIdentifierCheckIntent =
-  | { type: 'findingAcknowledged'; findingId: string }
-  | { type: 'confirmRequested' }
-  | { type: 'mergeRequested'; candidateId: string }
-  | { type: 'reenterRequested' }
-  | { type: 'addAsAdditional' }
-  | { type: 'replaceExisting' }
-  | { type: 'cancelled' };
+export type EmrIdentifierFindingKind = IdentifierFindingKind;
+export type EmrIdentifierFinding = IdentifierFindingView;
+export type EmrIdentifierCheckModel = IdentifierCheckViewModel;
+export type EmrIdentifierCheckIntent = IdentifierCheckIntent;
 
 function useText() {
   const t = useEmrTheme();
@@ -87,7 +61,7 @@ function useText() {
 }
 
 /** L2. Raw text entry plus a Scan request; the app owns the camera and the normaliser. No format rules here. */
-export function EmrBarcodeScanField({ value, onValueChange, normalisedValue, error, warning, label, hint, readOnly, typeOptions, selectedType, labels, onIntent }: EmrBarcodeScanFieldProps) {
+export function EmrBarcodeScanField({ value, onValueChange, onSubmit, normalisedValue, error, warning, label, hint, readOnly, typeOptions, selectedType, labels, onIntent }: EmrBarcodeScanFieldProps) {
   const { t, muted } = useText();
   const l = { ...DEFAULTS, ...labels };
   const id = useId();
@@ -108,7 +82,8 @@ export function EmrBarcodeScanField({ value, onValueChange, normalisedValue, err
         <View style={styles.grow}>
           <ThemedInput nativeID={id} aria-labelledby={`${id}-label`} aria-describedby={hasMessage ? `${id}-message` : undefined}
             value={value} onChangeText={onValueChange} invalid={!!error} readOnly={readOnly}
-            autoCapitalize="characters" autoCorrect={false} spellCheck={false} />
+            autoCapitalize="characters" autoCorrect={false} spellCheck={false}
+            returnKeyType={onSubmit ? 'done' : undefined} blurOnSubmit={false} onSubmitEditing={onSubmit ? () => onSubmit() : undefined} />
         </View>
         {readOnly ? null : <EmrButton variant="outline" label={l.scan} accessibilityLabel={`${l.scan}: ${label}`} onPress={() => onIntent({ type: 'scanRequested' })} />}
       </View>

@@ -33,6 +33,7 @@ function FormDemo() {
         reached: s.reached,
         outcomeOptions: [{ id: 'coming', label: 'Will come' }, { id: 'later', label: 'Call later' }, { id: 'nr', label: 'Not reachable' }, { id: 'wrong', label: 'Wrong number' }],
         selectedOutcome: s.outcome,
+        consequence: s.outcome === 'wrong' ? 'Reminders to this number will stop.' : undefined,
         nextActionDate: s.next,
         note: s.note,
         canSubmit,

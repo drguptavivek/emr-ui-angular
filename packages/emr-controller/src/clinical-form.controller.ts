@@ -46,6 +46,8 @@ export class ClinicalFormController extends StateController<ClinicalFormViewMode
       case 'sectionToggleRequested':
         this.toggleSection(intent.sectionId);
         return;
+      case 'correctionRequested':
+        return; // the app files the correction request; the form state does not change
     }
   }
 

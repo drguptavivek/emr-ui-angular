@@ -2,7 +2,7 @@
 
 import { useId } from 'react';
 import { Pressable, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { EmrBadge } from '@drguptavivek/emr-controller';
+import type { ContactAttemptIntent, ContactAttemptSummaryIntent, ContactAttemptSummaryView, ContactAttemptViewModel } from '@drguptavivek/emr-controller';
 import { ThemedInput } from './inputs-core';
 import { EmrDateInput, EmrRadioGroup, EmrToggle } from './l1-inputs';
 import { EmrAlert, EmrCard } from './l1-display';
@@ -24,37 +24,11 @@ const DEFAULTS = {
 };
 export type EmrContactLabels = typeof DEFAULTS;
 
-type Option = { id: string; label: string };
-const opts = (o: readonly Option[]) => o.map(x => ({ value: x.id, label: x.label }));
+const opts = (o: readonly { id: string; label: string }[]) => o.map(x => ({ value: x.id, label: x.label }));
 
-/** One call / message attempt (VCMS D11). Every string and `canSubmit` come from the app; the app dials. */
-export interface EmrContactAttemptModel {
-  reasonLabel: string;
-  numberOptions: Option[];
-  selectedNumber?: string;
-  channelOptions: Option[];
-  selectedChannel?: string;
-  reached?: boolean;
-  outcomeOptions: Option[];
-  selectedOutcome?: string;
-  /** ISO YYYY-MM-DD. */
-  nextActionDate?: string;
-  nextActionDateError?: string;
-  note?: string;
-  canSubmit: boolean;
-  submitError?: string;
-}
-
-export type EmrContactAttemptIntent =
-  | { type: 'numberSelected'; id: string }
-  | { type: 'channelSelected'; id: string }
-  | { type: 'reachedChanged'; reached: boolean }
-  | { type: 'outcomeSelected'; id: string }
-  | { type: 'nextActionDateChanged'; date: string | null }
-  | { type: 'noteChanged'; note: string }
-  | { type: 'callRequested'; numberId: string }
-  | { type: 'submitRequested' }
-  | { type: 'cancelled' };
+/** One call / message attempt (VCMS D11). Every string, `consequence` and `canSubmit` come from the app; the app dials. */
+export type EmrContactAttemptModel = ContactAttemptViewModel;
+export type EmrContactAttemptIntent = ContactAttemptIntent;
 
 /** L4. Log a contact attempt: number (with a Call action), channel, reached, outcome, next action date, note. */
 export function EmrContactAttemptForm({ model: m, labels, onIntent }: {
@@ -78,6 +52,7 @@ export function EmrContactAttemptForm({ model: m, labels, onIntent }: {
         <EmrToggle label={l.reached} value={m.reached ?? false} onValueChange={reached => onIntent({ type: 'reachedChanged', reached })} />
         <EmrRadioGroup label={l.outcome} options={opts(m.outcomeOptions)} value={m.selectedOutcome ?? null}
           onValueChange={id => onIntent({ type: 'outcomeSelected', id })} />
+        {m.consequence ? <EmrAlert tone="info">{m.consequence}</EmrAlert> : null}
         <EmrDateInput label={l.nextActionDate} value={m.nextActionDate ?? null} error={m.nextActionDateError}
           onValueChange={date => onIntent({ type: 'nextActionDateChanged', date })} />
         <EmrFieldFrame label={l.note} controlId={noteId}>
@@ -95,11 +70,7 @@ export function EmrContactAttemptForm({ model: m, labels, onIntent }: {
 }
 
 /** Compact last-attempt row for worklists and the patient hub; `text` is fully pre-resolved by the app. */
-export interface EmrContactAttemptSummaryModel {
-  /** e.g. "Last call 12-10-2026 · not reachable · 3 attempts · next 15-10-2026". */
-  text: string;
-  statusBadge?: EmrBadge;
-}
+export type EmrContactAttemptSummaryModel = ContactAttemptSummaryView;
 
 type PressState = PressableStateCallbackType & { focused?: boolean };
 
@@ -107,7 +78,7 @@ type PressState = PressableStateCallbackType & { focused?: boolean };
 export function EmrContactAttemptSummary({ model, labels, onIntent }: {
   model: EmrContactAttemptSummaryModel;
   labels?: Partial<EmrContactLabels>;
-  onIntent?: (intent: { type: 'logAttemptRequested' }) => void;
+  onIntent?: (intent: ContactAttemptSummaryIntent) => void;
 }) {
   const t = useEmrTheme();
   const l = { ...DEFAULTS, ...labels };

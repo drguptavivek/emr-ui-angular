@@ -2,42 +2,38 @@
 
 import { useState } from 'react';
 import { Text, View } from 'react-native';
-import { EmrMergeCompare, type EmrMergeIntent, type EmrMergeRow, type EmrMergeSide } from '../../src/l4-merge';
+import { EmrMergeCompare, type EmrMergeIntent, type EmrMergeRow } from '../../src/l4-merge';
 import type { GallerySection } from './types';
 
-const identity = (id: string, name: string, ageLabel: string, sexLabel: string, phone: string) => ({
-  id, name, ageLabel, sexLabel, phone,
-  identifiers: [{ system: 'mrn', label: 'MRN', display: id === 'a' ? 'TEST-000001' : 'TEST-000002' }],
+const NAMES = ['Test Patient A', 'Test Patient A.', 'Test Patiant A'];
+const source = (i: number) => ({
+  id: `s${i}`, label: `Record ${'ABC'[i]}`, name: NAMES[i]!, ageLabel: ['54 y', '45 y', '54 y'][i], sexLabel: ['F', 'M', 'F'][i],
+  identifiers: [{ system: 'mrn', label: 'MRN', display: `TEST-00000${i + 1}` }],
 });
+const ROWS = [
+  { id: 'name', label: 'Name', values: { s0: NAMES[0]!, s1: NAMES[1]!, s2: NAMES[2]! }, differs: true },
+  { id: 'age', label: 'Age', values: { s0: '54 y', s1: '45 y', s2: '54 y' }, differs: true },
+  { id: 'phone', label: 'Phone', values: { s0: '555-0100', s1: '555-0199', s2: '555-0100' }, differs: true },
+  { id: 'centre', label: 'Centre', values: { s0: 'Test Centre', s1: 'Test Centre', s2: 'Test Centre' }, differs: false },
+] satisfies Omit<EmrMergeRow, 'chosenSourceId'>[];
 
-const ROWS: Omit<EmrMergeRow, 'chosen'>[] = [
-  { id: 'name', label: 'Name', leftValue: 'Test Patient A', rightValue: 'Test Patient A.', differs: true },
-  { id: 'age', label: 'Age', leftValue: '54 y', rightValue: '45 y', differs: true },
-  { id: 'sex', label: 'Sex', leftValue: 'Female', rightValue: 'Male', differs: true },
-  { id: 'phone', label: 'Phone', leftValue: '555-0100', rightValue: '555-0199', differs: true },
-  { id: 'centre', label: 'Centre', leftValue: 'Test Centre', rightValue: 'Test Centre', differs: false },
-];
-
-function Demo({ narrow }: { narrow?: boolean }) {
-  const [survivor, setSurvivor] = useState<EmrMergeSide>();
-  const [chosen, setChosen] = useState<Record<string, EmrMergeSide>>({});
+function Demo({ count, narrow }: { count: 2 | 3; narrow?: boolean }) {
+  const [survivor, setSurvivor] = useState<string>();
+  const [chosen, setChosen] = useState<Record<string, string>>({});
   const [last, setLast] = useState('');
-  const rows = ROWS.map(r => ({ ...r, chosen: chosen[r.id] }));
+  const sources = [0, 1, 2].slice(0, count).map(source);
+  const rows = ROWS.map(r => ({ ...r, values: Object.fromEntries(sources.map(s => [s.id, (r.values as Record<string, string>)[s.id]!])), chosenSourceId: chosen[r.id] }));
   // Demo plays controller: the real domain decides differs and canConfirm.
-  const canConfirm = !!survivor && rows.every(r => !r.differs || r.chosen);
+  const canConfirm = !!survivor && rows.every(r => !r.differs || r.chosenSourceId);
   const onIntent = (i: EmrMergeIntent) => {
-    if (i.type === 'fieldChosen') setChosen(c => ({ ...c, [i.rowId]: i.side }));
-    else if (i.type === 'survivorChosen') setSurvivor(i.side);
+    if (i.type === 'fieldChosen') setChosen(c => ({ ...c, [i.rowId]: i.sourceId }));
+    else if (i.type === 'survivorChosen') setSurvivor(i.sourceId);
     else setLast(i.type);
   };
   return (
     <>
       <View style={{ maxWidth: narrow ? 360 : undefined }}>
-        <EmrMergeCompare onIntent={onIntent} model={{
-          left: identity('a', 'Test Patient A', '54 y', 'F', '555-0100'),
-          right: identity('b', 'Test Patient A.', '45 y', 'M', '555-0199'),
-          rows, survivorSide: survivor, canConfirm,
-        }} />
+        <EmrMergeCompare onIntent={onIntent} model={{ sources, rows, survivorSourceId: survivor, canConfirm }} />
       </View>
       {last ? <Text>Last intent: {last}</Text> : null}
     </>
@@ -45,6 +41,8 @@ function Demo({ narrow }: { narrow?: boolean }) {
 }
 
 export const gallery: GallerySection[] = [
-  { id: 'l4-merge', title: 'L4 merge compare (wide)', render: () => <Demo /> },
-  { id: 'l4-merge-narrow', title: 'L4 merge compare (360px)', render: () => <Demo narrow /> },
+  { id: 'l4-merge', title: 'L4 merge compare (2 sources, wide)', render: () => <Demo count={2} /> },
+  { id: 'l4-merge-narrow', title: 'L4 merge compare (2 sources, 360px)', render: () => <Demo count={2} narrow /> },
+  { id: 'l4-merge-3', title: 'L4 merge compare (3 sources, wide)', render: () => <Demo count={3} /> },
+  { id: 'l4-merge-3-narrow', title: 'L4 merge compare (3 sources, 360px)', render: () => <Demo count={3} narrow /> },
 ];

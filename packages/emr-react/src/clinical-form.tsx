@@ -135,6 +135,12 @@ export function EmrClinicalForm({ model, onIntent, idPrefix = '', customRenderer
 
   return (
     <View role="form" aria-label={model.schema.label} onLayout={(e: LayoutChangeEvent) => setWidth(e.nativeEvent.layout.width)} style={styles.form}>
+      {model.correction ? (
+        <View style={styles.correction}>
+          {model.correction.description ? <Text style={[styles.flex, { color: t.textMuted, fontSize: t.textMd, fontFamily: fontFamily(t) }]}>{model.correction.description}</Text> : null}
+          <EmrButton variant="outline" label={model.correction.label} onPress={() => onIntent({ type: 'correctionRequested' })} />
+        </View>
+      ) : null}
       {model.schema.description ? <Text style={{ color: t.textMuted, fontSize: t.textMd, fontFamily: fontFamily(t) }}>{model.schema.description}</Text> : null}
       {model.schema.sections.filter(section => isSectionShown(section, model.fields)).map(section => (
         <EmrSectionCard key={section.id} sectionId={domId(`${schemaId}-${section.id}`)} label={section.label} description={section.description}
@@ -197,6 +203,7 @@ const styles = StyleSheet.create({
   card: { borderWidth: 1, borderRadius: 12, padding: 16, gap: 12 },
   cardHeader: { flexDirection: 'row', alignItems: 'flex-start', gap: 12 },
   collapsed: { display: 'none' },
+  correction: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: 12 },
   // 12-column grid as wrapping percentages; cells carry half-gutters so spans add up to 100%.
   grid: { flexDirection: 'row', flexWrap: 'wrap', marginHorizontal: -GAP / 2, rowGap: GAP },
   cell: { paddingHorizontal: GAP / 2, minWidth: 0 },

@@ -126,6 +126,8 @@ export interface ClinicalFormViewModel {
   collapsedSectionIds?: readonly string[];
   sectionStatuses?: Readonly<Record<string, EmrBadge>>;
   readOnly?: boolean;
+  /** Read-only record view: offer "Wrong patient? Request correction" (app-decided, app wording). */
+  correction?: { label: string; description?: string };
 }
 
 export type ClinicalFormIntent =
@@ -148,4 +150,5 @@ export type ClinicalFormIntent =
       status: ClinicalAssessmentStatus | undefined;
     }
   | { type: 'repeatItemRemoveRequested'; groupId: string; itemId: string }
-  | { type: 'sectionToggleRequested'; sectionId: string };
+  | { type: 'sectionToggleRequested'; sectionId: string }
+  | { type: 'correctionRequested' };

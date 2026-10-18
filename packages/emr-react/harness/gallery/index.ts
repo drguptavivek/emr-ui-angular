@@ -18,6 +18,8 @@ import { gallery as l4Consent } from './l4-consent';
 import { gallery as l4ConsentReview } from './l4-consent-review';
 import { gallery as l4Contact } from './l4-contact';
 import { gallery as l4Privacy } from './l4-privacy';
+import { gallery as l4Cards } from './l4-cards';
+import { gallery as l4Drafts } from './l4-drafts';
 import type { GallerySection } from './types';
 
 export const galleryGroups: readonly { id: string; title: string; sections: readonly GallerySection[] }[] = [
@@ -39,6 +41,8 @@ export const galleryGroups: readonly { id: string; title: string; sections: read
   { id: 'charts', title: 'Web only · Charts', sections: charts },
   { id: 'l4-consent', title: 'L4 · Consent', sections: l4Consent },
   { id: 'l4-privacy', title: 'L4 · Privacy centre', sections: l4Privacy },
+  { id: 'l4-cards', title: 'L4 · Link cards', sections: l4Cards },
+  { id: 'l4-drafts', title: 'L4 · Drafts and sent', sections: l4Drafts },
   { id: 'l4-contact', title: 'L4 · Contact attempts', sections: l4Contact },
   { id: 'l4-consent-review', title: 'L4 · Consent review and receipt', sections: l4ConsentReview },
 ];
