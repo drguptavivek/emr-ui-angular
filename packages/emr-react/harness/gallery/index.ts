@@ -15,6 +15,8 @@ import { gallery as l4Merge } from './l4-merge';
 import { gallery as l4Records } from './l4-records';
 import { gallery as charts } from './charts';
 import { gallery as l4Consent } from './l4-consent';
+import { gallery as l4ConsentReview } from './l4-consent-review';
+import { gallery as l4Contact } from './l4-contact';
 import type { GallerySection } from './types';
 
 export const galleryGroups: readonly { id: string; title: string; sections: readonly GallerySection[] }[] = [
@@ -35,4 +37,6 @@ export const galleryGroups: readonly { id: string; title: string; sections: read
   { id: 'l4-records', title: 'L4 · Record diff and upload', sections: l4Records },
   { id: 'charts', title: 'Web only · Charts', sections: charts },
   { id: 'l4-consent', title: 'L4 · Consent', sections: l4Consent },
+  { id: 'l4-contact', title: 'L4 · Contact attempts', sections: l4Contact },
+  { id: 'l4-consent-review', title: 'L4 · Consent review and receipt', sections: l4ConsentReview },
 ];

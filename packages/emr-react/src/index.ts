@@ -23,4 +23,6 @@ export * from './l4-merge';
 export * from './l4-records';
 export * from './charts';
 export * from './l4-consent';
+export * from './l4-consent-review';
+export * from './l4-contact';
 export { isFieldShown, isSectionShown } from './typed-field.logic';
