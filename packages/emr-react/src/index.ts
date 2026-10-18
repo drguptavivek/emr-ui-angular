@@ -22,4 +22,5 @@ export * from './data-table';
 export * from './l4-merge';
 export * from './l4-records';
 export * from './charts';
+export * from './l4-consent';
 export { isFieldShown, isSectionShown } from './typed-field.logic';

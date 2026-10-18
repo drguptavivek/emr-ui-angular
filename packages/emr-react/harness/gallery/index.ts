@@ -14,6 +14,7 @@ import { gallery as dataTable } from './data-table';
 import { gallery as l4Merge } from './l4-merge';
 import { gallery as l4Records } from './l4-records';
 import { gallery as charts } from './charts';
+import { gallery as l4Consent } from './l4-consent';
 import type { GallerySection } from './types';
 
 export const galleryGroups: readonly { id: string; title: string; sections: readonly GallerySection[] }[] = [
@@ -33,4 +34,5 @@ export const galleryGroups: readonly { id: string; title: string; sections: read
   { id: 'l4-merge', title: 'L4 · Merge compare', sections: l4Merge },
   { id: 'l4-records', title: 'L4 · Record diff and upload', sections: l4Records },
   { id: 'charts', title: 'Web only · Charts', sections: charts },
+  { id: 'l4-consent', title: 'L4 · Consent', sections: l4Consent },
 ];
