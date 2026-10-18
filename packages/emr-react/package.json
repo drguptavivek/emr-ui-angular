@@ -12,7 +12,8 @@
     "tokens": "node scripts/generate-tokens.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "harness:next": "next dev harness/next --port 3300",
-    "harness:expo": "expo start harness/expo"
+    "harness:expo": "expo start harness/expo",
+    "typecheck:native": "tsc -p tsconfig.native.json --noEmit"
   },
   "peerDependencies": {
     "@drguptavivek/emr-controller": "workspace:*",

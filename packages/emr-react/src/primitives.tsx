@@ -57,7 +57,8 @@ export function EmrButton({ label, onPress, variant = 'primary', small, disabled
         },
       ]}
     >
-      <Text style={{ color: t.primaryContrast, fontSize: small ? t.textSm : t.textMd, fontWeight: fontWeight(650), fontFamily: fontFamily(t) }}>{label}</Text>
+      {/* Single line, like Angular's white-space: nowrap; the button sizes to its label. */}
+      <Text numberOfLines={1} style={{ color: t.primaryContrast, fontSize: small ? t.textSm : t.textMd, fontWeight: fontWeight(650), fontFamily: fontFamily(t) }}>{label}</Text>
     </Pressable>
   );
 }

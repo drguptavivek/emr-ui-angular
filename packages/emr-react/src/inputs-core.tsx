@@ -5,6 +5,10 @@ import { StyleSheet, Text, TextInput, View, type KeyboardTypeOptions } from 'rea
 import type { ClinicalFieldValue } from '@drguptavivek/emr-controller';
 import { focusRing, fontFamily, useEmrTheme } from './theme';
 import { numberTextOf, parseNumberDraft, sanitizeNumberText } from './typed-field.logic';
+import {
+  formatDate, formatTime, parseDateText, parseTimeText, sanitizeDateText, sanitizeTimeText,
+  type DateDisplayFormat, type TextParse,
+} from './l1-inputs.logic';
 
 export type ThemedInputProps = React.ComponentProps<typeof TextInput> & { invalid?: boolean };
 
@@ -80,6 +84,48 @@ export function Unsupported({ text }: { text: string }) {
     </View>
   );
 }
+
+// ---- day-first date / time text ------------------------------------------------------------
+
+export type EmrTypedTextMode = DateDisplayFormat | 'time';
+type TextMode = EmrTypedTextMode;
+
+const parseText = (text: string, mode: TextMode): TextParse => (mode === 'time' ? parseTimeText(text) : parseDateText(text, mode));
+const formatText = (value: string | null, mode: TextMode) => (mode === 'time' ? formatTime(value) : formatDate(value, mode));
+const valueOf = (parsed: TextParse) => (parsed.status === 'valid' ? parsed.value : null);
+
+/**
+ * Typed text bound to an ISO / HH:mm value. Emits only on empty or a real date/time; an incomplete
+ * draft stays on screen (like NumberInput) and is flagged invalid once the field loses focus.
+ * Exported frameless so schema renderers (form fields, matrix cells) share the day-first behaviour.
+ */
+export function EmrTypedText({ value, mode, invalid, onValueChange, ...props }: Omit<ThemedInputProps, 'value'> & {
+  value: string | null;
+  mode: TextMode;
+  onValueChange: (value: string | null) => void;
+}) {
+  const [draft, setDraft] = useState(() => formatText(value, mode));
+  const [left, setLeft] = useState(false);
+  // A new value from the controller replaces the draft, unless the draft is still being typed.
+  useEffect(() => setDraft(current => {
+    const parsed = parseText(current, mode);
+    return parsed.status === 'draft' || valueOf(parsed) === value ? current : formatText(value, mode);
+  }), [value, mode]);
+  return (
+    <ThemedInput {...props} value={draft} keyboardType="numbers-and-punctuation" inputMode="numeric"
+      invalid={invalid || (left && parseText(draft, mode).status === 'draft')}
+      // Leaving the field tidies a valid entry into display form (keypad 05032026 → 05-03-2026).
+      onBlur={e => { setLeft(true); setDraft(d => { const p = parseText(d, mode); return p.status === 'valid' ? formatText(p.value, mode) : d; }); props.onBlur?.(e); }}
+      onChangeText={text => {
+        const clean = mode === 'time' ? sanitizeTimeText(text) : sanitizeDateText(text);
+        setDraft(clean);
+        setLeft(false);
+        const parsed = parseText(clean, mode);
+        if (parsed.status !== 'draft') onValueChange(valueOf(parsed));
+      }} />
+  );
+}
+
 
 const styles = StyleSheet.create({
   input: { width: '100%', borderRadius: 8, paddingHorizontal: 12, paddingVertical: 9 },

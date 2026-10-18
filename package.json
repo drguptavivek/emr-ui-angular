@@ -17,7 +17,7 @@
     "test:visual": "playwright test",
     "check:architecture": "vitest run packages/emr-ui/src/lib/architecture.spec.ts",
     "check": "pnpm test && pnpm build:controller && pnpm check:node-controller && pnpm build:ui && pnpm check:ssr && pnpm check:react && pnpm check:stories",
-    "check:react": "pnpm --filter @drguptavivek/emr-react typecheck",
+    "check:react": "pnpm --filter @drguptavivek/emr-react typecheck && pnpm --filter @drguptavivek/emr-react typecheck:native",
     "check:stories": "tsc -p packages/emr-ui/tsconfig.storybook.json --noEmit --sourceMap"
   },
   "dependencies": {

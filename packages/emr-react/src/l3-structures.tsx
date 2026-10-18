@@ -15,7 +15,7 @@ import type {
   ClinicalQuantityValue,
   ClinicalRow,
 } from '@drguptavivek/emr-controller';
-import { NumberInput, ThemedInput } from './inputs-core';
+import { EmrTypedText, NumberInput, ThemedInput } from './inputs-core';
 import { EmrBadgeView, EmrButton, EmrSelect } from './primitives';
 import { focusRing, fontFamily, fontWeight, useEmrTheme } from './theme';
 import {
@@ -42,7 +42,7 @@ const DEFAULTS = {
   yes: 'Yes',
   no: 'No',
   warning: 'Warning',
-  datePlaceholder: 'YYYY-MM-DD',
+  datePlaceholder: 'dd-mm-yyyy',
   assessmentStatus: 'Assessment status for',
   statusNotSet: 'Status not set',
   customRendererUnavailable: 'Custom renderer unavailable',
@@ -211,9 +211,14 @@ export function EmrClinicalMatrix({ definition, model = {}, onIntent, readOnly =
             : <Text role="status" style={small}>{s.customRendererUnavailable}</Text>;
           break;
         }
+        case 'date':
+          // Day-first display, ISO value — the same date entry as EmrDateInput and form fields.
+          editor = <EmrTypedText aria-label={name} mode="dd-mm-yyyy" placeholder={s.datePlaceholder} invalid={invalid} editable={!disabled}
+            value={typeof cell?.value === 'string' && cell.value ? cell.value : null} onFocus={focus} onValueChange={next => emitCell(row, column, next)} />;
+          break;
         default: {
           const value = typeof cell?.value === 'string' ? cell.value : typeof cell?.value === 'number' ? String(cell.value) : '';
-          editor = <ThemedInput aria-label={name} value={value} invalid={invalid} editable={!disabled} placeholder={row.type === 'date' ? s.datePlaceholder : undefined}
+          editor = <ThemedInput aria-label={name} value={value} invalid={invalid} editable={!disabled} 
             onFocus={focus} onChangeText={next => emitCell(row, column, next)} />;
         }
       }

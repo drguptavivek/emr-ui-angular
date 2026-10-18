@@ -1,0 +1,21 @@
+{
+  "//": "Typechecks src the way an Expo app does (expo/tsconfig.base, react-native types); web-only *.web.tsx files are excluded.",
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "paths": {
+      "@drguptavivek/emr-controller": [
+        "../emr-controller/src/index.ts"
+      ]
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/**/*.web.tsx"
+  ]
+}

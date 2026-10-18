@@ -3,7 +3,7 @@
 import { useEffect, useId, useState } from 'react';
 import { Pressable, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
 import type { ClinicalOption } from '@drguptavivek/emr-controller';
-import { NumberInput, ThemedInput, type ThemedInputProps } from './inputs-core';
+import { EmrTypedText, NumberInput, ThemedInput, type ThemedInputProps } from './inputs-core';
 import {
   formatDate, formatTime, joinDateTime, parseDateText, parseTimeText, sanitizeDateText, sanitizeTimeText, splitDateTime,
   type DateDisplayFormat, type TextParse,
@@ -93,43 +93,6 @@ export function EmrNumberInput(p: EmrFieldProps & {
 
 // ---- date, time, datetime -----------------------------------------------------------------
 
-type TextMode = DateDisplayFormat | 'time';
-
-const parseText = (text: string, mode: TextMode): TextParse => (mode === 'time' ? parseTimeText(text) : parseDateText(text, mode));
-const formatText = (value: string | null, mode: TextMode) => (mode === 'time' ? formatTime(value) : formatDate(value, mode));
-const valueOf = (parsed: TextParse) => (parsed.status === 'valid' ? parsed.value : null);
-
-/**
- * Typed text bound to an ISO / HH:mm value. Emits only on empty or a real date/time; an incomplete
- * draft stays on screen (like NumberInput) and is flagged invalid once the field loses focus.
- */
-function TypedText({ value, mode, invalid, onValueChange, ...props }: Omit<ThemedInputProps, 'value'> & {
-  value: string | null;
-  mode: TextMode;
-  onValueChange: (value: string | null) => void;
-}) {
-  const [draft, setDraft] = useState(() => formatText(value, mode));
-  const [left, setLeft] = useState(false);
-  // A new value from the controller replaces the draft, unless the draft is still being typed.
-  useEffect(() => setDraft(current => {
-    const parsed = parseText(current, mode);
-    return parsed.status === 'draft' || valueOf(parsed) === value ? current : formatText(value, mode);
-  }), [value, mode]);
-  return (
-    <ThemedInput {...props} value={draft} keyboardType="numbers-and-punctuation" inputMode="numeric"
-      invalid={invalid || (left && parseText(draft, mode).status === 'draft')}
-      // Leaving the field tidies a valid entry into display form (keypad 05032026 → 05-03-2026).
-      onBlur={e => { setLeft(true); setDraft(d => { const p = parseText(d, mode); return p.status === 'valid' ? formatText(p.value, mode) : d; }); props.onBlur?.(e); }}
-      onChangeText={text => {
-        const clean = mode === 'time' ? sanitizeTimeText(text) : sanitizeDateText(text);
-        setDraft(clean);
-        setLeft(false);
-        const parsed = parseText(clean, mode);
-        if (parsed.status !== 'draft') onValueChange(valueOf(parsed));
-      }} />
-  );
-}
-
 /** Shows and accepts day-first (or year-first) text; `value` is always ISO `YYYY-MM-DD`. */
 export function EmrDateInput(p: EmrFieldProps & {
   value: string | null;
@@ -141,7 +104,7 @@ export function EmrDateInput(p: EmrFieldProps & {
   return (
     <Frame id={id} p={p}>
       {/* key: switching the display order re-seeds the draft from the value. */}
-      <TypedText key={format} {...input} placeholder={p.placeholder ?? format} mode={format} value={p.value} onValueChange={p.onValueChange} />
+      <EmrTypedText key={format} {...input} placeholder={p.placeholder ?? format} mode={format} value={p.value} onValueChange={p.onValueChange} />
     </Frame>
   );
 }
@@ -151,7 +114,7 @@ export function EmrTimeInput(p: EmrFieldProps & { value: string | null; onValueC
   const { id, input } = useControl(p);
   return (
     <Frame id={id} p={p}>
-      <TypedText {...input} placeholder={p.placeholder ?? 'hh:mm'} mode="time" value={p.value} onValueChange={p.onValueChange} />
+      <EmrTypedText {...input} placeholder={p.placeholder ?? 'hh:mm'} mode="time" value={p.value} onValueChange={p.onValueChange} />
     </Frame>
   );
 }
@@ -180,11 +143,11 @@ export function EmrDateTimeInput(p: EmrFieldProps & {
     <Frame id={id} p={p}>
       <View role="group" aria-labelledby={p.labelHidden ? undefined : `${id}-label`} aria-label={input['aria-label']} style={styles.pair}>
         <View style={[styles.flex, { flexGrow: 2 }]}>
-          <TypedText key={format} {...rest} aria-label={`${p.label}, ${dateLabel}`} placeholder={format} mode={format} value={parts.date}
+          <EmrTypedText key={format} {...rest} aria-label={`${p.label}, ${dateLabel}`} placeholder={format} mode={format} value={parts.date}
             onValueChange={date => change({ ...parts, date })} />
         </View>
         <View style={styles.flex}>
-          <TypedText {...rest} id={`${id}-time`} aria-label={`${p.label}, ${timeLabel}`} placeholder="hh:mm" mode="time" value={parts.time}
+          <EmrTypedText {...rest} id={`${id}-time`} aria-label={`${p.label}, ${timeLabel}`} placeholder="hh:mm" mode="time" value={parts.time}
             onValueChange={time => change({ ...parts, time })} />
         </View>
       </View>

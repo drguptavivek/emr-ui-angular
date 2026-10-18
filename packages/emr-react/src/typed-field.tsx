@@ -2,7 +2,7 @@
 
 import type { ComponentType } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { NumberInput, ThemedInput, Unsupported } from './inputs-core';
+import { EmrTypedText, NumberInput, ThemedInput, Unsupported } from './inputs-core';
 import type {
   ClinicalAssessmentStatus,
   ClinicalFieldDefinition,
@@ -144,9 +144,15 @@ export function EmrTypedField({ definition, model, controlId, readOnly = false, 
       break;
     }
     default: {
-      // text, multiline, date, time, datetime. Dates are ISO strings, same as the web input emits.
-      // ponytail: dates are typed text with a format placeholder; add a native picker widget when needed.
-      const format = { date: 'YYYY-MM-DD', time: 'HH:MM', datetime: 'YYYY-MM-DDTHH:MM' }[definition.type as string];
+      if (definition.type === 'date' || definition.type === 'time') {
+        // Day-first display, ISO value (same as EmrDateInput): keypad 05032026 → 2026-03-05; impossible dates never emit.
+        const mode = definition.type === 'time' ? 'time' : 'dd-mm-yyyy';
+        control = <EmrTypedText {...inputProps} mode={mode} placeholder={definition.placeholder ?? (mode === 'time' ? 'hh:mm' : 'dd-mm-yyyy')}
+          value={textOf(model?.value) || null} onValueChange={onValueChange} />;
+        break;
+      }
+      // text, multiline, datetime. datetime stays ISO text until it gets a paired widget.
+      const format = { datetime: 'YYYY-MM-DDTHH:MM' }[definition.type as string];
       const multiline = definition.type === 'multiline';
       control = <ThemedInput {...inputProps} placeholder={definition.placeholder ?? format} value={textOf(model?.value)}
         multiline={multiline} numberOfLines={multiline ? definition.rows ?? 3 : undefined}
