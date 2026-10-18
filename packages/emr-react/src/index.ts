@@ -35,5 +35,6 @@ export * from './l4-safety-pedigree';
 export * from './l4-ophthalmology';
 export * from './l4-orders-documents';
 export * from './l4-annotation-canvas';
+export * from './l4-observations-notes';
 export * from './l6-authoring';
 export { isFieldShown, isSectionShown } from './typed-field.logic';

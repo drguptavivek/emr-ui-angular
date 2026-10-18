@@ -27,6 +27,7 @@ import { gallery as l4SafetyPedigree } from './l4-safety-pedigree';
 import { gallery as l4Ophthalmology } from './l4-ophthalmology';
 import { gallery as l4OrdersDocuments } from './l4-orders-documents';
 import { gallery as l4AnnotationCanvas } from './l4-annotation-canvas';
+import { gallery as l4ObservationsNotes } from './l4-observations-notes';
 import { gallery as l6Authoring } from './l6-authoring';
 import type { GallerySection } from './types';
 
@@ -60,5 +61,6 @@ export const galleryGroups: readonly { id: string; title: string; sections: read
   { id: 'l4-ophthalmology', title: 'L4 · Ophthalmology & diagnostics', sections: l4Ophthalmology },
   { id: 'l4-orders-documents', title: 'L4 · Orders, favourites & documents', sections: l4OrdersDocuments },
   { id: 'l4-annotation-canvas', title: 'L4 · Clinical annotation canvas', sections: l4AnnotationCanvas },
+  { id: 'l4-observations-notes', title: 'L4 · Observations & clinical notes', sections: l4ObservationsNotes },
   { id: 'l6-authoring', title: 'L6 · Authoring & template studio', sections: l6Authoring },
 ];
