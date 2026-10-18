@@ -9,6 +9,7 @@ export * from './l1-display';
 export * from './l1-interactive';
 export * from './stat-tile';
 export * from './typed-field';
+export * from './l2-fields';
 export * from './clinical-form';
 export * from './l3-structures';
 export * from './l4-shell';
