@@ -205,6 +205,8 @@ export function EmrPairedInput(p: EmrFieldProps & {
 interface EmrSwitchLikeProps extends Omit<EmrFieldProps, 'placeholder' | 'labelHidden'> {
   value: boolean | null;
   onValueChange: (value: boolean) => void;
+  /** Checkbox only: some but not all of what it controls is ticked (aria-checked="mixed"). */
+  mixed?: boolean;
 }
 
 /** One shared row for checkbox and toggle: control, label, and hint/error beneath. */
@@ -220,7 +222,7 @@ function BooleanRow({ p, role, glyph }: { p: EmrSwitchLikeProps; role: 'checkbox
       <Pressable
         id={id}
         role={role}
-        aria-checked={checked}
+        aria-checked={p.mixed && !checked ? 'mixed' : checked}
         aria-label={p.required ? `${p.label}, ${labels.required}` : p.label}
         aria-describedby={hasMessage ? `${id}-message` : undefined}
         aria-invalid={p.error ? true : undefined}
@@ -245,7 +247,7 @@ export function EmrCheckbox(p: EmrSwitchLikeProps) {
   return (
     <BooleanRow p={p} role="checkbox" glyph={checked => (
       <View aria-hidden style={[styles.box, { borderColor: p.error ? t.danger : checked ? t.primary : t.border, backgroundColor: checked ? t.primary : t.surface }]}>
-        {checked ? <Text style={{ color: t.surface, fontSize: t.textSm, fontWeight: fontWeight(t.weightBold) }}>✓</Text> : null}
+        {checked || p.mixed ? <Text style={{ color: checked ? t.surface : t.primary, fontSize: t.textSm, fontWeight: fontWeight(t.weightBold) }}>{checked ? '✓' : '–'}</Text> : null}
       </View>
     )} />
   );

@@ -161,7 +161,8 @@ const ROW_GAP = 8;
 export function EmrRow({ children }: { children: ReactNode }) {
   const [width, setWidth] = useState(0);
   const columns = Math.max(1, Math.floor((width + ROW_GAP) / (CHIP_COLUMN_MIN + ROW_GAP)));
-  const cell = width ? (width - ROW_GAP * (columns - 1)) / columns : undefined;
+  // Floor: cells that sum to the exact row width wrap on a sub-pixel rounding (seen on Android).
+  const cell = width ? Math.floor((width - ROW_GAP * (columns - 1)) / columns) : undefined;
   return (
     <View style={styles.row} onLayout={e => setWidth(e.nativeEvent.layout.width)}>
       {Children.map(children, child => <View style={{ width: cell }}>{child}</View>)}
@@ -174,7 +175,8 @@ const styles = StyleSheet.create({
   badge: { borderRadius: 999, paddingHorizontal: 8, paddingVertical: 2 },
   button: { borderWidth: 1, borderRadius: 8, paddingHorizontal: 16, alignItems: 'center', justifyContent: 'center' },
   chip: { borderRadius: 8, paddingHorizontal: 12, justifyContent: 'center', alignItems: 'center' },
-  row: { flexDirection: 'row', flexWrap: 'wrap', gap: ROW_GAP },
+  // alignSelf stretch: the columns are computed from this row's own width, so it must not shrink to its chips.
+  row: { flexDirection: 'row', flexWrap: 'wrap', gap: ROW_GAP, alignSelf: 'stretch' },
   flex: { flex: 1, minWidth: 0 },
   select: { flexDirection: 'row', alignItems: 'center', gap: 8, borderWidth: 1, borderRadius: 8, paddingHorizontal: 12 },
   backdrop: { flex: 1, justifyContent: 'center', padding: 24, backgroundColor: 'rgba(0,0,0,0.4)' },
