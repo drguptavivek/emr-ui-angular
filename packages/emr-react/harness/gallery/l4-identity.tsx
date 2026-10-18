@@ -22,6 +22,19 @@ const patient: EmrPatientIdentity = {
     { system: 'abha', label: 'ABHA number', display: '00-0000-0000-0001', statusBadge: { label: 'Under review', tone: 'warning' } },
   ],
   addableSystems: [{ system: 'abha-address', label: 'ABHA address' }],
+  alerts: [
+    { id: 'phone', text: 'Phone number needs correcting', tone: 'warning', actionLabel: 'Update number' },
+    { id: 'merge', text: 'Merge pending', tone: 'info' },
+  ],
+};
+const Identity = ({ mode }: { mode: 'full' | 'compact' }) => {
+  const [last, setLast] = useState('');
+  return (
+    <View style={{ gap: 4, maxWidth: mode === 'compact' ? 360 : undefined }}>
+      <EmrPatientIdentityCard mode={mode} model={patient} onIntent={i => setLast(i.type === 'alertActionRequested' ? `alert ${i.id}` : i.type)} />
+      {last ? <View accessibilityLabel={`last intent ${last}`} /> : null}
+    </View>
+  );
 };
 const candidate = { ...patient, id: 'cand-1', name: 'Test Patient B', addableSystems: [] };
 
@@ -84,8 +97,8 @@ export const gallery: GallerySection[] = [
   { id: 'scan-error', title: 'Barcode scan field · error', render: () => <Field variant="error" /> },
   { id: 'scan-warning', title: 'Barcode scan field · warning', render: () => <Field variant="warning" /> },
   { id: 'scan-type', title: 'Barcode scan field · type picker', render: () => <Field variant="type" /> },
-  { id: 'identity-full', title: 'Patient identity card · full', render: () => <EmrPatientIdentityCard mode="full" model={patient} onIntent={() => undefined} /> },
-  { id: 'identity-compact', title: 'Patient identity card · compact', render: () => <View style={{ maxWidth: 360 }}><EmrPatientIdentityCard mode="compact" model={patient} onIntent={() => undefined} /></View> },
+  { id: 'identity-full', title: 'Patient identity card · full', render: () => <Identity mode="full" /> },
+  { id: 'identity-compact', title: 'Patient identity card · compact', render: () => <Identity mode="compact" /> },
   { id: 'check-blocked', title: 'Identifier check · blocked', render: () => <Check outcome="blocked" /> },
   { id: 'check-warnings', title: 'Identifier check · warnings', render: () => <Check outcome="warnings" /> },
   { id: 'check-ok', title: 'Identifier check · ok', render: () => <Check outcome="ok" /> },

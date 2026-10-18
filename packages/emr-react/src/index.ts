@@ -25,4 +25,5 @@ export * from './charts';
 export * from './l4-consent';
 export * from './l4-consent-review';
 export * from './l4-contact';
+export * from './l4-privacy';
 export { isFieldShown, isSectionShown } from './typed-field.logic';

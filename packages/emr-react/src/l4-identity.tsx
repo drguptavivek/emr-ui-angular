@@ -2,7 +2,7 @@
 
 import { useId } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import type { EmrBadge, EmrTone } from '@drguptavivek/emr-controller';
+import type { EmrTone, PatientIdentityIntent, PatientIdentityViewModel } from '@drguptavivek/emr-controller';
 import { EmrChip, EmrAlert, EmrCard } from './l1-display';
 import { EmrCheckbox } from './l1-inputs';
 import { ThemedInput } from './inputs-core';
@@ -50,22 +50,8 @@ export interface EmrBarcodeScanFieldProps {
 }
 export type EmrBarcodeScanIntent = { type: 'scanRequested' } | { type: 'typeSelected'; id: string };
 
-export interface EmrPatientIdentity {
-  identifiers: { system: string; label: string; display: string; statusBadge?: EmrBadge }[];
-  name: string;
-  ageLabel: string;
-  sexLabel: string;
-  phone?: string;
-  centreName?: string;
-  lastVisitDate?: string;
-  aliases?: string[];
-  /** Identifier types the app lets staff add now (controller-decided). Omitted or empty: no Add action. */
-  addableSystems?: { system: string; label: string }[];
-}
-export type EmrPatientIdentityIntent =
-  | { type: 'confirmRequested' }
-  | { type: 'notThisPatientRequested' }
-  | { type: 'addIdentifierRequested'; system: string };
+export type EmrPatientIdentity = PatientIdentityViewModel;
+export type EmrPatientIdentityIntent = PatientIdentityIntent;
 
 export type EmrIdentifierFindingKind = 'on_other_patient' | 'demographic_mismatch' | 'same_type_exists' | 'possible_duplicate';
 export interface EmrIdentifierFinding {
@@ -147,12 +133,13 @@ export function EmrPatientIdentityCard({ model: m, mode, labels, onIntent }: {
     return (
       <View role="region" aria-label={m.name} style={[styles.compact, { borderColor: t.border, backgroundColor: t.surface }]}>
         {/* Content wraps; "+N" stays attached to the end so nothing is clipped at 360dp. */}
-        <View style={[styles.wrap, styles.grow]}>
+        <View style={styles.wrap}>
           <Text role="heading" style={[bold, styles.shrink]}>{m.name}</Text>
           <Text style={[muted, styles.shrink]}>{[demographics, primary?.display].filter(Boolean).join(' · ')}</Text>
           {primary?.statusBadge ? <EmrBadgeView badge={primary.statusBadge} /> : null}
           {others.length ? <EmrChip>{l.more(others.length)}</EmrChip> : null}
         </View>
+        <IdentityAlerts alerts={m.alerts} onIntent={onIntent} />
       </View>
     );
   }
@@ -181,6 +168,7 @@ export function EmrPatientIdentityCard({ model: m, mode, labels, onIntent }: {
           </View>
         ))}
         {details.length ? <Text style={muted}>{details.join(' · ')}</Text> : null}
+        <IdentityAlerts alerts={m.alerts} onIntent={onIntent} />
         <View style={styles.wrap}>
           <EmrButton label={l.confirmPatient} onPress={() => onIntent({ type: 'confirmRequested' })} />
           <EmrButton variant="outline" label={l.notThisPatient} onPress={() => onIntent({ type: 'notThisPatientRequested' })} />
@@ -193,6 +181,27 @@ export function EmrPatientIdentityCard({ model: m, mode, labels, onIntent }: {
         </View>
       </View>
     </EmrCard>
+  );
+}
+
+/** Controller-supplied notices under the identity block; the optional action emits alertActionRequested. */
+function IdentityAlerts({ alerts, onIntent }: { alerts: EmrPatientIdentity['alerts']; onIntent: (intent: EmrPatientIdentityIntent) => void }) {
+  const t = useEmrTheme();
+  if (!alerts?.length) return null;
+  return (
+    <View style={styles.stack}>
+      {alerts.map(a => (
+        <EmrAlert key={a.id} tone={a.tone}>
+          <View style={styles.wrap}>
+            <Text style={[styles.shrink, { color: t.text, fontSize: t.textMd, fontFamily: fontFamily(t) }]}>{a.text}</Text>
+            {a.actionLabel ? (
+              <EmrButton small variant="outline" label={a.actionLabel} accessibilityLabel={`${a.actionLabel}: ${a.text}`}
+                onPress={() => onIntent({ type: 'alertActionRequested', id: a.id })} />
+            ) : null}
+          </View>
+        </EmrAlert>
+      ))}
+    </View>
   );
 }
 
@@ -264,5 +273,5 @@ const styles = StyleSheet.create({
   shrink: { flexShrink: 1, minWidth: 0 },
   wrap: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: 8 },
   stack: { gap: 8 },
-  compact: { borderWidth: 1, borderRadius: 8, padding: 8, flexDirection: 'row', alignItems: 'center' },
+  compact: { borderWidth: 1, borderRadius: 8, padding: 8, gap: 8 },
 });

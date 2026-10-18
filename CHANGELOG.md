@@ -2,6 +2,13 @@
 
 Current state and pending work live in `handoff.md`. Exact changes and authorship live in Git.
 
+## 18 October 2026 — consent and privacy self-service (Angular + React Native)
+
+- **Shared contracts in emr-controller**: `identity.models` (PatientIdentityViewModel, with `alerts`), `consent.models` (capture, review, receipt, status, `PendingConfirmation`), `privacy.models` (sharing grants, access log, rights requests, privacy centre). Both renderers use these.
+- **Angular (emr-ui, L4, status proposed)**: `emr-consent-capture`, `emr-consent-review`, `emr-consent-receipt` (print-safe), `emr-consent-status-badge`, `emr-sharing-grants`, `emr-access-log`, `emr-rights-requests`, `emr-privacy-centre`; stories `EMR / Consent` and `EMR / Privacy / Centre`; catalog and L4 docs entries.
+- **React Native (emr-react)**: the same four privacy components (`EmrSharingGrants`, `EmrAccessLog`, `EmrRightsRequests`, `EmrPrivacyCentre`); the consent components now use the shared types (old `Emr*` names kept as aliases); `EmrPatientIdentityCard` renders `alerts` with an action.
+- Fix: `EmrSheet` mounts its modal only after the first client render — react-native-web's Modal cannot be server-rendered and broke Next.js hydration when a page loaded with a sheet open.
+
 ## 18 October 2026 — emr-react and form matrix blocks
 
 - **New package `@drguptavivek/emr-react`**: React Native components (Expo, and web through react-native-web) rendering the same view models and intents as emr-ui. Tokens are generated from `emr.css`; theming is a provider with token overrides; built-in strings come from a labels provider. Verified on web in a Next.js 16 harness; native verification is pending.

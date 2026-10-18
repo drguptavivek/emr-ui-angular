@@ -1895,3 +1895,266 @@ export class EmrWorkQueueComponent {
 **Depends on** — `EmrBadgeComponent`, `EmrButtonComponent`, `EmrTabsComponent`.
 
 **Used by** — none yet (intended for OPD flow boards and clinician "my list" screens).
+
+### EmrConsentCapture
+**Layer** L4 · **Selector** `emr-consent-capture` · **Status** proposed · **Story** `emr-consent--capture-adult-self-tap`
+
+**Need** — Notice-and-consent must be captured the same way everywhere, with legal wording and every rule supplied by the application, nothing pre-selected, and essential purposes never presented as a choice.
+
+**Purpose** — Renders a `ConsentCaptureViewModel`: language radios, the notice in a bounded scroll region (max 20rem; fully expanded under `.emr-print` and `@media print`), categories ('whole' = one Agree / Do not agree radiogroup per category with its purposes listed; 'per_purpose' = one radiogroup per non-essential purpose), essential purposes as "✓ Required for care" text, locked decisions as read-only text, given-by radios, guardian fields with per-field errors, method radios, signature / thumbprint request buttons with the app's capture status text, and `emr-attestation` for verbal_attested (its `signRequested` becomes `attestationConfirmed`). Submit shows only when `canSubmit`, otherwise `submitError` is shown. It decides nothing.
+
+**API**
+```ts
+export class EmrConsentCaptureComponent {
+  readonly model = input.required<ConsentCaptureViewModel>();
+  readonly labels = input<Partial<EmrConsentCaptureLabels>>({});
+  readonly idPrefix = input<string>(/* generated */);
+  readonly intent = output<ConsentCaptureIntent>();
+}
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| `model` | `ConsentCaptureViewModel` (required) | — | all content and state |
+| `labels` | `Partial<EmrConsentCaptureLabels>` | English | built-in strings (Agree, Submit, legends) |
+| `idPrefix` | `string` | generated | unique radio names and ids per instance |
+| `intent` (output) | `ConsentCaptureIntent` | — | the 11 intents in `consent.models.ts` |
+
+**Example**
+```html
+<emr-consent-capture [model]="consentCapture" (intent)="onConsentIntent($event)" />
+```
+
+**Known gaps**
+- Radios are native and re-render from the model; an app that ignores an intent leaves the browser's own checked state showing.
+
+**Depends on** — `EmrAttestationComponent`, `EmrTextInputComponent`.
+
+**Used by** — none yet.
+
+### EmrConsentReview
+**Layer** L4 · **Selector** `emr-consent-review` · **Status** proposed · **Story** `emr-consent--review-withdraw-sheet-open`
+
+**Need** — Staff and patients must see what was agreed, change it later, and confirm a withdrawal before it happens.
+
+**Purpose** — Renders a `ConsentReviewViewModel`: patient identity header, message alert, categories with purposes (status badge, essential text, decided / method / given-by), Withdraw (only when `canWithdraw` and not essential), Grant (`canGrant`), contact channel checkboxes and a `type="tel"` preferred number with error, receipt and close actions. `pendingWithdrawal` opens an `emr-right-flyout` (focus-trapped, Escape and backdrop dismiss) showing the app's wording; Confirm emits `withdrawConfirmed`, Cancel / dismiss emits `withdrawDismissed`.
+
+**API**
+```ts
+export class EmrConsentReviewComponent {
+  readonly model = input.required<ConsentReviewViewModel>();
+  readonly labels = input<Partial<EmrConsentReviewLabels>>({});
+  readonly idPrefix = input<string>(/* generated */);
+  readonly intent = output<ConsentReviewIntent>();
+}
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| `model` | `ConsentReviewViewModel` (required) | — | everything shown, including the pending confirmation |
+| `labels` | `Partial<EmrConsentReviewLabels>` | English | built-in strings |
+| `idPrefix` | `string` | generated | unique ids per instance |
+| `intent` (output) | `ConsentReviewIntent` | — | 8 intents in `consent.models.ts` |
+
+**Example**
+```html
+<emr-consent-review [model]="consentReview" (intent)="onReviewIntent($event)" />
+```
+
+**Known gaps**
+- The preferred number emits on every keystroke; the app validates and returns `preferredNumberError`.
+
+**Depends on** — `EmrRightFlyoutComponent`, `EmrCheckboxComponent`.
+
+**Used by** — none yet.
+
+### EmrConsentReceipt
+**Layer** L4 · **Selector** `emr-consent-receipt` · **Status** proposed · **Story** `emr-consent--receipt-print-context`
+
+**Need** — A patient or auditor needs a printable record of what was agreed and how to change it.
+
+**Purpose** — Renders a `ConsentReceiptViewModel` read-only: `h1` title, `dl` of patient and identifiers, date and notice version, one captioned table per category (purpose, decision, optional status badge), how-to-change text and footer. It has no `intent` output because it offers no actions; the app prints it by placing it in an `.emr-print` context or via Ctrl+P. Nothing is clipped or collapsed; rows avoid page breaks.
+
+**API**
+```ts
+export class EmrConsentReceiptComponent {
+  readonly model = input.required<ConsentReceiptViewModel>();
+  readonly labels = input<Partial<EmrConsentReceiptLabels>>({});
+}
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| `model` | `ConsentReceiptViewModel` (required) | — | all content |
+| `labels` | `Partial<EmrConsentReceiptLabels>` | English | Patient, Purpose, Decision |
+
+**Example**
+```html
+<div class="emr-print"><emr-consent-receipt [model]="receipt" /></div>
+```
+
+**Known gaps**
+- Deliberate exception to "exactly ONE output": read-only, so no outputs at all.
+
+**Depends on** — none.
+
+**Used by** — none yet.
+
+### EmrConsentStatusBadge
+**Layer** L4 · **Selector** `emr-consent-status-badge` · **Status** proposed · **Story** `emr-consent--status-badges`
+
+**Need** — Banners and lists need a compact, colour-independent consent state.
+
+**Purpose** — Renders `ConsentStatusViewModel` as the app's badge plus detail text. With `interactive` it is a single 44px button (name = badge text + detail) emitting `{ type: 'consentDetailsRequested' }`.
+
+**API**
+```ts
+export type ConsentStatusBadgeIntent = { type: 'consentDetailsRequested' };
+export class EmrConsentStatusBadgeComponent {
+  readonly model = input.required<ConsentStatusViewModel>();
+  readonly interactive = input(false);
+  readonly intent = output<ConsentStatusBadgeIntent>();
+}
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| `model` | `ConsentStatusViewModel` (required) | — | badge and detail |
+| `interactive` | `boolean` | `false` | renders as a button |
+| `intent` (output) | `ConsentStatusBadgeIntent` | — | only when interactive |
+
+**Example**
+```html
+<emr-consent-status-badge [model]="status" [interactive]="true" (intent)="openConsent()" />
+```
+
+**Known gaps**
+- The intent type is local to the component, not in emr-controller.
+
+**Depends on** — none.
+
+**Used by** — none yet.
+
+### EmrSharingGrants
+**Layer** L4 · **Selector** `emr-sharing-grants` · **Status** proposed · **Story** `emr-privacy-centre--grants-active`
+
+**Need** — Patients exercising privacy rights need one consistent surface; the app, not the UI, decides eligibility, deadlines and wording.
+
+**Purpose** — Controlled list of data-sharing grants: filter chips, grant cards with scope chips, validity or No expiry, status badge, Revoke (only when canRevoke) with a confirmation flyout, and loading/empty/error states. All text, badges and eligibility come from the controller; built-in English labels are overridable through the `labels` input.
+
+**API**
+```ts
+export class EmrSharingGrantsComponent {
+  readonly model = input.required<SharingGrantsViewModel>();
+  readonly labels = input<Partial<...Labels>>({});
+  readonly intent = output<SharingGrantsIntent>();
+}
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| `model` | `SharingGrantsViewModel` (required) | — | everything displayed |
+| `labels` | `Partial<...Labels>` | English defaults | overrides built-in fixed text |
+| `intent` (output) | `OutputEmitterRef<SharingGrantsIntent>` | — | see `privacy.models.ts` |
+
+**Example**
+```html
+<emr-sharing-grants [model]="model" (intent)="onIntent($event)" />
+```
+
+### EmrAccessLog
+**Layer** L4 · **Selector** `emr-access-log` · **Status** proposed · **Story** `emr-privacy-centre--access-log-default`
+
+**Need** — Patients exercising privacy rights need one consistent surface; the app, not the UI, decides eligibility, deadlines and wording.
+
+**Purpose** — Controlled access-log list: period choices, entries with actor, role, organisation, action, data and purpose, Report a concern, Load more and loading/empty/error states. All text, badges and eligibility come from the controller; built-in English labels are overridable through the `labels` input.
+
+**API**
+```ts
+export class EmrAccessLogComponent {
+  readonly model = input.required<AccessLogViewModel>();
+  readonly labels = input<Partial<...Labels>>({});
+  readonly intent = output<AccessLogIntent>();
+}
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| `model` | `AccessLogViewModel` (required) | — | everything displayed |
+| `labels` | `Partial<...Labels>` | English defaults | overrides built-in fixed text |
+| `intent` (output) | `OutputEmitterRef<AccessLogIntent>` | — | see `privacy.models.ts` |
+
+**Example**
+```html
+<emr-access-log [model]="model" (intent)="onIntent($event)" />
+```
+
+### EmrRightsRequests
+**Layer** L4 · **Selector** `emr-rights-requests` · **Status** proposed · **Story** `emr-privacy-centre--requests-list`
+
+**Need** — Patients exercising privacy rights need one consistent surface; the app, not the UI, decides eligibility, deadlines and wording.
+
+**Purpose** — Controlled rights-requests list and new-request form: kind cards, guidance, description, nominee fields, attach, submit only when canSubmit, withdraw with a confirmation flyout. All text, badges and eligibility come from the controller; built-in English labels are overridable through the `labels` input.
+
+**API**
+```ts
+export class EmrRightsRequestsComponent {
+  readonly model = input.required<RightsRequestsViewModel>();
+  readonly labels = input<Partial<...Labels>>({});
+  readonly intent = output<RightsRequestsIntent>();
+}
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| `model` | `RightsRequestsViewModel` (required) | — | everything displayed |
+| `labels` | `Partial<...Labels>` | English defaults | overrides built-in fixed text |
+| `intent` (output) | `OutputEmitterRef<RightsRequestsIntent>` | — | see `privacy.models.ts` |
+
+**Example**
+```html
+<emr-rights-requests [model]="model" (intent)="onIntent($event)" />
+```
+
+### EmrPrivacyCentre
+**Layer** L4 · **Selector** `emr-privacy-centre` · **Status** proposed · **Story** `emr-privacy-centre--centre-with-projected-section`
+
+**Need** — Patients exercising privacy rights need one consistent surface; the app, not the UI, decides eligibility, deadlines and wording.
+
+**Purpose** — Patient self-service home: summary tiles, section tabs and a content slot for the active section the app projects. All text, badges and eligibility come from the controller; built-in English labels are overridable through the `labels` input.
+
+**API**
+```ts
+export class EmrPrivacyCentreComponent {
+  readonly model = input.required<PrivacyCentreViewModel>();
+  readonly labels = input<Partial<...Labels>>({});
+  readonly intent = output<PrivacyCentreIntent>();
+}
+```
+
+**Attributes**
+
+| name | type | default | notes |
+|---|---|---|---|
+| `model` | `PrivacyCentreViewModel` (required) | — | everything displayed |
+| `labels` | `Partial<...Labels>` | English defaults | overrides built-in fixed text |
+| `intent` (output) | `OutputEmitterRef<PrivacyCentreIntent>` | — | see `privacy.models.ts` |
+
+**Example**
+```html
+<emr-privacy-centre [model]="model" (intent)="onIntent($event)" />
+```

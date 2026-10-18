@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Modal, Platform, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { EmrButton } from './primitives';
 import { fontFamily, fontWeight, useEmrTheme } from './theme';
@@ -30,6 +30,10 @@ export function EmrSheet({ open, title, showBack, footer, wideBreakpoint = 720, 
   const wide = width >= wideBreakpoint;
   const ref = useRef<{ focus?: () => void } | null>(null);
   const close = () => onIntent({ type: 'closeRequested' });
+  // react-native-web's Modal portals into document.body, which does not exist during Next.js SSR; rendering it
+  // there breaks hydration ("removeChild … not a child"). Mount the modal only after the first client render.
+  const [mounted, setMounted] = useState(Platform.OS !== 'web');
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (open && Platform.OS === 'web') ref.current?.focus?.();
@@ -39,6 +43,7 @@ export function EmrSheet({ open, title, showBack, footer, wideBreakpoint = 720, 
     ? { onKeyDown: (e: object) => { if ((e as { key?: string }).key === 'Escape') close(); } }
     : null;
 
+  if (!mounted) return null;
   return (
     <Modal visible={open} transparent statusBarTranslucent animationType={wide ? 'fade' : 'slide'} onRequestClose={close}>
       <View style={[styles.root, wide ? styles.rootWide : styles.rootNarrow]}>

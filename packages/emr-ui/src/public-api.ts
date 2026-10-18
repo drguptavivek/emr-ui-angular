@@ -84,3 +84,13 @@ export * from './lib/authoring/emr-validation-rule-editor.component';
 export * from './lib/authoring/emr-field-library-picker.component';
 export * from './lib/authoring/emr-template-composer.component';
 export * from './lib/authoring/emr-template-preview.component';
+
+// L4 consent and privacy (shared contracts: emr-controller consent.models / privacy.models)
+export * from './lib/domain/emr-consent-capture.component';
+export * from './lib/domain/emr-consent-review.component';
+export * from './lib/domain/emr-consent-receipt.component';
+export * from './lib/domain/emr-consent-status-badge.component';
+export * from './lib/domain/emr-sharing-grants.component';
+export * from './lib/domain/emr-access-log.component';
+export * from './lib/domain/emr-rights-requests.component';
+export * from './lib/domain/emr-privacy-centre.component';

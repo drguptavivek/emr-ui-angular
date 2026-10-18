@@ -1,7 +1,9 @@
 'use client';
 
 import { Pressable, ScrollView, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { AttestationViewModel, EmrBadge } from '@drguptavivek/emr-controller';
+import type {
+  ConsentCaptureIntent, ConsentCaptureViewModel, ConsentCategoryView, ConsentDecision, ConsentMethod, ConsentPurposeView, EmrBadge,
+} from '@drguptavivek/emr-controller';
 import { EmrAlert, EmrCard } from './l1-display';
 import { EmrRadioGroup, EmrTextInput } from './l1-inputs';
 import { EmrAttestation } from './l4-shell';
@@ -32,64 +34,12 @@ export type EmrConsentLabels = typeof DEFAULTS;
 
 // ---- Models and intents (all strings pre-resolved by the app; every rule is domain-side) ----
 
-export type EmrConsentMethod = 'tap' | 'signature' | 'thumbprint' | 'verbal_attested';
-export type EmrConsentDecision = 'granted' | 'refused';
-
-export interface EmrConsentPurpose {
-  id: string;
-  label: string;
-  description: string;
-  essential: boolean;
-  decision?: EmrConsentDecision;
-  /** Decision shown read-only. */
-  locked?: boolean;
-}
-
-/**
- * A user-defined group of purposes. 'whole': one decision for the category, its purposes listed for
- * information. 'per_purpose': each purpose decided on its own. Essential purposes are never decided.
- */
-export interface EmrConsentCategory {
-  id: string;
-  label: string;
-  description?: string;
-  mode: 'whole' | 'per_purpose';
-  decision?: EmrConsentDecision;
-  /** Category decision shown read-only ('whole' mode). */
-  locked?: boolean;
-  purposes: EmrConsentPurpose[];
-}
-
-export interface EmrConsentCaptureModel {
-  notice: { title: string; sections: { heading: string; body: string }[]; version: string; languageLabel: string };
-  languageOptions: { id: string; label: string }[];
-  selectedLanguage: string;
-  categories: EmrConsentCategory[];
-  givenByOptions: { id: string; label: string }[];
-  selectedGivenBy?: string;
-  guardian?: { name?: string; relationship?: string; nameError?: string; relationshipError?: string; required: boolean };
-  methodOptions: { id: EmrConsentMethod; label: string }[];
-  selectedMethod?: EmrConsentMethod;
-  /** Status text from the app once captured, e.g. "Signature captured 10:42". */
-  capture?: { signatureLabel?: string; thumbprintLabel?: string };
-  /** Rendered when selectedMethod is verbal_attested. */
-  attestation?: AttestationViewModel;
-  canSubmit: boolean;
-  submitError?: string;
-}
-
-export type EmrConsentIntent =
-  | { type: 'languageSelected'; id: string }
-  | { type: 'categoryDecided'; id: string; decision: EmrConsentDecision }
-  | { type: 'purposeDecided'; id: string; decision: EmrConsentDecision }
-  | { type: 'givenBySelected'; id: string }
-  | { type: 'guardianChanged'; name?: string; relationship?: string }
-  | { type: 'methodSelected'; id: EmrConsentMethod }
-  | { type: 'signatureRequested' }
-  | { type: 'thumbprintRequested' }
-  | { type: 'attestationConfirmed' }
-  | { type: 'submitRequested' }
-  | { type: 'cancelled' };
+export type EmrConsentMethod = ConsentMethod;
+export type EmrConsentDecision = ConsentDecision;
+export type EmrConsentPurpose = ConsentPurposeView;
+export type EmrConsentCategory = ConsentCategoryView;
+export type EmrConsentCaptureModel = ConsentCaptureViewModel;
+export type EmrConsentIntent = ConsentCaptureIntent;
 
 function useText() {
   const t = useEmrTheme();

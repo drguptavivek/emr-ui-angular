@@ -2,11 +2,11 @@
 
 import { useId } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import type { EmrBadge, EmrTone } from '@drguptavivek/emr-controller';
+import type { ConsentReviewIntent, ConsentReviewPurposeView, ConsentReviewViewModel } from '@drguptavivek/emr-controller';
 import { EmrAlert, EmrCard } from './l1-display';
 import { EmrCheckbox } from './l1-inputs';
 import { ThemedInput } from './inputs-core';
-import { EmrPatientIdentityCard, type EmrPatientIdentity } from './l4-identity';
+import { EmrPatientIdentityCard } from './l4-identity';
 import { EmrSheet } from './l4-shell-sheet';
 import { EmrBadgeView, EmrButton } from './primitives';
 import { fontFamily, fontWeight, useEmrTheme } from './theme';
@@ -31,43 +31,9 @@ export type EmrConsentReviewLabels = typeof DEFAULTS;
 
 // ---- Models and intents (all strings pre-resolved by the app; every rule is domain-side) ----
 
-export interface EmrConsentReviewPurpose {
-  id: string;
-  label: string;
-  description?: string;
-  essential: boolean;
-  statusBadge: EmrBadge;
-  decidedAtLabel?: string;
-  methodLabel?: string;
-  givenByLabel?: string;
-  canWithdraw: boolean;
-  canGrant: boolean;
-  contact?: {
-    channels: { id: string; label: string; selected: boolean }[];
-    preferredNumber?: string;
-    preferredNumberLabel: string;
-    preferredNumberError?: string;
-  };
-}
-
-export interface EmrConsentReviewModel {
-  patient: EmrPatientIdentity;
-  noticeVersionLabel: string;
-  categories: { id: string; label: string; description?: string; purposes: EmrConsentReviewPurpose[] }[];
-  /** What stops on withdrawal is the model's text; this component states nothing itself. */
-  pendingWithdrawal?: { purposeId: string; title: string; body: string; confirmLabel: string; cancelLabel: string };
-  message?: { tone: EmrTone; text: string };
-}
-
-export type EmrConsentReviewIntent =
-  | { type: 'withdrawRequested'; purposeId: string }
-  | { type: 'withdrawConfirmed'; purposeId: string }
-  | { type: 'withdrawDismissed' }
-  | { type: 'grantRequested'; purposeId: string }
-  | { type: 'channelToggled'; purposeId: string; channelId: string }
-  | { type: 'preferredNumberChanged'; purposeId: string; value: string }
-  | { type: 'receiptRequested' }
-  | { type: 'cancelled' };
+export type EmrConsentReviewPurpose = ConsentReviewPurposeView;
+export type EmrConsentReviewModel = ConsentReviewViewModel;
+export type EmrConsentReviewIntent = ConsentReviewIntent;
 
 /** L4. "My consents" for staff at a desk or helpline. Renders what the app resolved and emits intents; decides nothing. */
 export function EmrConsentReview({ model: m, labels, onIntent }: {
