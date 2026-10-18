@@ -34,3 +34,15 @@ export interface WebKeyEvent { key: string; preventDefault(): void }
 export function webProps(props: object): object | null {
   return Platform.OS === 'web' ? props : null;
 }
+
+/**
+ * Key handler for a TextInput. react-native-web's TextInput installs its own onKeyDown and only
+ * forwards keys through onKeyPress, so an onKeyDown passed to a TextInput never fires. This adapts
+ * onKeyPress (web: the DOM keyboard event; native: nativeEvent.key) to the WebKeyEvent shape.
+ */
+export function textInputKeys(handler: (e: WebKeyEvent) => void) {
+  return {
+    onKeyPress: (e: { key?: string; nativeEvent?: { key?: string }; preventDefault?: () => void }) =>
+      handler({ key: e.key ?? e.nativeEvent?.key ?? '', preventDefault: () => e.preventDefault?.() }),
+  };
+}

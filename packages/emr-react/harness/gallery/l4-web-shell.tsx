@@ -19,11 +19,11 @@ const NAV: NavItem[] = [
 
 const RESULTS: EmrSearchGroup[] = [
   { id: 'patients', label: 'Patients', results: [
-    { id: 'p1', label: 'Asha Verma', sub: 'MRN 000123 · 54 F' },
-    { id: 'p2', label: 'Ashok Verma', sub: 'MRN 000456 · 61 M' },
+    { id: 'p1', label: 'Test Patient A', sub: 'MRN 000123 · 54 F' },
+    { id: 'p2', label: 'Test Patient B', sub: 'MRN 000456 · 61 M' },
   ] },
   { id: 'barcodes', label: 'Barcodes', results: [{ id: 'b1', label: 'SPC-0007741', sub: 'Serum, collected', badge: { label: 'Received', tone: 'success' } }] },
-  { id: 'historical', label: 'Historical', results: [{ id: 'h1', label: 'Asha Verma (merged)', sub: 'Archived 2021', badge: { label: 'Archived', tone: 'neutral' } }] },
+  { id: 'historical', label: 'Historical', results: [{ id: 'h1', label: 'Test Patient A (merged)', sub: 'Archived 2021', badge: { label: 'Archived', tone: 'neutral' } }] },
 ];
 
 function Demo() {

@@ -19,4 +19,7 @@ export * from './l4-desk';
 export * from './l4-mobile-shell';
 export * from './l4-web-shell';
 export * from './data-table';
+export * from './l4-merge';
+export * from './l4-records';
+export * from './charts';
 export { isFieldShown, isSectionShown } from './typed-field.logic';

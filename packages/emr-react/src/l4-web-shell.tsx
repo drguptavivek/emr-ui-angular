@@ -1,9 +1,9 @@
 'use client';
 
-import { useMemo, type ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import type { EmrBadge, EmrOption, NavItem } from '@drguptavivek/emr-controller';
-import { EmrSearchSelect } from './l1-interactive';
+import type { NavItem } from '@drguptavivek/emr-controller';
+import { EmrTopBarSearch, type EmrSearchGroup } from './l4-web-shell-search';
 import { EmrLeftNav, type EmrLeftNavIntent } from './l4-web-shell-nav';
 import { EmrSheet } from './l4-shell-sheet';
 import { useContainerWidth } from './l4-lists-shared';
@@ -11,6 +11,7 @@ import { EmrButton } from './primitives';
 import { fontFamily, fontWeight, useEmrTheme } from './theme';
 
 export * from './l4-web-shell-nav';
+export type { EmrSearchGroup, EmrSearchResult } from './l4-web-shell-search';
 
 /** English fallbacks for built-in strings. Every key is overridable via `labels`. */
 const DEFAULTS = {
@@ -20,14 +21,12 @@ const DEFAULTS = {
   search: 'Search',
   searchPlaceholder: 'Search patients, barcodes, records',
   noResults: 'No matching results',
+  searching: 'Searching…',
   userMenu: 'User menu',
   main: 'Main content',
   sidePanel: 'Side panel',
 };
 type Labels = Partial<typeof DEFAULTS>;
-
-export interface EmrSearchResult { id: string; label: string; sub?: string; badge?: EmrBadge }
-export interface EmrSearchGroup { id: string; label: string; results: readonly EmrSearchResult[] }
 
 export interface EmrTopBarModel {
   /** Product title; `titleSlot` replaces it (logo, facility switcher). */
@@ -48,38 +47,25 @@ export type EmrTopBarIntent =
   | { type: 'menuRequested' }
   | { type: 'navToggleRequested' };
 
-const SEP = '\u001f';
-
 /**
- * L4. Product title, global search and user-menu trigger. Results arrive grouped from props;
- * EmrSearchSelect is flat, so each option's description carries "group · sub · badge".
- * The search button re-emits queryChanged with the current query (Enter does too).
+ * L4. Product title, global search and user-menu trigger. Results arrive grouped from props and render in a floating overlay
+ * under the field (the bar height never changes). The search button re-emits queryChanged with the current query (Enter does too).
  */
 export function EmrTopBar({ model, labels, onIntent }: { model: EmrTopBarModel; labels?: Labels; onIntent: (intent: EmrTopBarIntent) => void }) {
   const t = useEmrTheme();
   const l = { ...DEFAULTS, ...labels };
   const { query, open, loading, groups } = model.search;
-  const options = useMemo<EmrOption[]>(() => groups.flatMap(g => g.results.map(r => ({
-    value: g.id + SEP + r.id,
-    label: r.label,
-    description: [g.label, r.sub, r.badge?.label].filter(Boolean).join(' · '),
-  }))), [groups]);
-  const pick = (value: string) => {
-    const at = value.indexOf(SEP);
-    onIntent({ type: 'resultSelected', groupId: value.slice(0, at), id: value.slice(at + 1) });
-  };
   return (
     <View role="banner" style={[styles.top, { backgroundColor: t.surface, borderBottomColor: t.border }]}>
       {model.showNavToggle ? <EmrButton small variant="ghost" label="☰" accessibilityLabel={l.openNavigation} onPress={() => onIntent({ type: 'navToggleRequested' })} /> : null}
       {model.titleSlot ?? (model.title ? <Text role="heading" style={{ color: t.text, fontSize: t.textLg, fontWeight: fontWeight(t.weightBold), fontFamily: fontFamily(t) }}>{model.title}</Text> : null)}
       <View style={styles.search}>
-        <EmrSearchSelect label={l.search} labelHidden placeholder={l.searchPlaceholder} emptyMessage={l.noResults}
-          query={query} options={options} selected={[]} open={open} loading={loading}
+        <EmrTopBarSearch query={query} open={open} loading={loading} groups={groups} labels={l}
           onQueryChange={q => onIntent({ type: 'queryChanged', query: q })}
           onSearchRequested={() => onIntent({ type: 'queryChanged', query })}
           onOpenRequested={() => onIntent({ type: 'searchOpenRequested' })}
           onCloseRequested={() => onIntent({ type: 'searchCloseRequested' })}
-          onOptionSelect={pick} onRemoveRequested={() => undefined} />
+          onSelect={(groupId, id) => onIntent({ type: 'resultSelected', groupId, id })} />
       </View>
       <EmrButton variant="outline" label={model.userLabel ?? l.userMenu} accessibilityLabel={l.userMenu} onPress={() => onIntent({ type: 'menuRequested' })} />
     </View>
@@ -133,7 +119,7 @@ export function EmrAppShell({ model, rightPanel, wideBreakpoint = 1024, labels, 
 
 const styles = StyleSheet.create({
   root: { flex: 1, minHeight: 0 },
-  top: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingHorizontal: 12, paddingVertical: 8, borderBottomWidth: 1, zIndex: 2 },
+  top: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingHorizontal: 12, paddingVertical: 8, borderBottomWidth: 1, zIndex: 10 },
   search: { flex: 1, maxWidth: 560 },
   body: { flex: 1, flexDirection: 'row', minHeight: 0 },
   stack: { flexDirection: 'column' },

@@ -11,6 +11,9 @@ import { gallery as l4Desk } from './l4-desk';
 import { gallery as l4MobileShell } from './l4-mobile-shell';
 import { gallery as l4WebShell } from './l4-web-shell';
 import { gallery as dataTable } from './data-table';
+import { gallery as l4Merge } from './l4-merge';
+import { gallery as l4Records } from './l4-records';
+import { gallery as charts } from './charts';
 import type { GallerySection } from './types';
 
 export const galleryGroups: readonly { id: string; title: string; sections: readonly GallerySection[] }[] = [
@@ -27,4 +30,7 @@ export const galleryGroups: readonly { id: string; title: string; sections: read
   { id: 'l4-mobile-shell', title: 'L4 · Mobile shell', sections: l4MobileShell },
   { id: 'l4-web-shell', title: 'L4 · Web shell', sections: l4WebShell },
   { id: 'data-table', title: 'Web only · Data table', sections: dataTable },
+  { id: 'l4-merge', title: 'L4 · Merge compare', sections: l4Merge },
+  { id: 'l4-records', title: 'L4 · Record diff and upload', sections: l4Records },
+  { id: 'charts', title: 'Web only · Charts', sections: charts },
 ];

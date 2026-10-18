@@ -6,7 +6,7 @@ import type { EmrBadge, EmrOption, TimeAxisIntent, TimeAxisViewModel } from '@dr
 import { ThemedInput } from './inputs-core';
 import { EmrButton, EmrOptionChip } from './primitives';
 import { focusRing, fontFamily, fontWeight, toneColors, useEmrTheme } from './theme';
-import { interactiveLabelDefaults, webProps, type InteractiveLabels, type WebKeyEvent } from './l1-interactive-shared';
+import { interactiveLabelDefaults, textInputKeys, webProps, type InteractiveLabels, type WebKeyEvent } from './l1-interactive-shared';
 import { clampedTarget, rovingTarget, tabStopTick } from './l1-interactive.logic';
 
 export { EmrLikert, EmrVas, type EmrScaleAnchor } from './l1-interactive-scales';
@@ -117,7 +117,7 @@ export function EmrSearchSelect({ label, labelHidden, placeholder, query, option
           <ThemedInput role="combobox" aria-label={name} aria-expanded={open} aria-autocomplete="list" autoComplete="off" autoCorrect={false}
             value={query} placeholder={placeholder ?? l.searchPlaceholder} editable={!disabled} invalid={!!error}
             onChangeText={onQueryChange} onFocus={onOpenRequested} onSubmitEditing={onSearchRequested}
-            {...webProps({ onKeyDown: onInputKey })} />
+            {...(textInputKeys(onInputKey) as object)} />
         </View>
         <EmrButton variant="outline" label={loading ? l.searching : l.searchButton} disabled={disabled || loading} onPress={onSearchRequested} />
       </View>
