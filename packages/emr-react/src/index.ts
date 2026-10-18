@@ -32,5 +32,8 @@ export * from './l4-cards';
 export * from './l4-drafts';
 export * from './l4-medications';
 export * from './l4-safety-pedigree';
+export * from './l4-ophthalmology';
+export * from './l4-orders-documents';
+export * from './l4-annotation-canvas';
 export * from './l6-authoring';
 export { isFieldShown, isSectionShown } from './typed-field.logic';

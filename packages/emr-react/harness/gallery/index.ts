@@ -24,6 +24,9 @@ import { gallery as l4Cards } from './l4-cards';
 import { gallery as l4Drafts } from './l4-drafts';
 import { gallery as l4Medications } from './l4-medications';
 import { gallery as l4SafetyPedigree } from './l4-safety-pedigree';
+import { gallery as l4Ophthalmology } from './l4-ophthalmology';
+import { gallery as l4OrdersDocuments } from './l4-orders-documents';
+import { gallery as l4AnnotationCanvas } from './l4-annotation-canvas';
 import { gallery as l6Authoring } from './l6-authoring';
 import type { GallerySection } from './types';
 
@@ -54,5 +57,8 @@ export const galleryGroups: readonly { id: string; title: string; sections: read
   { id: 'l4-consent-review', title: 'L4 · Consent review and receipt', sections: l4ConsentReview },
   { id: 'l4-medications', title: 'L4 · Scores & medications', sections: l4Medications },
   { id: 'l4-safety-pedigree', title: 'L4 · Safety checklists & pedigree', sections: l4SafetyPedigree },
+  { id: 'l4-ophthalmology', title: 'L4 · Ophthalmology & diagnostics', sections: l4Ophthalmology },
+  { id: 'l4-orders-documents', title: 'L4 · Orders, favourites & documents', sections: l4OrdersDocuments },
+  { id: 'l4-annotation-canvas', title: 'L4 · Clinical annotation canvas', sections: l4AnnotationCanvas },
   { id: 'l6-authoring', title: 'L6 · Authoring & template studio', sections: l6Authoring },
 ];
