@@ -12,6 +12,7 @@ export * from './typed-field';
 export * from './l2-fields';
 export * from './clinical-form';
 export * from './l3-structures';
+export * from './l3-annotation';
 export * from './l4-shell';
 export * from './l4-lists';
 export * from './l4-identity';
