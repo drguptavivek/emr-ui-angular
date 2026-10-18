@@ -266,6 +266,8 @@ export function EmrToggle(p: EmrSwitchLikeProps) {
 }
 
 /** Single choice from a few options, as chips in an equal-width grid. Selection is never cleared by pressing again. */
+const LONG_CHIP_LABEL = 20;
+
 export function EmrRadioGroup(p: Omit<EmrFieldProps, 'placeholder'> & {
   value: string | null;
   options: readonly ClinicalOption[];
@@ -279,7 +281,8 @@ export function EmrRadioGroup(p: Omit<EmrFieldProps, 'placeholder'> & {
       <View role="radiogroup" aria-labelledby={p.labelHidden ? undefined : `${id}-label`} aria-label={p.label}
         aria-describedby={hasMessage ? `${id}-message` : undefined} aria-invalid={p.error ? true : undefined}
         aria-required={p.required} aria-readonly={p.readOnly} aria-disabled={p.disabled}>
-        <EmrRow>
+        {/* ponytail: label-length heuristic for one-per-line; add a prop if a screen needs to force it. */}
+        <EmrRow single={p.options.some(o => o.label.length > LONG_CHIP_LABEL)}>
           {p.options.map(option => (
             <EmrOptionChip key={option.value} label={option.label} selected={p.value === option.value} readOnly={p.readOnly}
               disabled={p.disabled || option.disabled} onPress={() => { p.onFocus?.(); p.onValueChange(option.value); }} />

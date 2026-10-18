@@ -158,9 +158,10 @@ export function EmrSelect({ label, options, value, invalid, readOnly, disabled, 
 const CHIP_COLUMN_MIN = 140;
 const ROW_GAP = 8;
 
-export function EmrRow({ children }: { children: ReactNode }) {
+/** `single`: one chip per line, for labels too long to share a row (a phone number must not break mid-digits). */
+export function EmrRow({ children, single }: { children: ReactNode; single?: boolean }) {
   const [width, setWidth] = useState(0);
-  const columns = Math.max(1, Math.floor((width + ROW_GAP) / (CHIP_COLUMN_MIN + ROW_GAP)));
+  const columns = single ? 1 : Math.max(1, Math.floor((width + ROW_GAP) / (CHIP_COLUMN_MIN + ROW_GAP)));
   // Floor: cells that sum to the exact row width wrap on a sub-pixel rounding (seen on Android).
   const cell = width ? Math.floor((width - ROW_GAP * (columns - 1)) / columns) : undefined;
   return (
