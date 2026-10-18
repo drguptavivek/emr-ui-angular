@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "experimentalDecorators": false,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "paths": {
+      "@drguptavivek/emr-controller": ["packages/emr-controller/src/index.ts"]
+    }
+  },
+  "include": ["src", "harness"],
+  "exclude": ["**/*.spec.ts"]
+}

@@ -75,6 +75,10 @@ export interface ClinicalFieldState {
   assessmentStatus?: ClinicalAssessmentStatus;
   readOnly?: boolean;
   disabled?: boolean;
+  /** Resolved by the logic engine (relevant). Capture screens skip it; review/print must still show a hidden field that holds a value. */
+  hidden?: boolean;
+  /** Resolved required-ness; overrides the definition's static `required` when present. */
+  required?: boolean;
   warning?: string;
   error?: string;
 }

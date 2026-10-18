@@ -1,8 +1,11 @@
 # AGENTS.md
 
-Angular 22 EMR component library. Two packages, no app. **Not released — break APIs freely.**
+EMR component library. Three packages, no app. **Not released — break APIs freely.**
 
 - `@drguptavivek/emr-ui` — standalone Angular presentation components
+- `@drguptavivek/emr-react` — React Native components (Expo, and web via react-native-web). Same
+  view models and intents as emr-ui; tokens generated from `emr.css` (`pnpm --filter
+  @drguptavivek/emr-react tokens`). Next.js harness: `harness/next` (launch config `emr-react-next`).
 - `@drguptavivek/emr-controller` — framework-neutral models, ports, headless controllers
 
 ## The one rule

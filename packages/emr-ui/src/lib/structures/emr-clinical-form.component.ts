@@ -3,6 +3,10 @@ import type { ClinicalFieldDefinition, ClinicalFieldState, ClinicalFieldValue, C
 import { EmrSectionCardComponent } from './emr-section-card.component';
 import { EmrCustomFieldContext, EmrTypedFieldComponent } from '../fields/emr-typed-field.component';
 
+function isEmptyValue(value: ClinicalFieldState['value']): boolean {
+  return value === null || value === '' || (Array.isArray(value) && value.length === 0);
+}
+
 @Component({
   selector: 'emr-clinical-form',
   standalone: true,
@@ -26,11 +30,11 @@ import { EmrCustomFieldContext, EmrTypedFieldComponent } from '../fields/emr-typ
                   @for (item of itemsFor(block.id); track item.id) {
                     <div class="emr-clinical-form__repeat-item">
                       <div class="emr-clinical-form__repeat-item-heading"><span>{{ item.label ?? ('Entry ' + ($index + 1)) }}</span><button class="emr-button emr-button--ghost emr-button--small" type="button" [disabled]="model.readOnly || item.readOnly" (click)="emit({ type: 'repeatItemRemoveRequested', groupId: block.id, itemId: item.id })">Remove</button></div>
-                      <div class="emr-clinical-form__grid">@for (field of block.fields; track field.id) { <div class="emr-clinical-form__field" [style.grid-column]="'span ' + (field.span ?? 6)"><emr-typed-field [definition]="field" [model]="item.fields[field.id]" [controlId]="controlId(field, item.id)" [readOnly]="model.readOnly || !!item.readOnly" [customTemplates]="customTemplates" (focused)="focus(field.id)" (valueChange)="valueChanged(field, $event, item, block.id)" (statusChange)="statusChanged(field, $event, item, block.id)" /></div> }</div>
+                      <div class="emr-clinical-form__grid">@for (field of block.fields; track field.id) { @if (shown(item.fields[field.id])) { <div class="emr-clinical-form__field" [style.grid-column]="'span ' + (field.span ?? 6)"><emr-typed-field [definition]="field" [model]="item.fields[field.id]" [controlId]="controlId(field, item.id)" [readOnly]="model.readOnly || !!item.readOnly" [customTemplates]="customTemplates" (focused)="focus(field.id)" (valueChange)="valueChanged(field, $event, item, block.id)" (statusChange)="statusChanged(field, $event, item, block.id)" /></div> } }</div>
                     </div>
                   } @empty { <p class="emr-clinical-form__empty">No entries recorded.</p> }
                 </div>
-              } @else {
+              } @else if (shown(model.fields[block.id])) {
                 <div class="emr-clinical-form__field" [style.grid-column]="'span ' + (block.span ?? 6)"><emr-typed-field [definition]="block" [model]="model.fields[block.id]" [controlId]="controlId(block)" [readOnly]="model.readOnly ?? false" [customTemplates]="customTemplates" (focused)="focus(block.id)" (valueChange)="valueChanged(block, $event)" (statusChange)="statusChanged(block, $event)" /></div>
               }
             }
@@ -46,6 +50,8 @@ export class EmrClinicalFormComponent {
   @Input() idPrefix = '';
   @Input() customTemplates: Readonly<Record<string, TemplateRef<EmrCustomFieldContext>>> = {};
   @Output() readonly intent = new EventEmitter<ClinicalFormIntent>();
+  /** A hidden field is skipped only while empty: a hidden field that still holds a value is clinical data and stays visible. */
+  shown(state?: ClinicalFieldState): boolean { return !state?.hidden || !isEmptyValue(state.value); }
   isCollapsed(sectionId: string): boolean { return this.model.collapsedSectionIds?.includes(sectionId) ?? false; }
   itemsFor(groupId: string): readonly RepeatableItemState[] { return this.model.repeatableGroups[groupId] ?? []; }
   domId(value: string): string { return this.idPrefix ? `${this.idPrefix}-${value}` : value; }

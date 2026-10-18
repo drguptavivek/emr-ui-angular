@@ -1,6 +1,24 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "storybook", "runtimeExecutable": "pnpm", "runtimeArgs": ["storybook", "--ci"], "port": 6006 }
+    {
+      "name": "storybook",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": [
+        "storybook",
+        "--ci"
+      ],
+      "port": 6006
+    },
+    {
+      "name": "emr-react-next",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": [
+        "--filter",
+        "@drguptavivek/emr-react",
+        "harness:next"
+      ],
+      "port": 3300
+    }
   ]
 }

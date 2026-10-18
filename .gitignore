@@ -10,3 +10,5 @@ playwright-report/
 .serena
 .codex-artifacts
 .trace-mcp/
+.next/
+next-env.d.ts
