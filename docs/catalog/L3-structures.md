@@ -126,7 +126,9 @@ export class EmrRepeatableGroupComponent {
 
 **Need** — most clinical documentation (history, system examinations, PAC checklist forms, EHR template previews) is a set of labelled sections, each containing simple fields and/or repeatable field-sets, defined once as data and rendered/edited generically rather than as bespoke Angular classes per specialty form.
 
-**Purpose** — renders `model.schema.sections` as `EmrSectionCard`s, and within each section renders `section.blocks` — either a plain `ClinicalFieldDefinition` (via `EmrTypedField`) or a `RepeatableGroupDefinition` block (rendered inline, see gap note above) — on a 12-column grid keyed by each block's `span`. It emits the full `ClinicalFormIntent` union and never calls HTTP, persists, clinically validates, or infers completion/normality/safety; section collapse state, section status badges, and every field's `assessmentStatus` are controller-supplied and echoed back untouched.
+**Visibility** — `ClinicalFieldState.hidden` / `required` are resolved by the controller's logic engine. A hidden field is skipped only while empty; a hidden field holding a value stays visible (`isFieldShown` in emr-react).
+
+**Purpose** — renders `model.schema.sections` as `EmrSectionCard`s, and within each section renders `section.blocks` — a plain `ClinicalFieldDefinition` (via `EmrTypedField`), a `RepeatableGroupDefinition` block (rendered inline, see gap note above), or a `ClinicalMatrixBlockDefinition` (a rows × columns grid of ordinary fields, e.g. OD/OS, whose cells emit plain `fieldEditRequested`) — on a 12-column grid keyed by each block's `span`. It emits the full `ClinicalFormIntent` union and never calls HTTP, persists, clinically validates, or infers completion/normality/safety; section collapse state, section status badges, and every field's `assessmentStatus` are controller-supplied and echoed back untouched.
 
 **API**
 ```ts
@@ -140,7 +142,23 @@ export interface RepeatableGroupDefinition {
   fields: readonly ClinicalFieldDefinition[];
 }
 
-export type ClinicalFormBlock = ClinicalFieldDefinition | RepeatableGroupDefinition;
+/** Layout only: rows × columns (e.g. IOP / CDR × OD / OS); each cell is an ordinary field stored in `fields` under its own id. */
+export interface ClinicalMatrixBlockDefinition {
+  kind: 'matrix';
+  id: string;
+  label: string;
+  description?: string;
+  columns: readonly { id: string; label: string }[];
+  rows: readonly ClinicalMatrixBlockRow[];
+}
+
+export interface ClinicalMatrixBlockRow {
+  id: string;
+  label: string;
+  cells: Readonly<Record<string, ClinicalFieldDefinition>>; // keyed by column id; missing = not applicable
+}
+
+export type ClinicalFormBlock = ClinicalFieldDefinition | RepeatableGroupDefinition | ClinicalMatrixBlockDefinition;
 
 export interface ClinicalFormSection {
   id: string;

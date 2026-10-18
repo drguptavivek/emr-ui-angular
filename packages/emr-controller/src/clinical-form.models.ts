@@ -51,9 +51,31 @@ export interface RepeatableGroupDefinition {
   fields: readonly ClinicalFieldDefinition[];
 }
 
+/**
+ * Layout only: a rows × columns grid (e.g. IOP / CDR × OD / OS) whose every cell is an
+ * ordinary field. Cell values live in `fields` under the cell's own id (IOP_RE, IOP_LE), so
+ * intents, hidden/required and the logic engine treat them exactly like any other field.
+ */
+export interface ClinicalMatrixBlockDefinition {
+  kind: 'matrix';
+  id: string;
+  label: string;
+  description?: string;
+  columns: readonly { id: string; label: string }[];
+  rows: readonly ClinicalMatrixBlockRow[];
+}
+
+export interface ClinicalMatrixBlockRow {
+  id: string;
+  label: string;
+  /** Keyed by column id. A missing column is not applicable to this row and renders empty. */
+  cells: Readonly<Record<string, ClinicalFieldDefinition>>;
+}
+
 export type ClinicalFormBlock =
   | ClinicalFieldDefinition
-  | RepeatableGroupDefinition;
+  | RepeatableGroupDefinition
+  | ClinicalMatrixBlockDefinition;
 
 export interface ClinicalFormSection {
   id: string;

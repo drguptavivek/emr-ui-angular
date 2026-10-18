@@ -7,6 +7,7 @@ import type {
   ClinicalFieldState,
   ClinicalFormIntent,
   ClinicalFormViewModel,
+  ClinicalMatrixBlockDefinition,
   EmrBadge,
   RepeatableItemState,
 } from '@drguptavivek/emr-controller';
@@ -68,10 +69,10 @@ export function EmrClinicalForm({ model, onIntent, idPrefix = '', customRenderer
   const controlId = (field: ClinicalFieldDefinition, itemId?: string) => domId(`${schemaId}-${itemId ? itemId + '-' : ''}${field.id}`);
   const span = (field: { span?: number }) => (stacked ? '100%' : `${((field.span ?? 6) / 12) * 100}%`) as `${number}%`;
 
-  const fieldCell = (field: ClinicalFieldDefinition, state: ClinicalFieldState | undefined, readOnly: boolean, item?: RepeatableItemState, groupId?: string) => (
-    <View key={field.id} style={[styles.cell, { width: span(field) }]}>
+  const typedField = (field: ClinicalFieldDefinition, state: ClinicalFieldState | undefined, readOnly: boolean, item?: RepeatableItemState, groupId?: string, labelHidden?: boolean) => (
       <EmrTypedField
         definition={field}
+        labelHidden={labelHidden}
         model={state}
         controlId={controlId(field, item?.id)}
         readOnly={readOnly}
@@ -84,8 +85,53 @@ export function EmrClinicalForm({ model, onIntent, idPrefix = '', customRenderer
           ? { type: 'repeatItemStatusEditRequested', groupId, itemId: item.id, fieldId: field.id, status }
           : { type: 'fieldStatusEditRequested', fieldId: field.id, status })}
       />
-    </View>
   );
+
+  const fieldCell = (field: ClinicalFieldDefinition, state: ClinicalFieldState | undefined, readOnly: boolean, item?: RepeatableItemState, groupId?: string) => (
+    <View key={field.id} style={[styles.cell, { width: span(field) }]}>{typedField(field, state, readOnly, item, groupId)}</View>
+  );
+
+  // Rows × columns of ordinary fields. Headers are the visible labels; each control keeps its own field label as its accessible name.
+  const matrix = (block: ClinicalMatrixBlockDefinition) => {
+    const rows = block.rows.filter(row => Object.values(row.cells).some(cell => isFieldShown(model.fields[cell.id])));
+    if (rows.length === 0) return null;
+    const textStyle = { color: t.text, fontFamily: fontFamily(t) };
+    return (
+      <View key={block.id} style={[styles.cell, styles.full]}>
+        <View role="table" aria-label={block.label} style={styles.matrix}>
+          <Text role="heading" aria-level={3} style={[textStyle, { fontSize: t.textLg, fontWeight: fontWeight(t.weightBold) }]}>{block.label}</Text>
+          {block.description ? <Text style={{ color: t.textMuted, fontSize: t.textMd, fontFamily: fontFamily(t) }}>{block.description}</Text> : null}
+          <View role="row" style={styles.matrixRow}>
+            {stacked ? null : <View style={styles.matrixRowLabel} />}
+            {block.columns.map(column => (
+              <Text key={column.id} role="columnheader" style={[textStyle, styles.matrixCell, { fontSize: t.textMd, fontWeight: fontWeight(t.weightBold) }]}>{column.label}</Text>
+            ))}
+          </View>
+          {rows.map(row => {
+            const required = Object.values(row.cells).some(cell => model.fields[cell.id]?.required ?? cell.required);
+            return (
+              <View key={row.id} role="row" style={[styles.matrixRowWrap, { borderTopColor: t.border }, stacked ? null : styles.matrixRow]}>
+                <Text role="rowheader" style={[textStyle, stacked ? null : styles.matrixRowLabel, { fontSize: t.textMd, fontWeight: fontWeight(650) }]}>
+                  {row.label}{required ? <Text style={{ color: t.danger }}> *</Text> : null}
+                </Text>
+                <View style={styles.matrixCells}>
+                  {block.columns.map(column => {
+                    const cell = row.cells[column.id];
+                    const state = cell ? model.fields[cell.id] : undefined;
+                    return (
+                      <View key={column.id} role="cell" style={styles.matrixCell}>
+                        {cell && isFieldShown(state) ? typedField(cell, state, model.readOnly ?? false, undefined, undefined, true) : null}
+                      </View>
+                    );
+                  })}
+                </View>
+              </View>
+            );
+          })}
+        </View>
+      </View>
+    );
+  };
 
   return (
     <View role="form" aria-label={model.schema.label} onLayout={(e: LayoutChangeEvent) => setWidth(e.nativeEvent.layout.width)} style={styles.form}>
@@ -96,6 +142,7 @@ export function EmrClinicalForm({ model, onIntent, idPrefix = '', customRenderer
           onToggle={() => onIntent({ type: 'sectionToggleRequested', sectionId: section.id })}>
           <View style={styles.grid}>
             {section.blocks.map(block => {
+              if (block.kind === 'matrix') return matrix(block);
               if (block.kind !== 'repeatable') {
                 const state = model.fields[block.id];
                 return isFieldShown(state) ? fieldCell(block, state, model.readOnly ?? false) : null;
@@ -156,5 +203,11 @@ const styles = StyleSheet.create({
   full: { width: '100%' },
   repeatable: { borderWidth: 1, borderRadius: 8, padding: 16 },
   repeatHeading: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 },
+  matrix: { gap: 8 },
+  matrixRow: { flexDirection: 'row', gap: GAP, alignItems: 'flex-start' },
+  matrixRowWrap: { borderTopWidth: StyleSheet.hairlineWidth, paddingTop: 8, gap: 6 },
+  matrixCells: { flex: 1, minWidth: 0, flexDirection: 'row', gap: GAP, alignItems: 'flex-start' },
+  matrixCell: { flex: 1, minWidth: 0 },
+  matrixRowLabel: { width: '22%', paddingTop: 12 },
   repeatItem: { marginTop: 12, padding: 12, borderWidth: 1, borderRadius: 8, gap: 12 },
 });

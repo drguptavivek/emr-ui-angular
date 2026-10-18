@@ -29,10 +29,16 @@ export const opdFormFixture: ClinicalFormViewModel = {
         { id: 'SpecType', label: 'Spectacle type', type: 'select', span: 6, options: specType },
       ] },
       { id: 'glaucoma', label: 'Glaucoma screen', collapsible: true, blocks: [
-        { id: 'IOP_RE', label: 'IOP right eye', type: 'quantity', unit: 'mmHg', span: 3 },
-        { id: 'IOP_LE', label: 'IOP left eye', type: 'quantity', unit: 'mmHg', span: 3 },
-        { id: 'CDR_RE', label: 'CD ratio right eye', type: 'decimal', precision: 2, span: 3 },
-        { id: 'CDR_LE', label: 'CD ratio left eye', type: 'decimal', precision: 2, span: 3 },
+        { kind: 'matrix', id: 'glaucoma-eyes', label: 'Per eye', columns: [{ id: 'OD', label: 'Right eye (OD)' }, { id: 'OS', label: 'Left eye (OS)' }], rows: [
+          { id: 'iop', label: 'IOP', cells: {
+            OD: { id: 'IOP_RE', label: 'IOP right eye', type: 'quantity', unit: 'mmHg' },
+            OS: { id: 'IOP_LE', label: 'IOP left eye', type: 'quantity', unit: 'mmHg' },
+          } },
+          { id: 'cdr', label: 'CD ratio', cells: {
+            OD: { id: 'CDR_RE', label: 'CD ratio right eye', type: 'decimal', precision: 2, required: true },
+            OS: { id: 'CDR_LE', label: 'CD ratio left eye', type: 'decimal', precision: 2, required: true },
+          } },
+        ] },
         { id: 'aiDecisionGL', label: 'AI decision (glaucoma)', type: 'select', span: 12, options: grade },
       ] },
       { id: 'advice', label: 'Advice and referral', blocks: [
@@ -51,10 +57,14 @@ export const opdFormFixture: ClinicalFormViewModel = {
     pva_le: { value: null },
     SpecPres: { value: null },
     SpecType: { value: null, hidden: true },
-    CDR_RE: { value: 0.7, warning: 'Above 0.6: confirm with the optometrist.' },
+    IOP_RE: { value: null },
     IOP_LE: { value: { value: 31, unit: 'mmHg' }, error: 'Must be between 0 and 50.' },
+    CDR_RE: { value: 0.7, warning: 'Above 0.6: confirm with the optometrist.' },
+    CDR_LE: { value: null },
+    aiDecisionGL: { value: null },
     advice: { value: null },
     clinic: { value: [] },
+    notes: { value: null },
   },
   repeatableGroups: {},
 };

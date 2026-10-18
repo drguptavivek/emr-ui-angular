@@ -16,8 +16,8 @@ export default meta;
 type Story = StoryObj;
 const systemField = (id: string): ClinicalFieldDefinition => {
   const section = examinations.schema.sections.find(candidate => candidate.id === 'systems');
-  const field = section?.blocks.find(candidate => candidate.kind !== 'repeatable' && candidate.id === id);
-  if (!field || field.kind === 'repeatable') throw new Error(`Missing system examination field: ${id}`);
+  const field = section?.blocks.find(candidate => candidate.kind !== 'repeatable' && candidate.kind !== 'matrix' && candidate.id === id);
+  if (!field || field.kind === 'repeatable' || field.kind === 'matrix') throw new Error(`Missing system examination field: ${id}`);
   return field;
 };
 const focusedSystem = (id: string, label: string): ClinicalFormViewModel => ({

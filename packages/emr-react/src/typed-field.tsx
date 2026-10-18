@@ -29,6 +29,7 @@ export interface EmrTypedFieldProps {
   model?: ClinicalFieldState;
   controlId: string;
   readOnly?: boolean;
+  labelHidden?: boolean;
   customRenderers?: EmrCustomRenderers;
   onValueChange: (value: ClinicalFieldValue) => void;
   onStatusChange: (status: ClinicalAssessmentStatus | undefined) => void;
@@ -36,8 +37,10 @@ export interface EmrTypedFieldProps {
 }
 
 /** L2 frame: label, required marker, and one message line (error > warning > hint). */
-export function EmrFieldFrame({ label, controlId, required, hint, warning, error, children }: {
+export function EmrFieldFrame({ label, labelHidden, controlId, required, hint, warning, error, children }: {
   label: string;
+  /** Matrix cells: the row and column headers are the visible label; the control keeps it as its accessible name. */
+  labelHidden?: boolean;
   controlId: string;
   required?: boolean;
   hint?: string;
@@ -51,11 +54,11 @@ export function EmrFieldFrame({ label, controlId, required, hint, warning, error
   const messageColor = error ? t.danger : warning ? t.warning : t.textMuted;
   return (
     <View style={styles.frame}>
-      <Text nativeID={`${controlId}-label`} aria-label={required ? `${label}, ${labels.required}` : label}
+      {labelHidden ? null : <Text nativeID={`${controlId}-label`} aria-label={required ? `${label}, ${labels.required}` : label}
         style={{ color: t.text, fontSize: t.textMd, fontWeight: fontWeight(650), fontFamily: fontFamily(t) }}>
         {label}
         {required ? <Text style={{ color: t.danger }}> *</Text> : null}
-      </Text>
+      </Text>}
       {children}
       <View aria-live="polite">
         {message ? (
@@ -69,7 +72,7 @@ export function EmrFieldFrame({ label, controlId, required, hint, warning, error
 }
 
 /** L2. Renders mechanics only; validation and meaning stay in the controller. */
-export function EmrTypedField({ definition, model, controlId, readOnly = false, customRenderers = {}, onValueChange, onStatusChange, onFocus }: EmrTypedFieldProps) {
+export function EmrTypedField({ definition, model, controlId, readOnly = false, labelHidden, customRenderers = {}, onValueChange, onStatusChange, onFocus }: EmrTypedFieldProps) {
   const labels = useEmrLabels();
   const required = model?.required ?? definition.required ?? false;
   const isReadOnly = readOnly || !!model?.readOnly;
@@ -78,7 +81,7 @@ export function EmrTypedField({ definition, model, controlId, readOnly = false, 
 
   const inputProps = {
     id: controlId,
-    'aria-labelledby': `${controlId}-label`,
+    'aria-labelledby': labelHidden ? undefined : `${controlId}-label`,
     'aria-describedby': hasMessage ? `${controlId}-message` : undefined,
     invalid: !!model?.error,
     accessibilityLabel: required ? `${definition.label}, ${labels.required}` : definition.label,
@@ -103,7 +106,7 @@ export function EmrTypedField({ definition, model, controlId, readOnly = false, 
     case 'multiselect': {
       const multiple = definition.type === 'multiselect';
       control = (
-        <View role={multiple ? 'group' : 'radiogroup'} aria-labelledby={`${controlId}-label`} accessibilityLabel={definition.label}>
+        <View role={multiple ? 'group' : 'radiogroup'} aria-labelledby={labelHidden ? undefined : `${controlId}-label`} accessibilityLabel={definition.label}>
           <EmrRow>
             {(definition.options ?? []).map(option => {
               const selected = multiple ? Array.isArray(model?.value) && (model.value as readonly string[]).includes(option.value) : model?.value === option.value;
@@ -145,7 +148,7 @@ export function EmrTypedField({ definition, model, controlId, readOnly = false, 
   const statusOption = statusOptions.find(option => option.value === status);
 
   return (
-    <EmrFieldFrame label={definition.label} controlId={controlId} required={required} hint={definition.hint} warning={model?.warning} error={model?.error}>
+    <EmrFieldFrame label={definition.label} labelHidden={labelHidden} controlId={controlId} required={required} hint={definition.hint} warning={model?.warning} error={model?.error}>
       {control}
       {statusOptions.length || status ? (
         <View style={styles.status}>

@@ -2,6 +2,13 @@
 
 Current state and pending work live in `handoff.md`. Exact changes and authorship live in Git.
 
+## 18 October 2026 — emr-react and form matrix blocks
+
+- **New package `@drguptavivek/emr-react`**: React Native components (Expo, and web through react-native-web) rendering the same view models and intents as emr-ui. Tokens are generated from `emr.css`; theming is a provider with token overrides; built-in strings come from a labels provider. Verified on web in a Next.js 16 harness; native verification is pending.
+- **Form matrix blocks.** `ClinicalFormBlock` gains `kind: 'matrix'`: a rows × columns grid (e.g. IOP / CDR × OD / OS) whose cells are ordinary fields stored under their own ids, so intents stay `fieldEditRequested`. Rendered by both the Angular and React forms. Story: `EMR / Clinical forms / History / Per Eye Matrix`.
+- **Engine-resolved visibility.** `ClinicalFieldState` gains `hidden` and `required`. Both forms skip a hidden field only while it is empty; a hidden field holding a value stays visible.
+- `pnpm check` now also typechecks emr-react and the Angular stories.
+
 ## 10 October 2026 — anatomy outline redraws
 
 - **19 anatomy outlines redrawn** (neonate, Mallampati, knee AP and lateral pairs, stomach, brain pair, thyroid, tracheobronchial tree, shoulder pair, pelvis and hips, great vessels, colon, hand pair, ETT airway) in a Renaissance-anatomist style: stroke widths 6 and 3 only, honest proportions and contacts, short labels, open space to annotate. Recipe descriptions updated to match.

@@ -7,7 +7,7 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
   host: { class: 'emr-field-frame' },
   template: `
     <div class="emr-field-frame__heading">
-      <label class="emr-field-frame__label" [attr.for]="controlId()">
+      <label class="emr-field-frame__label" [class.emr-sr-only]="labelHidden()" [attr.for]="controlId()">
         {{ label() }}
         @if (required()) { <span class="emr-field__required" aria-hidden="true">*</span> }
       </label>
@@ -29,6 +29,8 @@ export class EmrFieldFrameComponent {
   readonly label = input.required<string>();
   readonly controlId = input.required<string>();
   readonly required = input(false);
+  /** Matrix cells: row and column headers are the visible label; the <label> stays for assistive tech. */
+  readonly labelHidden = input(false);
   readonly hint = input<string>();
   readonly warning = input<string>();
   readonly error = input<string>();

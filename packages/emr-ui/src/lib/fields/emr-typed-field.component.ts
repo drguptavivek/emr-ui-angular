@@ -17,7 +17,7 @@ export interface EmrCustomFieldContext {
   imports: [NgTemplateOutlet, EmrFieldFrameComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <emr-field-frame [label]="definition.label" [controlId]="controlId" [required]="model?.required ?? definition.required ?? false" [hint]="definition.hint" [warning]="model?.warning" [error]="model?.error">
+    <emr-field-frame [label]="definition.label" [labelHidden]="labelHidden" [controlId]="controlId" [required]="model?.required ?? definition.required ?? false" [hint]="definition.hint" [warning]="model?.warning" [error]="model?.error">
       @switch (definition.type) {
         @case ('multiline') { <textarea class="emr-control emr-typed-field__textarea" [id]="controlId" [rows]="definition.rows ?? 3" [value]="textValue()" [placeholder]="definition.placeholder ?? ''" [disabled]="isDisabled()" [readOnly]="isReadOnly()" [attr.aria-invalid]="model?.error ? 'true' : null" [attr.aria-describedby]="messageId()" (focus)="focused.emit()" (input)="valueChanged($event)"></textarea> }
         @case ('integer') { <input class="emr-control" [id]="controlId" type="number" inputmode="numeric" step="1" [value]="numberValue()" [placeholder]="definition.placeholder ?? ''" [disabled]="isDisabled()" [readOnly]="isReadOnly()" [attr.aria-invalid]="model?.error ? 'true' : null" [attr.aria-describedby]="messageId()" (focus)="focused.emit()" (input)="valueChanged($event)"> }
@@ -49,6 +49,7 @@ export class EmrTypedFieldComponent {
   @Input() model?: ClinicalFieldState;
   @Input({ required: true }) controlId!: string;
   @Input() readOnly = false;
+  @Input() labelHidden = false;
   @Input() customTemplates: Readonly<Record<string, TemplateRef<EmrCustomFieldContext>>> = {};
   @Output() readonly valueChange = new EventEmitter<ClinicalFieldValue>();
   @Output() readonly statusChange = new EventEmitter<ClinicalAssessmentStatus | undefined>();

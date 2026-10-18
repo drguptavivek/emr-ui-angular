@@ -28,3 +28,15 @@ export const ExplicitAssessmentStatus: Story = { render: () => ({ template: `<em
 /** A collapsed section is hidden on screen but must still print — collapsed data on paper is missing data. */
 export const CollapsedSection: Story = { render: () => ({ template: `<emr-clinical-form [model]="model" />`, props: { model: { ...history, collapsedSectionIds: ['past'] } } }) };
 export const CollapsedSectionPrintPreview: Story = { render: () => ({ template: `<div class="emr-print"><emr-clinical-form [model]="model" /></div>`, props: { model: { ...history, collapsedSectionIds: ['past'] } } }) };
+
+/** OD/OS matrix block: each cell is an ordinary field, so intents stay plain fieldEditRequested. */
+export const PerEyeMatrix: Story = { render: () => ({ template: `<emr-clinical-form [model]="model" />`, props: { model: {
+  schema: { id: 'glaucoma', label: 'Glaucoma screen', sections: [{ id: 'eyes', label: 'Glaucoma screen', blocks: [
+    { kind: 'matrix', id: 'per-eye', label: 'Per eye', columns: [{ id: 'OD', label: 'Right eye (OD)' }, { id: 'OS', label: 'Left eye (OS)' }], rows: [
+      { id: 'iop', label: 'IOP', cells: { OD: { id: 'IOP_RE', label: 'IOP right eye', type: 'quantity', unit: 'mmHg' }, OS: { id: 'IOP_LE', label: 'IOP left eye', type: 'quantity', unit: 'mmHg' } } },
+      { id: 'cdr', label: 'CD ratio', cells: { OD: { id: 'CDR_RE', label: 'CD ratio right eye', type: 'decimal', precision: 2, required: true }, OS: { id: 'CDR_LE', label: 'CD ratio left eye', type: 'decimal', precision: 2, required: true } } },
+    ] },
+  ] }] },
+  fields: { IOP_RE: { value: { value: 16, unit: 'mmHg' } }, IOP_LE: { value: { value: 31, unit: 'mmHg' }, error: 'Must be between 0 and 50.' }, CDR_RE: { value: 0.7, warning: 'Above 0.6: confirm with the optometrist.' }, CDR_LE: { value: null } },
+  repeatableGroups: {},
+} } }) };

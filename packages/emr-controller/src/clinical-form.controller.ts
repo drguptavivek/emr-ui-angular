@@ -51,8 +51,17 @@ export class ClinicalFormController extends StateController<ClinicalFormViewMode
 
   private fieldDefinition(fieldId: string): ClinicalFieldDefinition | undefined {
     for (const section of this.getSnapshot().schema.sections) {
-      const block = section.blocks.find(candidate => candidate.kind !== 'repeatable' && candidate.id === fieldId);
-      if (block && block.kind !== 'repeatable') return block;
+      for (const block of section.blocks) {
+        if (block.kind === 'repeatable') continue;
+        if (block.kind === 'matrix') {
+          for (const row of block.rows) {
+            const cell = Object.values(row.cells).find(candidate => candidate.id === fieldId);
+            if (cell) return cell;
+          }
+          continue;
+        }
+        if (block.id === fieldId) return block;
+      }
     }
     return undefined;
   }

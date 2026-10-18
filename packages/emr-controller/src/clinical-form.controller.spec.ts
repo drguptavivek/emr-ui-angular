@@ -64,4 +64,19 @@ describe('ClinicalFormController', () => {
     controller.dispatch({ type: 'fieldStatusEditRequested', fieldId: 'hpi', status: undefined });
     expect(controller.getSnapshot().fields.hpi.assessmentStatus).toBeUndefined();
   });
+
+  it('edits matrix cells as ordinary fields keyed by the cell field id', () => {
+    const controller = new ClinicalFormController({
+      schema: { id: 'gl', label: 'Glaucoma', sections: [{ id: 's', label: 'Eyes', blocks: [
+        { kind: 'matrix', id: 'eyes', label: 'Per eye', columns: [{ id: 'OD', label: 'OD' }, { id: 'OS', label: 'OS' }], rows: [
+          { id: 'iop', label: 'IOP', cells: { OD: { id: 'IOP_RE', label: 'IOP right eye', type: 'integer' }, OS: { id: 'IOP_LE', label: 'IOP left eye', type: 'integer' } } },
+        ] },
+      ] }] },
+      fields: { IOP_RE: { value: null }, IOP_LE: { value: 14 } },
+      repeatableGroups: {},
+    });
+    controller.dispatch({ type: 'fieldEditRequested', fieldId: 'IOP_RE', value: 18 });
+    controller.dispatch({ type: 'fieldEditRequested', fieldId: 'eyes', value: 99 }); // the block id is not a field
+    expect(controller.getSnapshot().fields).toEqual({ IOP_RE: { value: 18 }, IOP_LE: { value: 14 } });
+  });
 });
