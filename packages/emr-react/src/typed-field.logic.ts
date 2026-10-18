@@ -1,4 +1,4 @@
-import type { ClinicalFieldValue, ClinicalQuantityValue } from '@drguptavivek/emr-controller';
+import type { ClinicalFieldState, ClinicalFieldValue, ClinicalFormSection, ClinicalQuantityValue } from '@drguptavivek/emr-controller';
 
 /**
  * Number drafts: the user types "-" or "1." on the way to a number. Those are kept as local
@@ -45,4 +45,20 @@ export function isFieldShown(state: { hidden?: boolean; value: ClinicalFieldValu
   if (!state?.hidden) return true;
   const v = state.value;
   return !(v === null || v === '' || (Array.isArray(v) && v.length === 0));
+}
+
+/**
+ * A section is drawn while any block in it would show. Repeatable groups always count (they
+ * carry the Add action); a matrix counts while any cell is shown. Stage-gated forms hide whole
+ * later stages this way without leaving empty cards.
+ */
+export function isSectionShown(
+  section: ClinicalFormSection,
+  fields: Readonly<Record<string, ClinicalFieldState | undefined>>,
+): boolean {
+  return section.blocks.some(block => {
+    if (block.kind === 'repeatable') return true;
+    if (block.kind === 'matrix') return block.rows.some(row => Object.values(row.cells).some(cell => isFieldShown(fields[cell.id])));
+    return isFieldShown(fields[block.id]);
+  });
 }

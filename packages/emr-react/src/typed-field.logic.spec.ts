@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isFieldShown, numberTextOf, parseNumberDraft, sanitizeNumberText, toggled } from './typed-field.logic';
+import { isFieldShown, isSectionShown, numberTextOf, parseNumberDraft, sanitizeNumberText, toggled } from './typed-field.logic';
 
 describe('typed field logic', () => {
   it('sanitizes number text as typed', () => {
@@ -37,5 +37,13 @@ describe('typed field logic', () => {
     expect(isFieldShown({ hidden: true, value: [] })).toBe(false);
     expect(isFieldShown({ hidden: true, value: 0 })).toBe(true);
     expect(isFieldShown({ hidden: true, value: false })).toBe(true);
+  });
+
+  it('skips a section only when every field and matrix cell in it is hidden and empty', () => {
+    const section = { blocks: [{ id: 'a' }, { kind: 'matrix', id: 'm', rows: [{ cells: { OD: { id: 'b' } } }] }] };
+    expect(isSectionShown(section, { a: { hidden: true, value: null }, b: { hidden: true, value: null } })).toBe(false);
+    expect(isSectionShown(section, { a: { hidden: true, value: null }, b: { hidden: true, value: 14 } })).toBe(true);
+    expect(isSectionShown(section, { a: { value: null } })).toBe(true);
+    expect(isSectionShown({ blocks: [{ kind: 'repeatable', id: 'r' }] }, {})).toBe(true);
   });
 });

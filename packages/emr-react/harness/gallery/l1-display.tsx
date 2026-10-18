@@ -1,13 +1,24 @@
 'use client';
 
+import type { ReactNode } from 'react';
 import { Text, View } from 'react-native';
+import { useEmrTheme } from '../../src';
 import type { EmrBadge, EmrTone } from '@drguptavivek/emr-controller';
 import { EmrAlert, EmrCard, EmrChip, EmrColumns, EmrFieldValueRow, EmrSeparator, EmrStateMessage, EmrStatusCell } from '../../src/l1-display';
 import type { GallerySection } from './types';
 
 const tones: EmrTone[] = ['neutral', 'info', 'success', 'warning', 'danger'];
 const badge = (tone: EmrTone, label: string): EmrBadge => ({ tone, label });
-const box = (text: string) => <View style={{ padding: 8, borderWidth: 1, borderColor: '#c7d3da' }}><Text>{text}</Text></View>;
+/** Demo body text in the theme's text colour (plain Text renders black in dark mode). */
+function T({ children }: { children: ReactNode }) {
+  return <Text style={{ color: useEmrTheme().text }}>{children}</Text>;
+}
+
+function Box({ text }: { text: string }) {
+  return <View style={{ padding: 8, borderWidth: 1, borderColor: useEmrTheme().border }}><T>{text}</T></View>;
+}
+
+const box = (text: string) => <Box text={text} />;
 const stack = { gap: 12 } as const;
 
 export const gallery: GallerySection[] = [
@@ -29,17 +40,17 @@ export const gallery: GallerySection[] = [
   ) },
   { id: 'separator', title: 'EmrSeparator', render: () => (
     <View>
-      <Text>Above</Text>
+      <T>Above</T>
       <EmrSeparator />
       <EmrSeparator label="Section label" />
-      <View style={{ flexDirection: 'row', alignItems: 'center' }}><Text>Left</Text><EmrSeparator orientation="vertical" /><Text>Right</Text></View>
+      <View style={{ flexDirection: 'row', alignItems: 'center' }}><T>Left</T><EmrSeparator orientation="vertical" /><T>Right</T></View>
     </View>
   ) },
   { id: 'card', title: 'EmrCard', render: () => (
     <View style={stack}>
-      <EmrCard label="Padded card"><Text>Body content</Text></EmrCard>
-      <EmrCard label="Flush card" padded={false}><Text>Edge-to-edge body</Text></EmrCard>
-      <EmrCard><Text>No title</Text></EmrCard>
+      <EmrCard label="Padded card"><T>Body content</T></EmrCard>
+      <EmrCard label="Flush card" padded={false}><T>Edge-to-edge body</T></EmrCard>
+      <EmrCard><T>No title</T></EmrCard>
     </View>
   ) },
   { id: 'columns', title: 'EmrColumns', render: () => (

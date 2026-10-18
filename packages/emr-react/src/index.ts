@@ -13,4 +13,7 @@ export * from './clinical-form';
 export * from './l3-structures';
 export * from './l4-shell';
 export * from './l4-lists';
-export { isFieldShown } from './typed-field.logic';
+export * from './l4-identity';
+export * from './l4-history';
+export * from './l4-desk';
+export { isFieldShown, isSectionShown } from './typed-field.logic';

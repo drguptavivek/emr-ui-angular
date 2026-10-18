@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, TemplateRef } from '@angular/core';
-import type { ClinicalFieldDefinition, ClinicalFieldState, ClinicalMatrixBlockDefinition, ClinicalMatrixBlockRow, ClinicalFieldValue, ClinicalFormIntent, ClinicalFormViewModel, RepeatableItemState } from '@drguptavivek/emr-controller';
+import type { ClinicalFieldDefinition, ClinicalFieldState, ClinicalFormSection, ClinicalMatrixBlockDefinition, ClinicalMatrixBlockRow, ClinicalFieldValue, ClinicalFormIntent, ClinicalFormViewModel, RepeatableItemState } from '@drguptavivek/emr-controller';
 import { EmrSectionCardComponent } from './emr-section-card.component';
 import { EmrCustomFieldContext, EmrTypedFieldComponent } from '../fields/emr-typed-field.component';
 
@@ -15,7 +15,7 @@ function isEmptyValue(value: ClinicalFieldState['value']): boolean {
   template: `
     <form class="emr-clinical-form" novalidate (submit)="$event.preventDefault()" [attr.aria-label]="model.schema.label">
       @if (model.schema.description) { <p class="emr-clinical-form__description">{{ model.schema.description }}</p> }
-      @for (section of model.schema.sections; track section.id) {
+      @for (section of model.schema.sections; track section.id) { @if (sectionShown(section)) {
         <emr-section-card [sectionId]="domId(model.schema.id + '-' + section.id)" [label]="section.label" [description]="section.description"
           [collapsible]="section.collapsible ?? false" [collapsed]="isCollapsed(section.id)"
           [status]="model.sectionStatuses?.[section.id]" (toggleRequested)="emit({ type: 'sectionToggleRequested', sectionId: section.id })">
@@ -55,7 +55,7 @@ function isEmptyValue(value: ClinicalFieldState['value']): boolean {
             }
           </div>
         </emr-section-card>
-      }
+      } }
     </form>
   `,
   styles: [`.emr-clinical-form{display:grid;gap:16px}.emr-clinical-form__description{margin:0;color:var(--emr-text-muted)}.emr-clinical-form__grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.emr-clinical-form__repeatable{border:1px solid var(--emr-border);border-radius:8px;padding:16px;background:var(--emr-surface-slate)}.emr-clinical-form__repeat-heading,.emr-clinical-form__repeat-item-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.emr-clinical-form__repeat-heading h3{margin:0;font-size:var(--emr-text-lg)}.emr-clinical-form__repeat-heading p{margin:4px 0;color:var(--emr-text-muted);font-size:var(--emr-text-md)}.emr-clinical-form__repeat-item{margin-top:12px;padding:12px;border:1px solid var(--emr-border);border-radius:8px;background:var(--emr-surface)}.emr-clinical-form__repeat-item-heading{margin-bottom:12px;font-weight:600}.emr-clinical-form__matrix{display:grid;gap:8px}.emr-clinical-form__matrix h3{margin:0;font-size:var(--emr-text-lg)}.emr-clinical-form__matrix p{margin:0;color:var(--emr-text-muted);font-size:var(--emr-text-md)}.emr-clinical-form__matrix-row{display:grid;grid-template-columns:22% repeat(var(--emr-matrix-cols),minmax(0,1fr));gap:16px;align-items:start;padding-top:8px;border-top:1px solid var(--emr-border)}.emr-clinical-form__matrix-row:first-of-type{border-top:0}.emr-clinical-form__matrix-row>[role=columnheader],.emr-clinical-form__matrix-row>[role=rowheader]{font-weight:var(--emr-weight-bold);font-size:var(--emr-text-md)}.emr-clinical-form__matrix-row>[role=rowheader]{padding-top:12px}.emr-clinical-form__empty{color:var(--emr-text-muted);margin:12px 0}.emr-clinical-form__textarea{resize:vertical;min-height:88px}.emr-clinical-form__quantity{display:flex;align-items:center;gap:8px}.emr-clinical-form__quantity .emr-control{min-width:0;flex:1}@media(max-width:720px){.emr-clinical-form__matrix-row{grid-template-columns:repeat(var(--emr-matrix-cols),minmax(0,1fr))}.emr-clinical-form__matrix-row>[role=rowheader]{grid-column:1/-1;padding-top:0}.emr-clinical-form__matrix-row>span[aria-hidden]{display:none}.emr-clinical-form__grid{grid-template-columns:1fr}.emr-clinical-form__field,.emr-clinical-form__repeatable,.emr-clinical-form__matrix{grid-column:span 1!important}.emr-clinical-form__repeat-item{padding:10px}}`]
@@ -67,6 +67,12 @@ export class EmrClinicalFormComponent {
   @Output() readonly intent = new EventEmitter<ClinicalFormIntent>();
   /** A hidden field is skipped only while empty: a hidden field that still holds a value is clinical data and stays visible. */
   shown(state?: ClinicalFieldState): boolean { return !state?.hidden || !isEmptyValue(state.value); }
+  /** A section is drawn while any block would show; repeatables always count (they carry Add). Twin of emr-react isSectionShown. */
+  sectionShown(section: ClinicalFormSection): boolean {
+    return section.blocks.some(block => block.kind === 'repeatable' ? true
+      : block.kind === 'matrix' ? block.rows.some(row => Object.values(row.cells).some(cell => this.shown(this.model.fields[cell.id])))
+      : this.shown(this.model.fields[block.id]));
+  }
   /** A row is drawn while any of its cells is shown. */
   matrixRows(block: ClinicalMatrixBlockDefinition): readonly ClinicalMatrixBlockRow[] { return block.rows.filter(row => Object.values(row.cells).some(cell => this.shown(this.model.fields[cell.id]))); }
   rowRequired(row: ClinicalMatrixBlockRow): boolean { return Object.values(row.cells).some(cell => this.model.fields[cell.id]?.required ?? cell.required ?? false); }

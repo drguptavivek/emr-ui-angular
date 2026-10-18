@@ -126,7 +126,7 @@ export class EmrRepeatableGroupComponent {
 
 **Need** — most clinical documentation (history, system examinations, PAC checklist forms, EHR template previews) is a set of labelled sections, each containing simple fields and/or repeatable field-sets, defined once as data and rendered/edited generically rather than as bespoke Angular classes per specialty form.
 
-**Visibility** — `ClinicalFieldState.hidden` / `required` are resolved by the controller's logic engine. A hidden field is skipped only while empty; a hidden field holding a value stays visible (`isFieldShown` in emr-react).
+**Visibility** — `ClinicalFieldState.hidden` / `required` are resolved by the controller's logic engine. A hidden field is skipped only while empty; a hidden field holding a value stays visible (`isFieldShown` in emr-react). A section is skipped when no block in it would show (repeatable groups always count, since they carry Add) — stage-gated forms hide whole later stages this way (`isSectionShown`).
 
 **Purpose** — renders `model.schema.sections` as `EmrSectionCard`s, and within each section renders `section.blocks` — a plain `ClinicalFieldDefinition` (via `EmrTypedField`), a `RepeatableGroupDefinition` block (rendered inline, see gap note above), or a `ClinicalMatrixBlockDefinition` (a rows × columns grid of ordinary fields, e.g. OD/OS, whose cells emit plain `fieldEditRequested`) — on a 12-column grid keyed by each block's `span`. It emits the full `ClinicalFormIntent` union and never calls HTTP, persists, clinically validates, or infers completion/normality/safety; section collapse state, section status badges, and every field's `assessmentStatus` are controller-supplied and echoed back untouched.
 

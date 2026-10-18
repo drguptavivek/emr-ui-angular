@@ -5,6 +5,9 @@ import { gallery as l3Structures } from './l3-structures';
 import { gallery as l4Shell } from './l4-shell';
 import { gallery as l4Lists } from './l4-lists';
 import { gallery as stats } from './stats';
+import { gallery as l4Identity } from './l4-identity';
+import { gallery as l4History } from './l4-history';
+import { gallery as l4Desk } from './l4-desk';
 import type { GallerySection } from './types';
 
 export const galleryGroups: readonly { id: string; title: string; sections: readonly GallerySection[] }[] = [
@@ -15,4 +18,7 @@ export const galleryGroups: readonly { id: string; title: string; sections: read
   { id: 'l3-structures', title: 'L3 · Structures', sections: l3Structures },
   { id: 'l4-shell', title: 'L4 · Shell and capture', sections: l4Shell },
   { id: 'l4-lists', title: 'L4 · Lists and timelines', sections: l4Lists },
+  { id: 'l4-identity', title: 'L4 · Identity', sections: l4Identity },
+  { id: 'l4-history', title: 'L4 · Patient history', sections: l4History },
+  { id: 'l4-desk', title: 'L4 · Desk workflows', sections: l4Desk },
 ];

@@ -15,7 +15,7 @@ import { useEmrLabels } from './labels';
 import { EmrBadgeView, EmrButton } from './primitives';
 import { fontFamily, fontWeight, useEmrTheme } from './theme';
 import { EmrTypedField, type EmrCustomRenderers } from './typed-field';
-import { isFieldShown } from './typed-field.logic';
+import { isFieldShown, isSectionShown } from './typed-field.logic';
 
 /** Same breakpoint as the Angular form's media query, measured on the form's own width. */
 const STACK_BELOW = 720;
@@ -136,7 +136,7 @@ export function EmrClinicalForm({ model, onIntent, idPrefix = '', customRenderer
   return (
     <View role="form" aria-label={model.schema.label} onLayout={(e: LayoutChangeEvent) => setWidth(e.nativeEvent.layout.width)} style={styles.form}>
       {model.schema.description ? <Text style={{ color: t.textMuted, fontSize: t.textMd, fontFamily: fontFamily(t) }}>{model.schema.description}</Text> : null}
-      {model.schema.sections.map(section => (
+      {model.schema.sections.filter(section => isSectionShown(section, model.fields)).map(section => (
         <EmrSectionCard key={section.id} sectionId={domId(`${schemaId}-${section.id}`)} label={section.label} description={section.description}
           collapsible={section.collapsible} collapsed={model.collapsedSectionIds?.includes(section.id)} status={model.sectionStatuses?.[section.id]}
           onToggle={() => onIntent({ type: 'sectionToggleRequested', sectionId: section.id })}>

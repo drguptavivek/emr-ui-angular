@@ -18,7 +18,7 @@ function Section({ id, title, render: Render }: { id: string; title: string; ren
 function Surface({ scheme, onScheme }: { scheme: EmrColorScheme; onScheme: (s: EmrColorScheme) => void }) {
   const t = useEmrTheme();
   return (
-    <ScrollView style={{ backgroundColor: t.background }} contentContainerStyle={{ padding: 24, gap: 24, maxWidth: 1100, width: '100%', alignSelf: 'center' }}>
+    <ScrollView keyboardShouldPersistTaps="handled" style={{ backgroundColor: t.background }} contentContainerStyle={{ padding: 24, gap: 24, maxWidth: 1100, width: '100%', alignSelf: 'center' }}>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
         <Text role="heading" aria-level={1} style={{ color: t.text, fontSize: t.text2xl, fontWeight: '700' }}>emr-react gallery</Text>
         <Pressable role="button" onPress={() => onScheme(scheme === 'light' ? 'dark' : 'light')}

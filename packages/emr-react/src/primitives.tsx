@@ -36,7 +36,8 @@ export function EmrButton({ label, onPress, variant = 'primary', small, disabled
   expanded?: boolean;
 }) {
   const t = useEmrTheme();
-  const height = small ? t.compactHeight : t.controlHeight;
+  // Small changes text and padding only: hitSlop does not apply on web, so the target height stays full everywhere.
+  const height = t.controlHeight;
   return (
     <Pressable
       role="button"
@@ -45,7 +46,6 @@ export function EmrButton({ label, onPress, variant = 'primary', small, disabled
       aria-expanded={expanded}
       disabled={disabled}
       onPress={onPress}
-      hitSlop={small ? (t.controlHeight - t.compactHeight) / 2 : undefined}
       style={({ pressed, focused }: PressState) => [
         styles.button,
         focusRing(t, focused),

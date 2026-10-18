@@ -216,7 +216,8 @@ export function EmrVas({ label, hint, error, min = 0, max = 100, value, step = 1
           </View>
         </View>
         {minAnchor || maxAnchor ? (
-          <View aria-hidden style={vertical ? styles.anchorsV : styles.anchors}>
+          // Tick labels hang outside the track box (absolute), so the anchors keep clear of them.
+          <View aria-hidden style={vertical ? [styles.anchorsV, styles.anchorsClearV] : [styles.anchors, styles.anchorsClearH]}>
             <Text style={[styles.anchor, { color: t.textMuted, fontSize: t.textXs, fontFamily: fontFamily(t) }]}>{vertical ? maxAnchor?.label : minAnchor?.label}</Text>
             <Text style={[styles.anchor, !vertical && styles.anchorEnd, { color: t.textMuted, fontSize: t.textXs, fontFamily: fontFamily(t) }]}>{vertical ? minAnchor?.label : maxAnchor?.label}</Text>
           </View>
@@ -233,6 +234,8 @@ const styles = StyleSheet.create({
   pip: { flexGrow: 1, flexBasis: 0, borderRadius: 8, alignItems: 'center', justifyContent: 'center' },
   anchors: { flexDirection: 'row', justifyContent: 'space-between', gap: 12 },
   anchorsV: { justifyContent: 'space-between', height: VERTICAL_LENGTH, flexShrink: 1 },
+  anchorsClearH: { marginTop: 22 },
+  anchorsClearV: { marginLeft: 36 },
   anchor: { flexShrink: 1 },
   anchorEnd: { textAlign: 'right' },
   vasFrame: { gap: 4 },
