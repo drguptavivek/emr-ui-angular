@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 import {
   EmrBarcodeScanField, EmrIdentifierCheckPrompt, EmrPatientIdentityCard,
   type EmrIdentifierCheckModel, type EmrPatientIdentity,
@@ -32,7 +32,7 @@ const Identity = ({ mode }: { mode: 'full' | 'compact' }) => {
   return (
     <View style={{ gap: 4, maxWidth: mode === 'compact' ? 360 : undefined }}>
       <EmrPatientIdentityCard mode={mode} model={patient} onIntent={i => setLast(i.type === 'alertActionRequested' ? `alert ${i.id}` : i.type)} />
-      {last ? <View accessibilityLabel={`last intent ${last}`} /> : null}
+      {last ? <Text style={{ fontSize: 13 }}>Last intent: {last}</Text> : null}
     </View>
   );
 };
@@ -86,7 +86,7 @@ const Check = ({ outcome }: { outcome: EmrIdentifierCheckModel['outcome'] }) => 
         if (i.type === 'findingAcknowledged') setAcked(a => (a.includes(i.findingId) ? a.filter(x => x !== i.findingId) : [...a, i.findingId]));
         setLog(i.type);
       }} />
-      {log ? <View accessibilityLabel={`last intent ${log}`} /> : null}
+      {log ? <Text style={{ fontSize: 13 }}>Last intent: {log}</Text> : null}
     </View>
   );
 };

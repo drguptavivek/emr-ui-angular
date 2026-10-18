@@ -5,7 +5,7 @@ import type {
   ConsentCaptureIntent, ConsentCaptureViewModel, ConsentCategoryView, ConsentDecision, ConsentMethod, ConsentPurposeView, EmrBadge,
 } from '@drguptavivek/emr-controller';
 import { EmrAlert, EmrCard } from './l1-display';
-import { EmrRadioGroup, EmrTextInput } from './l1-inputs';
+import { EmrCheckbox, EmrRadioGroup, EmrTextInput } from './l1-inputs';
 import { EmrAttestation } from './l4-shell';
 import { EmrBadgeView, EmrButton, EmrOptionChip, EmrRow } from './primitives';
 import { focusRing, fontFamily, fontWeight, useEmrTheme } from './theme';
@@ -14,8 +14,7 @@ type PressState = PressableStateCallbackType & { focused?: boolean };
 
 /** English fallbacks for built-in strings; every one is overridable via the `labels` prop. */
 const DEFAULTS = {
-  agree: 'Agree',
-  doNotAgree: 'Do not agree',
+  agreeToAll: 'Agree to all',
   requiredForCare: 'Required for care',
   givenBy: 'Given by',
   method: 'Method',
@@ -55,7 +54,13 @@ function useText() {
 
 const opts = (list: { id: string; label: string }[]) => list.map(o => ({ value: o.id, label: o.label }));
 
-/** L4. Consent capture. Renders what the app resolved and emits intents; decides nothing. */
+/**
+ * L4. Consent capture. Renders what the app resolved and emits intents; decides nothing.
+ * Purposes are one checkbox list. A row is ticked only when the model says `decision: 'granted'`; nothing is
+ * pre-ticked except essential purposes (read-only). Ticking emits 'granted', unticking emits 'refused', and
+ * "Agree to all" emits one categoryDecided / purposeDecided per unlocked row. An untouched row emits nothing:
+ * the app's submit path must record every untouched optional row as 'refused' (never just "the ticked ones").
+ */
 export function EmrConsentCapture({ model: m, labels, onIntent }: {
   model: EmrConsentCaptureModel;
   labels?: Partial<EmrConsentLabels>;
@@ -63,8 +68,20 @@ export function EmrConsentCapture({ model: m, labels, onIntent }: {
 }) {
   const { t, body, bold, small } = useText();
   const l = { ...DEFAULTS, ...labels };
-  const decisionOptions = [{ value: 'granted', label: l.agree }, { value: 'refused', label: l.doNotAgree }];
   const g = m.guardian;
+  // Decidable rows: a whole-mode category is one row (its purposes as the hint); per-purpose gives one row each.
+  const rows = m.categories.flatMap(c => {
+    const choosable = c.purposes.filter(p => !p.essential);
+    if (!choosable.length) return [];
+    return c.mode === 'whole'
+      ? [{ key: `c:${c.id}`, label: c.label, hint: [c.description, ...choosable.map(p => p.label)].filter(Boolean).join(' · '), decision: c.decision, locked: c.locked,
+          decide: (d: EmrConsentDecision) => onIntent({ type: 'categoryDecided', id: c.id, decision: d }) }]
+      : choosable.map(p => ({ key: `p:${p.id}`, label: p.label, hint: p.description, decision: p.decision, locked: p.locked,
+          decide: (d: EmrConsentDecision) => onIntent({ type: 'purposeDecided', id: p.id, decision: d }) }));
+  });
+  // Locked rows were decided earlier; "Agree to all" reflects and changes only what can still change.
+  const open = rows.filter(r => !r.locked);
+  const allGranted = open.length > 0 && open.every(r => r.decision === 'granted');
 
   return (
     <View style={styles.root}>
@@ -90,40 +107,23 @@ export function EmrConsentCapture({ model: m, labels, onIntent }: {
         <Text style={small}>{l.noticeVersion(m.notice.version, m.notice.languageLabel)}</Text>
       </View>
 
-      <View role="group" aria-label={l.purposes} style={styles.gap}>
-        <Text role="heading" style={bold}>{l.purposes}</Text>
-        {m.categories.map(c => {
-          const essential = (p: EmrConsentPurpose) => (
-            <View key={p.id} style={styles.tight}>
-              <Text style={bold}>{p.label}</Text>
-              <Text style={body}>{p.description}</Text>
-              {p.essential ? <Text style={[bold, { color: t.success }]}>✓ {l.requiredForCare}</Text> : null}
-            </View>
-          );
-          const allEssential = c.purposes.every(p => p.essential);
-          return (
-            <EmrCard key={c.id} label={c.label}>
-              <View style={styles.gap}>
-                {c.description ? <Text style={body}>{c.description}</Text> : null}
-                {c.mode === 'whole' || allEssential ? (
-                  <>
-                    {/* One decision for the category; its purposes are listed for information. */}
-                    {allEssential ? null : (
-                      <EmrRadioGroup label={c.label} labelHidden options={decisionOptions} value={c.decision ?? null} readOnly={c.locked}
-                        onValueChange={v => onIntent({ type: 'categoryDecided', id: c.id, decision: v as EmrConsentDecision })} />
-                    )}
-                    {c.purposes.map(essential)}
-                  </>
-                ) : c.purposes.map(p => p.essential ? essential(p) : (
-                  <EmrRadioGroup key={p.id} label={p.label} hint={p.description} options={decisionOptions}
-                    value={p.decision ?? null} readOnly={p.locked}
-                    onValueChange={v => onIntent({ type: 'purposeDecided', id: p.id, decision: v as EmrConsentDecision })} />
-                ))}
-              </View>
-            </EmrCard>
-          );
-        })}
-      </View>
+      {/* One list: a checkbox per decision (a whole-mode category is one row), essential purposes shown ticked
+          and read-only, and "Agree to all" on top. Ticked = granted, unticked = refused. */}
+      <EmrCard label={l.purposes}>
+        <View style={styles.gap}>
+          {open.length ? (
+            <EmrCheckbox label={l.agreeToAll} value={allGranted} mixed={!allGranted && open.some(r => r.decision === 'granted')}
+              onValueChange={() => open.forEach(r => r.decide(allGranted ? 'refused' : 'granted'))} />
+          ) : null}
+          {m.categories.flatMap(c => c.purposes.filter(p => p.essential)).map(p => (
+            <EmrCheckbox key={p.id} label={p.label} hint={`${l.requiredForCare}. ${p.description}`} readOnly value onValueChange={() => undefined} />
+          ))}
+          {rows.map(r => (
+            <EmrCheckbox key={r.key} label={r.label} hint={r.hint} readOnly={r.locked} value={r.decision === 'granted'}
+              onValueChange={v => r.decide(v ? 'granted' : 'refused')} />
+          ))}
+        </View>
+      </EmrCard>
 
       <EmrRadioGroup label={l.givenBy} options={opts(m.givenByOptions)} value={m.selectedGivenBy ?? null}
         onValueChange={id => onIntent({ type: 'givenBySelected', id })} />

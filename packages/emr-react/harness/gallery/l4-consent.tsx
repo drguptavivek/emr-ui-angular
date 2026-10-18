@@ -52,9 +52,8 @@ function Demo({ scenario }: { scenario: Scenario }) {
     { id: 'contact', label: 'Contact', description: 'Placeholder: choose each kind of contact.', mode: 'per_purpose', purposes: pick(['followup', 'reminder', 'registry']) },
     { id: 'data', label: 'Data use', description: 'Placeholder: one choice covers both.', mode: 'whole', decision: decisions['cat:data'], purposes: pick(['research', 'camp']) },
   ];
-  // The demo plays controller: a whole-mode category needs its own decision; per-purpose needs each one.
-  const decided = categories.every(c => c.purposes.every(p => p.essential)
-    || (c.mode === 'whole' ? !!c.decision : c.purposes.every(p => p.essential || p.decision)));
+  // The demo plays controller: with a checkbox list an unticked purpose counts as refused, so nothing blocks on it.
+  const decided = true;
   const needsGuardian = scenario === 'minor';
   const guardianOk = !needsGuardian || (!!guardian.name.trim() && !!guardian.relationship.trim());
   const methodOk = method === 'tap' || (method === 'signature' && !!signed) || (method === 'thumbprint' && !!signed) || (method === 'verbal_attested' && attested);
@@ -98,7 +97,14 @@ function Demo({ scenario }: { scenario: Scenario }) {
       case 'methodSelected': setMethod(i.id); break;
       case 'signatureRequested': case 'thumbprintRequested': setSigned('10:42'); break;
       case 'attestationConfirmed': setAttested(true); break;
-      case 'submitRequested': setDone('Submitted (demo)'); break;
+      case 'submitRequested': {
+        // The record holds a decision for every optional row: untouched rows are recorded as 'refused', never omitted.
+        const record = categories.flatMap(c => c.mode === 'whole'
+          ? (c.purposes.every(p => p.essential) ? [] : [`${c.label}: ${c.decision ?? 'refused'}`])
+          : c.purposes.filter(p => !p.essential).map(p => `${p.label}: ${p.decision ?? 'refused'}`));
+        setDone(`Submitted (demo) · ${record.join(' · ')}`);
+        break;
+      }
       case 'cancelled': setDone('Cancelled (demo)'); setTried(false); break;
     }
     if (i.type !== 'submitRequested' && i.type !== 'cancelled') setDone('');
