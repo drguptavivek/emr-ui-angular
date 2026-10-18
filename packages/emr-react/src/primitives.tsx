@@ -13,8 +13,12 @@ type PressState = PressableStateCallbackType & { focused?: boolean };
 export function EmrBadgeView({ badge }: { badge: EmrBadge }) {
   const t = useEmrTheme();
   return (
-    <View role="status" aria-label={badge.assistiveText} style={[styles.badge, { backgroundColor: toneColors(t, badge.tone).backgroundColor }]}>
-      <Text style={{ color: toneColors(t, badge.tone).color, fontSize: t.textXs, fontWeight: fontWeight(t.weightBold), fontFamily: fontFamily(t) }}>{badge.label}</Text>
+    // The transparent row wrapper takes the parent's alignment (centred in rows) while the pill
+    // inside keeps its content width (no stretching in columns).
+    <View style={styles.badgeWrap}>
+      <View role="status" aria-label={badge.assistiveText} style={[styles.badge, { backgroundColor: toneColors(t, badge.tone).backgroundColor }]}>
+        <Text style={{ color: toneColors(t, badge.tone).color, fontSize: t.textXs, fontWeight: fontWeight(t.weightBold), fontFamily: fontFamily(t) }}>{badge.label}</Text>
+      </View>
     </View>
   );
 }
@@ -165,7 +169,8 @@ export function EmrRow({ children }: { children: ReactNode }) {
 }
 
 const styles = StyleSheet.create({
-  badge: { alignSelf: 'flex-start', borderRadius: 999, paddingHorizontal: 8, paddingVertical: 2 },
+  badgeWrap: { flexDirection: 'row' },
+  badge: { borderRadius: 999, paddingHorizontal: 8, paddingVertical: 2 },
   button: { borderWidth: 1, borderRadius: 8, paddingHorizontal: 16, alignItems: 'center', justifyContent: 'center' },
   chip: { borderRadius: 8, paddingHorizontal: 12, justifyContent: 'center', alignItems: 'center' },
   row: { flexDirection: 'row', flexWrap: 'wrap', gap: ROW_GAP },

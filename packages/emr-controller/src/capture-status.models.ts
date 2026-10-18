@@ -1,5 +1,5 @@
 import type { EmrAuthorAttribution, EmrCaptureIntent, EmrCaptureSessionState } from './capture.models.js';
-import type { EmrBadge } from './models.js';
+import type { EmrBadge, EmrTone } from './models.js';
 
 /** One person (or consent party) on a signature. The controller supplies every label and the status badge. */
 export interface CaptureSignatory {
@@ -30,6 +30,14 @@ export interface CaptureStatusBarViewModel {
   /** Controller-formatted names of the fields in conflict (from `session.conflict.conflictingPaths`). */
   readonly conflictLabels?: readonly string[];
   readonly readOnly?: boolean;
+  // Offline-sync state for the Expo app. Text and tone are controller-supplied; the component
+  // never derives a tone from `outbox.count`. Rendered only when present (React only so far).
+  /** For example { label: 'Offline', tone: 'warning' }. */
+  readonly connection?: { readonly label: string; readonly tone: EmrTone };
+  /** Queued writes, for example { count: 3, label: '3 waiting to sync', tone: 'warning' }. */
+  readonly outbox?: { readonly count: number; readonly label: string; readonly tone: EmrTone };
+  /** Controller-formatted last successful sync time. */
+  readonly lastSync?: string;
 }
 
 export type CaptureStatusBarIntent =

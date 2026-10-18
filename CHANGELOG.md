@@ -9,6 +9,7 @@ Current state and pending work live in `handoff.md`. Exact changes and authorshi
 - **Engine-resolved visibility.** `ClinicalFieldState` gains `hidden` and `required`. Both forms skip a hidden field only while it is empty; a hidden field holding a value stays visible.
 - `pnpm check` now also typechecks emr-react and the Angular stories.
 - **emr-react L1 primitives (24)**: inputs (text, number, day-first date with ISO value and 8-digit keypad entry, time, date-time, quantity, OD/OS pair, checkbox, toggle, radio group), display (chip, alert, state message, separator, card, columns, field-value row, status cell) and interactive (tabs, search-select, Likert, VAS, stage stepper, time axis). Web gallery at `/gallery` in the Next harness.
+- **emr-react wave 2**: L3 clinical list (+ medication, allergy, chronic disease, personal history), standalone clinical matrix (table when wide, row cards when narrow; read-only cells stay focusable); L4 patient banner (+ compact phone header), capture status bar with optional sync state (`connection`, `outbox`, `lastSync` on `CaptureStatusBarViewModel`; React renders them, Angular does not yet), attestation, `EmrSheet` (bottom sheet / side panel, confirm dialog), patient list, work queue, timeline; `EmrStatTile` for counts and KPIs.
 - **`EMR_ENGINE_VERSION` / `requiredEngineFor(schema)`** in emr-controller: the feature level server-supplied definitions are stamped with.
 
 ## 10 October 2026 — anatomy outline redraws
