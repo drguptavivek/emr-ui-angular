@@ -1720,6 +1720,7 @@ export function EmrClinicalTranscript({
                             >
                               <Text
                                 style={{
+                                  flexShrink: 1,
                                   color: t.text,
                                   fontSize: t.textMd,
                                   fontWeight: fontWeight(sp.on ? t.weightBold : t.weightMedium),
@@ -1833,7 +1834,7 @@ export function EmrClinicalTranscript({
             {l.typeNoteLabel}
           </Text>
           <View style={styles.ctTypeRow}>
-            <View style={styles.flex}>
+            <View style={styles.ctTypeInput}>
               <ThemedInput
                 multiline
                 numberOfLines={2}
@@ -2717,6 +2718,8 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     alignItems: 'center',
     gap: 4,
+    // A long highlighted phrase must wrap inside the row, not run past it.
+    maxWidth: '100%',
     paddingHorizontal: 6,
     paddingVertical: 2,
     borderRadius: 4,
@@ -2754,6 +2757,8 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     gap: 8,
   },
+  // Basis, not flex 1 + minWidth 0: on a phone the input keeps its width and the button wraps below.
+  ctTypeInput: { flexGrow: 1, flexShrink: 1, flexBasis: 220 },
 
   // Evidence Suggestion List
   slRoot: {
