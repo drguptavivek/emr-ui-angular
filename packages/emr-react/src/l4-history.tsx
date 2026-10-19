@@ -7,6 +7,7 @@ import type {
   EmrPatientHistoryModel,
   EmrPatientSnapshot,
   EmrRxEyeValues,
+  PatientIdentityIntent,
 } from '@drguptavivek/emr-controller';
 import { EmrCard, EmrChip, EmrColumns, EmrStateMessage } from './l1-display';
 import { EmrCataractEpisodeCard, type EmrEpisodeLabels } from './l4-history-episode';
@@ -220,13 +221,17 @@ function Skeleton({ label }: { label: string }) {
  * intent. Missing optional blocks are omitted. `model.loading` shows a skeleton; no visits and no
  * summary shows the "New patient" state.
  */
-export function EmrPatientHistoryTimeline({ model, labels, episodeLabels, wideFrom = 720, onIntent }: {
+export function EmrPatientHistoryTimeline({ model, labels, episodeLabels, wideFrom = 720, onIntent, onIdentityIntent, hideIdentity }: {
   model: EmrPatientHistoryModel;
   labels?: Partial<EmrHistoryLabels>;
   episodeLabels?: Partial<EmrEpisodeLabels>;
   /** Container width (px) from which the summary uses two columns. */
   wideFrom?: number;
   onIntent: (intent: EmrPatientHistoryIntent) => void;
+  /** Intents from the compact identity card (add identifier, alert actions). Omitted: the card's actions do nothing. */
+  onIdentityIntent?: (intent: PatientIdentityIntent) => void;
+  /** The screen already shows its own identity card. */
+  hideIdentity?: boolean;
 }) {
   const { body, muted, bold } = useText();
   const l: EmrHistoryLabels = { ...DEFAULTS, ...labels };
@@ -237,7 +242,7 @@ export function EmrPatientHistoryTimeline({ model, labels, episodeLabels, wideFr
   const wide = width !== null && width >= wideFrom;
   return (
     <View role="region" aria-label={l.ariaLabel} onLayout={onLayout} style={styles.stack}>
-      <EmrPatientIdentityCard model={model.patient} mode="compact" onIntent={() => undefined} />
+      {hideIdentity ? null : <EmrPatientIdentityCard model={model.patient} mode="compact" onIntent={onIdentityIntent ?? (() => undefined)} />}
       {empty ? <EmrStateMessage kind="empty" title={l.newPatient} message={l.newPatientMessage} /> : null}
       {hasSummary(model.summary) ? (
         <View role="group" aria-label={l.summary} style={styles.stack}>

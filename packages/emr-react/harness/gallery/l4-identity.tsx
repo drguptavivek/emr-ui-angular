@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import { Text, View } from 'react-native';
+import type { ClinicalFormViewModel } from '@drguptavivek/emr-controller';
 import {
-  EmrBarcodeScanField, EmrIdentifierCheckPrompt, EmrPatientIdentityCard,
-  type EmrIdentifierCheckModel, type EmrPatientIdentity,
+  EmrBarcodeScanField, EmrClinicalForm, EmrIdentifierCheckPrompt, EmrPatientIdentityCard,
+  type EmrCustomFieldProps, type EmrCustomRenderer, type EmrIdentifierCheckModel, type EmrPatientIdentity,
 } from '../../src';
 import type { GallerySection } from './types';
 
@@ -91,6 +92,25 @@ const Check = ({ outcome }: { outcome: EmrIdentifierCheckModel['outcome'] }) => 
   );
 };
 
+// A self-framed custom renderer: the scan field draws its own label, so the form must not add a second one.
+const OpdScan: EmrCustomRenderer = ({ definition, model, readOnly, onValueChange }: EmrCustomFieldProps) => (
+  <EmrBarcodeScanField label={definition.label} value={String(model?.value ?? '')} readOnly={readOnly} error={model?.error}
+    onValueChange={onValueChange} onIntent={() => undefined} />
+);
+OpdScan.framed = true;
+
+function FormScan() {
+  const [value, setValue] = useState('');
+  const model: ClinicalFormViewModel = {
+    schema: { id: 'opd-demo', label: 'Registration', sections: [{ id: 's', label: 'Identifiers', blocks: [
+      { id: 'opd', label: 'Opd Number', type: 'custom', customRendererKey: 'opdScan', span: 12 },
+    ] }] },
+    fields: { opd: { value } }, repeatableGroups: {},
+  };
+  return <EmrClinicalForm model={model} customRenderers={{ opdScan: OpdScan }}
+    onIntent={i => { if (i.type === 'fieldEditRequested') setValue(String(i.value ?? '')); }} />;
+}
+
 export const gallery: GallerySection[] = [
   { id: 'scan-plain', title: 'Barcode scan field', render: () => <Field variant="plain" /> },
   { id: 'scan-normalised', title: 'Barcode scan field · normalised', render: () => <Field variant="normalised" /> },
@@ -101,5 +121,6 @@ export const gallery: GallerySection[] = [
   { id: 'identity-compact', title: 'Patient identity card · compact', render: () => <Identity mode="compact" /> },
   { id: 'check-blocked', title: 'Identifier check · blocked', render: () => <Check outcome="blocked" /> },
   { id: 'check-warnings', title: 'Identifier check · warnings', render: () => <Check outcome="warnings" /> },
+  { id: 'scan-in-form', title: 'Barcode scan field as a framed custom renderer (one label)', render: () => <FormScan /> },
   { id: 'check-ok', title: 'Identifier check · ok', render: () => <Check outcome="ok" /> },
 ];

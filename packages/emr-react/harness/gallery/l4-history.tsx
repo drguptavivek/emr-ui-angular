@@ -11,6 +11,7 @@ import type { GallerySection } from './types';
 const patient = {
   name: 'Test Patient A', ageLabel: '54 y', sexLabel: 'Female', centreName: 'Test Centre',
   identifiers: [{ system: 'uhid', label: 'UHID', display: '900000001' }, { system: 'project', label: 'Project ID', display: '17-26-000123' }],
+  alerts: [{ id: 'phone', text: 'Phone number needs correcting', tone: 'warning' as const, actionLabel: 'Update number' }],
 };
 const stages = {
   stages: [
@@ -61,7 +62,8 @@ const History = ({ model }: { model: EmrPatientHistoryModel }) => {
   const [last, setLast] = useState('none');
   return (
     <View style={{ gap: 8 }}>
-      <EmrPatientHistoryTimeline model={model} onIntent={(i: EmrPatientHistoryIntent) => setLast(JSON.stringify(i))} />
+      <EmrPatientHistoryTimeline model={model} onIntent={(i: EmrPatientHistoryIntent) => setLast(JSON.stringify(i))}
+        onIdentityIntent={i => setLast(`identity: ${JSON.stringify(i)}`)} />
       <Last last={last} />
     </View>
   );

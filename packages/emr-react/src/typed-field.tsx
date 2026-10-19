@@ -26,7 +26,12 @@ export interface EmrCustomFieldProps {
   onValueChange: (value: ClinicalFieldValue) => void;
 }
 
-export type EmrCustomRenderers = Readonly<Record<string, ComponentType<EmrCustomFieldProps>>>;
+/**
+ * A custom renderer. Set `framed = true` on one that draws its own label and messages (e.g. a component built
+ * on EmrFieldFrame such as EmrBarcodeScanField): the form then skips its frame so the label is not shown twice.
+ */
+export type EmrCustomRenderer = ComponentType<EmrCustomFieldProps> & { framed?: boolean };
+export type EmrCustomRenderers = Readonly<Record<string, EmrCustomRenderer>>;
 
 export interface EmrTypedFieldProps {
   definition: ClinicalFieldDefinition;
@@ -104,6 +109,7 @@ export function EmrTypedField({ definition, model, controlId, readOnly = false, 
   } as const;
 
   let control: React.ReactNode;
+  let selfFramed = false;
   switch (definition.type) {
     case 'integer':
     case 'decimal':
@@ -144,6 +150,7 @@ export function EmrTypedField({ definition, model, controlId, readOnly = false, 
       break;
     case 'custom': {
       const Custom = definition.customRendererKey ? customRenderers[definition.customRendererKey] : undefined;
+      selfFramed = !!Custom?.framed;
       control = Custom
         ? <Custom definition={definition} model={model} controlId={controlId} readOnly={isReadOnly} onValueChange={onValueChange} />
         : <Unsupported text={labels.unregisteredRenderer(definition.customRendererKey ?? definition.id)} />;
@@ -176,24 +183,27 @@ export function EmrTypedField({ definition, model, controlId, readOnly = false, 
   const status = model?.assessmentStatus;
   const statusOption = statusOptions.find(option => option.value === status);
 
+  const statusBlock = statusOptions.length || status ? (
+    <View style={styles.status}>
+      {status ? <EmrBadgeView badge={{ label: statusOption?.label ?? status, tone: statusOption?.tone ?? 'neutral' }} /> : null}
+      {statusOptions.length ? (
+        <View role="radiogroup" accessibilityLabel={labels.assessmentStatus(definition.label)}>
+          <EmrRow>
+            {statusOptions.map(option => (
+              <EmrOptionChip key={option.value} label={option.label} selected={status === option.value} readOnly={isReadOnly} disabled={isDisabled}
+                onPress={() => onStatusChange(status === option.value ? undefined : option.value)} />
+            ))}
+          </EmrRow>
+        </View>
+      ) : null}
+    </View>
+  ) : null;
+
+  if (selfFramed) return <View style={styles.frame}>{control}{statusBlock}</View>;
   return (
     <EmrFieldFrame label={definition.label} labelHidden={labelHidden} controlId={controlId} required={required} hint={definition.hint} warning={model?.warning} error={model?.error}>
       {control}
-      {statusOptions.length || status ? (
-        <View style={styles.status}>
-          {status ? <EmrBadgeView badge={{ label: statusOption?.label ?? status, tone: statusOption?.tone ?? 'neutral' }} /> : null}
-          {statusOptions.length ? (
-            <View role="radiogroup" accessibilityLabel={labels.assessmentStatus(definition.label)}>
-              <EmrRow>
-                {statusOptions.map(option => (
-                  <EmrOptionChip key={option.value} label={option.label} selected={status === option.value} readOnly={isReadOnly} disabled={isDisabled}
-                    onPress={() => onStatusChange(status === option.value ? undefined : option.value)} />
-                ))}
-              </EmrRow>
-            </View>
-          ) : null}
-        </View>
-      ) : null}
+      {statusBlock}
     </EmrFieldFrame>
   );
 }
