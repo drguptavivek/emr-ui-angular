@@ -489,7 +489,7 @@ export function EmrTerminologySearch({
           key={binding.id}
           style={[styles.bindingCard, { borderColor: t.border, backgroundColor: t.surfaceRaised }]}
         >
-          <View style={styles.flex}>
+          <View style={styles.wrapText}>
             <Text style={[styles.eyebrow, { color: t.textMuted, fontSize: t.text2xs, fontFamily: font }]}>
               {l.selectedConcept}
             </Text>
@@ -2044,6 +2044,8 @@ export function EmrTemplateComposer({
 
 const styles = StyleSheet.create({
   flex: { flex: 1, minWidth: 0 },
+  // Text column in a wrapping row: keeps a readable width and lets the controls wrap below on a phone.
+  wrapText: { flexGrow: 1, flexShrink: 1, flexBasis: 180, minWidth: 0 },
   surfaceStack: { gap: 18, minWidth: 0 },
   columnStack: { gap: 16, minWidth: 0 },
   topHeader: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-start', gap: 16 },
