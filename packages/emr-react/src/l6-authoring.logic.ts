@@ -188,7 +188,7 @@ export const deriveTemplatePreview = (template: EhrTemplateDefinition): Clinical
   const repeatableGroups: Record<string, readonly never[]> = {};
   for (const section of template.sections) {
     for (const placement of section.fields) {
-      if (placement.field.repeats) repeatableGroups[placement.id] = [];
+      if (placement.field.repeats) repeatableGroups[placement.id] = new Array<never>(); // not []: Next's non-strict tsc types [] as undefined[]
       else fields[placement.id] = { value: null };
     }
   }

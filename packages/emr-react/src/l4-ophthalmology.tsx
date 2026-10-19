@@ -243,13 +243,13 @@ export function EmrDiagnosticResultSummary({
                     <View style={styles.compactMetricTop}>
                       <Text
                         style={[
-                          styles.flex,
+                          styles.metricLabel,
                           { color: t.text, fontSize: t.textMd, fontWeight: fontWeight(t.weightBold), fontFamily: font },
                         ]}
                       >
                         {metric.label}
                       </Text>
-                      <Text style={{ color: t.text, fontSize: t.textMd, fontFamily: font }}>{metric.valueLabel}</Text>
+                      <Text style={[styles.metricValue, { color: t.text, fontSize: t.textMd, fontFamily: font }]}>{metric.valueLabel}</Text>
                     </View>
                     {metric.referenceLabel ? (
                       <Text style={{ color: t.textMuted, fontSize: t.textXs, fontFamily: font }}>
@@ -1947,9 +1947,13 @@ const styles = StyleSheet.create({
   },
   compactMetricTop: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
     justifyContent: 'space-between',
     gap: 12,
   },
+  // Label keeps a readable width; a long value ("MD and PSD available in report") wraps under it.
+  metricLabel: { flexGrow: 1, flexShrink: 1, flexBasis: 140, minWidth: 0 },
+  metricValue: { flexShrink: 1, minWidth: 0 },
   noteCallout: {
     borderLeftWidth: 3,
     paddingVertical: 10,

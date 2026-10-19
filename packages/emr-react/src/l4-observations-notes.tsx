@@ -2173,7 +2173,7 @@ export function EmrEvidenceSuggestionList({
                                 onIntent({ type: 'suggestionSelected', suggestionId: s.id })
                               }
                               style={({ focused }: PressState) => [
-                                styles.flex,
+                                styles.wrapText,
                                 focusRing(t, focused),
                               ]}
                             >
@@ -2454,6 +2454,8 @@ export function EmrEvidenceSuggestionList({
 
 const styles = StyleSheet.create({
   flex: { flex: 1, minWidth: 0 },
+  // Text column in a wrapping row: keeps a readable width and lets the badges wrap below on a phone.
+  wrapText: { flexGrow: 1, flexShrink: 1, flexBasis: 160, minWidth: 0 },
 
   // Flowsheet
   fsRoot: { gap: 8, minWidth: 0 },
