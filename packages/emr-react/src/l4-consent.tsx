@@ -2,7 +2,13 @@
 
 import { Pressable, ScrollView, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
 import type {
-  ConsentCaptureIntent, ConsentCaptureViewModel, ConsentCategoryView, ConsentDecision, ConsentMethod, ConsentPurposeView, EmrBadge,
+  EmrBadge,
+  EmrConsentCaptureModel,
+  EmrConsentCategory,
+  EmrConsentDecision,
+  EmrConsentIntent,
+  EmrConsentMethod,
+  EmrConsentPurpose,
 } from '@drguptavivek/emr-controller';
 import { EmrAlert, EmrCard } from './l1-display';
 import { EmrCheckbox, EmrRadioGroup, EmrTextInput } from './l1-inputs';
@@ -33,12 +39,14 @@ export type EmrConsentLabels = typeof DEFAULTS;
 
 // ---- Models and intents (all strings pre-resolved by the app; every rule is domain-side) ----
 
-export type EmrConsentMethod = ConsentMethod;
-export type EmrConsentDecision = ConsentDecision;
-export type EmrConsentPurpose = ConsentPurposeView;
-export type EmrConsentCategory = ConsentCategoryView;
-export type EmrConsentCaptureModel = ConsentCaptureViewModel;
-export type EmrConsentIntent = ConsentCaptureIntent;
+export type {
+  EmrConsentCaptureModel,
+  EmrConsentCategory,
+  EmrConsentDecision,
+  EmrConsentIntent,
+  EmrConsentMethod,
+  EmrConsentPurpose,
+};
 
 function useText() {
   const t = useEmrTheme();

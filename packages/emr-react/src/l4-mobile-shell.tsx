@@ -2,7 +2,20 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { AccessibilityInfo, Animated, Platform, Pressable, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { EmrBadge, EmrTone } from '@drguptavivek/emr-controller';
+import type {
+  EmrBottomTabBarIntent,
+  EmrBottomTabItem,
+  EmrLoginFormIntent,
+  EmrLoginFormModel,
+  EmrPinPadIntent,
+  EmrPinPadModel,
+  EmrSyncPillIntent,
+  EmrSyncPillModel,
+  EmrSyncState,
+  EmrToastIntent,
+  EmrToastModel,
+  EmrTone,
+} from '@drguptavivek/emr-controller';
 import { ThemedInput } from './inputs-core';
 import { EmrFieldFrame } from './typed-field';
 import { EmrBadgeView, EmrButton } from './primitives';
@@ -25,33 +38,24 @@ const DEFAULTS = {
 };
 export type EmrMobileShellLabels = typeof DEFAULTS;
 
+export type {
+  EmrBottomTabBarIntent,
+  EmrBottomTabItem,
+  EmrLoginFormIntent,
+  EmrLoginFormModel,
+  EmrPinPadIntent,
+  EmrPinPadModel,
+  EmrSyncPillIntent,
+  EmrSyncPillModel,
+  EmrSyncState,
+  EmrToastIntent,
+  EmrToastModel,
+};
+
 /** Glyph paired with text so tone is never colour alone. */
 const GLYPH: Record<EmrTone, string> = { neutral: '•', info: 'ℹ', success: '✓', warning: '⚠', danger: '✕' };
 
 // ---- PinPad -------------------------------------------------------------------------------
-
-export interface EmrPinPadModel {
-  mode: 'set' | 'confirm' | 'unlock' | 'change';
-  title: string;
-  prompt?: string;
-  /** Count only: the digits themselves never reach this component. */
-  digitsEntered: number;
-  length: number;
-  error?: string;
-  lockoutMessage?: string;
-  locked?: boolean;
-  /**
-   * App-decided biometric unlock ("Use fingerprint / face"). The button shows only while `available`; it
-   * emits `biometricRequested` and the app runs the OS prompt, reporting failure via `error` / `lockoutMessage`.
-   */
-  biometric?: { label: string; available: boolean };
-}
-export type EmrPinPadIntent =
-  | { type: 'digitPressed'; digit: string }
-  | { type: 'deleted' }
-  | { type: 'submitted' }
-  | { type: 'forgotRequested' }
-  | { type: 'biometricRequested' };
 
 const KEYS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'delete', '0', 'submit'] as const;
 
@@ -122,18 +126,6 @@ export function EmrPinPad({ model: m, onIntent, labels, showForgot }: {
 
 // ---- LoginForm ----------------------------------------------------------------------------
 
-export interface EmrLoginFormModel {
-  title?: string;
-  username: string;
-  error?: string;
-  busy?: boolean;
-  usernameLabel: string;
-  passwordLabel: string;
-}
-export type EmrLoginFormIntent =
-  | { type: 'usernameChanged'; value: string }
-  | { type: 'submitRequested'; username: string; password: string };
-
 /**
  * L4 login form. The password lives only in this component's local draft: it is not in the model, not
  * logged, and leaves exactly once, inside `submitRequested`. Busy relabels Sign in but keeps the button focusable.
@@ -166,9 +158,6 @@ export function EmrLoginForm({ model: m, onIntent, labels }: {
 }
 
 // ---- BottomTabBar -------------------------------------------------------------------------
-
-export interface EmrBottomTabItem { id: string; label: string; badge?: EmrBadge }
-export type EmrBottomTabBarIntent = { type: 'tabSelected'; id: string } | { type: 'scanRequested' };
 
 /** L4 bottom tab bar with a raised centre Scan button. `bottomInset` is the app's safe-area inset. */
 export function EmrBottomTabBar({ items, activeId, bottomInset = 0, onIntent, labels }: {
@@ -208,9 +197,6 @@ export function EmrBottomTabBar({ items, activeId, bottomInset = 0, onIntent, la
 
 // ---- SyncPill -----------------------------------------------------------------------------
 
-export interface EmrSyncPillModel { label: string; tone: EmrTone; detail?: string }
-export type EmrSyncPillIntent = { type: 'syncDetailsRequested' };
-
 /** L4 compact header pill. Glyph + text; tappable only when `onIntent` is given. */
 export function EmrSyncPill({ model: m, onIntent, labels }: {
   model: EmrSyncPillModel;
@@ -233,9 +219,6 @@ export function EmrSyncPill({ model: m, onIntent, labels }: {
 }
 
 // ---- Toast --------------------------------------------------------------------------------
-
-export interface EmrToastModel { id: string; message: string; tone: EmrTone; actionLabel?: string }
-export type EmrToastIntent = { type: 'dismissed'; id: string } | { type: 'actionPressed'; id: string };
 
 /**
  * L4 toast. No timers: the app's queue dismisses. It is transient, so it must never be the only carrier

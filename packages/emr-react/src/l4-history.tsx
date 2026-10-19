@@ -2,11 +2,16 @@
 
 import type { ReactNode } from 'react';
 import { Pressable, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { EmrBadge } from '@drguptavivek/emr-controller';
+import type {
+  EmrPatientHistoryIntent,
+  EmrPatientHistoryModel,
+  EmrPatientSnapshot,
+  EmrRxEyeValues,
+} from '@drguptavivek/emr-controller';
 import { EmrCard, EmrChip, EmrColumns, EmrStateMessage } from './l1-display';
-import { EmrCataractEpisodeCard, type EmrCataractEpisode, type EmrEpisodeLabels } from './l4-history-episode';
+import { EmrCataractEpisodeCard, type EmrEpisodeLabels } from './l4-history-episode';
 import { hasSummary, present } from './l4-history.logic';
-import { EmrPatientIdentityCard, type EmrPatientIdentity } from './l4-identity';
+import { EmrPatientIdentityCard } from './l4-identity';
 import { useContainerWidth } from './l4-lists-shared';
 import { EmrBadgeView } from './primitives';
 import { focusRing, fontFamily, fontWeight, useEmrTheme } from './theme';
@@ -50,30 +55,12 @@ export type EmrHistoryLabels = typeof DEFAULTS;
 
 // ---- Model (pre-resolved strings, frozen contract item 3) ----
 
-export interface EmrRxEyeValues { sph: string; cyl: string; axis: string; add: string }
-export interface EmrPatientSnapshot {
-  patient: EmrPatientIdentity;
-  summary: {
-    lastSpectacleRx?: { date: string; re: EmrRxEyeValues; le: EmrRxEyeValues; type?: string; statusBadge: EmrBadge };
-    lastGlaucomaScreen?: { date: string; iopRe?: string; iopLe?: string; cdrRe?: string; cdrLe?: string; decision?: string };
-    lastDrScreen?: { date: string; gradeRe?: string; gradeLe?: string; maculopathyRe?: string; maculopathyLe?: string; decision?: string };
-    openReferrals: {
-      id: string; date: string; centreName: string; purpose: string; flags: string[]; statusBadge: EmrBadge;
-      /** Multi-visit referrals, pre-formatted by the app: "2 visits", "Next visit 26-10-2026". */
-      visitCountLabel?: string; nextDueLabel?: string;
-    }[];
-    openBookings: { id: string; date: string; type: string; paidBadge: EmrBadge; daysOpenLabel: string; overdueBadge?: EmrBadge }[];
-    openEpisodes: EmrCataractEpisode[];
-  };
-  /** Newest first. */
-  visits: { id: string; date: string; centreName: string; teamName: string; pvaRe?: string; pvaLe?: string; diagnosis?: string; advice?: string }[];
-}
-export interface EmrPatientHistoryModel extends EmrPatientSnapshot { loading?: boolean }
-export type EmrPatientHistoryIntent =
-  | { type: 'visitSelected'; id: string }
-  | { type: 'referralSelected'; id: string }
-  | { type: 'bookingSelected'; id: string }
-  | { type: 'episodeSelected'; id: string };
+export type {
+  EmrPatientHistoryIntent,
+  EmrPatientHistoryModel,
+  EmrPatientSnapshot,
+  EmrRxEyeValues,
+};
 
 function useText() {
   const t = useEmrTheme();

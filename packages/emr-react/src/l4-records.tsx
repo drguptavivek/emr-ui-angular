@@ -1,7 +1,13 @@
 'use client';
 
 import { Pressable, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { EmrBadge, EmrNodePath } from '@drguptavivek/emr-controller';
+import type {
+  EmrRecordChange,
+  EmrRecordChangeKind,
+  EmrRecordDiffIntent,
+  EmrRecordDiffModel,
+  EmrRecordDiffSection,
+} from '@drguptavivek/emr-controller';
 import { EmrBadgeView } from './primitives';
 import { EmrCard } from './l1-display';
 import { useContainerWidth } from './l4-lists-shared';
@@ -10,28 +16,13 @@ import { focusRing, fontFamily, fontWeight, useEmrTheme } from './theme';
 
 export * from './upload-queue';
 
-export type EmrRecordChangeKind = 'added' | 'removed' | 'changed';
-
-export interface EmrRecordChange {
-  id: string;
-  path: EmrNodePath;
-  label: string;
-  before?: string;
-  after?: string;
-  kind: EmrRecordChangeKind;
-}
-
-export interface EmrRecordDiffSection { id: string; label: string; changes: readonly EmrRecordChange[] }
-
-export interface EmrRecordDiffModel {
-  title?: string;
-  sections: readonly EmrRecordDiffSection[];
-  summaryLabel?: string;
-  /** Controller-supplied badge per kind (tone + glyph/word label). Missing kinds fall back to neutral. */
-  kindBadges?: Partial<Record<EmrRecordChangeKind, EmrBadge>>;
-}
-
-export type EmrRecordDiffIntent = { type: 'changeSelected'; id: string };
+export type {
+  EmrRecordChange,
+  EmrRecordChangeKind,
+  EmrRecordDiffIntent,
+  EmrRecordDiffModel,
+  EmrRecordDiffSection,
+};
 
 export interface EmrRecordDiffLabels { before: string; after: string; empty: string }
 

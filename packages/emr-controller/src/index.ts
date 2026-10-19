@@ -59,3 +59,6 @@ export * from './image-template-picker.models.js';
 export * from './attestation.models.js';
 export * from './schedule-slot.models.js';
 export * from './time-axis.models.js';
+export * from './surface-contracts.models.js';
+export * from './recipes/index.js';
+

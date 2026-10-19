@@ -1,7 +1,7 @@
 'use client';
 
 import { StyleSheet, Text, View } from 'react-native';
-import type { DraftRecordListIntent, DraftRecordListViewModel } from '@drguptavivek/emr-controller';
+import type { EmrDraftRecordListIntent, EmrDraftRecordListModel } from '@drguptavivek/emr-controller';
 import { EmrCard } from './l1-display';
 import { ConfirmSheet, ListStateView, PRIVACY_DEFAULTS } from './l4-privacy-shared';
 import { EmrBadgeView, EmrButton } from './primitives';
@@ -19,8 +19,7 @@ const DEFAULTS = {
   retry: PRIVACY_DEFAULTS.retry,
 } as const;
 export type EmrDraftRecordLabels = typeof DEFAULTS;
-export type EmrDraftRecordListModel = DraftRecordListViewModel;
-export type EmrDraftRecordListIntent = DraftRecordListIntent;
+export type { EmrDraftRecordListIntent, EmrDraftRecordListModel };
 
 /** L4. Offline drafts and sent records. Which actions a row offers is the app's (canOpen/canMove/canDiscard). */
 export function EmrDraftRecordList({ model: m, labels, onIntent }: {

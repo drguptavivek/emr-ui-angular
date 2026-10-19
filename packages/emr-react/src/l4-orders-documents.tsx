@@ -25,12 +25,19 @@ import type {
   FavouriteEntry,
   FavouriteKind,
   FavouritesIntent,
+  FavouritesPanelIntent,
+  FavouritesPanelViewModel,
   FavouritesViewModel,
   GroupAddPreview,
   HierarchyNode,
   HierarchyOrderIntent,
+  HierarchyOrderPickerIntent,
+  HierarchyOrderPickerViewModel,
   HierarchyOrderViewModel,
+  OrderDetailChange,
+  OrderDetailFieldChanged,
   OrderDetailsIntent,
+  OrderItemDetailViewModel,
   PatientDocumentRecord,
   PatientDocumentSortField,
   PatientDocumentsEffect,
@@ -80,12 +87,19 @@ export type {
   FavouriteEntry,
   FavouriteKind,
   FavouritesIntent,
+  FavouritesPanelIntent,
+  FavouritesPanelViewModel,
   FavouritesViewModel,
   GroupAddPreview,
   HierarchyNode,
   HierarchyOrderIntent,
+  HierarchyOrderPickerIntent,
+  HierarchyOrderPickerViewModel,
   HierarchyOrderViewModel,
+  OrderDetailChange,
+  OrderDetailFieldChanged,
   OrderDetailsIntent,
+  OrderItemDetailViewModel,
   PatientDocumentRecord,
   PatientDocumentSortField,
   PatientDocumentsEffect,
@@ -95,20 +109,6 @@ export type {
   SelectedDocumentSource,
   SelectedOrder,
 };
-
-/** Alias types matching prompt/story terminology alongside controller exports. */
-export type OrderItemDetailViewModel = SelectedOrder;
-export type OrderDetailFieldChanged = OrderDetailsIntent;
-export type HierarchyOrderPickerViewModel = HierarchyOrderViewModel;
-export type HierarchyOrderPickerIntent = HierarchyOrderIntent;
-export type FavouritesPanelViewModel = FavouritesViewModel;
-export type FavouritesPanelIntent = FavouritesIntent;
-
-export interface OrderDetailChange {
-  orderId: string;
-  field: string;
-  value: string | boolean | null;
-}
 
 type PressState = PressableStateCallbackType & { focused?: boolean };
 

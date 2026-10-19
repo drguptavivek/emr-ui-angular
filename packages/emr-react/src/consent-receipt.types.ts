@@ -1,7 +1,14 @@
-import type { ConsentReceiptViewModel } from '@drguptavivek/emr-controller';
+import type {
+  EmrConsentReceiptModel,
+  EmrConsentReceiptParty,
+  EmrConsentReceiptScope,
+} from '@drguptavivek/emr-controller';
 
-/** Printable, read-only consent summary. Every string is pre-resolved by the app; the component decides nothing. */
-export type EmrConsentReceiptModel = ConsentReceiptViewModel;
+export type {
+  EmrConsentReceiptModel,
+  EmrConsentReceiptParty,
+  EmrConsentReceiptScope,
+};
 
 export interface EmrConsentReceiptLabels {
   purpose: string;

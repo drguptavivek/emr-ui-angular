@@ -1,9 +1,9 @@
 'use client';
 
 import { StyleSheet, Text, View } from 'react-native';
-import type { EmrBadge } from '@drguptavivek/emr-controller';
+import type { EmrCataractEpisode, EmrCataractEpisodeIntent } from '@drguptavivek/emr-controller';
 import { EmrCard, EmrChip } from './l1-display';
-import { EmrStageStepper, type EmrStage } from './l1-interactive';
+import { EmrStageStepper } from './l1-interactive';
 import { EmrBadgeView, EmrButton } from './primitives';
 import { fontFamily, fontWeight, useEmrTheme } from './theme';
 
@@ -21,24 +21,7 @@ export const EPISODE_DEFAULTS = {
 } as const;
 export type EmrEpisodeLabels = typeof EPISODE_DEFAULTS;
 
-/** Pre-resolved cataract episode (frozen contract item 7). */
-export interface EmrCataractEpisode {
-  id: string;
-  eye?: string;
-  status: 'admitted' | 'operated' | 'not_operated';
-  statusBadge: EmrBadge;
-  admissionDate?: string;
-  sxDate?: string;
-  stages: { stages: EmrStage[]; activeId?: string };
-  followups: { label: string; due: string; done?: boolean; statusBadge: EmrBadge }[];
-  /** Controller-decided actions; the card never infers them from `status`. */
-  canCompleteSurgery?: boolean;
-  canAddFollowup?: boolean;
-}
-export type EmrCataractEpisodeIntent =
-  | { type: 'completeSurgeryRequested'; id: string }
-  | { type: 'addFollowupRequested'; id: string }
-  | { type: 'openRequested'; id: string };
+export type { EmrCataractEpisode, EmrCataractEpisodeIntent };
 
 /**
  * L4. Read-only episode summary with actions. Which actions show follows the contract's `status`

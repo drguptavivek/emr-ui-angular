@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { Platform, Pressable, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { LeftNavIntent, NavItem } from '@drguptavivek/emr-controller';
+import type { EmrLeftNavIntent, NavItem } from '@drguptavivek/emr-controller';
 import { webProps, type WebKeyEvent } from './l1-interactive-shared';
 import { navKeyAction, tabStopIndex, visibleRows } from './l4-web-shell.logic';
 import { EmrBadgeView } from './primitives';
@@ -13,8 +13,7 @@ type PressState = PressableStateCallbackType & { focused?: boolean };
 /** English fallbacks for built-in strings. Every key is overridable via `labels`. */
 const DEFAULTS = { navigation: 'Primary navigation' };
 
-/** The nav never collapses to a rail (the shell hides it instead), so that controller intent is not emitted. */
-export type EmrLeftNavIntent = Exclude<LeftNavIntent, { type: 'collapseToggleRequested' }>;
+export type { EmrLeftNavIntent };
 
 /**
  * L4. Port of EmrLeftNav: a nested, expandable tree that renders exactly the items it is given

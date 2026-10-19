@@ -2,9 +2,14 @@
 
 import type { ReactNode } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import type { NavItem } from '@drguptavivek/emr-controller';
-import { EmrTopBarSearch, type EmrSearchGroup } from './l4-web-shell-search';
-import { EmrLeftNav, type EmrLeftNavIntent } from './l4-web-shell-nav';
+import type {
+  EmrAppShellIntent,
+  EmrAppShellModel,
+  EmrTopBarIntent,
+  EmrTopBarModel,
+} from '@drguptavivek/emr-controller';
+import { EmrTopBarSearch } from './l4-web-shell-search';
+import { EmrLeftNav } from './l4-web-shell-nav';
 import { EmrSheet } from './l4-shell-sheet';
 import { useContainerWidth } from './l4-lists-shared';
 import { EmrButton } from './primitives';
@@ -12,6 +17,12 @@ import { fontFamily, fontWeight, useEmrTheme } from './theme';
 
 export * from './l4-web-shell-nav';
 export type { EmrSearchGroup, EmrSearchResult } from './l4-web-shell-search';
+export type {
+  EmrAppShellIntent,
+  EmrAppShellModel,
+  EmrTopBarIntent,
+  EmrTopBarModel,
+};
 
 /** English fallbacks for built-in strings. Every key is overridable via `labels`. */
 const DEFAULTS = {
@@ -28,25 +39,6 @@ const DEFAULTS = {
 };
 type Labels = Partial<typeof DEFAULTS>;
 
-export interface EmrTopBarModel {
-  /** Product title; `titleSlot` replaces it (logo, facility switcher). */
-  title?: string;
-  titleSlot?: ReactNode;
-  /** Visible name on the user-menu trigger. */
-  userLabel?: string;
-  /** Show the hamburger that opens the nav (the shell sets this below the wide breakpoint). */
-  showNavToggle?: boolean;
-  search: { query: string; open: boolean; loading?: boolean; groups: readonly EmrSearchGroup[] };
-}
-
-export type EmrTopBarIntent =
-  | { type: 'queryChanged'; query: string }
-  | { type: 'searchOpenRequested' }
-  | { type: 'searchCloseRequested' }
-  | { type: 'resultSelected'; groupId: string; id: string }
-  | { type: 'menuRequested' }
-  | { type: 'navToggleRequested' };
-
 /**
  * L4. Product title, global search and user-menu trigger. Results arrive grouped from props and render in a floating overlay
  * under the field (the bar height never changes). The search button re-emits queryChanged with the current query (Enter does too).
@@ -58,7 +50,7 @@ export function EmrTopBar({ model, labels, onIntent }: { model: EmrTopBarModel; 
   return (
     <View role="banner" style={[styles.top, { backgroundColor: t.surface, borderBottomColor: t.border }]}>
       {model.showNavToggle ? <EmrButton small variant="ghost" label="☰" accessibilityLabel={l.openNavigation} onPress={() => onIntent({ type: 'navToggleRequested' })} /> : null}
-      {model.titleSlot ?? (model.title ? <Text role="heading" style={{ color: t.text, fontSize: t.textLg, fontWeight: fontWeight(t.weightBold), fontFamily: fontFamily(t) }}>{model.title}</Text> : null)}
+      {(model.titleSlot as ReactNode) ?? (model.title ? <Text role="heading" style={{ color: t.text, fontSize: t.textLg, fontWeight: fontWeight(t.weightBold), fontFamily: fontFamily(t) }}>{model.title}</Text> : null)}
       <View style={styles.search}>
         <EmrTopBarSearch query={query} open={open} loading={loading} groups={groups} labels={l}
           onQueryChange={q => onIntent({ type: 'queryChanged', query: q })}
@@ -71,16 +63,6 @@ export function EmrTopBar({ model, labels, onIntent }: { model: EmrTopBarModel; 
     </View>
   );
 }
-
-export interface EmrAppShellModel {
-  topBar: EmrTopBarModel;
-  nav: { title?: string; items: readonly NavItem[]; activeId?: string; expandedIds: readonly string[] };
-  /** Whether the nav drawer is open below the wide breakpoint; ignored above it. */
-  navOpen: boolean;
-}
-
-/** Everything the shell can ask for. Sheet close and the hamburger both mean "toggle the drawer". */
-export type EmrAppShellIntent = EmrTopBarIntent | EmrLeftNavIntent;
 
 /**
  * L4. Port of EmrAppShell: top bar, nav, main content, optional right panel.

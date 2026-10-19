@@ -1,7 +1,12 @@
 'use client';
 
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
-import type { LinkCardsIntent, LinkCardsViewModel, LinkCardView } from '@drguptavivek/emr-controller';
+import type {
+  EmrLinkCardRow,
+  EmrLinkCardsIntent,
+  EmrLinkCardsModel,
+  LinkCardView,
+} from '@drguptavivek/emr-controller';
 import { EmrAlert, EmrCard } from './l1-display';
 import { EmrBarcodeScanField, EmrPatientIdentityCard } from './l4-identity';
 import { EmrBadgeView, EmrButton, EmrOptionChip, EmrRow } from './primitives';
@@ -21,8 +26,7 @@ const DEFAULTS = {
   cancel: 'Cancel',
 } as const;
 export type EmrLinkCardsLabels = typeof DEFAULTS;
-export type EmrLinkCardsModel = LinkCardsViewModel;
-export type EmrLinkCardsIntent = LinkCardsIntent;
+export type { EmrLinkCardRow, EmrLinkCardsIntent, EmrLinkCardsModel };
 
 /** L4. Link several cards to one patient. State, badges, messages and canSubmit are the app's; nothing is validated here. */
 export function EmrLinkCards({ model: m, labels, onIntent }: {

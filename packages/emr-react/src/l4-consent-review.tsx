@@ -2,7 +2,13 @@
 
 import { useId } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import type { ConsentReviewIntent, ConsentReviewPurposeView, ConsentReviewViewModel } from '@drguptavivek/emr-controller';
+import type {
+  ConsentReviewPurposeView,
+  EmrConsentReviewIntent,
+  EmrConsentReviewModel,
+  EmrConsentReviewPurpose,
+  EmrConsentReviewSection,
+} from '@drguptavivek/emr-controller';
 import { EmrAlert, EmrCard } from './l1-display';
 import { EmrCheckbox } from './l1-inputs';
 import { ThemedInput } from './inputs-core';
@@ -31,9 +37,12 @@ export type EmrConsentReviewLabels = typeof DEFAULTS;
 
 // ---- Models and intents (all strings pre-resolved by the app; every rule is domain-side) ----
 
-export type EmrConsentReviewPurpose = ConsentReviewPurposeView;
-export type EmrConsentReviewModel = ConsentReviewViewModel;
-export type EmrConsentReviewIntent = ConsentReviewIntent;
+export type {
+  EmrConsentReviewIntent,
+  EmrConsentReviewModel,
+  EmrConsentReviewPurpose,
+  EmrConsentReviewSection,
+};
 
 /** L4. "My consents" for staff at a desk or helpline. Renders what the app resolved and emits intents; decides nothing. */
 export function EmrConsentReview({ model: m, labels, onIntent }: {

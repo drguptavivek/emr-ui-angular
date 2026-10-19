@@ -2,7 +2,14 @@
 
 import { useId } from 'react';
 import { Pressable, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { RightsRequestDraft, RightsRequestView, RightsRequestsIntent, RightsRequestsViewModel } from '@drguptavivek/emr-controller';
+import type {
+  EmrRightsRequestsIntent,
+  EmrRightsRequestsModel,
+  RightsRequestDraft,
+  RightsRequestView,
+  RightsRequestsIntent,
+  RightsRequestsViewModel,
+} from '@drguptavivek/emr-controller';
 import { EmrAlert, EmrCard } from './l1-display';
 import { ThemedInput } from './inputs-core';
 import { ConfirmSheet, ListStateView, PRIVACY_DEFAULTS, Stack, privacyStyles as s, usePrivacyText, type EmrPrivacyLabels } from './l4-privacy-shared';
@@ -10,8 +17,7 @@ import { EmrBadgeView, EmrButton } from './primitives';
 import { focusRing } from './theme';
 import { EmrFieldFrame } from './typed-field';
 
-export type EmrRightsRequestsModel = RightsRequestsViewModel;
-export type EmrRightsRequestsIntent = RightsRequestsIntent;
+export type { EmrRightsRequestsIntent, EmrRightsRequestsModel };
 type PressState = PressableStateCallbackType & { focused?: boolean };
 
 /** L4. Data-principal rights requests: list, withdraw, and a new-request draft. The app owns every rule; emits intents only. */

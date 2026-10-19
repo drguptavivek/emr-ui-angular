@@ -1,14 +1,19 @@
 'use client';
 
 import { Pressable, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { SharingGrantView, SharingGrantsIntent, SharingGrantsViewModel } from '@drguptavivek/emr-controller';
+import type {
+  EmrSharingGrantsIntent,
+  EmrSharingGrantsModel,
+  SharingGrantView,
+  SharingGrantsIntent,
+  SharingGrantsViewModel,
+} from '@drguptavivek/emr-controller';
 import { EmrAlert, EmrCard, EmrChip } from './l1-display';
 import { EmrBadgeView, EmrButton } from './primitives';
 import { ChipGroup, ConfirmSheet, ListStateView, PRIVACY_DEFAULTS, Stack, privacyStyles as s, usePrivacyText, type EmrPrivacyLabels } from './l4-privacy-shared';
 import { focusRing } from './theme';
 
-export type EmrSharingGrantsModel = SharingGrantsViewModel;
-export type EmrSharingGrantsIntent = SharingGrantsIntent;
+export type { EmrSharingGrantsIntent, EmrSharingGrantsModel };
 type PressState = PressableStateCallbackType & { focused?: boolean };
 
 /** L4. Who can see the patient's data, and for how long. Renders what the app resolved; emits intents only. */

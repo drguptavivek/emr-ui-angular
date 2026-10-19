@@ -2,10 +2,21 @@
 
 import { useState, type ReactNode } from 'react';
 import { Pressable, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { EmrBadge } from '@drguptavivek/emr-controller';
+import type {
+  EmrArrivalLinkerIntent,
+  EmrArrivalLinkerModel,
+  EmrBookedFilters,
+  EmrBookedNotDeliveredIntent,
+  EmrBookedNotDeliveredModel,
+  EmrBookedRow,
+  EmrOpenReferral,
+  EmrSpectacleBooking,
+  EmrSpectacleDeliveryIntent,
+  EmrSpectacleDeliveryModel,
+} from '@drguptavivek/emr-controller';
 import { EmrChip, EmrStateMessage } from './l1-display';
 import { EmrDateInput, EmrRadioGroup } from './l1-inputs';
-import { EmrBarcodeScanField, EmrPatientIdentityCard, type EmrPatientIdentity } from './l4-identity';
+import { EmrBarcodeScanField, EmrPatientIdentityCard } from './l4-identity';
 import { useContainerWidth } from './l4-lists-shared';
 import { EmrBadgeView, EmrButton, EmrSelect } from './primitives';
 import { focusRing, fontFamily, fontWeight, useEmrTheme } from './theme';
@@ -50,103 +61,18 @@ export type EmrDeskLabels = typeof DEFAULTS;
 
 // ---- Models and intents (pre-resolved strings; the controller owns every rule) ----
 
-export interface EmrOpenReferral {
-  id: string;
-  date: string;
-  centreName: string;
-  purpose: string;
-  flags: string[];
-  daysSinceAdviceLabel: string;
-  overdueBadge?: EmrBadge;
-  /** Multi-visit referrals, pre-formatted by the app: "2 visits", "Next visit 26-10-2026". */
-  visitCountLabel?: string;
-  nextDueLabel?: string;
-}
-export interface EmrArrivalLinkerModel {
-  patient: EmrPatientIdentity;
-  openReferrals: EmrOpenReferral[];
-  purposeOptions: { id: string; label: string }[];
-  selectedPurpose?: string;
-  selectedReferralIds: string[];
-  noReferral: boolean;
-  /**
-   * Controlled like BarcodeScanField: the app keeps `value` (from typing or a scan) and supplies the
-   * domain normaliser's normalisedValue / error / warning.
-   */
-  uhid?: {
-    existing?: { label: string; display: string };
-    value?: string;
-    normalisedValue?: string;
-    error?: string;
-    warning?: string;
-    required: false;
-  };
-  canSubmit: boolean;
-}
-/** `uhidChanged` and `scanRequested` extend the frozen contract: the UHID step is controlled by the app. */
-export type EmrArrivalLinkerIntent =
-  | { type: 'purposeSelected'; id: string }
-  | { type: 'referralToggled'; id: string }
-  | { type: 'noReferralToggled' }
-  | { type: 'uhidChanged'; raw: string }
-  | { type: 'uhidProvided'; raw: string }
-  | { type: 'uhidSkipped' }
-  | { type: 'scanRequested' }
-  | { type: 'submitRequested' }
-  | { type: 'cancelled' };
-
-export interface EmrSpectacleBooking {
-  id: string;
-  bookedDate: string;
-  type: string;
-  paidBadge: EmrBadge;
-  rxSummary: string;
-  daysOpenLabel: string;
-  statusBadge: EmrBadge;
-}
-export interface EmrSpectacleDeliveryModel {
-  patient: EmrPatientIdentity;
-  bookings: EmrSpectacleBooking[];
-  /** Not in the contract (it has no ticked state): mirrors ArrivalLinker's selectedReferralIds. */
-  selectedBookingIds: string[];
-  deliveryDate: string;
-  canSubmit: boolean;
-}
-export type EmrSpectacleDeliveryIntent =
-  | { type: 'bookingToggled'; id: string }
-  | { type: 'deliveryDateChanged'; iso: string | null }
-  | { type: 'submitRequested' }
-  | { type: 'cancelled' };
-
-export interface EmrBookedRow {
-  bookingId: string;
-  patientName: string;
-  primaryIdentifier: string;
-  phone?: string;
-  centreName: string;
-  bookedDate: string;
-  daysOpenLabel: string;
-  overdueBadge?: EmrBadge;
-  type: string;
-  paidBadge: EmrBadge;
-}
-export interface EmrBookedFilters { centreId?: string; bookedFrom?: string; bookedTo?: string }
-export interface EmrBookedNotDeliveredModel {
-  rows: EmrBookedRow[];
-  filters: { centreOptions: { id: string; label: string }[]; selectedCentreId?: string; bookedFrom?: string; bookedTo?: string };
-  page: number;
-  pageCount: number;
-  pagingSummaryLabel: string;
-  /** Not in the contract: optional list state. `message` is the error text. */
-  state?: 'loading' | 'empty' | 'error';
-  message?: string;
-}
-export type EmrBookedNotDeliveredIntent =
-  | { type: 'rowSelected'; bookingId: string }
-  | { type: 'filterChanged'; centreId?: string; bookedFrom?: string; bookedTo?: string }
-  | { type: 'pageChanged'; page: number }
-  | { type: 'callRequested'; phone: string }
-  | { type: 'retryRequested' };
+export type {
+  EmrArrivalLinkerIntent,
+  EmrArrivalLinkerModel,
+  EmrBookedFilters,
+  EmrBookedNotDeliveredIntent,
+  EmrBookedNotDeliveredModel,
+  EmrBookedRow,
+  EmrOpenReferral,
+  EmrSpectacleBooking,
+  EmrSpectacleDeliveryIntent,
+  EmrSpectacleDeliveryModel,
+};
 
 // ---- shared bits ----
 

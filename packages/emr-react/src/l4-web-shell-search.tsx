@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { EmrBadge } from '@drguptavivek/emr-controller';
+import type { EmrSearchGroup, EmrSearchResult } from '@drguptavivek/emr-controller';
 import { textInputKeys, webProps, type WebKeyEvent } from './l1-interactive-shared';
 import { ThemedInput } from './inputs-core';
 import { locateHighlight, moveHighlight } from './l4-web-shell-search.logic';
@@ -11,8 +11,7 @@ import { focusRing, fontFamily, fontWeight, useEmrTheme } from './theme';
 
 type PressState = PressableStateCallbackType & { focused?: boolean };
 
-export interface EmrSearchResult { id: string; label: string; sub?: string; badge?: EmrBadge }
-export interface EmrSearchGroup { id: string; label: string; results: readonly EmrSearchResult[] }
+export type { EmrSearchGroup, EmrSearchResult };
 
 export interface EmrTopBarSearchLabels { search: string; searchPlaceholder: string; noResults: string; searching: string }
 

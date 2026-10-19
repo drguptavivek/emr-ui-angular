@@ -1,25 +1,11 @@
 'use client';
 
 import { Pressable, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { EmrBadge } from '@drguptavivek/emr-controller';
+import type { EmrStatTileIntent, EmrStatTileModel } from '@drguptavivek/emr-controller';
 import { EmrBadgeView } from './primitives';
 import { focusRing, fontFamily, fontWeight, useEmrTheme } from './theme';
 
-/**
- * One count or KPI. Every string is controller-supplied and already formatted: the tile never
- * counts, rounds, compares or picks a tone. A tone, when wanted, arrives as a labelled badge.
- */
-export interface EmrStatTileModel {
-  key: string;
-  label: string;
-  value: string;
-  sub?: string;
-  status?: EmrBadge;
-  /** Spoken instead of "label value sub", e.g. "12 patients seen today, opens the list". */
-  accessibilityLabel?: string;
-}
-
-export type EmrStatTileIntent = { type: 'statSelected'; key: string };
+export type { EmrStatTileIntent, EmrStatTileModel };
 
 type PressState = PressableStateCallbackType & { focused?: boolean };
 

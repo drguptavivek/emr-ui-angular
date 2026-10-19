@@ -2,6 +2,8 @@ import type {
   ClinicalAssessmentStatus,
   CrossMeridian,
   DiagnosticResultIntent,
+  DiagnosticResultSummaryIntent,
+  DiagnosticResultSummaryViewModel,
   DiagnosticResultViewModel,
   GazePosition,
   MeridianCrossEye,
@@ -11,6 +13,8 @@ import type {
   OctFinding,
   OctFindingRecordViewModel,
   OctFrameRef,
+  OcularMotilityChartIntent,
+  OcularMotilityChartViewModel,
   OcularMotilityIntent,
   OcularMotilityViewModel,
   SpectaclePrescriptionEye,
@@ -19,10 +23,12 @@ import type {
   SpectaclePrescriptionViewModel,
 } from '@drguptavivek/emr-controller';
 
-export type DiagnosticResultSummaryViewModel = DiagnosticResultViewModel;
-export type DiagnosticResultSummaryIntent = DiagnosticResultIntent;
-export type OcularMotilityChartViewModel = OcularMotilityViewModel;
-export type OcularMotilityChartIntent = OcularMotilityIntent;
+export type {
+  DiagnosticResultSummaryIntent,
+  DiagnosticResultSummaryViewModel,
+  OcularMotilityChartIntent,
+  OcularMotilityChartViewModel,
+};
 
 /** Fixed six-state clinical assessment vocabulary. */
 export const ASSESSMENT_STATUS_DEFAULTS: Readonly<Record<ClinicalAssessmentStatus, string>> = {

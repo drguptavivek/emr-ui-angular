@@ -2,8 +2,12 @@ import type {
   ClinicalAssessmentStatus,
   ClinicalColumnGroup,
   ClinicalFieldValue,
+  ClinicalTranscriptIntent,
+  ClinicalTranscriptViewModel,
   EmrTone,
   EvidenceSpan,
+  EvidenceSuggestionListIntent,
+  EvidenceSuggestionListViewModel,
   FieldSuggestion,
   FlowsheetCell,
   FlowsheetCellMap,
@@ -13,6 +17,8 @@ import type {
   FlowsheetViewModel,
   NoteCaptureIntent,
   NoteCaptureViewModel,
+  ObservationFlowsheetIntent,
+  ObservationFlowsheetViewModel,
   ObservationTrendIntent,
   ObservationTrendViewModel,
   SuggestionStatus,
@@ -24,12 +30,14 @@ import type {
   TrendScale,
 } from '@drguptavivek/emr-controller';
 
-export type ObservationFlowsheetViewModel = FlowsheetViewModel;
-export type ObservationFlowsheetIntent = FlowsheetIntent;
-export type ClinicalTranscriptViewModel = NoteCaptureViewModel;
-export type ClinicalTranscriptIntent = NoteCaptureIntent;
-export type EvidenceSuggestionListViewModel = NoteCaptureViewModel;
-export type EvidenceSuggestionListIntent = NoteCaptureIntent;
+export type {
+  ClinicalTranscriptIntent,
+  ClinicalTranscriptViewModel,
+  EvidenceSuggestionListIntent,
+  EvidenceSuggestionListViewModel,
+  ObservationFlowsheetIntent,
+  ObservationFlowsheetViewModel,
+};
 
 // ---------------------------------------------------------------------------
 // 1. Observation Flowsheet pure helpers

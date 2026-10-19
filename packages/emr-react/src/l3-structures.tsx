@@ -15,6 +15,7 @@ import type {
   ClinicalMatrixValues,
   ClinicalQuantityValue,
   ClinicalRow,
+  EmrClinicalListModel,
 } from '@drguptavivek/emr-controller';
 import { EmrTypedText, NumberInput, ThemedInput } from './inputs-core';
 import { EmrBadgeView, EmrButton, EmrSelect } from './primitives';
@@ -54,12 +55,7 @@ export type EmrL3Strings = { [K in keyof typeof DEFAULTS]: string };
 // Clinical lists
 // ---------------------------------------------------------------------------
 
-/** View model for a clinical list. An empty list has no clinical meaning; the controller supplies `emptyMessage`. */
-export interface EmrClinicalListModel {
-  items: readonly ClinicalListItem[];
-  allowAdd?: boolean;
-  emptyMessage?: string;
-}
+export type { EmrClinicalListModel };
 
 interface ClinicalListProps {
   model: EmrClinicalListModel;

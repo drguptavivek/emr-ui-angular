@@ -2,7 +2,12 @@
 
 import { useId } from 'react';
 import { Pressable, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { ContactAttemptIntent, ContactAttemptSummaryIntent, ContactAttemptSummaryView, ContactAttemptViewModel } from '@drguptavivek/emr-controller';
+import type {
+  ContactAttemptSummaryIntent,
+  EmrContactAttemptIntent,
+  EmrContactAttemptModel,
+  EmrContactAttemptSummaryModel,
+} from '@drguptavivek/emr-controller';
 import { ThemedInput } from './inputs-core';
 import { EmrDateInput, EmrRadioGroup, EmrToggle } from './l1-inputs';
 import { EmrAlert, EmrCard } from './l1-display';
@@ -26,9 +31,11 @@ export type EmrContactLabels = typeof DEFAULTS;
 
 const opts = (o: readonly { id: string; label: string }[]) => o.map(x => ({ value: x.id, label: x.label }));
 
-/** One call / message attempt (VCMS D11). Every string, `consequence` and `canSubmit` come from the app; the app dials. */
-export type EmrContactAttemptModel = ContactAttemptViewModel;
-export type EmrContactAttemptIntent = ContactAttemptIntent;
+export type {
+  EmrContactAttemptIntent,
+  EmrContactAttemptModel,
+  EmrContactAttemptSummaryModel,
+};
 
 /** L4. Log a contact attempt: number (with a Call action), channel, reached, outcome, next action date, note. */
 export function EmrContactAttemptForm({ model: m, labels, onIntent }: {
@@ -68,9 +75,6 @@ export function EmrContactAttemptForm({ model: m, labels, onIntent }: {
     </EmrCard>
   );
 }
-
-/** Compact last-attempt row for worklists and the patient hub; `text` is fully pre-resolved by the app. */
-export type EmrContactAttemptSummaryModel = ContactAttemptSummaryView;
 
 type PressState = PressableStateCallbackType & { focused?: boolean };
 

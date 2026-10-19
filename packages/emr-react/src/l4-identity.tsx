@@ -3,8 +3,15 @@
 import { useId } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import type {
-  EmrTone, IdentifierCheckIntent, IdentifierCheckViewModel, IdentifierEntryIntent, IdentifierEntryView, IdentifierFindingKind,
-  IdentifierFindingView, PatientIdentityIntent, PatientIdentityViewModel,
+  EmrBarcodeScanIntent,
+  EmrIdentifierCheckIntent,
+  EmrIdentifierCheckModel,
+  EmrIdentifierFinding,
+  EmrIdentifierFindingKind,
+  EmrPatientIdentity,
+  EmrPatientIdentityIntent,
+  EmrTone,
+  IdentifierEntryView,
 } from '@drguptavivek/emr-controller';
 import { EmrChip, EmrAlert, EmrCard } from './l1-display';
 import { EmrCheckbox } from './l1-inputs';
@@ -45,15 +52,16 @@ export type EmrBarcodeScanFieldProps = IdentifierEntryView & {
   labels?: Partial<EmrIdentityLabels>;
   onIntent: (intent: EmrBarcodeScanIntent) => void;
 };
-export type EmrBarcodeScanIntent = IdentifierEntryIntent;
 
-export type EmrPatientIdentity = PatientIdentityViewModel;
-export type EmrPatientIdentityIntent = PatientIdentityIntent;
-
-export type EmrIdentifierFindingKind = IdentifierFindingKind;
-export type EmrIdentifierFinding = IdentifierFindingView;
-export type EmrIdentifierCheckModel = IdentifierCheckViewModel;
-export type EmrIdentifierCheckIntent = IdentifierCheckIntent;
+export type {
+  EmrBarcodeScanIntent,
+  EmrIdentifierCheckIntent,
+  EmrIdentifierCheckModel,
+  EmrIdentifierFinding,
+  EmrIdentifierFindingKind,
+  EmrPatientIdentity,
+  EmrPatientIdentityIntent,
+};
 
 function useText() {
   const t = useEmrTheme();

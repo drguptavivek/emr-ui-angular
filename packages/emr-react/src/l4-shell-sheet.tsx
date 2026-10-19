@@ -2,12 +2,13 @@
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Modal, Platform, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import type { EmrSheetIntent } from '@drguptavivek/emr-controller';
 import { EmrButton } from './primitives';
 import { fontFamily, fontWeight, useEmrTheme } from './theme';
 
 const DEFAULTS = { back: 'Back', close: 'Close', closeAria: 'Close panel', panel: 'Panel' };
 
-export type EmrSheetIntent = { type: 'closeRequested' } | { type: 'backRequested' };
+export type { EmrSheetIntent };
 
 /**
  * L4. Port of EmrRightFlyout (also the confirm dialog). Side panel at or above `wideBreakpoint`,

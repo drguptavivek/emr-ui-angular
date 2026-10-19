@@ -1,7 +1,7 @@
 'use client';
 
 import { Pressable, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { MergeCompareIntent, MergeCompareViewModel, MergeRowView } from '@drguptavivek/emr-controller';
+import type { EmrMergeCompareModel, EmrMergeIntent, EmrMergeRow } from '@drguptavivek/emr-controller';
 import { EmrBadgeView, EmrButton } from './primitives';
 import { EmrPatientIdentityCard } from './l4-identity';
 import { useContainerWidth } from './l4-lists-shared';
@@ -27,9 +27,7 @@ const DEFAULTS = {
 };
 type Labels = Partial<typeof DEFAULTS>;
 
-export type EmrMergeRow = MergeRowView;
-export type EmrMergeCompareModel = MergeCompareViewModel;
-export type EmrMergeIntent = MergeCompareIntent;
+export type { EmrMergeCompareModel, EmrMergeIntent, EmrMergeRow };
 
 /** Container width at which the table layout fits: 2 sources keep today's 720; 3–4 need 240 per source plus the field column. */
 const MIN_PER_SOURCE = 240;

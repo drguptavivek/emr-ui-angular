@@ -2,13 +2,18 @@
 
 import { Pressable, Text, View, type PressableStateCallbackType } from 'react-native';
 import { focusRing, useEmrTheme } from './theme';
-import type { AccessLogEntryView, AccessLogIntent, AccessLogViewModel } from '@drguptavivek/emr-controller';
+import type {
+  AccessLogEntryView,
+  AccessLogIntent,
+  AccessLogViewModel,
+  EmrAccessLogIntent,
+  EmrAccessLogModel,
+} from '@drguptavivek/emr-controller';
 import { EmrCard } from './l1-display';
 import { EmrBadgeView, EmrButton } from './primitives';
 import { ChipGroup, ListStateView, PRIVACY_DEFAULTS, Stack, privacyStyles as s, usePrivacyText, type EmrPrivacyLabels } from './l4-privacy-shared';
 
-export type EmrAccessLogModel = AccessLogViewModel;
-export type EmrAccessLogIntent = AccessLogIntent;
+export type { EmrAccessLogIntent, EmrAccessLogModel };
 
 /** L4. Who looked at the patient's data and why. Entries stay visible while more load; emits intents only. */
 export function EmrAccessLog({ model: m, labels, onIntent }: {

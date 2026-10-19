@@ -2,7 +2,12 @@
 
 import type { ReactNode } from 'react';
 import { Text, View } from 'react-native';
-import type { PrivacyCentreIntent, PrivacyCentreViewModel } from '@drguptavivek/emr-controller';
+import type {
+  EmrPrivacyCentreIntent,
+  EmrPrivacyCentreModel,
+  PrivacyCentreIntent,
+  PrivacyCentreViewModel,
+} from '@drguptavivek/emr-controller';
 import { EmrTabs } from './l1-interactive';
 import { PRIVACY_DEFAULTS, privacyStyles as s, usePrivacyText, type EmrPrivacyLabels } from './l4-privacy-shared';
 import { EmrStatTile } from './stat-tile';
@@ -11,8 +16,7 @@ export * from './l4-privacy-grants';
 export * from './l4-privacy-log';
 export * from './l4-privacy-rights';
 export type { EmrPrivacyLabels } from './l4-privacy-shared';
-export type EmrPrivacyCentreModel = PrivacyCentreViewModel;
-export type EmrPrivacyCentreIntent = PrivacyCentreIntent;
+export type { EmrPrivacyCentreIntent, EmrPrivacyCentreModel };
 
 /** L4. Self-service home: summary tiles, section tabs and contact text. The app passes the active section as children. */
 export function EmrPrivacyCentre({ model: m, labels, onIntent, children }: {

@@ -2,7 +2,7 @@
 
 import { Children, useState, type ReactNode } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { EmrBadge, EmrTone } from '@drguptavivek/emr-controller';
+import type { EmrBadge, EmrStatusCellAction, EmrStatusCellAttribution, EmrStatusCellIntent, EmrTone } from '@drguptavivek/emr-controller';
 import { EmrBadgeView, EmrButton } from './primitives';
 import { focusRing, fontFamily, fontWeight, toneColors, useEmrTheme } from './theme';
 
@@ -165,10 +165,7 @@ export function EmrFieldValueRow({ field = '', value = '', remarks = '', notes =
   );
 }
 
-export interface EmrStatusCellAttribution { nameLabel: string; roleLabel?: string; timeLabel?: string }
-export interface EmrStatusCellAction { label: string; icon?: string }
-/** Angular's `actionClicked` and `selected` outputs, folded into one callback. */
-export type EmrStatusCellIntent = 'action' | 'selected';
+export type { EmrStatusCellAction, EmrStatusCellAttribution, EmrStatusCellIntent };
 
 /**
  * L1. Caller-supplied badge, optional value, attribution, ONE action. `selectable` makes the body a

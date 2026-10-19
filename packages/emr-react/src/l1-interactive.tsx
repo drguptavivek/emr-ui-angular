@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View, type PressableStateCallbackType } from 'react-native';
-import type { EmrBadge, EmrOption, TimeAxisIntent, TimeAxisViewModel } from '@drguptavivek/emr-controller';
+import type { EmrBadge, EmrOption, EmrStage, TimeAxisIntent, TimeAxisViewModel } from '@drguptavivek/emr-controller';
 import { ThemedInput } from './inputs-core';
 import { EmrButton, EmrOptionChip } from './primitives';
 import { focusRing, fontFamily, fontWeight, toneColors, useEmrTheme } from './theme';
@@ -145,12 +145,7 @@ export function EmrSearchSelect({ label, labelHidden, placeholder, query, option
   );
 }
 
-export interface EmrStage {
-  readonly id: string;
-  readonly label: string;
-  readonly status?: EmrBadge;
-  readonly description?: string;
-}
+export type { EmrStage } from '@drguptavivek/emr-controller';
 
 /**
  * L1 numbered stages. Mechanical: caller supplies stages, the active id and any status badge.
